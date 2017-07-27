@@ -1,7 +1,7 @@
 package br.com.redesocial.modelo.dto;
 
 /**
- * DTO para representação da entidade usuário
+ * DTO para representaÃ§Ã£o da entidade usuÃ¡rio
  * @author Ronneesley Moura Teles
  * @since 27/07/2017
  */

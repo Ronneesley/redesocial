@@ -6,14 +6,14 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 
 /**
- * Objeto de acesso aos dados dos usu·rios
+ * Objeto de acesso aos dados dos usu√°rios
  * @author Ronneesley Moura Teles
  * @since 27/07/2017
  */
 public class UsuarioDAO extends DAOBase implements DAOCRUD<Usuario> {
     /**
-     * Inseri um objeto no banco de dados na tabela usu·rios
-     * @param dto objeto com os dados de usu·rio j· preenchido
+     * Inseri um objeto no banco de dados na tabela usu√°rios
+     * @param dto objeto com os dados de usu√°rio j√° preenchido
      * @throws Exception 
      */
     @Override
