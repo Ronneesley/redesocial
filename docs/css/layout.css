@@ -1,0 +1,37 @@
+/* 
+    Created on : 27/07/2017, 18:32:51
+    Author     : Ronneesley
+*/
+div#layout {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+div#conteudo {
+    
+}
+
+div#conteudo p {
+    text-align: justify;
+    text-indent: 50px;
+    margin-top: 30px;
+}
+
+div#conteudo p, 
+div#conteudo li {
+    line-height: 2;
+}
+
+div#conteudo a {
+    text-decoration: none;
+    border-bottom: 1px dashed #286090;
+    color: #286090;
+}
+
+div#rodape {
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    font-size: 12px;
+    text-align: right;
+}
