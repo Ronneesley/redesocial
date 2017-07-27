@@ -1,1 +1,3 @@
-Construir uma rede social para pessoas e organiza��es.
+Construir uma rede social para pessoas e organizações.
+
+Para editar os códigos do projeto é necessário utilizar o NetBeans 8.2 (http://netbeans.org)
