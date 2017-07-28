@@ -18,6 +18,13 @@ na própria ferramenta.
 O site https://ronneesley.github.io/redesocial ensina a como colaborar com o desenvolvimento.
 Mais informações podem ser encontradas no arquivo **CONTRIBUTING.md**.
 
+# Dúvidas de como usar o GitHub?
+
+Assista os vídeos
+
+* https://www.youtube.com/watch?v=UMhskLXJuq4
+* https://www.youtube.com/watch?v=neDiLHwXSVo
+
 # Contribuidores
 
 Ronneesley Moura Teles
