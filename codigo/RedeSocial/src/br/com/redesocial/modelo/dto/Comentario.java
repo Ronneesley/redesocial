@@ -1,8 +1,10 @@
 package br.com.redesocial.modelo.dto;
+
 import java.sql.Date;
+
 /**
- * DTO para representação do Comentário
- * @author Ronneesley, Ianka, Anny e Macilon
+ * Remover o comentário após ler: o nome do arquivo deve começar com letra maiúscula
+ * @author Ronneesley, Ianka, coloquem os demais membros
  * @since 29/07/2017
  */
 public class Comentario {
@@ -17,9 +19,9 @@ public class Comentario {
     
     private Postagem postagem;
     
-    private Comentario resposta;
-    
-     public Integer getId() {
+    private Comentario resposta;    
+
+    public Integer getId() {
         return id;
     }
 
@@ -39,31 +41,85 @@ public class Comentario {
         return curtidas;
     }
 
-    public void setCurtidas(Integer curtidas) {
+    public void setCurtidas(String curtidas) { //Não é Integer
         this.curtidas = curtidas;
     }
 
-    public Date getData() {
-        return data;
+    public String getData() { //Reveja os tipos de dados dos demais métodos getters e setters
+        return telefone;
     }
 
-    public void setData(Date data) {
-        this.data = data;
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 
-    public Postagem getPostagem() {
-        return postagem;
+    public String getSenha() {
+        return senha;
     }
 
-    public void setPostagem(Postagem postagem) {
-        this.postagem = postagem;
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
-    public Comentario getResposta() {
-        return resposta;
+    public String getNascimento() {
+        return nascimento;
     }
 
-    public void setResposta(Comentario resposta) {
-        this.resposta = resposta;
-    }    
+    public void setNascimento(String nascimento) {
+        this.nascimento = nascimento;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public String getData_cadastro() {
+        return data_cadastro;
+    }
+
+    public void setData_cadastro(String data_cadastro) {
+        this.data_cadastro = data_cadastro;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+
+    @Override
+    public String toString() {
+        return getNome();
+    }
 }
+
+}
+
+
+
+
+
+    
