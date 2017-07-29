@@ -1,5 +1,7 @@
 package br.com.redesocial.modelo.dto;
 
+import java.sql.Date;
+
 /**
  * DTO para representação da entidade usuário
  * @author Ronneesley Moura Teles
@@ -16,18 +18,17 @@ public class Usuario {
     
     private String senha;
     
-    private String nascimento;
+    private Date nascimento;
     
     private String sexo;
   
-    private String foto;
+    private Date data_cadastro;
     
-    private String cidade;
+    private Boolean status;
     
-    private String data_cadastro;
+    private Multimidia foto;
     
-    private String status;
-
+    private Cidade cidade;
     
     public Usuario() {
     }
@@ -77,11 +78,11 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public String getNascimento() {
+    public Date getNascimento() {
         return nascimento;
     }
 
-    public void setNascimento(String nascimento) {
+    public void setNascimento(Date nascimento) {
         this.nascimento = nascimento;
     }
 
@@ -93,38 +94,39 @@ public class Usuario {
         this.sexo = sexo;
     }
 
-    public String getFoto() {
-        return foto;
-    }
-
-    public void setFoto(String foto) {
-        this.foto = foto;
-    }
-
-    public String getCidade() {
-        return cidade;
-    }
-
-    public void setCidade(String cidade) {
-        this.cidade = cidade;
-    }
-
-    public String getData_cadastro() {
+    public Date getData_cadastro() {
         return data_cadastro;
     }
 
-    public void setData_cadastro(String data_cadastro) {
+    public void setData_cadastro(Date data_cadastro) {
         this.data_cadastro = data_cadastro;
     }
 
-    public String getStatus() {
+    public Boolean getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(Boolean status) {
         this.status = status;
     }
 
+    public Multimidia getFoto() {
+        return foto;
+    }
+
+    public void setFoto(Multimidia foto) {
+        this.foto = foto;
+    }
+
+    public Cidade getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(Cidade cidade) {
+        this.cidade = cidade;
+    }
+
+  
 
     @Override
     public String toString() {
