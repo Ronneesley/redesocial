@@ -1,5 +1,7 @@
 package br.com.redesocial.modelo.dto;
+
 import java.sql.Date;
+
 /**
  * DTO para representação do Comentário
  * @author Ronneesley, Ianka, Anny e Macilon
@@ -19,7 +21,7 @@ public class Comentario {
     
     private Comentario resposta;
     
-     public Integer getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -65,5 +67,5 @@ public class Comentario {
 
     public void setResposta(Comentario resposta) {
         this.resposta = resposta;
-    }    
+    }
 }
