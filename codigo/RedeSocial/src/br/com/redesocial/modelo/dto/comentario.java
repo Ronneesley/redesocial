@@ -1,9 +1,13 @@
-
 package br.com.redesocial.modelo.dto;
 
 import java.sql.Date;
 
-public class comentario {
+/**
+ * Remover o comentário após ler: o nome do arquivo deve começar com letra maiúscula
+ * @author Ronneesley, Ianka, coloquem os demais membros
+ * @since 29/07/2017
+ */
+public class Comentario {
     
     private Integer id;
     
@@ -15,8 +19,7 @@ public class comentario {
     
     private Postagem postagem;
     
-    private Resposta resposta;
-    
+    private Comentario resposta;    
 
     public Integer getId() {
         return id;
@@ -38,11 +41,11 @@ public class comentario {
         return curtidas;
     }
 
-    public void setCurtidas(String curtidas) {
+    public void setCurtidas(String curtidas) { //Não é Integer
         this.curtidas = curtidas;
     }
 
-    public String getData() {
+    public String getData() { //Reveja os tipos de dados dos demais métodos getters e setters
         return telefone;
     }
 
