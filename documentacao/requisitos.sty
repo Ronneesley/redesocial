@@ -1,0 +1,26 @@
+%%
+% Macros necessários ao projeto
+% Autor: Ronneesley Moura Teles
+% Data: 29/07/2017
+%%
+
+%\requisitoFuncional{RF01}{Descrição}{Fonte do requisito}{Local}{Data}{Responsável}{
+%	Especificação completa
+%}
+\newcommand{\requisitoFuncional}[7]{
+	\begin{table}[h!]
+		\caption{Requisito Funcional: #2}
+		\label{tabela:#1}
+	
+		\begin{tabular}{|l|p{8cm}|c|p{2cm}|}
+			\hline
+			\cellcolor{cinzaClaro} Identificação & \multicolumn{3}{l|}{#1} \\ \hline
+			\cellcolor{cinzaClaro} Descrição & \multicolumn{3}{l|}{#2} \\ \hline
+			\cellcolor{cinzaClaro} Fonte do Requisito & \multicolumn{3}{l|}{#3} \\ \hline
+			\cellcolor{cinzaClaro} Local & #4 & \cellcolor{cinzaClaro} Data & #5 \\ \hline
+			\cellcolor{cinzaClaro} Responsável & \multicolumn{3}{l|}{#6} \\ \hline
+			\multicolumn{4}{|c|}{\cellcolor{cinzaClaro} Especificação} \\ \hline
+			\multicolumn{4}{|p{16cm}|}{#7} \\ \hline
+		\end{tabular}
+	\end{table}
+}

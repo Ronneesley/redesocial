@@ -1,5 +1,8 @@
 \documentclass[versao=digital]{ifgoiano_ceres_tc_v2}
 
+\usepackage{colortbl}
+\usepackage{requisitos}
+
 \curso{Sistemas de Informação}
 \ano{2017}
 \local{Ceres}
@@ -19,6 +22,8 @@
 
 \configurarInformacoesPDF
 
+\definecolor{cinzaClaro}{rgb}{0.9,0.9,0.9}
+
 \begin{document}
 
 	\input{preambulo.tex}
@@ -29,6 +34,16 @@
 	
 	\section{Especificação de requisitos}
 	
+	\subsection{Requisitos não funcionais}
 	
+	\subsection{Requisitos funcionais}
+	
+	%\requisitoFuncional{RF01}{Descrição}{Fonte do requisito}{Local}{Data}{Responsável}{
+	%	Especificação completa
+	%}
+	
+	\requisitoFuncional{RF01}{Cadastro de usuários}{Anny Karoliny,Thalia Santana}{Laboratório 2 do IF Goiano Ceres}{26/07/2017}{Anny Karoliny Moraes Ribeiro}{
+		O sistema deverá conter um cadastro de usuários que deverá ser preenchido com os seguintes campos: nome, sobrenome, celular ou/e e-mail e senha.
+	}
 
 \end{document}
