@@ -15,7 +15,7 @@ na própria ferramenta.
 
 # Como colaborar?
 
-O site https://ronneesley.github.io/redesocial ensina a como colaborar com o desenvolvimento.
+O site https://ronneesley.github.io/redesocial e a página wiki https://github.com/Ronneesley/redesocial/wiki ensinam a como colaborar com o desenvolvimento.
 Mais informações podem ser encontradas no arquivo **CONTRIBUTING.md**.
 
 # Dúvidas de como usar o GitHub?
