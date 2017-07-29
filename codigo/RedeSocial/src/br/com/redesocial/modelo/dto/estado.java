@@ -1,6 +1,7 @@
 package br.com.redesocial.modelo.dto;
  /**
-
+  * REMOVER DEPOIS DE LER: O nome do arquivo deve ser igual, ou seja, com letra maiúscula.
+  * Isso também se aplica a classe Pais.
   * @author Lucas, Luciano, Adalberto
   * @since 29/07/2017
   */
