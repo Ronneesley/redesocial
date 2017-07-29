@@ -8,19 +8,19 @@ import java.sql.Date;
  * @since 29/07/2017
  */
 public class Comentario {
-    
+
     private Integer id;
-    
+
     private String descricao;
-    
+
     private Integer curtidas;
-    
+
     private Date data;
-    
+
     private Postagem postagem;
-    
+
     private Comentario resposta;
-    
+
     public Integer getId() {
         return id;
     }

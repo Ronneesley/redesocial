@@ -12,11 +12,11 @@ import java.util.Date;
  */
 public class Multimidia {
     private Integer id;
-    
+
     private Byte midia;
-    
+
     private String tipo_conteudo;
-    
+
     private Date data;
 
     public Multimidia() {
@@ -59,7 +59,7 @@ public class Multimidia {
         this.data = data;
     }
 
-    
+
     public Byte toByte() {
         return getMidia();
     }

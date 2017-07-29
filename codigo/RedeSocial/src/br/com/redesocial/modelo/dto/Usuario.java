@@ -9,27 +9,27 @@ import java.sql.Date;
  */
 public class Usuario {
     private Integer id;
-    
+
     private String nome;
-    
+
     private String email;
-    
+
     private String telefone;
-    
+
     private String senha;
-    
+
     private Date nascimento;
-    
+
     private String sexo;
-  
+
     private Date data_cadastro;
-    
+
     private Boolean status;
-    
+
     private Multimidia foto;
-    
+
     private Cidade cidade;
-    
+
     public Usuario() {
     }
 
@@ -126,7 +126,7 @@ public class Usuario {
         this.cidade = cidade;
     }
 
-  
+
 
     @Override
     public String toString() {

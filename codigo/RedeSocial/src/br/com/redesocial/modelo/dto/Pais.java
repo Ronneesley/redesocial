@@ -1,19 +1,17 @@
 package br.com.redesocial.modelo.dto;
-  /**
 
-  * @author Lucas, Luciano, Adalberto
-  * @since 29/07/2017
-  */
-
+/**
+ * @author Lucas, Luciano, Adalberto
+ * @since 29/07/2017
+ */
 public class Pais {
     private int id;
-	private String nome;
-	
+
+    private String nome;
 
     public Pais(int id, String nome) {
        this.id = id;
        this.nome = nome;
-	  
     }
 
     public int getId() {
@@ -24,7 +22,6 @@ public class Pais {
         this.id = id;
     }
 
-
     public String getNome() {
         return nome;
     }
@@ -32,6 +29,4 @@ public class Pais {
     public void setNome(String nome) {
         this.nome = nome;
     }
-	
-    
 }

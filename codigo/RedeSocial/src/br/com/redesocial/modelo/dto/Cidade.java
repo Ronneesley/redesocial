@@ -23,11 +23,11 @@ public class Cidade {
         this.id = id;
     }
 
-    public int getEstado() {
+    public Estado getEstado() {
         return estado;
     }
 
-    public void setEstado(int estado) {
+    public void setEstado(Estado estado) {
         this.estado = estado;
     }
 
@@ -37,5 +37,5 @@ public class Cidade {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }    
+    }
 }
