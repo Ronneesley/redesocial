@@ -10,7 +10,8 @@ package br.com.redesocial.modelo.dto;
  * @author Daniel, Jônatas e Paulo
  */
 public class Cidades {
-    private int id, estado;
+    private int id;
+    private Estados estado;
     private String nome;
 
     public Cidades(int id, int estado, String nome) {
