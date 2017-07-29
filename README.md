@@ -30,31 +30,59 @@ Assista os vídeos
 Ronneesley Moura Teles (Orientador)
 
 Adallberto Lucena Moura
+
 Andrey Silva Ribeiro
+
 Anny Karoliny Moraes Ribeiro
+
 Brener Gomes de Jesus
+
 Daniel Moreira Cardoso
+
 Davi Ildeu de Faria
+
 Eduardo de Oliveira Silva
+
 Fernando Maciel da Silva
+
 Gleyson Israel Alves
+
 Gusttavo Nunes Gomes
+
 Heitor de Souza Oliveira
+
 Ianka Talita Bastos de Assis
+
 Ígor Justino Rodrigues
+
 Jeferson Rossini Ferreira Lourenço
+
 Jônatas de Souza Rezende
+
 Jonathan Silvestre Sousa
+
 José Gilvan Jacinto Júnior
+
 Lara Caroline Damaceno Faria
+
 Lucas Pereira de Azevedo
+
 Luciano de Carvalho Borba
+
 Maciele Xavier Rodrigues
+
 Macilon Arruda Peixoto
+
 Marcos Antonio Arriel Rodrigues
+
 Paulo Henrique Rodrigues Araujo
+
 Salmi Nunes de Paula Junior
+
 Thalia Santos de Santana
+
 Warley Rodrigues de Andrade
+
 Wesley Morais Felix
+
 Willian Wallace de Matteus Silva
