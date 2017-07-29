@@ -1,0 +1,14 @@
+\begin{table}[H]
+	\caption{Requisito funcional}
+	\label{tabela:rf_1}
+
+	\begin{tabular}{cccc}
+		Identificação & \multicolumn{3}{l}{-} \\ \hline
+		Descrição & \multicolumn{3}{l}{-} \\ \hline
+		Fonte do Requisito & \multicolumn{3}{l}{-} \\ \hline
+		Local & & Data & \\ \hline
+		Responsável & \multicolumn{3}{l}{-} \\ \hline
+		\multicolumn{4}{l}{Especificação} \\ \hline
+		\multicolumn{4}{l}{-} \\ \hline
+	\end{tabular}
+\end{table}
