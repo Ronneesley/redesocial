@@ -8,7 +8,6 @@ import java.sql.Date;
  * @since 29/07/2017
  */
 public class Comentario {
-
     private Integer id;
 
     private String descricao;

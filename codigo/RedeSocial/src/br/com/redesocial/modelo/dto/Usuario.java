@@ -1,5 +1,6 @@
 package br.com.redesocial.modelo.dto;
 
+import br.com.redesocial.modelo.dto.enumeracoes.Sexo;
 import java.sql.Date;
 
 /**
@@ -20,9 +21,9 @@ public class Usuario {
 
     private Date nascimento;
 
-    private String sexo;
+    private Sexo sexo;
 
-    private Date data_cadastro;
+    private Date dataCadastro;
 
     private Boolean status;
 
@@ -86,20 +87,20 @@ public class Usuario {
         this.nascimento = nascimento;
     }
 
-    public String getSexo() {
+    public Sexo getSexo() {
         return sexo;
     }
 
-    public void setSexo(String sexo) {
+    public void setSexo(Sexo sexo) {
         this.sexo = sexo;
     }
 
-    public Date getData_cadastro() {
-        return data_cadastro;
+    public Date getDataCadastro() {
+        return dataCadastro;
     }
 
-    public void setData_cadastro(Date data_cadastro) {
-        this.data_cadastro = data_cadastro;
+    public void setDataCadastro(Date dataCadastro) {
+        this.dataCadastro = dataCadastro;
     }
 
     public Boolean getStatus() {
@@ -125,8 +126,6 @@ public class Usuario {
     public void setCidade(Cidade cidade) {
         this.cidade = cidade;
     }
-
-
 
     @Override
     public String toString() {

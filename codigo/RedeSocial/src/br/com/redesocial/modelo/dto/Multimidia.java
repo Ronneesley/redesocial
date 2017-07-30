@@ -1,30 +1,26 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.redesocial.modelo.dto;
+
 import java.util.Date;
 
 /**
- *
- * @author Aluno
+ * Classe que representa as multimídias
+ * @author Ronneesley, COLOCAR O NOME DE QUEM FEZ
  */
 public class Multimidia {
     private Integer id;
 
-    private Byte midia;
+    private byte[] midia;
 
-    private String tipo_conteudo;
+    private String tipoConteudo;
 
     private Date data;
 
     public Multimidia() {
     }
 
-    public Multimidia(Byte midia, String tipo_conteudo) {
+    public Multimidia(byte[] midia, String tipoConteudo) {
         this.midia = midia;
-        this.tipo_conteudo = tipo_conteudo;
+        this.tipoConteudo = tipoConteudo;
     }
 
     public Integer getId() {
@@ -35,20 +31,20 @@ public class Multimidia {
         this.id = id;
     }
 
-    public Byte getMidia() {
+    public byte[] getMidia() {
         return midia;
     }
 
-    public void setMidia(Byte midia) {
+    public void setMidia(byte[] midia) {
         this.midia = midia;
     }
 
-    public String getTipo_Conteudo() {
-        return tipo_conteudo;
+    public String getTipoConteudo() {
+        return tipoConteudo;
     }
 
-    public void setTipo_Conteudo(String tipo_conteudo) {
-        this.tipo_conteudo = tipo_conteudo;
+    public void setTipoConteudo(String tipoConteudo) {
+        this.tipoConteudo = tipoConteudo;
     }
 
     public Date getData() {
@@ -57,10 +53,5 @@ public class Multimidia {
 
     public void setData(Date data) {
         this.data = data;
-    }
-
-
-    public Byte toByte() {
-        return getMidia();
     }
 }
