@@ -1,18 +1,35 @@
 package br.com.redesocial.modelo.dto;
 
+import br.com.redesocial.modelo.dto.enumeracoes.Sexo;
+import java.sql.Date;
+
 /**
  * DTO para representação da entidade usuário
  * @author Ronneesley Moura Teles
  * @since 27/07/2017
  */
 public class Usuario {
-    private Integer codigo;
-    
+    private Integer id;
+
     private String nome;
-    
+
     private String email;
-    
+
+    private String telefone;
+
     private String senha;
+
+    private Date nascimento;
+
+    private Sexo sexo;
+
+    private Date dataCadastro;
+
+    private Boolean status;
+
+    private Multimidia foto;
+
+    private Cidade cidade;
 
     public Usuario() {
     }
@@ -22,12 +39,12 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public Integer getCodigo() {
-        return codigo;
+    public Integer getId() {
+        return id;
     }
 
-    public void setCodigo(Integer codigo) {
-        this.codigo = codigo;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -46,12 +63,68 @@ public class Usuario {
         this.email = email;
     }
 
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
     public String getSenha() {
         return senha;
     }
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public Date getNascimento() {
+        return nascimento;
+    }
+
+    public void setNascimento(Date nascimento) {
+        this.nascimento = nascimento;
+    }
+
+    public Sexo getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(Sexo sexo) {
+        this.sexo = sexo;
+    }
+
+    public Date getDataCadastro() {
+        return dataCadastro;
+    }
+
+    public void setDataCadastro(Date dataCadastro) {
+        this.dataCadastro = dataCadastro;
+    }
+
+    public Boolean getStatus() {
+        return status;
+    }
+
+    public void setStatus(Boolean status) {
+        this.status = status;
+    }
+
+    public Multimidia getFoto() {
+        return foto;
+    }
+
+    public void setFoto(Multimidia foto) {
+        this.foto = foto;
+    }
+
+    public Cidade getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(Cidade cidade) {
+        this.cidade = cidade;
     }
 
     @Override
