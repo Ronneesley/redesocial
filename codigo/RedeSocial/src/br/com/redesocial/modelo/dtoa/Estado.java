@@ -1,4 +1,4 @@
-package br.com.redesocial.modelo.dto;
+package br.com.redesocial.modelo.dtoa;
 
  /**
   * REMOVER DEPOIS DE LER: O nome do arquivo deve ser igual, ou seja, com letra maiúscula.

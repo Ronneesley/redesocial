@@ -1,4 +1,4 @@
-package br.com.redesocial.modelo.dto;
+package br.com.redesocial.modelo.dtoa;
 
 import java.sql.Date;
 
