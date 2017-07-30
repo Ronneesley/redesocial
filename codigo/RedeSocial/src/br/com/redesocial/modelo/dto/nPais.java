@@ -1,15 +1,16 @@
 package br.com.redesocial.modelo.dto;
 
 /**
+ * Classe que representa um país
  * @author Lucas, Luciano, Adalberto
  * @since 29/07/2017
  */
-public class Pais {
+public class nPais {
     private int id;
 
     private String nome;
 
-    public Pais(int id, String nome) {
+    public nPais(int id, String nome) {
        this.id = id;
        this.nome = nome;
     }
