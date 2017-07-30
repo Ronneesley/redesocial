@@ -1,4 +1,4 @@
-package br.com.redesocial.modelo.dtoa;
+package br.com.redesocial.modelo.dto;
 
 /**
  * Classe que representa um país

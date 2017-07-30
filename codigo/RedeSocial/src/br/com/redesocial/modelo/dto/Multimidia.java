@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.redesocial.modelo.dtoa;
+package br.com.redesocial.modelo.dto;
 import java.util.Date;
 
 /**

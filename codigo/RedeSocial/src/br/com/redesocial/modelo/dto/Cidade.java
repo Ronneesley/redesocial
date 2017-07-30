@@ -1,4 +1,4 @@
-package br.com.redesocial.modelo.dtoa;
+package br.com.redesocial.modelo.dto;
 
 /**
  * Descreva a classe aqui: ex.: Class que representa as cidades

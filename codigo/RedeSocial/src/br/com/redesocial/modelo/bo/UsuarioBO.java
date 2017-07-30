@@ -1,7 +1,7 @@
 package br.com.redesocial.modelo.bo;
 
 import br.com.redesocial.modelo.dao.UsuarioDAO;
-import br.com.redesocial.modelo.dtoa.Usuario;
+import br.com.redesocial.modelo.dto.Usuario;
 
 /**
  * Define as regras de negócio para os usuários
