@@ -6,14 +6,14 @@ package br.com.redesocial.modelo.dto;
   * @author Lucas, Luciano, Adalberto
   * @since 29/07/2017
   */
-public class nEstado {
+public class Estado {
     private int id;
 
     private String nome;
 
-    private nPais pais;
+    private Pais pais;
 
-    public nEstado(int id, String nome, nPais pais) {
+    public Estado(int id, String nome, Pais pais) {
         this.id = id;
         this.nome = nome;
         this.pais = pais;
@@ -36,11 +36,11 @@ public class nEstado {
         this.nome = nome;
     }
 
-    public nPais getPais() {
+    public Pais getPais() {
         return pais;
     }
 
-    public void setPais(nPais pais) {
+    public void setPais(Pais pais) {
         this.pais = pais;
     }
 }
