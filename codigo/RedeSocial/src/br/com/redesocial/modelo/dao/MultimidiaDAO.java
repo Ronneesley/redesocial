@@ -5,20 +5,27 @@
  */
 package br.com.redesocial.modelo.dao;
 
+
 import br.com.redesocial.modelo.dto.Multimidia;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 
 /**
  *
- * @author Lara
+ * @author Lara, Jeferson
  */
 public class MultimidiaDAO {
+    /* METÓDO PARA CONECTAR AO BANCO DE DADOS*/
+    private Connection getConexao() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     public Multimidia selecionar(int id) throws Exception{
+        Connection conexao = getConexao();
         
         PreparedStatement pstmt;
-        pstmt = con.prepareStatement("select * from multimidia where id = ?");
+        pstmt = conexao.prepareStatement("select * from multimidia where id = ?");
         pstmt.setInt(1, id);
         
         ResultSet rs;
@@ -37,4 +44,13 @@ public class MultimidiaDAO {
         }
     }
     
+    public void excluir(int id) throws Exception {
+        Connection conexao = getConexao();
+        
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("delete from multimidia where id = ?");
+        
+        pstmt.setInt(1, id);
+        pstmt.executeUpdate();
+    }
 }
