@@ -10,7 +10,7 @@ import java.sql.ResultSet;
  *
  * @author Daniel
  */
-public class AlbumDAO {
+public class AlbumDAO extends DAOBase{
     Connection con;
     
     private void conectar()throws Exception{
