@@ -5,11 +5,10 @@
  */
 package br.com.redesocial.modelo.dao;
 
-
-import br.com.redesocial.modelo.dao.interfaces.DAOCRUD;
-import br.com.redesocial.modelo.dto.Multimidia;
 import java.sql.ResultSet;
+import br.com.redesocial.modelo.dto.Multimidia;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
 /**
@@ -40,6 +39,20 @@ public class MultimidiaDAO extends DAOBase{
         } else {
             return null;
         }
+   
+    public void inserir (Multimidia m) throws Exception {
+        Connection conexao = getConexao();
+        
+        if (conexao.getMidia().trim().equals("")){
+            throw new Exception("A mídia não pode estar vazia!");
+        }
+        
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("insert into multimidia(id, midia, tipoConteudo, data) values(?, ?, ?, ?)");
+        
+        pstmt.setString(1, conexao.getId());
+        
+        pstmt.executeUpdate();
     }
     
     public void excluir(int id) throws Exception {

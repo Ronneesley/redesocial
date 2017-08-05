@@ -5,6 +5,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -42,4 +44,30 @@ public class AlbumDAO extends DAOBase{
         }
         
     }
+    
+    public List listar() throws Exception {
+         conectar();
+         
+         PreparedStatement pstmt;
+         pstmt = con.prepareStatement("select * from posts order by id desc");
+         
+         ResultSet rs;
+         rs = pstmt.executeQuery();
+         
+         List lista;
+         lista = new ArrayList();
+         
+         while (rs.next()){
+             Album a = new Album();
+             a.setId(rs.getInt("id"));
+             a.setNome(rs.getString("nome"));
+             a.setData(rs.getDate("data"));
+           //  a.setUsuario(rs.getUsuario("usuario")); Ronne vai ensinar a usar quando tem um tipo proprio, com é caso do usuario
+             
+             lista.add(a);
+         }
+         
+         return lista;
+     }
 }
+    
