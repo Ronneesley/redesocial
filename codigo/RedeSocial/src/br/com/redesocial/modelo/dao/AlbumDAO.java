@@ -49,7 +49,7 @@ public class AlbumDAO extends DAOBase{
          conectar();
 
          PreparedStatement pstmt;
-         pstmt = con.prepareStatement("select * from posts order by id desc");
+         pstmt = con.prepareStatement("select * from posts order by id desc"); //A tabela não é essa e nem a ordenação
 
          ResultSet rs;
          rs = pstmt.executeQuery();
@@ -57,12 +57,13 @@ public class AlbumDAO extends DAOBase{
          List lista;
          lista = new ArrayList();
 
+         UsuarioDAO usuarioDAO = new UsuarioDAO();
          while (rs.next()){
              Album a = new Album();
              a.setId(rs.getInt("id"));
              a.setNome(rs.getString("nome"));
              a.setData(rs.getDate("data"));
-           //  a.setUsuario(rs.getUsuario("usuario")); Ronne vai ensinar a usar quando tem um tipo proprio, com é caso do usuario
+            a.setUsuario(usuarioDAO.selecionar(rs.getInt("usuario")));
 
              lista.add(a);
          }
