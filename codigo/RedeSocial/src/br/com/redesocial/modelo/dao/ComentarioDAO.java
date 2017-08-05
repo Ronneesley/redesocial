@@ -39,4 +39,14 @@ public class ComentarioDAO {
         pstmt.executeUpdate();
     }
     
+    public void selecionar() throws Exception {
+        conectar ();
+        
+        PreparedStatement pstmt;
+        pstmt = con.prepareStatement("Select * from posts where id = ?");
+        pstmt.setInt(1, id);
+        
+        ResultSet rs;
+        rs = pstmt.executeQuery();
+    }
 }
