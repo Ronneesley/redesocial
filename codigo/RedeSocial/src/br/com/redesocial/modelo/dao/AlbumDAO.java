@@ -14,60 +14,59 @@ import java.util.List;
  */
 public class AlbumDAO extends DAOBase{
     Connection con;
-    
+
     private void conectar()throws Exception{
-        
+
         String url = "jdbc:mysql://localhost:3306/redesocial";
         con = DriverManager.getConnection(url, "admin", "redesocial");
     }
-    
+
     public Album selecionar(int id)throws Exception{
         conectar();
-        
+
         PreparedStatement pstmt;
         pstmt = con.prepareStatement("select * from albuns where id = ?");
         pstmt.setInt(1, id);
-        
+
         ResultSet rs;
         rs = pstmt.executeQuery();
-        
+
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
         if(rs.next()){
             Album a = new Album();
             a.setId(rs.getInt("id"));
             a.setNome(rs.getString("nome"));
             a.setData(rs.getDate("data"));
-            //a.setUsuario();
-            
+            a.setUsuario(usuarioDAO.selecionar(rs.getInt("usuario")));
+
             return a;
         }else{
             return null;
         }
-        
     }
-    
+
     public List listar() throws Exception {
          conectar();
-         
+
          PreparedStatement pstmt;
          pstmt = con.prepareStatement("select * from posts order by id desc");
-         
+
          ResultSet rs;
          rs = pstmt.executeQuery();
-         
+
          List lista;
          lista = new ArrayList();
-         
+
          while (rs.next()){
              Album a = new Album();
              a.setId(rs.getInt("id"));
              a.setNome(rs.getString("nome"));
              a.setData(rs.getDate("data"));
            //  a.setUsuario(rs.getUsuario("usuario")); Ronne vai ensinar a usar quando tem um tipo proprio, com é caso do usuario
-             
+
              lista.add(a);
          }
-         
+
          return lista;
      }
 }
-    
