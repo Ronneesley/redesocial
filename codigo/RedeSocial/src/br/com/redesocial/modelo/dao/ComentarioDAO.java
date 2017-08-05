@@ -3,6 +3,7 @@ package br.com.redesocial.modelo.dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
@@ -39,7 +40,7 @@ public class ComentarioDAO {
         pstmt.executeUpdate();
     }
     
-    public void selecionar() throws Exception {
+    public Post selecionar(int id) throws Exception {
         conectar ();
         
         PreparedStatement pstmt;
@@ -48,5 +49,18 @@ public class ComentarioDAO {
         
         ResultSet rs;
         rs = pstmt.executeQuery();
+        
+        if (rs.next()){
+            Post p = new Post();
+            p.setId(id);
+            p.setCurtidas(rs.getString("curtidas"));
+            p.setData(rs.getDate("data"));
+            p.setPostagem(rs.getString("postagem"));
+            p.setResposta(rs.getString("resposta"));
+           
+            return p;
+        } else {
+            return null;
+        }
     }
 }
