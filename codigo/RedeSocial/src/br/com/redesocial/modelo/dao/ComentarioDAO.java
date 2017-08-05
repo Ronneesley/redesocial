@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 /**
  * Classe base para conexão com o banco de dados
- * @author Ronneesley Moura Teles, Igor, Ianka
+ * @author Ronneesley Moura Teles, Igor, Ianka, Heitor e Gusttavo
  * @since 27/07/2017
  */
 public class ComentarioDAO {
