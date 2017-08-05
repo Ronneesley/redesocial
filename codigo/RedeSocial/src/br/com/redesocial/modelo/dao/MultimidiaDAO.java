@@ -6,6 +6,7 @@
 package br.com.redesocial.modelo.dao;
 
 
+import br.com.redesocial.modelo.dao.interfaces.DAOCRUD;
 import br.com.redesocial.modelo.dto.Multimidia;
 import java.sql.ResultSet;
 import java.sql.Connection;
@@ -15,11 +16,8 @@ import java.sql.PreparedStatement;
  *
  * @author Lara, Jeferson
  */
-public class MultimidiaDAO {
+public class MultimidiaDAO extends DAOBase{
     /* METÓDO PARA CONECTAR AO BANCO DE DADOS*/
-    private Connection getConexao() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
     public Multimidia selecionar(int id) throws Exception{
         Connection conexao = getConexao();
