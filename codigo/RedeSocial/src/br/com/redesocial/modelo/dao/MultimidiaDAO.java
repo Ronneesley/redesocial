@@ -39,10 +39,12 @@ public class MultimidiaDAO extends DAOBase{
         } else {
             return null;
         }
+    }
    
     public void inserir (Multimidia m) throws Exception {
         Connection conexao = getConexao();
         
+        //Arrumar as validações
         if (conexao.getMidia().trim().equals("")){
             throw new Exception("A mídia não pode estar vazia!");
         }
@@ -51,7 +53,10 @@ public class MultimidiaDAO extends DAOBase{
         pstmt = conexao.prepareStatement("insert into multimidia(id, midia, tipoConteudo, data) values(?, ?, ?, ?)");
         
         pstmt.setString(1, conexao.getId());
-        
+        //Mídia
+        //Conteúdo
+        pstmt.setDate(4, new java.sql.Date(m.getData().getTime()));
+
         pstmt.executeUpdate();
     }
     
