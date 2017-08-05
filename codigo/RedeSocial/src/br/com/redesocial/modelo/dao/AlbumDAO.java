@@ -1,7 +1,10 @@
 package br.com.redesocial.modelo.dao;
 
+import br.com.redesocial.modelo.dto.Album;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 /**
  *
@@ -16,5 +19,27 @@ public class AlbumDAO {
         con = DriverManager.getConnection(url, "admin", "redesocial");
     }
     
-    public void
+    public Album selecionar(int id)throws Exception{
+        conectar();
+        
+        PreparedStatement pstmt;
+        pstmt = con.prepareStatement("select * from albuns where id = ?");
+        pstmt.setInt(1, id);
+        
+        ResultSet rs;
+        rs = pstmt.executeQuery();
+        
+        if(rs.next()){
+            Album a = new Album();
+            a.setId(rs.getInt("id"));
+            a.setNome(rs.getString("nome"));
+            a.setData(rs.getDate("data"));
+            //a.setUsuario();
+            
+            return a;
+        }else{
+            return null;
+        }
+        
+    }
 }
