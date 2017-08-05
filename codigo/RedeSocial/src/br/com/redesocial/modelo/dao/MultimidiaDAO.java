@@ -5,21 +5,35 @@
  */
 package br.com.redesocial.modelo.dao;
 
+import br.com.redesocial.modelo.dto.Multimidia;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
 /**
  *
  * @author Lara
  */
-public class MultimidiaDAO {
+public class MultimidiaDAO extends DAOBase {
+    
     
     /* METÓDO PARA CONECTAR AO BANCO DE DADOS*/
-    private Connection getConexao() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+   
+    public void inserir( Multimidia dto ) throws Exception {
+        Connection conexao = getConexao();
+        
+        if (dto.getDescricao().trim().equals("")){
+            throw new Exception("A descrição não pode estar vazia!");
+        }
+        
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("insert into posts(descricao, autor) values(?, ?)");
+        
+        pstmt.setString(1, dto.getDescricao());
+        pstmt.setString(2, dto.getAutor());
+        
+        pstmt.executeUpdate();
     }
-    
-    
     
     public void excluir(int id) throws Exception {
         Connection conexao = getConexao();
