@@ -31,34 +31,33 @@ public class UsuarioDAO extends DAOBase implements DAOCRUD<Usuario> {
     }
     
     public Usuario selecionar (int id) throws Exception{
-    Connection conexao = getConexao();
+        Connection conexao = getConexao();
 
-    PreparedStatement  pstmt; 
-    pstmt = conexao.prepareStatement("SELECT * FROM usuarios WHERE id = ?");
-    pstmt.setInt(1, id);
+        PreparedStatement  pstmt; 
+        pstmt = conexao.prepareStatement("select * from usuarios where id = ?");
+        pstmt.setInt(1, id);
 
-    ResultSet rs;
-    rs = pstmt.executeQuery();
+        ResultSet rs;
+        rs = pstmt.executeQuery();
 
-    if (rs.next()){
-        Usuario u = new Usuario();
-        u.setId(rs.getInt("id"));
-        u.setNome(rs.getString("nome"));
-        u.setEmail(rs.getString("email"));
-        u.setTelefone(rs.getString("telefone"));
-        u.setSenha(rs.getString("senha"));
-        u.setNascimento(rs.getDate("data"));
-        //u.setSexo(rs.getSexo("sexo"));//olhar esse aqui
-        //u.setDataCadastro(rs.getData("dataCadastro"));
-        u.setStatus(rs.getBoolean("status"));
-        //u.setFoto(rs.getMultimida("foto"));
-        //u.setCidade(rs.setCidade("cidade"));
+        if (rs.next()){
+            Usuario u = new Usuario();
+            u.setId(rs.getInt("id"));
+            u.setNome(rs.getString("nome"));
+            u.setEmail(rs.getString("email"));
+            u.setTelefone(rs.getString("telefone"));
+            u.setSenha(rs.getString("senha"));
+            u.setNascimento(rs.getDate("data"));
+            //u.setSexo(rs.getSexo("sexo"));//olhar esse aqui
+            //u.setDataCadastro(rs.getData("dataCadastro"));
+            u.setStatus(rs.getBoolean("status"));
+            //u.setFoto(rs.getMultimida("foto"));
+            //u.setCidade(rs.setCidade("cidade"));
 
-        return u;
-
-    }else{
-        return null;
-    }
+            return u;
+        }else{
+            return null;
+        }
     }
     
     public static void mainSelecionar(String[] args) throws Exception {
