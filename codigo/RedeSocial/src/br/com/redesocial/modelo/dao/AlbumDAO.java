@@ -49,7 +49,7 @@ public class AlbumDAO extends DAOBase{
         conectar();
 
         PreparedStatement pstmt;
-        pstmt = con.prepareStatement("select * from albuns order by id desc"); 
+        pstmt = con.prepareStatement("select * from albuns order by date desc"); 
 
         ResultSet rs;
         rs = pstmt.executeQuery();
