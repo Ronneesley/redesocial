@@ -1,6 +1,7 @@
 package br.com.redesocial.modelo.dao;
 
 import br.com.redesocial.modelo.dto.Comentario;
+import br.com.redesocial.modelo.dto.Postagem;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -77,9 +78,10 @@ public class ComentarioDAO {
             return null;
         }
     }
-    
+
+//Esta indentação não está boa, retire o comentário depois também    
  public List listar() throws Exception {
-        conectar();
+        conectar(); //Trocar este método
 
         PreparedStatement pstmt;
         pstmt = con.prepareStatement("select * from comentarios order by id desc"); 
@@ -97,7 +99,8 @@ public class ComentarioDAO {
             c.setCurtidas(rs.getInt("curtidas"));
             c.setData(rs.getDate("data"));
             //c.setPostagem(rs.getInt(""));
-            c.setComentario(c.selecionar(rs.getInt("resposta")));
+            c.setComentario(this.selecionar(rs.getInt("resposta")));
+            
             lista.add(c);
         }
 
