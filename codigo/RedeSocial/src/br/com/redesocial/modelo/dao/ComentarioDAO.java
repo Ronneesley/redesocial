@@ -1,10 +1,13 @@
 package br.com.redesocial.modelo.dao;
 
+import br.com.redesocial.modelo.dto.Comentario;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Classe base para conexão com o banco de dados
@@ -73,5 +76,31 @@ public class ComentarioDAO {
         } else {
             return null;
         }
+    }
+    
+ public List listar() throws Exception {
+        conectar();
+
+        PreparedStatement pstmt;
+        pstmt = con.prepareStatement("select * from posts order by id desc"); 
+
+        ResultSet rs;
+        rs = pstmt.executeQuery();
+
+        List lista;
+        lista = new ArrayList();
+
+        while (rs.next()){
+            Comentario c = new Comentario();
+            c.setId(rs.getInt("id"));
+            c.setDescricao(rs.getString("descricao"));
+            c.setCurtidas(rs.getInt("curtidas"));
+            c.setData(rs.getDate("data"));
+            //c.setPostagem(rs.getInt(""));
+           //c.setComentario(rs.getInt("");
+            lista.add(c);
+        }
+
+        return lista;
     }
 }
