@@ -40,6 +40,17 @@ public class ComentarioDAO {
         pstmt.executeUpdate();
     }
     
+    public void atualizar() throws Exception {
+        conectar();
+        
+        PreparedStatement pstmt = con.prepareStatement("update comentarios set descricao = ? where id = ?");
+        pstmt.setString(1, p.getDescricao);
+        pstmt.setInt(2, p.getId);
+        
+        pstmt.executeUpdate();
+        
+    }
+    
     public Post selecionar(int id) throws Exception {
         conectar ();
         
