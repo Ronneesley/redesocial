@@ -15,7 +15,7 @@ import java.util.List;
  * @author Ronneesley Moura Teles, Igor, Ianka, Heitor e Gusttavo.
  * @since 27/07/2017
  */
-public class ComentarioDAO {
+public class ComentarioDAO extends DAOBase {
     /**
      * Retorna uma conexão ativa com o banco de dados MySQL
      * @return conexão ativa com o banco de dados
@@ -79,31 +79,30 @@ public class ComentarioDAO {
         }
     }
 
-//Esta indentação não está boa, retire o comentário depois também    
- public List listar() throws Exception {
-        conectar(); //Trocar este método
+ 
+public List listar() throws Exception {
+    Connection conexao = getConexao();
 
-        PreparedStatement pstmt;
-        pstmt = con.prepareStatement("select * from comentarios order by id desc"); 
+    PreparedStatement pstmt;
+    pstmt = conexao.prepareStatement("select * from comentarios order by id desc"); 
 
-        ResultSet rs;
-        rs = pstmt.executeQuery();
-
-        List lista;
-        lista = new ArrayList();
-        
-        while (rs.next()){
-            Comentario c = new Comentario();
-            c.setId(rs.getInt("id"));
-            c.setDescricao(rs.getString("descricao"));
-            c.setCurtidas(rs.getInt("curtidas"));
-            c.setData(rs.getDate("data"));
-            //c.setPostagem(rs.getInt(""));
-            c.setComentario(this.selecionar(rs.getInt("resposta")));
-            
-            lista.add(c);
-        }
-
-        return lista;
+    ResultSet rs;
+    rs = pstmt.executeQuery();
+    
+    List lista;
+    lista = new ArrayList();
+    
+    while (rs.next()){
+        Comentario c = new Comentario();
+        c.setId(rs.getInt("id"));
+        c.setDescricao(rs.getString("descricao"));
+        c.setCurtidas(rs.getInt("curtidas"));
+        c.setData(rs.getDate("data"));
+        c.setPostagem(this.selecionar(rs.getInt("postagem")));
+        c.setComentario(this.selecionar(rs.getInt("resposta")));
+        lista.add(c);
+    }
+    
+    return lista;
     }
 }
