@@ -82,7 +82,7 @@ public class ComentarioDAO {
         conectar();
 
         PreparedStatement pstmt;
-        pstmt = con.prepareStatement("select * from Comentarios order by id desc"); 
+        pstmt = con.prepareStatement("select * from comentarios order by id desc"); 
 
         ResultSet rs;
         rs = pstmt.executeQuery();
