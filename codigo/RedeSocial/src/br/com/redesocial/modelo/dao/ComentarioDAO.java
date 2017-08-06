@@ -89,7 +89,7 @@ public class ComentarioDAO {
 
         List lista;
         lista = new ArrayList();
-
+        
         while (rs.next()){
             Comentario c = new Comentario();
             c.setId(rs.getInt("id"));
@@ -97,7 +97,7 @@ public class ComentarioDAO {
             c.setCurtidas(rs.getInt("curtidas"));
             c.setData(rs.getDate("data"));
             //c.setPostagem(rs.getInt(""));
-           //c.setComentario(rs.getInt("");
+            c.setComentario(c.selecionar(rs.getInt("resposta")));
             lista.add(c);
         }
 
