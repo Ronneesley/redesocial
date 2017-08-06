@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.5.2)  4 AUG 2017 09:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.5.2)  6 AUG 2017 11:05
 entering extended mode
 **./documentacao.tex
 (documentacao.tex
@@ -1313,31 +1313,275 @@ l.6
 [5
 
 ])
-Overfull \hbox (0.66896pt too wide) in paragraph at lines 45--45
-[]|\OT1/cmss/m/n/12 (-20) 04/08/2017| 
- []
-
-
-Overfull \hbox (12.79996pt too wide) in paragraph at lines 45--45
-[][] 
- []
-
-
-Overfull \hbox (0.66896pt too wide) in paragraph at lines 55--55
+Overfull \hbox (0.66896pt too wide) in paragraph at lines 53--53
 []|\OT1/cmss/m/n/12 (-20) 26/07/2017| 
  []
 
 
-Overfull \hbox (12.79996pt too wide) in paragraph at lines 55--55
+Overfull \hbox (78.12343pt too wide) in paragraph at lines 53--53
 [][] 
  []
+
+
+Overfull \hbox (0.66896pt too wide) in paragraph at lines 70--70
+[]|\OT1/cmss/m/n/12 (-20) 26/07/2017| 
+ []
+
+
+Overfull \hbox (67.28348pt too wide) in paragraph at lines 70--70
+[][] 
+ []
+
+
+Overfull \hbox (0.66896pt too wide) in paragraph at lines 87--87
+[]|\OT1/cmss/m/n/12 (-20) 26/07/2017| 
+ []
+
+
+Overfull \hbox (48.885pt too wide) in paragraph at lines 87--87
+[][] 
+ []
+
+
+Overfull \hbox (0.66896pt too wide) in paragraph at lines 104--104
+[]|\OT1/cmss/m/n/12 (-20) 26/07/2017| 
+ []
+
+
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 104--104
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (0.66896pt too wide) in paragraph at lines 122--122
+[]|\OT1/cmss/m/n/12 (-20) 26/07/2017| 
+ []
+
+
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 122--122
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (0.66896pt too wide) in paragraph at lines 139--139
+[]|\OT1/cmss/m/n/12 (-20) 26/07/2017| 
+ []
+
+
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 139--139
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (0.66896pt too wide) in paragraph at lines 156--156
+[]|\OT1/cmss/m/n/12 (-20) 26/07/2017| 
+ []
+
+
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 156--156
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (0.66896pt too wide) in paragraph at lines 173--173
+[]|\OT1/cmss/m/n/12 (-20) 26/07/2017| 
+ []
+
+
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 173--173
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (0.66896pt too wide) in paragraph at lines 190--190
+[]|\OT1/cmss/m/n/12 (-20) 26/07/2017| 
+ []
+
+
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 190--190
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (0.66896pt too wide) in paragraph at lines 212--212
+[]|\OT1/cmss/m/n/12 (-20) 26/07/2017| 
+ []
+
+
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 212--212
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (0.66896pt too wide) in paragraph at lines 229--229
+[]|\OT1/cmss/m/n/12 (-20) 26/07/2017| 
+ []
+
+
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 229--229
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (0.66896pt too wide) in paragraph at lines 246--246
+[]|\OT1/cmss/m/n/12 (-20) 26/07/2017| 
+ []
+
+
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 246--246
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (0.66896pt too wide) in paragraph at lines 263--263
+[]|\OT1/cmss/m/n/12 (-20) 26/07/2017| 
+ []
+
+
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 263--263
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (0.66896pt too wide) in paragraph at lines 280--280
+[]|\OT1/cmss/m/n/12 (-20) 26/07/2017| 
+ []
+
+
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 280--280
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (0.66896pt too wide) in paragraph at lines 297--297
+[]|\OT1/cmss/m/n/12 (-20) 26/07/2017| 
+ []
+
+
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 297--297
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (0.66896pt too wide) in paragraph at lines 314--314
+[]|\OT1/cmss/m/n/12 (-20) 26/07/2017| 
+ []
+
+
+Overfull \hbox (52.68492pt too wide) in paragraph at lines 314--314
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (0.66896pt too wide) in paragraph at lines 331--331
+[]|\OT1/cmss/m/n/12 (-20) 26/07/2017| 
+ []
+
+
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 331--331
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (0.66896pt too wide) in paragraph at lines 348--348
+[]|\OT1/cmss/m/n/12 (-20) 26/07/2017| 
+ []
+
+
+Overfull \hbox (59.32364pt too wide) in paragraph at lines 348--348
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (0.66896pt too wide) in paragraph at lines 365--365
+[]|\OT1/cmss/m/n/12 (-20) 26/07/2017| 
+ []
+
+
+Overfull \hbox (172.31676pt too wide) in paragraph at lines 365--365
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (0.66896pt too wide) in paragraph at lines 382--382
+[]|\OT1/cmss/m/n/12 (-20) 26/07/2017| 
+ []
+
+
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 382--382
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (0.66896pt too wide) in paragraph at lines 399--399
+[]|\OT1/cmss/m/n/12 (-20) 26/07/2017| 
+ []
+
+
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 399--399
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 AED: lastpage setting LastPage
 [6
 
 
-]
+] [7] [8] [9] [10] [11]
 \tf@lof=\write5
 \openout5 = `documentacao.lof'.
 
@@ -1347,27 +1591,31 @@ AED: lastpage setting LastPage
 \tf@toc=\write7
 \openout7 = `documentacao.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 57.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 57.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 401.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 401.
  (documentacao.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 57.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 57.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 57.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 401.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 401.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 401.
  ) 
 Here is how much of TeX's memory you used:
- 14346 strings out of 493634
- 215564 string characters out of 3131976
- 380616 words of memory out of 3000000
- 17488 multiletter control sequences out of 15000+200000
- 15126 words of font info for 52 fonts, out of 3000000 for 9000
+ 14426 strings out of 493634
+ 216347 string characters out of 3131976
+ 451496 words of memory out of 3000000
+ 17512 multiletter control sequences out of 15000+200000
+ 16198 words of font info for 68 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 45i,12n,45p,290b,394s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,12n,45p,684b,394s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/IgorRodrigues/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
 amsfonts/cm/cmss12.pfb><C:/Users/IgorRodrigues/AppData/Local/Programs/MiKTeX 2.
 9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
-Output written on documentacao.pdf (7 pages, 42738 bytes).
+Output written on documentacao.pdf (12 pages, 69202 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
- 20 named destinations out of 1000 (max. 500000)
+ 162 PDF objects out of 1000 (max. 8388607)
+ 44 named destinations out of 1000 (max. 500000)
  9289 words of extra memory for PDF output out of 10000 (max. 10000000)
 
