@@ -46,28 +46,28 @@ public class AlbumDAO extends DAOBase{
     }
 
     public List listar() throws Exception {
-         conectar();
+        conectar();
 
-         PreparedStatement pstmt;
-         pstmt = con.prepareStatement("select * from posts order by id desc"); //A tabela não é essa e nem a ordenação
+        PreparedStatement pstmt;
+        pstmt = con.prepareStatement("select * from albuns order by id desc"); 
 
-         ResultSet rs;
-         rs = pstmt.executeQuery();
+        ResultSet rs;
+        rs = pstmt.executeQuery();
 
-         List lista;
-         lista = new ArrayList();
+        List lista;
+        lista = new ArrayList();
 
-         UsuarioDAO usuarioDAO = new UsuarioDAO();
-         while (rs.next()){
-             Album a = new Album();
-             a.setId(rs.getInt("id"));
-             a.setNome(rs.getString("nome"));
-             a.setData(rs.getDate("data"));
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
+        while (rs.next()){
+            Album a = new Album();
+            a.setId(rs.getInt("id"));
+            a.setNome(rs.getString("nome"));
+            a.setData(rs.getDate("data"));
             a.setUsuario(usuarioDAO.selecionar(rs.getInt("usuario")));
 
-             lista.add(a);
-         }
+            lista.add(a);
+        }
 
-         return lista;
-     }
+        return lista;
+    }
 }
