@@ -14,24 +14,19 @@ import java.util.List;
  * @author Wesley M. Felix
  * @since 27/07/2017
  */
-public class EstadoDAO {
+public class EstadoDAO extends DAOBase {
     /**
      * Retorna uma conexão ativa com o banco de dados MySQL
      * @return conexão ativa com o banco de dados
      * @throws SQLException 
      * @throws java.lang.ClassNotFoundException caso não encontre o driver do banco de dados
      */
-    protected Connection getConexao() throws SQLException, ClassNotFoundException {
-        Class.forName("com.mysql.jdbc.Driver");
-        
-        return DriverManager.getConnection("jdbc:mysql://localhost:3306/redesocial", "admin", "redesocial");
-    }
     
     public List listar() throws Exception {
         Connection conexao = getConexao();
 
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("select * from estados order by id desc"); 
+        pstmt = conexao.prepareStatement("select * from estados order by nome asc"); 
 
         ResultSet rs;
         rs = pstmt.executeQuery();

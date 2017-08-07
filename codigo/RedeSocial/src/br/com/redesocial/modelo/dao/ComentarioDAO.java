@@ -3,7 +3,6 @@ package br.com.redesocial.modelo.dao;
 import br.com.redesocial.modelo.dto.Comentario;
 import br.com.redesocial.modelo.dto.Postagem;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -23,31 +22,20 @@ public class ComentarioDAO extends DAOBase {
      * @throws java.lang.ClassNotFoundException caso não encontre o driver do banco de dados
      */
     
-    Connection con;
-    protected Connection getConexao() throws SQLException, ClassNotFoundException {
-        Class.forName("com.mysql.jdbc.Driver");
-        
-        return DriverManager.getConnection("jdbc:mysql://localhost:3306/redesocial", "admin", "redesocial");
-    }
-    
-    private void conectar() throws Exception {
-        String url = "jdbc:mysql://localhost:3306/redesocial";
-        con = DriverManager.getConnection(url, "root", "");
-    }
     
     public void excluir(int id) throws Exception {
-        conectar();
+        Connection conexao = getConexao();
         
         PreparedStatement pstmt;
-        pstmt = con.prepareStatement("delete from comentarios where id = ?");
+        pstmt = conexao.prepareStatement("delete from comentarios where id = ?");
         pstmt.setInt(1, id);
         pstmt.executeUpdate();
     }
     
     public void atualizar() throws Exception {
-        conectar();
+        Connection conexao = getConexao();
         
-        PreparedStatement pstmt = con.prepareStatement("update comentarios set descricao = ? where id = ?");
+        PreparedStatement pstmt = conexao.prepareStatement("update comentarios set descricao = ? where id = ?");
         pstmt.setString(1, p.getDescricao);
         pstmt.setInt(2, p.getId);
         
@@ -56,10 +44,10 @@ public class ComentarioDAO extends DAOBase {
     }
     
     public Post selecionar(int id) throws Exception {
-        conectar ();
-        
+        Connection conexao = getConexao();        
+
         PreparedStatement pstmt;
-        pstmt = con.prepareStatement("Select * from posts where id = ?");
+        pstmt = conexao.prepareStatement("Select * from posts where id = ?");
         pstmt.setInt(1, id);
         
         ResultSet rs;
