@@ -10,10 +10,12 @@ import br.com.redesocial.modelo.dto.Multimidia;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
- * @author Lara, Jeferson
+ * @author Lara, Jeferson, Luciano
  */
 public class MultimidiaDAO extends DAOBase {
     public Multimidia selecionar(int id) throws Exception{
@@ -66,5 +68,29 @@ public class MultimidiaDAO extends DAOBase {
 
         pstmt.setInt(1, id);
         pstmt.executeUpdate();
+    }
+    
+    public List listar() throws Exception {
+        Connection conexao = getConexao();
+        
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("select * from multimidia order by id desc");
+        
+        ResultSet rs;
+        rs = pstmt.executeQuery();
+        
+        List lista;
+        lista = new ArrayList();
+        
+        while (rs.next()){
+            Multimidia m = new Multimidia();
+            m.setId(rs.getInt("id"));
+            m.setMidia(rs.getBytes("midia"));
+            m.setTipoConteudo(rs.getString("TipoConteudo"));
+            m.setData(rs.getDate("data"));
+            lista.add(m);
+        }
+        
+        return lista;
     }
 }
