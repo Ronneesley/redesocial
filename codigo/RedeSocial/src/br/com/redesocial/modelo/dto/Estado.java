@@ -13,6 +13,10 @@ public class Estado {
 
     private Pais pais;
 
+    public Estado(){
+        
+    }
+    
     public Estado(int id, String nome, Pais pais) {
         this.id = id;
         this.nome = nome;

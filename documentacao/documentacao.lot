@@ -1,4 +1,23 @@
 \select@language {brazil}
 \select@language {brazil}
-\contentsline {table}{\numberline {1}{\ignorespaces Requisito N\IeC {\~a}o Funcional: Tempo de carregamento de p\IeC {\'a}gina}}{6}{table.1.1}
-\contentsline {table}{\numberline {2}{\ignorespaces Requisito Funcional: Cadastro de usu\IeC {\'a}rios}}{6}{table.1.2}
+\contentsline {table}{\numberline {1}{\ignorespaces Requisito N\IeC {\~a}o Funcional: O sistema n\IeC {\~a}o deve permitir posts de usu\IeC {\'a}rios que configurem publica\IeC {\c c}\IeC {\~o}es ofensivas}}{6}{table.1.1}
+\contentsline {table}{\numberline {2}{\ignorespaces Requisito N\IeC {\~a}o Funcional: O tempo de conclus\IeC {\~a}o do software n\IeC {\~a}o poder\IeC {\'a} ultrapassar a data de 01/12/2017.}}{6}{table.1.2}
+\contentsline {table}{\numberline {3}{\ignorespaces Requisito N\IeC {\~a}o Funcional: O sistema deve ter suporte aos navegadores Google Chrome e Mozilla Firefox.}}{6}{table.1.3}
+\contentsline {table}{\numberline {4}{\ignorespaces Requisito N\IeC {\~a}o Funcional: O sistema deve ter uma boa usabilidade.}}{7}{table.1.4}
+\contentsline {table}{\numberline {5}{\ignorespaces Requisito Funcional: O sistema deve oferecer um cadastro de usu\IeC {\'a}rios}}{7}{table.1.5}
+\contentsline {table}{\numberline {6}{\ignorespaces Requisito Funcional: O sistema deve oferecer a op\IeC {\c c}\IeC {\~a}o de login}}{7}{table.1.6}
+\contentsline {table}{\numberline {7}{\ignorespaces Requisito Funcional: O sistema dever\IeC {\'a} dar a op\IeC {\c c}\IeC {\~a}o de editar o perfil do usu\IeC {\'a}rio}}{7}{table.1.7}
+\contentsline {table}{\numberline {8}{\ignorespaces Requisito Funcional: O software dever\IeC {\'a} conter uma Timeline}}{8}{table.1.8}
+\contentsline {table}{\numberline {9}{\ignorespaces Requisito Funcional: O software disponibilizar\IeC {\'a} um Post}}{8}{table.1.9}
+\contentsline {table}{\numberline {10}{\ignorespaces Requisito Funcional: O software disponibilizar\IeC {\'a} um \IeC {\'A}lbum de Fotos.}}{8}{table.1.10}
+\contentsline {table}{\numberline {11}{\ignorespaces Requisito Funcional: O sistema deve permitir que o usu\IeC {\'a}rio crie grupos}}{9}{table.1.11}
+\contentsline {table}{\numberline {12}{\ignorespaces Requisito Funcional: O sistema deve permitir que o usu\IeC {\'a}rio pesquise grupos}}{9}{table.1.12}
+\contentsline {table}{\numberline {13}{\ignorespaces Requisito Funcional: O sistema deve permitir que o usu\IeC {\'a}rio participe de grupos}}{9}{table.1.13}
+\contentsline {table}{\numberline {14}{\ignorespaces Requisito Funcional: O sistema deve permitir que o usu\IeC {\'a}rio saia de grupos}}{10}{table.1.14}
+\contentsline {table}{\numberline {15}{\ignorespaces Requisito Funcional: O sistema deve permitir que o usu\IeC {\'a}rio denuncie grupos}}{10}{table.1.15}
+\contentsline {table}{\numberline {16}{\ignorespaces Requisito Funcional: O sistema deve permitir que o usu\IeC {\'a}rio edite suas configura\IeC {\c c}\IeC {\~o}es gerais de conta}}{10}{table.1.16}
+\contentsline {table}{\numberline {17}{\ignorespaces Requisito Funcional: O sistema deve permitir que o usu\IeC {\'a}rio gerencie sua conta}}{10}{table.1.17}
+\contentsline {table}{\numberline {18}{\ignorespaces Requisito Funcional: O sistema deve permitir que o usu\IeC {\'a}rio convide pessoas a participarem de grupos}}{11}{table.1.18}
+\contentsline {table}{\numberline {19}{\ignorespaces Requisito Funcional: O sistema deve permitir que o usu\IeC {\'a}rio envie solicita\IeC {\c c}\IeC {\~o}es de amizade para outros usu\IeC {\'a}rios da rede social}}{11}{table.1.19}
+\contentsline {table}{\numberline {20}{\ignorespaces Requisito Funcional: O sistema deve permitir que o usu\IeC {\'a}rio envie mensagens}}{11}{table.1.20}
+\contentsline {table}{\numberline {21}{\ignorespaces Requisito Funcional: O sistema deve permitir que o usu\IeC {\'a}rio altere seu status no bate-papo}}{12}{table.1.21}
