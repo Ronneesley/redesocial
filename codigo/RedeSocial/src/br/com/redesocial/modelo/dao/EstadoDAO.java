@@ -15,18 +15,11 @@ import java.util.List;
  * @since 27/07/2017
  */
 public class EstadoDAO extends DAOBase {
-    /**
-     * Retorna uma conexão ativa com o banco de dados MySQL
-     * @return conexão ativa com o banco de dados
-     * @throws SQLException 
-     * @throws java.lang.ClassNotFoundException caso não encontre o driver do banco de dados
-     */
-    
     public List listar() throws Exception {
         Connection conexao = getConexao();
 
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("select * from estados order by nome asc"); 
+        pstmt = conexao.prepareStatement("select * from estados order by nome"); 
 
         ResultSet rs;
         rs = pstmt.executeQuery();
@@ -47,5 +40,4 @@ public class EstadoDAO extends DAOBase {
 
         return lista;
     }
-
 }
