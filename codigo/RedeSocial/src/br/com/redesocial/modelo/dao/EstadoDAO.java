@@ -19,7 +19,7 @@ public class EstadoDAO {
         con = DriverManager.getConnection(url, "admin", "redesocial");
     }
     
-    public void altera(EstadoDAO p) throws SQLException, Exception {
+    public void alterar(EstadoDAO p) throws SQLException, Exception {
         PreparedStatement pstmt;
         pstmt = con.prepareStatement("update estados set nome = ?, pais = ? where id = ?");
         conectar();
