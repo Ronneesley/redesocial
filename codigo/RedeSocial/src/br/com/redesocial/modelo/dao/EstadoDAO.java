@@ -2,6 +2,7 @@ package br.com.redesocial.modelo.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 /**
@@ -10,15 +11,38 @@ import java.sql.SQLException;
  * @since 27/07/2017
  */
 public class EstadoDAO {
-    /**
-     * Retorna uma conexão ativa com o banco de dados MySQL
-     * @return conexão ativa com o banco de dados
-     * @throws SQLException 
-     * @throws java.lang.ClassNotFoundException caso não encontre o driver do banco de dados
-     */
-    protected Connection getConexao() throws SQLException, ClassNotFoundException {
-        Class.forName("com.mysql.jdbc.Driver");
-        
-        return DriverManager.getConnection("jdbc:mysql://localhost:3306/redesocial", "admin", "redesocial");
+    Connection con;
+    private String getString;
+    
+    private void conectar() throws Exception {
+        String url = "jdbc:mysql://localhost:3306/redesocial";
+        con = DriverManager.getConnection(url, "admin", "redesocial");
     }
+    
+    public void altera(EstadoDAO p) throws SQLException, Exception {
+        PreparedStatement pstmt;
+        pstmt = con.prepareStatement("update estados set nome = ?, pais = ? where id = ?");
+        conectar();
+
+        pstmt.setString(1, p.getNome());
+        pstmt.setString(2, p.getPais());        
+        pstmt.setInt(3, p.getId());
+
+        pstmt.execute();
+        
+
+    }
+
+    private String getNome() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private String getPais() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private int getId() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+      
 }
