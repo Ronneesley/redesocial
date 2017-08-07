@@ -5,10 +5,10 @@
  */
 package br.com.redesocial.modelo.dao;
 
+
 import java.sql.ResultSet;
 import br.com.redesocial.modelo.dto.Multimidia;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +18,29 @@ import java.util.List;
  * @author Lara, Jeferson, Luciano
  */
 public class MultimidiaDAO extends DAOBase {
+    
+    public void inserir(Multimidia m) throws Exception {
+        Connection conexao = getConexao();
+        
+        System.out.print(m);
+        
+        //Arrumar as validações
+        if (m.getMidia().equals("")){
+            throw new Exception("A mídia não pode estar vazia!");
+        }
+
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("insert into multimidia(id, midia, tipoConteudo, data) values(?, ?, ?, ?)");
+
+        pstmt.setInt(1, m.getId()); //ID é automático, portanto não deve estar no SQL, nem arqui informado
+        //Mídia
+        //Conteúdo
+        pstmt.setDate(4, new java.sql.Date(m.getData().getTime()));
+
+        pstmt.executeUpdate();
+    }
+    
+    
     public Multimidia selecionar(int id) throws Exception{
         Connection conexao = getConexao();
 
@@ -41,24 +64,8 @@ public class MultimidiaDAO extends DAOBase {
         }
     }
 
-    public void inserir (Multimidia m) throws Exception {
-        Connection conexao = getConexao();
+    
 
-        //Arrumar as validações
-        if (conexao.getMidia().trim().equals("")){
-            throw new Exception("A mídia não pode estar vazia!");
-        }
-
-        PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("insert into multimidia(id, midia, tipoConteudo, data) values(?, ?, ?, ?)");
-
-        pstmt.setString(1, conexao.getId()); //ID é automático, portanto não deve estar no SQL, nem arqui informado
-        //Mídia
-        //Conteúdo
-        pstmt.setDate(4, new java.sql.Date(m.getData().getTime()));
-
-        pstmt.executeUpdate();
-    }
 
     public void excluir(int id) throws Exception {
         Connection conexao = getConexao();
