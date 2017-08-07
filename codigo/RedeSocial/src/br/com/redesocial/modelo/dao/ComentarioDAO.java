@@ -84,7 +84,7 @@ public class ComentarioDAO extends DAOBase {
         Connection conexao = getConexao();
 
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("select * from comentarios order by id desc"); 
+        pstmt = conexao.prepareStatement("select * from comentarios order by data desc"); 
 
         ResultSet rs;
         rs = pstmt.executeQuery();
@@ -92,6 +92,7 @@ public class ComentarioDAO extends DAOBase {
         List lista;
         lista = new ArrayList();
 
+        //PostagemDAO postagemDAO = new PostagemDAO();
         while (rs.next()){
             Comentario c = new Comentario();
 
@@ -99,8 +100,12 @@ public class ComentarioDAO extends DAOBase {
             c.setDescricao(rs.getString("descricao"));
             c.setCurtidas(rs.getInt("curtidas"));
             c.setData(rs.getDate("data"));
-            c.setPostagem(this.selecionar(rs.getInt("postagem")));
-            c.setComentario(this.selecionar(rs.getInt("resposta")));
+            //c.setPostagem(postagemDAO.selecionar(rs.getInt("postagem")));
+            
+            int idResposta = rs.getInt("resposta");
+            if (!rs.wasNull()){
+                c.setComentario(this.selecionar(idResposta));
+            }
 
             lista.add(c);
         }
