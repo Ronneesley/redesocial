@@ -40,4 +40,14 @@ public class EstadoDAO extends DAOBase {
 
         return lista;
     }
+    
+    public void excluir(int id) throws Exception {
+        Connection conexao = getConexao();
+
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("delete from estados where id = ?");
+
+        pstmt.setInt(1, id);
+        pstmt.executeUpdate();
+    }
 }
