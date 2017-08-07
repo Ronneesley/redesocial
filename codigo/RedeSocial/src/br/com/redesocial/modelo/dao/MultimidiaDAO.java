@@ -50,7 +50,7 @@ public class MultimidiaDAO extends DAOBase{
         PreparedStatement pstmt;
         pstmt = conexao.prepareStatement("insert into multimidia(id, midia, tipoConteudo, data) values(?, ?, ?, ?)");
         
-        pstmt.setString(1, conexao.getId());
+        pstmt.setInt(1, conexao.getId());
         
         pstmt.executeUpdate();
     }
