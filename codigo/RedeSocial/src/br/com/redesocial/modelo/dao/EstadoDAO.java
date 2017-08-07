@@ -1,6 +1,7 @@
 package br.com.redesocial.modelo.dao;
 
 import br.com.redesocial.modelo.dto.Estado;
+import br.com.redesocial.modelo.dto.Pais;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -15,6 +16,31 @@ import java.util.List;
  * @since 27/07/2017
  */
 public class EstadoDAO extends DAOBase {
+    
+    public Estado selecionar(int id) throws Exception{
+        Connection conexao = getConexao();
+
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("select * from estado where id = ?");
+        pstmt.setInt(1, id);
+
+        ResultSet rs;
+        rs = pstmt.executeQuery();
+
+        if (rs.next()){
+            Estado e = new Estado();
+            //Pais p = new Pais(); 
+            e.setId(rs.getInt("id"));
+            e.setNome(rs.getString("nome"));
+            //p.setNome(rs.getString("nome")); 
+            //Existe essa possibilidade, porém os estados e países não estarão ligados, podendo retornar valores errados
+            //DÚVIDAAAAAAAAAAAA!!!!!!!!!!!
+            return e;
+        } else {
+            return null;
+        }
+    }
+    
     public List listar() throws Exception {
         Connection conexao = getConexao();
 
