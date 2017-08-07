@@ -1,7 +1,6 @@
 package br.com.redesocial.modelo.dao;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
@@ -10,24 +9,19 @@ import java.sql.SQLException;
  * @author Wesley M. Felix
  * @since 27/07/2017
  */
-public class EstadoDAO {
-    Connection con;
-    private String getString;
-    
-    private void conectar() throws Exception {
-        String url = "jdbc:mysql://localhost:3306/redesocial";
-        con = DriverManager.getConnection(url, "admin", "redesocial");
-    }
+public class EstadoDAO extends DAOBase {
+   
     
     public void alterar(EstadoDAO p) throws SQLException, Exception {
+        Connection conexao = getConexao();
+        
         PreparedStatement pstmt;
-        pstmt = con.prepareStatement("update estados set nome = ?, pais = ? where id = ?");
-        conectar();
-
-        pstmt.setString(1, p.getNome());
-        pstmt.setString(2, p.getPais());        
-        pstmt.setInt(3, p.getId());
-
+        pstmt = conexao.prepareStatement("update estados set id = ?, pais = ? where nome = ? order by ASC");
+        
+        pstmt.setInt(1, p.getId());
+        pstmt.setString(2, p.getPais());  
+        pstmt.setString(3, p.getNome());
+        
         pstmt.execute();
         
 
