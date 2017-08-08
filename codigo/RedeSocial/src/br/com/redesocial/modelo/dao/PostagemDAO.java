@@ -46,7 +46,28 @@ public class PostagemDAO extends DAOCRUDBase<Postagem> {
 
     @Override
     public Postagem selecionar(int id) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //Apague a linha e escreva o código
+        Connection conexao = getConexao();
+        
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("select * from postagens where id = ?");
+        
+        pstmt.setInt(1, id);
+        
+        ResultSet rs = pstmt.executeQuery();
+        
+        if(rs.next()){
+            Postagem p = new Postagem();
+            
+            p.setId(rs.getInt("id"));
+            p.setDescricao(rs.getString("descricao"));
+            p.setCurtidas(rs.getInt("curtidas"));
+            p.setData(rs.getDate("data"));
+            p.setUsuario(rs.getUsuario("usuario"));
+            
+            return p;
+        } else {
+            return null;
+        }
     }
     
     /**
