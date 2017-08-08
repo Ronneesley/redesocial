@@ -3,6 +3,7 @@ package br.com.redesocial.modelo.dao;
 import br.com.redesocial.modelo.dto.Pais;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.List;
 
 public class PaisDAO extends DAOCRUDBase<Pais> {
@@ -42,7 +43,23 @@ public class PaisDAO extends DAOCRUDBase<Pais> {
 
     @Override
     public Pais selecionar(int id) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //Apague a linha e escreva o código
+        Connection conexao = getConexao();
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("select * from pais where id = ?");
+        pstmt.setInt(1, id);
+        
+        ResultSet rs;
+        rs = pstmt.executeQuery();
+        
+        if(rs.next()){
+            Pais p = new Pais();
+            p.setId(id);
+            p.setNome(rs.getString("nome"));
+            
+            return p;
+        }else{
+            return null;
+        }
     }
 
     @Override
