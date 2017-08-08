@@ -20,8 +20,13 @@ public class PostagemDAO extends DAOCRUDBase<Postagem> {
         pstmt.setInt(1, id);
         pstmt.executeUpdate();
     }
-<<<<<<< HEAD
-    
+
+    @Override
+    public void inserir(Postagem dto) throws Exception {
+        
+    }
+
+    @Override
     public void alterar(Postagem p) throws Exception{
         Connection conexao = getConexao();
         
@@ -35,16 +40,6 @@ public class PostagemDAO extends DAOCRUDBase<Postagem> {
         pstmt.setInt(5, p.getId());
         
         pstmt.executeUpdate();
-=======
-
-    @Override
-    public void inserir(Postagem dto) throws Exception {
-        
-    }
-
-    @Override
-    public void alterar(Postagem dto) throws Exception {
-        
     }
 
     @Override
