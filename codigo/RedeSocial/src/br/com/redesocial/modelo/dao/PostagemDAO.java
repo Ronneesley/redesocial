@@ -29,8 +29,19 @@ public class PostagemDAO extends DAOCRUDBase<Postagem> {
     }
 
     @Override
-    public void alterar(Postagem dto) throws Exception {
+    public void alterar(Postagem p) throws Exception{
+        Connection conexao = getConexao();
         
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("update postagens set curtidas = ?, descricao = ?, data = ?, usuario = ? where id = ?");
+        
+        pstmt.setInt(1, p.getCurtidas());
+        pstmt.setString(2, p.getDescricao());
+        pstmt.setDate(3, p.getData());
+        pstmt.setString(4, p.getUsuario());
+        pstmt.setInt(5, p.getId());
+        
+        pstmt.executeUpdate();
     }
 
     @Override
@@ -60,7 +71,7 @@ public class PostagemDAO extends DAOCRUDBase<Postagem> {
             p.setCurtidas(rs.getInt("curtidas"));
             p.setDescricao(rs.getString("descricao"));
             p.setData(rs.getDate("data"));
-            p.usuarioDAO.listar(rs.getInt("usuario")); //deu erro aqui
+            //p.usuarioDAO.listar(rs.getInt("usuario")); //deu erro aqui
             lista.add(p);
         }
         
