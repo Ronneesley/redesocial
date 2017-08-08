@@ -46,15 +46,15 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
         rs = pstmt.executeQuery();
 
         if (rs.next()){
-            Comentario p = new Comentario();
-            p.setId(id);
-            p.setDescricao(rs.getString("descricao"));
-            p.setCurtidas(rs.getInt("curtidas"));
-            p.setData(rs.getDate("data"));
-            p.setPostagem(rs.getPostagem("postagem"));
-            p.setResposta(rs.getString("resposta"));
+            Comentario c = new Comentario();
+            c.setId(id);
+            c.setDescricao(rs.getString("descricao"));
+            c.setCurtidas(rs.getInt("curtidas"));
+            c.setData(rs.getDate("data"));
+            c.setPostagem(rs.getPostagem("postagem"));
+            c.setResposta(rs.getComentario("resposta"));
 
-            return p;
+            return c;
         } else {
             return null;
         }
