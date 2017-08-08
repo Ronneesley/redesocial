@@ -57,12 +57,13 @@ public class PostagemDAO extends DAOCRUDBase<Postagem> {
         
         if(rs.next()){
             Postagem p = new Postagem();
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
             
             p.setId(rs.getInt("id"));
             p.setDescricao(rs.getString("descricao"));
             p.setCurtidas(rs.getInt("curtidas"));
             p.setData(rs.getDate("data"));
-            p.setUsuario(rs.getUsuario("usuario"));
+            p.setUsuario(usuarioDAO.selecionar(rs.getInt("usuario")));
             
             return p;
         } else {
