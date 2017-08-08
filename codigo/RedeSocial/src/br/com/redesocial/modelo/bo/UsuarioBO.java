@@ -8,7 +8,7 @@ import br.com.redesocial.modelo.dto.Usuario;
  * @author Ronneesley Moura Teles
  * @since 27/07/2017
  */
-public class UsuarioBO extends BOBase<Usuario, UsuarioDAO> {
+public class UsuarioBO extends BOCRUDBase<Usuario, UsuarioDAO> {
     @Override
     protected UsuarioDAO instanciarDAO() {
         return new UsuarioDAO();

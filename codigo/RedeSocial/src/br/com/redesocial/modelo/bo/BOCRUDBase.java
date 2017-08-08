@@ -9,7 +9,7 @@ import br.com.redesocial.modelo.dao.DAOCRUDBase;
  * @param <DAO> tipo de dado da classe DAO
  * @since 08/08/2017
  */
-public abstract class BOBase<DTO, DAO extends DAOCRUDBase> {
+public abstract class BOCRUDBase<DTO, DAO extends DAOCRUDBase> {
     protected abstract DAO instanciarDAO();
     
     protected abstract void validar(DTO dto) throws Exception;
