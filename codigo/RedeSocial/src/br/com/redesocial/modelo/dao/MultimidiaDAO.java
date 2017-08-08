@@ -32,9 +32,9 @@ public class MultimidiaDAO extends DAOBase {
         PreparedStatement pstmt;
         pstmt = conexao.prepareStatement("insert into multimidia(id, midia, tipoConteudo, data) values(?, ?, ?, ?)");
 
-        pstmt.setInt(1, m.getId()); //ID é automático, portanto não deve estar no SQL, nem arqui informado
-        //Mídia
-        //Conteúdo
+        pstmt.setInt(1, m.getId());
+        pstmt.setString(2, m.tipoConteudo());
+        pstmt.setByte(3, m.getmidia());
         pstmt.setDate(4, new java.sql.Date(m.getData().getTime()));
 
         pstmt.executeUpdate();

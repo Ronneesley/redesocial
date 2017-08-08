@@ -54,4 +54,12 @@ public class Multimidia {
     public void setData(Date data) {
         this.data = data;
     }
+
+    public String tipoConteudo() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public byte getmidia() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
