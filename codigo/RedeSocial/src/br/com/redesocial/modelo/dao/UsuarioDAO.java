@@ -1,17 +1,18 @@
 package br.com.redesocial.modelo.dao;
 
-import br.com.redesocial.modelo.dao.interfaces.DAOCRUD;
 import br.com.redesocial.modelo.dto.Usuario;
+import br.com.redesocial.modelo.dto.enumeracoes.Sexo;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.List;
 
 /**
  * Objeto de acesso aos dados dos usuários
  * @author Ronneesley Moura Teles
  * @since 27/07/2017
  */
-public class UsuarioDAO extends DAOBase implements DAOCRUD<Usuario> {
+public class UsuarioDAO extends DAOCRUDBase<Usuario> {
     /**
      * Inseri um objeto no banco de dados na tabela usuários
      * @param dto objeto com os dados de usuário já preenchido
@@ -30,7 +31,8 @@ public class UsuarioDAO extends DAOBase implements DAOCRUD<Usuario> {
         pstmt.executeUpdate();
     }
     
-    public Usuario selecionar (int id) throws Exception{
+    @Override
+    public Usuario selecionar(int id) throws Exception {
         Connection conexao = getConexao();
 
         PreparedStatement  pstmt; 
@@ -40,6 +42,8 @@ public class UsuarioDAO extends DAOBase implements DAOCRUD<Usuario> {
         ResultSet rs;
         rs = pstmt.executeQuery();
 
+        MultimidiaDAO multimidiaDAO = new MultimidiaDAO();
+        CidadeDAO cidadeDAO = new CidadeDAO();
         if (rs.next()){
             Usuario u = new Usuario();
             u.setId(rs.getInt("id"));
@@ -47,23 +51,31 @@ public class UsuarioDAO extends DAOBase implements DAOCRUD<Usuario> {
             u.setEmail(rs.getString("email"));
             u.setTelefone(rs.getString("telefone"));
             u.setSenha(rs.getString("senha"));
-            u.setNascimento(rs.getDate("data"));
-            //u.setSexo(rs.getSexo("sexo"));//olhar esse aqui
-            //u.setDataCadastro(rs.getData("dataCadastro"));
+            u.setNascimento(rs.getDate("data"));            
+            u.setSexo(Sexo.getSexo(rs.getString("sexo").charAt(0)));
+            u.setDataCadastro(rs.getDate("data_cadastro"));
             u.setStatus(rs.getBoolean("status"));
-            //u.setFoto(rs.getMultimida("foto"));
-            //u.setCidade(rs.setCidade("cidade"));
+            u.setFoto(multimidiaDAO.selecionar(rs.getInt("foto")));
+            u.setCidade(cidadeDAO.selecionar(rs.getInt("cidade")));
 
             return u;
         }else{
             return null;
         }
-    }
-    
-    public static void mainSelecionar(String[] args) throws Exception {
-        UsuarioDAO dao = new UsuarioDAO();
-        Usuario u = dao.selecionar(1);
+    }    
+
+    @Override
+    public void alterar(Usuario dto) throws Exception {
         
-        System.out.println(u.getNome());
+    }
+
+    @Override
+    public List listar() throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); //Apague a linha e escreva o código
+    }
+
+    @Override
+    public void excluir(int id) throws Exception {
+        
     }
 }
