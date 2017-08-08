@@ -1,10 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.redesocial.modelo.dao;
-
 
 import java.sql.ResultSet;
 import br.com.redesocial.modelo.dto.Multimidia;
@@ -17,8 +11,8 @@ import java.util.List;
  *
  * @author Lara, Jeferson, Luciano
  */
-public class MultimidiaDAO extends DAOBase {
-    
+public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
+    @Override
     public void inserir(Multimidia m) throws Exception {
         Connection conexao = getConexao();
         
@@ -39,8 +33,8 @@ public class MultimidiaDAO extends DAOBase {
 
         pstmt.executeUpdate();
     }
-    
-    
+   
+    @Override
     public Multimidia selecionar(int id) throws Exception{
         Connection conexao = getConexao();
 
@@ -64,9 +58,7 @@ public class MultimidiaDAO extends DAOBase {
         }
     }
 
-    
-
-
+    @Override
     public void excluir(int id) throws Exception {
         Connection conexao = getConexao();
 
@@ -77,6 +69,7 @@ public class MultimidiaDAO extends DAOBase {
         pstmt.executeUpdate();
     }
     
+    @Override
     public List listar() throws Exception {
         Connection conexao = getConexao();
         
@@ -99,5 +92,10 @@ public class MultimidiaDAO extends DAOBase {
         }
         
         return lista;
+    }
+
+    @Override
+    public void alterar(Multimidia dto) throws Exception {
+        
     }
 }

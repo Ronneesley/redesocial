@@ -11,7 +11,8 @@ import java.util.List;
  *
  * @author Daniel
  */
-public class AlbumDAO extends DAOBase{
+public class AlbumDAO extends DAOCRUDBase<Album> {
+    @Override
     public Album selecionar(int id)throws Exception{
         Connection conexao = getConexao();
 
@@ -36,11 +37,12 @@ public class AlbumDAO extends DAOBase{
         }
     }
 
+    @Override
     public List listar() throws Exception {
-        conectar();
+        Connection conexao = getConexao();
 
         PreparedStatement pstmt;
-        pstmt = con.prepareStatement("select * from albuns order by date desc"); 
+        pstmt = conexao.prepareStatement("select * from albuns order by date desc"); 
 
         ResultSet rs;
         rs = pstmt.executeQuery();
@@ -60,5 +62,20 @@ public class AlbumDAO extends DAOBase{
         }
 
         return lista;
+    }
+
+    @Override
+    public void inserir(Album dto) throws Exception {
+        
+    }
+
+    @Override
+    public void alterar(Album dto) throws Exception {
+        
+    }
+
+    @Override
+    public void excluir(int id) throws Exception {
+
     }
 }
