@@ -45,7 +45,7 @@ public class PaisDAO extends DAOCRUDBase<Pais> {
     public Pais selecionar(int id) throws Exception {
         Connection conexao = getConexao();
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("select * from pais where id = ?");
+        pstmt = conexao.prepareStatement("select * from paises where id = ?");
         pstmt.setInt(1, id);
         
         ResultSet rs;
