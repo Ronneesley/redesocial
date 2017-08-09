@@ -16,10 +16,11 @@ public class CidadeDAO extends DAOCRUDBase<Cidade> {
     public void inserir(Cidade dto) throws Exception {
         Connection conexao = getConexao();
         
-        if(dto.getNome().trim().equals("")){
+        if (dto.getNome().trim().equals("")){
             throw new Exception("O campo estado não pode estar vazio.");
         }
-        if(dto.getEstado().trim().equals("")){
+        
+        if (dto.getEstado() == null){
             throw new Exception("O campo nome não pode estar vazio.");
         }
         
@@ -27,7 +28,7 @@ public class CidadeDAO extends DAOCRUDBase<Cidade> {
         pstmt = conexao.prepareStatement("insert into cidades(nome, estado) values(?, ?)");
         
         pstmt.setString(1, dto.getNome());
-        pstmt.setString(2, dto.getEstado());
+        pstmt.setInt(2, dto.getEstado().getId());
         
         pstmt.executeUpdate();
     }
