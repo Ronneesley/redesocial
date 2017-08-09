@@ -30,6 +30,8 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
         pstmt.setString(3, dto.getSenha());
         
         pstmt.executeUpdate();
+        
+        dto.setId(getId(pstmt));
     }
     
     @Override
@@ -97,8 +99,39 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
     }
 
     @Override
-    public List listar() throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //Apague a linha e escreva o código
+     public List listar() throws Exception {
+        Connection conexao = getConexao();
+        
+        PreparedStatement  pstmt; 
+        pstmt = conexao.prepareStatement("select * from usuarios where id = ?");
+        pstmt.setInt(1, id);
+        
+        ResultSet rs;
+        rs = pstmt.executeQuery();
+        
+		MultimidiaDAO multimidiaDAO = new MultimidiaDAO();
+        CidadeDAO cidadeDAO = new CidadeDAO();
+        List lista;
+        lista = new ArrayList();
+        
+        while (rs.next()){
+            Usuario u = new Usuario();
+            u.setId(rs.getInt("id"));
+            u.setNome(rs.getString("nome"));
+            u.setEmail(rs.getString("email"));
+            u.setTelefone(rs.getString("telefone"));
+            u.setSenha(rs.getString("senha"));
+            u.setNascimento(rs.getDate("data"));            
+            u.setSexo(Sexo.getSexo(rs.getString("sexo").charAt(0)));
+            u.setDataCadastro(rs.getDate("data_cadastro"));
+            u.setStatus(rs.getBoolean("status"));
+            u.setFoto(multimidiaDAO.selecionar(rs.getInt("foto")));
+            u.setCidade(cidadeDAO.selecionar(rs.getInt("cidade")));
+            
+            lista.add(u);
+        }
+        
+        return lista;
     }
 
     @Override

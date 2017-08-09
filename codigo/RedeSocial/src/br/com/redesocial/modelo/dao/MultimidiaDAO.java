@@ -9,14 +9,12 @@ import java.util.List;
 
 /**
  *
- * @author Lara, Jeferson, Luciano
+ * @author Lara, Jeferson, Luciano, Jonathan
  */
 public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
     @Override
     public void inserir(Multimidia m) throws Exception {
         Connection conexao = getConexao();
-        
-        System.out.print(m);
         
         //Arrumar as validações
         if (m.getMidia().equals("")){
@@ -24,14 +22,16 @@ public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
         }
 
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("insert into multimidia(id, midia, tipoConteudo, data) values(?, ?, ?, ?)");
+        pstmt = conexao.prepareStatement("insert into multimidia(Album, midia, tipoConteudo, data) values(?, ?, ?)");
 
-        pstmt.setInt(1, m.getId());
+        pstmt.setInt(1, m.getAlbum());
         pstmt.setString(2, m.tipoConteudo());
         pstmt.setByte(3, m.getmidia());
         pstmt.setDate(4, new java.sql.Date(m.getData().getTime()));
 
         pstmt.executeUpdate();
+        
+        m.setId(getId(pstmt));
     }
    
     @Override

@@ -23,4 +23,9 @@ public class UsuarioBO extends BOCRUDBase<Usuario, UsuarioDAO> {
         
         if (dto.getSenha().trim().equals("")) throw new Exception("Preencha a senha do usuário");
     }
+
+    @Override
+    protected void validarChavePrimaria(Usuario dto) throws Exception {
+        if (dto.getId() == null) throw new Exception("Preencha o campo id");
+    }
 }
