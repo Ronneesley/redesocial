@@ -1,6 +1,9 @@
 package br.com.redesocial.modelo.dao;
 
 import br.com.redesocial.modelo.dto.Cidade;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.List;
 
 /**
@@ -22,7 +25,27 @@ public class CidadeDAO extends DAOCRUDBase<Cidade> {
 
     @Override
     public Cidade selecionar(int id) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //Apague a linha e escreva o código
+        Connection conexao = getConexao();
+        
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("select * from cidade where id = ?");
+        
+        pstmt.setInt(1, id);
+        
+        ResultSet rs = pstmt.executeQuery();
+        
+        if(rs.next()){
+            Cidade p = new Cidade();
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            
+            p.setId(rs.getInt("id"));
+            p.setEstado(EstadoDAO.selecionar(rs.getString("estado")));
+            p.setNome(rs.getString("nome"));
+            
+            return p;
+        } else {
+            return null;
+        }
     }
 
     @Override

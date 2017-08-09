@@ -9,7 +9,12 @@ public class Cidade {
     private Estado estado;
     private String nome;
 
-    public Cidade(int id, Estado estado, String nome) {
+    public Cidade() {
+     
+    }
+    
+    
+      public Cidade(int id, Estado estado, String nome) {
         this.id = id;
         this.estado = estado;
         this.nome = nome;
