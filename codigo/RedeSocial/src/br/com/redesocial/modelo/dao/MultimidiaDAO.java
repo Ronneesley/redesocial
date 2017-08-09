@@ -30,6 +30,8 @@ public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
         pstmt.setDate(4, new java.sql.Date(m.getData().getTime()));
 
         pstmt.executeUpdate();
+        
+        m.setId(getId(pstmt));
     }
    
     @Override

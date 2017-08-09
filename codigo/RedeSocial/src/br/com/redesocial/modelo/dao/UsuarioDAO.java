@@ -29,6 +29,8 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
         pstmt.setString(3, dto.getSenha());
         
         pstmt.executeUpdate();
+        
+        dto.setId(getId(pstmt));
     }
     
     @Override

@@ -38,7 +38,7 @@ public abstract class BOCRUDBase<DTO, DAO extends DAOCRUDBase<DTO>> {
         dao.excluir(id);
     } 
     
-    public DTO selecioanr(int id) throws Exception {
+    public DTO selecionar(int id) throws Exception {
         DAO dao = instanciarDAO();
         return dao.selecionar(id);
     }
