@@ -16,8 +16,7 @@ public class PaisDAO extends DAOCRUDBase<Pais> {
         }
 
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("update paises set  nome = ? where id = ?");
-
+        pstmt = conexao.prepareStatement("update paises set nome = ? where id = ?");
 
         pstmt.setString(1, p.getNome());
         pstmt.setInt(2, p.getId());
@@ -47,15 +46,15 @@ public class PaisDAO extends DAOCRUDBase<Pais> {
         PreparedStatement pstmt;
         pstmt = conexao.prepareStatement("select * from paises where id = ?");
         pstmt.setInt(1, id);
-        
+
         ResultSet rs;
         rs = pstmt.executeQuery();
-        
+
         if(rs.next()){
             Pais p = new Pais();
             p.setId(id);
             p.setNome(rs.getString("nome"));
-            
+
             return p;
         }else{
             return null;
