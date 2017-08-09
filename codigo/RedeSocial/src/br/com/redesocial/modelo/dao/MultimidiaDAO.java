@@ -1,14 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.redesocial.modelo.dao;
 
 import java.sql.ResultSet;
 import br.com.redesocial.modelo.dto.Multimidia;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +11,30 @@ import java.util.List;
  *
  * @author Lara, Jeferson, Luciano
  */
-public class MultimidiaDAO extends DAOBase {
+public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
+    @Override
+    public void inserir(Multimidia m) throws Exception {
+        Connection conexao = getConexao();
+        
+        System.out.print(m);
+        
+        //Arrumar as validações
+        if (m.getMidia().equals("")){
+            throw new Exception("A mídia não pode estar vazia!");
+        }
+
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("insert into multimidia(id, midia, tipoConteudo, data) values(?, ?, ?, ?)");
+
+        pstmt.setInt(1, m.getId());
+        pstmt.setString(2, m.tipoConteudo());
+        pstmt.setByte(3, m.getmidia());
+        pstmt.setDate(4, new java.sql.Date(m.getData().getTime()));
+
+        pstmt.executeUpdate();
+    }
+   
+    @Override
     public Multimidia selecionar(int id) throws Exception{
         Connection conexao = getConexao();
 
@@ -41,6 +58,7 @@ public class MultimidiaDAO extends DAOBase {
         }
     }
 
+<<<<<<< HEAD
     public void inserir (Multimidia m) throws Exception {
         Connection conexao = getConexao();
 
@@ -66,6 +84,9 @@ public class MultimidiaDAO extends DAOBase {
         pstmt.executeUpdate();
     }
 
+=======
+    @Override
+>>>>>>> 8af9da3eced508f5097c74136a1d05ef8557150a
     public void excluir(int id) throws Exception {
         Connection conexao = getConexao();
 
@@ -79,6 +100,7 @@ public class MultimidiaDAO extends DAOBase {
 }
 =======
     
+    @Override
     public List listar() throws Exception {
         Connection conexao = getConexao();
         
@@ -101,6 +123,11 @@ public class MultimidiaDAO extends DAOBase {
         }
         
         return lista;
+    }
+
+    @Override
+    public void alterar(Multimidia dto) throws Exception {
+        
     }
 }
 >>>>>>> 026e513e9309ae84502a59528999992a1a70ac96

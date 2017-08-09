@@ -8,22 +8,19 @@ import br.com.redesocial.modelo.dto.Usuario;
  * @author Ronneesley Moura Teles
  * @since 27/07/2017
  */
-public class UsuarioBO {
-    /**
-     * Inseri um usuário no banco de dados verificando as regras necessárias de inserção
-     * @param usuario DTO com dados preenchidos
-     * @throws Exception 
-     */
-    public void inserir(Usuario usuario) throws Exception {
+public class UsuarioBO extends BOCRUDBase<Usuario, UsuarioDAO> {
+    @Override
+    protected UsuarioDAO instanciarDAO() {
+        return new UsuarioDAO();
+    }
+
+    @Override
+    protected void validar(Usuario dto) throws Exception {
         //Validações
-        if (usuario.getNome().trim().equals("")) throw new Exception("Preencha o nome do usuário");
+        if (dto.getNome().trim().equals("")) throw new Exception("Preencha o nome do usuário");
         
-        if (usuario.getEmail().trim().equals("")) throw new Exception("Preencha o e-mail do usuário");
+        if (dto.getEmail().trim().equals("")) throw new Exception("Preencha o e-mail do usuário");
         
-        if (usuario.getSenha().trim().equals("")) throw new Exception("Preencha a senha do usuário");
-        
-        //Inserção
-        UsuarioDAO dao = new UsuarioDAO();
-        dao.inserir(usuario);
+        if (dto.getSenha().trim().equals("")) throw new Exception("Preencha a senha do usuário");
     }
 }

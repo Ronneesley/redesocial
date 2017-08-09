@@ -9,7 +9,7 @@ import java.sql.SQLException;
  * @author Ronneesley Moura Teles
  * @since 27/07/2017
  */
-public class DAOBase {
+public abstract class DAOBase {
     /**
      * Retorna uma conexão ativa com o banco de dados MySQL
      * @return conexão ativa com o banco de dados
