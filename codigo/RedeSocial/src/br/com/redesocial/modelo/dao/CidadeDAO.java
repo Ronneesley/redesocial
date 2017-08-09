@@ -1,6 +1,8 @@
 package br.com.redesocial.modelo.dao;
 
 import br.com.redesocial.modelo.dto.Cidade;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.util.List;
 
 /**
@@ -12,7 +14,22 @@ public class CidadeDAO extends DAOCRUDBase<Cidade> {
 
     @Override
     public void inserir(Cidade dto) throws Exception {
+        Connection conexao = getConexao();
         
+        if(dto.getNome().trim().equals("")){
+            throw new Exception("O campo estado não pode estar vazio.");
+        }
+        if(dto.getEstado().trim().equals("")){
+            throw new Exception("O campo nome não pode estar vazio.");
+        }
+        
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("insert into cidades(nome, estado) values(?, ?)");
+        
+        pstmt.setString(1, dto.getNome());
+        pstmt.setString(2, dto.getEstado());
+        
+        pstmt.executeUpdate();
     }
 
     @Override
