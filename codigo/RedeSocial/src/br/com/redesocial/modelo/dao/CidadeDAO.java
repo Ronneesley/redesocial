@@ -31,6 +31,8 @@ public class CidadeDAO extends DAOCRUDBase<Cidade> {
         pstmt.setInt(2, dto.getEstado().getId());
         
         pstmt.executeUpdate();
+        
+        dto.setId(getId(pstmt));
     }
 
     @Override
