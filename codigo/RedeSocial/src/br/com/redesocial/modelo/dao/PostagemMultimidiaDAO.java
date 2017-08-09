@@ -37,7 +37,18 @@ public class PostagemMultimidiaDAO extends DAOCRUDBase<PostagemMultimidia>{
 
     @Override
     public void alterar(PostagemMultimidia dto) throws Exception {
-
+        Connection conexao = getConexao();
+        
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("update postagens_multimidias set postagem = ?, multimidia = ? where ");
+        //condicao 
+        
+        pstmt.setInt(1, dto.getPostagem());
+        pstmt.setInt(2, dto.getMultimidia());
+        
+        pstmt.executeQuery();
+        
+        //ainda apanhando das chaves estrangeiras, depois olho direito
     }
 
     @Override
