@@ -135,22 +135,14 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
     }
 
     @Override
-    public void excluir(int id, nome, email, telefone, senha, nascimento, sexo, data_cadastro, status) throws Exception {
-       conectar();
+    public void excluir(int id) throws Exception {
+       Connection conexao = getConexao();
         
         PreparedStatement pstmt;
-        pstmt = con.prepareStatement("delete from posts where id = ?");
+        pstmt = conexao.prepareStatement("delete from usuario where id = ?");
         
         pstmt.setInt(1, id);
-        pstmt.setVarchar(1, nome);
-        pstmt.setVarchar(1, email);
-        pstmt.setVarchar(1, telefone);
-        pstmt.setChar(1, senha);
-        pstmt.setDate(1, nascimento);
-        pstmt.setChar(1, sexo);
-        pstmt.setDatetime(1, data_cadastro);
-        pstmt.setBool(1, status);
         pstmt.executeUpdate();
-}
+
     }
 }
