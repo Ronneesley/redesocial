@@ -52,6 +52,14 @@ public class CidadeDAO extends DAOCRUDBase<Cidade> {
 
     @Override
     public void excluir(int id) throws Exception {
+        Connection conexao = getConexao();
+        
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("delete from cidades where id = ?");
+        
+        pstmt.setInt(1, id);
+        
+        pstmt.executeUpdate();
         
     }
 
