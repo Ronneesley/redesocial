@@ -5,7 +5,7 @@ import br.com.redesocial.modelo.dto.Pais;
 
 /**
  * Define as regras de negócio para os usuários
- * @author Ronneesley Moura Teles
+ * @author Igor Justino Rodrigues
  * @since 27/07/2017
  */
 public class PaisBO extends BOCRUDBase<Pais, PaisDAO> {
