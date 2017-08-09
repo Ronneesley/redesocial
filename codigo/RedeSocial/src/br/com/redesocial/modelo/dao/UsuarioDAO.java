@@ -65,8 +65,34 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
     }    
 
     @Override
-    public void alterar(Usuario dto) throws Exception {
+    public void alterar (Usuario  u) throws Exception {
+        Connection conexao = getConexao();
+
+        PreparedStatement  pstmt; 
+        pstmt = conexao.prepareStatement("update usuario set id = ?, nome = ?, email=?, telefone=? senha =?, nascimento =?, sexo = ?, data_cadastro =?, status =?, foto=?, cidade=?");
         
+        ResultSet rs;
+        rs = pstmt.executeQuery();
+       
+        MultimidiaDAO multimidiaDAO = new MultimidiaDAO();
+        CidadeDAO cidadeDAO = new CidadeDAO();
+        
+        
+        pstmt.setInt(1, u.getId());
+        pstmt.setString(2, u.getNome());
+        pstmt.setString(3, u.getEmail());
+        pstmt.setString(4, u.getTelefone());
+        pstmt.setString(5, u.getSenha());  
+        pstmt.setDate  (6, u.getNascimento());
+        u.setSexo(Sexo.getSexo(rs.getString("sexo").charAt(0)));
+        pstmt.setDate  (8, u.getDataCadastro());
+        pstmt.setBoolean(9, u.getStatus());
+        u.setFoto(multimidiaDAO.alterar(rs.getInt("foto")));
+        u.setCidade(cidadeDAO.alterar(rs.getInt("cidade")));
+
+        pstmt.executeUpdate();
+      
+    
     }
 
     @Override
