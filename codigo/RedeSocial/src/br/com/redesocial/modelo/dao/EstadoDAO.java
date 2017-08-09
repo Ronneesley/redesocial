@@ -20,7 +20,7 @@ public class EstadoDAO extends DAOCRUDBase<Estado> {
         pstmt = conexao.prepareStatement("update estados set nome = ?, pais = ? where id = ?");
 
         pstmt.setString(1, p.getNome());
-        pstmt.setPais(2, p.getPais());        
+        pstmt.setInt(2, p.getPais().getId());
         pstmt.setInt(3, p.getId());
 
         pstmt.executeUpdate();
