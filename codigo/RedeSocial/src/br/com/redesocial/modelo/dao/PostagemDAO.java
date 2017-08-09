@@ -87,13 +87,14 @@ public class PostagemDAO extends DAOCRUDBase<Postagem> {
         List lista;
         lista = new ArrayList();
         
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
         while(rs.next()){
             Postagem p = new Postagem();
             p.setId(rs.getInt("id"));
             p.setCurtidas(rs.getInt("curtidas"));
             p.setDescricao(rs.getString("descricao"));
             p.setData(rs.getDate("data"));
-            //p.usuarioDAO.listar(rs.getInt("usuario")); //deu erro aqui
+            p.setUsuario(usuarioDAO.selecionar(rs.getInt("usuario")));
             lista.add(p);
         }
         
