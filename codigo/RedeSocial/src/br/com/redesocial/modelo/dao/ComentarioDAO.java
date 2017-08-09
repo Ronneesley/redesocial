@@ -45,15 +45,21 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
         ResultSet rs;
         rs = pstmt.executeQuery();
 
+        PostagemDAO postagemDAO = new PostagemDAO();
         if (rs.next()){
-            Post p = new Post();
-            p.setId(id);
-            p.setCurtidas(rs.getString("curtidas"));
-            p.setData(rs.getDate("data"));
-            p.setPostagem(rs.getString("postagem"));
-            p.setResposta(rs.getString("resposta"));
+            Comentario c = new Comentario();
+            c.setId(id);
+            c.setDescricao(rs.getString("descricao"));
+            c.setCurtidas(rs.getInt("curtidas"));
+            c.setData(rs.getDate("data"));
+            c.setPostagem(postagemDAO.selecionar(rs.getInt("postagem")));
+            
+            int idResposta = rs.getInt("resposta");            
+            if (!rs.wasNull()){
+                c.setResposta(this.selecionar(idResposta));
+            }
 
-            return p;
+            return c;
         } else {
             return null;
         }
@@ -72,7 +78,7 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
         List lista;
         lista = new ArrayList();
 
-        //PostagemDAO postagemDAO = new PostagemDAO();
+        PostagemDAO postagemDAO = new PostagemDAO();
         while (rs.next()){
             Comentario c = new Comentario();
 
@@ -80,11 +86,11 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
             c.setDescricao(rs.getString("descricao"));
             c.setCurtidas(rs.getInt("curtidas"));
             c.setData(rs.getDate("data"));
-            //c.setPostagem(postagemDAO.selecionar(rs.getInt("postagem")));
+            c.setPostagem(postagemDAO.selecionar(rs.getInt("postagem")));
 
             int idResposta = rs.getInt("resposta");
             if (!rs.wasNull()){
-                c.setComentario(this.selecionar(idResposta));
+                c.setResposta(this.selecionar(idResposta));
             }
 
             lista.add(c);

@@ -17,13 +17,13 @@ public class EstadoDAO extends DAOCRUDBase<Estado> {
         Connection conexao = getConexao();
 
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("update estados set id = ?, pais = ? where nome = ? order by ASC");
+        pstmt = conexao.prepareStatement("update estados set nome = ?, pais = ? where id = ?");
 
-        pstmt.setInt(1, p.getId());
-        pstmt.setString(2, p.getPais());
-        pstmt.setString(3, p.getNome());
+        pstmt.setString(1, p.getNome());
+        pstmt.setPais(2, p.getPais());        
+        pstmt.setInt(3, p.getId());
 
-        pstmt.execute();
+        pstmt.executeUpdate();
     }
 
     @Override
