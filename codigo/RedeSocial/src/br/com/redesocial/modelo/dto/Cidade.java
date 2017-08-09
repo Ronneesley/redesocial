@@ -1,25 +1,25 @@
 package br.com.redesocial.modelo.dto;
 
 /**
- * Descreva a classe aqui: ex.: Class que representa as cidades
+ * DTO para representação das Cidades
  * @author Daniel, Jônatas e Paulo
  */
 public class Cidade {
-    private int id;
+    private Integer id;
     private Estado estado;
     private String nome;
 
-    public Cidade(int id, Estado estado, String nome) {
+    public Cidade(Integer id, Estado estado, String nome) {
         this.id = id;
         this.estado = estado;
         this.nome = nome;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
