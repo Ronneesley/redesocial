@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  *
- * @author Ronneesley Moura Teles
+ * @author Ronneesley Moura Teles, Ianka, 
  * @since 08/08/2017
  */
 public class CidadeDAO extends DAOCRUDBase<Cidade> {
@@ -37,7 +37,8 @@ public class CidadeDAO extends DAOCRUDBase<Cidade> {
 
     @Override
     public void alterar(Cidade dto) throws Exception {
-        
+       Connection conexao = getConexao();
+       
     }
 
     @Override
