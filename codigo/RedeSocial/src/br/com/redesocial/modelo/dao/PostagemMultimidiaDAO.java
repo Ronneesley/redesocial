@@ -12,11 +12,12 @@ import java.util.List;
  * @author Daniel
  */
 public class PostagemMultimidiaDAO extends DAOCRUDBase<PostagemMultimidia>{
-    
-    public void inserir(Postagem p, Multimidia m) throws Exception{
+
+    @Override
+    public void inserir(PostagemMultimidia dto) throws Exception {
         Connection conexao = getConexao();
         
-        if(p.getId().equals("") && m.getId().equals("")){
+        if(dto.getPostagem().getId().equals("") && dto.getMultimidia().getId().equals("")){
             throw new Exception("A descrição ou a mídia não podem estar vazias.");
         }
         
@@ -24,15 +25,10 @@ public class PostagemMultimidiaDAO extends DAOCRUDBase<PostagemMultimidia>{
         
         pstmt = conexao.prepareStatement("insert into postagens_multimidias(postagem, multimidia) values (?, ?)");
         
-        pstmt.setInt(1, p.getId());
-        pstmt.setInt(2, m.getId());
+        pstmt.setInt(1, dto.getPostagem().getId());
+        pstmt.setInt(2, dto.getMultimidia().getId());
         
         pstmt.executeQuery();
-    }
-
-    @Override
-    public void inserir(PostagemMultimidia dto) throws Exception {
-
     }
 
     @Override
