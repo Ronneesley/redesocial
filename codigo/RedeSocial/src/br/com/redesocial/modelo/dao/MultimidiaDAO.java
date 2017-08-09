@@ -51,12 +51,18 @@ public class MultimidiaDAO extends DAOBase {
 
         PreparedStatement pstmt;
         pstmt = conexao.prepareStatement("insert into multimidia(id, midia, tipoConteudo, data) values(?, ?, ?, ?)");
+<<<<<<< HEAD
+        
+        pstmt.setInt(1, conexao.getId());
+        
+=======
 
         pstmt.setString(1, conexao.getId()); //ID é automático, portanto não deve estar no SQL, nem arqui informado
         //Mídia
         //Conteúdo
         pstmt.setDate(4, new java.sql.Date(m.getData().getTime()));
 
+>>>>>>> 026e513e9309ae84502a59528999992a1a70ac96
         pstmt.executeUpdate();
     }
 
@@ -69,6 +75,9 @@ public class MultimidiaDAO extends DAOBase {
         pstmt.setInt(1, id);
         pstmt.executeUpdate();
     }
+<<<<<<< HEAD
+}
+=======
     
     public List listar() throws Exception {
         Connection conexao = getConexao();
@@ -94,3 +103,4 @@ public class MultimidiaDAO extends DAOBase {
         return lista;
     }
 }
+>>>>>>> 026e513e9309ae84502a59528999992a1a70ac96
