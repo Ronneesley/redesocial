@@ -67,7 +67,7 @@ public class PaisDAO extends DAOCRUDBase<Pais> {
        Connection conexao = getConexao();
         
        PreparedStatement pstmt;
-       pstmt = conexao.prepareStatement("select * from paises order by id asc");
+       pstmt = conexao.prepareStatement("select * from paises order by nome asc");
         
        ResultSet rs;
        rs = pstmt.executeQuery();
@@ -85,5 +85,5 @@ public class PaisDAO extends DAOCRUDBase<Pais> {
         
        return lista;
     } 
-    
+   
  }
