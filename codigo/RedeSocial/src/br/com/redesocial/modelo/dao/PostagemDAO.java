@@ -24,7 +24,20 @@ public class PostagemDAO extends DAOCRUDBase<Postagem> {
     }
 
     @Override
-    public void inserir(Postagem dto) throws Exception {
+    public void inserir(Postagem p) throws Exception {
+        Connection conexao = getConexao();
+        if (p.getDescricao().equals("")){
+            throw new Exception("A descricao nao pode estar vazia!");
+        }
+        
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("insert into postagem (id,curtidas,descricao,data) values (?,?,?,?)");
+        
+        pstmt.setId(1,p.id);
+        pstmt.setCurtidas(2,p.curtidas);
+        pstmt.setDescricao(3,p.descricao);
+        pstmt.setDate(4,p.data);
+        pstmt.executeUpdate();
         
     }
 
@@ -87,13 +100,14 @@ public class PostagemDAO extends DAOCRUDBase<Postagem> {
         List lista;
         lista = new ArrayList();
         
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
         while(rs.next()){
             Postagem p = new Postagem();
             p.setId(rs.getInt("id"));
             p.setCurtidas(rs.getInt("curtidas"));
             p.setDescricao(rs.getString("descricao"));
             p.setData(rs.getDate("data"));
-            //p.usuarioDAO.listar(rs.getInt("usuario")); //deu erro aqui
+            p.setUsuario(usuarioDAO.selecionar(rs.getInt("usuario")));
             lista.add(p);
         }
         

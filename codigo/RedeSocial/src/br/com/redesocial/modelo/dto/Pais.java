@@ -6,11 +6,11 @@ package br.com.redesocial.modelo.dto;
  * @since 29/07/2017
  */
 public class Pais {
-    private int id;
+    private Integer id;
 
     private String nome;
 
-    public Pais(int id, String nome) {
+    public Pais(Integer id, String nome) {
        this.id = id;
        this.nome = nome;
     }
@@ -19,11 +19,11 @@ public class Pais {
         
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

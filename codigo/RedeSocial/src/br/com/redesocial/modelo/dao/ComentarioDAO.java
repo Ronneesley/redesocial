@@ -2,6 +2,7 @@ package br.com.redesocial.modelo.dao;
 
 import br.com.redesocial.modelo.dto.Comentario;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -12,12 +13,8 @@ import java.util.List;
  * @author Ronneesley Moura Teles, Igor, Ianka, Heitor e Gusttavo.
  * @since 27/07/2017
  */
-<<<<<<< HEAD
-public class ComentarioDAO extends DAOBase {
-=======
 public class ComentarioDAO extends DAOCRUDBase<Comentario> {
     @Override
->>>>>>> 8af9da3eced508f5097c74136a1d05ef8557150a
     public void excluir(int id) throws Exception {
         Connection conexao = getConexao();
 
@@ -27,27 +24,27 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
         pstmt.executeUpdate();
     }
 
-<<<<<<< HEAD
-    public void atualizar() throws Exception {
-=======
     @Override
     public void alterar(Comentario p) throws Exception {
->>>>>>> 8af9da3eced508f5097c74136a1d05ef8557150a
         Connection conexao = getConexao();
 
-        PreparedStatement pstmt = conexao.prepareStatement("update comentarios set descricao = ? where id = ?");
-        pstmt.setString(1, p.getDescricao);
-        pstmt.setInt(2, p.getId);
+        //PreparedStatement pstmt = conexao.prepareStatement("update comentarios set descricao = ?, curtidas = ?, data = ?, postagem = ? ,resposta = ? where id = ?"); 
+        PreparedStatement pstmt = conexao.prepareStatement("update comentarios set descricao = ?, curtidas = ?, data = ? where id = ?"); //codigo temporario
+        pstmt.setString(1, p.getDescricao());
+        pstmt.setInt(2, p.getCurtidas());
+        pstmt.setDate(3, (Date) p.getData());
+       /*
+        pstmt.setPostagem(4, p.getPostagem());//Que metodo usar se postagem é um tipo
+        pstmt.setComentario(5, p.getResposta()); //Que metodo usar se resposta é um tipo
+        pstmt.setInt(6, p.getId());
+         */       
+        pstmt.setInt(4, p.getId());//excluir depois caso o comentario acima tenha seu erro arrumado
 
         pstmt.executeUpdate();
     }
 
-<<<<<<< HEAD
-    public Post selecionar(int id) throws Exception {
-=======
     @Override
     public Comentario selecionar(int id) throws Exception {
->>>>>>> 8af9da3eced508f5097c74136a1d05ef8557150a
         Connection conexao = getConexao();
 
         PreparedStatement pstmt;
@@ -57,17 +54,6 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
         ResultSet rs;
         rs = pstmt.executeQuery();
 
-<<<<<<< HEAD
-        if (rs.next()){
-            Post p = new Post();
-            p.setId(id);
-            p.setCurtidas(rs.getString("curtidas"));
-            p.setData(rs.getDate("data"));
-            p.setPostagem(rs.getString("postagem"));
-            p.setResposta(rs.getString("resposta"));
-
-            return p;
-=======
         PostagemDAO postagemDAO = new PostagemDAO();
         if (rs.next()){
             Comentario c = new Comentario();
@@ -83,16 +69,12 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
             }
 
             return c;
->>>>>>> 8af9da3eced508f5097c74136a1d05ef8557150a
         } else {
             return null;
         }
     }
 
-<<<<<<< HEAD
-=======
     @Override
->>>>>>> 8af9da3eced508f5097c74136a1d05ef8557150a
     public List listar() throws Exception {
         Connection conexao = getConexao();
 
@@ -105,7 +87,7 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
         List lista;
         lista = new ArrayList();
 
-        //PostagemDAO postagemDAO = new PostagemDAO();
+        PostagemDAO postagemDAO = new PostagemDAO();
         while (rs.next()){
             Comentario c = new Comentario();
 
@@ -113,11 +95,11 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
             c.setDescricao(rs.getString("descricao"));
             c.setCurtidas(rs.getInt("curtidas"));
             c.setData(rs.getDate("data"));
-            //c.setPostagem(postagemDAO.selecionar(rs.getInt("postagem")));
+            c.setPostagem(postagemDAO.selecionar(rs.getInt("postagem")));
 
             int idResposta = rs.getInt("resposta");
             if (!rs.wasNull()){
-                c.setComentario(this.selecionar(idResposta));
+                c.setResposta(this.selecionar(idResposta));
             }
 
             lista.add(c);

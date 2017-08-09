@@ -3,6 +3,7 @@ package br.com.redesocial.modelo.dao;
 import br.com.redesocial.modelo.dto.Usuario;
 import br.com.redesocial.modelo.dto.enumeracoes.Sexo;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.List;
@@ -29,6 +30,8 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
         pstmt.setString(3, dto.getSenha());
         
         pstmt.executeUpdate();
+        
+        dto.setId(getId(pstmt));
     }
     
     @Override
@@ -65,17 +68,89 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
     }    
 
     @Override
-    public void alterar(Usuario dto) throws Exception {
+    public void alterar (Usuario  u) throws Exception {
+        Connection conexao = getConexao();
+
+        PreparedStatement  pstmt; 
+        pstmt = conexao.prepareStatement("update usuario set id = ?, nome = ?, email=?, telefone=? senha =?, nascimento =?, sexo = ?, data_cadastro =?, status =?, foto=?, cidade=?");
         
+        ResultSet rs;
+        rs = pstmt.executeQuery();
+       
+        MultimidiaDAO multimidiaDAO = new MultimidiaDAO();
+        CidadeDAO cidadeDAO = new CidadeDAO();
+        
+        
+        pstmt.setInt(1, u.getId());
+        pstmt.setString(2, u.getNome());
+        pstmt.setString(3, u.getEmail());
+        pstmt.setString(4, u.getTelefone());
+        pstmt.setString(5, u.getSenha());  
+        pstmt.setDate  (6, (Date) u.getNascimento());
+        u.setSexo(Sexo.getSexo(rs.getString("sexo").charAt(0)));
+        pstmt.setDate  (8, (Date) u.getDataCadastro());
+        pstmt.setBoolean(9, u.getStatus());
+        u.setFoto(multimidiaDAO.alterar(rs.getInt("foto")));
+        u.setCidade(cidadeDAO.alterar(rs.getInt("cidade")));
+
+        pstmt.executeUpdate();
+      
+    
     }
 
     @Override
-    public List listar() throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //Apague a linha e escreva o código
+     public List listar() throws Exception {
+        Connection conexao = getConexao();
+        
+        PreparedStatement  pstmt; 
+        pstmt = conexao.prepareStatement("select * from usuarios where id = ?");
+        pstmt.setInt(1, id);
+        
+        ResultSet rs;
+        rs = pstmt.executeQuery();
+        
+		MultimidiaDAO multimidiaDAO = new MultimidiaDAO();
+        CidadeDAO cidadeDAO = new CidadeDAO();
+        List lista;
+        lista = new ArrayList();
+        
+        while (rs.next()){
+            Usuario u = new Usuario();
+            u.setId(rs.getInt("id"));
+            u.setNome(rs.getString("nome"));
+            u.setEmail(rs.getString("email"));
+            u.setTelefone(rs.getString("telefone"));
+            u.setSenha(rs.getString("senha"));
+            u.setNascimento(rs.getDate("data"));            
+            u.setSexo(Sexo.getSexo(rs.getString("sexo").charAt(0)));
+            u.setDataCadastro(rs.getDate("data_cadastro"));
+            u.setStatus(rs.getBoolean("status"));
+            u.setFoto(multimidiaDAO.selecionar(rs.getInt("foto")));
+            u.setCidade(cidadeDAO.selecionar(rs.getInt("cidade")));
+            
+            lista.add(u);
+        }
+        
+        return lista;
     }
 
     @Override
-    public void excluir(int id) throws Exception {
+    public void excluir(int id, nome, email, telefone, senha, nascimento, sexo, data_cadastro, status) throws Exception {
+       conectar();
         
+        PreparedStatement pstmt;
+        pstmt = con.prepareStatement("delete from posts where id = ?");
+        
+        pstmt.setInt(1, id);
+        pstmt.setVarchar(1, nome);
+        pstmt.setVarchar(1, email);
+        pstmt.setVarchar(1, telefone);
+        pstmt.setChar(1, senha);
+        pstmt.setDate(1, nascimento);
+        pstmt.setChar(1, sexo);
+        pstmt.setDatetime(1, data_cadastro);
+        pstmt.setBool(1, status);
+        pstmt.executeUpdate();
+}
     }
 }

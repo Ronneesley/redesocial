@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ * Classe base para conexão com o banco de dados
  * @author Daniel
  */
 public class AlbumDAO extends DAOCRUDBase<Album> {

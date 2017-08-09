@@ -4,6 +4,7 @@ import br.com.redesocial.modelo.dto.Pais;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.List;
 
 public class PaisDAO extends DAOCRUDBase<Pais> {
@@ -16,8 +17,7 @@ public class PaisDAO extends DAOCRUDBase<Pais> {
         }
 
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("update paises set  nome = ? where id = ?");
-
+        pstmt = conexao.prepareStatement("update paises set nome = ? where id = ?");
 
         pstmt.setString(1, p.getNome());
         pstmt.setInt(2, p.getId());
@@ -47,15 +47,15 @@ public class PaisDAO extends DAOCRUDBase<Pais> {
         PreparedStatement pstmt;
         pstmt = conexao.prepareStatement("select * from paises where id = ?");
         pstmt.setInt(1, id);
-        
+
         ResultSet rs;
         rs = pstmt.executeQuery();
-        
+
         if(rs.next()){
             Pais p = new Pais();
             p.setId(id);
             p.setNome(rs.getString("nome"));
-            
+
             return p;
         }else{
             return null;
@@ -64,6 +64,26 @@ public class PaisDAO extends DAOCRUDBase<Pais> {
 
     @Override
     public List listar() throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //Apague a linha e escreva o código
-    }
-}
+       Connection conexao = getConexao();
+        
+       PreparedStatement pstmt;
+       pstmt = conexao.prepareStatement("select * from paises order by nome asc");
+        
+       ResultSet rs;
+       rs = pstmt.executeQuery();
+        
+       List lista;
+       lista = new ArrayList();
+        
+       while (rs.next()){
+           Pais p = new Pais();
+           p.setId(rs.getInt("id"));
+           p.setNome(rs.getString("nome"));
+            
+           lista.add(p);
+       }
+        
+       return lista;
+    } 
+   
+ }
