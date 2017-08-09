@@ -28,17 +28,14 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
     public void alterar(Comentario p) throws Exception {
         Connection conexao = getConexao();
 
-        //PreparedStatement pstmt = conexao.prepareStatement("update comentarios set descricao = ?, curtidas = ?, data = ?, postagem = ? ,resposta = ? where id = ?"); 
-        PreparedStatement pstmt = conexao.prepareStatement("update comentarios set descricao = ?, curtidas = ?, data = ? where id = ?"); //codigo temporario
+        PreparedStatement pstmt = conexao.prepareStatement("update comentarios set descricao = ?, curtidas = ?, data = ?, postagem = ? ,resposta = ? where id = ?"); 
+        
         pstmt.setString(1, p.getDescricao());
         pstmt.setInt(2, p.getCurtidas());
-        pstmt.setDate(3, (Date) p.getData());
-       /*
-        pstmt.setPostagem(4, p.getPostagem());//Que metodo usar se postagem é um tipo
-        pstmt.setComentario(5, p.getResposta()); //Que metodo usar se resposta é um tipo
+        pstmt.setDate(3, (Date) p.getData());       
+        pstmt.setInt(4, p.getPostagem().getId());
+        pstmt.setInt(5, p.getResposta().getId()); 
         pstmt.setInt(6, p.getId());
-         */       
-        pstmt.setInt(4, p.getId());//excluir depois caso o comentario acima tenha seu erro arrumado
 
         pstmt.executeUpdate();
     }
