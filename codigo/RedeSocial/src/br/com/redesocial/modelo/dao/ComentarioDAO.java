@@ -17,7 +17,6 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
     @Override
     public void excluir(int id) throws Exception {
         Connection conexao = getConexao();
-
         PreparedStatement pstmt;
         pstmt = conexao.prepareStatement("delete from comentarios where id = ?");
         pstmt.setInt(1, id);
