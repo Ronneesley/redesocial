@@ -72,8 +72,8 @@ public class AlbumDAO extends DAOCRUDBase<Album> {
         PreparedStatement pstmt = conexao.prepareStatement("insert into albuns  (nome, data, usuario), values (?, ?, ?)");
         
         pstmt.setString(1, dto.getNome());
-        pstmt.setDate(2, dto.getDate());
-        pstmt.setInt(3, dto.getUsuario(). getId());
+        pstmt.setDate(2, new java.sql.Date(dto.getData().getTime()));
+        pstmt.setInt(3, dto.getUsuario().getId());
         
         pstmt.executeUpdate();
         
