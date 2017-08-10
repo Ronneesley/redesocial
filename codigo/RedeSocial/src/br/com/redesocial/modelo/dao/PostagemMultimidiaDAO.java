@@ -1,7 +1,5 @@
 package br.com.redesocial.modelo.dao;
 
-import br.com.redesocial.modelo.dto.Multimidia;
-import br.com.redesocial.modelo.dto.Postagem;
 import br.com.redesocial.modelo.dto.PostagemMultimidia;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,9 +10,8 @@ import java.util.List;
  * Classe base para conexão com o banco de dados
  * @author Daniel
  */
-public class PostagemMultimidiaDAO extends DAOCRUDBase<PostagemMultimidia>{
+public class PostagemMultimidiaDAO extends DAOBase {
 
-    @Override
     public void inserir(PostagemMultimidia dto) throws Exception {
         Connection conexao = getConexao();
         
@@ -32,8 +29,7 @@ public class PostagemMultimidiaDAO extends DAOCRUDBase<PostagemMultimidia>{
         pstmt.executeQuery();
     }
 
-    @Override
-    public void alterar(PostagemMultimidia dto) throws Exception {
+    public void alterar(PostagemMultimidia dto, PostagemMultimidia dtoNovo) throws Exception {
         Connection conexao = getConexao();
         
         PreparedStatement pstmt;
@@ -48,13 +44,12 @@ public class PostagemMultimidiaDAO extends DAOCRUDBase<PostagemMultimidia>{
         //ainda apanhando das chaves estrangeiras, depois olho direito
     }
 
-    @Override
-    public PostagemMultimidia selecionar(int id) throws Exception {
+    public PostagemMultimidia selecionar(int postagem, int multimidia) throws Exception {
         Connection conexao = getConexao();
         
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("select * from postagens_multimidas where id = ?");
-        pstmt.setInt(1, id);
+        pstmt = conexao.prepareStatement("select * from postagens_multimidas where id = ?"); //a condição muda
+        pstmt.setInt(1, id); //Este parâmetro muda
         
         ResultSet rs;
         rs = pstmt.executeQuery();
@@ -73,13 +68,11 @@ public class PostagemMultimidiaDAO extends DAOCRUDBase<PostagemMultimidia>{
         }
     }
 
-    @Override
     public List listar() throws Exception {
-
+        throw new Exception("Implemente aqui");
     }
 
-    @Override
-    public void excluir(int id) throws Exception {
+    public void excluir(int postagem, int multimidia) throws Exception {
 
     }
     
