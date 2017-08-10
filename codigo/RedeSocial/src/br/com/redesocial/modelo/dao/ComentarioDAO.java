@@ -2,6 +2,7 @@ package br.com.redesocial.modelo.dao;
 
 import br.com.redesocial.modelo.dto.Comentario;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -16,7 +17,6 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
     @Override
     public void excluir(int id) throws Exception {
         Connection conexao = getConexao();
-
         PreparedStatement pstmt;
         pstmt = conexao.prepareStatement("delete from comentarios where id = ?");
         pstmt.setInt(1, id);
@@ -27,9 +27,14 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
     public void alterar(Comentario p) throws Exception {
         Connection conexao = getConexao();
 
-        PreparedStatement pstmt = conexao.prepareStatement("update comentarios set descricao = ? where id = ?");
-        pstmt.setString(1, p.getDescricao);
-        pstmt.setInt(2, p.getId);
+        PreparedStatement pstmt = conexao.prepareStatement("update comentarios set descricao = ?, curtidas = ?, data = ?, postagem = ? ,resposta = ? where id = ?"); 
+        
+        pstmt.setString(1, p.getDescricao());
+        pstmt.setInt(2, p.getCurtidas());
+        pstmt.setDate(3, (Date) p.getData());       
+        pstmt.setInt(4, p.getPostagem().getId());
+        pstmt.setInt(5, p.getResposta().getId()); 
+        pstmt.setInt(6, p.getId());
 
         pstmt.executeUpdate();
     }

@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -72,26 +73,22 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
         Connection conexao = getConexao();
 
         PreparedStatement  pstmt; 
-        pstmt = conexao.prepareStatement("update usuario set id = ?, nome = ?, email=?, telefone=? senha =?, nascimento =?, sexo = ?, data_cadastro =?, status =?, foto=?, cidade=?");
+        pstmt = conexao.prepareStatement("update usuario set id = ?, nome = ?, email=?, telefone=? senha =?, nascimento =?, sexo = ?, data_cadastro =?, status =?, foto=? , cidade=? where ");
         
-        ResultSet rs;
-        rs = pstmt.executeQuery();
        
-        MultimidiaDAO multimidiaDAO = new MultimidiaDAO();
-        CidadeDAO cidadeDAO = new CidadeDAO();
-        
-        
+       
         pstmt.setInt(1, u.getId());
         pstmt.setString(2, u.getNome());
         pstmt.setString(3, u.getEmail());
         pstmt.setString(4, u.getTelefone());
         pstmt.setString(5, u.getSenha());  
         pstmt.setDate  (6, (Date) u.getNascimento());
-        u.setSexo(Sexo.getSexo(rs.getString("sexo").charAt(0)));
+        pstmt.setInt(10, u.getSexo().getId());
         pstmt.setDate  (8, (Date) u.getDataCadastro());
         pstmt.setBoolean(9, u.getStatus());
-        u.setFoto(multimidiaDAO.alterar(rs.getInt("foto")));
-        u.setCidade(cidadeDAO.alterar(rs.getInt("cidade")));
+        pstmt.setInt(10, u.getFoto().getId());
+        pstmt.setInt(11, u.getCidade().getId()); 
+       
 
         pstmt.executeUpdate();
       
@@ -103,13 +100,12 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
         Connection conexao = getConexao();
         
         PreparedStatement  pstmt; 
-        pstmt = conexao.prepareStatement("select * from usuarios where id = ?");
-        pstmt.setInt(1, id);
-        
+        pstmt = conexao.prepareStatement("select * from usuarios where id = ? order by nome asc");
+                
         ResultSet rs;
         rs = pstmt.executeQuery();
         
-		MultimidiaDAO multimidiaDAO = new MultimidiaDAO();
+	MultimidiaDAO multimidiaDAO = new MultimidiaDAO();
         CidadeDAO cidadeDAO = new CidadeDAO();
         List lista;
         lista = new ArrayList();
