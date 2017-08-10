@@ -4,17 +4,18 @@ import br.com.redesocial.modelo.dto.Estado;
 import br.com.redesocial.modelo.dto.Pais;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
 /**
  * Classe base para conexão com o banco de dados
- * @author Wesley M. Felix
+ * @author Wesley M. Felix, Lara Caroline
  * @since 27/07/2017
  */
-<<<<<<< HEAD
-public class EstadoDAO extends DAOBase {
-    
+
+public class EstadoDAO extends DAOCRUDBase<Estado> {
+
     public Estado selecionar(int id) throws Exception{
         Connection conexao = getConexao();
 
@@ -27,28 +28,17 @@ public class EstadoDAO extends DAOBase {
 
         if (rs.next()){
             Estado e = new Estado();
-            //Pais p = new Pais(); 
+            PaisDAO paisDAO = new PaisDAO(); 
             e.setId(rs.getInt("id"));
             e.setNome(rs.getString("nome"));
-            //p.setNome(rs.getString("nome")); 
-            //Existe essa possibilidade, porém os estados e países não estarão ligados, podendo retornar valores errados
-            //DÚVIDAAAAAAAAAAAA!!!!!!!!!!!
+            e.setPais(paisDAO.selecionar(rs.getInt("pais")));
             return e;
         } else {
             return null;
         }
     }
-    
-    public List listar() throws Exception {
-=======
-public class EstadoDAO extends DAOCRUDBase<Estado> {
-
-    static Estado selecionar(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     @Override
     public void alterar(Estado p) throws SQLException, Exception {
->>>>>>> e612b7dfa0f2d85726c668889781de9616ee8d34
         Connection conexao = getConexao();
 
         PreparedStatement pstmt;
@@ -64,11 +54,6 @@ public class EstadoDAO extends DAOCRUDBase<Estado> {
     @Override
     public void inserir(Estado dto) throws Exception {
 
-    }
-
-    @Override
-    public Estado selecionar(int id) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
