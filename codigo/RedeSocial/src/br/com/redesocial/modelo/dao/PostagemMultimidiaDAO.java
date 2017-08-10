@@ -33,15 +33,13 @@ public class PostagemMultimidiaDAO extends DAOBase {
         Connection conexao = getConexao();
         
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("update postagens_multimidias set postagem = ?, multimidia = ? where ");
-        //condicao 
+        pstmt = conexao.prepareStatement("update postagens_multimidias set postagens_multimidias.postagem = ?, postagens_multimidias.multimidia = ? "
+        + "where multimidias.id = postagens_multimidias.postagem and postagens.id = postagens_multimidias.multimidia ");
         
-        pstmt.setInt(1, dto.getPostagem());
-        pstmt.setInt(2, dto.getMultimidia());
+        pstmt.setInt(1, dtoNovo.getPostagem().getId());
+        pstmt.setInt(2, dtoNovo.getMultimidia().getId());
         
         pstmt.executeQuery();
-        
-        //ainda apanhando das chaves estrangeiras, depois olho direito
     }
 
     public PostagemMultimidia selecionar(int postagem, int multimidia) throws Exception {
