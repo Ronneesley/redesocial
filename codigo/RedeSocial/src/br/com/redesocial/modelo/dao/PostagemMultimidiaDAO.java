@@ -48,7 +48,7 @@ public class PostagemMultimidiaDAO extends DAOBase {
         Connection conexao = getConexao();
         
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("select * from postagens_multimidas where postagem = ? and multimidia = ?"); //a condição muda
+        pstmt = conexao.prepareStatement("select * from postagens_multimidas where postagem = ? and multimidia = ?");
         pstmt.setInt(1, postagem);
         pstmt.setInt(2, multimidia);
         
