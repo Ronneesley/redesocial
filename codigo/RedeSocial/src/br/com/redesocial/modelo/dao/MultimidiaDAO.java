@@ -11,10 +11,6 @@ import java.util.List;
  *
  * @author Lara, Jeferson, Luciano, Jonathan
  */
-<<<<<<< HEAD
-public class MultimidiaDAO extends DAOBase {
-    
-=======
 public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
     @Override
     public void inserir(Multimidia m) throws Exception {
@@ -40,7 +36,6 @@ public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
     }
    
     @Override
->>>>>>> e612b7dfa0f2d85726c668889781de9616ee8d34
     public Multimidia selecionar(int id) throws Exception{
         Connection conexao = getConexao();
 
@@ -64,32 +59,7 @@ public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
         }
     }
 
-<<<<<<< HEAD
-    public void inserir (Multimidia m) throws Exception {
-        Connection conexao = getConexao();
-
-        //Arrumar as validações
-        if (conexao.getMidia().trim().equals("")){
-            throw new Exception("A mídia não pode estar vazia!");
-        }
-
-        PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("insert into multimidia(id, midia, tipoConteudo, data) values(?, ?, ?, ?)");
-        
-        pstmt.setInt(1, conexao.getId());
-        
-
-        pstmt.setString(1, conexao.getId()); //ID é automático, portanto não deve estar no SQL, nem arqui informado
-        //Mídia
-        //Conteúdo
-        pstmt.setDate(4, new java.sql.Date(m.getData().getTime()));
-
-        pstmt.executeUpdate();
-    }
-
-=======
     @Override
->>>>>>> e612b7dfa0f2d85726c668889781de9616ee8d34
     public void excluir(int id) throws Exception {
         Connection conexao = getConexao();
 
@@ -105,7 +75,7 @@ public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
         Connection conexao = getConexao();
         
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("select * from multimidia order by id desc");
+        pstmt = conexao.prepareStatement("select * from multimidias order by data desc");
         
         ResultSet rs;
         rs = pstmt.executeQuery();
@@ -124,13 +94,9 @@ public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
         
         return lista;
     }
-<<<<<<< HEAD
-}
-=======
 
     @Override
     public void alterar(Multimidia dto) throws Exception {
         
     }
 }
->>>>>>> e612b7dfa0f2d85726c668889781de9616ee8d34
