@@ -62,10 +62,10 @@ public class CidadeDAO extends DAOCRUDBase<Cidade> {
         
         if(rs.next()){
             Cidade p = new Cidade();
-            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            EstadoDAO estadoDAO = new EstadoDAO();
             
             p.setId(rs.getInt("id"));
-            p.setEstado(EstadoDAO.selecionar(rs.getString("estado")));
+            p.setEstado(estadoDAO.selecionar(rs.getInt("estado")));
             p.setNome(rs.getString("nome"));
             
             return p;

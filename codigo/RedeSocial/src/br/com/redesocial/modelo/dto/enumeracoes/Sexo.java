@@ -25,4 +25,12 @@ public enum Sexo {
         
         return null;
     }
+
+    public char getId() {
+        return id;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
 }

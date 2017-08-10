@@ -82,8 +82,8 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
         pstmt.setString(3, u.getEmail());
         pstmt.setString(4, u.getTelefone());
         pstmt.setString(5, u.getSenha());  
-        pstmt.setDate  (6, (Date) u.getNascimento());
-        pstmt.setInt(10, u.getSexo().getId());
+        pstmt.setDate(6, new java.sql.Date(u.getNascimento().getTime()));
+        pstmt.setString(10, String.valueOf(u.getSexo().getId()));
         pstmt.setDate  (8, (Date) u.getDataCadastro());
         pstmt.setBoolean(9, u.getStatus());
         pstmt.setInt(10, u.getFoto().getId());
