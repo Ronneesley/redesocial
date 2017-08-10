@@ -20,15 +20,16 @@ public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
         if (m.getMidia().equals("")){
             throw new Exception("A mídia não pode estar vazia!");
         }
-
+                
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("insert into multimidia(Album, midia, tipoConteudo, data) values(?, ?, ?)");
+        pstmt = conexao.prepareStatement("insert into multimidias(id, midia, tipoConteudo, data, album) values(?, ?, ?, ?, ?)");
 
-        pstmt.setInt(1, m.getAlbum());
-        pstmt.setString(2, m.tipoConteudo());
-        pstmt.setByte(3, m.getmidia());
+        pstmt.setInt (1, m.getId());
+        pstmt.setBytes (2, m.getMidia());
+        pstmt.setString (3, m.getTipoConteudo());
         pstmt.setDate(4, new java.sql.Date(m.getData().getTime()));
-
+        pstmt.setInt (5, m.getAlbum().getId());
+        
         pstmt.executeUpdate();
         
         m.setId(getId(pstmt));
