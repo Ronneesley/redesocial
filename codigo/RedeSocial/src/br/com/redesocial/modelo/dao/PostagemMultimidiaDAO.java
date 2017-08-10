@@ -33,8 +33,8 @@ public class PostagemMultimidiaDAO extends DAOBase {
         Connection conexao = getConexao();
         
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("update postagens_multimidias set postagens_multimidias.postagem = ?, postagens_multimidias.multimidia = ? "
-        + "where multimidias.id = postagens_multimidias.postagem and postagens.id = postagens_multimidias.multimidia ");
+        pstmt = conexao.prepareStatement("update postagens_multimidias set postagem = ?, multimidia = ? "
+                + "where postagem = ? and multimidia = ?");
         
         pstmt.setInt(1, dtoNovo.getPostagem().getId());
         pstmt.setInt(2, dtoNovo.getMultimidia().getId());
