@@ -67,6 +67,18 @@ public class AlbumDAO extends DAOCRUDBase<Album> {
     @Override
     public void inserir(Album dto) throws Exception {
         
+        Connection conexao = getConexao();
+        
+        PreparedStatement pstmt = conexao.prepareStatement("insert into albuns  (nome, data, usuario), values (?, ?, ?)");
+        
+        pstmt.setString(1, dto.getNome());
+        pstmt.setDate(2, dto.getDate());
+        pstmt.setInt(3, dto.getUsuario(). getId());
+        
+        pstmt.executeUpdate();
+        
+        dto.setId(getId(pstmt));
+        
     }
 
     @Override
