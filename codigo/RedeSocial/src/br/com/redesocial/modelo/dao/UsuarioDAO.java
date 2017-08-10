@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -103,13 +104,12 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
         Connection conexao = getConexao();
         
         PreparedStatement  pstmt; 
-        pstmt = conexao.prepareStatement("select * from usuarios where id = ?");
-        pstmt.setInt(1, id);
-        
+        pstmt = conexao.prepareStatement("select * from usuarios where id = ? order by nome asc");
+                
         ResultSet rs;
         rs = pstmt.executeQuery();
         
-		MultimidiaDAO multimidiaDAO = new MultimidiaDAO();
+	MultimidiaDAO multimidiaDAO = new MultimidiaDAO();
         CidadeDAO cidadeDAO = new CidadeDAO();
         List lista;
         lista = new ArrayList();
