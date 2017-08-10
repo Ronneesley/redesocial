@@ -100,7 +100,7 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
         Connection conexao = getConexao();
         
         PreparedStatement  pstmt; 
-        pstmt = conexao.prepareStatement("select * from usuarios where id = ? order by nome asc");
+        pstmt = conexao.prepareStatement("select * from usuarios order by nome asc");
                 
         ResultSet rs;
         rs = pstmt.executeQuery();
