@@ -18,7 +18,7 @@ public class PostagemMultimidiaDAO extends DAOCRUDBase<PostagemMultimidia>{
     public void inserir(PostagemMultimidia dto) throws Exception {
         Connection conexao = getConexao();
         
-        if(dto.getPostagem().getId().equals("") && dto.getMultimidia().getId().equals("")){
+        if(dto.getPostagem() == null || dto.getMultimidia() == null){
             throw new Exception("A descrição ou a mídia não podem estar vazias.");
         }
         
