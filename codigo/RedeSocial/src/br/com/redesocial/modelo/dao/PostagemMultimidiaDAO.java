@@ -5,6 +5,7 @@ import br.com.redesocial.modelo.dto.Postagem;
 import br.com.redesocial.modelo.dto.PostagemMultimidia;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.List;
 
 /**
@@ -49,7 +50,27 @@ public class PostagemMultimidiaDAO extends DAOCRUDBase<PostagemMultimidia>{
 
     @Override
     public PostagemMultimidia selecionar(int id) throws Exception {
-
+        Connection conexao = getConexao();
+        
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("select * from postagens_multimidas where id = ?");
+        pstmt.setInt(1, id);
+        
+        ResultSet rs;
+        rs = pstmt.executeQuery();
+        
+        MultimidiaDAO multimidiaDAO = new MultimidiaDAO();
+        PostagemDAO postagemDAO = new PostagemDAO();
+        
+        if (rs.next()){
+            PostagemMultimidia pm = new PostagemMultimidia();
+            pm.setPostagem(postagemDAO.selecionar(rs.getInt("postagem")));
+            pm.setMultimidia(multimidiaDAO.selecionar(rs.getInt("multimidia")));
+            
+            return pm;
+        } else {
+            return null;
+        }
     }
 
     @Override
