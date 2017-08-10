@@ -6,5 +6,31 @@ package br.com.redesocial.modelo.dto.enumeracoes;
  * @since 29/07/2017
  */
 public enum Sexo {
-    MASCULINO, FEMININO
+    MASCULINO('m', "Masculino"), FEMININO('f', "Feminino");
+    
+    private char id;
+    
+    private String descricao;
+
+    private Sexo(char id, String descricao) {
+        this.id = id;
+        this.descricao = descricao;
+    }
+    
+    public static Sexo getSexo(char id){
+        switch (id){
+            case 'm': return MASCULINO;
+            case 'f': return FEMININO;
+        }
+        
+        return null;
+    }
+
+    public char getId() {
+        return id;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
 }

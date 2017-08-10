@@ -1,17 +1,20 @@
 package br.com.redesocial.modelo.dao;
 
-import br.com.redesocial.modelo.dao.interfaces.DAOCRUD;
 import br.com.redesocial.modelo.dto.Usuario;
+import br.com.redesocial.modelo.dto.enumeracoes.Sexo;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Objeto de acesso aos dados dos usuários
  * @author Ronneesley Moura Teles
  * @since 27/07/2017
  */
-public class UsuarioDAO extends DAOBase implements DAOCRUD<Usuario> {
+public class UsuarioDAO extends DAOCRUDBase<Usuario> {
     /**
      * Inseri um objeto no banco de dados na tabela usuários
      * @param dto objeto com os dados de usuário já preenchido
@@ -28,9 +31,12 @@ public class UsuarioDAO extends DAOBase implements DAOCRUD<Usuario> {
         pstmt.setString(3, dto.getSenha());
         
         pstmt.executeUpdate();
+        
+        dto.setId(getId(pstmt));
     }
     
-    public Usuario selecionar (int id) throws Exception{
+    @Override
+    public Usuario selecionar(int id) throws Exception {
         Connection conexao = getConexao();
 
         PreparedStatement  pstmt; 
@@ -40,6 +46,8 @@ public class UsuarioDAO extends DAOBase implements DAOCRUD<Usuario> {
         ResultSet rs;
         rs = pstmt.executeQuery();
 
+        MultimidiaDAO multimidiaDAO = new MultimidiaDAO();
+        CidadeDAO cidadeDAO = new CidadeDAO();
         if (rs.next()){
             Usuario u = new Usuario();
             u.setId(rs.getInt("id"));
@@ -47,23 +55,90 @@ public class UsuarioDAO extends DAOBase implements DAOCRUD<Usuario> {
             u.setEmail(rs.getString("email"));
             u.setTelefone(rs.getString("telefone"));
             u.setSenha(rs.getString("senha"));
-            u.setNascimento(rs.getDate("data"));
-            //u.setSexo(rs.getSexo("sexo"));//olhar esse aqui
-            //u.setDataCadastro(rs.getData("dataCadastro"));
+            u.setNascimento(rs.getDate("data"));            
+            u.setSexo(Sexo.getSexo(rs.getString("sexo").charAt(0)));
+            u.setDataCadastro(rs.getDate("data_cadastro"));
             u.setStatus(rs.getBoolean("status"));
-            //u.setFoto(rs.getMultimida("foto"));
-            //u.setCidade(rs.setCidade("cidade"));
+            u.setFoto(multimidiaDAO.selecionar(rs.getInt("foto")));
+            u.setCidade(cidadeDAO.selecionar(rs.getInt("cidade")));
 
             return u;
         }else{
             return null;
         }
-    }
-    
-    public static void mainSelecionar(String[] args) throws Exception {
-        UsuarioDAO dao = new UsuarioDAO();
-        Usuario u = dao.selecionar(1);
+    }    
+
+    @Override
+    public void alterar (Usuario  u) throws Exception {
+        Connection conexao = getConexao();
+
+        PreparedStatement  pstmt; 
+        pstmt = conexao.prepareStatement("update usuario set id = ?, nome = ?, email=?, telefone=? senha =?, nascimento =?, sexo = ?, data_cadastro =?, status =?, foto=? , cidade=? where ");
         
-        System.out.println(u.getNome());
+       
+       
+        pstmt.setInt(1, u.getId());
+        pstmt.setString(2, u.getNome());
+        pstmt.setString(3, u.getEmail());
+        pstmt.setString(4, u.getTelefone());
+        pstmt.setString(5, u.getSenha());  
+        pstmt.setDate(6, new java.sql.Date(u.getNascimento().getTime()));
+        pstmt.setString(10, String.valueOf(u.getSexo().getId()));
+        pstmt.setDate  (8, (Date) u.getDataCadastro());
+        pstmt.setBoolean(9, u.getStatus());
+        pstmt.setInt(10, u.getFoto().getId());
+        pstmt.setInt(11, u.getCidade().getId()); 
+       
+
+        pstmt.executeUpdate();
+      
+    
+    }
+
+    @Override
+     public List listar() throws Exception {
+        Connection conexao = getConexao();
+        
+        PreparedStatement  pstmt; 
+        pstmt = conexao.prepareStatement("select * from usuarios order by nome asc");
+                
+        ResultSet rs;
+        rs = pstmt.executeQuery();
+        
+	MultimidiaDAO multimidiaDAO = new MultimidiaDAO();
+        CidadeDAO cidadeDAO = new CidadeDAO();
+        List lista;
+        lista = new ArrayList();
+        
+        while (rs.next()){
+            Usuario u = new Usuario();
+            u.setId(rs.getInt("id"));
+            u.setNome(rs.getString("nome"));
+            u.setEmail(rs.getString("email"));
+            u.setTelefone(rs.getString("telefone"));
+            u.setSenha(rs.getString("senha"));
+            u.setNascimento(rs.getDate("data"));            
+            u.setSexo(Sexo.getSexo(rs.getString("sexo").charAt(0)));
+            u.setDataCadastro(rs.getDate("data_cadastro"));
+            u.setStatus(rs.getBoolean("status"));
+            u.setFoto(multimidiaDAO.selecionar(rs.getInt("foto")));
+            u.setCidade(cidadeDAO.selecionar(rs.getInt("cidade")));
+            
+            lista.add(u);
+        }
+        
+        return lista;
+    }
+
+    @Override
+    public void excluir(int id) throws Exception {
+       Connection conexao = getConexao();
+        
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("delete from usuario where id = ?");
+        
+        pstmt.setInt(1, id);
+        pstmt.executeUpdate();
+
     }
 }

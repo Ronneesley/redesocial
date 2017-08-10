@@ -1,7 +1,7 @@
 package br.com.redesocial.modelo.dto;
 
 import br.com.redesocial.modelo.dto.enumeracoes.Sexo;
-import java.sql.Date;
+import java.util.Date;
 
 /**
  * DTO para representação da entidade usuário

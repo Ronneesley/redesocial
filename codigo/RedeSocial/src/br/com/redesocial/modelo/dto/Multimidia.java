@@ -9,6 +9,8 @@ import java.util.Date;
 public class Multimidia {
     private Integer id;
 
+    private Album album;
+    
     private byte[] midia;
 
     private String tipoConteudo;
@@ -54,4 +56,14 @@ public class Multimidia {
     public void setData(Date data) {
         this.data = data;
     }
+    
+    public Album getAlbum(){
+        return album;
+    }
+    
+    public void setAlbum(Album album){
+        this.album = album;
+    }
+   
+
 }

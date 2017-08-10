@@ -1,24 +1,46 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.redesocial.modelo.dao;
 
 import java.sql.ResultSet;
 import br.com.redesocial.modelo.dto.Multimidia;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  *
- * @author Lara, Jeferson, Luciano
+ * @author Lara, Jeferson, Luciano, Jonathan
  */
+<<<<<<< HEAD
 public class MultimidiaDAO extends DAOBase {
     
+=======
+public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
+    @Override
+    public void inserir(Multimidia m) throws Exception {
+        Connection conexao = getConexao();
+        
+        //Arrumar as validações
+        if (m.getMidia().equals("")){
+            throw new Exception("A mídia não pode estar vazia!");
+        }
+                
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("insert into multimidias(id, midia, tipoConteudo, data, album) values(?, ?, ?, ?, ?)");
+
+        pstmt.setInt (1, m.getId());
+        pstmt.setBytes (2, m.getMidia());
+        pstmt.setString (3, m.getTipoConteudo());
+        pstmt.setDate(4, new java.sql.Date(m.getData().getTime()));
+        pstmt.setInt (5, m.getAlbum().getId());
+        
+        pstmt.executeUpdate();
+        
+        m.setId(getId(pstmt));
+    }
+   
+    @Override
+>>>>>>> e612b7dfa0f2d85726c668889781de9616ee8d34
     public Multimidia selecionar(int id) throws Exception{
         Connection conexao = getConexao();
 
@@ -42,6 +64,7 @@ public class MultimidiaDAO extends DAOBase {
         }
     }
 
+<<<<<<< HEAD
     public void inserir (Multimidia m) throws Exception {
         Connection conexao = getConexao();
 
@@ -64,6 +87,9 @@ public class MultimidiaDAO extends DAOBase {
         pstmt.executeUpdate();
     }
 
+=======
+    @Override
+>>>>>>> e612b7dfa0f2d85726c668889781de9616ee8d34
     public void excluir(int id) throws Exception {
         Connection conexao = getConexao();
 
@@ -74,6 +100,7 @@ public class MultimidiaDAO extends DAOBase {
         pstmt.executeUpdate();
     }
     
+    @Override
     public List listar() throws Exception {
         Connection conexao = getConexao();
         
@@ -97,4 +124,13 @@ public class MultimidiaDAO extends DAOBase {
         
         return lista;
     }
+<<<<<<< HEAD
 }
+=======
+
+    @Override
+    public void alterar(Multimidia dto) throws Exception {
+        
+    }
+}
+>>>>>>> e612b7dfa0f2d85726c668889781de9616ee8d34

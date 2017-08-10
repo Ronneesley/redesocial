@@ -3,11 +3,8 @@ package br.com.redesocial.modelo.dao;
 import br.com.redesocial.modelo.dto.Estado;
 import br.com.redesocial.modelo.dto.Pais;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,6 +12,7 @@ import java.util.List;
  * @author Wesley M. Felix
  * @since 27/07/2017
  */
+<<<<<<< HEAD
 public class EstadoDAO extends DAOBase {
     
     public Estado selecionar(int id) throws Exception{
@@ -42,31 +40,43 @@ public class EstadoDAO extends DAOBase {
     }
     
     public List listar() throws Exception {
+=======
+public class EstadoDAO extends DAOCRUDBase<Estado> {
+
+    static Estado selecionar(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    @Override
+    public void alterar(Estado p) throws SQLException, Exception {
+>>>>>>> e612b7dfa0f2d85726c668889781de9616ee8d34
         Connection conexao = getConexao();
 
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("select * from estados order by nome"); 
+        pstmt = conexao.prepareStatement("update estados set nome = ?, pais = ? where id = ?");
 
-        ResultSet rs;
-        rs = pstmt.executeQuery();
+        pstmt.setString(1, p.getNome());
+        pstmt.setInt(2, p.getPais().getId());
+        pstmt.setInt(3, p.getId());
 
-        List lista;
-        lista = new ArrayList();
-        
-        //PaisDAO paisDAO = new PaisDAO();
-        while (rs.next()){
-            Estado e = new Estado();
-
-            e.setId(rs.getInt("id"));
-            e.setNome(rs.getString("nome"));
-            //e.setPais(paisDAO.selecionar(rs.getInt("pais")));  
-            
-            lista.add(e);
-        }
-
-        return lista;
+        pstmt.executeUpdate();
     }
-    
+
+    @Override
+    public void inserir(Estado dto) throws Exception {
+
+    }
+
+    @Override
+    public Estado selecionar(int id) throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List listar() throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
     public void excluir(int id) throws Exception {
         Connection conexao = getConexao();
 
