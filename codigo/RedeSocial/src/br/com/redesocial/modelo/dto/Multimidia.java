@@ -9,6 +9,8 @@ import java.util.Date;
 public class Multimidia {
     private Integer id;
 
+    private Album album;
+    
     private byte[] midia;
 
     private String tipoConteudo;
@@ -54,16 +56,14 @@ public class Multimidia {
     public void setData(Date data) {
         this.data = data;
     }
-
-    public String tipoConteudo() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    
+    public Album getAlbum(){
+        return album;
     }
-
-    public byte getmidia() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    
+    public void setAlbum(Album album){
+        this.album = album;
     }
+   
 
-    public int getAlbum() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
