@@ -3,11 +3,12 @@ package br.com.redesocial.modelo.dao;
 import br.com.redesocial.modelo.dto.Cidade;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.List;
 
 /**
  *
- * @author Ronneesley Moura Teles, Ianka, 
+ * @author Ronneesley Moura Teles, Ianka
  * @since 08/08/2017
  */
 public class CidadeDAO extends DAOCRUDBase<Cidade> {
@@ -32,18 +33,45 @@ public class CidadeDAO extends DAOCRUDBase<Cidade> {
         
         pstmt.executeUpdate();
         
-        dto.setId(getId(pstmt));
+        dto.setId(getId(pstmt));     
     }
 
     @Override
     public void alterar(Cidade dto) throws Exception {
-       Connection conexao = getConexao();
-       
+        Connection conexao = getConexao();
+
+        PreparedStatement pstmt = conexao.prepareStatement("update comentarios set Estado  = ?, Nome = ?, where id = ?"); 
+        
+        pstmt.setInt(1, dto.getEstado().getId()); 
+        pstmt.setString(2, dto.getNome());        
+        pstmt.setInt(3, dto.getId());
+
+        pstmt.executeUpdate();
     }
 
     @Override
     public Cidade selecionar(int id) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //Apague a linha e escreva o código
+        Connection conexao = getConexao();
+        
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("select * from cidade where id = ?");
+        
+        pstmt.setInt(1, id);
+        
+        ResultSet rs = pstmt.executeQuery();
+        
+        if(rs.next()){
+            Cidade p = new Cidade();
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            
+            p.setId(rs.getInt("id"));
+            p.setEstado(EstadoDAO.selecionar(rs.getString("estado")));
+            p.setNome(rs.getString("nome"));
+            
+            return p;
+        } else {
+            return null;
+        }
     }
 
     @Override
@@ -62,6 +90,5 @@ public class CidadeDAO extends DAOCRUDBase<Cidade> {
         
         pstmt.executeUpdate();
         
-    }
-
+    } 
 }

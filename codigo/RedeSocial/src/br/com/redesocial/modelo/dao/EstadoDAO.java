@@ -12,6 +12,10 @@ import java.util.List;
  * @since 27/07/2017
  */
 public class EstadoDAO extends DAOCRUDBase<Estado> {
+
+    static Estado selecionar(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     @Override
     public void alterar(Estado p) throws SQLException, Exception {
         Connection conexao = getConexao();
@@ -43,6 +47,12 @@ public class EstadoDAO extends DAOCRUDBase<Estado> {
 
     @Override
     public void excluir(int id) throws Exception {
+        Connection conexao = getConexao();
 
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("delete from estados where id = ?");
+
+        pstmt.setInt(1, id);
+        pstmt.executeUpdate();
     }
 }
