@@ -20,8 +20,7 @@ public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
         if (m.getMidia().equals("")){
             throw new Exception("A mídia não pode estar vazia!");
         }
-        
-        
+                
         PreparedStatement pstmt;
         pstmt = conexao.prepareStatement("insert into multimidias(id, midia, tipoConteudo, data, album) values(?, ?, ?, ?, ?)");
 
