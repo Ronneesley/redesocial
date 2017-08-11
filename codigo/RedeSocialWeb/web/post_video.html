@@ -37,6 +37,77 @@ and open the template in the editor.
                 float: left;
                 margin-top: 35px;
             }
+            #reacao {
+                width: 100%;
+                height: 25px;
+                float: left;
+                border: 1px solid black;
+                border-radius: 10px;
+                margin-bottom: 10px;
+                margin-top: 5px;				
+            }
+            #botao {
+		float: left;
+		padding : 5px;
+            }
+            #comentario {				
+		float: left;				
+		margin-top: 5px;
+            }
+            #comentario_info{
+		margin-top: 5px;
+                height: auto;
+                float: left;
+		font-family: verdana;
+		font-size: 12px;                
+            }
+            #comentario_tempo{
+		margin-left: 3px;
+		margin-top: 7px;
+		width: 60%;
+                height: auto;
+                float: left;
+		font-family: verdana;
+		font-size: 10px;                
+            }
+            #caixa_comentario{
+		width: 85%;
+                background-color: #eee;
+		padding: 5px;
+		border: 1px solid #666;
+		border-radius: 3px;
+		margin-top: 5px;
+		float: left;
+            }
+            #comentario_do_comentario {				
+		float: left;				
+		margin-top: 5px;
+            }		
+            #comentario_do_comentario_info{
+		margin-top: 5px;
+                height: auto;
+                float: left;
+		font-family: verdana;
+		font-size: 12px;                
+            }		
+            #comentario_do_comentario_tempo{
+		margin-left: 3px;
+		margin-top: 7px;
+		width: 50%;
+                height: auto;
+                float: left;
+		font-family: verdana;
+		font-size: 10px;                
+            }		
+            #caixa_comentario_do_comentario{
+		width: 74.25%;
+		background-color: #eee;
+		padding: 5px;
+		border: 1px solid #666;
+		border-radius: 3px;
+		margin-top: 5px;
+		float: left;
+            }
 	</style>
     </head>
     <body>
@@ -58,6 +129,40 @@ and open the template in the editor.
                     <video controls="" src="videoTeste/paisagens.mp4" width="555"></video>
                 </div>
                 
+                <div id="reacao"> 
+                    <input name="up" type="image" id="botao" src="imagem/up.png" id="imagem" width="15px" height="15px;" alt="icone up" > <!-- Imagem como botão-->
+                    Jusara e outras 10 pessoas deram <b> UP </b>
+		</div>
+                
+                <div id="comentario"> 
+                    <img  src="usuario.jpg" width="60px" height="60x;" style="border-radius: 40%;" />							
+		</div>
+                
+                <div id="comentario_info">
+                    Jussara 
+		</div>
+                
+		<div id="comentario_tempo">
+                    5min
+		</div>	
+				
+                    <input id="caixa_comentario" type="text"  value="Vídeo da hora!!!">		
+		
+                    <!-- <input name="enviar" type="image" id="botao" src="imagem/enviar.png" id="imagem" width="15px" height="15px;" alt="icone enviar" > --> <!-- botão para enviar -->
+				
+		<div id="comentario"> 
+                    <img  src="usuario.jpg" width="60px" height="60x;" style="border-radius: 40%;" />							
+		</div>
+                
+                <div id="comentario_do_comentario_info">
+                    Robson 
+		</div>
+                    
+		<div id="comentario_do_comentario_tempo">
+        		3min
+		</div>	
+				
+                <input id="caixa_comentario_do_comentario" type="text"  value="massa mesmo huahuahua">
             </div>
         </div>
     </body>
