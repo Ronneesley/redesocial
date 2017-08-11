@@ -24,13 +24,8 @@ public class EstadoBO extends BOCRUDBase<Estado, EstadoDAO>{
     protected void validar(Estado dto) throws Exception {
        if (dto.getNome().trim().equals(""))
             throw new Exception("Insira o nome do estado.");
-    
+       if (dto.getPais() == null)
+            throw new Exception("Insira o país.");
     }
-    
-    protected void validarPais(Estado dto) throws Exception{
-        if (dto.getPais().getNome().trim().equals(""))
-            throw new Exception("Insira o nome do país.");
-    }
-    
-    
+        
 }
