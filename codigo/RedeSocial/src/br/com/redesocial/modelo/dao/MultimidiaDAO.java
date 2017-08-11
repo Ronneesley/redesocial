@@ -70,7 +70,7 @@ public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
     }
     
     @Override
-    public List listar() throws Exception  {
+    public List listar() throws Exception {
         Connection conexao = getConexao();
         
         PreparedStatement pstmt;
