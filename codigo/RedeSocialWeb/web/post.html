@@ -5,37 +5,79 @@
 
 		<style type="text/css">
 			#timeline {
-				width: 580px;
+				width: 580px;				
 			}
-	
-			.post {
+			#timeline #post {
 				background-color: #eee;
 				padding: 10px;
 				border: 1px solid black;
 				border-radius: 10px;
-				margin-bottom: 10px;
+				margin-bottom: 10px;				
+				float: left;
+				
+				<!-- -->
 			}
+			
+			
+			#postagem {
+				width: 100%;
+                height: auto;
+                float: left;
+                text-align: justify;
+			}			
+	
+			#infopost {
+				width: 100%;
+                height: auto;
+                float: left;
+                text-align: justify;
+				margin-bottom: 10px;				
+				
+			}
+			.avatar{
+				width: 20%;
+				height: 100px;
+                float: left;
+			}
+			.info{
+				width: 75%;
+                height: auto;
+                float: left;
+                margin-top: 35px;
+			}
+			
 		</style>
 	</head>
 
 	<body>
 		<div id="timeline">
-			<div class="post">
-				<div>
-					<img src="usuario.jpg" width="100px" height="100px;" style="border-radius: 50%;" />
+			<div id="post">
+				<div id="infopost">
+					<div class="avatar">
+						<div>
+							<img src="usuario.jpg" width="100px" height="100px;" style="border-radius: 50%;" />
+						</div>
+					</div>
+					<div class="info">
+						<div>
+							(NOME)<br />
+							(HOR&Aacute;RIO/LOCALIZA&Ccedil;&Atilde;O) <br />
+							(PATROCINADO?)
+						</div>
+					</div>					
 				</div>
-				<div>
-					(NOME)<br />
-					(HOR&Aacute;RIO/LOCALIZA&Ccedil;&Atilde;O) <br />
-					(PATROCINADO?)
+				<div id="postagem">
+					<i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet vulputate erat. Donec commodo, elit et dapibus efficitur, est massa porta quam, quis convallis purus justo ut tortor. In dictum nunc dui, ut pharetra lectus luctus quis. Maecenas neque urna, pharetra ac consequat a, ullamcorper in risus. Nulla facilisi. Duis volutpat eros in volutpat condimentum. Quisque finibus quam non sollicitudin lacinia. </i> 
 				</div>
-
-				<p>POST DE TEXTO</p>
-
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/6xb6dsgTQuw" frameborder="0" allowfullscreen></iframe>
+				<div id="barralike>" 
+					<b>sdasda</b>
+				</div>
+				
+				<!-- inserir barra de likes(UP) e comentários -->
+			
+				
 			</div>
-
-			<div class="post">POST DE TEXTO 2</div>
+			
 
 		</div>
 	</body>
