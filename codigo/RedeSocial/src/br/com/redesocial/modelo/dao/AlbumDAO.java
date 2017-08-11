@@ -42,7 +42,7 @@ public class AlbumDAO extends DAOCRUDBase<Album> {
         Connection conexao = getConexao();
 
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("select * from albuns order by date desc"); 
+        pstmt = conexao.prepareStatement("select * from albuns order by data desc"); 
 
         ResultSet rs;
         rs = pstmt.executeQuery();
