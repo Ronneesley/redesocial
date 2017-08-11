@@ -20,7 +20,7 @@ public class MultimidiaBO extends BOCRUDBase<Multimidia, MultimidiaDAO> {
         //Validações
         if (dto.getMidia()== null) throw new Exception("Preencha o nome da midia");
         if (dto.getTipoConteudo().trim().equals("")) throw new Exception("Preencha o tipo de conteudo");
-        if  (dto.getData() == null) throw new Exception("Preencha o data da midia");
+        if (dto.getData() == null) throw new Exception("Preencha o data da midia");
         
         if (dto.getAlbum() == null) throw new Exception("Preencha o nome do album");
     }
