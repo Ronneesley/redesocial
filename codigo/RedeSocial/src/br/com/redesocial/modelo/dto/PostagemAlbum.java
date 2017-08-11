@@ -2,7 +2,7 @@ package br.com.redesocial.modelo.dto;
 
 /**
  * DTO para representação das Postagens com Multimídias
- * @author Daniel e Macilon
+ * @author Andrey
  */
 public class PostagemAlbum {
     private Postagem postagem;
