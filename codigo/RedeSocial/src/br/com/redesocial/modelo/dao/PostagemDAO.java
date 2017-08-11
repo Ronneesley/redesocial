@@ -35,7 +35,7 @@ public class PostagemDAO extends DAOCRUDBase<Postagem> {
         
         pstmt.setInt(1, p.getCurtidas());
         pstmt.setDescricao(2,p.getDescricao());
-        pstmt.setDate(3, new java.sql.Date(p.getData()));
+        pstmt.setDate(3, new java.sql.Date(p.getData().getTime()));
         pstmt.executeUpdate();
         
     }
