@@ -24,7 +24,7 @@ public class CidadeBO extends BOCRUDBase<Cidade, CidadeDAO>{
     @Override
     protected void validar(Cidade dto) throws Exception {
        if (dto.getNome().trim().equals(""))
-            throw new Exception("Insira o nome dacidade.");
+            throw new Exception("Insira o nome da cidade.");
        if (dto.getEstado() == null)
             throw new Exception("Insira o estado.");
     }
