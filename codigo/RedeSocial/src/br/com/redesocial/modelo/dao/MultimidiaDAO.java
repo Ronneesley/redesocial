@@ -22,7 +22,7 @@ public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
         }
                 
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("insert into multimidias(midia, tipoConteudo, data, album) values(?, ?, ?, ?, ?)");
+        pstmt = conexao.prepareStatement("insert into multimidias(midia, tipo_conteudo, data, album) values(?, ?, ?, ?)");
 
         pstmt.setBytes (1, m.getMidia());
         pstmt.setString (2, m.getTipoConteudo());
