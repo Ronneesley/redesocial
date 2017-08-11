@@ -20,7 +20,7 @@ public class PaisDAO extends DAOCRUDBase<Pais> {
         preparedStatement pstmt;
         pstmt = conexao.prepareStatement("inserir into paises (nome) values(?)");
         
-        pstmt.setString(1, p.getnome ());
+        pstmt.setString(1, p.getNome());
         pstmt.executeUpdate();
         
     }
