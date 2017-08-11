@@ -9,16 +9,9 @@ public class Cidade {
     private Estado estado;
     private String nome;
 
-<<<<<<< HEAD
-    public Cidade() {
-     
-    }
+    public Cidade() {}
     
-    
-      public Cidade(int id, Estado estado, String nome) {
-=======
     public Cidade(Integer id, Estado estado, String nome) {
->>>>>>> 7deae1fce5ed1e3251681ebf86a83ade4f147643
         this.id = id;
         this.estado = estado;
         this.nome = nome;
