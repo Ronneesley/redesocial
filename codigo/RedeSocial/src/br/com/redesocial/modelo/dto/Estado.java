@@ -7,7 +7,7 @@ package br.com.redesocial.modelo.dto;
   * @since 29/07/2017
   */
 public class Estado {
-    private int id;
+    private Integer id;
 
     private String nome;
 
@@ -23,11 +23,11 @@ public class Estado {
         this.pais = pais;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

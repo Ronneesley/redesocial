@@ -73,26 +73,21 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
         Connection conexao = getConexao();
 
         PreparedStatement  pstmt; 
-        pstmt = conexao.prepareStatement("update usuario set id = ?, nome = ?, email=?, telefone=? senha =?, nascimento =?, sexo = ?, data_cadastro =?, status =?, foto=? , cidade=? where ");
-        
+        pstmt = conexao.prepareStatement("update usuario set nome = ?, email=?, telefone=?, senha =?, nascimento =?, sexo = ?, data_cadastro =?, status =?, foto=?, cidade=?, where id =? ");
        
+        pstmt.setString(1, u.getNome());
+        pstmt.setString(2, u.getEmail());
+        pstmt.setString(3, u.getTelefone());
+        pstmt.setString(4, u.getSenha());  
+        pstmt.setDate(5, new java.sql.Date(u.getNascimento().getTime()));
+        pstmt.setString(6, String.valueOf(u.getSexo().getId()));
+        pstmt.setDate(7, new java.sql.Date(u.getDataCadastro().getTime()));
+        pstmt.setBoolean(8, u.getStatus());
+        pstmt.setInt(9, u.getFoto().getId());
+        pstmt.setInt(10, u.getCidade().getId()); 
+        pstmt.setInt(11, u.getId());
        
-        pstmt.setInt(1, u.getId());
-        pstmt.setString(2, u.getNome());
-        pstmt.setString(3, u.getEmail());
-        pstmt.setString(4, u.getTelefone());
-        pstmt.setString(5, u.getSenha());  
-        pstmt.setDate(6, new java.sql.Date(u.getNascimento().getTime()));
-        pstmt.setString(10, String.valueOf(u.getSexo().getId()));
-        pstmt.setDate  (8, (Date) u.getDataCadastro());
-        pstmt.setBoolean(9, u.getStatus());
-        pstmt.setInt(10, u.getFoto().getId());
-        pstmt.setInt(11, u.getCidade().getId()); 
-       
-
         pstmt.executeUpdate();
-      
-    
     }
 
     @Override
@@ -100,7 +95,7 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
         Connection conexao = getConexao();
         
         PreparedStatement  pstmt; 
-        pstmt = conexao.prepareStatement("select * from usuarios where id = ? order by nome asc");
+        pstmt = conexao.prepareStatement("select * from usuarios order by nome asc");
                 
         ResultSet rs;
         rs = pstmt.executeQuery();

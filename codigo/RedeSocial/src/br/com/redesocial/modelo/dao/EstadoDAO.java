@@ -1,20 +1,41 @@
 package br.com.redesocial.modelo.dao;
 
 import br.com.redesocial.modelo.dto.Estado;
+import br.com.redesocial.modelo.dto.Pais;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
 /**
  * Classe base para conexão com o banco de dados
- * @author Wesley M. Felix
+ * @author Wesley M. Felix, Lara Caroline
  * @since 27/07/2017
  */
+
 public class EstadoDAO extends DAOCRUDBase<Estado> {
 
-    static Estado selecionar(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Estado selecionar(int id) throws Exception{
+        Connection conexao = getConexao();
+
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("select * from estado where id = ?");
+        pstmt.setInt(1, id);
+
+        ResultSet rs;
+        rs = pstmt.executeQuery();
+
+        if (rs.next()){
+            Estado e = new Estado();
+            PaisDAO paisDAO = new PaisDAO(); 
+            e.setId(rs.getInt("id"));
+            e.setNome(rs.getString("nome"));
+            e.setPais(paisDAO.selecionar(rs.getInt("pais")));
+            return e;
+        } else {
+            return null;
+        }
     }
     @Override
     public void alterar(Estado p) throws SQLException, Exception {
@@ -33,11 +54,6 @@ public class EstadoDAO extends DAOCRUDBase<Estado> {
     @Override
     public void inserir(Estado dto) throws Exception {
 
-    }
-
-    @Override
-    public Estado selecionar(int id) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
