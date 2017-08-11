@@ -5,7 +5,7 @@ import br.com.redesocial.modelo.dto.Usuario;
 
 /**
  * Define as regras de negócio para os usuários
- * @author Ronneesley Moura Teles
+ * @author Ronneesley Moura Teles e Daniel Moreira Cardoso
  * @since 27/07/2017
  */
 public class UsuarioBO extends BOCRUDBase<Usuario, UsuarioDAO> {

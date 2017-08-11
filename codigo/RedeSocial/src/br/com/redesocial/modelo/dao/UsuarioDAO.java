@@ -24,11 +24,19 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
     public void inserir(Usuario dto) throws Exception {
         Connection conexao = getConexao();
         
-        PreparedStatement pstmt = conexao.prepareStatement("insert into usuarios(nome, email, senha) values(?, ?, ?)");
+        PreparedStatement pstmt = conexao.prepareStatement("insert into usuarios(nome, email, telefone, senha, nascimento, sexo, data_cadastro, status, foto, cidade) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
         
         pstmt.setString(1, dto.getNome());
         pstmt.setString(2, dto.getEmail());
-        pstmt.setString(3, dto.getSenha());
+        pstmt.setString(3, dto.getTelefone());
+        pstmt.setString(4, dto.getSenha());
+        pstmt.setDate(5, new java.sql.Date(dto.getNascimento().getTime()));
+        pstmt.setString(6, String.valueOf(dto.getSexo().getId()));
+        pstmt.setDate(7, new java.sql.Date(dto.getDataCadastro().getTime()));
+        pstmt.setBoolean(8, dto.getStatus());
+        pstmt.setInt(9, dto.getFoto().getId());
+        pstmt.setInt(10, dto.getCidade().getId()); 
+       
         
         pstmt.executeUpdate();
         
