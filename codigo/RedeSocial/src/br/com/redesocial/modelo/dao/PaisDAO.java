@@ -8,6 +8,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PaisDAO extends DAOCRUDBase<Pais> {
+    
+    @Override
+    public void inserir(Pais p) throws Exception{
+        Connection conexao = getConexao();
+        
+        if(p.getNome().trim().equals("")){
+            throw new Exception("O campo paisao pode estar vazio!");
+        }
+    }
     @Override
     public void alterar(Pais p) throws Exception {
         Connection conexao = getConexao();
