@@ -26,6 +26,7 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
         
         PreparedStatement pstmt = conexao.prepareStatement("insert into usuarios(nome, email, telefone, senha, nascimento, sexo, data_cadastro, status, foto, cidade) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
         
+        pstmt.setString(1, dto.getNome());
         pstmt.setString(2, dto.getEmail());
         pstmt.setString(3, dto.getTelefone());
         pstmt.setString(4, dto.getSenha());
@@ -34,8 +35,7 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
         pstmt.setDate(7, new java.sql.Date(dto.getDataCadastro().getTime()));
         pstmt.setBoolean(8, dto.getStatus());
         pstmt.setInt(9, dto.getFoto().getId());
-        pstmt.setInt(10, dto.getCidade().getId());pstmt.setString(1, dto.getNome());
-         
+        pstmt.setInt(10, dto.getCidade().getId()); 
        
         
         pstmt.executeUpdate();
