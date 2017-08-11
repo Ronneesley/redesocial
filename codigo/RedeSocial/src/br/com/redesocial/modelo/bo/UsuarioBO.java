@@ -33,8 +33,6 @@ public class UsuarioBO extends BOCRUDBase<Usuario, UsuarioDAO> {
         
         if (dto.getStatus() == null) throw new Exception("Preencha o status do usuário");
         
-        if (dto.getFoto() == null) throw new Exception("Preencha a foto de perfil do usuário");
-        
         //Validação de chave estrangeira
         if (dto.getCidade() == null) throw new Exception("Preencha a cidade do usuário");
     }
