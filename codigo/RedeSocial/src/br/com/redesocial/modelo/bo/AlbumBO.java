@@ -19,7 +19,7 @@ public class AlbumBO extends BOCRUDBase<Album, AlbumDAO> {
     protected void validar(Album dto) throws Exception {
         //Validações
         if (dto.getNome().trim().equals("")) throw new Exception("Preencha o nome do album");
-        if (dto.getData().equals("")) throw new Exception("Preencha o data do album");
+        if  (dto.getData() == null) throw new Exception("Preencha o data do album");
         
         if (dto.getUsuario() == null) throw new Exception("Preencha o nome do usuário");
     }
