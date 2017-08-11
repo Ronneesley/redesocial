@@ -3,17 +3,12 @@ package br.com.redesocial.modelo.bo;
 import br.com.redesocial.modelo.dao.CidadeDAO;
 import br.com.redesocial.modelo.dto.Cidade;
 
-/**
- * Define as regras de negócio para os usuários
- * @author Ronneesley Moura Teles
- * @since 27/07/2017
- */
+
 public class CidadeBO extends BOCRUDBase<Cidade, CidadeDAO> {
     @Override
     protected CidadeDAO instanciarDAO() {
         return new CidadeDAO();
     }
-
   
     @Override
     protected void validar(Cidade dto) throws Exception {
@@ -21,7 +16,6 @@ public class CidadeBO extends BOCRUDBase<Cidade, CidadeDAO> {
         if (dto.getNome().trim().equals("")) throw new Exception("Preencha o nome da cidade");
         
     }
-
     
     @Override
     protected void validarChavePrimaria(Cidade dto) throws Exception {
