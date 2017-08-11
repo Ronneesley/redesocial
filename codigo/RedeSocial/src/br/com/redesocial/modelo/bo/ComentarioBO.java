@@ -27,9 +27,7 @@ public class ComentarioBO extends BOCRUDBase<Comentario, ComentarioDAO>{
          if (dto.getCurtidas()== null) throw new Exception("Insira as comentarios");
          if (dto.getData() == null) throw new Exception("Preencha o data da comentarios");
          
-         if (dto.getPostagem() == null) throw new Exception("Preencha a postagem do comentario");
-         if (dto.getResposta() == null) throw new Exception("Preencha a resposta do comentario");
-        
+         if (dto.getPostagem() == null) throw new Exception("Preencha a postagem do comentario");       
        
     }
     
