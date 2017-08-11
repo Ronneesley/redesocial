@@ -18,7 +18,7 @@ public class PaisDAO extends DAOCRUDBase<Pais> {
         }
         
         preparedStatement pstmt;
-        pstmt = conexao.prepareStatement("inserir into países (nome) values(?)");
+        pstmt = conexao.prepareStatement("inserir into paises (nome) values(?)");
         
         pstmt.setString(1, p.getnome ());
         pstmt.executeUpdate();
@@ -51,11 +51,6 @@ public class PaisDAO extends DAOCRUDBase<Pais> {
 
         pstmt.setInt(1, id);
         pstmt.executeUpdate();
-    }
-
-    @Override
-    public void inserir(Pais dto) throws Exception {
-
     }
 
     @Override
