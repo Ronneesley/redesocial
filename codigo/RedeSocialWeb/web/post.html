@@ -13,35 +13,96 @@
 				border: 1px solid black;
 				border-radius: 10px;
 				margin-bottom: 10px;				
-				float: left;
-				
+				float: left;				
 				<!-- -->
 			}
 			
 			#reacao {
-				width: 70%;
+				width: 100%;
 				height: 25px;
 				float: left;
 				border: 1px solid black;
 				border-radius: 10px;
 				margin-bottom: 10px;
-				
+				margin-top: 5px;				
 			}
 			
-			#up {
+			#botao {
 				float: left;
 				padding : 5px;
 				
 			}
 			
-			#comentario {
-				width: 70%;
-				height: 25px;
-				float: left;
-				border: 1px solid black;
-				border-radius: 10px;
-				margin-bottom: 10px;
+			#comentario {				
+				float: left;				
+				margin-top: 5px;
 			}
+			
+			#comentario_info{
+				margin-top: 5px;
+                height: auto;
+                float: left;
+				font-family: verdana;
+				font-size: 12px;                
+			}
+			
+			#comentario_tempo{
+				margin-left: 3px;
+				margin-top: 7px;
+				width: 60%;
+                height: auto;
+                float: left;
+				font-family: verdana;
+				font-size: 10px;                
+			}
+			
+			#caixa_comentario{
+				width: 85%;
+				background-color: #eee;
+				padding: 5px;
+				border: 1px solid #666;
+				border-radius: 3px;
+				margin-top: 5px;
+				float: left;
+			}			
+			
+			<!-- Inicio - Comentario do comentario-->
+			
+			#comentario_do_comentario {				
+				float: left;				
+				margin-top: 5px;
+			}
+			
+			#comentario_do_comentario_info{
+				margin-top: 5px;
+                height: auto;
+                float: left;
+				font-family: verdana;
+				font-size: 12px;                
+			}
+			
+			#comentario_do_comentario_tempo{
+				margin-left: 3px;
+				margin-top: 7px;
+				width: 50%;
+                height: auto;
+                float: left;
+				font-family: verdana;
+				font-size: 10px;                
+			}
+			
+			#caixa_comentario_do_comentario{
+				width: 74.25%;
+				background-color: #eee;
+				padding: 5px;
+				border: 1px solid #666;
+				border-radius: 3px;
+				margin-top: 5px;
+				float: left;
+			}
+			
+			
+			<!-- Fim - Comentario do comentario-->
 			
 			#postagem {
 				width: 100%;
@@ -56,7 +117,6 @@
                 float: left;
                 text-align: justify;
 				margin-bottom: 10px;				
-				
 			}
 			.avatar{
 				width: 20%;
@@ -82,6 +142,7 @@
 							<img src="usuario.jpg" width="100px" height="100px;" style="border-radius: 50%;" />
 						</div>
 					</div>
+					
 					<div class="info">
 						<div>
 							(NOME)<br />
@@ -90,31 +151,48 @@
 						</div>
 					</div>					
 				</div>
+				
 				<div id="postagem">
 					<i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet vulputate erat. Donec commodo, elit et dapibus efficitur, est massa porta quam, quis convallis purus justo ut tortor. In dictum nunc dui, ut pharetra lectus luctus quis. Maecenas neque urna, pharetra ac consequat a, ullamcorper in risus. Nulla facilisi. Duis volutpat eros in volutpat condimentum. Quisque finibus quam non sollicitudin lacinia. </i> 
 				</div>
 								
 				<div id="reacao"> 
 					
-					<input name="up" type="image" id="up" src="imagem/up.png" id="imagem" width="15px" height="15px;" alt="icone up" > <!-- Imagem como botão-->
+					<input name="up" type="image" id="botao" src="imagem/up.png" id="imagem" width="15px" height="15px;" alt="icone up" > <!-- Imagem como botão-->
 					Tony e 22 pessoas deram <i> UP </i>
 				</div>
 				
-				<!-- comentários -->
+				<div id="comentario"> 
+					<img  src="usuario.jpg" width="60px" height="60x;" style="border-radius: 40%;" />							
+				</div>
+				
+				<div id="comentario_info">
+					Ciclano 
+				</div>
+				
+				<div id="comentario_tempo">
+					22min
+				</div>	
+				
+				<input id="caixa_comentario" type="text"  value="Comentei e sai correndo!">
+				
+				<!-- <input name="enviar" type="image" id="botao" src="imagem/enviar.png" id="imagem" width="15px" height="15px;" alt="icone enviar" > --> <!-- botão para enviar -->
 				
 				<div id="comentario"> 
-					
-					
-					asdaksdasfasfasfas <i> italico </i>
+					<img  src="usuario.jpg" width="60px" height="60x;" style="border-radius: 40%;" />							
 				</div>
-				<!-- inserir barra de likes(UP) e comentários -->
 				
+				<div id="comentario_do_comentario_info">
+					Ciclano 
+				</div>
 				
-			
+				<div id="comentario_do_comentario_tempo">
+					22min
+				</div>	
+				
+				<input id="caixa_comentario_do_comentario" type="text"  value="Comentei e sai correndo!">
 				
 			</div>
-			
-
 		</div>
 	</body>
 </html>
