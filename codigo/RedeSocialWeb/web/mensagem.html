@@ -45,14 +45,28 @@
             }
             
             .close{
-                width: 60px;
-                height: 25px;
-                border-radius: 100%;
+                width: 20px;
+                height: 20px;
                 float: right;
                 margin-right: 10px;
                 margin-top: -60px;
             }
             
+			.max{
+                width: 20px;
+                height: 20px;
+                float: right;
+                margin-right: 50px;
+                margin-top: -60px;
+            }
+            
+			.min{
+                width: 20px;	
+                float: right;
+                margin-right: 100px;
+                margin-top: -50px;
+            }
+			
             h4{
                 color: #fff;
                 font-family: arial;
@@ -113,8 +127,16 @@
                 <div class="topo">
                     <img src="usuario.jpg" alt="Foto de perfil" class="img">
                     <h4>Bob</h4>
-                    <img src="close.png" alt="Foto de perfil" class="close">
-                </div>
+					<a href="#">
+						<img src="min.png" alt="Minimizar" class="min"> 
+					</a>
+					<a href="#">
+						<img src="max.png" alt="Maximizar" class="max"> 
+					</a>
+					<a href="#">
+						<img src="close.png" alt="Fechar" class="close">
+					</a>
+				</div>
                 <div class="mensagem">
                     <p class="msgEsquerda">Olá!</p>
                     
