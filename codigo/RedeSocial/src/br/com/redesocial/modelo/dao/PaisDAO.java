@@ -17,7 +17,7 @@ public class PaisDAO extends DAOCRUDBase<Pais> {
             throw new Exception("O campo país não pode estar vazio!");  
         }
         
-        preparedStatement pstmt;
+        PreparedStatement pstmt;
         pstmt = conexao.prepareStatement("inserir into paises (nome) values(?)");
         
         pstmt.setString(1, p.getNome());
