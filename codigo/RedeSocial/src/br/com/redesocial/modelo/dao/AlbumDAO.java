@@ -84,6 +84,17 @@ public class AlbumDAO extends DAOCRUDBase<Album> {
     @Override
     public void alterar(Album dto) throws Exception {
         
+        Connection conexao = getConexao();
+
+        PreparedStatement  pstmt; 
+        pstmt = conexao.prepareStatement("update albuns set nome = ?, data=?, usuario=?, where id =? ");
+       
+        pstmt.setString(1, dto.getNome());
+        pstmt.setDate(2, new java.sql.Date(dto.getData().getTime()));
+        pstmt.setInt(3, dto.getUsuario().getId()); 
+        pstmt.setInt(4, dto.getId());
+       
+        pstmt.executeUpdate();
     }
 
     @Override
