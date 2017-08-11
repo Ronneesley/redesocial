@@ -22,6 +22,11 @@ public class UsuarioBO extends BOCRUDBase<Usuario, UsuarioDAO> {
         if (dto.getEmail().trim().equals("")) throw new Exception("Preencha o e-mail do usuário");
         
         if (dto.getSenha().trim().equals("")) throw new Exception("Preencha a senha do usuário");
+        
+        //Existem outras validações para serem feitas aqui.
+        
+        //Validação de chave estrangeira
+        if (dto.getCidade() == null) throw new Exception("Preencha a cidade do usuário");
     }
 
     @Override
