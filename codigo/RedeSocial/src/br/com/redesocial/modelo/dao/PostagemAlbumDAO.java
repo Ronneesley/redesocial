@@ -1,5 +1,6 @@
 package br.com.redesocial.modelo.dao;
 
+import br.com.redesocial.modelo.dto.PostagemAlbum;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
@@ -24,9 +25,9 @@ public class PostagemAlbumDAO extends DAOBase{
         pstmt = conexao.prepareStatement("update postagens_albuns set postagem = ?, album = ? where postagem = ? and album = ?");
         
         pstmt.setInt(1, dtoNovo.getPostagem().getId());
-        pstmt.setInt(2, dtoNovo.getAlbum().getId);
-        pstmt.setInt(3, dtoNovo.getPostagem().getId());
-        pstmt.setInt(4, dtoNovo.getAlbum().getId);
+        pstmt.setInt(2, dtoNovo.getAlbum().getId());
+        pstmt.setInt(3, dto.getPostagem().getId());
+        pstmt.setInt(4, dto.getAlbum().getId());
         
         pstmt.executeQuery();
         
