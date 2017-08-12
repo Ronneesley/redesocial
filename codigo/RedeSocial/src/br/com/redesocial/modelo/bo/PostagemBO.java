@@ -18,9 +18,9 @@ public class PostagemBO {
     }
     protected void validar(Postagem dto) throws Exception {
         //Validações
-        if (dto.getCurtidas() == null) throw new Exception("Preencha o campo curtidas");
+        if (dto.getCurtidas() == null) throw new Exception("Preencha o campo Curtidas");
         if (dto.getDescricao() == null || dto.getDescricao().trim().equals("")) throw new Exception("Preencha o campo Descricao");
-        if (dto.getData() == null) throw new Exception("Preencha a data");
+        if (dto.getData() == null) throw new Exception("Preencha a Data");
         if (dto.getUsuario()== null) throw new Exception("Preencha o campo usuário");
         
     }
