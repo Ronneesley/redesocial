@@ -40,7 +40,7 @@ public class CidadeDAO extends DAOCRUDBase<Cidade> {
     public void alterar(Cidade dto) throws Exception {
         Connection conexao = getConexao();
 
-        PreparedStatement pstmt = conexao.prepareStatement("update comentarios set Estado  = ?, Nome = ?, where id = ?"); 
+        PreparedStatement pstmt = conexao.prepareStatement("update cidade set estado  = ?, nome = ? where id = ?"); 
         
         pstmt.setInt(1, dto.getEstado().getId()); 
         pstmt.setString(2, dto.getNome());        
