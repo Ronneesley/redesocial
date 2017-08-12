@@ -38,6 +38,7 @@ public class PostagemDAO extends DAOCRUDBase<Postagem> {
         pstmt.setDate(3, new java.sql.Date(p.getData().getTime()));
         pstmt.executeUpdate();
         
+        p.setId(p.getId(pstmt));
     }
 
     @Override
