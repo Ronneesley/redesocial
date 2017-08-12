@@ -31,13 +31,14 @@ public class PostagemDAO extends DAOCRUDBase<Postagem> {
         }
         
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("insert into postagens (curtidas,descricao,data) values (?,?,?)");
+        pstmt = conexao.prepareStatement("insert into postagens (curtidas,descricao,data) values (?,?,?)", Statement.RETURN_GENERATED_KEYS);
         
         pstmt.setInt(1, p.getCurtidas());
         pstmt.setString(2,p.getDescricao());
         pstmt.setDate(3, new java.sql.Date(p.getData().getTime()));
         pstmt.executeUpdate();
         
+        p.setId(p.getId(pstmt));
     }
 
     @Override
