@@ -1,10 +1,7 @@
 package br.com.redesocial.modelo.dao;
 
-<<<<<<< HEAD
 import br.com.redesocial.modelo.dto.Postagem;
-=======
 import br.com.redesocial.modelo.dto.PostagemAlbum;
->>>>>>> 20a6a399d729774b2714e982b4bd564e3f8b0de1
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

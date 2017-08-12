@@ -4,6 +4,7 @@ import br.com.redesocial.modelo.dto.Pais;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,11 +19,12 @@ public class PaisDAO extends DAOCRUDBase<Pais> {
         }
         
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("inserir into paises (nome) values(?)");
+        pstmt = conexao.prepareStatement("insert into paises (nome) values(?)", Statement.RETURN_GENERATED_KEYS);
         
         pstmt.setString(1, p.getNome());
         pstmt.executeUpdate();
         
+        p.setId(getId(pstmt));        
     }
     
     @Override

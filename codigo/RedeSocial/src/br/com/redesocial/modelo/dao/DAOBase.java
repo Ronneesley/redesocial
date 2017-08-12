@@ -34,7 +34,7 @@ public abstract class DAOBase {
         ResultSet chavesGeradas = stmt.getGeneratedKeys();
         
         if (chavesGeradas.next()){
-            return chavesGeradas.getInt("id");
+            return chavesGeradas.getInt(1);
         } else {
             return null;
         }
