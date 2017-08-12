@@ -42,7 +42,7 @@ public class AlbumDAO extends DAOCRUDBase<Album> {
         Connection conexao = getConexao();
 
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("select * from albuns order by data desc"); 
+        pstmt = conexao.prepareStatement("select * from albuns order by date desc"); 
 
         ResultSet rs;
         rs = pstmt.executeQuery();
@@ -85,8 +85,9 @@ public class AlbumDAO extends DAOCRUDBase<Album> {
     public void alterar(Album dto) throws Exception {
         
         Connection conexao = getConexao();
+
         PreparedStatement  pstmt; 
-        pstmt = conexao.prepareStatement("update albuns set nome = ?, data=?, usuario=?, where id =? ");
+        pstmt = conexao.prepareStatement("update albuns set nome = ?, data=?, usuario=? where id =? ");
        
         pstmt.setString(1, dto.getNome());
         pstmt.setDate(2, new java.sql.Date(dto.getData().getTime()));
