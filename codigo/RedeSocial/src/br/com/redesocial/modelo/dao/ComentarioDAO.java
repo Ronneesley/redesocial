@@ -106,6 +106,12 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
 
     @Override
     public void inserir(Comentario dto) throws Exception {
+        Connection conexao = getConexao();
 
+        PreparedStatement pstmt = conexao.prepareStatement("insert into comentarios(descricao) values(?)");
+
+        pstmt.setString(1, dto.getDescricao());
+        
+        pstmt.executeUpdate();
     }
 }

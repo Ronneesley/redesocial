@@ -10,13 +10,13 @@ import java.util.List;
 
 /**
  * Classe base para conexão com o banco de dados
+ *
  * @author Wesley M. Felix, Lara Caroline
  * @since 27/07/2017
  */
-
 public class EstadoDAO extends DAOCRUDBase<Estado> {
 
-    public Estado selecionar(int id) throws Exception{
+    public Estado selecionar(int id) throws Exception {
         Connection conexao = getConexao();
 
         PreparedStatement pstmt;
@@ -26,9 +26,9 @@ public class EstadoDAO extends DAOCRUDBase<Estado> {
         ResultSet rs;
         rs = pstmt.executeQuery();
 
-        if (rs.next()){
+        if (rs.next()) {
             Estado e = new Estado();
-            PaisDAO paisDAO = new PaisDAO(); 
+            PaisDAO paisDAO = new PaisDAO();
             e.setId(rs.getInt("id"));
             e.setNome(rs.getString("nome"));
             e.setPais(paisDAO.selecionar(rs.getInt("pais")));
@@ -37,6 +37,7 @@ public class EstadoDAO extends DAOCRUDBase<Estado> {
             return null;
         }
     }
+
     @Override
     public void alterar(Estado p) throws SQLException, Exception {
         Connection conexao = getConexao();
@@ -53,7 +54,14 @@ public class EstadoDAO extends DAOCRUDBase<Estado> {
 
     @Override
     public void inserir(Estado dto) throws Exception {
+        Connection conexao = getConexao();
 
+        PreparedStatement pstmt = conexao.prepareStatement("insert into estados(nome, pais) values(?, ?)");
+
+        pstmt.setString(1, dto.getNome());
+        pstmt.setInt(2, dto.getPais().getId());
+
+        pstmt.executeUpdate();
     }
 
     @Override
@@ -62,7 +70,7 @@ public class EstadoDAO extends DAOCRUDBase<Estado> {
     }
 
     @Override
-    public void excluir(int id) throws Exception {
+        public void excluir(int id) throws Exception {
         Connection conexao = getConexao();
 
         PreparedStatement pstmt;

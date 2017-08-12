@@ -17,7 +17,7 @@ public class UsuarioBO extends BOCRUDBase<Usuario, UsuarioDAO> {
     @Override
     protected void validar(Usuario dto) throws Exception {
         //Validações
-        if (dto.getNome().trim().equals("")) throw new Exception("Preencha o nome do usuário");
+        if (dto.getNome() == null || dto.getNome().trim().equals("")) throw new Exception("Preencha o nome do usuário");
         
         if (dto.getEmail().trim().equals("")) throw new Exception("Preencha o e-mail do usuário");
         
