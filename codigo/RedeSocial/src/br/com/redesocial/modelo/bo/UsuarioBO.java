@@ -17,7 +17,7 @@ public class UsuarioBO extends BOCRUDBase<Usuario, UsuarioDAO> {
     @Override
     protected void validar(Usuario dto) throws Exception {
         //Validações
-        if (dto.getNome().trim().equals("")) throw new Exception("Preencha o nome do usuário");
+        if (dto.getNome() == null || dto.getNome().trim().equals("")) throw new Exception("Preencha o nome do usuário");
         
         if (dto.getEmail().trim().equals("")) throw new Exception("Preencha o e-mail do usuário");
         
@@ -32,8 +32,6 @@ public class UsuarioBO extends BOCRUDBase<Usuario, UsuarioDAO> {
         if (dto.getDataCadastro() == null) throw new Exception("Preencha a data de cadastro do usuário");
         
         if (dto.getStatus() == null) throw new Exception("Preencha o status do usuário");
-        
-        if (dto.getFoto() == null) throw new Exception("Preencha a foto de perfil do usuário");
         
         //Validação de chave estrangeira
         if (dto.getCidade() == null) throw new Exception("Preencha a cidade do usuário");

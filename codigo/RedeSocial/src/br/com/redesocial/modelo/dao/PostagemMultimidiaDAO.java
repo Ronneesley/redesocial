@@ -73,7 +73,14 @@ public class PostagemMultimidiaDAO extends DAOBase {
     }
 
     public void excluir(int postagem, int multimidia) throws Exception {
-
+        Connection conexao = getConexao();
+        
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("delete from postagens_multimidas where postagem = ? and multimidia = ?");
+        
+        pstmt.setInt(1, postagem);
+        pstmt.setInt(2, multimidia);;
+        pstmt.executeUpdate();
     }
     
 }
