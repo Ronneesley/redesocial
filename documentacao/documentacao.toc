@@ -5,3 +5,4 @@
 \contentsline {section}{\numberline {1.1}Especifica\IeC {\c c}\IeC {\~a}o de requisitos}{6}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Requisitos n\IeC {\~a}o funcionais}{6}{subsection.1.1.1}
 \contentsline {subsection}{\numberline {1.1.2}Requisitos funcionais}{7}{subsection.1.1.2}
+\contentsline {section}{\numberline {1.2}Casos de Uso}{8}{section.1.2}

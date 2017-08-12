@@ -2,6 +2,7 @@
 
 \usepackage{colortbl}
 \usepackage{requisitos}
+\usepackage{caso_de_uso}
 
 \curso{Sistemas de Informação}
 \ano{2017}
@@ -23,7 +24,7 @@
 \configurarInformacoesPDF
 
 \definecolor{cinzaClaro}{rgb}{0.9,0.9,0.9}
-
+	
 \begin{document}
 
 	\input{preambulo.tex}
@@ -381,9 +382,7 @@ Após as fotos serem adicionadas e carregadas com êxito o usuário poderá adic
 {O usuário pode mandar mensagens para usuários da rede social. Em caso de amigos, as mensagens chegam no bate-papo automaticamente. Sem a amizade, é necessário que o receptor aprove a mensagem enviada.
 }
 
-\requisitoFuncional
-%Identificação do Requisito
-{RF17}
+\requisitoFuncional{RF17}
 %Nome do Requisito
 {O sistema deve permitir que o usuário altere seu status no bate-papo}
 %Fonte do Requisito
@@ -397,5 +396,47 @@ Após as fotos serem adicionadas e carregadas com êxito o usuário poderá adic
 %Especificação do Requisito
 { O usuário poderá alterar seu status no bate-papo. Inicialmente, todo usuário está online, mas será possível desativar o mesmo.
 }	
-	
+
+\section{Casos de Uso}
+
+\casoDeUso
+%Identificador
+{UC1}
+%Nome
+{Manter Produtos}
+%Ator Principal
+{Gerente}
+%Interessados
+{
+Interessados 1 Interessados 2
+Interessados 1 Interessados 2
+Interessados 1 Interessados 2
+Interessados 1 Interessados 2
+Interessados 1 Interessados 2
+Interessados 1 Interessados 2
+Interessados 1 Interessados 2
+}
+%Pré-Condições
+{Estar Logado}
+%Pós-condições
+{Produto Cadastrado}
+%Fluxo Básico
+{
+passo1
+passo2
+passo3
+}
+%Fluxo Alternativo
+{
+passo1
+passo2
+passo3
+}
+%Frequência de Ocorrencia
+{Aproximadamente 3 vezes}
+%Problemas em Aberto
+{
+Problemas que estão em aberto
+}
+
 \end{document}

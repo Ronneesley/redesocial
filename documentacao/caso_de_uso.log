@@ -1,0 +1,17 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdftex 2017.8.11)  11 AUG 2017 20:50
+entering extended mode
+**C:/Users/IgorRodrigues/Documents/GitHub/redesocial/documentacao/caso_de_uso.s
+ty
+
+(C:/Users/IgorRodrigues/Documents/GitHub/redesocial/documentacao/caso_de_uso.st
+y
+! Undefined control sequence.
+l.9 \newcommand
+               {\casoDeUso}[10]{
+? 
+! Emergency stop.
+l.9 \newcommand
+               {\casoDeUso}[10]{
+End of file on the terminal!
+
+!  ==> Fatal error occurred, no output PDF file produced!
