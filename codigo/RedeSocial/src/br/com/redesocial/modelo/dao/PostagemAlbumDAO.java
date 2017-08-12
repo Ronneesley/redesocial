@@ -1,7 +1,9 @@
 package br.com.redesocial.modelo.dao;
 
+import br.com.redesocial.modelo.dto.Postagem;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 /**
  *
@@ -31,7 +33,29 @@ public class PostagemAlbumDAO extends DAOBase{
         pstmt.executeQuery();
         
     }
-    public void listar(){
+    public Postagem listar(int id) throws Exception{
+       Connection conexao = getConexao();
         
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("select * from postagens_albuns where id = ?");
+        
+        pstmt.setInt(1, id);
+        
+        ResultSet rs = pstmt.executeQuery();
+        
+        if(rs.next()){
+            Postagem p = new Postagem();
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            
+            /*p.setId(rs.getInt("id"));
+            p.setDescricao(rs.getString("descricao"));
+            p.setCurtidas(rs.getInt("curtidas"));
+            p.setData(rs.getDate("data"));
+            p.setUsuario(usuarioDAO.selecionar(rs.getInt("usuario")));*/
+            
+            return p;
+        } else {
+            return null;
+        } 
     }
 }

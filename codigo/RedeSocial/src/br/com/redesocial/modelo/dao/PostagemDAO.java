@@ -71,12 +71,16 @@ public class PostagemDAO extends DAOCRUDBase<Postagem> {
             Postagem p = new Postagem();
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             
+            //SETA DADOS NA ENTIDADE DE POSTAGEM
             p.setId(rs.getInt("id"));
-            p.setDescricao(rs.getString("descricao"));
             p.setCurtidas(rs.getInt("curtidas"));
+            p.setDescricao(rs.getString("descricao"));
             p.setData(rs.getDate("data"));
+            
+            //PEGA O USUÁRIO
             p.setUsuario(usuarioDAO.selecionar(rs.getInt("usuario")));
             
+            //RETORNA A IDENTIDADE DE POSTAGEM
             return p;
         } else {
             return null;
