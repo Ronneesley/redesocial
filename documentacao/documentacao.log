@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.8.12)  12 AUG 2017 21:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.8.12)  12 AUG 2017 21:57
 entering extended mode
 **./documentacao.tex
 (documentacao.tex
@@ -1752,10 +1752,6 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 45.
  (documentacao.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 45.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 45.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 45.
  ) 
 Here is how much of TeX's memory you used:
@@ -1765,11 +1761,11 @@ Here is how much of TeX's memory you used:
  17972 multiletter control sequences out of 15000+200000
  16198 words of font info for 68 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,12n,45p,811b,394s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,12n,45p,758b,394s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
 
-Output written on documentacao.pdf (21 pages, 848443 bytes).
+Output written on documentacao.pdf (21 pages, 848475 bytes).
 PDF statistics:
  342 PDF objects out of 1000 (max. 8388607)
  82 named destinations out of 1000 (max. 500000)
