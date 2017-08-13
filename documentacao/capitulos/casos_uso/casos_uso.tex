@@ -2,7 +2,7 @@
 
 \casoDeUso
 %Identificador
-{UC1}
+{UCx}
 %Nome
 {Manter Produtos}
 %Ator Principal
@@ -38,4 +38,135 @@ passo3
 %Problemas em Aberto
 {
 Problemas que estão em aberto
+}
+
+
+%------------------------------------------------
+
+\casoDeUso
+%Identificador
+{UC1}
+%Nome
+{Cadastro de usuário}
+%Ator Principal
+{Usuário}
+%Interessados
+{
+\begin{itemize}
+	\item Usuário: deseja cadastrar se na rede social.
+	\item Servidor: deseja receber os dados do usuário para validar e efetivar o cadastro.
+\end{itemize}
+
+}
+%Pré-Condições
+{Ter um e-mail válido.}
+%Pós-condições
+{Dados são enviados para o servidor.}
+%Fluxo Básico
+{
+\begin{itemize}
+\item Usuário preenche os campos de nome, sobrenome,  celular e/ou e-mail corretamente e uma senha válida.
+\item Dados são enviados para o servidor.
+\end{itemize}
+}
+%Fluxo Alternativo
+{
+\begin{itemize}
+\item Usuário não preenche o campos de nome, e precisa ser notificado.
+\item Usuário preenche o campos de nome, sobrenome,  celular e/ou e-mail corretamente e uma senha válida.
+
+
+\item Usuário não preenche o campos de sobrenome, e precisa ser notificado.
+
+\item Usuário não preenche o campos de celular e/ou e-mail, e precisa ser notificado.
+
+\item A senha escolhida não atende os requisitos.
+
+\item Eventuais problemas no servidor podem impedir o envio de dados, sendo preciso notificar o usuário sobre.
+\end{itemize}
+}
+%Frequência de Ocorrencia
+{Aproximadamente 3 vezes por minuto}
+%Problemas em Aberto
+{
+
+}
+
+\casoDeUso
+%Identificador
+{UC2}
+%Nome
+{Enviar confirmação de cadastro}
+%Ator Principal
+{Usuário}
+%Interessados
+{
+\begin{itemize}
+	\item Usuário: deseja receber o e-mail de confirmação.
+	\item Servidor: deseja enviar o e-mail de confirmação.
+\end{itemize}
+
+}
+%Pré-Condições
+{Ter recebido todos os dados de forma válida}
+%Pós-condições
+{E-mail de confirmação é enviado}
+%Fluxo Básico
+{
+\begin{itemize}
+\item E-mail é enviado com sucesso pelo servidor.
+\item E-mail é recebido com sucesso pelo servidor.
+\end{itemize}
+}
+%Fluxo Alternativo
+{
+\begin{itemize}
+\item E-mail é enviado para a caixa de spam do usuário.
+\end{itemize}
+}
+%Frequência de Ocorrencia
+{Aproximadamente 3 vezes por  minuto}
+%Problemas em Aberto
+{
+ 
+}
+
+\casoDeUso
+%Identificador
+{UC3}
+%Nome
+{Confirmar recebimento de confirmação. Ativar conta}
+%Ator Principal
+{Usuário}
+%Interessados
+{
+\begin{itemize}
+	\item Usuário: deseja confirmar e-mail e ganhar acesso a seu perfil na rede social.
+	\item Servidor: deseja ativar a conta do usuário recém- cadastrado.
+\end{itemize}
+
+}
+%Pré-Condições
+{E-mail de confirmação precisa ter sido enviado para o usuário}
+%Pós-condições
+{A conta do usuário é ativa}
+%Fluxo Básico
+{
+\begin{itemize}
+\item Usuário envia a confirmação.
+\item Conta é liberada para o uso do usuário.
+\end{itemize}
+}
+%Fluxo Alternativo
+{
+\begin{itemize}
+\item A confirmação não extá funcionando corretamento ou expirou.
+\item Usuário solicita o reenvio da confirmação.
+\end{itemize}
+}
+%Frequência de Ocorrencia
+{Aproximadamente 3 vezes ao dia}
+%Problemas em Aberto
+{
+
 }
