@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.8.12)  13 AUG 2017 14:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.8.12)  13 AUG 2017 16:01
 entering extended mode
 **./documentacao.tex
 (documentacao.tex
@@ -1841,20 +1841,36 @@ ts.png>] [23 <../prototipos/resultados/opcoes_grupo.png>] [24 <../prototipos/re
 sultados/perfil.png>] [25 <../prototipos/resultados/postagem.png> <../prototipo
 s/resultados/prototipo_recuperacao_senha.png>] [26 <../prototipos/resultados/sa
 ir_grupo.png> <../prototipos/resultados/solicitacao_amizade.png>]
-Overfull \hbox (12.79996pt too wide) in paragraph at lines 37--37
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 39--39
 [][] 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmss on input line 89.
-
-LaTeX Font Info:    No file OMScmss.fd. on input line 89.
+LaTeX Font Info:    Try loading font information for OMS+cmss on input line 119
+.
+LaTeX Font Info:    No file OMScmss.fd. on input line 119.
 
 LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbullet' on input line 89.
+(Font)              for symbol `textbullet' on input line 119.
 
 
-Overfull \hbox (12.79996pt too wide) in paragraph at lines 89--89
+LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <12> not available
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 119.
+
+
+
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 119--119
+[][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 4.5958pt on input line 119.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 162--162
 [][] 
  []
 
@@ -1862,20 +1878,12 @@ Overfull \hbox (12.79996pt too wide) in paragraph at lines 89--89
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (12.79996pt too wide) in paragraph at lines 128--128
-[][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 4024) in paragraph at lines 168--168
+Underfull \hbox (badness 4024) in paragraph at lines 213--213
 []|\OT1/cmss/m/n/12 (+20) Confirmar re-ce-bi-mento de
  []
 
 
-Overfull \hbox (12.79996pt too wide) in paragraph at lines 168--168
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 213--213
 [][] 
  []
 
@@ -1914,19 +1922,20 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 45.
  ) 
 Here is how much of TeX's memory you used:
- 14897 strings out of 493335
- 221681 string characters out of 3136651
- 488676 words of memory out of 3000000
- 17993 multiletter control sequences out of 15000+200000
- 16924 words of font info for 76 fonts, out of 3000000 for 9000
+ 14911 strings out of 493335
+ 221878 string characters out of 3136651
+ 488667 words of memory out of 3000000
+ 18002 multiletter control sequences out of 15000+200000
+ 17521 words of font info for 79 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,12n,45p,758b,475s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,12n,45p,758b,588s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on documentacao.pdf (32 pages, 876262 bytes).
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on documentacao.pdf (32 pages, 886654 bytes).
 PDF statistics:
- 423 PDF objects out of 1000 (max. 8388607)
+ 427 PDF objects out of 1000 (max. 8388607)
  103 named destinations out of 1000 (max. 500000)
- 9471 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11519 words of extra memory for PDF output out of 12000 (max. 10000000)
 
