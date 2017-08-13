@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.8.12)  13 AUG 2017 16:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.8.12)  13 AUG 2017 16:47
 entering extended mode
 **./documentacao.tex
 (documentacao.tex
@@ -1928,12 +1928,12 @@ Here is how much of TeX's memory you used:
  18002 multiletter control sequences out of 15000+200000
  17521 words of font info for 79 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,12n,45p,758b,588s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,12n,45p,758b,587s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><
 C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on documentacao.pdf (32 pages, 886654 bytes).
+Output written on documentacao.pdf (32 pages, 887181 bytes).
 PDF statistics:
  427 PDF objects out of 1000 (max. 8388607)
  103 named destinations out of 1000 (max. 500000)
