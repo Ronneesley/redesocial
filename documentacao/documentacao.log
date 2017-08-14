@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.8.12)  14 AUG 2017 14:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.8.12)  14 AUG 2017 16:59
 entering extended mode
 **./documentacao.tex
 (documentacao.tex
@@ -1926,11 +1926,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 45.
  ) 
 Here is how much of TeX's memory you used:
- 14920 strings out of 493335
- 221960 string characters out of 3136651
+ 14922 strings out of 493335
+ 221978 string characters out of 3136651
  489193 words of memory out of 3000000
  18005 multiletter control sequences out of 15000+200000
- 17894 words of font info for 81 fonts, out of 3000000 for 9000
+ 17961 words of font info for 82 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,12n,45p,758b,475s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb>
@@ -1938,9 +1938,9 @@ Here is how much of TeX's memory you used:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/
 Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on documentacao.pdf (33 pages, 892785 bytes).
+Output written on documentacao.pdf (33 pages, 893051 bytes).
 PDF statistics:
- 439 PDF objects out of 1000 (max. 8388607)
+ 440 PDF objects out of 1000 (max. 8388607)
  106 named destinations out of 1000 (max. 500000)
  12031 words of extra memory for PDF output out of 14400 (max. 10000000)
 
