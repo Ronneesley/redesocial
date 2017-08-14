@@ -1,54 +1,7 @@
 \chapter{Casos de Uso}
-%-----------------------------------------------------------
-% Exemplo de Caso de uso
-%-----------------------------------------------------------
+
 \casoDeUso
 %Identificador
-<<<<<<< HEAD
-=======
-{UCx}
-%Nome
-{Manter Produtos}
-%Ator Principal
-{Gerente}
-%Interessados
-{
-Interessados 1 Interessados 2
-Interessados 1 Interessados 2
-Interessados 1 Interessados 2
-Interessados 1 Interessados 2
-Interessados 1 Interessados 2
-Interessados 1 Interessados 2
-Interessados 1 Interessados 2
-}
-%Pré-Condições
-{Estar Logado}
-%Pós-condições
-{Produto Cadastrado}
-%Fluxo Básico
-{
-passo1
-passo2
-passo3
-}
-%Fluxo Alternativo
-{
-passo1
-passo2
-passo3
-}
-%Frequência de Ocorrencia
-{Aproximadamente 3 vezes}
-%Problemas em Aberto
-{
-Problemas que estão em aberto
-}
-
-
-%-----------------------------------------------------------
-\casoDeUso
-%Identificador
->>>>>>> 0edf1d3fac34f686cbcee7ecb8d59684d4d11ed9
 {UC1}
 %Nome
 {Realizar cadastro}
@@ -68,53 +21,28 @@ Problemas que estão em aberto
 %Fluxo Básico
 {
 \begin{itemize}
-	\item Usuário preenche os campos de nome, sobrenome , e-mail e data de nascimento.
-	%\item Usuário aceita os termos de uso da rede social.
-	%\item Usuário clica no botão \textit{“Criar conta”}.
-	\begin{itemize}
-		\item Usuário aceita os termos de uso da rede social.	
-		\begin{itemize}
-			\item Usuário clica no botão \textit{“Criar conta”}.
-		\end{itemize}
-	\end{itemize}
-	
-	
-	\item Próxima etapa do cadastro é realizada
-	\begin{itemize}
-		%\item Próxima etapa do cadastro é realizada
-		
-		\item O usuário pode escolher sua senha de acordo com   os requisitos, como quantidade mínima de caracteres e seus tipos.
-		\item O usuário escolhe a foto de seu perfil, de maneira opcional.
-		\item O usuário pode escrever uma frase que aparecerá no seu perfil, de maneira opcional.
-		
-		\item O usuário pode anexar informações relacionadas a sua carreira acadêmica e profissional, de maneira opcional.
-		
-		\item O usuário pode anexar informações sobre cidades que morou, de maneira opcional.
-		
-		\item O usuário anexa informações sobre cidades que mora atualmente.
-		
-		
-	\end{itemize}
-\item Segunda fase do cadastro é concluída.
-\begin{itemize}
+	\item Usuário preenche os campos de nome, sobrenome , e-mail e data de nascimento.	
+	\item Usuário aceita os termos de uso da rede social.		
+	\item Usuário clica no botão \textit{“Criar conta”}.	
+	\item O sistema exibe a segunda etapa do cadastro.		
+	\item O usuário escolher sua senha de acordo com  os requisitos, como quantidade mínima de caracteres e seus tipos.		
+	\item O usuário anexa informações sobre cidades que mora atualmente.	
+	\item Segunda fase do cadastro é concluída.			
+	\item O sistema envia e-mail para o usuário para confirmação.
 			
-			\item O sistema envia e-mail para o usuário para confirmação.
-		\end{itemize}	
 \end{itemize}
 }
 %Fluxo Alternativo
 {
 \begin{itemize}
 	\item Usuário não preenche o campos de nome, e precisa ser notificado.
-
 	\item Usuário não preenche o campos de sobrenome, e precisa ser notificado.
-
 	\item Usuário não preenche o campos de celular e/ou e-mail, e precisa ser notificado.
-
 	\item Usuário não aceita os termos de uso da rede social.
 
 	\begin{itemize}
 		\item Eventuais problemas no servidor podem impedir o envio de dados, sendo preciso notificar o usuário sobre.
+		\item Usuário pode pedir o reenvio do e-mail de confirmação.
 	\end{itemize}
 \end{itemize}
 }
@@ -149,10 +77,8 @@ Problemas que estão em aberto
 {
 \begin{itemize}
 	\item E-mail é enviado com sucesso pelo servidor.
-	\begin{itemize}
-		\item E-mail é recebido com sucesso pelo usuário.
-	\end{itemize}
-
+	\item E-mail é recebido com sucesso pelo usuário.
+	
 \end{itemize}
 }
 %Fluxo Alternativo
@@ -192,17 +118,14 @@ Problemas que estão em aberto
 {
 \begin{itemize}
 	\item Usuário envia a confirmação.
-	\begin{itemize}		
-		\item Itens opcionais surgem durante a terceira etapa de cadastro para o usuário preencher.
-		
-		\item Conta é liberada para o uso do usuário.
-	\end{itemize}	 
+	\item Itens opcionais surgem durante a terceira etapa de cadastro para o usuário preencher.		
+	\item Conta é liberada para o uso do usuário.		 
 \end{itemize}
 }
 %Fluxo Alternativo
 {
 \begin{itemize}
-	\item A confirmação não extá funcionando corretamente ou expirou.
+	\item A confirmação não está funcionando corretamente ou expirou.
 	\begin{itemize}
 		\item Usuário solicita o reenvio da confirmação.
 	\end{itemize}
@@ -218,8 +141,6 @@ Problemas que estão em aberto
 {
 
 }
-
-<<<<<<< HEAD
 
 \casoDeUso
 %Identificador
@@ -261,7 +182,7 @@ Problemas que estão em aberto
 {
 
 }
-=======
+
 %-----------------------------------------------------------
 \casoDeUso
 %Identificador
@@ -353,4 +274,6 @@ Problemas que estão em aberto
 {
 
 }
+
+
 
