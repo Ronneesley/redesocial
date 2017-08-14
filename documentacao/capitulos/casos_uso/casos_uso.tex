@@ -2,49 +2,6 @@
 
 \casoDeUso
 %Identificador
-{UCx}
-%Nome
-{Manter Produtos}
-%Ator Principal
-{Gerente}
-%Interessados
-{
-Interessados 1 Interessados 2
-Interessados 1 Interessados 2
-Interessados 1 Interessados 2
-Interessados 1 Interessados 2
-Interessados 1 Interessados 2
-Interessados 1 Interessados 2
-Interessados 1 Interessados 2
-}
-%Pré-Condições
-{Estar Logado}
-%Pós-condições
-{Produto Cadastrado}
-%Fluxo Básico
-{
-passo1
-passo2
-passo3
-}
-%Fluxo Alternativo
-{
-passo1
-passo2
-passo3
-}
-%Frequência de Ocorrencia
-{Aproximadamente 3 vezes}
-%Problemas em Aberto
-{
-Problemas que estão em aberto
-}
-
-
-%------------------------------------------------
-
-\casoDeUso
-%Identificador
 {UC1}
 %Nome
 {Cadastro de usuário}
@@ -166,6 +123,48 @@ Problemas que estão em aberto
 }
 %Frequência de Ocorrencia
 {Aproximadamente 3 vezes ao dia}
+%Problemas em Aberto
+{
+
+}
+
+
+\casoDeUso
+%Identificador
+{UC4}
+%Nome
+{Enviar Post}
+%Ator Principal
+{Usuário}
+%Interessados
+{
+\begin{itemize}
+	\item Usuário: deseja realizar publicações em sua rede social.
+\end{itemize}
+
+}
+%Pré-Condições
+{Ter uma conta válida e ativa}
+%Pós-condições
+{Públicação é postada}
+%Fluxo Básico
+{
+\begin{itemize}
+\item Usuário acessa a sua timeline.
+\item Usuário poderá postar foto, vídeo, link ou texto.
+\item Apos inserir todas as informações o usuário aciona a opção de publicar post.
+\end{itemize}
+}
+%Fluxo Alternativo
+{
+\begin{itemize}
+\item Ocorreu algum erro ao publicar post.
+\item É mostrado uma mensagem de erro ao inserir.
+\item Usuário aciona a opção “Tentar Novamente”.
+\end{itemize}
+}
+%Frequência de Ocorrencia
+{Aproximadamente 50 vezes ao dia}
 %Problemas em Aberto
 {
 
