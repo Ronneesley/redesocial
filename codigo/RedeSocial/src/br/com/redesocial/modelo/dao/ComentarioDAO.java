@@ -107,7 +107,7 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
     @Override
     public void inserir(Comentario c) throws Exception {
         
-         Connection conexao = getConexao();
+        Connection conexao = getConexao();
          
         if (c.getDescricao().equals("")){
             throw new Exception("O comentário não pode estar vazio!");
