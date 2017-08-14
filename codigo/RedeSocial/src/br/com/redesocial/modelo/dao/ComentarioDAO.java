@@ -105,12 +105,21 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
     }
 
     @Override
-    public void inserir(Comentario dto) throws Exception {
-        Connection conexao = getConexao();
+    public void inserir(Comentario c) throws Exception {
+        
+         Connection conexao = getConexao();
+         
+        if (c.getDescricao().equals("")){
+            throw new Exception("O comentário não pode estar vazio!");
+        }
+        
+        PreparedStatement pstmt = conexao.prepareStatement("insert into comentarios(descricao, curtidas, data, postagem, resposta) values(?, ?, ?, ?, ?)");
 
-        PreparedStatement pstmt = conexao.prepareStatement("insert into comentarios(descricao) values(?)");
-
-        pstmt.setString(1, dto.getDescricao());
+        pstmt.setString(1, c.getDescricao());
+        pstmt.setInt(2, c.getCurtidas());
+        pstmt.setDate(3, new java.sql.Date(c.getData().getTime()));
+        pstmt.setInt(4, c.getPostagem().getId());
+        pstmt.setInt(5, c.getResposta().getId());
         
         pstmt.executeUpdate();
     }

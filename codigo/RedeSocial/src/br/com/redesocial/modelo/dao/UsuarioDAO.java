@@ -138,7 +138,7 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
        Connection conexao = getConexao();
         
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("delete from usuario where id = ?");
+        pstmt = conexao.prepareStatement("delete from usuarios where id = ?");
         
         pstmt.setInt(1, id);
         pstmt.executeUpdate();
