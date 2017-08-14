@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.8.12)  14 AUG 2017 17:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.8.12)  14 AUG 2017 17:20
 entering extended mode
 **./documentacao.tex
 (documentacao.tex
@@ -1858,7 +1858,7 @@ Overfull \hbox (12.79996pt too wide) in paragraph at lines 50--50
  []
 
 
-Overfull \hbox (12.79996pt too wide) in paragraph at lines 91--91
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 90--90
 [][] 
  []
 
@@ -1866,12 +1866,12 @@ Overfull \hbox (12.79996pt too wide) in paragraph at lines 91--91
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 4024) in paragraph at lines 139--139
+Underfull \hbox (badness 4024) in paragraph at lines 138--138
 []|\OT1/cmss/m/n/12 (+20) Confirmar re-ce-bi-mento de
  []
 
 
-Overfull \hbox (12.79996pt too wide) in paragraph at lines 139--139
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 138--138
 [][] 
  []
 
@@ -1879,7 +1879,7 @@ Overfull \hbox (12.79996pt too wide) in paragraph at lines 139--139
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (12.79996pt too wide) in paragraph at lines 180--180
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 179--179
 [][] 
  []
 
@@ -1887,7 +1887,7 @@ Overfull \hbox (12.79996pt too wide) in paragraph at lines 180--180
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (12.79996pt too wide) in paragraph at lines 227--227
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 226--226
 [][] 
  []
 
@@ -1895,7 +1895,7 @@ Overfull \hbox (12.79996pt too wide) in paragraph at lines 227--227
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (12.79996pt too wide) in paragraph at lines 272--272
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 271--271
 [][] 
  []
 
@@ -1928,9 +1928,6 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 45.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 45.
  ) 
 Here is how much of TeX's memory you used:
@@ -1946,9 +1943,9 @@ Here is how much of TeX's memory you used:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/
 Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on documentacao.pdf (34 pages, 969994 bytes).
+Output written on documentacao.pdf (34 pages, 970261 bytes).
 PDF statistics:
- 444 PDF objects out of 1000 (max. 8388607)
+ 445 PDF objects out of 1000 (max. 8388607)
  107 named destinations out of 1000 (max. 500000)
  12036 words of extra memory for PDF output out of 14400 (max. 10000000)
 
