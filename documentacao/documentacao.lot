@@ -28,14 +28,8 @@
 \contentsline {table}{\numberline {26}{\ignorespaces Requisito Funcional: O sistema deve fornecer um arquivo com as normas de cadastro de artigos ciet\IeC {\'\i }ficos}}{17}{table.3.26}
 \contentsline {table}{\numberline {27}{\ignorespaces Requisito Funcional: O sistema deve fornecer um arquivo com as normas de cadastro de artigos ciet\IeC {\'\i }ficos}}{17}{table.3.27}
 \contentsline {table}{\numberline {28}{\ignorespaces Requisito Funcional: O sistema deve op\IeC {\c c}\IeC {\~a}o para o usu\IeC {\'a}rio concordar ou n\IeC {\~a}o as normas de envio}}{17}{table.3.28}
-<<<<<<< HEAD
-\contentsline {table}{\numberline {29}{\ignorespaces Caso de Uso: Cadastro de usu\IeC {\'a}rio}}{21}{table.5.29}
-\contentsline {table}{\numberline {30}{\ignorespaces Caso de Uso: Enviar confirma\IeC {\c c}\IeC {\~a}o de cadastro}}{22}{table.5.30}
-\contentsline {table}{\numberline {31}{\ignorespaces Caso de Uso: Confirmar recebimento de confirma\IeC {\c c}\IeC {\~a}o. Ativar conta}}{23}{table.5.31}
-\contentsline {table}{\numberline {32}{\ignorespaces Caso de Uso: Enviar Post}}{24}{table.5.32}
-=======
-\contentsline {table}{\numberline {29}{\ignorespaces Caso de Uso: Manter Produtos}}{27}{table.5.29}
-\contentsline {table}{\numberline {30}{\ignorespaces Caso de Uso: Realizar cadastro}}{28}{table.5.30}
-\contentsline {table}{\numberline {31}{\ignorespaces Caso de Uso: Enviar confirma\IeC {\c c}\IeC {\~a}o de cadastro}}{29}{table.5.31}
-\contentsline {table}{\numberline {32}{\ignorespaces Caso de Uso: Confirmar recebimento de confirma\IeC {\c c}\IeC {\~a}o. Ativar conta}}{30}{table.5.32}
->>>>>>> 0edf1d3fac34f686cbcee7ecb8d59684d4d11ed9
+\contentsline {table}{\numberline {29}{\ignorespaces Caso de Uso: Manter Produtos}}{26}{table.5.29}
+\contentsline {table}{\numberline {30}{\ignorespaces Caso de Uso: Realizar cadastro}}{27}{table.5.30}
+\contentsline {table}{\numberline {31}{\ignorespaces Caso de Uso: Enviar confirma\IeC {\c c}\IeC {\~a}o de cadastro}}{28}{table.5.31}
+\contentsline {table}{\numberline {32}{\ignorespaces Caso de Uso: Confirmar recebimento de confirma\IeC {\c c}\IeC {\~a}o. Ativar conta}}{29}{table.5.32}
+\contentsline {table}{\numberline {33}{\ignorespaces Caso de Uso: Enviar Post}}{30}{table.5.33}
