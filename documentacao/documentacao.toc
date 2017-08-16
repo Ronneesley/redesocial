@@ -15,7 +15,7 @@
 \contentsline {section}{\numberline {3.2}Requisitos funcionais}{10}{section.3.2}
 \contentsline {chapter}{\chapternumberline {4} \MakeTextUppercase {Prot\IeC {\'o}tipos} }{18}{chapter.4}
 \contentsline {chapter}{\chapternumberline {5} \MakeTextUppercase {Casos de Uso} }{27}{chapter.5}
-\contentsline {chapter}{\chapternumberline {6} \MakeTextUppercase {Projeto} }{33}{chapter.6}
-\contentsline {section}{\numberline {6.1}Diagrama Entidade e Relacionamento (DER)}{33}{section.6.1}
-\contentsline {section}{\numberline {6.2}Diagramas de Sequ\IeC {\^e}ncia}{34}{section.6.2}
-\contentsline {section}{\numberline {6.3}Diagrama de Implanta\IeC {\c c}\IeC {\~a}o}{34}{section.6.3}
+\contentsline {chapter}{\chapternumberline {6} \MakeTextUppercase {Projeto} }{34}{chapter.6}
+\contentsline {section}{\numberline {6.1}Diagrama Entidade e Relacionamento (DER)}{34}{section.6.1}
+\contentsline {section}{\numberline {6.2}Diagramas de Sequ\IeC {\^e}ncia}{35}{section.6.2}
+\contentsline {section}{\numberline {6.3}Diagrama de Implanta\IeC {\c c}\IeC {\~a}o}{35}{section.6.3}
