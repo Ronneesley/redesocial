@@ -122,5 +122,8 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
         pstmt.setInt(5, c.getResposta().getId());
         
         pstmt.executeUpdate();
+        
+        c.setId(getId(pstmt));
+        
     }
 }

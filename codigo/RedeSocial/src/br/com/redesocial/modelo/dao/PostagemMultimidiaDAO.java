@@ -29,6 +29,8 @@ public class PostagemMultimidiaDAO extends DAOBase {
         pstmt.setInt(2, dto.getMultimidia().getId());
         
         pstmt.executeQuery();
+        
+        
     }
 
     public void alterar(PostagemMultimidia dto, PostagemMultimidia dtoNovo) throws Exception {
