@@ -8,7 +8,6 @@ import br.com.redesocial.modelo.dto.Estado;
  * @author Daniel Moreira Cardoso
  */
 public class EstadoBO extends BOCRUDBase<Estado, EstadoDAO>{
-
     @Override
     protected EstadoDAO instanciarDAO() {
         return new EstadoDAO();
@@ -16,7 +15,7 @@ public class EstadoBO extends BOCRUDBase<Estado, EstadoDAO>{
 
     @Override
     protected void validarChavePrimaria(Estado dto) throws Exception {
-        if (dto.getId() == null) 
+        if (dto.getId() == null)
             throw new Exception("Preencha o campo id.");
     }
 
@@ -27,5 +26,4 @@ public class EstadoBO extends BOCRUDBase<Estado, EstadoDAO>{
        if (dto.getPais() == null)
             throw new Exception("Insira o país.");
     }
-        
 }

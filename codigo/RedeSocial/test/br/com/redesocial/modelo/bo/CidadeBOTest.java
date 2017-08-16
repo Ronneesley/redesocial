@@ -1,7 +1,6 @@
 package br.com.redesocial.modelo.bo;
 
 import br.com.redesocial.modelo.dto.Cidade;
-import java.util.List;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -12,23 +11,22 @@ import static org.junit.Assert.*;
  */
  
  public class CidadeBOTest {
-	
-	@Test
-	public void testMetodoSelecionar() {
-		CidadeBO bo = new CidadeBO();
-		
-		Cidade cidade = new Cidade();
-		cidade.setnome("Ceres");
-		
-		try{
-			bo.inserir(cidade);
-			int id = cidade.getid();
-			
-			Cidade cidadeSelecionado = bo.selecionar(id);
-			
-			assertNotNull("Cidade nao encontrada", cidadeSelecionado);
-		}catch (Exception ex){
-				fail("Falha ao inserir uma cidade: ", + ex.getMessage());
-			}
-	}
+    @Test
+    public void testMetodoSelecionar() {
+        CidadeBO bo = new CidadeBO();
+
+        Cidade cidade = new Cidade();
+        cidade.setNome("Ceres");
+
+        try{
+            bo.inserir(cidade);
+            int id = cidade.getId();
+
+            Cidade cidadeSelecionado = bo.selecionar(id);
+
+            assertNotNull("Cidade nao encontrada", cidadeSelecionado);
+        } catch (Exception ex){
+            fail("Falha ao inserir uma cidade: " + ex.getMessage());
+        }
+    }
  }

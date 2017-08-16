@@ -32,17 +32,17 @@ public abstract class BOCRUDBase<DTO, DAO extends DAOCRUDBase<DTO>> {
         DAO dao = instanciarDAO();
         dao.alterar(dto);
     }
-    
+
     public void excluir(int id) throws Exception {
         DAO dao = instanciarDAO();
         dao.excluir(id);
-    } 
-    
+    }
+
     public DTO selecionar(int id) throws Exception {
         DAO dao = instanciarDAO();
         return dao.selecionar(id);
     }
-    
+
     public List listar() throws Exception {
         DAO dao = instanciarDAO();
         return dao.listar();
