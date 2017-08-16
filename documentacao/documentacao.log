@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.29)  15 AUG 2017 23:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.29)  16 AUG 2017 00:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1666,7 +1666,7 @@ Package pdftex.def Info: ../prototipos/resultados/perfil.png used on input line
 (pdftex.def)             Requested size: 426.79134pt x 685.19603pt.
 
 
-LaTeX Warning: Float too large for page by 13.74626pt on input line 7.
+LaTeX Warning: Float too large for page by 4.99626pt on input line 7.
 
 <../prototipos/resultados/postagem.png, id=233, 687.56876pt x 395.4775pt>
 File: ../prototipos/resultados/postagem.png Graphic file (type png)
@@ -1776,16 +1776,15 @@ line 39.
 )
 (./capitulos/casos_uso/casos_uso.tex [18
 
- <../prototipos/resultados/login.png>]
-[19 <../prototipos/resultados/2_sesso.png>] [20 <../prototipos/resultados/perfi
-l.png>] [21 <../prototipos/resultados/postagem.png> <../prototipos/resultados/m
-eus_posts.png>] [22 <../prototipos/resultados/mensagens.png> <../prototipos/res
-ultados/prototipo_recuperacao_senha.png>] [23 <../prototipos/resultados/galeria
-_fotos.png> <../prototipos/resultados/solicitacao_amizade.png> <../prototipos/r
-esultados/entrar_grupo.png>] [24 <../prototipos/resultados/criar_grupo.png> <..
-/prototipos/resultados/denunciar_grupo.png>] [25 <../prototipos/resultados/opco
-es_grupo.png> <../prototipos/resultados/cadastro_artigos.png>] [26 <../prototip
-os/resultados/sair_grupo.png>]
+ <../prototipos/resultados/login.png> <../prototipos/resultados/2_sesso.png>] [
+19 <../prototipos/resultados/perfil.png>] [20 <../prototipos/resultados/postage
+m.png> <../prototipos/resultados/meus_posts.png>] [21 <../prototipos/resultados
+/mensagens.png> <../prototipos/resultados/prototipo_recuperacao_senha.png>] [22
+ <../prototipos/resultados/galeria_fotos.png> <../prototipos/resultados/solicit
+acao_amizade.png> <../prototipos/resultados/entrar_grupo.png>] [23 <../prototip
+os/resultados/criar_grupo.png> <../prototipos/resultados/denunciar_grupo.png>] 
+[24 <../prototipos/resultados/opcoes_grupo.png> <../prototipos/resultados/cadas
+tro_artigos.png>] [25 <../prototipos/resultados/sair_grupo.png>]
 LaTeX Font Info:    Try loading font information for OMS+cmss on input line 50.
 
 LaTeX Font Info:    No file OMScmss.fd. on input line 50.
@@ -1796,15 +1795,8 @@ LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 (Font)              for symbol `textbullet' on input line 50.
 
 
-LaTeX Warning: Reference `figura:login' on page 27 undefined on input line 50.
-
-
 LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <12> not available
 (Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 50.
-
-
-LaTeX Warning: Reference `figura:2_sesso' on page 27 undefined on input line 50
-.
 
 
 Overfull \hbox (12.79996pt too wide) in paragraph at lines 50--50
@@ -1856,15 +1848,12 @@ Overfull \hbox (12.79996pt too wide) in paragraph at lines 272--272
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (./capitulos/projeto/projeto.tex [27
+) (./capitulos/projeto/projeto.tex [26
 
-] [28] [29] [30] [31] [32])
-
-Package lastpage Warning: Rerun to get the references right on input line 45.
-
+] [27] [28] [29] [30] [31])
 
 AED: lastpage setting LastPage
-[33
+[32
 
 ]
 \tf@lof=\write5
@@ -1885,18 +1874,12 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 45.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 45.
  ) 
 Here is how much of TeX's memory you used:
- 14818 strings out of 493029
- 217955 string characters out of 6136234
- 467623 words of memory out of 5000000
+ 14817 strings out of 493029
+ 217948 string characters out of 6136234
+ 474881 words of memory out of 5000000
  17914 multiletter control sequences out of 15000+600000
  17894 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1906,10 +1889,10 @@ r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on documentacao.pdf (34 pages, 925378 bytes).
+Output written on documentacao.pdf (33 pages, 924925 bytes).
 PDF statistics:
- 442 PDF objects out of 1000 (max. 8388607)
- 367 compressed objects within 4 object streams
- 105 named destinations out of 1000 (max. 500000)
+ 440 PDF objects out of 1000 (max. 8388607)
+ 366 compressed objects within 4 object streams
+ 104 named destinations out of 1000 (max. 500000)
  12036 words of extra memory for PDF output out of 14400 (max. 10000000)
 
