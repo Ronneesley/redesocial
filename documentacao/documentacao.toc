@@ -17,5 +17,5 @@
 \contentsline {chapter}{\chapternumberline {5} \MakeTextUppercase {Casos de Uso} }{26}{chapter.5}
 \contentsline {chapter}{\chapternumberline {6} \MakeTextUppercase {Projeto} }{32}{chapter.6}
 \contentsline {section}{\numberline {6.1}Diagrama Entidade e Relacionamento (DER)}{32}{section.6.1}
-\contentsline {section}{\numberline {6.2}Diagramas de Sequ\IeC {\^e}ncia}{32}{section.6.2}
-\contentsline {section}{\numberline {6.3}Diagrama de Implanta\IeC {\c c}\IeC {\~a}o}{32}{section.6.3}
+\contentsline {section}{\numberline {6.2}Diagramas de Sequ\IeC {\^e}ncia}{33}{section.6.2}
+\contentsline {section}{\numberline {6.3}Diagrama de Implanta\IeC {\c c}\IeC {\~a}o}{33}{section.6.3}
