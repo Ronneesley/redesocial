@@ -1,0 +1,44 @@
+package br.com.redesocial.modelo.bo;
+
+import br.com.redesocial.modelo.dto.Album;
+import java.util.List;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+/**
+ * Unidade de testes para o AlbumBO
+ * @author Ronneesley Moura Teles
+ * @since 09/08/2017
+ */
+public class AlbumBOTest {
+    @Test
+    public void testMetodoListar() {
+        AlbumBO bo = new AlbumBO();
+
+        try {
+            List existentes = bo.listar();
+            int qtdeExistentes = existentes.size();
+
+            final int qtde = 10;
+            for (int i = 0; i < 10; i++){
+                Album album = new Album();
+                album.setNome("Férias");
+
+                try {
+                    bo.inserir(album);
+                } catch (Exception ex) {
+                    fail("Falha ao inserir um álbum: " + ex.getMessage());
+                }
+            }
+
+            List existentesFinal = bo.listar();
+            int qtdeExistentesFinal = existentesFinal.size();
+
+            int diferenca = qtdeExistentesFinal - qtdeExistentes;
+
+            assertEquals(qtde, diferenca);
+        } catch (Exception ex){
+            fail("Erro ao listar: " + ex.getMessage());
+        }
+    }
+}
