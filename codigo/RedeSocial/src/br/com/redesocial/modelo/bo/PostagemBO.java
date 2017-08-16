@@ -7,7 +7,7 @@ import br.com.redesocial.modelo.dto.Postagem;
  *
  * @author aluno
  */
-public class PostagemBO {
+public class PostagemBO extends BOCRUDBase<Postagem, PostagemDAO> {
      protected PostagemDAO instanciarDAO() {
         return new PostagemDAO();
     }
