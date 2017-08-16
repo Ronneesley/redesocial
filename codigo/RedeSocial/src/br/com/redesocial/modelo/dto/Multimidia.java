@@ -64,6 +64,7 @@ public class Multimidia {
     public void setAlbum(Album album){
         this.album = album;
     }
+
    
 
 }
