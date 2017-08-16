@@ -135,11 +135,9 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
 
     @Override
     public void excluir(int id) throws Exception {
-       Connection conexao = getConexao();
-        
+        Connection conexao = getConexao();  
         PreparedStatement pstmt;
         pstmt = conexao.prepareStatement("delete from usuarios where id = ?");
-        
         pstmt.setInt(1, id);
         pstmt.executeUpdate();
 
