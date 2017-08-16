@@ -19,10 +19,9 @@ public class PaisBO extends BOCRUDBase<Pais, PaisDAO> {
         //Validações
         if (dto.getNome().trim().equals("")) throw new Exception("Preencha o nome do país");
     }
-    
+
     @Override
     protected void validarChavePrimaria(Pais dto) throws Exception {
         if (dto.getId() == null) throw new Exception("Preencha o campo id");
     }
-    
 }

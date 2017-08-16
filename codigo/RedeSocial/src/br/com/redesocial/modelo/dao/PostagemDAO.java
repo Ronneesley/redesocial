@@ -4,6 +4,7 @@ import br.com.redesocial.modelo.dto.Postagem;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,7 +39,9 @@ public class PostagemDAO extends DAOCRUDBase<Postagem> {
         pstmt.setDate(3, new java.sql.Date(p.getData().getTime()));
         pstmt.executeUpdate();
         
-        p.setId(p.getId(pstmt));
+        p.setId(getId(pstmt));
+        
+        p.setId(getId(pstmt));
     }
 
     @Override

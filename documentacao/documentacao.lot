@@ -5,7 +5,7 @@
 \contentsline {table}{\numberline {3}{\ignorespaces Requisito N\IeC {\~a}o Funcional: O sistema deve ter suporte aos navegadores Google Chrome e Mozilla Firefox.}}{10}{table.3.3}
 \contentsline {table}{\numberline {4}{\ignorespaces Requisito N\IeC {\~a}o Funcional: O sistema deve ter uma boa usabilidade.}}{11}{table.3.4}
 \contentsline {table}{\numberline {5}{\ignorespaces Requisito N\IeC {\~a}o Funcional: O sistema deve fazer a autentica\IeC {\c c}\IeC {\~a}o do usu\IeC {\'a}rio para o cadastro de artigos cient\IeC {\'\i }ficos.}}{11}{table.3.5}
-\contentsline {table}{\numberline {6}{\ignorespaces Requisito N\IeC {\~a}o Funcional: O sistema deve aceitar cadastro de artigos cient\IeC {\'\i }ficos no formato PDF.}}{11}{table.3.6}
+\contentsline {table}{\numberline {6}{\ignorespaces Requisito N\IeC {\~a}o Funcional: O sistema deve aceitar cadastro de artigos cient\IeC {\'\i }ficos um formato espec\IeC {\'\i }fico.}}{11}{table.3.6}
 \contentsline {table}{\numberline {7}{\ignorespaces Requisito N\IeC {\~a}o Funcional: O sistema deve enviar um e-mail confirmando o recebimento do artigo cient\IeC {\'\i }fico.}}{11}{table.3.7}
 \contentsline {table}{\numberline {8}{\ignorespaces Requisito Funcional: O sistema deve oferecer um cadastro de usu\IeC {\'a}rios}}{12}{table.3.8}
 \contentsline {table}{\numberline {9}{\ignorespaces Requisito Funcional: O sistema deve oferecer a op\IeC {\c c}\IeC {\~a}o de login}}{12}{table.3.9}
@@ -24,13 +24,11 @@
 \contentsline {table}{\numberline {22}{\ignorespaces Requisito Funcional: O sistema deve permitir que o usu\IeC {\'a}rio envie solicita\IeC {\c c}\IeC {\~o}es de amizade para outros usu\IeC {\'a}rios da rede social}}{16}{table.3.22}
 \contentsline {table}{\numberline {23}{\ignorespaces Requisito Funcional: O sistema deve permitir que o usu\IeC {\'a}rio envie mensagens}}{16}{table.3.23}
 \contentsline {table}{\numberline {24}{\ignorespaces Requisito Funcional: O sistema deve permitir que o usu\IeC {\'a}rio altere seu status no bate papo}}{16}{table.3.24}
-\contentsline {table}{\numberline {25}{\ignorespaces Requisito Funcional: O sistema deve permitir o cadastro de v\IeC {\'a}rios artigos pelo mesmo usu\IeC {\'a}rio, mas apenas um por vez}}{16}{table.3.25}
-\contentsline {table}{\numberline {26}{\ignorespaces Requisito Funcional: O sistema deve fornecer um arquivo com as normas de cadastro de artigos ciet\IeC {\'\i }ficos}}{17}{table.3.26}
-\contentsline {table}{\numberline {27}{\ignorespaces Requisito Funcional: O sistema deve fornecer um arquivo com as normas de cadastro de artigos ciet\IeC {\'\i }ficos}}{17}{table.3.27}
-\contentsline {table}{\numberline {28}{\ignorespaces Requisito Funcional: O sistema deve conter op\IeC {\c c}\IeC {\~o}es para o usu\IeC {\'a}rio com as normas de envio}}{17}{table.3.28}
-\contentsline {table}{\numberline {29}{\ignorespaces Caso de Uso: Realizar cadastro}}{26}{table.5.29}
-\contentsline {table}{\numberline {30}{\ignorespaces Caso de Uso: Enviar confirma\IeC {\c c}\IeC {\~a}o de cadastro}}{27}{table.5.30}
-\contentsline {table}{\numberline {31}{\ignorespaces Caso de Uso: Confirmar recebimento de confirma\IeC {\c c}\IeC {\~a}o. Ativar conta}}{28}{table.5.31}
-\contentsline {table}{\numberline {32}{\ignorespaces Caso de Uso: Enviar Post}}{29}{table.5.32}
-\contentsline {table}{\numberline {33}{\ignorespaces Caso de Uso: Realizar Login}}{30}{table.5.33}
-\contentsline {table}{\numberline {34}{\ignorespaces Caso de Uso: Realizar comentarios}}{31}{table.5.34}
+\contentsline {table}{\numberline {25}{\ignorespaces Requisito Funcional: O sistema deve fornecer um cadastro de artigos cient\IeC {\'\i }ficos}}{17}{table.3.25}
+\contentsline {table}{\numberline {26}{\ignorespaces Caso de Uso: Realizar cadastro}}{28}{table.5.26}
+\contentsline {table}{\numberline {27}{\ignorespaces Caso de Uso: Enviar confirma\IeC {\c c}\IeC {\~a}o de cadastro}}{29}{table.5.27}
+\contentsline {table}{\numberline {28}{\ignorespaces Caso de Uso: Confirmar recebimento de confirma\IeC {\c c}\IeC {\~a}o. Ativar conta}}{30}{table.5.28}
+\contentsline {table}{\numberline {29}{\ignorespaces Caso de Uso: Enviar Post}}{31}{table.5.29}
+\contentsline {table}{\numberline {30}{\ignorespaces Caso de Uso: Realizar Login}}{32}{table.5.30}
+\contentsline {table}{\numberline {31}{\ignorespaces Caso de Uso: Realizar comentarios}}{33}{table.5.31}
+\contentsline {table}{\numberline {32}{\ignorespaces Caso de Uso: Sair da rede social}}{34}{table.5.32}

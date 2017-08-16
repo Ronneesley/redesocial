@@ -14,10 +14,10 @@ public class CidadeBO extends BOCRUDBase<Cidade, CidadeDAO>{
     protected CidadeDAO instanciarDAO() {
         return new CidadeDAO();
     }
-    
+
     @Override
     protected void validarChavePrimaria(Cidade dto) throws Exception {
-        if (dto.getId() == null) 
+        if (dto.getId() == null)
             throw new Exception("Preencha o campo id.");
     }
 

@@ -21,29 +21,30 @@
 %Fluxo Básico
 {
 \begin{itemize}
-	\item Usuário preenche os campos de nome, sobrenome , e-mail e data de nascimento.	
+	\item Usuário preenche os campos de nome, sobrenome, e-mail e data de nascimento como mostra a Figura  \ref{figura:login}. %login	
 	\item Usuário aceita os termos de uso da rede social.		
 	\item Usuário clica no botão \textit{“Criar conta”}.	
-	\item O sistema exibe a segunda etapa do cadastro.		
-	\item O usuário escolher sua senha de acordo com  os requisitos, como quantidade mínima de caracteres e seus tipos.		
-	\item O usuário anexa informações sobre cidades que mora atualmente.	
-	\item Segunda fase do cadastro é concluída.			
-	\item O sistema envia e-mail para o usuário para confirmação.
+	\item O sistema envia e-mail para o usuário para confirmação como mostra a Figura \ref{figura:2_sesso}.
+	\item Após confirmar o e-mail, o usuário é redirecionado para a segunda etapa do cadastro.		
+	\item O usuário preenche sua senha.
+	\item O usuário anexa informações sobre local de trabalho, instituição de ensino, cidade natal, cidade atual, relacionamento e outras redes sociais como mostra a Figura \ref{figura:Cadastro_2_Passo}.
+	\item Ao clicar no botão \textit{“Salvar e continuar”}, o usuário finaliza a segunda etapa de cadastro.	
+	\item Usuário tem a opção de anexar uma foto para seu perfil usando sua webcam ou upando uma foto para o sistema.% como mostra a Figura \ref{figura:[...]}. %falta a foto do protótipo da 3a etapa
+	\item Ao clicar no botão \textit{“Salvar e continuar”}, o usuário finaliza a terceira etapa de cadastro.
+			
+	
 			
 \end{itemize}
 }
 %Fluxo Alternativo
 {
 \begin{itemize}
-	\item Usuário não preenche o campos de nome, e precisa ser notificado.
-	\item Usuário não preenche o campos de sobrenome, e precisa ser notificado.
-	\item Usuário não preenche o campos de celular e/ou e-mail, e precisa ser notificado.
+	\item Usuário não preenche o campos de nome, sobrenome, celular e/ou e-mail, e precisa ser notificado.
 	\item Usuário não aceita os termos de uso da rede social.
-
-	\begin{itemize}
-		\item Eventuais problemas no servidor podem impedir o envio de dados, sendo preciso notificar o usuário sobre.
-		\item Usuário pode pedir o reenvio do e-mail de confirmação.
-	\end{itemize}
+	\item Eventuais problemas no servidor podem impedir o envio de dados, sendo preciso notificar o usuário sobre.
+	\item Usuário pode pedir o reenvio do e-mail de confirmação.
+	\item Usuário pode não escolher uma foto para seu perfil.
+	
 \end{itemize}
 }
 %Frequência de Ocorrencia
@@ -77,8 +78,7 @@
 {
 \begin{itemize}
 	\item E-mail é enviado com sucesso pelo servidor.
-	\item E-mail é recebido com sucesso pelo usuário.
-	
+	\item E-mail é recebido com sucesso pelo usuário.	
 \end{itemize}
 }
 %Fluxo Alternativo
@@ -117,8 +117,13 @@
 %Fluxo Básico
 {
 \begin{itemize}
-	\item Usuário envia a confirmação.
-	\item Itens opcionais surgem durante a terceira etapa de cadastro para o usuário preencher.		
+	\item Usuário clica no link de confirmação.
+	\item Usuário é redirecionado para continuação do cadastro prosseguindo para a segunda etapa do cadastro.		
+	\item O usuário preenche sua senha.
+	\item O usuário anexa informações sobre local de trabalho, instituição de ensino, cidade natal, cidade atual, relacionamento e outras redes sociais como mostra a Figura \ref{figura:Cadastro_2_Passo}.
+	\item Ao clicar no botão \textit{“Salvar e continuar”}, o usuário finaliza a segunda etapa de cadastro.	
+	\item Usuário tem a opção de anexar uma foto para seu perfil usando sua webcam ou upando uma foto para o sistema.% como mostra a Figura \ref{figura:[...]}. %falta a foto do protótipo da 3a etapa
+	\item Ao clicar no botão \textit{“Salvar e continuar”}, o usuário finaliza a terceira etapa de cadastro. 		
 	\item Conta é liberada para o uso do usuário.		 
 \end{itemize}
 }
@@ -126,13 +131,13 @@
 {
 \begin{itemize}
 	\item A confirmação não está funcionando corretamente ou expirou.
-	\begin{itemize}
-		\item Usuário solicita o reenvio da confirmação.
-	\end{itemize}
+	\item Usuário solicita o reenvio da confirmação.
+	
 	\item Usuário deixa em branco itens opcionais de cadastro.
-	\begin{itemize}
-		\item Sistema informa que usuário não preencheu tais itens opcionais e que eles podem ser posteriormente editados.
-	\end{itemize}
+	\item Usuário pode clicar no botão \textit{“Pular”} ao invés de \textit{“Salvar e continuar”}.
+	
+	\item Sistema informa que usuário não preencheu tais itens opcionais e que eles podem ser posteriormente editados.
+	
 \end{itemize}
 }
 %Frequência de Ocorrencia
@@ -253,18 +258,19 @@
 %Fluxo Básico
 {
 \begin{itemize}
-\item Usuário acessa o site da redesocial.
-\item Usuário Faz Login.
+\item Usuário acessa o site da rede social.
+\item Usuário faz login.
 \item Usuário identifica uma postagem do seu interesse.
-\item O usuário digite e publica seu comentário.
+\item O usuário digita e publica seu comentário.
 \end{itemize}
 }
 %Fluxo Alternativo
 {
 \begin{itemize}
-\item Ocorreu algum erro ao realizar login.
 \item Postagem foi deletada.
-\item Ocorreu algum erro ao publicar o comentário.
+\item Problemas de resposta do servidor.
+\item Exibe uma mensagem informando que a postagem foi deletada.
+\item Volta para a tela anterior.
 \item Problemas com sua conexão com a internet.
 \end{itemize}
 }
@@ -275,5 +281,47 @@
 
 }
 
+%-----------------------------------------------------------
+%-----------------------------------------------------------
+\casoDeUso
+%Identificador
+{UC7}
+%Nome
+{Sair da rede social}
+%Ator Principal
+{Usuário}
+%Interessados
+{
+\begin{itemize}
+	\item Usuário: Deseja sair da rede social.
+\end{itemize}
 
+}
+%Pré-Condições
+{Possuir uma conta válida e estar conectado (logado no sistema)}
+%Pós-condições
+{}
+%Fluxo Básico
+{
+\begin{itemize}
+	\item Usuário acessa o site da rede social.
+	\item Usuário faz login.
+	\item Usuário está conectado a sua conta.
+\end{itemize}
+}
+%Fluxo Alternativo
+{
+\begin{itemize}
+	\item Usuário desconectado.
+	\item Problemas de resposta do servidor.
+	\item Exibe uma mensagem informando que o usuário foi desconectado.
+	\item Volta para a tela inicial do sistema de fazer login.
+	\item Problemas com sua conexão com a internet.
+\end{itemize}
+}
+%Frequência de Ocorrencia
+{Aproximadamente 1 vez ao dia.}
+%Problemas em Aberto
+{
 
+}

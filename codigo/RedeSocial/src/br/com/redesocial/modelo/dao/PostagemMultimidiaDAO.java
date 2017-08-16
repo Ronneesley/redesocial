@@ -1,14 +1,16 @@
 package br.com.redesocial.modelo.dao;
 
+import br.com.redesocial.modelo.dto.Postagem;
 import br.com.redesocial.modelo.dto.PostagemMultimidia;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Classe base para conexão com o banco de dados
- * @author Daniel
+ * @author Daniel, Macilon
  */
 public class PostagemMultimidiaDAO extends DAOBase {
 
@@ -27,6 +29,8 @@ public class PostagemMultimidiaDAO extends DAOBase {
         pstmt.setInt(2, dto.getMultimidia().getId());
         
         pstmt.executeQuery();
+        
+        
     }
 
     public void alterar(PostagemMultimidia dto, PostagemMultimidia dtoNovo) throws Exception {
@@ -69,7 +73,25 @@ public class PostagemMultimidiaDAO extends DAOBase {
     }
 
     public List listar() throws Exception {
-        throw new Exception("Implemente aqui");
+        Connection conexao = getConexao();
+        
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("select * from postagens order by data desc");
+        ResultSet rs;
+        rs = pstmt.executeQuery();
+        
+        PostagemDAO postagemDAO = new PostagemDAO();
+        List lista;
+        lista = new ArrayList();
+                
+        while(rs.next()){
+            PostagemMultimidia pm = new PostagemMultimidia();
+            pm.setPostagem(postagemDAO.selecionar(rs.getInt("postagem")));
+            pm.setMultimidia(postagemDAO.selecionar(rs.getInt("multimidia")));
+            lista.add(pm);
+        }
+        
+        return lista;
     }
 
     public void excluir(int postagem, int multimidia) throws Exception {

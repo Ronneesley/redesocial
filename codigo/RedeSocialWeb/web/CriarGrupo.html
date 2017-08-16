@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Criar Grupo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <style>
+           
+            div#geral {	
+                width: 501px;	
+                height: 400px;	
+                padding: 10px;	
+                margin: 0 auto;
+            }
+            div#topo {	
+                width: 501px;	
+                height: 65px;	
+                background-color: #ffc; /* Amarelo */	
+                border-bottom: 1px solid #f00;
+                
+            }
+            div#coluna_esquerda {	
+                float: left;	
+                width: 250px;	
+                height: 230px;	
+                background-color: #ccc; /* Cinza */
+            }
+            div#coluna_direita {	
+                float: right;	
+                width: 250px;	
+                height: 230px;
+                background-color: #09f; /* Azul */
+            }
+            div#rodape {	
+                width: 501px;	
+                height: 49px;	
+                background-color: #090; /* Verde */	
+                border-top: 1px solid #f00;
+            }
+            
+            #imggrupo {
+                position: absolute;
+                left: 830px;
+                top: 150px;
+                width: 162px;
+                height: 182px;
+                aligner: center;
+                
+            }
+            
+            label, h1 {
+                padding: 10px 2px 8px 10px;
+            }
+            
+            input {
+                padding: 0px 10px 0px 0px;
+                margin: 2px 4px 6px 8px;
+            }
+        
+        </style>
+    </head>
+    
+    <body>
+        <form>
+            <div>
+                
+                <div id="geral">	
+                     <div id="topo"> 
+                         <h1> Criar Grupo</h1>
+                     </div>	
+                     
+                     <div id="coluna_esquerda"> 
+                        <form action="#">
+                            <label>Dê um nome ao grupo:</label>
+                            <input type="text" name="NomeGrupo" value="Carros tunados"><br>
+                            <label>Convide Pessoas:</label>
+                            <input type="text" name="ConvitePessoas" value="Wesley M Félix"><br><br>
+                                <input type="checkbox" name="Termos" value="Bike"> Aceito os termos de uso<br>
+                                <label>Tipo de grupo</label>
+                                <select name="TipoGrupo">
+                                    <option value="volvo">Público</option>
+                                    <option value="saab">Privado</option>
+                                </select>
+                                
+                                <input type="submit" value="Criar Grupo">
+                        </form>
+                     </div>	
+                     
+                     <div id="coluna_direita">
+                         <label> Imagem Grupo</label>
+                         <img id="imggrupo" src="http://www.esoterikha.com/coaching-pnl/img/como-se-preparar-para-uma-dinamica-de-treinamentos-em-empresas.gif" alt="Imagem do Grupo">
+                     </div>	
+                     
+                     
+            </div>
+        </form>    
+    </body>
+</html>
