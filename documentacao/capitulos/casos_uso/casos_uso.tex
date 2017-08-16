@@ -280,3 +280,48 @@
 {
 
 }
+
+%-----------------------------------------------------------
+%-----------------------------------------------------------
+\casoDeUso
+%Identificador
+{UC7}
+%Nome
+{Sair da rede social}
+%Ator Principal
+{Usuário}
+%Interessados
+{
+\begin{itemize}
+	\item Usuário: Deseja sair da rede social.
+\end{itemize}
+
+}
+%Pré-Condições
+{Possuir uma conta válida e estar conectado (logado no sistema)}
+%Pós-condições
+{}
+%Fluxo Básico
+{
+\begin{itemize}
+	\item Usuário acessa o site da rede social.
+	\item Usuário faz login.
+	\item Usuário está conectado a sua conta.
+\end{itemize}
+}
+%Fluxo Alternativo
+{
+\begin{itemize}
+	\item Usuário desconectado.
+	\item Problemas de resposta do servidor.
+	\item Exibe uma mensagem informando que o usuário foi desconectado.
+	\item Volta para a tela inicial do sistema de fazer login.
+	\item Problemas com sua conexão com a internet.
+\end{itemize}
+}
+%Frequência de Ocorrencia
+{Aproximadamente 1 vez ao dia.}
+%Problemas em Aberto
+{
+
+}
