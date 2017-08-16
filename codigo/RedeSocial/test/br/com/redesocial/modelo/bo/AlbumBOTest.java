@@ -41,4 +41,26 @@ public class AlbumBOTest {
             fail("Erro ao listar: " + ex.getMessage());
         }
     }
+    
+    @Test
+    public void testMetodoSelecionar() {
+        AlbumBO bo = new AlbumBO();
+
+        Album album = new Album();
+        album.setId(1);
+
+        try {
+            bo.inserir(album);
+
+            int id = album.getId();
+
+            Album albumSelecionado = bo.selecionar(id);
+
+            assertNotNull("Album não encontrado", albumSelecionado);
+        } catch (Exception ex) {
+            fail("Falha ao inserir um Album: " + ex.getMessage());
+        }
+    }
+
+
 }
