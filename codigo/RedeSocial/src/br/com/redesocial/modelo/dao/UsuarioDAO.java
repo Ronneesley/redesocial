@@ -97,7 +97,17 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
        
         pstmt.executeUpdate();
     }
+    public void alterarSenha (Usuario  u) throws Exception {
+        Connection conexao = getConexao();
 
+        PreparedStatement  pstmt; 
+        pstmt = conexao.prepareStatement("update usuario set senha = ? where id = ?");
+       
+        pstmt.setString(1, u.getSenha()); 
+        pstmt.setInt(2, u.getId());
+       
+        pstmt.executeUpdate();
+    }
     @Override
      public List listar() throws Exception {
         Connection conexao = getConexao();

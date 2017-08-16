@@ -8,10 +8,43 @@ import static org.junit.Assert.*;
 /**
  * Unidade de testes para o AlbumBO
  * @author Ronneesley Moura Teles
- * @since 09/08/2017
+ * @since 16/08/2017
  */
 public class AlbumBOTest {
     @Test
+    public void testMetodoInserir() {
+        AlbumBO bo = new AlbumBO();              		
+
+        Album album = new Album();
+		
+		album.setNome("Album Viagem");
+		
+		try {
+			bo.inserir(album1);
+		} catch (Exception ex) {
+			fail("Falha ao inserir um album: " + ex.getMessage());
+		}
+		
+		album.setData("2017-01-01");
+		
+		try {
+			bo.inserir(album1);
+		} catch (Exception ex) {
+			fail("Falha ao inserir a data no album: " + ex.getMessage());
+		}
+		
+		album.setUsuario("Tom");
+		
+		try {
+			bo.inserir(album1);
+		} catch (Exception ex) {
+			fail("Falha ao inserir o usuário: " + ex.getMessage());
+		}
+		
+		
+	
+	@Test
+	
     public void testMetodoListar() {
         AlbumBO bo = new AlbumBO();
 
@@ -61,6 +94,5 @@ public class AlbumBOTest {
             fail("Falha ao inserir um Album: " + ex.getMessage());
         }
     }
-
 
 }

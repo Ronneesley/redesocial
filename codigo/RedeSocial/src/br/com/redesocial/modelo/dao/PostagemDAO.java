@@ -40,6 +40,8 @@ public class PostagemDAO extends DAOCRUDBase<Postagem> {
         pstmt.executeUpdate();
         
         p.setId(getId(pstmt));
+        
+        p.setId(getId(pstmt));
     }
 
     @Override

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.8.12)  16 AUG 2017 11:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.8.12)  16 AUG 2017 13:06
 entering extended mode
 **./documentacao.tex
 (documentacao.tex
@@ -1664,7 +1664,7 @@ LaTeX Warning: Text page 11 contains only floats.
 LaTeX Warning: Text page 12 contains only floats.
 
 [12] [13] [14] [15] [16] [17]
-<../prototipos/resultados/login.png, id=234, 867.24pt x 480.79625pt>
+<../prototipos/resultados/login.png, id=236, 867.24pt x 480.79625pt>
 File: ../prototipos/resultados/login.png Graphic file (type png)
 
 <use ../prototipos/resultados/login.png>
@@ -1672,7 +1672,7 @@ Package pdftex.def Info: ../prototipos/resultados/login.png used on input line
 3.
 (pdftex.def)             Requested size: 426.79134pt x 236.61197pt.
 
-<../prototipos/resultados/2_sesso.png, id=236, 1811.76875pt x 879.285pt>
+<../prototipos/resultados/2_sesso.png, id=238, 1811.76875pt x 879.285pt>
 File: ../prototipos/resultados/2_sesso.png Graphic file (type png)
 
 <use ../prototipos/resultados/2_sesso.png>
@@ -1685,7 +1685,7 @@ Overfull \hbox (170.7165pt too wide) in paragraph at lines 5--5
  []
 
 
-<../prototipos/resultados/Cadastro_2_Passo.png, id=237, 1043.9pt x 565.11125pt>
+<../prototipos/resultados/Cadastro_2_Passo.png, id=239, 1043.9pt x 565.11125pt>
 File: ../prototipos/resultados/Cadastro_2_Passo.png Graphic file (type png)
 <use ../prototipos/resultados/Cadastro_2_Passo.png>
 Package pdftex.def Info: ../prototipos/resultados/Cadastro_2_Passo.png used on 
@@ -1696,7 +1696,7 @@ Overfull \hbox (170.7165pt too wide) in paragraph at lines 7--7
  [][] 
  []
 
-<../prototipos/resultados/perfil.png, id=238, 1208.515pt x 1940.24875pt>
+<../prototipos/resultados/perfil.png, id=240, 1208.515pt x 1940.24875pt>
 File: ../prototipos/resultados/perfil.png Graphic file (type png)
 
 <use ../prototipos/resultados/perfil.png>
@@ -1707,7 +1707,7 @@ Package pdftex.def Info: ../prototipos/resultados/perfil.png used on input line
 
 LaTeX Warning: Float too large for page by 4.99626pt on input line 9.
 
-<../prototipos/resultados/postagem.png, id=239, 687.56876pt x 395.4775pt>
+<../prototipos/resultados/postagem.png, id=241, 687.56876pt x 395.4775pt>
 File: ../prototipos/resultados/postagem.png Graphic file (type png)
 
 <use ../prototipos/resultados/postagem.png>
@@ -1715,7 +1715,7 @@ Package pdftex.def Info: ../prototipos/resultados/postagem.png used on input li
 ne 11.
 (pdftex.def)             Requested size: 426.79134pt x 245.48317pt.
 
-<../prototipos/resultados/meus_posts.png, id=240, 1255.69125pt x 565.11125pt>
+<../prototipos/resultados/meus_posts.png, id=242, 1255.69125pt x 565.11125pt>
 File: ../prototipos/resultados/meus_posts.png Graphic file (type png)
 
 <use ../prototipos/resultados/meus_posts.png>
@@ -1727,7 +1727,7 @@ Overfull \hbox (85.35825pt too wide) in paragraph at lines 13--13
  [][] 
  []
 
-<../prototipos/resultados/mensagens.png, id=241, 302.12875pt x 347.2975pt>
+<../prototipos/resultados/mensagens.png, id=243, 302.12875pt x 347.2975pt>
 File: ../prototipos/resultados/mensagens.png Graphic file (type png)
 
 <use ../prototipos/resultados/mensagens.png>
@@ -1735,7 +1735,7 @@ Package pdftex.def Info: ../prototipos/resultados/mensagens.png used on input l
 ine 15.
 (pdftex.def)             Requested size: 284.52756pt x 327.06381pt.
 
-<../prototipos/resultados/prototipo_recuperacao_senha.png, id=242, 339.2675pt x
+<../prototipos/resultados/prototipo_recuperacao_senha.png, id=244, 339.2675pt x
  200.75pt>
 File: ../prototipos/resultados/prototipo_recuperacao_senha.png Graphic file (ty
 pe png)
@@ -1744,7 +1744,7 @@ Package pdftex.def Info: ../prototipos/resultados/prototipo_recuperacao_senha.p
 ng used on input line 17.
 (pdftex.def)             Requested size: 426.79134pt x 252.55116pt.
 
-<../prototipos/resultados/galeria_fotos.png, id=243, 1255.69125pt x 565.11125pt
+<../prototipos/resultados/galeria_fotos.png, id=245, 1255.69125pt x 565.11125pt
 >
 File: ../prototipos/resultados/galeria_fotos.png Graphic file (type png)
  <use ../prototipos/resultados/galeria_fotos.png>
@@ -1757,7 +1757,7 @@ Overfull \hbox (85.35825pt too wide) in paragraph at lines 19--19
  []
 
 
-<../prototipos/resultados/solicitacao_amizade.png, id=244, 229.85875pt x 41.153
+<../prototipos/resultados/solicitacao_amizade.png, id=246, 229.85875pt x 41.153
 75pt>
 File: ../prototipos/resultados/solicitacao_amizade.png Graphic file (type png)
  <use ../prototipos/resultados/solicitacao_amizade.png>
@@ -1765,7 +1765,7 @@ Package pdftex.def Info: ../prototipos/resultados/solicitacao_amizade.png used
 on input line 21.
 (pdftex.def)             Requested size: 284.52756pt x 50.9447pt.
 
-<../prototipos/resultados/entrar_grupo.png, id=245, 545.03625pt x 276.03125pt>
+<../prototipos/resultados/entrar_grupo.png, id=247, 545.03625pt x 276.03125pt>
 File: ../prototipos/resultados/entrar_grupo.png Graphic file (type png)
 
 <use ../prototipos/resultados/entrar_grupo.png>
@@ -1773,7 +1773,7 @@ Package pdftex.def Info: ../prototipos/resultados/entrar_grupo.png used on inpu
 t line 23.
 (pdftex.def)             Requested size: 426.79134pt x 216.14587pt.
 
-<../prototipos/resultados/criar_grupo.png, id=246, 725.71124pt x 395.4775pt>
+<../prototipos/resultados/criar_grupo.png, id=248, 725.71124pt x 395.4775pt>
 File: ../prototipos/resultados/criar_grupo.png Graphic file (type png)
 
 <use ../prototipos/resultados/criar_grupo.png>
@@ -1781,7 +1781,7 @@ Package pdftex.def Info: ../prototipos/resultados/criar_grupo.png used on input
  line 25.
 (pdftex.def)             Requested size: 426.79134pt x 232.58745pt.
 
-<../prototipos/resultados/denunciar_grupo.png, id=247, 546.04pt x 317.185pt>
+<../prototipos/resultados/denunciar_grupo.png, id=249, 546.04pt x 317.185pt>
 File: ../prototipos/resultados/denunciar_grupo.png Graphic file (type png)
 
 <use ../prototipos/resultados/denunciar_grupo.png>
@@ -1789,7 +1789,7 @@ Package pdftex.def Info: ../prototipos/resultados/denunciar_grupo.png used on i
 nput line 27.
 (pdftex.def)             Requested size: 426.79134pt x 247.9163pt.
 
-<../prototipos/resultados/opcoes_grupo.png, id=248, 545.03625pt x 301.125pt>
+<../prototipos/resultados/opcoes_grupo.png, id=250, 545.03625pt x 301.125pt>
 File: ../prototipos/resultados/opcoes_grupo.png Graphic file (type png)
 
 <use ../prototipos/resultados/opcoes_grupo.png>
@@ -1797,7 +1797,7 @@ Package pdftex.def Info: ../prototipos/resultados/opcoes_grupo.png used on inpu
 t line 29.
 (pdftex.def)             Requested size: 426.79134pt x 235.7955pt.
 
-<../prototipos/resultados/cadastro_artigos.png, id=249, 550.30594pt x 472.76625
+<../prototipos/resultados/cadastro_artigos.png, id=251, 550.30594pt x 472.76625
 pt>
 File: ../prototipos/resultados/cadastro_artigos.png Graphic file (type png)
  <use ../prototipos/resultados/cadastro_artigos.png>
@@ -1805,7 +1805,7 @@ Package pdftex.def Info: ../prototipos/resultados/cadastro_artigos.png used on
 input line 31.
 (pdftex.def)             Requested size: 426.79134pt x 366.66418pt.
 
-<../prototipos/resultados/sair_grupo.png, id=250, 545.03625pt x 162.6075pt>
+<../prototipos/resultados/sair_grupo.png, id=252, 545.03625pt x 162.6075pt>
 File: ../prototipos/resultados/sair_grupo.png Graphic file (type png)
 
 <use ../prototipos/resultados/sair_grupo.png>
@@ -1813,7 +1813,7 @@ Package pdftex.def Info: ../prototipos/resultados/sair_grupo.png used on input
 line 33.
 (pdftex.def)             Requested size: 426.79134pt x 127.32957pt.
 
-<../prototipos/resultados/painel_admin.png, id=251, 825.0825pt x 565.11125pt>
+<../prototipos/resultados/painel_admin.png, id=253, 825.0825pt x 565.11125pt>
 File: ../prototipos/resultados/painel_admin.png Graphic file (type png)
 
 <use ../prototipos/resultados/painel_admin.png>
@@ -1900,10 +1900,18 @@ Overfull \hbox (12.79996pt too wide) in paragraph at lines 278--278
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 323--323
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 ) (capitulos/projeto/projeto.tex [27
 
-] [28] [29] [30] [31] [32] [33]
-<../banco_de_dados/redesocial.png, id=342, 859.21pt x 1000.73875pt>
+] [28] [29] [30] [31] [32] [33] [34]
+<../banco_de_dados/redesocial.png, id=348, 859.21pt x 1000.73875pt>
 File: ../banco_de_dados/redesocial.png Graphic file (type png)
 
 <use ../banco_de_dados/redesocial.png>
@@ -1912,9 +1920,9 @@ Package pdftex.def Info: ../banco_de_dados/redesocial.png used on input line 7.
 (pdftex.def)             Requested size: 426.79134pt x 497.10037pt.
 ) 
 AED: lastpage setting LastPage
-[34
+[35
 
- <../banco_de_dados/redesocial.png>] [35]
+ <../banco_de_dados/redesocial.png>] [36]
 \tf@lof=\write5
 \openout5 = `documentacao.lof'.
 
@@ -1936,10 +1944,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 45.
  ) 
 Here is how much of TeX's memory you used:
- 14953 strings out of 493335
- 222945 string characters out of 3136651
- 477760 words of memory out of 3000000
- 18027 multiletter control sequences out of 15000+200000
+ 14956 strings out of 493335
+ 222974 string characters out of 3136651
+ 477855 words of memory out of 3000000
+ 18028 multiletter control sequences out of 15000+200000
  18013 words of font info for 82 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,12n,45p,758b,475s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1948,9 +1956,9 @@ Here is how much of TeX's memory you used:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/
 Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on documentacao.pdf (36 pages, 1234782 bytes).
+Output written on documentacao.pdf (37 pages, 1237174 bytes).
 PDF statistics:
- 463 PDF objects out of 1000 (max. 8388607)
- 110 named destinations out of 1000 (max. 500000)
+ 472 PDF objects out of 1000 (max. 8388607)
+ 112 named destinations out of 1000 (max. 500000)
  12051 words of extra memory for PDF output out of 14400 (max. 10000000)
 

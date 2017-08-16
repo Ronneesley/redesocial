@@ -62,6 +62,8 @@ public class EstadoDAO extends DAOCRUDBase<Estado> {
         pstmt.setInt(2, dto.getPais().getId());
 
         pstmt.executeUpdate();
+        
+        dto.setId(getId(pstmt));
     }
 
     @Override
