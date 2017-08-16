@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.5.2)  16 AUG 2017 10:48
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.8.12)  16 AUG 2017 10:41
+>>>>>>> e2518847bc81e2ac0a4993d17e840592f4aa6f53
 entering extended mode
 **./documentacao.tex
 (documentacao.tex
@@ -1818,26 +1822,21 @@ otipos/resultados/entrar_grupo.png>]
 iar_grupo.png>] [25 <../prototipos/resultados/opcoes_grupo.png> <../prototipos/
 resultados/cadastro_artigos.png>] [26 <../prototipos/resultados/sair_grupo.png>
  <../prototipos/resultados/painel_admin.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmss on input line 46.
+LaTeX Font Info:    Try loading font information for OMS+cmss on input line 51.
 
-LaTeX Font Info:    No file OMScmss.fd. on input line 46.
+LaTeX Font Info:    No file OMScmss.fd. on input line 51.
 
 
 LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbullet' on input line 46.
+(Font)              for symbol `textbullet' on input line 51.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <12> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 46.
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 51.
 
 
-Overfull \hbox (12.79996pt too wide) in paragraph at lines 46--46
-[][] 
- []
-
-
-Overfull \hbox (12.79996pt too wide) in paragraph at lines 86--86
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 51--51
 [][] 
  []
 
@@ -1845,12 +1844,20 @@ Overfull \hbox (12.79996pt too wide) in paragraph at lines 86--86
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 4024) in paragraph at lines 139--139
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 91--91
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 4024) in paragraph at lines 144--144
 []|\OT1/cmss/m/n/12 (+20) Confirmar re-ce-bi-mento de
  []
 
 
-Overfull \hbox (12.79996pt too wide) in paragraph at lines 139--139
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 144--144
 [][] 
  []
 
@@ -1858,7 +1865,7 @@ Overfull \hbox (12.79996pt too wide) in paragraph at lines 139--139
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (12.79996pt too wide) in paragraph at lines 180--180
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 185--185
 [][] 
  []
 
@@ -1866,7 +1873,7 @@ Overfull \hbox (12.79996pt too wide) in paragraph at lines 180--180
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (12.79996pt too wide) in paragraph at lines 227--227
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 232--232
 [][] 
  []
 
@@ -1874,7 +1881,7 @@ Overfull \hbox (12.79996pt too wide) in paragraph at lines 227--227
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (12.79996pt too wide) in paragraph at lines 273--273
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 278--278
 [][] 
  []
 
@@ -1883,8 +1890,8 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ) (capitulos/projeto/projeto.tex [27
 
-] [28] [29] [30] [31] [32]
-<../banco_de_dados/redesocial.png, id=336, 859.21pt x 1000.73875pt>
+] [28] [29] [30] [31] [32] [33]
+<../banco_de_dados/redesocial.png, id=341, 859.21pt x 1000.73875pt>
 File: ../banco_de_dados/redesocial.png Graphic file (type png)
 
 <use ../banco_de_dados/redesocial.png>
@@ -1893,9 +1900,9 @@ Package pdftex.def Info: ../banco_de_dados/redesocial.png used on input line 7.
 (pdftex.def)             Requested size: 426.79134pt x 497.10037pt.
 ) 
 AED: lastpage setting LastPage
-[33
+[34
 
- <../banco_de_dados/redesocial.png>] [34]
+ <../banco_de_dados/redesocial.png>] [35]
 \tf@lof=\write5
 \openout5 = `documentacao.lof'.
 
@@ -1917,13 +1924,21 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 45.
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  14741 strings out of 493634
  223358 string characters out of 3131976
  473441 words of memory out of 3000000
  17682 multiletter control sequences out of 15000+200000
+=======
+ 14953 strings out of 493335
+ 222948 string characters out of 3136651
+ 477695 words of memory out of 3000000
+ 18027 multiletter control sequences out of 15000+200000
+>>>>>>> e2518847bc81e2ac0a4993d17e840592f4aa6f53
  18013 words of font info for 82 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  45i,12n,45p,758b,475s stack positions out of 5000i,500n,10000p,200000b,50000s
+<<<<<<< HEAD
 <C:/Users/IgorRodrigues/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
 amsfonts/cm/cmss12.pfb><C:/Users/IgorRodrigues/AppData/Local/Programs/MiKTeX 2.
 9/fonts/type1/public/amsfonts/cm/cmss9.pfb><C:/Users/IgorRodrigues/AppData/Loca
@@ -1932,8 +1947,16 @@ rRodrigues/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
 si12.pfb><C:/Users/IgorRodrigues/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
 public/amsfonts/cm/cmsy10.pfb>
 Output written on documentacao.pdf (35 pages, 1201646 bytes).
+=======
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss9.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/
+Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on documentacao.pdf (36 pages, 1233855 bytes).
+>>>>>>> e2518847bc81e2ac0a4993d17e840592f4aa6f53
 PDF statistics:
- 457 PDF objects out of 1000 (max. 8388607)
- 109 named destinations out of 1000 (max. 500000)
+ 462 PDF objects out of 1000 (max. 8388607)
+ 110 named destinations out of 1000 (max. 500000)
  12051 words of extra memory for PDF output out of 14400 (max. 10000000)
 
