@@ -8,9 +8,11 @@ import br.com.redesocial.modelo.dto.Postagem;
  * @author aluno
  */
 public class PostagemBO extends BOCRUDBase<Postagem, PostagemDAO> {
+     @Override
      protected PostagemDAO instanciarDAO() {
         return new PostagemDAO();
     }
+     @Override
     protected void validar(Postagem dto) throws Exception {
         //Validações
         if (dto.getCurtidas() == null) throw new Exception("Preencha o campo Curtidas");
@@ -19,6 +21,7 @@ public class PostagemBO extends BOCRUDBase<Postagem, PostagemDAO> {
         if (dto.getUsuario()== null) throw new Exception("Preencha o campo usuário");
     }
 
+     @Override
     protected void validarChavePrimaria(Postagem dto) throws Exception {
         if (dto.getId() == null) throw new Exception("Preencha o campo id");
     }
