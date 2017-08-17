@@ -4,6 +4,7 @@ import br.com.redesocial.modelo.dto.Cidade;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.List;
 
 /**
@@ -26,7 +27,7 @@ public class CidadeDAO extends DAOCRUDBase<Cidade> {
         }
         
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("insert into cidades(nome, estado) values(?, ?)");
+        pstmt = conexao.prepareStatement("insert into cidades(nome, estado) values(?, ?)", Statement.RETURN_GENERATED_KEYS);
         
         pstmt.setString(1, dto.getNome());
         pstmt.setInt(2, dto.getEstado().getId());

@@ -4,6 +4,7 @@ import java.sql.ResultSet;
 import br.com.redesocial.modelo.dto.Multimidia;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,7 +23,7 @@ public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
         }
                 
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("insert into multimidias(midia, tipo_conteudo, data, album) values(?, ?, ?, ?)");
+        pstmt = conexao.prepareStatement("insert into multimidias(midia, tipo_conteudo, data, album) values(?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
 
         pstmt.setBytes (1, m.getMidia());
         pstmt.setString (2, m.getTipoConteudo());

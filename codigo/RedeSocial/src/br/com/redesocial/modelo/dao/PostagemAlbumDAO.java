@@ -5,17 +5,19 @@
  */
 package br.com.redesocial.modelo.dao;
 
+import br.com.redesocial.modelo.dto.Postagem;
+import br.com.redesocial.modelo.dto.PostagemAlbum;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.List;
 
 /**
  *
  * @author Wesley Morais
  */
-public class PostagemAlbumDAO extends DAOCRUDBase {
+public class PostagemAlbumDAO extends DAOBase {
     
-    @Override
     public void excluir(int id) throws Exception {
         Connection conexao = getConexao();
         
@@ -26,24 +28,51 @@ public class PostagemAlbumDAO extends DAOCRUDBase {
         pstmt.executeUpdate();
     }
 
-    @Override
     public void inserir(Object dto) throws Exception {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public void alterar(Object dto) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void alterar(PostagemAlbum dto, PostagemAlbum dtoNovo) throws Exception{
+        Connection conexao = getConexao();
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("update postagens_albuns set postagem = ?, album = ? where postagem = ? and album = ?");
+        
+        pstmt.setInt(1, dtoNovo.getPostagem().getId());
+        pstmt.setInt(2, dtoNovo.getAlbum().getId());
+        pstmt.setInt(3, dto.getPostagem().getId());
+        pstmt.setInt(4, dto.getAlbum().getId());
+        
+        pstmt.executeQuery();
+        
     }
 
-    @Override
-    public Object selecionar(int id) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Postagem selecionar(int id) throws Exception{
+       Connection conexao = getConexao();
+        
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("select * from postagens_albuns where id = ?");
+        
+        pstmt.setInt(1, id);
+        
+        ResultSet rs = pstmt.executeQuery();
+        
+        if(rs.next()){
+            Postagem p = new Postagem();
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            
+            p.setId(rs.getInt("id"));
+            p.setCurtidas(rs.getInt("curtidas"));
+            p.setDescricao(rs.getString("descricao"));
+            p.setData(rs.getDate("data"));
+            
+            p.setUsuario(usuarioDAO.selecionar(rs.getInt("usuario")));
+            
+            return p;
+        } else {
+            return null;
+        } 
     }
 
-    @Override
-    public List listar() throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
+
+
 }

@@ -6,6 +6,8 @@ import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
+import java.sql.Types;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,7 +26,7 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
     public void inserir(Usuario dto) throws Exception {
         Connection conexao = getConexao();
         
-        PreparedStatement pstmt = conexao.prepareStatement("insert into usuarios(nome, email, telefone, senha, nascimento, sexo, data_cadastro, status, foto, cidade) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        PreparedStatement pstmt = conexao.prepareStatement("insert into usuarios(nome, email, telefone, senha, nascimento, sexo, data_cadastro, status, foto, cidade) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
         
         pstmt.setString(1, dto.getNome());
         pstmt.setString(2, dto.getEmail());
@@ -34,7 +36,14 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
         pstmt.setString(6, String.valueOf(dto.getSexo().getId()));
         pstmt.setDate(7, new java.sql.Date(dto.getDataCadastro().getTime()));
         pstmt.setBoolean(8, dto.getStatus());
-        pstmt.setInt(9, dto.getFoto().getId());
+        
+        if (dto.getFoto() != null){
+            pstmt.setInt(9, dto.getFoto().getId());
+        } else {
+            pstmt.setNull(9, Types.BLOB);
+        }
+        
+        
         pstmt.setInt(10, dto.getCidade().getId()); 
        
         

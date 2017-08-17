@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
  * @since 16/08/2017
  */
 public class AlbumBOTest {
-    @Test
+    /*@Test
     public void testMetodoInserir() {
         AlbumBO bo = new AlbumBO();              		
 
@@ -41,7 +41,7 @@ public class AlbumBOTest {
 			fail("Falha ao inserir o usuário: " + ex.getMessage());
 		}
 		
-		
+		*/
 	
 	@Test
 	

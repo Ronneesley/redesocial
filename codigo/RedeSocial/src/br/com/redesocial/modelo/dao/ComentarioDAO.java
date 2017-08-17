@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -113,7 +114,7 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
             throw new Exception("O comentário não pode estar vazio!");
         }
         
-        PreparedStatement pstmt = conexao.prepareStatement("insert into comentarios(descricao, curtidas, data, postagem, resposta) values(?, ?, ?, ?, ?)");
+        PreparedStatement pstmt = conexao.prepareStatement("insert into comentarios(descricao, curtidas, data, postagem, resposta) values(?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
 
         pstmt.setString(1, c.getDescricao());
         pstmt.setInt(2, c.getCurtidas());

@@ -48,12 +48,14 @@ public class UsuarioControle extends HttpServlet {
      * @throws Exception 
      */
     private void cadastrar(HttpServletRequest request, HttpServletResponse response) throws Exception{
+        Usuario usuario = new Usuario();
+        usuario.setNome(request.getParameter("nome"));
+        usuario.setEmail(request.getParameter("email"));
+        usuario.setSenha(request.getParameter("senha"));
+        
+        request.setAttribute("usuario", usuario);
+        
         try {
-            Usuario usuario = new Usuario();
-            usuario.setNome(request.getParameter("nome"));
-            usuario.setEmail(request.getParameter("email"));
-            usuario.setSenha(request.getParameter("senha"));
-
             UsuarioBO usuarioBO = new UsuarioBO();
             usuarioBO.inserir(usuario);
 
