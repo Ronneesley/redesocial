@@ -1,25 +1,197 @@
-﻿<!DOCTYPE hmtl>
-
+﻿<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8"/>
-		<title> Post de Fotos </title>
-	</head>
-	
-	<body>
-		<div style="background-color: #efefef; width: 580px; border: 1px; background-color: #eee; padding: 10px; border: 1px solid black; border-radius: 10px; margin-bottom: 10px;">	
-		
-			<div style="background-color: #efefef; height: 100px; width: 100px; float: left;">
-				<img src="usuario.jpg" width="100px" height="100px;" style="border-radius: 50%;" />
-			</div>
+    <head>
+        <title>POST DE FOTOS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            #timeline {
+		width: 580px;
+            }
+            .post {
+		background-color: #eee;
+		padding: 10px;
+		border: 1px solid #666;
+		border-radius: 3px;
+		margin-bottom: 10px;
+                float: left;
+            }
+            #container-post{
+                width: 100%;
+                height: auto;
+                float: left;
+            }
+            #container-post #avatar{
+                width: 20%;
+                height: 100px;
+                float: left;
+            }
+            #container-post #info{
+                width: 70%;
+                height: auto;
+                float: left;
+                margin-top: 35px;
+            }
+            #reacao {
+                width: 100%;
+                height: 25px;
+                float: left;
+                border: 1px solid black;
+                border-radius: 10px;
+                margin-bottom: 10px;
+                margin-top: 5px;				
+            }
+            #botao {
+		float: left;
+		padding : 5px;
+            }
+            #comentario {				
+		float: left;				
+		margin-top: 5px;
+            }
+            #comentario_info{
+		margin-top: 5px;
+                height: auto;
+                float: left;
+		font-family: verdana;
+		font-size: 12px;                
+            }
+            #comentario_tempo{
+		margin-left: 3px;
+		margin-top: 7px;
+		width: 60%;
+                height: auto;
+                float: left;
+		font-family: verdana;
+		font-size: 10px;                
+            }
+            #caixa_comentario{
+		width: 85%;
+                height: auto;
+                background-color: #eee;
+		padding: 5px;
+		border: 1px solid #666;
+		border-radius: 3px;
+		margin-top: 5px;
+		float: left;
+            }
+            #comentario_do_comentario {				
+		float: left;				
+		margin-top: 10px;
+            }		
+            #comentario_do_comentario_info{
+		margin-top: 5px;
+                height: auto;
+                float: left;
+		font-family: verdana;
+		font-size: 12px;                
+            }		
+            #comentario_do_comentario_tempo{
+		margin-left: 3px;
+		margin-top: 7px;
+		width: 50%;
+                height: auto;
+                float: left;
+		font-family: verdana;
+		font-size: 10px;                
+            }		
+            #caixa_comentario_do_comentario{
+		width: 74.25%;
+		background-color: #eee;
+		padding: 5px;
+		border: 1px solid #666;
+		border-radius: 3px;
+		margin-top: 5px;
+		float: left;
+            }
+            #compartilhar{
+                width: 100%;
+                height: auto;
+                float: left;
+                border: 1px black;
+                border-radius: 10px;
+                margin-bottom: 10px;
+                margin-top: 5px;
+                text-align: center;
+            }
+            #comentar{
+                width: 80%;
+		padding: 5px;
+		border: 1px solid #666;
+		border-radius: 3px;
+		margin-top: 5px;
+		float: left;
+                color: #666;
+            }
+            #botao-comentar{
+                width: 10%;
+		padding: 5px;
+		border: 1px #666;
+		border-radius: 3px;
+		margin-top: 5px;
+		float: left;
+            }
+			#foto{
+			margin-left: 25px;
+			}
 			
-			<div style="background-color: #efefef; height: 100px; width: 480px; float: left;">
-				<p> NOME<br /> HORÁRIO/LOCALIZAÇÃO <br />PATROCINADO? </p>	
-
-				<div style="text-align: right; margin-top: -100px;"> 
-					<p> ... <br /> OPÇÃO DE EDITAR </p>
-				</div>
+	</style>
+    </head>
+    <body>
+        <div id="timeline">
+            <div class="post">
+                <div id="container-post">    
+                    <div id="avatar">
+                        <img src="usuario.jpg" width="100px" height="100px;" style="border-radius: 50%;" />
+                    </div>
+                    <div id="info">
+                        (NOME)<br />
+                        (HOR&Aacute;RIO/LOCALIZA&Ccedil;&Atilde;O) <br />
+                        (PATROCINADO?)
+						<div style="text-align: right; margin-top: -120px; margin-right: -60px"> 
+						<p> ... <br /> OPÇÃO DE EDITAR </p>
+						</div>
+                    </div>
+                </div>
+                <div id="container-post">
+                    <p> POST COM A FOTO ABAIXO!</p>
+					
+                    <img id="foto" src="imagens/icones2.jpg" width="500" height="400" />
+					
+                </div>
+                
+                <div id="reacao"> 
+                    <input name="up" type="image" id="botao" src="imagem/up.png" id="imagem" width="15px" height="15px;" alt="icone up" > <!-- Imagem como botão-->
+                    ... OPÇÃO DE DAR LIKE E O NOME DAS PESSOAS <b> UP </b>
+		</div>
+                
+                <input id="comentar" type="text"  value="Comente aqui...">
+                <div id="botao-comentar">
+                    <input type="button" value="Comentar"/>
+                </div>
+                <div id="comentario"> 
+                    <img  src="usuario.jpg" width="60px" height="60x;" style="border-radius: 40%;" />							
+		</div>
+                
+                <div id="comentario_info">
+                    Ianka 
+		</div>
+                
+		<div id="comentario_tempo">
+                    5min
+		</div>	
+                <div id="caixa_comentario">
+                    <p> Very nice! </p>
+                </div>		
 				
+<<<<<<< HEAD
+		<div id="comentario"> 
+                    <img  src="usuario.jpg" width="60px" height="60x;" style="border-radius: 45%;" />							
+		</div>
+                
+                <div id="comentario_do_comentario_info">
+                    Macilon 
+=======
 			</div>
 		
 			
@@ -51,8 +223,20 @@
 				<p> COMPARTILHAR </p>
 			</div>
 			
+>>>>>>> 15e74a20e18d62e48789b0d3a44982f4ee434bce
 		</div>
-		
-	</body>
-
+                    
+		<div id="comentario_do_comentario_tempo">
+                    3min
+		</div>	
+		<div id="caixa_comentario_do_comentario">
+                    <p> Thank you! </p>
+                </div>
+                <div id="compartilhar">
+                    <input type="button" value="Compartihar"/>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
+

@@ -46,7 +46,7 @@ public class PostagemAlbumDAO extends DAOBase {
         
     }
 
-    public Postagem listar(int id) throws Exception{
+    public Postagem selecionar(int id) throws Exception{
        Connection conexao = getConexao();
         
         PreparedStatement pstmt;

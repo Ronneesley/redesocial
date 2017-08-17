@@ -24,8 +24,29 @@ public class ComentarioBOTest {
     }
     
     public void testMetodoSelecionar(){
-        //INSIRA O testMetodoSelecionar AQUI
+
+        //instancia regras de negocio
+        ComentarioBO bo = new ComentarioBO();
+
+        //Instancia Comentario
+        Comentario comentario = new Comentario();
+        //seta um id para o comentario
+        comentario.setId(1);
+        
+        //tenta inserir e apos seleciona
+         try{
+            bo.inserir(comentario);
+            int id = comentario.getId();
+
+            Comentario comentarioSelecionado = bo.selecionar(id);
+
+            assertNotNull("Comentario nao encontrado", comentarioSelecionado);
+        } catch (Exception ex){
+            fail("Falha ao inserir o comentario: " + ex.getMessage());
+        }
+
     }
+    
     
     public void testMetodoListar() {
         ComentarioBO bo = new ComentarioBO();
