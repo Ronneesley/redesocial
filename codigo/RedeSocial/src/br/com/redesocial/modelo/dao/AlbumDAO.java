@@ -4,6 +4,7 @@ import br.com.redesocial.modelo.dto.Album;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -69,7 +70,7 @@ public class AlbumDAO extends DAOCRUDBase<Album> {
         
         Connection conexao = getConexao();
         
-        PreparedStatement pstmt = conexao.prepareStatement("insert into albuns  (nome, data, usuario) values (?, ?, ?)");
+        PreparedStatement pstmt = conexao.prepareStatement("insert into albuns  (nome, data, usuario) values (?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
         
         pstmt.setString(1, dto.getNome());
         pstmt.setDate(2, new java.sql.Date(dto.getData().getTime()));

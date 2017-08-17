@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.List;
 
 /**
@@ -56,7 +57,7 @@ public class EstadoDAO extends DAOCRUDBase<Estado> {
     public void inserir(Estado dto) throws Exception {
         Connection conexao = getConexao();
 
-        PreparedStatement pstmt = conexao.prepareStatement("insert into estados(nome, pais) values(?, ?)");
+        PreparedStatement pstmt = conexao.prepareStatement("insert into estados(nome, pais) values(?, ?)", Statement.RETURN_GENERATED_KEYS);
 
         pstmt.setString(1, dto.getNome());
         pstmt.setInt(2, dto.getPais().getId());
