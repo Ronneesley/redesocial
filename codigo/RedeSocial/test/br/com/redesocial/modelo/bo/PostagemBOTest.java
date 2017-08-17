@@ -17,6 +17,8 @@ public class PostagemBOTest {
 
         Postagem postagem1 = new Postagem();
         postagem1.setDescricao("Comentário");
+        postagem1.setCurtidas(0);
+        postagem1.setData("2017/08/16");
 
         try {
             bo.inserir(postagem1);
@@ -26,6 +28,8 @@ public class PostagemBOTest {
 
         Postagem postagem2 = new Postagem();
         postagem2.setDescricao("Novo Comentário");
+        postagem2.setCurtidas(0);
+        postagem1.setData("2017/08/16");
 
         try {
             bo.inserir(postagem2);
