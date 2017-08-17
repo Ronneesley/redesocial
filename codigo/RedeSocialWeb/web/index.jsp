@@ -11,15 +11,15 @@
         
         <form action="UsuarioControle?operacao=Cadastrar" method="post">
             <label for="nome">Nome</label>
-            <input type="text" name="nome" value="" id="nome" placeholder="Digite seu nome" />
+            <input type="text" name="nome" value="${usuario.nome}" id="nome" placeholder="Digite seu nome" />
             <br />
             
             <label for="email">E-mail</label>
-            <input type="text" name="email" value="" id="email" placeholder="Digite seu e-mail" />
+            <input type="text" name="email" value="${usuario.email}" id="email" placeholder="Digite seu e-mail" />
             <br />
             
             <label for="senha">Senha</label>
-            <input type="password" name="senha" value="" placeholder="Digite uma senha" />
+            <input type="password" name="senha" value="" id="senha" placeholder="Digite uma senha" />
             <br />
             
             <input type="submit" value="Cadastrar" />
