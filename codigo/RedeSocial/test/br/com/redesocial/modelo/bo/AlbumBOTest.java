@@ -1,6 +1,7 @@
 package br.com.redesocial.modelo.bo;
 
 import br.com.redesocial.modelo.dto.Album;
+import java.util.Date;
 import java.util.List;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -11,7 +12,7 @@ import static org.junit.Assert.*;
  * @since 16/08/2017
  */
 public class AlbumBOTest {
-    /*@Test
+    @Test
     public void testMetodoInserir() {
         AlbumBO bo = new AlbumBO();              		
 
@@ -40,11 +41,8 @@ public class AlbumBOTest {
 		} catch (Exception ex) {
 			fail("Falha ao inserir o usuário: " + ex.getMessage());
 		}
-		
-		*/
-	
-	@Test
-	
+    }
+    @Test
     public void testMetodoListar() {
         AlbumBO bo = new AlbumBO();
 
@@ -55,7 +53,9 @@ public class AlbumBOTest {
             final int qtde = 10;
             for (int i = 0; i < 10; i++){
                 Album album = new Album();
-                album.setNome("Férias");
+                album.setNome("FERIAS");
+                album.setData(new Date());
+                album.setUsuario("2");
 
                 try {
                     bo.inserir(album);
@@ -74,7 +74,6 @@ public class AlbumBOTest {
             fail("Erro ao listar: " + ex.getMessage());
         }
     }
-    
     @Test
     public void testMetodoSelecionar() {
         AlbumBO bo = new AlbumBO();
@@ -94,5 +93,4 @@ public class AlbumBOTest {
             fail("Falha ao inserir um Album: " + ex.getMessage());
         }
     }
-
 }
