@@ -1,6 +1,7 @@
 package br.com.redesocial.modelo.bo;
 
 import br.com.redesocial.modelo.dto.Cidade;
+import java.util.List;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

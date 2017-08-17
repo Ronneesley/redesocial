@@ -81,13 +81,18 @@ public class PostagemMultimidiaDAO extends DAOBase {
         rs = pstmt.executeQuery();
         
         PostagemDAO postagemDAO = new PostagemDAO();
+        MultimidiaDAO multimidiaDAO = new MultimidiaDAO();
         List lista;
         lista = new ArrayList();
                 
         while(rs.next()){
             PostagemMultimidia pm = new PostagemMultimidia();
             pm.setPostagem(postagemDAO.selecionar(rs.getInt("postagem")));
+<<<<<<< HEAD
+            pm.setMultimidia(multimidiaDAO.selecionar(rs.getInt("multimidia")));
+=======
             //pm.setMultimidia(postagemDAO.selecionar(rs.getInt("multimidia")));
+>>>>>>> 15e74a20e18d62e48789b0d3a44982f4ee434bce
             lista.add(pm);
         }
         
