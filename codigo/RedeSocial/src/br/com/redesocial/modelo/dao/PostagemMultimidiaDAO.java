@@ -87,7 +87,7 @@ public class PostagemMultimidiaDAO extends DAOBase {
         while(rs.next()){
             PostagemMultimidia pm = new PostagemMultimidia();
             pm.setPostagem(postagemDAO.selecionar(rs.getInt("postagem")));
-            pm.setMultimidia(postagemDAO.selecionar(rs.getInt("multimidia")));
+            //pm.setMultimidia(postagemDAO.selecionar(rs.getInt("multimidia")));
             lista.add(pm);
         }
         
