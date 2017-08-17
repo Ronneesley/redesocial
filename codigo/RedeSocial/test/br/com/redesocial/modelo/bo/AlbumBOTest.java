@@ -21,38 +21,30 @@ public class AlbumBOTest {
     @Test
     public void testMetodoInserir() {
         Pais pais = new Pais();
-        pais.setNome("Brasil");
-        
-        /*
-        AlbumBO bo = new AlbumBO();              		
-
-        Album album = new Album();
-		
-	album.setNome("Album Viagem");
-	*/
+        pais.setNome("EUA");        
         
 	try {
             PaisBO paisBO = new PaisBO();
             paisBO.inserir(pais);
 
             Estado estado = new Estado();
-            estado.setNome("Goiás");
+            estado.setNome("California");
             estado.setPais(pais);
             
             EstadoBO estadoBO = new EstadoBO();
             estadoBO.inserir(estado);
             
             Cidade cidade = new Cidade();
-            cidade.setNome("Ceres");
+            cidade.setNome("Los Angeles");
             cidade.setEstado(estado);
             
             CidadeBO cidadeBO = new CidadeBO();
             cidadeBO.inserir(cidade);
             
             Usuario usuario = new Usuario();
-            usuario.setNome("Roni");
+            usuario.setNome("Paul");
             usuario.setDataCadastro(new Date());
-            usuario.setEmail("ronneesley@gmail.com");
+            usuario.setEmail("paul@gmail.com");
             //usuario.setFoto();
            
             Calendar calendario = Calendar.getInstance();
@@ -69,7 +61,7 @@ public class AlbumBOTest {
             
             AlbumBO bo = new AlbumBO();             		
             Album album = new Album();
-            album.setNome("Album Viagem");
+            album.setNome("Hollywood");
             calendario.set(2016, 8, 29, 0, 0, 0);
             album.setData(calendario.getTime()); 
             album.setUsuario(usuario);
