@@ -60,7 +60,33 @@ import static org.junit.Assert.*;
     
     @Test
     public void testMetodoListar() {
-        
+        CidadeBO bo = new CidadeBO();
+
+        try {
+            List existentes = bo.listar();
+            int qtdeExistentes = existentes.size();
+
+            final int qtde = 10;
+            for (int i = 0; i < 10; i++){
+                Cidade cidade = new Cidade();
+                cidade.setNome("Goiania");
+
+                try {
+                    bo.inserir(cidade);
+                } catch (Exception ex) {
+                    fail("Falha ao inserir cidade: " + ex.getMessage());
+                }
+            }
+
+            List existentesFinal = bo.listar();
+            int qtdeExistentesFinal = existentesFinal.size();
+
+            int diferenca = qtdeExistentesFinal - qtdeExistentes;
+
+            assertEquals(qtde, diferenca);
+        } catch (Exception ex){
+            fail("Erro ao listar: " + ex.getMessage());
+        }
     }
     
     @Test
