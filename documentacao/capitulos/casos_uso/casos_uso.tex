@@ -325,3 +325,51 @@
 {
 
 }
+%-------------------------------------------------------------------------
+\casoDeUso
+%Identificador
+{UC8}
+%Nome
+{Alterar dados de Perfil}
+%Ator Principal
+{Usuário}
+%Interessados
+{
+\begin{itemize}
+	\item Usuário: Deseja alterar seus dados de perfil.	
+\end{itemize}
+}
+%Pré-Condições
+{Estar conectado ao sistema e estar na página Perfil.}
+%Pós-Condições
+{Após alterações realizadas com sucesso, estes dados ser enviados ao servidor}
+%Fluxo Básico
+{
+\begin{itemize}
+	\item Usuário: Acessa o seu perfil como mostra a figura 4.
+	\item Usuário: Clicar no menu Sobre.
+	\item Usuário: Seleciona os campos que deseja alterar clicando nos ícones como mostra a figura 3.
+	\item Usuário: Preenche os campos.
+	\item Usuário: Confirma os campos ao clicar no botão "Confirmar".
+\end{itemize}
+}
+%Fluxo Alternativo
+{
+\begin{itemize}
+	\item Usuário desconectado.
+	\item Problemas com resposta do servidor ao alterar o campo especificado.
+	\item Exibir a mensagem de erro ao usuário.
+	\item Usuário preencher o campo incorretamente ex:(Caracteres especiais, letras em campos de números, etc).
+	\item Exibir mensagem de erro ao usuário sobre o preenchimento do campo.
+	\item Exibir a forma correta de preencher.
+	\item Usuário não confirmar a alteração.
+	\item Usuário não estar conectado a internet.
+\end{itemize}
+}
+%Frequência de Ocorrência
+{Aproximadamente 3 vezes ao dia}
+%Problemas em aberto
+{
+
+}
+%--------------------------------------------------------------------------------------------------------
