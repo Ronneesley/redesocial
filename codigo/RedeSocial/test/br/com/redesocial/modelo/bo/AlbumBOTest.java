@@ -79,12 +79,50 @@ public class AlbumBOTest {
             List existentes = bo.listar();
             int qtdeExistentes = existentes.size();
 
-            final int qtde = 10;
-            for (int i = 0; i < 10; i++){
+            final int qtde = 2;
+            
+            for (int i = 0; i < 2; i++){
+                Pais pais = new Pais();
+                pais.setNome("EUA");
+                
+                PaisBO paisBO = new PaisBO();
+                paisBO.inserir(pais);
+
+                Estado estado = new Estado();
+                estado.setNome("California");
+                estado.setPais(pais);
+
+                EstadoBO estadoBO = new EstadoBO();
+                estadoBO.inserir(estado);
+
+                Cidade cidade = new Cidade();
+                cidade.setNome("Los Angeles");
+                cidade.setEstado(estado);
+
+                CidadeBO cidadeBO = new CidadeBO();
+                cidadeBO.inserir(cidade);
+
+                Usuario usuario = new Usuario();
+                usuario.setNome("Paul");
+                usuario.setDataCadastro(new Date());
+                usuario.setEmail("paul@gmail.com");
+
+                Calendar calendario = Calendar.getInstance();
+                calendario.set(1988, 2, 7, 0, 0, 0);            
+                usuario.setNascimento(calendario.getTime());
+                usuario.setSenha("123");
+                usuario.setSexo(Sexo.MASCULINO);
+                usuario.setStatus(true);
+                usuario.setTelefone("(62) 91234-4567");
+                usuario.setCidade(cidade);
+
+                UsuarioBO usuarioBO = new UsuarioBO();
+                usuarioBO.inserir(usuario);
+
                 Album album = new Album();
-                album.setNome("FERIAS");
-                album.setData(new Date());
-                album.setUsuario("2");
+                album.setNome("Hollywood");
+                album.setData(new Date()); 
+                album.setUsuario(usuario);
 
                 try {
                     bo.inserir(album);
@@ -92,8 +130,7 @@ public class AlbumBOTest {
                     fail("Falha ao inserir um álbum: " + ex.getMessage());
                 }
             }
-
-            List existentesFinal = bo.listar();
+            List existentesFinal = bo.listar(); //insere os dados perfeitamente quando chega aqui dá erro e n consigo arrumar
             int qtdeExistentesFinal = existentesFinal.size();
 
             int diferenca = qtdeExistentesFinal - qtdeExistentes;
