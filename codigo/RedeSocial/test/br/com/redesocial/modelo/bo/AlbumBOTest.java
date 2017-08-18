@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
 
 /**
  * Unidade de testes para o AlbumBO
- * @author Ronneesley Moura Teles
+ * @author Ronneesley Moura Teles, Ianka Talita Bastos de Assis
  * @since 16/08/2017
  */
 public class AlbumBOTest {
