@@ -160,4 +160,22 @@ public class AlbumBOTest {
         }
     }
     
+    @Test
+    public void testMetodoExcluir() throws Exception{
+       AlbumBO bo = new AlbumBO();
+       
+       Album album = new Album();
+       album.setNome("Hollywood");
+       
+       try {
+           bo.inserir(album);
+           
+           int id = album.getId();
+           Album albumSelecionado = bo.selecionar(id);
+           
+             assertNotNull("Album não encontrado", albumSelecionado);
+        } catch (Exception ex) {
+            fail("Falha ao inserir um Album: " + ex.getMessage());
+        }
+    }        
 }
