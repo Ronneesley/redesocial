@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.16)  18 AUG 2017 11:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.8.16)  18 AUG 2017 19:31
 entering extended mode
 **./descricao_geral.tex
 (descricao_geral.tex
-LaTeX2e <2016/03/31> patch level 3
+LaTeX2e <2016/03/31> patch level 1
 Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
 ! Undefined control sequence.
 l.1 \chapter
@@ -3105,10 +3105,10 @@ Missing character: There is no s in font nullfont!
 
  
 Here is how much of TeX's memory you used:
- 9 strings out of 493334
- 152 string characters out of 3139254
- 54242 words of memory out of 3000000
- 3638 multiletter control sequences out of 15000+200000
+ 9 strings out of 493335
+ 152 string characters out of 3136642
+ 54225 words of memory out of 3000000
+ 3637 multiletter control sequences out of 15000+200000
  3986 words of font info for 15 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  13i,1n,10p,678b,67s stack positions out of 5000i,500n,10000p,200000b,50000s
