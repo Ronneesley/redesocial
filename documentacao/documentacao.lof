@@ -1,21 +1,21 @@
 \select@language {brazil}
 \select@language {brazil}
-\contentsline {figure}{\numberline {1}{\ignorespaces Prot\IeC {\'o}tipo de login, nesta tela o usu\IeC {\'a}rio poder\IeC {\'a} fazer o login, com a conta e senha ou criar um nova, preenchendo alguns dados pessoais e escolhendo uma senha.}}{17}{figure.4.1}
-\contentsline {figure}{\numberline {2}{\ignorespaces Prot\IeC {\'o}tipo de confirma\IeC {\c c}\IeC {\~a}o do e-mail, nesta tela o usu\IeC {\'a}rio dever\IeC {\'a} confirmar seu e-mail, ou altera-l\IeC {\'o} caso tenha digitado errado, ou queira mudar de endere\IeC {\c c}o eletr\IeC {\^o}nico.}}{17}{figure.4.2}
-\contentsline {figure}{\numberline {3}{\ignorespaces Prot\IeC {\'o}tipo da segunda etapa de cadastro, nesta tela o usu\IeC {\'a}rio preencher\IeC {\'a} dados pessoais sobre seu perfil e informa\IeC {\c c}\IeC {\~o}es da sua vida aos quais disponibiliza para que outras pessoas tenham acesso.}}{18}{figure.4.3}
-\contentsline {figure}{\numberline {4}{\ignorespaces Prot\IeC {\'o}tipo da terceira etapa de cadastro, nesta etapa o us\IeC {\'u}ario adicionar\IeC {\'a} foto ao seu perfil, e ter\IeC {\'a} a op\IeC {\c c}\IeC {\~a}o de escolher uma foto que esteja em seus arquivos no computador ou tirar uma instantaneamente pela webcan.}}{19}{figure.4.4}
-\contentsline {figure}{\numberline {5}{\ignorespaces Prot\IeC {\'o}tipo de perfil}}{20}{figure.4.5}
-\contentsline {figure}{\numberline {6}{\ignorespaces Prot\IeC {\'o}tipo de postagem}}{21}{figure.4.6}
-\contentsline {figure}{\numberline {7}{\ignorespaces Prot\IeC {\'o}tipo de posts pessoais}}{21}{figure.4.7}
-\contentsline {figure}{\numberline {8}{\ignorespaces Prot\IeC {\'o}tipo de chat de mensagens}}{22}{figure.4.8}
-\contentsline {figure}{\numberline {9}{\ignorespaces Prot\IeC {\'o}tipo de recuperacao de senha}}{22}{figure.4.9}
-\contentsline {figure}{\numberline {10}{\ignorespaces Prot\IeC {\'o}tipo da galeria de fotos}}{23}{figure.4.10}
-\contentsline {figure}{\numberline {11}{\ignorespaces Prot\IeC {\'o}tipo de solicita\IeC {\c c}\IeC {\~a}o de amizade}}{23}{figure.4.11}
-\contentsline {figure}{\numberline {12}{\ignorespaces Prot\IeC {\'o}tipo de entrar em grupo}}{23}{figure.4.12}
-\contentsline {figure}{\numberline {13}{\ignorespaces Prot\IeC {\'o}tipo de cria\IeC {\c c}\IeC {\~a}o de grupo}}{24}{figure.4.13}
-\contentsline {figure}{\numberline {14}{\ignorespaces Prot\IeC {\'o}tipo den\IeC {\'u}ncia de grupo}}{24}{figure.4.14}
-\contentsline {figure}{\numberline {15}{\ignorespaces Prot\IeC {\'o}tipo de op\IeC {\c c}\IeC {\~o}es de grupo}}{25}{figure.4.15}
-\contentsline {figure}{\numberline {16}{\ignorespaces Prot\IeC {\'o}tipo de cadastro de artigos}}{25}{figure.4.16}
-\contentsline {figure}{\numberline {17}{\ignorespaces Prot\IeC {\'o}tipo de sair do grupo}}{26}{figure.4.17}
-\contentsline {figure}{\numberline {18}{\ignorespaces Prot\IeC {\'o}tipo de painel administrativo}}{26}{figure.4.18}
-\contentsline {figure}{\numberline {19}{\ignorespaces Diagrama Entidade e Relacionamento (DER).}}{36}{figure.6.19}
+\contentsline {figure}{\numberline {1}{\ignorespaces Prot\IeC {\'o}tipo de login, nesta tela o usu\IeC {\'a}rio poder\IeC {\'a} fazer o login, com a conta e senha ou criar um nova, preenchendo alguns dados pessoais e escolhendo uma senha.}}{19}{figure.4.1}
+\contentsline {figure}{\numberline {2}{\ignorespaces Prot\IeC {\'o}tipo de confirma\IeC {\c c}\IeC {\~a}o do e-mail, nesta tela o usu\IeC {\'a}rio dever\IeC {\'a} confirmar seu e-mail, ou altera-l\IeC {\'o} caso tenha digitado errado, ou queira mudar de endere\IeC {\c c}o eletr\IeC {\^o}nico.}}{19}{figure.4.2}
+\contentsline {figure}{\numberline {3}{\ignorespaces Prot\IeC {\'o}tipo da segunda etapa de cadastro, nesta tela o usu\IeC {\'a}rio preencher\IeC {\'a} dados pessoais sobre seu perfil e informa\IeC {\c c}\IeC {\~o}es da sua vida aos quais disponibiliza para que outras pessoas tenham acesso.}}{20}{figure.4.3}
+\contentsline {figure}{\numberline {4}{\ignorespaces Prot\IeC {\'o}tipo da terceira etapa de cadastro, nesta etapa o us\IeC {\'u}ario adicionar\IeC {\'a} foto ao seu perfil, e ter\IeC {\'a} a op\IeC {\c c}\IeC {\~a}o de escolher uma foto que esteja em seus arquivos no computador ou tirar uma instantaneamente pela webcan.}}{21}{figure.4.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces Prot\IeC {\'o}tipo de perfil}}{22}{figure.4.5}
+\contentsline {figure}{\numberline {6}{\ignorespaces Prot\IeC {\'o}tipo de postagem}}{23}{figure.4.6}
+\contentsline {figure}{\numberline {7}{\ignorespaces Prot\IeC {\'o}tipo de posts pessoais}}{23}{figure.4.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces Prot\IeC {\'o}tipo de chat de mensagens}}{24}{figure.4.8}
+\contentsline {figure}{\numberline {9}{\ignorespaces Prot\IeC {\'o}tipo de recuperacao de senha}}{24}{figure.4.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces Prot\IeC {\'o}tipo da galeria de fotos}}{25}{figure.4.10}
+\contentsline {figure}{\numberline {11}{\ignorespaces Prot\IeC {\'o}tipo de solicita\IeC {\c c}\IeC {\~a}o de amizade}}{25}{figure.4.11}
+\contentsline {figure}{\numberline {12}{\ignorespaces Prot\IeC {\'o}tipo de entrar em grupo}}{25}{figure.4.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces Prot\IeC {\'o}tipo de cria\IeC {\c c}\IeC {\~a}o de grupo}}{26}{figure.4.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces Prot\IeC {\'o}tipo den\IeC {\'u}ncia de grupo}}{26}{figure.4.14}
+\contentsline {figure}{\numberline {15}{\ignorespaces Prot\IeC {\'o}tipo de op\IeC {\c c}\IeC {\~o}es de grupo}}{27}{figure.4.15}
+\contentsline {figure}{\numberline {16}{\ignorespaces Prot\IeC {\'o}tipo de cadastro de artigos}}{27}{figure.4.16}
+\contentsline {figure}{\numberline {17}{\ignorespaces Prot\IeC {\'o}tipo de sair do grupo}}{28}{figure.4.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces Prot\IeC {\'o}tipo de painel administrativo}}{28}{figure.4.18}
+\contentsline {figure}{\numberline {19}{\ignorespaces Diagrama Entidade e Relacionamento (DER).}}{39}{figure.6.19}
