@@ -8,7 +8,8 @@ import static org.junit.Assert.*;
  * @author Inimigo
  */
 public class EstadosBoTest {
-    @Test
+   /* @Test
+   
     public void testMetodoInserir() {
         EstadoBO bo = new EstadoBO();
 
@@ -28,6 +29,29 @@ public class EstadosBoTest {
             bo.inserir(estado2);
         } catch (Exception ex) {
             fail("Falha ao inserir um estado: " + ex.getMessage());
+        }
+    }*/
+    
+     @Test
+    public void testMetodoAlterar() {
+        EstadoBO bo = new EstadoBO();
+
+        Estado estado = new Estado();
+        estado.setNome("Cearaaaaa");
+
+        try {
+            bo.inserir(estado);
+        } catch (Exception ex) {
+            fail("Falha ao inserir um país: " + ex.getMessage());
+        }
+
+        //Mudança dos dados
+        estado.setNome("Argentina");
+
+        try {
+            bo.alterar(estado);
+        } catch (Exception ex) {
+            fail("Falha ao inserir um país: " + ex.getMessage());
         }
     }
     
