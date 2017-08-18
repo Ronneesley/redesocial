@@ -5,10 +5,10 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 /**
  *
- * @author Inimigo
+ * @author Inimigo, Andrey
  */
 public class EstadosBoTest {
-   /* @Test
+    @Test
    
     public void testMetodoInserir() {
         EstadoBO bo = new EstadoBO();
@@ -30,7 +30,7 @@ public class EstadosBoTest {
         } catch (Exception ex) {
             fail("Falha ao inserir um estado: " + ex.getMessage());
         }
-    }*/
+    }
     
      @Test
     public void testMetodoAlterar() {
