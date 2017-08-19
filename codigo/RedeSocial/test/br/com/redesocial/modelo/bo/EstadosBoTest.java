@@ -65,21 +65,21 @@ public class EstadosBoTest {
         pais.setNome("igor");
         
         try {
-             paisbo.inserir(pais);
+            paisbo.inserir(pais);
              
-             int idpais = pais.getId();
-             Pais paisSelecionado = paisbo.selecionar(idpais);
+            int idpais = pais.getId();
+            Pais paisSelecionado = paisbo.selecionar(idpais);
              
-             EstadoBO bo = new EstadoBO();
+            EstadoBO bo = new EstadoBO();
 
-             Estado estado = new Estado();
-             estado.setNome("igor");
-             estado.setPais(paisSelecionado);
+            Estado estado = new Estado();
+            estado.setNome("igor");
+            estado.setPais(paisSelecionado);
 
         
             bo.inserir(estado);
                         
-          int id = estado.getId();
+            int id = estado.getId();
             Estado estadoSelecionado = bo.selecionar(id);
             assertNotNull("Estado não encontrado", estadoSelecionado);
 
