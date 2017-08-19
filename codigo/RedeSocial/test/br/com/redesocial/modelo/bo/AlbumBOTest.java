@@ -14,11 +14,11 @@ import static org.junit.Assert.*;
 
 /**
  * Unidade de testes para o AlbumBO
- * @author Ronneesley Moura Teles
+ * @author Ronneesley Moura Teles, Ianka Talita Bastos de Assis
  * @since 16/08/2017
  */
 public class AlbumBOTest {
-/*    @Test
+    @Test
     public void testMetodoInserir() {
         Pais pais = new Pais();
         pais.setNome("EUA");        
@@ -49,7 +49,7 @@ public class AlbumBOTest {
            
             Calendar calendario = Calendar.getInstance();
             calendario.set(1988, 2, 7, 0, 0, 0);            
-            usuario.setNascimento(calendario.getTime());
+            usuario.setDataNascimento(calendario.getTime());
             usuario.setSenha("123");
             usuario.setSexo(Sexo.MASCULINO);
             usuario.setStatus(true);
@@ -69,7 +69,7 @@ public class AlbumBOTest {
         } catch (Exception ex) {
             fail("Falha ao inserir um album: " + ex.getMessage());
         }		
-    }*/
+    }
     
     @Test
     public void testMetodoListar() {
@@ -159,4 +159,23 @@ public class AlbumBOTest {
             fail("Falha ao inserir um Album: " + ex.getMessage());
         }
     }*/
+    
+    @Test
+    public void testMetodoExcluir() throws Exception{
+       AlbumBO bo = new AlbumBO();
+       
+       Album album = new Album();
+       album.setNome("Hollywood");
+       
+       try {
+           bo.inserir(album);
+           
+           int id = album.getId();
+           Album albumSelecionado = bo.selecionar(id);
+           
+             assertNotNull("Album não encontrado", albumSelecionado);
+        } catch (Exception ex) {
+            fail("Falha ao inserir um Album: " + ex.getMessage());
+        }
+    }        
 }
