@@ -240,7 +240,7 @@
 %Identificador
 {UC6}
 %Nome
-{Realizar comentarios}
+{Realizar comentários}
 %Ator Principal
 {Usuário}
 %Interessados
@@ -252,26 +252,43 @@
 
 }
 %Pré-Condições
-{Possuir uma conta válida}
+{Usuário estar autenticado}
 %Pós-condições
-{}
+{O comentário é postado}
 %Fluxo Básico
 {
 \begin{itemize}
-\item Usuário acessa o site da rede social.
-\item Usuário faz login.
-\item Usuário identifica uma postagem do seu interesse.
-\item O usuário digita e publica seu comentário.
+
+\item Usuário identifica uma postagem do seu interesse;
+\item O usuário digita seu comentario (Figura 7);
+\item O Usuário clica em enviar e publica seu comentário (Figura7).
+
 \end{itemize}
 }
 %Fluxo Alternativo
 {
 \begin{itemize}
 \item Postagem foi deletada.
+
+\begin{itemize}
+	\item Exibe uma mensagem informando que a postagem foi deletada.
+	\item Volta para a tela anterior.
+\end{itemize}
+
+\end{itemize}
+
 \item Problemas de resposta do servidor.
-\item Exibe uma mensagem informando que a postagem foi deletada.
-\item Volta para a tela anterior.
-\item Problemas com sua conexão com a internet.
+\begin{itemize}
+	\item Exibe uma mensagem de erro "a conexão com o servidor falhou!".
+	\item Volta para a tela anterior.
+\end{itemize}
+
+\item Problemas com sua conexão com a Internet.
+\begin{itemize}
+	\item Exibe uma mensagem de erro "a conexão com a Internet falhou!".
+	\item Volta para a tela anterior.
+\end{itemize}
+
 \end{itemize}
 }
 %Frequência de Ocorrencia
@@ -293,20 +310,20 @@
 %Interessados
 {
 \begin{itemize}
-	\item Usuário: Deseja sair da rede social.
+	\item Usuário: O usuário deseja sair da conta clicando no ícone ao lado da foto do perfil selecionando a opção sair, como mostra a Figura \ref{figura:7}.
+	\item Usuário: Volta para a tela inicial do sistema de autenticação.
 \end{itemize}
 
 }
 %Pré-Condições
-{Possuir uma conta válida e estar conectado (logado no sistema)}
+{O usuário faz autenticação ao sistema)}
 %Pós-condições
 {}
 %Fluxo Básico
 {
 \begin{itemize}
-	\item Usuário acessa o site da rede social.
-	\item Usuário faz login.
-	\item Usuário está conectado a sua conta.
+	\item Usuário acessa o site da rede social;
+	\item Usuário faz autenticação  ao sistema.
 \end{itemize}
 }
 %Fluxo Alternativo
@@ -315,12 +332,11 @@
 	\item Usuário desconectado.
 	\item Problemas de resposta do servidor.
 	\item Exibe uma mensagem informando que o usuário foi desconectado.
-	\item Volta para a tela inicial do sistema de fazer login.
 	\item Problemas com sua conexão com a internet.
 \end{itemize}
 }
 %Frequência de Ocorrencia
-{Aproximadamente 1 vez ao dia.}
+{Aproximadamente 3 vez ao dia.}
 %Problemas em Aberto
 {
 
