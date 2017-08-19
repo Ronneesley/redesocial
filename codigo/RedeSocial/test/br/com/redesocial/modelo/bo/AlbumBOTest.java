@@ -71,9 +71,9 @@ public class AlbumBOTest {
         } catch (Exception ex) {
             fail("Falha ao inserir um album: " + ex.getMessage());
         }		
-    }
+    } 
     
-    @Test
+   @Test
     public void testMetodoListar() {
         AlbumBO bo = new AlbumBO();
 
@@ -202,23 +202,66 @@ public class AlbumBOTest {
         }
 
     }
-    
+
     @Test
     public void testMetodoExcluir() throws Exception{
-       AlbumBO bo = new AlbumBO();
-       
-       Album album = new Album();
-       album.setNome("Hollywood");
+        AlbumBO bo = new AlbumBO();  
+        
+        Album album = new Album();
+        album.setNome("Hollywood");    
        
        try {
-           bo.inserir(album);
+            PaisBO paisBO = new PaisBO();
+            Pais pais = null;
+            paisBO.inserir(pais);
+
+            Estado estado = new Estado();
+            estado.setNome("California");
+            estado.setPais(pais);
+            
+            EstadoBO estadoBO = new EstadoBO();
+            estadoBO.inserir(estado);
+            
+            Cidade cidade = new Cidade();
+            cidade.setNome("Los Angeles");
+            cidade.setEstado(estado);
+            
+            CidadeBO cidadeBO = new CidadeBO();
+            cidadeBO.inserir(cidade);
+            
+            Usuario usuario = new Usuario();
+            usuario.setNome("Paul");
+            usuario.setDataCadastro(new Date());
+            usuario.setEmail("paul@gmail.com");
+            //usuario.setFoto();
            
-           int id = album.getId();
-           Album albumSelecionado = bo.selecionar(id);
+            Calendar calendario = Calendar.getInstance();
+            calendario.set(1988, 2, 7, 0, 0, 0);            
+            usuario.setDataNascimento(calendario.getTime());
+            usuario.setSenha("123");
+            usuario.setSexo(Sexo.MASCULINO);
+            usuario.setStatus(true);
+            usuario.setTelefone("(62) 91234-4567");
+            usuario.setCidade(cidade);
+            
+            UsuarioBO usuarioBO = new UsuarioBO();
+            usuarioBO.inserir(usuario);
+                        		
+            calendario.set(2016, 8, 29, 0, 0, 0);
+            album.setData(calendario.getTime()); 
+            album.setUsuario(usuario);
+            bo.inserir(album);
            
-             assertNotNull("Album não encontrado", albumSelecionado);
+            int id = album.getId();
+            Album albumSelecionado = bo.selecionar(id);
+            assertNotNull("Album não encontrada", albumSelecionado);
+           
+            bo.excluir(id);
+            Album albumSelecionadoPosExclusao = bo.selecionar(id);
+           
+            assertNotNull("Album não encontrado", albumSelecionadoPosExclusao);
         } catch (Exception ex) {
-            fail("Falha ao inserir um Album: " + ex.getMessage());
+            assertNotNull("Falha ao inserir um Album: " + ex.getMessage());
         }
     }
    
