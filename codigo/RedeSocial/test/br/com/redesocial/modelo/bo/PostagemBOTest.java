@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Paulo Henrique
+ * @author Paulo Henrique e Thalia Santana
  */
 public class PostagemBOTest {
     
