@@ -1,6 +1,8 @@
 package br.com.redesocial.modelo.bo;
 
 import br.com.redesocial.modelo.dto.Multimidia;
+import br.com.redesocial.modelo.utilitarios.Utilitarios;
+import java.io.File;
 import java.util.List;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -17,6 +19,7 @@ public class MultimidiaBOTeste {
             final int qtde = 10;
             for (int i = 0; i < 10; i++){
                 Multimidia multimidia = new Multimidia();
+                multimidia.setMidia(Utilitarios.lerArquivo(new File("../../../../../../nome_arquivo.txt")));
                 multimidia.setTipoConteudo("foto");
 
                 try {
