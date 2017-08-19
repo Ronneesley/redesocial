@@ -40,7 +40,7 @@ public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
         Connection conexao = getConexao();
 
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("select * from multimidia where id = ?");
+        pstmt = conexao.prepareStatement("select * from multimidias where id = ?");
         pstmt.setInt(1, id);
 
         ResultSet rs;
