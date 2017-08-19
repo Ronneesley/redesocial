@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
 
 /**
  * Unidade de testes para o AlbumBO
- * @author Ronneesley Moura Teles
+ * @author Ronneesley Moura Teles, Ianka Talita Bastos de Assis
  * @since 16/08/2017
  */
 public class AlbumBOTest {
@@ -49,7 +49,7 @@ public class AlbumBOTest {
            
             Calendar calendario = Calendar.getInstance();
             calendario.set(1988, 2, 7, 0, 0, 0);            
-            usuario.setNascimento(calendario.getTime());
+            usuario.setDataNascimento(calendario.getTime());
             usuario.setSenha("123");
             usuario.setSexo(Sexo.MASCULINO);
             usuario.setStatus(true);
@@ -109,7 +109,7 @@ public class AlbumBOTest {
 
                 Calendar calendario = Calendar.getInstance();
                 calendario.set(1988, 2, 7, 0, 0, 0);            
-                usuario.setNascimento(calendario.getTime());
+                usuario.setDataNascimento(calendario.getTime());
                 usuario.setSenha("123");
                 usuario.setSexo(Sexo.MASCULINO);
                 usuario.setStatus(true);
@@ -140,7 +140,7 @@ public class AlbumBOTest {
             fail("Erro ao listar: " + ex.getMessage());
         }
     }
-    @Test
+/*    @Test
     public void testMetodoSelecionar() {
         AlbumBO bo = new AlbumBO();
 
@@ -158,6 +158,24 @@ public class AlbumBOTest {
         } catch (Exception ex) {
             fail("Falha ao inserir um Album: " + ex.getMessage());
         }
-    }
+    }*/
     
+    @Test
+    public void testMetodoExcluir() throws Exception{
+       AlbumBO bo = new AlbumBO();
+       
+       Album album = new Album();
+       album.setNome("Hollywood");
+       
+       try {
+           bo.inserir(album);
+           
+           int id = album.getId();
+           Album albumSelecionado = bo.selecionar(id);
+           
+             assertNotNull("Album não encontrado", albumSelecionado);
+        } catch (Exception ex) {
+            fail("Falha ao inserir um Album: " + ex.getMessage());
+        }
+    }        
 }
