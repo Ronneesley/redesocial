@@ -6,6 +6,10 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class MultimidiaBOTeste {
+    
+    /**
+     * @autor Macilon
+    */ 
     @Test
     public void testMetodoListar() throws Exception {
         MultimidiaBO bo = new MultimidiaBO();
@@ -35,6 +39,33 @@ public class MultimidiaBOTeste {
         } catch (Exception ex){
             fail("Erro ao listar: " + ex.getMessage());
         }
+    }
+    
+    @Test
+    public void testeMetodoExcluir() throws Exception{
+        MultimidiaBO bo = new MultimidiaBO ();
+        
+        Multimidia multimidia = new Multimidia();
+        multimidia.setMidia();
+        multimidia.setTipoConteudo("fkk");
+        multimidia.setData(2017, 2, 1, 0, 0, 0);
+        multimidia.setAlbum();
+        
+        try{
+            bo.inserir(multimidia);
+            
+            int id = multimidia.getId();
+            Multimidia multimidiaSelecionado = bo.selecionar(id);
+            assertNotNull("Foto não encontrada!", multimidiaSelecionado);
+            
+            bo.excluir(id);
+            Multimidia multimidiaSelecionadoPosExclusao = bo.selecionar(id);
+            
+            assertNull("Foto não encontrada, mesmo após excluí-lá", multimidiaSelecionadoPosExclusao);
+        }catch (Exception ex){
+            fail("Falha ao adicionar uma foto" +ex.getMessage());
+        }
+        
     }
 }
 

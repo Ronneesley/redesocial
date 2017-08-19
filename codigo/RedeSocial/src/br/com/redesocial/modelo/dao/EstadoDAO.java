@@ -17,6 +17,7 @@ import java.util.List;
  */
 public class EstadoDAO extends DAOCRUDBase<Estado> {
 
+    @Override
     public Estado selecionar(int id) throws Exception {
         Connection conexao = getConexao();
 
