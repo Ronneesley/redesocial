@@ -87,8 +87,29 @@ public class PostagemBOTest {
         }
     */
      }
-        
-   
+/**
+ *
+ * @author Warley Rodrigues
+ */        
+  @Test
+    public void testMetodoSelecionar() {
+        PostagemBO bo = new PostagemBO();
+
+        Postagem postagem = new Postagem();
+        postagem.setId(1);
+
+        try {
+            bo.inserir(postagem);
+
+            int id = postagem.getId();
+
+            Postagem postagemSelecionado = bo.selecionar(id);
+
+            assertNotNull("Postagem não encontrada", postagemSelecionado);
+        } catch (Exception ex) {
+            fail("Falha ao inserir uma postagem: " + ex.getMessage());
+        }
+    } 
     
    @Test
     public void testMetodoListar() {
