@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
 
 /**
  * Unidade de testes para o AlbumBO
- * @author Ronneesley Moura Teles
+ * @author Ronneesley Moura Teles, Ianka Talita Bastos de Assis
  * @since 16/08/2017
  */
 public class AlbumBOTest {
@@ -160,4 +160,22 @@ public class AlbumBOTest {
         }
     }
     
+    @Test
+    public void testMetodoExcluir() throws Exception{
+       AlbumBO bo = new AlbumBO();
+       
+       Album album = new Album();
+       album.setNome("Hollywood");
+       
+       try {
+           bo.inserir(album);
+           
+           int id = album.getId();
+           Album albumSelecionado = bo.selecionar(id);
+           
+             assertNotNull("Album não encontrado", albumSelecionado);
+        } catch (Exception ex) {
+            fail("Falha ao inserir um Album: " + ex.getMessage());
+        }
+    }        
 }
