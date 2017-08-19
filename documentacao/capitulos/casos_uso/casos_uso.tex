@@ -434,3 +434,62 @@
 
 }
 %--------------------------------------------------------------------------------------------------------
+
+%--------------------------------------------------------------------------------------------------------
+\casoDeUso
+%Identificador
+{UC9}
+%Nome
+{Pesquisar pessoas e grupos}
+%Ator Principal
+{Usuário}
+%Interessados
+{
+\begin{itemize}
+	\item Usuário: Deseja pesquisar uma pessoa ou grupo.	
+\end{itemize}
+}
+%Pré-Condições
+{Estar conectado ao sistema.}
+%Pós-Condições
+{Após a pesquisa realizada com sucesso, as pessoas/grupos com o nome relacionado ao que foi pesquisado aparecem para que o usúario escolha.}
+%Fluxo Básico
+{
+\begin{itemize}
+	\item Usuário: Clicar no campo de pesquisar.
+	\item Usuário: Escrever o nome da pessoa/grupo que deseja pesquisar.
+	\begin{itemize}
+		\item Sistema: Ao pesquisar uma pessoa/grupo o sistema abre a janela de pessoa/grupo encontrados.
+	\end{itemize}
+	\item Usuário: Seleciona o nome da pessoa/grupo de seu interece.
+	\item Sistema: O usúario é redirecionado para a pagina de perfil da pessoa ou para a pagina do grupo que foi selecionado.
+\end{itemize}
+}
+%Fluxo Alternativo
+{
+\begin{itemize}
+	\item Usuário desconectado.
+	\begin{itemize}
+		\item O usuário é retornado para a tela de login (Figura:\ref{login})
+	\end{itemize}
+	\item Problemas com resposta do servidor ao pesquisar uma pessoa/grupo.
+	\begin{itemize}
+		\item Exibir a mensagem de falha ao conectar ao servidor.
+	\end{itemize}
+	\item Usuário pesquisa um nome que não existe na rede social.
+	\begin{itemize}
+		\item Exibir mensagem de pessoa/grupo não encontrado.
+	\end{itemize}
+	\item Usuário não esta conectado a internet.
+	\begin{itemize}
+		\item Exibir mensagem de falha na conexão.
+	\end{itemize}
+\end{itemize}
+}
+%Frequência de Ocorrência
+{Toda vez que o usúario requirir uma pesquisa de pessoa/grupo.}
+%Problemas em aberto
+{
+
+}
+%--------------------------------------------------------------------------------------------------------
