@@ -1,11 +1,12 @@
 package br.com.redesocial.modelo.bo;
 
 import br.com.redesocial.modelo.dto.Estado;
+import br.com.redesocial.modelo.dto.Pais;
 import org.junit.Test;
 import static org.junit.Assert.*;
 /**
  *
- * @author Inimigo, Andrey
+ * @author Inimigo, Andrey, Daniel
  */
 public class EstadosBOTest {
     @Test
@@ -52,6 +53,32 @@ public class EstadosBOTest {
             bo.alterar(estado);
         } catch (Exception ex) {
             fail("Falha ao inserir um país: " + ex.getMessage());
+        }
+    }
+    
+    @Test
+    public void testMetodoSelecionar(){
+        EstadoBO estadoBO = new EstadoBO();
+        PaisBO paisBO = new PaisBO();
+
+        try{
+            Estado estado = new Estado();
+        
+            Pais pais = new Pais();
+            pais.setNome("Brasil");
+            paisBO.inserir(pais);
+            
+            estado.setNome("Goiás");
+            estado.setPais(pais);
+            estadoBO.inserir(estado);
+
+            int id = estado.getId();
+
+            Estado estadoSelecionado = estadoBO.selecionar(id);
+
+            assertNotNull("Estado não encontrado", estadoSelecionado);
+        } catch (Exception ex) {
+            fail("Falha ao inserir um estado: " + ex.getMessage());
         }
     }
     
