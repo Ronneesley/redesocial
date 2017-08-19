@@ -25,7 +25,7 @@ public class UsuarioBO extends BOCRUDBase<Usuario, UsuarioDAO> {
 
         if (dto.getTelefone().trim().equals("")) throw new Exception("Preencha o telefone do usuário");
 
-        if (dto.getNascimento() == null) throw new Exception("Preencha a data de nascimento do usuário");
+        if (dto.getDataNascimento() == null) throw new Exception("Preencha a data de nascimento do usuário");
 
         if (dto.getSexo() == null) throw new Exception("Preencha o sexo do usuário");
 

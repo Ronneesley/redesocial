@@ -48,7 +48,7 @@ public class PostagemBOTest {
            
             Calendar calendario = Calendar.getInstance();
             calendario.set(1988, 2, 7, 0, 0, 0);            
-            usuario.setNascimento(calendario.getTime());
+            usuario.setDataNascimento(calendario.getTime());
             usuario.setSenha("123");
             usuario.setSexo(Sexo.MASCULINO);
             usuario.setStatus(true);
