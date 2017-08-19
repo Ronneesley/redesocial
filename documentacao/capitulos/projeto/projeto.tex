@@ -1,16 +1,16 @@
 \chapter{Projeto}
 
+Este capitulo tem como foco a apresentação do fluxograma ilustrativo do sistema por meio do Diagrama Entidade e Relacionamento(DER), demostrar as trocas de informação entre operações pelos Diagramas de Sequencia e uma visão estática da estrutura física sobre a qual o software será implementado pelo Diagrama de Implantação.
+
 \section{Diagrama Entidade e Relacionamento (DER)}
 
 O Diagrama Entidade e Relacionamento (DER) apresenta de forma gráfica as tabelas do banco de dados, mostrando os tipos de dados que estarão armazenados, bem como os relacionamentos existentes entre as tabelas.
 
-A Figura \ref{figura:DER} mostra as tabelas do banco de dados, onde um usuário pode morar em uma cidade, que possui um estado, e este um país, um país pode ter vários estados, um estado pode ter várias cidades e uma cidade vários usuários.
+A figura mostra as tabelas do banco de dados, onde a tabela de usuários possue uma ligação de 1..n com a tabela cidades, onde uma cidade pode ter vários usuários, porém um usuário pode morar em apenas uma cidade.
 
-Um usuário pode ter vários álbuns, que pode ter várias multimídias.
+A tabela cidades possue uma ligação de 1..n com a tabela estados, onde um estado pode ter várias cidades e uma cidade pode pertencer apenas a um estado.
 
-Um usuário pode ter várias postagens, que pode ter vários comentários e estes podem ter comentários também.
-
-Uma postagem pode ter várias multimídias e várias multimídias podem estar em várias postagens, bem como uma postagem pode ter vários álbuns e vários álbuns podem estar em várias postagens.
+A tabela estados possue uma ligação de 1..n com a tabela paises, onde um pais pode ter vários estados, porém um estado pode pertencer apenas a um pais. 
 
 \figura{DER}{15}{../banco_de_dados/redesocial.png}{Diagrama Entidade e Relacionamento (DER).}
 
