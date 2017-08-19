@@ -1,6 +1,8 @@
 package br.com.redesocial.modelo.bo;
 
 import br.com.redesocial.modelo.dto.Cidade;
+import br.com.redesocial.modelo.dto.Estado;
+import br.com.redesocial.modelo.dto.Pais;
 import java.util.List;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -12,12 +14,46 @@ import static org.junit.Assert.*;
  * @since 16/08/2017
  */
  public class CidadeBOTest {
-     @Test
+ @Test
     public void testMetodoInserir() {
+        PaisBO paisbo = new PaisBO();
         
-        
+        Pais pais = new Pais();
+        try {
+            pais.setNome("Brasil");
+            paisbo.inserir(pais);
+
+            int idpais = pais.getId();
+
+            Pais paisSelecionado = paisbo.selecionar(idpais);
+
+            EstadoBO estadobo = new EstadoBO();
+
+            Estado estado = new Estado();
+            estado.setNome("Goiás");
+            estado.setPais(paisSelecionado);
+            estadobo.inserir(estado);
+            
+            int idestado = estado.getId();
+            
+            Estado estadoSelecionado = estadobo.selecionar(idestado);
+            
+           
+            CidadeBO cidadebo = new CidadeBO();
+
+            Cidade cidade = new Cidade();
+            cidade.setNome("Goianesia");
+            cidade.setEstado(estadoSelecionado);
+                   
+       
+            cidadebo.inserir(cidade);
+            
+        } catch (Exception ex) {
+            fail("Falha ao inserir a cidade: " + ex.getMessage());
+        }
+
     }
-    
+   
     @Test
     public void testMetodoAlterar() {
         CidadeBO bo = new CidadeBO();
@@ -94,4 +130,9 @@ import static org.junit.Assert.*;
     public void testMetodoExcluir() {
         
     }
+
+
+
  }
+ 
+ 

@@ -17,12 +17,11 @@ import java.util.List;
  */
 public class EstadoDAO extends DAOCRUDBase<Estado> {
 
-    @Override
     public Estado selecionar(int id) throws Exception {
         Connection conexao = getConexao();
 
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("select * from estados where id = ?");
+        pstmt = conexao.prepareStatement("select * from estado where id = ?");
         pstmt.setInt(1, id);
 
         ResultSet rs;

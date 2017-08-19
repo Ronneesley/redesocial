@@ -49,7 +49,7 @@ public class AlbumBOTest {
            
             Calendar calendario = Calendar.getInstance();
             calendario.set(1988, 2, 7, 0, 0, 0);            
-            usuario.setDataNascimento(calendario.getTime());
+            usuario.setNascimento(calendario.getTime());
             usuario.setSenha("123");
             usuario.setSexo(Sexo.MASCULINO);
             usuario.setStatus(true);
@@ -109,7 +109,7 @@ public class AlbumBOTest {
 
                 Calendar calendario = Calendar.getInstance();
                 calendario.set(1988, 2, 7, 0, 0, 0);            
-                usuario.setDataNascimento(calendario.getTime());
+                usuario.setNascimento(calendario.getTime());
                 usuario.setSenha("123");
                 usuario.setSexo(Sexo.MASCULINO);
                 usuario.setStatus(true);
@@ -140,7 +140,7 @@ public class AlbumBOTest {
             fail("Erro ao listar: " + ex.getMessage());
         }
     }
-/*    @Test
+    @Test
     public void testMetodoSelecionar() {
         AlbumBO bo = new AlbumBO();
 
@@ -158,7 +158,7 @@ public class AlbumBOTest {
         } catch (Exception ex) {
             fail("Falha ao inserir um Album: " + ex.getMessage());
         }
-    }*/
+    }
     
     @Test
     public void testMetodoExcluir() throws Exception{

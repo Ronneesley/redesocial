@@ -19,7 +19,7 @@ public class Usuario {
 
     private String senha;
 
-    private Date dataNascimento;
+    private Date nascimento;
 
     private Sexo sexo;
 
@@ -79,12 +79,12 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public Date getDataNascimento() {
-        return dataNascimento;
+    public Date getNascimento() {
+        return nascimento;
     }
 
-    public void setDataNascimento(Date nascimento) {
-        this.dataNascimento = nascimento;
+    public void setNascimento(Date nascimento) {
+        this.nascimento = nascimento;
     }
 
     public Sexo getSexo() {
@@ -115,8 +115,8 @@ public class Usuario {
         return foto;
     }
 
-    public void setFoto(Multimidia midia) {
-        this.foto = midia;
+    public void setFoto(Multimidia foto) {
+        this.foto = foto;
     }
 
     public Cidade getCidade() {
@@ -130,9 +130,5 @@ public class Usuario {
     @Override
     public String toString() {
         return getNome();
-    }
-
-    public void setMidia(Multimidia selecionar) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

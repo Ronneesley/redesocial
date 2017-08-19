@@ -55,7 +55,7 @@ public class CidadeDAO extends DAOCRUDBase<Cidade> {
         Connection conexao = getConexao();
         
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("select * from cidades where id = ?");
+        pstmt = conexao.prepareStatement("select * from cidade where id = ?");
         
         pstmt.setInt(1, id);
         

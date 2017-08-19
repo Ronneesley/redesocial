@@ -32,7 +32,7 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
         pstmt.setString(2, dto.getEmail());
         pstmt.setString(3, dto.getTelefone());
         pstmt.setString(4, dto.getSenha());
-        pstmt.setDate(5, new java.sql.Date(dto.getDataNascimento().getTime()));
+        pstmt.setDate(5, new java.sql.Date(dto.getNascimento().getTime()));
         pstmt.setString(6, String.valueOf(dto.getSexo().getId()));
         pstmt.setDate(7, new java.sql.Date(dto.getDataCadastro().getTime()));
         pstmt.setBoolean(8, dto.getStatus());
@@ -72,7 +72,7 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
             u.setEmail(rs.getString("email"));
             u.setTelefone(rs.getString("telefone"));
             u.setSenha(rs.getString("senha"));
-            u.setDataNascimento(rs.getDate("nascimento"));            
+            u.setNascimento(rs.getDate("data"));            
             u.setSexo(Sexo.getSexo(rs.getString("sexo").charAt(0)));
             u.setDataCadastro(rs.getDate("data_cadastro"));
             u.setStatus(rs.getBoolean("status"));
@@ -96,7 +96,7 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
         pstmt.setString(2, u.getEmail());
         pstmt.setString(3, u.getTelefone());
         pstmt.setString(4, u.getSenha());  
-        pstmt.setDate(5, new java.sql.Date(u.getDataNascimento().getTime()));
+        pstmt.setDate(5, new java.sql.Date(u.getNascimento().getTime()));
         pstmt.setString(6, String.valueOf(u.getSexo().getId()));
         pstmt.setDate(7, new java.sql.Date(u.getDataCadastro().getTime()));
         pstmt.setBoolean(8, u.getStatus());
@@ -139,7 +139,7 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
             u.setEmail(rs.getString("email"));
             u.setTelefone(rs.getString("telefone"));
             u.setSenha(rs.getString("senha"));
-            u.setDataNascimento(rs.getDate("data"));            
+            u.setNascimento(rs.getDate("data"));            
             u.setSexo(Sexo.getSexo(rs.getString("sexo").charAt(0)));
             u.setDataCadastro(rs.getDate("data_cadastro"));
             u.setStatus(rs.getBoolean("status"));
