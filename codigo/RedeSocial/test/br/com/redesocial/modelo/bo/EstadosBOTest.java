@@ -36,8 +36,8 @@ public class EstadosBOTest {
      @Test
     public void testMetodoAlterar() {
         Pais pais = new Pais();
-        pais.setNome("teste");
-        
+        pais.setNome("Finalemnte");
+            
         EstadoBO bo = new EstadoBO();
 
         Estado estado = new Estado();
@@ -46,13 +46,16 @@ public class EstadosBOTest {
         try {
             PaisBO paisBO = new PaisBO();
             paisBO.inserir(pais);
+            
+            estado.setPais(pais);
+            
             bo.inserir(estado);
         } catch (Exception ex) {
             fail("Falha ao inserir um país: " + ex.getMessage());
         }
 
         //Mudança dos dados
-        estado.setNome("Argentina");
+        estado.setNome("testando");
 
         try {
             bo.alterar(estado);
