@@ -81,7 +81,7 @@ public class MultimidiaBOTeste {
         }		
     } 
     
-    @Test
+    /*@Test
     public void testMetodoListar() throws Exception {
         MultimidiaBO bo = new MultimidiaBO();
 
@@ -111,6 +111,5 @@ public class MultimidiaBOTeste {
         } catch (Exception ex){
             fail("Erro ao listar: " + ex.getMessage());
         }
-    }
+    }*/
 }
-
