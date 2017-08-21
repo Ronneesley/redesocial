@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
  * @since 16/08/2017
  */
  public class CidadeBOTest {
- /*@Test
+ @Test
     public void testMetodoInserir() {
         PaisBO paisbo = new PaisBO();
         
@@ -125,7 +125,7 @@ import static org.junit.Assert.*;
             fail("Erro ao listar: " + ex.getMessage());
         }
     }
-    */
+    
     @Test
     public void testMetodoExcluir() {
         
