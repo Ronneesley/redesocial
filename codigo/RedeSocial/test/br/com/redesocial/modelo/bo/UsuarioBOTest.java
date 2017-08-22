@@ -14,11 +14,11 @@ import org.junit.Test;
 
 /**
  * Unidade de testes para o UsuarioBO
- * @author Igor Justino Rodrigues
+ * @author Igor Justino Rodrigues, Gusttavo Nunes
  * @since 19/08/2017
  */
 public class UsuarioBOTest {
-    
+    /*
     @Test
     public void testMetodoInserir() {
     
@@ -92,13 +92,13 @@ public class UsuarioBOTest {
     public void testMetodoSelecionar() {
     
     }
-    
+    */
     @Test
     public void testMetodoAlterar() {
              
         
         Pais pais = new Pais();
-        pais.setNome("EUA");
+        pais.setNome("USA");
             
         Estado estado = new Estado();
         estado.setNome("California");
@@ -111,7 +111,7 @@ public class UsuarioBOTest {
         UsuarioBO bo = new UsuarioBO();  
         
         Usuario usuario = new Usuario();
-        usuario.setNome("Gustavo");
+        usuario.setNome("GusTavo");
         usuario.setDataCadastro(new Date());
         usuario.setEmail("gus22ng@gmail.com");
         Calendar calendario = Calendar.getInstance();
@@ -139,18 +139,37 @@ public class UsuarioBOTest {
             }           
             
             usuario.setNome("Gusttavo");
+            /*
+            usuario.setNome("Gusttavo");
+            usuario.setEmail("gus22ng@gmail.com");
+            usuario.setTelefone("(62) 98765-4321");
+            usuario.setSenha("password");
+            calendario.set(1996, 8, 29, 1, 1, 1);            
+            usuario.setDataNascimento(calendario.getTime());
+            usuario.setSexo(Sexo.MASCULINO);
+            usuario.setDataCadastro(new Date());            
+            usuario.setStatus(true);
+            usuario.setCidade(cidade);
+            usuario.setId(36);            
+            */
+            
+            /* 
+            Como é passado apenas 2 parametros(nome e o id) o update em UsuarioDAO, não vai ser executado, 
+            acusando erro, pois o update descrito lá apresenta 12 parametros.
+            Ao acrescentar um update que receba apenas 2 parametros, os comandos funcionam normalmente.
+            */
             
             try {
-                bo.alterar(usuario);
+                bo.alterar(usuario);//Falhou: ao alterar usuario: null
             } catch (Exception ex) {
                 fail("Falha ao alterar usuario: " + ex.getMessage());
-            }            
+            }
     }
-    
+    /*
     @Test
     public void testMetodoExcluir() throws Exception{
     
     }
-
+*/
    
 }
