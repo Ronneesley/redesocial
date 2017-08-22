@@ -18,6 +18,7 @@ import org.junit.Test;
  * @since 19/08/2017
  */
 public class UsuarioBOTest {
+    
     @Test
     public void testMetodoInserir() {
     
@@ -93,8 +94,67 @@ public class UsuarioBOTest {
     }
     
     @Test
+    public void testMetodoAlterar() {
+        UsuarioBO bo = new UsuarioBO();       
+        
+        try{
+            Pais pais = new Pais();
+            pais.setNome("EUA");
+            PaisBO paisBO = new PaisBO();
+            paisBO.inserir(pais);
+
+            Estado estado = new Estado();
+            estado.setNome("California");
+            estado.setPais(pais);
+
+            EstadoBO estadoBO = new EstadoBO();
+            estadoBO.inserir(estado);
+
+            Cidade cidade = new Cidade();
+            cidade.setNome("Los Angeles");
+            cidade.setEstado(estado);
+
+            CidadeBO cidadeBO = new CidadeBO();
+            cidadeBO.inserir(cidade);
+
+            Usuario usuario = new Usuario();
+            usuario.setNome("Gustavo");
+            usuario.setDataCadastro(new Date());
+            usuario.setEmail("gus22ng@gmail.com");
+            Calendar calendario = Calendar.getInstance();
+            calendario.set(1996, 8, 29, 0, 0, 0);            
+            usuario.setDataNascimento(calendario.getTime());
+            usuario.setSenha("123");
+            usuario.setSexo(Sexo.MASCULINO);
+            usuario.setStatus(true);
+            usuario.setTelefone("(62) 99654-0873");
+            usuario.setCidade(cidade);
+            
+            try {
+                bo.inserir(usuario);
+            } catch (Exception ex) {
+                fail("Falha ao inserir um usuario: " + ex.getMessage());
+            }
+            /*
+            
+            usuario.setNome("Gusttavo");
+            
+            try {
+                bo.alterar(usuario);
+            } catch (Exception ex) {
+                fail("Falha ao alterar usuario: " + ex.getMessage());
+            }
+            */
+            
+        } catch (Exception ex){
+            fail("Erro ao testar usuarior: " + ex.getMessage());
+        }   
+    }
+    /*
+    @Test
     public void testMetodoExcluir() throws Exception{
     
     }
+*/
    
 }
