@@ -261,7 +261,7 @@ public class AlbumBOTest {
            
             assertNotNull("Album não encontrado", albumSelecionadoPosExclusao);
         } catch (Exception ex) {
-            assertNotNull("Falha ao inserir um Album: " + ex.getMessage());
+            fail("Falha ao inserir um Album: " + ex.getMessage());
         }
     }
    

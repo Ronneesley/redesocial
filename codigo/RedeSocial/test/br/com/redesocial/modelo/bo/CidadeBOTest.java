@@ -129,10 +129,50 @@ import static org.junit.Assert.*;
     @Test
     public void testMetodoExcluir() {
         
+        PaisBO paisBO = new PaisBO();       
+        Pais pais = new Pais();
+        
+        pais.setNome("Brasil");
+        
+        try {
+            paisBO.inserir(pais);
+        } catch (Exception ex) {
+            fail("Falha ao inserir um país: " + ex.getMessage());
+        }
+        
+        EstadoBO estadoBO = new EstadoBO();
+        Estado estado = new Estado();
+        
+        estado.setNome("Goiás");
+        estado.setPais(pais);
+        
+        try {
+            estadoBO.inserir(estado);
+        } catch (Exception ex) {
+            fail("Falha ao inserir um estado: " + ex.getMessage());
+        }
+        
+        CidadeBO cidadeBO = new CidadeBO();
+        Cidade cidade = new Cidade();
+        
+        cidade.setNome("Ceres");        
+        cidade.setEstado(estado);        
+        
+        try {
+            cidadeBO.inserir(cidade);
+
+            int id = cidade.getId();
+            Cidade cidadeSelecionada = cidadeBO.selecionar(id);
+            assertNotNull("Cidade não encontrada", cidadeSelecionada);
+
+            cidadeBO.excluir(id);
+            Cidade cidadeSelecionadaPosExclusao = cidadeBO.selecionar(id);
+
+            assertNull("Cidade encontrada, mesmo após excluí-la", cidadeSelecionadaPosExclusao);
+        } catch (Exception ex) {
+            fail("Falha ao inserir uma cidade: " + ex.getMessage());
+        }        
     }
-
-
-
- }
+}
  
  

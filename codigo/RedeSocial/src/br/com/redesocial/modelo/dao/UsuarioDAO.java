@@ -90,7 +90,7 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
         Connection conexao = getConexao();
 
         PreparedStatement  pstmt; 
-        pstmt = conexao.prepareStatement("update usuario set nome = ?, email=?, telefone=?, senha =?, nascimento =?, sexo = ?, data_cadastro =?, status =?, foto=?, cidade=?, where id =? ");
+        pstmt = conexao.prepareStatement("update usuarios set nome = ?, email=?, telefone=?, senha =?, nascimento =?, sexo = ?, data_cadastro =?, status =?, foto=?, cidade=?, where id =? ");
        
         pstmt.setString(1, u.getNome());
         pstmt.setString(2, u.getEmail());
