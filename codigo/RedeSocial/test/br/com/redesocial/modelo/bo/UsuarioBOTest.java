@@ -18,7 +18,7 @@ import org.junit.Test;
  * @since 19/08/2017
  */
 public class UsuarioBOTest {
-    /*
+    
     @Test
     public void testMetodoInserir() {
     
@@ -92,7 +92,7 @@ public class UsuarioBOTest {
     public void testMetodoSelecionar() {
     
     }
-    */
+    
     @Test
     public void testMetodoAlterar() {
              
@@ -165,11 +165,11 @@ public class UsuarioBOTest {
                 fail("Falha ao alterar usuario: " + ex.getMessage());
             }
     }
-    /*
+    
     @Test
     public void testMetodoExcluir() throws Exception{
     
     }
-*/
+
    
 }
