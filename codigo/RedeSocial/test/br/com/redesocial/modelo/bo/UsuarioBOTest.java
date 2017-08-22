@@ -18,6 +18,7 @@ import org.junit.Test;
  * @since 19/08/2017
  */
 public class UsuarioBOTest {
+    
     @Test
     public void testMetodoInserir() {
     
@@ -93,8 +94,63 @@ public class UsuarioBOTest {
     }
     
     @Test
+    public void testMetodoAlterar() {
+             
+        
+        Pais pais = new Pais();
+        pais.setNome("EUA");
+            
+        Estado estado = new Estado();
+        estado.setNome("California");
+        estado.setPais(pais);
+        
+        Cidade cidade = new Cidade();
+        cidade.setNome("Los Angeles");
+        cidade.setEstado(estado);
+        
+        UsuarioBO bo = new UsuarioBO();  
+        
+        Usuario usuario = new Usuario();
+        usuario.setNome("Gustavo");
+        usuario.setDataCadastro(new Date());
+        usuario.setEmail("gus22ng@gmail.com");
+        Calendar calendario = Calendar.getInstance();
+        calendario.set(1996, 8, 29, 0, 0, 0);            
+        usuario.setDataNascimento(calendario.getTime());
+        usuario.setSenha("123");
+        usuario.setSexo(Sexo.MASCULINO);
+        usuario.setStatus(true);
+        usuario.setTelefone("(62) 98765-4321");
+        usuario.setCidade(cidade);
+        
+        try{
+            PaisBO paisBO = new PaisBO();
+            paisBO.inserir(pais);
+            
+            EstadoBO estadoBO = new EstadoBO();
+            estadoBO.inserir(estado);
+
+            CidadeBO cidadeBO = new CidadeBO();
+            cidadeBO.inserir(cidade);
+
+            bo.inserir(usuario);
+            } catch (Exception ex) {
+                fail("Falha ao inserir um usuario: " + ex.getMessage());
+            }           
+            
+            usuario.setNome("Gusttavo");
+            
+            try {
+                bo.alterar(usuario);
+            } catch (Exception ex) {
+                fail("Falha ao alterar usuario: " + ex.getMessage());
+            }            
+    }
+    
+    @Test
     public void testMetodoExcluir() throws Exception{
     
     }
+
    
 }
