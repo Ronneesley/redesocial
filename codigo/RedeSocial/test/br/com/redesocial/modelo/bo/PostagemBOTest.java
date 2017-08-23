@@ -6,9 +6,9 @@ import br.com.redesocial.modelo.dto.Pais;
 import br.com.redesocial.modelo.dto.Postagem;
 import br.com.redesocial.modelo.dto.Usuario;
 import br.com.redesocial.modelo.dto.enumeracoes.Sexo;
-import java.io.FileReader;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -17,8 +17,6 @@ import static org.junit.Assert.*;
  * @author Paulo Henrique
  */
 public class PostagemBOTest {
-    
-   
     @Test
     public void testMetodoInserir() {
         Pais pais = new Pais();
@@ -50,7 +48,7 @@ public class PostagemBOTest {
            
             Calendar calendario = Calendar.getInstance();
             calendario.set(1988, 2, 7, 0, 0, 0);            
-            usuario.setNascimento(calendario.getTime());
+            usuario.setDataNascimento(calendario.getTime());
             usuario.setSenha("123");
             usuario.setSexo(Sexo.MASCULINO);
             usuario.setStatus(true);
@@ -76,7 +74,8 @@ public class PostagemBOTest {
             fail("Falha ao inserir um comentário: " + ex.getMessage());            
         }
 
-        /*Postagem postagem2 = new Postagem();
+      /**
+        Postagem postagem2 = new Postagem();
         postagem2.setDescricao("Novo Comentário");
         postagem2.setCurtidas(0);
         postagem1.setData(calendario.getTime());
@@ -85,9 +84,103 @@ public class PostagemBOTest {
             bo.inserir(postagem2);
         } catch (Exception ex) {
             fail("Falha ao inserir um comentário: " + ex.getMessage());
-        }*/
+        }
+    */
+     }
+/**
+ *
+ * @author Warley Rodrigues
+ */        
+  @Test
+    public void testMetodoSelecionar() {
+        PostagemBO bo = new PostagemBO();
+
+        Postagem postagem = new Postagem();
+        postagem.setId(1);
+
+        try {
+            bo.inserir(postagem);
+
+            int id = postagem.getId();
+
+            Postagem postagemSelecionado = bo.selecionar(id);
+
+            assertNotNull("Postagem não encontrada", postagemSelecionado);
+        } catch (Exception ex) {
+            fail("Falha ao inserir uma postagem: " + ex.getMessage());
+        }
+    } 
+    
+   @Test
+    public void testMetodoListar() {
+       PostagemBO bo = new PostagemBO();
+
+        try {
+            List existentes = bo.listar();
+            int qtdeExistentes = existentes.size();
+
+            final int qtde = 2;
+            
+            for (int i = 0; i < 2; i++){
+            Pais pais = new Pais();
+            pais.setNome("Brasil");
         
+       
+            PaisBO paisBO = new PaisBO();
+            paisBO.inserir(pais);
+
+            Estado estado = new Estado();
+            estado.setNome("Goiás");
+            estado.setPais(pais);
+            
+            EstadoBO estadoBO = new EstadoBO();
+            estadoBO.inserir(estado);
+            
+            Cidade cidade = new Cidade();
+            cidade.setNome("Ceres");
+            cidade.setEstado(estado);
+            
+            CidadeBO cidadeBO = new CidadeBO();
+            cidadeBO.inserir(cidade);
+            
+            Usuario usuario = new Usuario();
+            usuario.setNome("Roni");
+            usuario.setDataCadastro(new Date());
+            usuario.setEmail("ronneesley@gmail.com");
+            //usuario.setFoto();
+           
+            Calendar calendario = Calendar.getInstance();
+            calendario.set(1988, 2, 7, 0, 0, 0);            
+            usuario.setDataNascimento(calendario.getTime());
+            usuario.setSenha("123");
+            usuario.setSexo(Sexo.MASCULINO);
+            usuario.setStatus(true);
+            usuario.setTelefone("(62) 91234-4567");
+            usuario.setCidade(cidade);
+            
+            UsuarioBO usuarioBO = new UsuarioBO();
+            usuarioBO.inserir(usuario);
+
+            
+            Postagem postagem1 = new Postagem();
+            postagem1.setDescricao("Comentário");
+            postagem1.setCurtidas(0);
+            postagem1.setUsuario(usuario);
+
+            calendario.set(2017, 7, 16, 21, 58, 0);
+            postagem1.setData(calendario.getTime());
+        
+            bo.inserir(postagem1);
+            }
+           List existentesFinal = bo.listar(); //insere os dados perfeitamente quando chega aqui dá erro e n consigo arrumar
+            int qtdeExistentesFinal = existentesFinal.size();
+
+            int diferenca = qtdeExistentesFinal - qtdeExistentes;
+
+            assertEquals(qtde, diferenca);
+
+        } catch (Exception ex) {
+            fail("Falha ao inserir um comentário: " + ex.getMessage());            
+        }
     }
-    
-    
 }

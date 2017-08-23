@@ -21,7 +21,7 @@ public class EstadoDAO extends DAOCRUDBase<Estado> {
         Connection conexao = getConexao();
 
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("select * from estado where id = ?");
+        pstmt = conexao.prepareStatement("select * from estados where id = ?");
         pstmt.setInt(1, id);
 
         ResultSet rs;

@@ -19,7 +19,7 @@ public class Usuario {
 
     private String senha;
 
-    private Date nascimento;
+    private Date dataNascimento;
 
     private Sexo sexo;
 
@@ -79,12 +79,12 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public Date getNascimento() {
-        return nascimento;
+    public Date getDataNascimento() {
+        return dataNascimento;
     }
 
-    public void setNascimento(Date nascimento) {
-        this.nascimento = nascimento;
+    public void setDataNascimento(Date dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 
     public Sexo getSexo() {

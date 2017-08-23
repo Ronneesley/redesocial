@@ -1,6 +1,8 @@
 package br.com.redesocial.modelo.bo;
 
 import br.com.redesocial.modelo.dto.Cidade;
+import br.com.redesocial.modelo.dto.Estado;
+import br.com.redesocial.modelo.dto.Pais;
 import java.util.List;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -12,12 +14,46 @@ import static org.junit.Assert.*;
  * @since 16/08/2017
  */
  public class CidadeBOTest {
-     @Test
+ @Test
     public void testMetodoInserir() {
+        PaisBO paisbo = new PaisBO();
         
-        
+        Pais pais = new Pais();
+        try {
+            pais.setNome("Brasil");
+            paisbo.inserir(pais);
+
+            int idpais = pais.getId();
+
+            Pais paisSelecionado = paisbo.selecionar(idpais);
+
+            EstadoBO estadobo = new EstadoBO();
+
+            Estado estado = new Estado();
+            estado.setNome("Goiás");
+            estado.setPais(paisSelecionado);
+            estadobo.inserir(estado);
+            
+            int idestado = estado.getId();
+            
+            Estado estadoSelecionado = estadobo.selecionar(idestado);
+            
+           
+            CidadeBO cidadebo = new CidadeBO();
+
+            Cidade cidade = new Cidade();
+            cidade.setNome("Goianesia");
+            cidade.setEstado(estadoSelecionado);
+                   
+       
+            cidadebo.inserir(cidade);
+            
+        } catch (Exception ex) {
+            fail("Falha ao inserir a cidade: " + ex.getMessage());
+        }
+
     }
-    
+   
     @Test
     public void testMetodoAlterar() {
         CidadeBO bo = new CidadeBO();
@@ -42,12 +78,25 @@ import static org.junit.Assert.*;
     
     @Test
     public void testMetodoSelecionar() {
-        CidadeBO bo = new CidadeBO();
-
-        Cidade cidade = new Cidade();
-        cidade.setId(1);
+        Pais pais = new Pais();
+        pais.setNome("Brazil");
 
         try{
+            PaisBO paisBO = new PaisBO();
+            paisBO.inserir(pais);
+
+            Estado estado = new Estado();
+            estado.setNome("Summonners Troll");
+            estado.setPais(pais);
+            
+            EstadoBO estadoBO = new EstadoBO();
+            estadoBO.inserir(estado); 
+         
+            CidadeBO bo = new CidadeBO();
+            Cidade cidade = new Cidade();
+            cidade.setEstado(estado);
+            cidade.setId(1);
+         
             bo.inserir(cidade);
             int id = cidade.getId();
 
@@ -93,5 +142,50 @@ import static org.junit.Assert.*;
     @Test
     public void testMetodoExcluir() {
         
+        PaisBO paisBO = new PaisBO();       
+        Pais pais = new Pais();
+        
+        pais.setNome("Brasil");
+        
+        try {
+            paisBO.inserir(pais);
+        } catch (Exception ex) {
+            fail("Falha ao inserir um país: " + ex.getMessage());
+        }
+        
+        EstadoBO estadoBO = new EstadoBO();
+        Estado estado = new Estado();
+        
+        estado.setNome("Goiás");
+        estado.setPais(pais);
+        
+        try {
+            estadoBO.inserir(estado);
+        } catch (Exception ex) {
+            fail("Falha ao inserir um estado: " + ex.getMessage());
+        }
+        
+        CidadeBO cidadeBO = new CidadeBO();
+        Cidade cidade = new Cidade();
+        
+        cidade.setNome("Ceres");        
+        cidade.setEstado(estado);        
+        
+        try {
+            cidadeBO.inserir(cidade);
+
+            int id = cidade.getId();
+            Cidade cidadeSelecionada = cidadeBO.selecionar(id);
+            assertNotNull("Cidade não encontrada", cidadeSelecionada);
+
+            cidadeBO.excluir(id);
+            Cidade cidadeSelecionadaPosExclusao = cidadeBO.selecionar(id);
+
+            assertNull("Cidade encontrada, mesmo após excluí-la", cidadeSelecionadaPosExclusao);
+        } catch (Exception ex) {
+            fail("Falha ao inserir uma cidade: " + ex.getMessage());
+        }        
     }
- }
+}
+ 
+ 

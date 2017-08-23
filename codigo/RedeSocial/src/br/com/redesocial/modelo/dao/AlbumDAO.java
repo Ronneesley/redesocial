@@ -43,7 +43,7 @@ public class AlbumDAO extends DAOCRUDBase<Album> {
         Connection conexao = getConexao();
 
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("select * from albuns order by date desc"); 
+        pstmt = conexao.prepareStatement("select * from albuns order by data desc"); 
 
         ResultSet rs;
         rs = pstmt.executeQuery();
@@ -100,6 +100,13 @@ public class AlbumDAO extends DAOCRUDBase<Album> {
 
     @Override
     public void excluir(int id) throws Exception {
+        Connection conexao = getConexao();
+
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("delete from albuns where id = ?");
+
+        pstmt.setInt(1, id);
+        pstmt.executeUpdate();
 
     }
 }

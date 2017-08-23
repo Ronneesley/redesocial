@@ -8,32 +8,34 @@
     
         <style>
            
-            div#geral {	
+            #geral {	
                 width: 501px;	
                 height: 400px;	
                 padding: 10px;	
                 margin: 0 auto;
+                border-width: 2px;
+                border-style: grove;
             }
-            div#topo {	
+            #topo {	
                 width: 501px;	
                 height: 65px;	
-                background-color: #ffc; /* Amarelo */	
+                background-color: #ccc; /*  */	
                 border-bottom: 1px solid #f00;
                 
             }
-            div#coluna_esquerda {	
+            #coluna_esquerda {	
                 float: left;	
                 width: 250px;	
                 height: 230px;	
                 background-color: #ccc; /* Cinza */
             }
-            div#coluna_direita {	
+            #coluna_direita {	
                 float: right;	
                 width: 250px;	
                 height: 230px;
-                background-color: #09f; /* Azul */
+                background-color: #ccc; /*  */
             }
-            div#rodape {	
+            #rodape {	
                 width: 501px;	
                 height: 49px;	
                 background-color: #090; /* Verde */	
@@ -42,11 +44,12 @@
             
             #imggrupo {
                 position: absolute;
-                left: 830px;
-                top: 150px;
+                left: 820px;
+                top: 130px;
                 width: 162px;
                 height: 182px;
                 aligner: center;
+                border-radius: 10px;
                 
             }
             
@@ -56,7 +59,17 @@
             
             input {
                 padding: 0px 10px 0px 0px;
+                margin: 2px 4px 6px 8px;    
+                
+            }
+            #botao {
+                float: right;
+                padding: 0px 10px 0px 0px;
                 margin: 2px 4px 6px 8px;
+            }
+            
+            select {
+                width: 125px;
             }
         
         </style>
@@ -74,23 +87,24 @@
                      <div id="coluna_esquerda"> 
                         <form action="#">
                             <label>Dê um nome ao grupo:</label>
-                            <input type="text" name="NomeGrupo" value="Carros tunados"><br>
+                            <input size="28" type="text" name="NomeGrupo" value="Carros tunados"><br>
                             <label>Convide Pessoas:</label>
-                            <input type="text" name="ConvitePessoas" value="Wesley M Félix"><br><br>
-                                <input type="checkbox" name="Termos" value="Bike"> Aceito os termos de uso<br>
+                            <input size="28" type="text" name="ConvitePessoas" value="Wesley M Félix"><br><br>
                                 <label>Tipo de grupo</label>
                                 <select name="TipoGrupo">
-                                    <option value="volvo">Público</option>
-                                    <option value="saab">Privado</option>
-                                </select>
-                                
-                                <input type="submit" value="Criar Grupo">
+                                    <option value="publico">Público</option>
+                                    <option value="privado">Privado</option>
+                                </select><br>
+                                <input type="checkbox" name="Termos" value="Aceito"> Aceito os termos de uso<br>
+                                <div id="botao">
+                                    <input type="submit" value="Criar Grupo">
+                                </div>
                         </form>
                      </div>	
                      
                      <div id="coluna_direita">
                          <label> Imagem Grupo</label>
-                         <img id="imggrupo" src="http://www.esoterikha.com/coaching-pnl/img/como-se-preparar-para-uma-dinamica-de-treinamentos-em-empresas.gif" alt="Imagem do Grupo">
+                         <img id="imggrupo" src="./imagens/grupo.jpg" alt="Imagem do Grupo">
                      </div>	
                      
                      

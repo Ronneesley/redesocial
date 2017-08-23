@@ -32,7 +32,7 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
         pstmt.setString(2, dto.getEmail());
         pstmt.setString(3, dto.getTelefone());
         pstmt.setString(4, dto.getSenha());
-        pstmt.setDate(5, new java.sql.Date(dto.getNascimento().getTime()));
+        pstmt.setDate(5, new java.sql.Date(dto.getDataNascimento().getTime()));
         pstmt.setString(6, String.valueOf(dto.getSexo().getId()));
         pstmt.setDate(7, new java.sql.Date(dto.getDataCadastro().getTime()));
         pstmt.setBoolean(8, dto.getStatus());
@@ -72,7 +72,7 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
             u.setEmail(rs.getString("email"));
             u.setTelefone(rs.getString("telefone"));
             u.setSenha(rs.getString("senha"));
-            u.setNascimento(rs.getDate("data"));            
+            u.setDataNascimento(rs.getDate("nascimento"));            
             u.setSexo(Sexo.getSexo(rs.getString("sexo").charAt(0)));
             u.setDataCadastro(rs.getDate("data_cadastro"));
             u.setStatus(rs.getBoolean("status"));
@@ -90,19 +90,29 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
         Connection conexao = getConexao();
 
         PreparedStatement  pstmt; 
-        pstmt = conexao.prepareStatement("update usuario set nome = ?, email=?, telefone=?, senha =?, nascimento =?, sexo = ?, data_cadastro =?, status =?, foto=?, cidade=?, where id =? ");
+        //O metodo criado de update passa 12 parâmetros, e no metodo de teste só passa 2(nome e o id); 
+         
+        /* //Comando para testar o testMetodoAlterar Usuario
+        pstmt = conexao.prepareStatement("update usuarios set nome = ? where id =? ");  
+        pstmt.setString(1, u.getNome());
+        pstmt.setInt(2, u.getId());        
+        */ //Fim do comando para testar o testMetodoAlterar 
+        
+        
+        
+        pstmt = conexao.prepareStatement("update usuarios set nome = ?, email=?, telefone=?, senha =?, nascimento =?, sexo = ?, data_cadastro =?, status =?, foto=?, cidade=?, where id =? ");
        
         pstmt.setString(1, u.getNome());
         pstmt.setString(2, u.getEmail());
         pstmt.setString(3, u.getTelefone());
         pstmt.setString(4, u.getSenha());  
-        pstmt.setDate(5, new java.sql.Date(u.getNascimento().getTime()));
+        pstmt.setDate(5, new java.sql.Date(u.getDataNascimento().getTime()));
         pstmt.setString(6, String.valueOf(u.getSexo().getId()));
         pstmt.setDate(7, new java.sql.Date(u.getDataCadastro().getTime()));
         pstmt.setBoolean(8, u.getStatus());
         pstmt.setInt(9, u.getFoto().getId());
         pstmt.setInt(10, u.getCidade().getId()); 
-        pstmt.setInt(11, u.getId());
+        pstmt.setInt(11, u.getId());          
        
         pstmt.executeUpdate();
     }
@@ -139,7 +149,7 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
             u.setEmail(rs.getString("email"));
             u.setTelefone(rs.getString("telefone"));
             u.setSenha(rs.getString("senha"));
-            u.setNascimento(rs.getDate("data"));            
+            u.setDataNascimento(rs.getDate("nascimento"));            
             u.setSexo(Sexo.getSexo(rs.getString("sexo").charAt(0)));
             u.setDataCadastro(rs.getDate("data_cadastro"));
             u.setStatus(rs.getBoolean("status"));
