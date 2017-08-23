@@ -253,26 +253,42 @@
 
 }
 %Pré-Condições
-{Possuir uma conta válida}
+{Estar validado no sistema}
 %Pós-condições
-{}
+{Cometário Publicado}
 %Fluxo Básico
 {
 \begin{itemize}
-\item Usuário acessa o site da rede social.
-\item Usuário faz login.
-\item Usuário identifica uma postagem do seu interesse.
-\item O usuário digita e publica seu comentário.
+	\item Usuário identifica uma postagem do seu interesse;
+	\item Usuário digita o comentário conforme a figura \ref{figura:meus_posts};
+	\item O usuário clica em "enviar" conforme a figura \ref{figura:meus_posts};
+	\item Comentário é publicado.
 \end{itemize}
 }
 %Fluxo Alternativo
 {
 \begin{itemize}
-\item Postagem foi deletada.
-\item Problemas de resposta do servidor.
-\item Exibe uma mensagem informando que a postagem foi deletada.
-\item Volta para a tela anterior.
-\item Problemas com sua conexão com a internet.
+	\item Postagem foi deletada.
+	\begin{itemize}
+		\item Exibe uma mensagem informando que a postagem foi deletada.
+		\item Volta para a tela anterior.
+	\end{itemize}
+	
+	\item Falha na conexão com o servidor.
+	
+	\begin{itemize}
+		\item Exibe uma mensagem informando que não foi possível conectar ao servidor;
+		\item Volta para a tela anterior.
+	\end{itemize}
+	
+	\item Conexão com a internet falhou.
+	\begin{itemize}
+		\item Exibe uma mensagem para verificar a conexão com a Internet;
+		\item Volta para a tela anterior.
+	\end{itemize}
+
+	
+	
 \end{itemize}
 }
 %Frequência de Ocorrencia
