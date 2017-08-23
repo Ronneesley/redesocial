@@ -20,7 +20,7 @@
                 width: 501px;	
                 height: 65px;	
                 background-color: #ccc; /*  */	
-                border-bottom: 1px solid #f00;
+                
                 
             }
             #coluna_esquerda {	
@@ -57,7 +57,7 @@
                 padding: 10px 2px 8px 10px;
             }
             
-            input {
+            input, select {
                 padding: 0px 10px 0px 0px;
                 margin: 2px 4px 6px 8px;    
                 
@@ -69,7 +69,18 @@
             }
             
             select {
-                width: 125px;
+                width: 220px;
+            }
+            
+            h3 {
+               padding: 0px 10px 0px 50px;
+                margin: 2px 4px 6px 8px;  
+            }
+            
+            h5 {
+               float: none;
+               padding: 0px 10px 0px 0px;
+               margin: 2px 4px 6px 8px; 
             }
         
         </style>
@@ -89,13 +100,13 @@
                             <label>Dê um nome ao grupo:</label>
                             <input size="28" type="text" name="NomeGrupo" value="Carros tunados"><br>
                             <label>Convide Pessoas:</label>
-                            <input size="28" type="text" name="ConvitePessoas" value="Wesley M Félix"><br><br>
-                                <label>Tipo de grupo</label>
+                            <input size="28" type="text" name="ConvitePessoas" value="Wesley M Félix"><br>
+                            <label>Tipo de grupo</label><br>
                                 <select name="TipoGrupo">
                                     <option value="publico">Público</option>
                                     <option value="privado">Privado</option>
                                 </select><br>
-                                <input type="checkbox" name="Termos" value="Aceito"> Aceito os termos de uso<br>
+                                <input type="checkbox" name="Termos" value="Aceito"> Aceito os termos de uso
                                 <div id="botao">
                                     <input type="submit" value="Criar Grupo">
                                 </div>
@@ -103,7 +114,7 @@
                      </div>	
                      
                      <div id="coluna_direita">
-                         <label> Imagem Grupo</label>
+                         <h3> Foto do Grupo</h3>
                          <img id="imggrupo" src="./imagens/grupo.jpg" alt="Imagem do Grupo">
                      </div>	
                      
