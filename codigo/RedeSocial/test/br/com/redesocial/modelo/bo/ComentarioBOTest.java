@@ -167,7 +167,7 @@ public class ComentarioBOTest {
            
            assertNull("comentario não encontrado", comentarioSelecionadoPosExclusao);
         }catch (Exception ex){
-                fail ("Falha ao inserir um comentario" + ex.getMessage());
+           fail ("Falha ao inserir um comentario" + ex.getMessage());
                 
          }
     }
