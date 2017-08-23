@@ -26,7 +26,7 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
     public void inserir(Usuario dto) throws Exception {
         Connection conexao = getConexao();
         
-        PreparedStatement pstmt = conexao.prepareStatement("insert into usuarios(nome, email, telefone, senha, nascimento, sexo, data_cadastro, status, foto, cidade) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
+        PreparedStatement pstmt = conexao.prepareStatement("insert into usuarios(nome, email, telefone, senha, data_nascimento, sexo, data_cadastro, status, foto, cidade) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
         
         pstmt.setString(1, dto.getNome());
         pstmt.setString(2, dto.getEmail());
@@ -72,7 +72,7 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
             u.setEmail(rs.getString("email"));
             u.setTelefone(rs.getString("telefone"));
             u.setSenha(rs.getString("senha"));
-            u.setDataNascimento(rs.getDate("nascimento"));            
+            u.setDataNascimento(rs.getDate("data_nascimento"));            
             u.setSexo(Sexo.getSexo(rs.getString("sexo").charAt(0)));
             u.setDataCadastro(rs.getDate("data_cadastro"));
             u.setStatus(rs.getBoolean("status"));
@@ -100,7 +100,7 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
         
         
         
-        pstmt = conexao.prepareStatement("update usuarios set nome = ?, email=?, telefone=?, senha =?, nascimento =?, sexo = ?, data_cadastro =?, status =?, foto=?, cidade=?, where id =? ");
+        pstmt = conexao.prepareStatement("update usuarios set nome = ?, email=?, telefone=?, senha =?, data_nascimento =?, sexo = ?, data_cadastro =?, status =?, foto=?, cidade=?, where id =? ");
        
         pstmt.setString(1, u.getNome());
         pstmt.setString(2, u.getEmail());
@@ -149,7 +149,7 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
             u.setEmail(rs.getString("email"));
             u.setTelefone(rs.getString("telefone"));
             u.setSenha(rs.getString("senha"));
-            u.setDataNascimento(rs.getDate("nascimento"));            
+            u.setDataNascimento(rs.getDate("data_nascimento"));            
             u.setSexo(Sexo.getSexo(rs.getString("sexo").charAt(0)));
             u.setDataCadastro(rs.getDate("data_cadastro"));
             u.setStatus(rs.getBoolean("status"));
