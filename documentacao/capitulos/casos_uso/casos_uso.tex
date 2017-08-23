@@ -212,7 +212,7 @@
 {
 \begin{itemize}
 \item Usuário acessa o site da rede social;
-\item O sistema exibe a página de login. Figura: \ref{figura:login}
+\item O sistema exibe a página de login (Figura \ref{figura:login})
 \item Usuário digita seu usuário e senha, em seus respectivos campos;
 \item Após inserir as informações, o usuário aciona a opção de realizar login;
 \item Servidor valida as informações digitadas pelo usuário e abre uma sessão para o usuário.
@@ -222,7 +222,7 @@
 {
 \begin{itemize}
 \item Ocorreu algum erro ao realizar login;
-\item É mostrado uma mensagem de erro ao tentar realizar o login;
+\item É mostrado uma mensagem de erro ao tentar realizar login;
 \item Usuário não preenche os campos necessários;
 \item Usuário não preenche os campos corretamente, de acordo com seus dados;
 \item Problemas com o servidor que precisam ser notificados ao usuário;
@@ -253,26 +253,42 @@
 
 }
 %Pré-Condições
-{Possuir uma conta válida}
+{Estar validado no sistema}
 %Pós-condições
-{}
+{Cometário Publicado}
 %Fluxo Básico
 {
 \begin{itemize}
-\item Usuário acessa o site da rede social.
-\item Usuário faz login.
-\item Usuário identifica uma postagem do seu interesse.
-\item O usuário digita e publica seu comentário.
+	\item Usuário identifica uma postagem do seu interesse;
+	\item Usuário digita o comentário conforme a figura \ref{figura:meus_posts};
+	\item O usuário clica em "enviar" conforme a figura \ref{figura:meus_posts};
+	\item Comentário é publicado.
 \end{itemize}
 }
 %Fluxo Alternativo
 {
 \begin{itemize}
-\item Postagem foi deletada.
-\item Problemas de resposta do servidor.
-\item Exibe uma mensagem informando que a postagem foi deletada.
-\item Volta para a tela anterior.
-\item Problemas com sua conexão com a internet.
+	\item Postagem foi deletada.
+	\begin{itemize}
+		\item Exibe uma mensagem informando que a postagem foi deletada.
+		\item Volta para a tela anterior.
+	\end{itemize}
+	
+	\item Falha na conexão com o servidor.
+	
+	\begin{itemize}
+		\item Exibe uma mensagem informando que não foi possível conectar ao servidor;
+		\item Volta para a tela anterior.
+	\end{itemize}
+	
+	\item Conexão com a internet falhou.
+	\begin{itemize}
+		\item Exibe uma mensagem para verificar a conexão com a Internet;
+		\item Volta para a tela anterior.
+	\end{itemize}
+
+	
+	
 \end{itemize}
 }
 %Frequência de Ocorrencia
@@ -364,7 +380,14 @@
 	\item Exibir mensagem de erro ao usuário sobre o preenchimento do campo.
 	\item Exibir a forma correta de preencher.
 	\item Usuário não confirmar a alteração.
+	\item Informa o usuário se deseja salvar as alterações realizadas.
+	\item Usuário inserir telefone inválido.
+	\item Usuário inserir redes sociais inválidas.
+	\item Sistema informar sobre os devidos erros de inserção.
 	\item Usuário não estar conectado a internet.
+	\item Perda das alterações realizadas, tendo, que refazer ao restabelecer a conexão com a internet.
+	\item Usuário encerrar a sessão sem salvar as alterações.
+	\item Usuário fechar o navegador.
 \end{itemize}
 }
 %Frequência de Ocorrência
@@ -423,190 +446,6 @@
 %Identificador
 {UC10}
 %Nome
-{Criar álbum}
-%Ator Principal
-{Usuário}
-%Interessados
-{
-\begin{itemize}
-	\item Usuário: seleciona a opção “criar álbum”.
-	
-\end{itemize}
-
-}
-%Pré-Condições
-{Possuir uma conta válida e estar conectado (logado no sistema)}
-%Pós-condições
-{}
-%Fluxo Básico
-{
-\begin{itemize}
-	\item Usuário acessa o site da rede social.
-	\item Usuário faz login.
-	\item Usuário acessa na pasta álbum da rede social.
-	\item Usuário o sistema redireciona o ator para as fotos.
-	\item Usuário o ator seleciona as fotos.
-	\item Usuário o ator envia as fotos para carregar no álbum.
-\end{itemize}
-}
-%Fluxo Alternativo
-{
-\begin{itemize}
-	\item Pelo menos uma foto não foi selecionada.
-	(Volta-se então para a pasta e redireciona o ator para as fotos).
-\end{itemize}
-}
-%Frequência de Ocorrencia
-{Aproximadamente 2 vez ao dia.}
-%Problemas em Aberto
-{
-
-}
-
-%-----------------------------------------------------------
-
-\casoDeUso
-%Identificador
-{UC11}
-%Nome
-{Visualizar álbum}
-%Ator Principal
-{Usuário}
-%Interessados
-{
-\begin{itemize}
-	\item Usuário:seleciona a opção “fotos”.
-	
-\end{itemize}
-
-}
-%Pré-Condições
- {Possuir álbum (fotos)}
-%Pós-condições
-{}
-%Fluxo Básico
-{
-\begin{itemize}
-	\item Usuário acessa o site da rede social.
-	\item Usuário faz login.
-	\item Usuário acessa na pasta fotos da rede social.
-	\item Usuário o sistema mostra as fotos.
-	\item Usuário o ator seleciona a pasta álbum do sistema.
-\end{itemize}
-}
-%Fluxo Alternativo
-{
-\begin{itemize}
-	\item Não foi selecionada nenhuma pasta.
-
-\end{itemize}
-}
-%Frequência de Ocorrencia
-{Aproximadamente 1 vez ao dia.}
-%Problemas em Aberto
-{
-
-}
-
-%-----------------------------------------------------------
-
-\casoDeUso
-%Identificador
-{UC12}
-%Nome
-{Editar álbum}
-%Ator Principal
-{Usuário}
-%Interessados
-{
-\begin{itemize}
-	\item Usuário:seleciona a opção “álbum”.
-	
-\end{itemize}
-
-}
-%Pré-Condições
- {Possuir álbum (fotos)}
-%Pós-condições
-{}
-%Fluxo Básico
-{
-\begin{itemize}
-	\item Usuário acessa o site da rede social.
-	\item Usuário faz login.
-	\item Usuário acessa na pasta álbum da rede social.
-	\item Usuário o sistema mostra os álbum.
-	\item Usuário o ator seleciona o álbum que deseja editar.
-	\item Usuário ao editar as fotos que deseja,depois clica em "Salva" e as alterações seram salvas.
-\end{itemize}
-}
-%Fluxo Alternativo
-{
-\begin{itemize}
-	\item Não foi selecionado nenhuma álbum.
-
-\end{itemize}
-}
-%Frequência de Ocorrencia
-{Aproximadamente 1 vez ao dia.}
-%Problemas em Aberto
-{
-
-}
-
-%-----------------------------------------------------------
-
-\casoDeUso
-%Identificador
-{UC13}
-%Nome
-{Apaga álbum}
-%Ator Principal
-{Usuário}
-%Interessados
-{
-\begin{itemize}
-	\item Usuário:seleciona a opção “álbum”.
-	
-\end{itemize}
-
-}
-%Pré-Condições
- {Possuir álbum (fotos)}
-%Pós-condições
-{}
-%Fluxo Básico
-{
-\begin{itemize}
-	\item Usuário acessa o site da rede social.
-	\item Usuário faz login.
-	\item Usuário acessa na pasta álbum da rede social.
-	\item Usuário o sistema mostra os álbum.
-	\item Usuário o ator seleciona o álbum que deseja apaga.
-	\item Usuário depois que seleciona o álbum que deseja apaga, clica em "Apaga" e o álbum seram apagado.
-\end{itemize}
-}
-%Fluxo Alternativo
-{
-\begin{itemize}
-	\item Não foi selecionado nenhuma álbum.
-
-\end{itemize}
-}
-%Frequência de Ocorrencia
-{Aproximadamente 1 vez ao mês.}
-%Problemas em Aberto
-{
-
-}
-
-
-%-----------------------------------------------------------
-
-\casoDeUso
-%Identificador
-{UC14}
-%Nome
 {Enviar mensagem no chat}
 %Ator Principal
 {Usuário}
@@ -625,12 +464,10 @@
 %Fluxo Básico
 {
 \begin{itemize}
-	\item Usuário acessa o site da rede social.
-	\item Usuário faz login.
 	\item Usuário acessa o link mensagens.
-	\item Usuário o sistema mostra outros usuários online.
+	\item Usuário o sistema mostra outros usuários online ou offline (Figura \ref{figura:chat_ativos}).
 	\item Usuário o ator seleciona um usuário online.
-	\item Usuário o ator digita uma mensagem e clica no botão enviar (Figura 8).
+	\item Usuário o ator digita uma mensagem e clica no botão enviar (Figura \ref{figura:mensagens}).
 \end{itemize}
 }
 %Fluxo Alternativo
@@ -644,6 +481,48 @@
 {Diariamente.}
 %Problemas em Aberto
 {
+}
+%--------------------------------------------------------------------------------------------------------
+\casoDeUso
+%Identificador
+{UC11}
+%Nome
+{Manter álbum}
+%Ator Principal
+{Usuário}
+%Interessados
+{
+\begin{itemize}
+	\item Usuário: seleciona a opção álbum.
+	
+\end{itemize}
+
+}
+%Pré-Condições
+ {Possuir uma conta válida e estar conectado (logado no sistema}
+%Pós-condições
+{}
+%Fluxo Básico
+{
+\begin{itemize}
+	\item Usuário acessa ao álbum.
+	\item Usuário o sistema mostra todos os álbum.
+	\item Usuário o ator seleciona a foto ou álbum pode (visualizar, apaga, editar e postar fotos).
+	\item Usuário o ator clicar na opção (criar álbum ou fotos) e o sitema redireciona para as fotos e seleciona a foto que será postada na rede social.
+\end{itemize}
+}
+%Fluxo Alternativo
+{
+\begin{itemize}
+	\item Não foi selecionado nenhum álbum .
+
+\end{itemize}
+}
+%Frequência de Ocorrencia
+{Duas vezes por semana.}
+%Problemas em Aberto
+{
 
 }
 %--------------------------------------------------------------------------------------------------------
+

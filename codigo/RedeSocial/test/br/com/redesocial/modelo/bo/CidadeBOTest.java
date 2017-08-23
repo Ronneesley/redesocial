@@ -78,12 +78,25 @@ import static org.junit.Assert.*;
     
     @Test
     public void testMetodoSelecionar() {
-        CidadeBO bo = new CidadeBO();
-
-        Cidade cidade = new Cidade();
-        cidade.setId(1);
+        Pais pais = new Pais();
+        pais.setNome("Brazil");
 
         try{
+            PaisBO paisBO = new PaisBO();
+            paisBO.inserir(pais);
+
+            Estado estado = new Estado();
+            estado.setNome("Summonners Troll");
+            estado.setPais(pais);
+            
+            EstadoBO estadoBO = new EstadoBO();
+            estadoBO.inserir(estado); 
+         
+            CidadeBO bo = new CidadeBO();
+            Cidade cidade = new Cidade();
+            cidade.setEstado(estado);
+            cidade.setId(1);
+         
             bo.inserir(cidade);
             int id = cidade.getId();
 
