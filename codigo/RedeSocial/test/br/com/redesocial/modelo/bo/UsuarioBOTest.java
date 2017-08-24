@@ -18,7 +18,7 @@ import org.junit.Test;
  * @since 19/08/2017
  */
 public class UsuarioBOTest {
-    /*
+
     @Test
     public void testMetodoInserir() {        
         UsuarioBO usuariobo = new UsuarioBO();
@@ -133,7 +133,7 @@ public class UsuarioBOTest {
     public void testMetodoSelecionar() {
     
     }
-    */
+
     @Test
     public void testMetodoAlterar() {
              

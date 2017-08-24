@@ -151,6 +151,7 @@ public class ComentarioBOTest {
         }
     }
     
+    @Test
     public void testMetodoExcluir(){
        ComentarioBO bo = new ComentarioBO();
         

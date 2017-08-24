@@ -34,7 +34,7 @@ public class EstadosBOTest {
     }
         
     
-     /*@Test
+     @Test
     public void testMetodoAlterar() {
         Pais pais = new Pais();
         pais.setNome("Finalemnte");
@@ -122,5 +122,5 @@ public class EstadosBOTest {
         } catch (Exception ex){
             fail("Erro ao listar: " + ex.getMessage());
         }
-    }*/
+    }
  }
