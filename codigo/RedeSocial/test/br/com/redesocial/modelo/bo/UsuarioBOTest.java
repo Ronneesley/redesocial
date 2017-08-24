@@ -14,14 +14,55 @@ import org.junit.Test;
 
 /**
  * Unidade de testes para o UsuarioBO
- * @author Igor Justino Rodrigues, Gusttavo Nunes
+ * @author Igor Justino Rodrigues, Gusttavo Nunes, Willian Wallace
  * @since 19/08/2017
  */
 public class UsuarioBOTest {
-    
+    /*
     @Test
-    public void testMetodoInserir() {
-    
+    public void testMetodoInserir() {        
+        UsuarioBO usuariobo = new UsuarioBO();
+        
+        Pais pais = new Pais();
+        pais.setNome("Brasil");
+        try{
+            PaisBO paisBO = new PaisBO();
+            paisBO.inserir(pais);
+
+            Estado estado = new Estado();
+            estado.setNome("Goiás");
+            estado.setPais(pais);
+            
+            EstadoBO estadoBO = new EstadoBO();
+            estadoBO.inserir(estado);
+            
+            Cidade cidade = new Cidade();
+            cidade.setNome("Ceres");
+            cidade.setEstado(estado);
+            
+            CidadeBO cidadeBO = new CidadeBO();
+            cidadeBO.inserir(cidade);
+            
+            Usuario usuario = new Usuario();
+            usuario.setNome("Roni");
+            usuario.setDataCadastro(new Date());
+            usuario.setEmail("ronneesley@gmail.com");
+            //usuario.setFoto();
+           
+            Calendar calendario = Calendar.getInstance();
+            calendario.set(1988, 2, 7, 0, 0, 0);            
+            usuario.setDataNascimento(calendario.getTime());
+            usuario.setSenha("123");
+            usuario.setSexo(Sexo.MASCULINO);
+            usuario.setStatus(true);
+            usuario.setTelefone("(62) 91234-4567");
+            usuario.setCidade(cidade);
+            
+            usuariobo.inserir(usuario);
+        }catch (Exception ex) {
+            ex.printStackTrace();
+            fail("Falha ao inserir um usuario: " + ex.getMessage());            
+        }
     }
     
     @Test
@@ -92,7 +133,7 @@ public class UsuarioBOTest {
     public void testMetodoSelecionar() {
     
     }
-    
+    */
     @Test
     public void testMetodoAlterar() {
              
@@ -138,26 +179,7 @@ public class UsuarioBOTest {
                 fail("Falha ao inserir um usuario: " + ex.getMessage());
             }           
             
-            usuario.setNome("Gusttavo");
-            /*
-            usuario.setNome("Gusttavo");
-            usuario.setEmail("gus22ng@gmail.com");
-            usuario.setTelefone("(62) 98765-4321");
-            usuario.setSenha("password");
-            calendario.set(1996, 8, 29, 1, 1, 1);            
-            usuario.setDataNascimento(calendario.getTime());
-            usuario.setSexo(Sexo.MASCULINO);
-            usuario.setDataCadastro(new Date());            
-            usuario.setStatus(true);
-            usuario.setCidade(cidade);
-            usuario.setId(36);            
-            */
-            
-            /* 
-            Como é passado apenas 2 parametros(nome e o id) o update em UsuarioDAO, não vai ser executado, 
-            acusando erro, pois o update descrito lá apresenta 12 parametros.
-            Ao acrescentar um update que receba apenas 2 parametros, os comandos funcionam normalmente.
-            */
+            usuario.setNome("Gusttavo");            
             
             try {
                 bo.alterar(usuario);//Falhou: ao alterar usuario: null
@@ -165,11 +187,12 @@ public class UsuarioBOTest {
                 fail("Falha ao alterar usuario: " + ex.getMessage());
             }
     }
-    
+    /*
     @Test
     public void testMetodoExcluir() throws Exception{
     
     }
+    */
+    
 
-   
 }

@@ -153,7 +153,7 @@ public class ComentarioBOTest {
             
             calendario.set(1986, 4, 8, 0, 0, 0);            
             comentario.setData(calendario.getTime());
-            comentario.setPostagem(1);
+            //comentario.setPostagem(1);
             
             bo.inserir(comentario);
            
@@ -172,3 +172,4 @@ public class ComentarioBOTest {
          }
     }
 }
+
