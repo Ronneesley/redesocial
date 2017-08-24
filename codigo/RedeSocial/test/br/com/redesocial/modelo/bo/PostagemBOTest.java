@@ -93,24 +93,65 @@ public class PostagemBOTest {
  */        
   @Test
     public void testMetodoSelecionar() {
-        PostagemBO bo = new PostagemBO();
-
-        Postagem postagem = new Postagem();
-        postagem.setId(1);
-
+        Pais pais = new Pais();
+        pais.setNome("Brasil");
+        
         try {
-            PostagemBO postagemBO = new PostagemBO();
-            bo.inserir(postagem);
+            PaisBO paisBO = new PaisBO();
+            paisBO.inserir(pais);
+
+            Estado estado = new Estado();
+            estado.setNome("Acre");
+            estado.setPais(pais);
             
-            int id = postagem.getId();
-
-            Postagem postagemSelecionado = bo.selecionar(id);
-
-            assertNotNull("Postagem não encontrada", postagemSelecionado);
+            EstadoBO estadoBO = new EstadoBO();
+            estadoBO.inserir(estado);
+            
+            Cidade cidade = new Cidade();
+            cidade.setNome("Rio Branco");
+            cidade.setEstado(estado);
+            
+            CidadeBO cidadeBO = new CidadeBO();
+            cidadeBO.inserir(cidade);
+            
+            Usuario usuario = new Usuario();
+            usuario.setNome("Warley");
+            usuario.setDataCadastro(new Date());
+            usuario.setEmail("Acreano@gmail.com");
+            //usuario.setFoto();
+                           
+            Calendar calendario = Calendar.getInstance();
+            calendario.set(1988, 2, 7, 0, 0, 0);            
+            usuario.setDataNascimento(calendario.getTime());
+            usuario.setSenha("123");
+            usuario.setSexo(Sexo.MASCULINO);
+            usuario.setStatus(true);
+            usuario.setTelefone("(62) 99654-0873");
+            usuario.setCidade(cidade);
+            
+            UsuarioBO usuarioBO = new UsuarioBO();
+            usuarioBO.inserir(usuario);
+            
+            Postagem postagem = new Postagem();
+            postagem.setDescricao("Comentário");
+            postagem.setCurtidas(0);
+            postagem.setUsuario(usuario);
+            
+            calendario.set(1998, 0, 8, 0, 0, 0);            
+            postagem.setData(calendario.getTime());
+            
+            PostagemBO postagembo = new PostagemBO();
+            postagembo.inserir(postagem);
+            
+            int idpostagem = postagem.getId();
+            
+            postagembo.selecionar(idpostagem);
+            
         } catch (Exception ex) {
-            fail("Falha ao inserir uma postagem: " + ex.getMessage());
+            fail("Postagem não selecionada: " + ex.getMessage());            
         }
-    } 
+
+    }
     
    @Test
     public void testMetodoListar() {
