@@ -183,4 +183,71 @@ public class PostagemBOTest {
             fail("Falha ao inserir um comentário: " + ex.getMessage());            
         }
     }
-}
+    
+    @Test
+    public void testMetodoExcluir() { //Por Thalia
+        Pais pais = new Pais();
+        pais.setNome("Canadá");
+        
+        try {
+            PaisBO paisBO = new PaisBO();
+            paisBO.inserir(pais);
+
+            Estado estado = new Estado();
+            estado.setNome("Rondônia");
+            estado.setPais(pais);
+            
+            EstadoBO estadoBO = new EstadoBO();
+            estadoBO.inserir(estado);
+            
+            Cidade cidade = new Cidade();
+            cidade.setNome("Rubiataba");
+            cidade.setEstado(estado);
+            
+            CidadeBO cidadeBO = new CidadeBO();
+            cidadeBO.inserir(cidade);
+            
+            Usuario usuario = new Usuario();
+            usuario.setNome("Thalia");
+            usuario.setDataCadastro(new Date());
+            usuario.setEmail("thalia@gmail.com");
+            //usuario.setFoto();
+           
+            Calendar calendario = Calendar.getInstance();
+            calendario.set(1998, 2, 15, 0, 0, 0);            
+            usuario.setDataNascimento(calendario.getTime());
+            usuario.setSenha("123456");
+            usuario.setSexo(Sexo.FEMININO);
+            usuario.setStatus(true);
+            usuario.setTelefone("(62) 91222-4444");
+            usuario.setCidade(cidade);
+            
+            UsuarioBO usuarioBO = new UsuarioBO();
+            usuarioBO.inserir(usuario);
+
+            PostagemBO bo = new PostagemBO();
+
+            Postagem postagem1 = new Postagem();
+            postagem1.setDescricao("Comentário");
+            postagem1.setCurtidas(0);
+            postagem1.setUsuario(usuario);
+
+            calendario.set(2017, 7, 16, 21, 58, 0);
+            postagem1.setData(calendario.getTime());
+        
+            bo.inserir(postagem1);
+
+            int id = postagem1.getId();
+            Postagem postagem1Selecionada = bo.selecionar(id);
+            assertNotNull("Postagem não encontrada", postagem1Selecionada);
+
+            bo.excluir(id);
+            Postagem postagem1SelecionadoPosExclusao = bo.selecionar(id);
+
+            assertNull("Postagem encontrada, mesmo após excluí-la", postagem1SelecionadoPosExclusao);
+        } catch (Exception ex) {
+            fail("Falha ao inserir uma postagem: " + ex.getMessage());
+        }
+    }
+ }
+
