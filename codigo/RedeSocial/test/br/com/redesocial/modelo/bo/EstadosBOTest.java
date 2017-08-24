@@ -4,6 +4,7 @@ import br.com.redesocial.modelo.dto.Estado;
 import br.com.redesocial.modelo.dto.Pais;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import java.util.List;
 /**
  *
  * @author Inimigo, Andrey, Daniel
@@ -90,4 +91,36 @@ public class EstadosBOTest {
         }
     }
     
-}
+
+
+ @Test
+ public void testMetodoListar() {
+        EstadoBO bo = new EstadoBO();
+
+        try {
+            List existentes = bo.listar();
+            int qtdeExistentes = existentes.size();
+
+            final int qtde = 10;
+            for (int i = 0; i < 10; i++){
+                Estado estado = new Estado();
+                estado.setNome("Goiás");
+
+                try {
+                    bo.inserir(estado);
+                } catch (Exception ex) {
+                    fail("Falha ao inserir um estado: " + ex.getMessage());
+                }
+            }
+
+            List existentesFinal = bo.listar();
+            int qtdeExistentesFinal = existentesFinal.size();
+
+            int diferenca = qtdeExistentesFinal - qtdeExistentes;
+
+            assertEquals(qtde, diferenca);
+        } catch (Exception ex){
+            fail("Erro ao listar: " + ex.getMessage());
+        }
+    }
+ }
