@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.8.23)  23 AUG 2017 21:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.8.24)  24 AUG 2017 01:39
 entering extended mode
 **./documentacao.tex
 (documentacao.tex
@@ -341,7 +341,7 @@ Package verse [2008/07/23] emulated by memoir.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\memoir\mempatch.sty"
 Package: mempatch 2009/07/24 v6.0f Patches for memoir class v1.6180339
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\textcase\textcase.sty"
+(C:\Users\Aluno\AppData\Roaming\MiKTeX\2.9\tex\latex\textcase\textcase.sty
 Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
 LaTeX Info: Redefining \MakeTextUppercase on input line 47.
 LaTeX Info: Redefining \MakeTextLowercase on input line 50.
@@ -1288,9 +1288,9 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
  [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]pdfTeX warning (ext4): des
-tination with the same identifier (name{page.1}) has been already used, duplica
-te ignored
+{C:/Users/Aluno/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]pdfTeX warni
+ng (ext4): destination with the same identifier (name{page.1}) has been already
+ used, duplicate ignored
 <to be read again> 
                    \relax 
 l.6 
@@ -1871,10 +1871,6 @@ Overfull \hbox (12.79996pt too wide) in paragraph at lines 295--295
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: Reference `figura:Layout_Fedd' on page 31 undefined on input lin
-e 341.
-
-
 Overfull \hbox (12.79996pt too wide) in paragraph at lines 341--341
 [][] 
  []
@@ -1902,7 +1898,7 @@ Overfull \hbox (12.79996pt too wide) in paragraph at lines 440--440
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (12.79996pt too wide) in paragraph at lines 482--482
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 484--484
 [][] 
  []
 
@@ -1910,7 +1906,7 @@ Overfull \hbox (12.79996pt too wide) in paragraph at lines 482--482
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (12.79996pt too wide) in paragraph at lines 523--523
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 525--525
 [][] 
  []
 
@@ -1921,7 +1917,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ] [32] [33] [34] [35] [36] [37] [38]
 [39] [40] [41] [42]
-<../banco_de_dados/redesocial.png, id=395, 859.21pt x 1000.73875pt>
+<../banco_de_dados/redesocial.png, id=396, 859.21pt x 1000.73875pt>
 File: ../banco_de_dados/redesocial.png Graphic file (type png)
 
 <use ../banco_de_dados/redesocial.png>
@@ -1958,7 +1954,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 45.
  ) 
 Here is how much of TeX's memory you used:
  14993 strings out of 493333
- 221596 string characters out of 3139194
+ 221624 string characters out of 3139194
  471166 words of memory out of 3000000
  18051 multiletter control sequences out of 15000+200000
  17826 words of font info for 82 fonts, out of 3000000 for 9000
@@ -1968,9 +1964,9 @@ Here is how much of TeX's memory you used:
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program 
 Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/Program Files/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on documentacao.pdf (45 pages, 1576740 bytes).
+Output written on documentacao.pdf (45 pages, 1576866 bytes).
 PDF statistics:
- 517 PDF objects out of 1000 (max. 8388607)
+ 518 PDF objects out of 1000 (max. 8388607)
  123 named destinations out of 1000 (max. 500000)
  11549 words of extra memory for PDF output out of 12000 (max. 10000000)
 
