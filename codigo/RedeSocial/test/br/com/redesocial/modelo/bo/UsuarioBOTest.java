@@ -14,14 +14,54 @@ import org.junit.Test;
 
 /**
  * Unidade de testes para o UsuarioBO
- * @author Igor Justino Rodrigues, Gusttavo Nunes
+ * @author Igor Justino Rodrigues, Gusttavo Nunes, Willian Wallace
  * @since 19/08/2017
  */
 public class UsuarioBOTest {
-    
     @Test
-    public void testMetodoInserir() {
-    
+    public void testMetodoInserir() {        
+        UsuarioBO usuariobo = new UsuarioBO();
+        
+        Pais pais = new Pais();
+        pais.setNome("Brasil");
+        try{
+            PaisBO paisBO = new PaisBO();
+            paisBO.inserir(pais);
+
+            Estado estado = new Estado();
+            estado.setNome("Goiás");
+            estado.setPais(pais);
+            
+            EstadoBO estadoBO = new EstadoBO();
+            estadoBO.inserir(estado);
+            
+            Cidade cidade = new Cidade();
+            cidade.setNome("Ceres");
+            cidade.setEstado(estado);
+            
+            CidadeBO cidadeBO = new CidadeBO();
+            cidadeBO.inserir(cidade);
+            
+            Usuario usuario = new Usuario();
+            usuario.setNome("Roni");
+            usuario.setDataCadastro(new Date());
+            usuario.setEmail("ronneesley@gmail.com");
+            //usuario.setFoto();
+           
+            Calendar calendario = Calendar.getInstance();
+            calendario.set(1988, 2, 7, 0, 0, 0);            
+            usuario.setDataNascimento(calendario.getTime());
+            usuario.setSenha("123");
+            usuario.setSexo(Sexo.MASCULINO);
+            usuario.setStatus(true);
+            usuario.setTelefone("(62) 91234-4567");
+            usuario.setCidade(cidade);
+            
+            usuariobo.inserir(usuario);
+        }catch (Exception ex) {
+            ex.printStackTrace();
+            fail("Falha ao inserir um usuario: " + ex.getMessage());            
+        }
     }
     
     @Test
@@ -170,6 +210,6 @@ public class UsuarioBOTest {
     public void testMetodoExcluir() throws Exception{
     
     }
+    }
 
-   
 }
