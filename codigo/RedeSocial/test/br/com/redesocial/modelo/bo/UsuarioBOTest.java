@@ -18,6 +18,7 @@ import org.junit.Test;
  * @since 19/08/2017
  */
 public class UsuarioBOTest {
+    /*
     @Test
     public void testMetodoInserir() {        
         UsuarioBO usuariobo = new UsuarioBO();
@@ -132,7 +133,7 @@ public class UsuarioBOTest {
     public void testMetodoSelecionar() {
     
     }
-    
+    */
     @Test
     public void testMetodoAlterar() {
              
@@ -178,26 +179,7 @@ public class UsuarioBOTest {
                 fail("Falha ao inserir um usuario: " + ex.getMessage());
             }           
             
-            usuario.setNome("Gusttavo");
-            /*
-            usuario.setNome("Gusttavo");
-            usuario.setEmail("gus22ng@gmail.com");
-            usuario.setTelefone("(62) 98765-4321");
-            usuario.setSenha("password");
-            calendario.set(1996, 8, 29, 1, 1, 1);            
-            usuario.setDataNascimento(calendario.getTime());
-            usuario.setSexo(Sexo.MASCULINO);
-            usuario.setDataCadastro(new Date());            
-            usuario.setStatus(true);
-            usuario.setCidade(cidade);
-            usuario.setId(36);            
-            */
-            
-            /* 
-            Como é passado apenas 2 parametros(nome e o id) o update em UsuarioDAO, não vai ser executado, 
-            acusando erro, pois o update descrito lá apresenta 12 parametros.
-            Ao acrescentar um update que receba apenas 2 parametros, os comandos funcionam normalmente.
-            */
+            usuario.setNome("Gusttavo");            
             
             try {
                 bo.alterar(usuario);//Falhou: ao alterar usuario: null
@@ -205,11 +187,12 @@ public class UsuarioBOTest {
                 fail("Falha ao alterar usuario: " + ex.getMessage());
             }
     }
-    
+    /*
     @Test
     public void testMetodoExcluir() throws Exception{
     
     }
-    }
+    */
+    
 
 }
