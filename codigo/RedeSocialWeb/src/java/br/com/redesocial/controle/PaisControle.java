@@ -4,9 +4,11 @@
  * and open the template in the editor.
  */
 package br.com.redesocial.controle;
-
+import br.com.redesocial.modelo.bo.PaisBO;
+import br.com.redesocial.modelo.dto.Pais;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -45,7 +47,37 @@ public class PaisControle extends HttpServlet {
             out.println("</html>");
         }
     }
+    
+        /**
+     * Cadastra um usuário no banco de dados
+     * @param request
+     * @param response
+     * @throws Exception 
+     */
+    private void cadastrar(HttpServletRequest request, HttpServletResponse response) throws Exception{
+        Pais pais = new Pais();
+        pais.setNome(request.getParameter("nome"));
+        
+        
+        request.setAttribute("pais", pais);
+        
+        try {
+            PaisBO paisBO = new PaisBO();
+            paisBO.inserir(pais);
 
+            request.setAttribute("mensagem", "Cadastro realizado com sucesso");
+            
+            RequestDispatcher rd = request.getRequestDispatcher("configuracao_perfil.jsp");
+            rd.forward(request, response);
+        } catch (Exception ex){
+            request.setAttribute("mensagem", "Erro: " + ex.getMessage());
+            
+            RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+            rd.forward(request, response);
+        }
+    }
+
+    
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
