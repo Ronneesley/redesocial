@@ -2,10 +2,10 @@ package br.com.redesocial.modelo.dao;
 
 import br.com.redesocial.modelo.dto.Comentario;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.sql.Types;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -120,8 +120,12 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
         pstmt.setInt(2, c.getCurtidas());
         pstmt.setDate(3, new java.sql.Date(c.getData().getTime()));
         pstmt.setInt(4, c.getPostagem().getId());
-        pstmt.setInt(5, c.getResposta().getId());
         
+        if(c.getResposta() != null){
+            pstmt.setInt(5, c.getResposta().getId());
+        } else {
+            pstmt.setNull(5, Types.INTEGER);
+        }
         pstmt.executeUpdate();
         
         c.setId(getId(pstmt));
