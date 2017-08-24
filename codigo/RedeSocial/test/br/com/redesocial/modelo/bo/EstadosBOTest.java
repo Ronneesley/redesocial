@@ -13,28 +13,28 @@ public class EstadosBOTest {
     @Test
    
     public void testMetodoInserir() {
-        EstadoBO bo = new EstadoBO();
-
-        Estado estado1 = new Estado();
-        estado1.setNome("Goias");
-
+        Pais pais = new Pais();
+        pais.setNome("Brasil");
+        
         try {
-            bo.inserir(estado1);
-        } catch (Exception ex) {
-            fail("Falha ao inserir um estado: " + ex.getMessage());
-        }
+            PaisBO paisBO = new PaisBO();
+            paisBO.inserir(pais);
 
-        Estado estado2 = new Estado();
-        estado2.setNome("Paraiba");
-
-        try {
-            bo.inserir(estado2);
-        } catch (Exception ex) {
+            Estado estado = new Estado();
+            estado.setNome("Goiás");
+            estado.setPais(pais);
+            
+            EstadoBO estadoBO = new EstadoBO();
+            estadoBO.inserir(estado);
+            
+           
+        }catch (Exception ex) {
             fail("Falha ao inserir um estado: " + ex.getMessage());
         }
     }
+        
     
-     @Test
+     /*@Test
     public void testMetodoAlterar() {
         Pais pais = new Pais();
         pais.setNome("Finalemnte");
@@ -122,5 +122,5 @@ public class EstadosBOTest {
         } catch (Exception ex){
             fail("Erro ao listar: " + ex.getMessage());
         }
-    }
+    }*/
  }
