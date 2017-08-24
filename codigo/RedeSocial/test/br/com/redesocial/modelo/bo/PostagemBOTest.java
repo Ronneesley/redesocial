@@ -99,8 +99,9 @@ public class PostagemBOTest {
         postagem.setId(1);
 
         try {
+            PostagemBO postagemBO = new PostagemBO();
             bo.inserir(postagem);
-
+            
             int id = postagem.getId();
 
             Postagem postagemSelecionado = bo.selecionar(id);
