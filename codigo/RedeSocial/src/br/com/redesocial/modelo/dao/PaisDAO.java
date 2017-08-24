@@ -8,25 +8,42 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Classe que realiza as operações de acesso ao banco de dados da entidade país
+ * @author Ronneesley Moura Teles, ciclano, beltrano
+ * @since 24/09/2017
+ */
 public class PaisDAO extends DAOCRUDBase<Pais> {
-    
+
+    /**
+     * Método responsável pela inserção de um páis no banco de dados
+     * @author Ciclano
+     * @param p país a ser inserido
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Override
-    public void inserir(Pais p) throws Exception{
+    public void inserir(Pais p) throws Exception {
         Connection conexao = getConexao();
-        
+
         if(p.getNome().trim().equals("")){
-            throw new Exception("O campo país não pode estar vazio!");  
+            throw new Exception("O campo país não pode estar vazio!");
         }
-        
+
         PreparedStatement pstmt;
         pstmt = conexao.prepareStatement("insert into paises (nome) values(?)", Statement.RETURN_GENERATED_KEYS);
-        
+
         pstmt.setString(1, p.getNome());
         pstmt.executeUpdate();
-        
-        p.setId(getId(pstmt));        
+
+        p.setId(getId(pstmt));
     }
-    
+
+    /**
+     * Método responsável pela alteração de um país no banco de dados
+     * @author Ciclano
+     * @param p novos dados do páis, com o ID do país a ser alterado preenchido
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Override
     public void alterar(Pais p) throws Exception {
         Connection conexao = getConexao();
@@ -44,6 +61,12 @@ public class PaisDAO extends DAOCRUDBase<Pais> {
         pstmt.executeUpdate();
     }
 
+    /**
+     * Método responsável pela exclusão de um país no banco de dados
+     * @author Ciclano
+     * @param id identificador do país a ser excluído
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Override
     public void excluir(int id) throws Exception {
         Connection conexao = getConexao();
@@ -55,6 +78,13 @@ public class PaisDAO extends DAOCRUDBase<Pais> {
         pstmt.executeUpdate();
     }
 
+    /**
+     * Método que seleciona um país já cadastrado no banco de dados
+     * @author Ciclano
+     * @param id identificador do país
+     * @return país selecionado no banco de dados
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Override
     public Pais selecionar(int id) throws Exception {
         Connection conexao = getConexao();
@@ -76,28 +106,33 @@ public class PaisDAO extends DAOCRUDBase<Pais> {
         }
     }
 
+    /**
+     * Método que lista todos os países em ordem alfabética do banco de dados
+     * @author Ciclano
+     * @return lista de países ordenados alfabéticamente
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Override
     public List listar() throws Exception {
        Connection conexao = getConexao();
-        
+
        PreparedStatement pstmt;
        pstmt = conexao.prepareStatement("select * from paises order by nome asc");
-        
+
        ResultSet rs;
        rs = pstmt.executeQuery();
-        
+
        List lista;
        lista = new ArrayList();
-        
+
        while (rs.next()){
            Pais p = new Pais();
            p.setId(rs.getInt("id"));
            p.setNome(rs.getString("nome"));
-            
+
            lista.add(p);
        }
-        
+
        return lista;
-    } 
-   
+    }
  }
