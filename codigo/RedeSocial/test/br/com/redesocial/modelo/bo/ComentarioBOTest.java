@@ -150,15 +150,18 @@ public class ComentarioBOTest {
             fail("Erro ao listar: " + ex.getMessage());
         }
     }
-    /*
+    
     @Test
     public void testMetodoExcluir(){
-       Pais pais = new Pais();
-       pais.setNome("Brasil");
+       ComentarioBO bo = new ComentarioBO();
+        
+       Comentario comentario = new Comentario();
+       comentario.setId(1);
        
        try{
            
             PaisBO paisBO = new PaisBO();
+            Pais pais = null;
             paisBO.inserir(pais);
 
             Estado estado = new Estado();
@@ -184,7 +187,7 @@ public class ComentarioBOTest {
             Calendar calendario = Calendar.getInstance();
             calendario.set(1986, 2, 8, 0, 0, 0);            
             usuario.setDataNascimento(calendario.getTime());
-            usuario.setSenha("123789");
+            usuario.setSenha("1239");
             usuario.setSexo(Sexo.MASCULINO);
             usuario.setStatus(true);
             usuario.setTelefone("(62) 91432-9867");
@@ -205,31 +208,30 @@ public class ComentarioBOTest {
             PostagemBO postagemBO  = new PostagemBO();
             postagemBO.inserir(postagem);
             
-            ComentarioBO bo = new ComentarioBO();
-            
-            Comentario comentario = new Comentario();
+ 
+           
             comentario.setDescricao("bommm");
             comentario.setCurtidas(0);
             
             calendario.set(1986, 4, 8, 0, 0, 0);            
             comentario.setData(calendario.getTime());
-            comentario.setPostagem(postagem);
+            //comentario.setPostagem(1);
             
             bo.inserir(comentario);
            
             int id = comentario.getId();
             Comentario comentarioSelecionado = bo.selecionar(id);
-            assertNotNull("Comentario não encontrado", comentarioSelecionado);
+            assertNotNull("Album não encontrada", comentarioSelecionado);
           
             bo.excluir(id);
            
            Comentario comentarioSelecionadoPosExclusao = bo.selecionar(id);
            
-           assertNull("comentario encontrado, mesmo apos excluila", comentarioSelecionadoPosExclusao);
+           assertNull("comentario não encontrado", comentarioSelecionadoPosExclusao);
         }catch (Exception ex){
            fail ("Falha ao inserir um comentario" + ex.getMessage());
                 
          }
-    }*/
+    }
 }
 

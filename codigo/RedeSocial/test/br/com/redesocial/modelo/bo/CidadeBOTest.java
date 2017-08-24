@@ -95,7 +95,7 @@ import static org.junit.Assert.*;
             CidadeBO bo = new CidadeBO();
             Cidade cidade = new Cidade();
             cidade.setEstado(estado);
-            cidade.setId();
+            //cidade.setId();
          
             bo.inserir(cidade);
             int id = cidade.getId();
