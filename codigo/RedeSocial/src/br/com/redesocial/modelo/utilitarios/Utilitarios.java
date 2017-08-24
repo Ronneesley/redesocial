@@ -13,11 +13,20 @@ public class Utilitarios {
     public static byte[] lerArquivo(File arquivo) throws Exception {
         byte[] bytes;
         try (FileReader arq = new FileReader(arquivo)) {
+            
             BufferedReader lerArq = new BufferedReader(arq);
-            String conteudo = lerArq.readLine();
-            while (conteudo != null) {
-                conteudo = lerArq.readLine(); // lê da segunda até a última linha
-            }   bytes = conteudo.getBytes();
+            String linha = lerArq.readLine();
+            String conteudo = linha;
+            
+            while (linha != null) {
+                linha = lerArq.readLine(); // lê da segunda até a última linha
+                
+                if (linha != null){
+                    conteudo += linha;
+                }
+            }   
+            
+            bytes = conteudo.getBytes();
         }
         
         return bytes;
