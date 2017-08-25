@@ -32,6 +32,13 @@ public class PostagemAlbumDAO extends DAOBase {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    /**
+     * Método responsável pela alteração de relacionar uma postagem a um album no banco de dados.
+     * @author Paulo Henrique Araujo.
+     * @param dto dados antigos da postagemAlbum, com ID da postagem do album.
+     * @param dtoNovo novos dados da postagemAlbum, com o ID da postagem e do album.
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     public void alterar(PostagemAlbum dto, PostagemAlbum dtoNovo) throws Exception{
         Connection conexao = getConexao();
         PreparedStatement pstmt;
