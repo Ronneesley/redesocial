@@ -70,6 +70,12 @@ public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
         pstmt.executeUpdate();
     }
     
+    /**
+     * Método que lista todas as multimídias em ordem descrecem por data do banco de dados
+     * @author Luciano de Carvalho Borba
+     * @return lista as multimídias em ordem descrescente por data
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Override
     public List listar() throws Exception  {
         Connection conexao = getConexao();

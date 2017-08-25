@@ -179,8 +179,78 @@ public class MultimidiaBOTeste {
         } catch (Exception ex) {
             fail("Falha ao inserir um comentário: " + ex.getMessage());            
         }
-}
-
-   
-
     }
+    
+    @Test
+    public void testeMetodoExcluir() throws Exception{
+        Calendar calendario = Calendar.getInstance();
+        calendario.set(2017, 2, 7, 0, 0, 0);
+        
+        Pais pais = new Pais();
+        pais.setNome("Brasil");
+        
+        PaisBO paisBO = new PaisBO();
+        paisBO.inserir(pais);
+
+        Estado estado = new Estado();
+        estado.setNome("Goiás");
+        estado.setPais(pais);
+            
+        EstadoBO estadoBO = new EstadoBO();
+        estadoBO.inserir(estado);
+          
+        Cidade cidade = new Cidade();
+        cidade.setNome("Ceres");
+        cidade.setEstado(estado);
+            
+        CidadeBO cidadeBO = new CidadeBO();
+        cidadeBO.inserir(cidade);
+            
+        Usuario usuario = new Usuario();
+        usuario.setNome("Roni");
+        usuario.setDataCadastro(new Date());
+        usuario.setEmail("ronneesley@gmail.com");
+        //usuario.setFoto();
+                   
+        usuario.setDataNascimento(calendario.getTime());
+        usuario.setSenha("123");
+        usuario.setSexo(Sexo.MASCULINO);
+        usuario.setStatus(true);
+        usuario.setTelefone("(62) 91234-4567");
+        usuario.setCidade(cidade);
+           
+        UsuarioBO usuarioBO = new UsuarioBO();
+        usuarioBO.inserir(usuario);
+        
+        AlbumBO albumBO = new AlbumBO();
+        
+        Album album = new Album();
+        album.setNome("Lara");
+        album.setData(calendario.getTime());
+        album.setUsuario(usuario);
+        
+        MultimidiaBO bo = new MultimidiaBO();
+        
+        Multimidia multimidia = new Multimidia();  
+        multimidia.setMidia(Utilitarios.lerArquivo(new File("../../arquivos_teste/nome_arquivo.txt")));
+        multimidia.setTipoConteudo("foto");
+        multimidia.setData(calendario.getTime());
+        multimidia.setAlbum(album);
+        
+        try{
+            bo.inserir(multimidia);
+            
+            int id = multimidia.getId();
+            Multimidia multimidiaSelecionado = bo.selecionar(id);
+            assertNotNull("Foto não encontrada!", multimidiaSelecionado);
+            
+            bo.excluir(id);
+            Multimidia multimidiaSelecionadoPosExclusao = bo.selecionar(id);
+            
+            assertNull("Foto não encontrada, mesmo após excluí-lá", multimidiaSelecionadoPosExclusao);
+        }catch (Exception ex){
+            fail("Falha ao adicionar uma foto" +ex.getMessage());
+        }
+        
+    }
+}
