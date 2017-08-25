@@ -17,7 +17,7 @@ import static org.junit.Assert.*;
 
 public class MultimidiaBOTeste {
     
-    //@Test
+    @Test
     public void testMetodoInserir() {
         Pais pais = new Pais();
         pais.setNome("EUA");        
@@ -183,7 +183,7 @@ public class MultimidiaBOTeste {
         }
     }
     
-    //@Test
+    @Test
     public void testeMetodoExcluir() throws Exception{
         Calendar calendario = Calendar.getInstance();
         calendario.set(2017, 2, 7, 0, 0, 0);
