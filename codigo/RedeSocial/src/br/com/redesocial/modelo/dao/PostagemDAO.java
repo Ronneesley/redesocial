@@ -91,9 +91,11 @@ public class PostagemDAO extends DAOCRUDBase<Postagem> {
     }
     
     /**
-    *
-    * @author Paulo Henrique
-    */
+     * Método que lista todos os comentários ordenado pela data.
+     * @author Paulo Henrique Araujo.
+     * @return lista.
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Override
     public List listar() throws Exception {
         Connection conexao = getConexao();
