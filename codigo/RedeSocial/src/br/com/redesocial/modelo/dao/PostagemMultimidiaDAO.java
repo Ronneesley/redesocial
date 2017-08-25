@@ -47,6 +47,13 @@ public class PostagemMultimidiaDAO extends DAOBase {
         pstmt.executeQuery();
     }
 
+	 /**
+     * Método que seleciona uma postagem e uma multimídia já cadastrada no banco de dados
+     * @author Thalia Santos de Santana
+     * @param postagem identificador da Postagem e multimidia identificador da Multimidia
+     * @return postagem e multimidia selecionada no banco de dados
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     public PostagemMultimidia selecionar(int postagem, int multimidia) throws Exception {
         Connection conexao = getConexao();
         
