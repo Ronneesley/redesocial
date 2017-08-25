@@ -101,6 +101,12 @@ public class PostagemMultimidiaDAO extends DAOBase {
         return lista;
     }
 
+	/**
+     * Método responsável pela exclusão de uma postagem e uma multimidia no banco de dados
+     * @author Thalia Santos de Santana
+     * @param postagem identificador da Postagem e multimidia identificador da Multimidia a serem excluídas
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     public void excluir(int postagem, int multimidia) throws Exception {
         Connection conexao = getConexao();
         
