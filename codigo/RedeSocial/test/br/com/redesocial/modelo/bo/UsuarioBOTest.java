@@ -135,7 +135,12 @@ public class UsuarioBOTest {
     public void testMetodoSelecionar() {
     
     }
-
+    
+    /**
+     * Método de teste responsável pela alteração de dados de um usuário no banco de dados
+     * @author Gusttavo Nunes Gomes
+     */
+    
     @Test
     public void testMetodoAlterar() {
              
