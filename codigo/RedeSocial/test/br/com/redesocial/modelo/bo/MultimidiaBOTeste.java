@@ -2,6 +2,7 @@ package br.com.redesocial.modelo.bo;
 
 import br.com.redesocial.modelo.dto.Album;
 import br.com.redesocial.modelo.dto.Cidade;
+import br.com.redesocial.modelo.dto.Estado;
 import br.com.redesocial.modelo.dto.Multimidia;
 import br.com.redesocial.modelo.dto.Pais;
 import br.com.redesocial.modelo.dto.Usuario;
@@ -73,7 +74,7 @@ public class MultimidiaBOTeste {
             multimidia.setAlbum(album);
             multimidia.setMidia(Utilitarios.lerArquivo(new File("../../arquivos_teste/nome_arquivo.txt")));
             multimidia.setTipoConteudo("foto");
-           calendario.set(2017, 8, 20, 8, 0, 0);
+            calendario.set(2017, 8, 20, 8, 0, 0);
             multimidia.setData(calendario.getTime());
             mult.inserir(multimidia);
         } catch (Exception ex) {
@@ -112,4 +113,74 @@ public class MultimidiaBOTeste {
             fail("Erro ao listar: " + ex.getMessage());
         }
     }*/
+    
+    @Test
+    public void testMetodoSelecionar() {
+        Pais pais = new Pais();
+        pais.setNome("Irlanda");
+        
+        try {
+            PaisBO paisBO = new PaisBO();
+            paisBO.inserir(pais);
+
+            Estado estado = new Estado();
+            estado.setNome("Goiás");
+            estado.setPais(pais);
+            
+            EstadoBO estadoBO = new EstadoBO();
+            estadoBO.inserir(estado);
+            
+            Cidade cidade = new Cidade();
+            cidade.setNome("Ceres");
+            cidade.setEstado(estado);
+            
+            CidadeBO cidadeBO = new CidadeBO();
+            cidadeBO.inserir(cidade);
+            
+            Usuario usuario = new Usuario();
+            usuario.setNome("Andrey");
+            usuario.setDataCadastro(new Date());
+            usuario.setEmail("andrey@gmail.com");
+            //usuario.setFoto();
+                           
+            Calendar calendario = Calendar.getInstance();
+            calendario.set(1988, 2, 7, 0, 0, 0);            
+            usuario.setDataNascimento(calendario.getTime());
+            usuario.setSenha("123");
+            usuario.setSexo(Sexo.MASCULINO);
+            usuario.setStatus(true);
+            usuario.setTelefone("(62) 8888-8888");
+            usuario.setCidade(cidade);
+            
+            UsuarioBO usuarioBO = new UsuarioBO();
+            usuarioBO.inserir(usuario);
+            
+            Album album = new Album();
+            album.setNome("Album1");
+            
+            AlbumBO albumbo = new AlbumBO();
+            albumbo.inserir(album);
+            
+            MultimidiaBO mult = new MultimidiaBO();             		
+            Multimidia multimidia = new Multimidia();
+            multimidia.setAlbum(album);
+            multimidia.setMidia(Utilitarios.lerArquivo(new File("../../arquivos_teste/nome_arquivo.txt")));
+            multimidia.setTipoConteudo("foto");
+            calendario.set(2017, 8, 20, 8, 0, 0);
+            multimidia.setData(calendario.getTime());
+            mult.inserir(multimidia);
+            
+            int idalbum = album.getId();            
+            albumbo.selecionar(idalbum);
+            
+            int idmultimidia = multimidia.getId();            
+            multimidia.selecionar(idmultimidia);
+            
+        } catch (Exception ex) {
+            fail("Falha ao inserir um comentário: " + ex.getMessage());            
+        }
 }
+
+   
+
+    }
