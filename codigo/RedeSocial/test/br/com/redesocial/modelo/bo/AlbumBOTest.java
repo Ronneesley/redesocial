@@ -83,12 +83,12 @@ public class AlbumBOTest {
             /**
              * Os dados do album foram definidos para inserir no banco de dados
              */  
-            bo.inserir(album);
+           bo.inserir(album);
         } catch (Exception ex) {
             /**
              * Mensagem de erro caso não insira o album no banco de dados
              */ 
-            fail("Falha ao inserir um album: " + ex.getMessage());
+           fail("Falha ao inserir um album: " + ex.getMessage());
         }		
     } 
     
@@ -223,65 +223,63 @@ public class AlbumBOTest {
     }
 
     @Test
-    public void testMetodoExcluir() throws Exception{
-        AlbumBO bo = new AlbumBO();  
+    public void testMetodoExcluir () throws Exception {
+	AlbumBO albumBO = new AlbumBO();
+	
+    try{
         
-        Album album = new Album();
-        album.setNome("Hollywood");    
-       
-       try {
-            PaisBO paisBO = new PaisBO();
-            Pais pais = null;
-            paisBO.inserir(pais);
-
-            Estado estado = new Estado();
-            estado.setNome("California");
-            estado.setPais(pais);
-            
-            EstadoBO estadoBO = new EstadoBO();
-            estadoBO.inserir(estado);
-            
-            Cidade cidade = new Cidade();
-            cidade.setNome("Los Angeles");
-            cidade.setEstado(estado);
-            
-            CidadeBO cidadeBO = new CidadeBO();
-            cidadeBO.inserir(cidade);
-            
-            Usuario usuario = new Usuario();
-            usuario.setNome("Paul");
-            usuario.setDataCadastro(new Date());
-            usuario.setEmail("paul@gmail.com");
-            //usuario.setFoto();
-           
-            Calendar calendario = Calendar.getInstance();
-            calendario.set(1988, 2, 7, 0, 0, 0);            
-            usuario.setDataNascimento(calendario.getTime());
-            usuario.setSenha("123");
-            usuario.setSexo(Sexo.MASCULINO);
-            usuario.setStatus(true);
-            usuario.setTelefone("(62) 91234-4567");
-            usuario.setCidade(cidade);
-            
-            UsuarioBO usuarioBO = new UsuarioBO();
-            usuarioBO.inserir(usuario);
-                        		
-            calendario.set(2016, 8, 29, 0, 0, 0);
-            album.setData(calendario.getTime()); 
-            album.setUsuario(usuario);
-            bo.inserir(album);
-           
-            int id = album.getId();
-            Album albumSelecionado = bo.selecionar(id);
-            assertNotNull("Album não encontrada", albumSelecionado);
-           
-            bo.excluir(id);
-            Album albumSelecionadoPosExclusao = bo.selecionar(id);
-           
-            assertNotNull("Album não encontrado", albumSelecionadoPosExclusao);
-        } catch (Exception ex) {
-            fail("Falha ao inserir um Album: " + ex.getMessage());
-        }
-    }
-   
+	Album album = new Album ();
+	album.setNome("Desisto, Ronne!");
+	albumBO.inserir(album);
+	
+	PaisBO paisBO = new PaisBO();
+	Pais pais = new Pais();
+	pais.setNome("Brasil");
+	paisBO.inserir(pais);
+	
+	EstadoBO estadoBO = new EstadoBO();
+	Estado estado = new Estado();
+	estado.setNome("Goiás");
+	estadoBO.inserir(estado);
+	
+	CidadeBO cidadeBO =  new CidadeBO();
+	Cidade cidade = new Cidade();
+	cidade.setNome("Bragolândia");
+	cidadeBO.inserir(cidade);
+	
+	UsuarioBO usuarioBO = new UsuarioBO();
+        
+	Usuario usuario = new Usuario();
+	usuario.setNome("Ianka");
+	usuario.setDataCadastro(new Date());
+	usuario.setEmail("iankatalitaa@gmail.com");
+	//usuario.setFoto();
+	Calendar calendario = Calendar.getInstance();
+	calendario.set(1997, 1, 15, 0, 0, 0);
+	usuario.setDataNascimento(calendario.getTime());
+	usuario.setSenha("gaivotinha");
+	usuario.setSexo(Sexo.FEMININO);
+	usuario.setStatus(true);
+	usuario.setTelefone("(62) 98483-0937");
+	usuario.setCidade(cidade);
+	
+	usuarioBO.inserir(usuario);
+	
+	calendario.set(2016, 8, 28, 0, 0, 0);
+	album.setData(calendario.getTime());
+	album.setUsuario(usuario);
+	albumBO.inserir(album);
+	
+	int id = album.getId();
+	Album albumSelecionado = albumBO.selecionar(id);
+	assertNotNull("Album não encontrado", albumSelecionado);
+	
+	albumBO.excluir(id);
+	Album albumSelecionadoPosExclusao = albumBO.selecionar(id);
+	
+	assertNotNull("Album não encontrado", albumSelecionadoPosExclusao);
+	} catch (Exception ex){
+	fail("Falha ao inserir um album: " + ex.getMessage());
+	}
+  }
 }
