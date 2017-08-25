@@ -9,6 +9,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.fail;
 import org.junit.Test;
 
@@ -187,12 +189,60 @@ public class UsuarioBOTest {
                 fail("Falha ao alterar usuario: " + ex.getMessage());
             }
     }
-    /*
+    
     @Test
     public void testMetodoExcluir() throws Exception{
-    
-    }
-    */
-    
+        Pais pais = new Pais();
+        pais.setNome("Brasil");
+            
+        Estado estado = new Estado();
+        estado.setNome("Goiás");
+        estado.setPais(pais);
+        
+        Cidade cidade = new Cidade();
+        cidade.setNome("Anapolis");
+        cidade.setEstado(estado);
+        
+        Usuario usuario = new Usuario();
+        usuario.setNome("Lorraine");
+        usuario.setDataCadastro(new Date());
+        usuario.setEmail("lorraine21@gmail.com");
+        Calendar calendario = Calendar.getInstance();
+        calendario.set(1998, 10, 12, 0, 0, 0);            
+        usuario.setDataNascimento(calendario.getTime());
+        usuario.setSenha("pato90");
+        usuario.setSexo(Sexo.MASCULINO);
+        usuario.setStatus(true);
+        usuario.setTelefone("(62) 99999-8765");
+        usuario.setCidade(cidade);
+        
+        UsuarioBO bo = new UsuarioBO(); 
+        
+        try {
+            PaisBO paisBO = new PaisBO();
+            paisBO.inserir(pais);
+            
+            EstadoBO estadoBO = new EstadoBO();
+            estadoBO.inserir(estado);
+            
+            CidadeBO cidadeBO = new CidadeBO();
+            cidadeBO.inserir(cidade);
+            
+            UsuarioBO usuarioBO = new UsuarioBO();
+            usuarioBO.inserir(usuario);
+        
+            bo.inserir(usuario);
 
+            int id = usuario.getId();
+            Usuario usuarioSelecionado = bo.selecionar(id);
+            assertNotNull("Usuário não encontrado!", usuarioSelecionado);
+
+            bo.excluir(id);
+            Usuario usurarioSelecionadoPosExclusao = bo.selecionar(id);
+
+            assertNull("Usuário encontrado, mesmo após exclusão.", usurarioSelecionadoPosExclusao);
+        } catch (Exception ex) {
+            fail("Falha ao inserir um usuário: " + ex.getMessage());
+        }
+    }
 }
