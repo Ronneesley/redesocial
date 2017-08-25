@@ -145,8 +145,9 @@ public class PostagemBOTest {
             
             int idpostagem = postagem.getId();
             
-            postagembo.selecionar(idpostagem);
+            Postagem postagemSelecionada = postagembo.selecionar(idpostagem);
             
+            assertNotNull("Postagem não encontrada", postagemSelecionada);
         } catch (Exception ex) {
             fail("Postagem não selecionada: " + ex.getMessage());            
         }
