@@ -6,6 +6,12 @@ package br.com.redesocial.modelo.dto;
   * @author Lucas, Luciano, Adalberto
   * @since 29/07/2017
   */
+ 
+  /**
+  * COMENTARIOS DAS FUNÇÕES DOS ATRIBUTOS DE ESTADO
+  * @author Brener.
+  * @since 25/08/2017
+  */
 public class Estado {
     /**
     * Atributo de identificação do Estado
