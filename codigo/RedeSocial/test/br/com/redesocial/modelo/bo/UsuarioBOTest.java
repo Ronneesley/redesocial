@@ -143,7 +143,9 @@ public class UsuarioBOTest {
     
     @Test
     public void testMetodoAlterar() {
-             
+    /**
+     * Para inserir um usuário, é necessário inserir um país, um estado e cidade no banco de dados
+     */         
         
         Pais pais = new Pais();
         pais.setNome("USA");
@@ -155,6 +157,10 @@ public class UsuarioBOTest {
         Cidade cidade = new Cidade();
         cidade.setNome("Los Angeles");
         cidade.setEstado(estado);
+        
+        /**
+         * O nome do país,estado e cidade a ser inseridos no banco de dados, foram definidos
+         */ 
         
         UsuarioBO bo = new UsuarioBO();  
         
@@ -171,26 +177,51 @@ public class UsuarioBOTest {
         usuario.setTelefone("(62) 98765-4321");
         usuario.setCidade(cidade);
         
+        /**
+         * O dados do usuário foram definidos para inserir no banco de dados
+         */ 
+        
         try{
             PaisBO paisBO = new PaisBO();
             paisBO.inserir(pais);
             
+            /**
+             * O pais foi inserido no banco de dados
+             */ 
+            
             EstadoBO estadoBO = new EstadoBO();
             estadoBO.inserir(estado);
-
+            
+            /**
+             * O pais foi inserido no banco de dados
+             */ 
+            
             CidadeBO cidadeBO = new CidadeBO();
             cidadeBO.inserir(cidade);
 
+            /**
+             * O pais foi inserido no banco de dados
+             */ 
+            
             bo.inserir(usuario);
             } catch (Exception ex) {
+                /**
+                 * Mensagem de erro caso não insira o usuario no banco de dados
+                 */ 
                 fail("Falha ao inserir um usuario: " + ex.getMessage());
             }           
             
-            usuario.setNome("Gusttavo");            
+            usuario.setNome("Gusttavo"); 
+            /**
+             * Uma alteração no usuario é feita e deve ser feita essa mudança no banco de dados
+             */ 
             
             try {
-                bo.alterar(usuario);//Falhou: ao alterar usuario: null
+                bo.alterar(usuario);
             } catch (Exception ex) {
+                /**
+                 * Mensagem de erro caso não altere o usuario no banco de dados
+                 */ 
                 fail("Falha ao alterar usuario: " + ex.getMessage());
             }
     }
