@@ -34,7 +34,7 @@ public class PostagemAlbumDAO extends DAOBase {
 
     /**
      * Método responsável pela alteração de relacionar uma postagem a um album no banco de dados.
-     * @author Paulo Henrique Araujo.
+     * @author Paulo Henrique Araujo e Gusttavo Nunes Gomes.
      * @param dto dados antigos da postagemAlbum, com ID da postagem do album.
      * @param dtoNovo novos dados da postagemAlbum, com o ID da postagem e do album.
      * @throws Exception possíveis exceções que podem acontecer

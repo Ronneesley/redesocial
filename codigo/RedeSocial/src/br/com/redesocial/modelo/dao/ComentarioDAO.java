@@ -24,6 +24,13 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
         pstmt.executeUpdate();
     }
 
+    /**
+     * Método responsável pela alteração de um comentário no banco de dados
+     * @author Gusttavo Nunes Gomes
+     * @param p novos dados de comentário, com o ID do comentario a ser alterado preenchido
+     * @throws Exception possíveis exceções que podem acontecer
+     */
+    
     @Override
     public void alterar(Comentario p) throws Exception {
         Connection conexao = getConexao();
