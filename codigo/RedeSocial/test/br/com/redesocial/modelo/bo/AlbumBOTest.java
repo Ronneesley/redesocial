@@ -20,6 +20,12 @@ import static org.junit.Assert.*;
  * @since 16/08/2017
  */
 public class AlbumBOTest {
+    
+    /**
+     * Método de teste responsável pela inserção de um album no banco de dados
+     * @author Gusttavo Nunes Gomes
+     */
+    
     @Test
     public void testMetodoInserir() {
         Pais pais = new Pais();
