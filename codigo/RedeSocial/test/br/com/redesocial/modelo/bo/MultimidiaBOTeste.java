@@ -17,7 +17,7 @@ import static org.junit.Assert.*;
 
 public class MultimidiaBOTeste {
     
-    @Test
+    //@Test
     public void testMetodoInserir() {
         Pais pais = new Pais();
         pais.setNome("EUA");        
@@ -141,8 +141,6 @@ public class MultimidiaBOTeste {
             usuario.setNome("Andrey");
             usuario.setDataCadastro(new Date());
             usuario.setEmail("andrey@gmail.com");
-            //usuario.setFoto();
-                           
             Calendar calendario = Calendar.getInstance();
             calendario.set(1988, 2, 7, 0, 0, 0);            
             usuario.setDataNascimento(calendario.getTime());
@@ -157,31 +155,35 @@ public class MultimidiaBOTeste {
             
             Album album = new Album();
             album.setNome("Album1");
+            album.setData(calendario.getTime());
+            album.setUsuario(usuario);
             
             AlbumBO albumbo = new AlbumBO();
             albumbo.inserir(album);
             
             MultimidiaBO mult = new MultimidiaBO();             		
             Multimidia multimidia = new Multimidia();
-            multimidia.setAlbum(album);
+            
             multimidia.setMidia(Utilitarios.lerArquivo(new File("../../arquivos_teste/nome_arquivo.txt")));
             multimidia.setTipoConteudo("foto");
             calendario.set(2017, 8, 20, 8, 0, 0);
             multimidia.setData(calendario.getTime());
+            multimidia.setAlbum(album);
+            
             mult.inserir(multimidia);
             
-            int idalbum = album.getId();            
-            albumbo.selecionar(idalbum);
+           int id = multimidia.getId();     
             
-            int idmultimidia = multimidia.getId();            
-            multimidia.selecionar(idmultimidia);
+           Multimidia multimidiaSelecionada = mult.selecionar(id);
+           
+           assertNotNull("Multimídia não encontrada", multimidiaSelecionada);
             
         } catch (Exception ex) {
-            fail("Falha ao inserir um comentário: " + ex.getMessage());            
+            fail("Falha ao selecionar uma Multimídia: " + ex.getMessage());            
         }
     }
     
-    @Test
+    //@Test
     public void testeMetodoExcluir() throws Exception{
         Calendar calendario = Calendar.getInstance();
         calendario.set(2017, 2, 7, 0, 0, 0);
