@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * Classe base para conexão com o banco de dados
- * @author Daniel
+ * @author Daniel, Andrey Ribeiro
  */
 public class AlbumDAO extends DAOCRUDBase<Album> {
     @Override
@@ -38,6 +38,12 @@ public class AlbumDAO extends DAOCRUDBase<Album> {
         }
     }
 
+    /**
+     * Método que lista todos os albuns em ordem alfabética do banco de dados
+     * @author Andrey Ribeiro
+     * @return lista de albuns ordenados alfabeticamente
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Override
     public List listar() throws Exception {
         Connection conexao = getConexao();
