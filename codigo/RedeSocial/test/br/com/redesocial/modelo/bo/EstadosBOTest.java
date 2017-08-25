@@ -34,17 +34,33 @@ public class EstadosBOTest {
     }
         
     
+    
+    /**
+    * Método Alterar, insere dados e depois altera
+    * @author Andrey Silva Ribeiro
+    */
      @Test
     public void testMetodoAlterar() {
+        /**
+        * responsável pela inserção de um país no banco de dados
+        * @param pais país a ser inserido
+        */
         Pais pais = new Pais();
         pais.setNome("Finalemnte");
-            
+        
+        /**
+        * responsável pela inserção de um estado no banco de dados
+        * @param estado estado a ser inserido
+        */
         EstadoBO bo = new EstadoBO();
 
         Estado estado = new Estado();
         estado.setNome("Cearaaaaa");
 
         try {
+            /**
+            * realiza a tentativa de inserção do pais e do estado
+            */
             PaisBO paisBO = new PaisBO();
             paisBO.inserir(pais);
             
@@ -52,15 +68,20 @@ public class EstadosBOTest {
             
             bo.inserir(estado);
         } catch (Exception ex) {
+            /**
+            * mensagem caso tenha erro ao inserir
+            */
             fail("Falha ao inserir um país: " + ex.getMessage());
         }
 
-        //Mudança dos dados
+        //indicação de alteração do estado que foi inserido no banco de dados
         estado.setNome("testando");
 
         try {
+            // tentativa de alteração do estado
             bo.alterar(estado);
         } catch (Exception ex) {
+            //mensagem de erro caso a alteração nao seja feita
             fail("Falha ao inserir um país: " + ex.getMessage());
         }
     }
