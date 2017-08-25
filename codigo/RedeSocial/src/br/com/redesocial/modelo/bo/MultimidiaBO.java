@@ -10,10 +10,20 @@ import br.com.redesocial.modelo.dto.Multimidia;
  * @since 11/08/2017
  */
 public class MultimidiaBO extends BOCRUDBase<Multimidia, MultimidiaDAO> {
+     /**
+     * Instancia um objeto de Multimidia DAO
+     * @return instância de acesso aos dados da multimidia
+     */
+    
     @Override
     protected MultimidiaDAO instanciarDAO() {
         return new MultimidiaDAO();
     }
+    /**
+     * Validação dos atributos da multimidia
+     * @param dto objeto em questão que será validado
+     * @throws Exception validações encontradas
+     */
 
     @Override
     protected void validar(Multimidia dto) throws Exception {
@@ -24,7 +34,11 @@ public class MultimidiaBO extends BOCRUDBase<Multimidia, MultimidiaDAO> {
 
         if (dto.getAlbum() == null) throw new Exception("Preencha o nome do album");
     }
-
+     /**
+     * Validação da chave primária de um objeto multimidia
+     * @param dto objeto em questão
+     * @throws Exception validação se a chave não foi preenchida
+     */
     @Override
     protected void validarChavePrimaria(Multimidia dto) throws Exception {
         if (dto.getId() == null) throw new Exception("Preencha o campo id");
