@@ -10,13 +10,13 @@ import java.util.List;
 
 /**
  * Classe que realiza as operações de acesso ao banco de dados da entidade país
- * @author Ronneesley Moura Teles, ciclano, beltrano
+ * @author Ronneesley Moura Teles, Thalia Santos de Santana, beltrano
  * @since 24/09/2017
  */
 public class PaisDAO extends DAOCRUDBase<Pais> {
 
     /**
-     * Método responsável pela inserção de um páis no banco de dados
+     * Método responsável pela inserção de um país no banco de dados
      * @author Ciclano
      * @param p país a ser inserido
      * @throws Exception possíveis exceções que podem acontecer
@@ -41,7 +41,7 @@ public class PaisDAO extends DAOCRUDBase<Pais> {
     /**
      * Método responsável pela alteração de um país no banco de dados
      * @author Ciclano
-     * @param p novos dados do páis, com o ID do país a ser alterado preenchido
+     * @param p novos dados do país, com o ID do país a ser alterado preenchido
      * @throws Exception possíveis exceções que podem acontecer
      */
     @Override
@@ -108,8 +108,8 @@ public class PaisDAO extends DAOCRUDBase<Pais> {
 
     /**
      * Método que lista todos os países em ordem alfabética do banco de dados
-     * @author Ciclano
-     * @return lista de países ordenados alfabéticamente
+     * @author Thalia Santos de Santana
+     * @return lista de países ordenados alfabeticamente
      * @throws Exception possíveis exceções que podem acontecer
      */
     @Override
