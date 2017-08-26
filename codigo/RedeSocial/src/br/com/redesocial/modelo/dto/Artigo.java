@@ -10,7 +10,7 @@ public class Artigo {
     private Integer id;
     private String idioma;
     private String revista;
-    private Integer issn;
+    private String issn;
     private String autor;
     private Date data;
     private String areaConhecimento;
@@ -23,7 +23,7 @@ public class Artigo {
     
     }
 
-    public Artigo(Integer id, String idioma, String revista, Integer issn, String autor, Date data, String areaConhecimento, String titulo, String resumo, String url, byte[] artigo) {
+    public Artigo(Integer id, String idioma, String revista, String issn, String autor, Date data, String areaConhecimento, String titulo, String resumo, String url, byte[] artigo) {
         this.id = id;
         this.idioma = idioma;
         this.revista = revista;
@@ -61,11 +61,11 @@ public class Artigo {
         this.revista = revista;
     }
 
-    public Integer getIssn() {
+    public String getIssn() {
         return issn;
     }
 
-    public void setIssn(Integer issn) {
+    public void setIssn(String issn) {
         this.issn = issn;
     }
 
@@ -124,4 +124,6 @@ public class Artigo {
     public void setArtigo(byte[] artigo) {
         this.artigo = artigo;
     }
+    
+    
 }
