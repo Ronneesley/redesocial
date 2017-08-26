@@ -50,7 +50,7 @@ public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
             Multimidia m = new Multimidia();
             m.setId(rs.getInt("id"));
             m.setMidia(rs.getBytes("midia"));
-            m.setTipoConteudo(rs.getString("tipoConteudo"));
+            m.setTipoConteudo(rs.getString("tipo_conteudo"));
             m.setData(rs.getDate("data"));
 
             return m;
