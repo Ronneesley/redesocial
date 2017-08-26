@@ -13,14 +13,14 @@ import java.util.List;
 
 /**
  * Objeto de acesso aos dados dos usuários
- * @author Ronneesley Moura Teles
+ * @author Ronneesley Moura Teles, Lucas Azevedo
  * @since 27/07/2017
  */
 public class UsuarioDAO extends DAOCRUDBase<Usuario> {
     /**
      * Inseri um objeto no banco de dados na tabela usuários
      * @param dto objeto com os dados de usuário já preenchido
-     * @throws Exception 
+     * @throws Exception
      */
     @Override
     public void inserir(Usuario dto) throws Exception {
@@ -46,7 +46,9 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
         
         pstmt.setInt(10, dto.getCidade().getId()); 
        
-        
+        /**
+      * executa uma inserção
+      */
         pstmt.executeUpdate();
         
         dto.setId(getId(pstmt));
@@ -84,11 +86,16 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
             return null;
         }
     }    
-
+     /**
+     * Método responsável pela alteração de dados de um usuário no banco de dados
+     * @author Lucas Azevedo
+     * @param u novos dados alterado do usuário, com o ID do usuário a ser alterado preenchido
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Override
     public void alterar (Usuario  u) throws Exception {
         Connection conexao = getConexao();
-
+        
         PreparedStatement  pstmt; 
         
         pstmt = conexao.prepareStatement("update usuarios set nome = ?, email=?, telefone=?, senha =?, data_nascimento =?, sexo = ?, data_cadastro =?, status =?, foto=?, cidade=? where id =? ");
@@ -110,7 +117,10 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
         
         pstmt.setInt(10, u.getCidade().getId()); 
         pstmt.setInt(11, u.getId());          
-       
+        
+     /**
+      * executa uma atualização/alteração
+      */
         pstmt.executeUpdate();
     }
     public void alterarSenha (Usuario  u) throws Exception {

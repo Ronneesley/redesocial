@@ -24,7 +24,6 @@ public class AlbumBO extends BOCRUDBase<Album, AlbumDAO> {
      * @param dto objeto em questão que será validado
      * @throws Exception validações encontradas
      */
-    
     @Override
     protected void validar(Album dto) throws Exception {
         //Validações

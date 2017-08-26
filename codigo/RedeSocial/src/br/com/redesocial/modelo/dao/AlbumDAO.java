@@ -13,6 +13,13 @@ import java.util.List;
  * @author Daniel, Andrey Ribeiro
  */
 public class AlbumDAO extends DAOCRUDBase<Album> {
+    /**
+    * Método que seleciona os álbuns no banco de dados
+    * @author Daniel Moreira Cardoso
+    * @return retorna o álbum desejado
+    * @throws Exception possíveis exceções que podem acontecer
+    * @param id identificador de Album
+    */
     @Override
     public Album selecionar(int id)throws Exception{
         Connection conexao = getConexao();
@@ -37,7 +44,7 @@ public class AlbumDAO extends DAOCRUDBase<Album> {
             return null;
         }
     }
-
+   
     /**
      * Método que lista todos os albuns em ordem alfabética do banco de dados
      * @author Andrey Ribeiro
