@@ -222,24 +222,11 @@
 {
 \begin{itemize}
 \item Ocorreu algum erro ao realizar login;
-\begin{itemize}
-\item É mostrado uma mensagem de erro ao tentar realizar login.
-\end{itemize}
+\item É mostrado uma mensagem de erro ao tentar realizar login;
 \item Usuário não preenche os campos necessários;
-\begin{itemize}
-\item Usuário não preencheu o campo de e-mail;
-\item Usuário não preencheu o campo de senha.
-\end{itemize}
-\item Usuário digital e-mail ou senha incorretamente.
+\item Usuário não preenche os campos corretamente, de acordo com seus dados;
 \item Problemas com o servidor que precisam ser notificados ao usuário;
-\begin{itemize}
-\item Problemas com a conexão com o banco de dados;
-\item Problemas com a conexão com o servidor.
-\end{itemize}
 \item Problemas com sua conexão com a internet.
-\begin{itemize}
-\item É notificado ao usuário falha com a conexão com a internet.
-\end{itemize}
 \end{itemize}
 }
 %Frequência de Ocorrencia
@@ -377,31 +364,42 @@
 %Fluxo Básico
 {
 \begin{itemize}
-	\item Usuário: Acessa o seu perfil como mostra a figura 4.
+	\item Usuário: Acessa o seu perfil como mostra a Figura \ref{perfil}.
 	\item Usuário: Clicar no menu Sobre.
-	\item Usuário: Seleciona os campos que deseja alterar clicando nos ícones como mostra a figura 3.
+	\item Usuário: Seleciona os campos que deseja alterar clicando nos ícones como mostra a Figura \ref{cadastro_usuario_parte3}.
 	\item Usuário: Preenche os campos.
 	\item Usuário: Confirma os campos ao clicar no botão "Confirmar".
+	\item Sistema armazena os dados inseridos, alterados ou excluidos do usuário.
+	\item Se houver algum erro sistema emitir o motivo do erro.
 \end{itemize}
 }
 %Fluxo Alternativo
 {
 \begin{itemize}
-	\item Usuário desconectado.
-	\item Problemas com resposta do servidor ao alterar o campo especificado.
-	\item Exibir a mensagem de erro ao usuário.
-	\item Usuário preencher o campo incorretamente ex:(Caracteres especiais, letras em campos de números, etc).
-	\item Exibir mensagem de erro ao usuário sobre o preenchimento do campo.
-	\item Exibir a forma correta de preencher.
-	\item Usuário não confirmar a alteração.
-	\item Informa o usuário se deseja salvar as alterações realizadas.
-	\item Usuário inserir telefone inválido.
-	\item Usuário inserir redes sociais inválidas.
-	\item Sistema informar sobre os devidos erros de inserção.
-	\item Usuário não estar conectado a internet.
-	\item Perda das alterações realizadas, tendo, que refazer ao restabelecer a conexão com a internet.
-	\item Usuário encerrar a sessão sem salvar as alterações.
-	\item Usuário fechar o navegador.
+	\item Sistema Offline
+	   \begin{itemize}	
+		\item Usuário desconectado.
+		\item Problemas com resposta do servidor ao alterar o campo especificado.
+		\item Exibir a mensagem de erro ao usuário.
+		\item Usuário não estar conectado a internet.
+     	    \end{itemize}
+	\item Preenchimento dos campos    
+	    \begin{itemize}
+		\item Usuário preencher o campo incorretamente ex:(Caracteres especiais, letras em campos de números, etc).
+		\item Exibir mensagem de erro ao usuário sobre o preenchimento do campo.
+		\item Exibir a forma correta de preencher.
+		\item Usuário inserir redes sociais inválidas.
+		\item Sistema informar sobre os devidos erros de inserção.
+		\item Usuário inserir telefone inválido.
+		\item Sistema informar ao usuário sobre o telefone inválido.
+		\item Sistema demonstrar forma correta de inserir o telefone.
+	     \end{itemize}
+	\item Alteração e Confirmação dos campos     
+		\item Usuário não confirmar a alteração.
+		\item Informa o usuário se deseja salvar as alterações realizadas.
+		\item Usuário encerrar a sessão sem salvar as alterações.
+		\item Usuário fechar o navegador.
+	.	\item Perda das alterações realizadas, tendo, que refazer ao restabelecer a conexão com a internet.
 \end{itemize}
 }
 %Frequência de Ocorrência
@@ -530,8 +528,8 @@
 %Fluxo Alternativo
 {
 \begin{itemize}
-	\item Ao selecionar a opção suas fotos conforme a (Figura \ref{figura:Suas_Fotos}) o usuário visualizará todas as fotos e ele pode(editar e deletar).
-	\item Ao selecionnar a opção seus álbuns conforme a (Figura \ref{figura:Seus_album}) o sistema mostra todos seus álbuns da rede socil e o usuário pode( visualizar, editar e deletar) as fotos do álbuns.
+	\item Ao selecionar a opção suas fotos conforme a (Figura \ref{figura:Suas_fotos}) o usuário visualizará todas as fotos e ele pode(editar e deletar).
+	\item Ao selecionnar a opção seus álbuns conforme a (Figura \ref{figura:Seus_Albuns}) o sistema mostra todos seus álbuns da rede socil e o usuário pode( visualizar, editar e deletar) as fotos do álbuns.
 	\item Ao seleciona criar álbum irá criar um novo álbum.
 	
 \end{itemize}
