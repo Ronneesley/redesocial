@@ -10,8 +10,8 @@ import java.util.List;
  * @author Inimigo, Andrey, Daniel,Anny
  */
 public class EstadosBOTest {
+    
     @Test
-   
     public void testMetodoInserir() {
         Pais pais = new Pais();
         pais.setNome("Brasil");
@@ -39,7 +39,7 @@ public class EstadosBOTest {
     * Método Alterar, insere dados e depois altera
     * @author Andrey Silva Ribeiro
     */
-     @Test
+    @Test
     public void testMetodoAlterar() {
         /**
         * responsável pela inserção de um país no banco de dados
@@ -115,26 +115,33 @@ public class EstadosBOTest {
 
 
  @Test
- public void testMetodoListar() {
-        EstadoBO bo = new EstadoBO();
+ public void testMetodoListar() throws Exception {
+    
+        Pais pais = new Pais();
+        pais.setNome("Brasil");
+        
+        PaisBO paisBO = new PaisBO();
+        paisBO.inserir(pais);
+        
+        EstadoBO estadoBO = new EstadoBO();
 
         try {
-            List existentes = bo.listar();
+            List existentes = estadoBO.listar();
             int qtdeExistentes = existentes.size();
 
-            final int qtde = 10;
-            for (int i = 0; i < 10; i++){
+            final int qtde = 3;
+            for (int i = 0; i < 3; i++){
                 Estado estado = new Estado();
                 estado.setNome("Goiás");
 
                 try {
-                    bo.inserir(estado);
+                    estadoBO.inserir(estado);
                 } catch (Exception ex) {
                     fail("Falha ao inserir um estado: " + ex.getMessage());
                 }
             }
 
-            List existentesFinal = bo.listar();
+            List existentesFinal = estadoBO.listar();
             int qtdeExistentesFinal = existentesFinal.size();
 
             int diferenca = qtdeExistentesFinal - qtdeExistentes;
