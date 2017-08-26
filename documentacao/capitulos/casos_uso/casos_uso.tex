@@ -222,11 +222,24 @@
 {
 \begin{itemize}
 \item Ocorreu algum erro ao realizar login;
-\item É mostrado uma mensagem de erro ao tentar realizar login;
+\begin{itemize}
+\item É mostrado uma mensagem de erro ao tentar realizar login.
+\end{itemize}
 \item Usuário não preenche os campos necessários;
-\item Usuário não preenche os campos corretamente, de acordo com seus dados;
+\begin{itemize}
+\item Usuário não preencheu o campo de e-mail;
+\item Usuário não preencheu o campo de senha.
+\end{itemize}
+\item Usuário digital e-mail ou senha incorretamente.
 \item Problemas com o servidor que precisam ser notificados ao usuário;
+\begin{itemize}
+\item Problemas com a conexão com o banco de dados;
+\item Problemas com a conexão com o servidor.
+\end{itemize}
 \item Problemas com sua conexão com a internet.
+\begin{itemize}
+\item É notificado ao usuário falha com a conexão com a internet.
+\end{itemize}
 \end{itemize}
 }
 %Frequência de Ocorrencia
@@ -235,6 +248,7 @@
 {
 
 }
+
 
 %-----------------------------------------------------------
 \casoDeUso
@@ -312,7 +326,6 @@
 \begin{itemize}
 	\item Usuário: Deseja sair da rede social clicando no icone retangular proximo a foto como mostra a figura  \ref{figura:meus_posts}.
 \end{itemize}
-
 }
 %Pré-Condições
 {Possuir uma conta válida e estar conectado (logado no sistema)}
@@ -322,7 +335,6 @@
 {
 \begin{itemize}
 	\item Usuário acessa o site da rede social e  conecta à sua conta.
-	
 \end{itemize}
 }
 %Fluxo Alternativo
@@ -344,13 +356,12 @@
 	\item Exibe uma mensagem informando que o usuário não esta conectado a internet
 	\end{itemize}
 \end{itemize}
+\end{itemize}
 }
 %Frequência de Ocorrencia
 {Toda  vez que o usuário deseja sair da rede social.}
 %Problemas em Aberto
-{
-
-}
+{}
 %-------------------------------------------------------------------------
 \casoDeUso
 %Identificador
