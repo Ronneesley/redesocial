@@ -25,7 +25,7 @@ import br.com.redesocial.modelo.dto.Comentario;
  * @author Lara
  */
 public class ComentarioBOTest {
-    
+    /*
     public void testMetodoInserir(){
         //INSIRA O testMetodoInserir AQUI
     }
@@ -150,7 +150,7 @@ public class ComentarioBOTest {
             fail("Erro ao listar: " + ex.getMessage());
         }
     }
-    /*
+    */
     @Test
     public void testMetodoExcluir(){
        Pais pais = new Pais();
@@ -162,7 +162,7 @@ public class ComentarioBOTest {
             paisBO.inserir(pais);
 
             Estado estado = new Estado();
-            estado.setNome("California");
+            estado.setNome("Acre");
             estado.setPais(pais);
             
             EstadoBO estadoBO = new EstadoBO();
@@ -179,8 +179,6 @@ public class ComentarioBOTest {
             usuario.setNome("Raul");
             usuario.setDataCadastro(new Date());
             usuario.setEmail("raul@gmail.com");
-            //usuario.setFoto();
-           
             Calendar calendario = Calendar.getInstance();
             calendario.set(1986, 2, 8, 0, 0, 0);            
             usuario.setDataNascimento(calendario.getTime());
@@ -229,6 +227,6 @@ public class ComentarioBOTest {
         }catch (Exception ex){
            fail ("Falha ao inserir um comentario" + ex.getMessage());
         }   
-    }*/
+    }
 }
 
