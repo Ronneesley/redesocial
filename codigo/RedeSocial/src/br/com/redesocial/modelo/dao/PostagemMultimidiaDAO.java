@@ -13,7 +13,12 @@ import java.util.List;
  * @author Daniel, Macilon
  */
 public class PostagemMultimidiaDAO extends DAOBase {
-
+    /**
+    * Método para inserir uma postagem com multimídia
+    * @author Daniel Moreira Cardoso
+    * @throws Exception possíveis exceções que podem acontecer
+    * @param dto identificador de PostagemMultimidia
+    */
     public void inserir(PostagemMultimidia dto) throws Exception {
         Connection conexao = getConexao();
         
@@ -50,7 +55,8 @@ public class PostagemMultimidiaDAO extends DAOBase {
 	 /**
      * Método que seleciona uma postagem e uma multimídia já cadastrada no banco de dados
      * @author Thalia Santos de Santana
-     * @param postagem identificador da Postagem e multimidia identificador da Multimidia
+     * @param postagem identificador da Postagem
+     * @param multimidia identificador da Multimidia
      * @return postagem e multimidia selecionada no banco de dados
      * @throws Exception possíveis exceções que podem acontecer
      */

@@ -13,7 +13,13 @@ public class UsuarioBO extends BOCRUDBase<Usuario, UsuarioDAO> {
     protected UsuarioDAO instanciarDAO() {
         return new UsuarioDAO();
     }
-
+    
+    /**
+     * Validação de atributos de um usuário
+     * @author Daniel Moreira Cardoso
+     * @param dto idetificador de usuário
+     * @throws Exception possíveis excessões que podem acontecer
+     */
     @Override
     protected void validar(Usuario dto) throws Exception {
         //Validações
