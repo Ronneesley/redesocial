@@ -52,7 +52,7 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
         Connection conexao = getConexao();
 
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("Select * from posts where id = ?");
+        pstmt = conexao.prepareStatement("Select * from comentarios where id = ?");
         pstmt.setInt(1, id);
 
         ResultSet rs;
