@@ -174,18 +174,14 @@ public class MultimidiaBOTeste {
             
            int id = multimidia.getId();     
             
-<<<<<<< HEAD
+
             int idmultimidia = multimidia.getId();            
-            //multimidia.selecionar(idmultimidia);
-<<<<<<< HEAD
-=======
-=======
+            multimidia.selecionar(idmultimidia);
+
            Multimidia multimidiaSelecionada = mult.selecionar(id);
            
            assertNotNull("Multimídia não encontrada", multimidiaSelecionada);
->>>>>>> 4517452a85e6a7afccbeeab359ec807dd297849d
->>>>>>> defbb574981ea51660c036fb9a5cd6f393bf5d86
-            
+
         } catch (Exception ex) {
             fail("Falha ao selecionar uma Multimídia: " + ex.getMessage());            
         }
