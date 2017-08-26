@@ -174,7 +174,7 @@ public class MultimidiaBOTeste {
             albumbo.selecionar(idalbum);
             
             int idmultimidia = multimidia.getId();            
-            multimidia.selecionar(idmultimidia);
+            //multimidia.selecionar(idmultimidia);
             
         } catch (Exception ex) {
             fail("Falha ao inserir um comentário: " + ex.getMessage());            
