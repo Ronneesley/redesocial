@@ -7,6 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -69,7 +70,29 @@ public class EstadoDAO extends DAOCRUDBase<Estado> {
 
     @Override
     public List listar() throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Connection conexao = getConexao();
+
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("select * from estados order by nome asc"); 
+
+        ResultSet rs;
+        rs = pstmt.executeQuery();
+
+        List lista;
+        lista = new ArrayList();
+        
+        PaisDAO paisDAO = new PaisDAO();
+        while (rs.next()){
+            Estado e = new Estado();
+
+            e.setId(rs.getInt("id"));
+            e.setNome(rs.getString("nome"));
+            e.setPais(paisDAO.selecionar(rs.getInt("pais")));  
+            
+            lista.add(e);
+        }
+
+        return lista;
     }
 
     @Override
