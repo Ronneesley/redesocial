@@ -16,7 +16,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 /**
  * Unidade de testes para o MultímidiaBO
- * @author Lucas Azevedo
+ * @author Lucas Azevedo, Macilon Arruda
  * @since 16/08/2017
  */
 public class MultimidiaBOTeste {
@@ -25,8 +25,8 @@ public class MultimidiaBOTeste {
      * Método de teste responsável pela inserção de multímidia  no banco de dados
      * @author Lucas Azevedo
      */
+    
     @Test
-
     public void testMetodoInserir() {
         /**
          * Para inserir um multímidia é necessário inserir um usuário, país, estado e cidade, usuário e album no banco de dados
@@ -98,7 +98,7 @@ public class MultimidiaBOTeste {
         }		
     } 
     
-    /*@Test
+    @Test
     public void testMetodoListar() throws Exception {
         MultimidiaBO bo = new MultimidiaBO();
 
@@ -128,9 +128,9 @@ public class MultimidiaBOTeste {
         } catch (Exception ex){
             fail("Erro ao listar: " + ex.getMessage());
         }
-    }*/
+    }
     
-    //@Test
+    @Test
     public void testMetodoSelecionar() {
         Pais pais = new Pais();
         pais.setNome("Irlanda");
