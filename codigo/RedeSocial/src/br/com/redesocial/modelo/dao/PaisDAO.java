@@ -40,7 +40,7 @@ public class PaisDAO extends DAOCRUDBase<Pais> {
 
     /**
      * Método responsável pela alteração de um país no banco de dados
-     * @author Ciclano
+     * @author Macilon Arruda
      * @param p novos dados do país, com o ID do país a ser alterado preenchido
      * @throws Exception possíveis exceções que podem acontecer
      */
@@ -63,7 +63,7 @@ public class PaisDAO extends DAOCRUDBase<Pais> {
 
     /**
      * Método responsável pela exclusão de um país no banco de dados
-     * @author Macilon Arruda
+     * @author Ciclano
      * @param id identificador do país a ser excluído
      * @throws Exception possíveis exceções que podem acontecer
      */
