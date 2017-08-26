@@ -169,7 +169,7 @@ public class ComentarioBOTest {
             estadoBO.inserir(estado);
             
             Cidade cidade = new Cidade();
-            cidade.setNome("Los Angeles");
+            cidade.setNome("Los Angel");
             cidade.setEstado(estado);
             
             CidadeBO cidadeBO = new CidadeBO();
