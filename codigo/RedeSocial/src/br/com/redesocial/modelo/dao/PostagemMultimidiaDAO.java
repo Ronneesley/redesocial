@@ -79,6 +79,12 @@ public class PostagemMultimidiaDAO extends DAOBase {
         }
     }
 
+    /**
+     * Método que lista todas as postagens e multimidias em ordem alfabética do banco de dados
+     * @author Macilon Arruda
+     * @return lista de postagem e multimidia ordenados alfabeticamente
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     public List listar() throws Exception {
         Connection conexao = getConexao();
         

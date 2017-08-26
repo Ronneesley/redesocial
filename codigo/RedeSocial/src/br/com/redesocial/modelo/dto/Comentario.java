@@ -4,18 +4,27 @@ import java.util.Date;
 
 /**
  * DTO para representação do Comentário
- * @author Ronneesley, Ianka, Anny e Macilon
+ * @author Ronneesley, Ianka, Anny e Macilon Arruda
  * @since 29/07/2017
  */
 public class Comentario {
+    /**
+     * Atributo que identifica o comentário
+     */
     private Integer id;
-
+    
+    /**
+     * Atributo que armazena a descrição do comentário
+     */
     private String descricao;
-
+    
     private Integer curtidas;
-
+    
+    /**
+     * Atributo que armazena a data de criação de comentários
+     */
     private Date data;
-
+    
     private Postagem postagem;
 
     private Comentario resposta;
