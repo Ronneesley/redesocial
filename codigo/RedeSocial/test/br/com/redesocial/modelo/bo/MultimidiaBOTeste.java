@@ -14,11 +14,23 @@ import java.util.Date;
 import java.util.List;
 import org.junit.Test;
 import static org.junit.Assert.*;
-
+/**
+ * Unidade de testes para o MultímidiaBO
+ * @author Lucas Azevedo
+ * @since 16/08/2017
+ */
 public class MultimidiaBOTeste {
-    
-    //@Test
+
+   /**
+     * Método de teste responsável pela inserção de multímidia  no banco de dados
+     * @author Lucas Azevedo
+     */
+    @Test
+
     public void testMetodoInserir() {
+        /**
+         * Para inserir um multímidia é necessário inserir um usuário, país, estado e cidade, usuário e album no banco de dados
+         */  
         Pais pais = new Pais();
         pais.setNome("EUA");        
         
@@ -78,6 +90,10 @@ public class MultimidiaBOTeste {
             multimidia.setData(calendario.getTime());
             mult.inserir(multimidia);
         } catch (Exception ex) {
+            
+             /**
+             * Mensagem de erro caso não insira uma multímida no banco de dados
+             */ 
             fail("Falha ao inserir uma multimidia: " + ex.getMessage());
         }		
     } 
