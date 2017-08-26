@@ -63,7 +63,7 @@ public class PaisDAO extends DAOCRUDBase<Pais> {
 
     /**
      * Método responsável pela exclusão de um país no banco de dados
-     * @author Ciclano
+     * @author Macilon Arruda
      * @param id identificador do país a ser excluído
      * @throws Exception possíveis exceções que podem acontecer
      */
