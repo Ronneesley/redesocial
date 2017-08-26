@@ -20,7 +20,7 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
     /**
      * Inseri um objeto no banco de dados na tabela usuários
      * @param dto objeto com os dados de usuário já preenchido
-     * @throws Exception 
+     * @throws Exception
      */
     @Override
     public void inserir(Usuario dto) throws Exception {
