@@ -10,30 +10,30 @@ public class Artigo {
     private Integer id;
     private String idioma;
     private String revista;
-    private String issn;
+    private String ISSN;
     private String autor;
     private Date data;
     private String areaConhecimento;
     private String titulo;
     private String resumo;
-    private String url;
+    private String URL;
     private byte[] artigo;
 
     public Artigo() {
     
     }
 
-    public Artigo(Integer id, String idioma, String revista, String issn, String autor, Date data, String areaConhecimento, String titulo, String resumo, String url, byte[] artigo) {
+    public Artigo(Integer id, String idioma, String revista, String ISSN, String autor, Date data, String areaConhecimento, String titulo, String resumo, String URL, byte[] artigo) {
         this.id = id;
         this.idioma = idioma;
         this.revista = revista;
-        this.issn = issn;
+        this.ISSN = ISSN;
         this.autor = autor;
         this.data = data;
         this.areaConhecimento = areaConhecimento;
         this.titulo = titulo;
         this.resumo = resumo;
-        this.url = url;
+        this.URL = URL;
         this.artigo = artigo;
     }
 
@@ -61,12 +61,12 @@ public class Artigo {
         this.revista = revista;
     }
 
-    public String getIssn() {
-        return issn;
+    public String getISSN() {
+        return ISSN;
     }
 
-    public void setIssn(String issn) {
-        this.issn = issn;
+    public void setISSN(String ISSN) {
+        this.ISSN = ISSN;
     }
 
     public String getAutor() {
@@ -109,12 +109,12 @@ public class Artigo {
         this.resumo = resumo;
     }
 
-    public String getUrl() {
-        return url;
+    public String getURL() {
+        return URL;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setURL(String URL) {
+        this.URL = URL;
     }
 
     public byte[] getArtigo() {
