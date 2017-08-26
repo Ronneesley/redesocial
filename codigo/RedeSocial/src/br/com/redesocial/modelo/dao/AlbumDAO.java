@@ -87,7 +87,13 @@ public class AlbumDAO extends DAOCRUDBase<Album> {
         dto.setId(getId(pstmt));
         
     }
-
+    
+     /**
+     * Método responsável pela alteração de um album no banco de dados
+     * @author gleyson-alves
+     * @param dto novos dados do Album, com o ID do album a ser alterado preenchido
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Override
     public void alterar(Album dto) throws Exception {
         

@@ -364,31 +364,44 @@
 %Fluxo Básico
 {
 \begin{itemize}
-	\item Usuário: Acessa o seu perfil como mostra a figura 4.
+	\item Usuário: Acessa o seu perfil como mostra a Figura \ref{perfil}.
+	\item Sistema demonstra o seu perfil.
 	\item Usuário: Clicar no menu Sobre.
-	\item Usuário: Seleciona os campos que deseja alterar clicando nos ícones como mostra a figura 3.
+ 	\item Sistema exibe os dados detalhados do perfil do usuário.
+	\item Usuário: Seleciona os campos que deseja alterar clicando nos ícones como mostra a Figura \ref{cadastro_usuario_parte3}.
 	\item Usuário: Preenche os campos.
 	\item Usuário: Confirma os campos ao clicar no botão "Confirmar".
+	\item Sistema armazena os dados inseridos, alterados ou excluidos do usuário.
+	\item Sistema detectar algum erro durante o processo, deve demonstrar ao usuário o local.
 \end{itemize}
 }
 %Fluxo Alternativo
 {
 \begin{itemize}
-	\item Usuário desconectado.
-	\item Problemas com resposta do servidor ao alterar o campo especificado.
-	\item Exibir a mensagem de erro ao usuário.
-	\item Usuário preencher o campo incorretamente ex:(Caracteres especiais, letras em campos de números, etc).
-	\item Exibir mensagem de erro ao usuário sobre o preenchimento do campo.
-	\item Exibir a forma correta de preencher.
-	\item Usuário não confirmar a alteração.
-	\item Informa o usuário se deseja salvar as alterações realizadas.
-	\item Usuário inserir telefone inválido.
-	\item Usuário inserir redes sociais inválidas.
-	\item Sistema informar sobre os devidos erros de inserção.
-	\item Usuário não estar conectado a internet.
-	\item Perda das alterações realizadas, tendo, que refazer ao restabelecer a conexão com a internet.
-	\item Usuário encerrar a sessão sem salvar as alterações.
-	\item Usuário fechar o navegador.
+	\item Sistema Offline
+	   \begin{itemize}	
+		\item Usuário desconectado.
+		\item Problemas com resposta do servidor ao alterar o campo especificado.
+		\item Exibir a mensagem de erro ao usuário.
+		\item Usuário não estar conectado a internet.
+     	    \end{itemize}
+	\item Preenchimento dos campos    
+	    \begin{itemize}
+		\item Usuário preencher o campo incorretamente ex:(Caracteres especiais, letras em campos de números, etc).
+		\item Exibir mensagem de erro ao usuário sobre o preenchimento do campo.
+		\item Exibir a forma correta de preencher.
+		\item Usuário inserir redes sociais inválidas.
+		\item Sistema informar sobre os devidos erros de inserção.
+		\item Usuário inserir telefone inválido.
+		\item Sistema informar ao usuário sobre o telefone inválido.
+		\item Sistema demonstrar forma correta de inserir o telefone.
+	     \end{itemize}
+	\item Alteração e Confirmação dos campos     
+		\item Usuário não confirmar a alteração.
+		\item Informa o usuário se deseja salvar as alterações realizadas.
+		\item Usuário encerrar a sessão sem salvar as alterações.
+		\item Usuário fechar o navegador.
+	.	\item Perda das alterações realizadas, tendo, que refazer ao restabelecer a conexão com a internet.
 \end{itemize}
 }
 %Frequência de Ocorrência
