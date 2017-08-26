@@ -141,8 +141,6 @@ public class MultimidiaBOTeste {
             usuario.setNome("Andrey");
             usuario.setDataCadastro(new Date());
             usuario.setEmail("andrey@gmail.com");
-            //usuario.setFoto();
-                           
             Calendar calendario = Calendar.getInstance();
             calendario.set(1988, 2, 7, 0, 0, 0);            
             usuario.setDataNascimento(calendario.getTime());
@@ -157,27 +155,36 @@ public class MultimidiaBOTeste {
             
             Album album = new Album();
             album.setNome("Album1");
+            album.setData(calendario.getTime());
+            album.setUsuario(usuario);
             
             AlbumBO albumbo = new AlbumBO();
             albumbo.inserir(album);
             
             MultimidiaBO mult = new MultimidiaBO();             		
             Multimidia multimidia = new Multimidia();
-            multimidia.setAlbum(album);
+            
             multimidia.setMidia(Utilitarios.lerArquivo(new File("../../arquivos_teste/nome_arquivo.txt")));
             multimidia.setTipoConteudo("foto");
             calendario.set(2017, 8, 20, 8, 0, 0);
             multimidia.setData(calendario.getTime());
+            multimidia.setAlbum(album);
+            
             mult.inserir(multimidia);
             
-            int idalbum = album.getId();            
-            albumbo.selecionar(idalbum);
+           int id = multimidia.getId();     
             
+<<<<<<< HEAD
             int idmultimidia = multimidia.getId();            
             //multimidia.selecionar(idmultimidia);
+=======
+           Multimidia multimidiaSelecionada = mult.selecionar(id);
+           
+           assertNotNull("Multimídia não encontrada", multimidiaSelecionada);
+>>>>>>> 4517452a85e6a7afccbeeab359ec807dd297849d
             
         } catch (Exception ex) {
-            fail("Falha ao inserir um comentário: " + ex.getMessage());            
+            fail("Falha ao selecionar uma Multimídia: " + ex.getMessage());            
         }
     }
     
