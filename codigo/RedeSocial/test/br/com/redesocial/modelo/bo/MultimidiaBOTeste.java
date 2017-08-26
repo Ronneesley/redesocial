@@ -14,11 +14,23 @@ import java.util.Date;
 import java.util.List;
 import org.junit.Test;
 import static org.junit.Assert.*;
-
+/**
+ * Unidade de testes para o MultímidiaBO
+ * @author Lucas Azevedo
+ * @since 16/08/2017
+ */
 public class MultimidiaBOTeste {
-    
+
+   /**
+     * Método de teste responsável pela inserção de multímidia  no banco de dados
+     * @author Lucas Azevedo
+     */
     @Test
+
     public void testMetodoInserir() {
+        /**
+         * Para inserir um multímidia é necessário inserir um usuário, país, estado e cidade, usuário e album no banco de dados
+         */  
         Pais pais = new Pais();
         pais.setNome("EUA");        
         
@@ -78,6 +90,10 @@ public class MultimidiaBOTeste {
             multimidia.setData(calendario.getTime());
             mult.inserir(multimidia);
         } catch (Exception ex) {
+            
+             /**
+             * Mensagem de erro caso não insira uma multímida no banco de dados
+             */ 
             fail("Falha ao inserir uma multimidia: " + ex.getMessage());
         }		
     } 
@@ -114,7 +130,7 @@ public class MultimidiaBOTeste {
         }
     }*/
     
-    @Test
+    //@Test
     public void testMetodoSelecionar() {
         Pais pais = new Pais();
         pais.setNome("Irlanda");
@@ -174,25 +190,21 @@ public class MultimidiaBOTeste {
             
            int id = multimidia.getId();     
             
-<<<<<<< HEAD
+
             int idmultimidia = multimidia.getId();            
-            //multimidia.selecionar(idmultimidia);
-<<<<<<< HEAD
-=======
-=======
+            multimidia.selecionar(idmultimidia);
+
            Multimidia multimidiaSelecionada = mult.selecionar(id);
            
            assertNotNull("Multimídia não encontrada", multimidiaSelecionada);
->>>>>>> 4517452a85e6a7afccbeeab359ec807dd297849d
->>>>>>> defbb574981ea51660c036fb9a5cd6f393bf5d86
-            
+
         } catch (Exception ex) {
             fail("Falha ao selecionar uma Multimídia: " + ex.getMessage());            
         }
     }
     
     @Test
-    public void testeMetodoExcluir() throws Exception{
+    public void testeExcluir() throws Exception{
         Calendar calendario = Calendar.getInstance();
         calendario.set(2017, 2, 7, 0, 0, 0);
         
@@ -220,8 +232,6 @@ public class MultimidiaBOTeste {
         usuario.setNome("Roni");
         usuario.setDataCadastro(new Date());
         usuario.setEmail("ronneesley@gmail.com");
-        //usuario.setFoto();
-                   
         usuario.setDataNascimento(calendario.getTime());
         usuario.setSenha("123");
         usuario.setSexo(Sexo.MASCULINO);
@@ -232,12 +242,13 @@ public class MultimidiaBOTeste {
         UsuarioBO usuarioBO = new UsuarioBO();
         usuarioBO.inserir(usuario);
         
-        AlbumBO albumBO = new AlbumBO();
-        
         Album album = new Album();
         album.setNome("Lara");
         album.setData(calendario.getTime());
         album.setUsuario(usuario);
+        
+        AlbumBO albumBO = new AlbumBO();
+        albumBO.inserir(album);
         
         MultimidiaBO bo = new MultimidiaBO();
         
@@ -259,7 +270,7 @@ public class MultimidiaBOTeste {
             
             assertNull("Foto não encontrada, mesmo após excluí-lá", multimidiaSelecionadoPosExclusao);
         }catch (Exception ex){
-            fail("Falha ao adicionar uma foto" +ex.getMessage());
+            fail("Falha ao adicionar uma foto " + ex.getMessage());
         }
         
     }
