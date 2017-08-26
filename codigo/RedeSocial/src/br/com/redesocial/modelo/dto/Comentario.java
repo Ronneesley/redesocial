@@ -12,7 +12,7 @@ public class Comentario {
      * Atributo que identifica o comentário
      */
     private Integer id;
-<<<<<<< HEAD
+
     /**
      * Atributo que identifica a descrição do comentário
      */
@@ -28,21 +28,6 @@ public class Comentario {
     /**
      * Atributo que identifica a postagem do comentário
      */
-=======
-    
-    /**
-     * Atributo que armazena a descrição do comentário
-     */
-    private String descricao;
-    
-    private Integer curtidas;
-    
-    /**
-     * Atributo que armazena a data de criação de comentários
-     */
-    private Date data;
-    
->>>>>>> f8da15a1e6bcc20a3c327ba7b55fa2c8ff927366
     private Postagem postagem;
     /**
      * Atributo que identifica a resposta do comentário
