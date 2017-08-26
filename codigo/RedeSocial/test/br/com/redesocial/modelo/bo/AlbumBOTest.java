@@ -83,12 +83,12 @@ public class AlbumBOTest {
             /**
              * Os dados do album foram definidos para inserir no banco de dados
              */  
-           bo.inserir(album);
+            bo.inserir(album);
         } catch (Exception ex) {
             /**
              * Mensagem de erro caso não insira o album no banco de dados
              */ 
-           fail("Falha ao inserir um album: " + ex.getMessage());
+            fail("Falha ao inserir um album: " + ex.getMessage());
         }		
     } 
     
@@ -227,11 +227,6 @@ public class AlbumBOTest {
 	AlbumBO albumBO = new AlbumBO();
 	
     try{
-        
-	Album album = new Album ();
-	album.setNome("Desisto, Ronne!");
-	albumBO.inserir(album);
-	
 	PaisBO paisBO = new PaisBO();
 	Pais pais = new Pais();
 	pais.setNome("Brasil");
@@ -240,11 +235,13 @@ public class AlbumBOTest {
 	EstadoBO estadoBO = new EstadoBO();
 	Estado estado = new Estado();
 	estado.setNome("Goiás");
+        estado.setPais(pais);
 	estadoBO.inserir(estado);
 	
 	CidadeBO cidadeBO =  new CidadeBO();
 	Cidade cidade = new Cidade();
 	cidade.setNome("Bragolândia");
+        cidade.setEstado(estado);
 	cidadeBO.inserir(cidade);
 	
 	UsuarioBO usuarioBO = new UsuarioBO();
@@ -266,6 +263,9 @@ public class AlbumBOTest {
 	usuarioBO.inserir(usuario);
 	
 	calendario.set(2016, 8, 28, 0, 0, 0);
+        
+	Album album = new Album ();
+	album.setNome("Desisto, Ronne!");
 	album.setData(calendario.getTime());
 	album.setUsuario(usuario);
 	albumBO.inserir(album);
@@ -277,7 +277,7 @@ public class AlbumBOTest {
 	albumBO.excluir(id);
 	Album albumSelecionadoPosExclusao = albumBO.selecionar(id);
 	
-	assertNotNull("Album não encontrado", albumSelecionadoPosExclusao);
+	assertNull("Album não encontrado", albumSelecionadoPosExclusao);
 	} catch (Exception ex){
 	fail("Falha ao inserir um album: " + ex.getMessage());
 	}
