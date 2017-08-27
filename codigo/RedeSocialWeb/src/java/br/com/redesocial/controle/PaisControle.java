@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.redesocial.controle;
+
 import br.com.redesocial.modelo.bo.PaisBO;
 import br.com.redesocial.modelo.dto.Pais;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,40 +11,38 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- *
- * @author aluno
+ * Controle para o País
+ * @author Igor Justino Rodrigues
+ * @since 27/08/2017
  */
 @WebServlet(name = "PaisControle", urlPatterns = {"/PaisControle"})
 public class PaisControle extends HttpServlet {
 
     /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
+     * Processa todas as requisições sejam elas do tipo GET ou POST
+     * @param request requisição
+     * @param response resposta
+     * @throws javax.servlet.ServletException se ocorre um erro no Servlet
+     * @throws java.io.IOException se ocorre um erro de entrada e saída
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet PaisControle</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet PaisControle at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+        
+        String operacao = request.getParameter("operacao");
+        
+        try {
+            switch (operacao){
+                case "Cadastrar":
+                    this.cadastrar(request, response);
+                    break;
+            }
+        } catch (Exception ex){
+            
         }
     }
     
-        /**
-     * Cadastra um usuário no banco de dados
+    /**
+     * Cadastra um país no banco de dados
      * @param request
      * @param response
      * @throws Exception 
@@ -57,7 +50,6 @@ public class PaisControle extends HttpServlet {
     private void cadastrar(HttpServletRequest request, HttpServletResponse response) throws Exception{
         Pais pais = new Pais();
         pais.setNome(request.getParameter("nome"));
-        
         
         request.setAttribute("pais", pais);
         
@@ -77,15 +69,12 @@ public class PaisControle extends HttpServlet {
         }
     }
 
-    
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
+     * Requisições do tipo GET
+     * @param request requisição
+     * @param response resposta
+     * @throws javax.servlet.ServletException se ocorre um erro no Servlet
+     * @throws java.io.IOException se ocorre um erro de entrada e saída
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -94,12 +83,11 @@ public class PaisControle extends HttpServlet {
     }
 
     /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
+     * Tratamento dos envios pelo método POST
+     * @param request requisição
+     * @param response resposta
+     * @throws javax.servlet.ServletException se ocorre um erro no Servlet
+     * @throws java.io.IOException se ocorre um erro de entrada e saída
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -108,13 +96,11 @@ public class PaisControle extends HttpServlet {
     }
 
     /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
+     * Descrição do Servlet
+     * @return descrição
      */
     @Override
     public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
-
+        return "Servlet para País";
+    }
 }
