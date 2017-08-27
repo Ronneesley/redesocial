@@ -13,6 +13,13 @@ import java.util.List;
  * @author IgorRodrigues
  */
 public class PostagemDAO extends DAOCRUDBase<Postagem> {
+    
+    /**
+     * Método responsável por excluir uma postagem do banco de dados
+     * @author Igor Justino Rodrigues
+     * @param id da postagem a ser excluida
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Override
     public void excluir(int id) throws Exception {
         Connection conexao = getConexao();
@@ -42,7 +49,13 @@ public class PostagemDAO extends DAOCRUDBase<Postagem> {
         
         p.setId(getId(pstmt));
     }
-
+    
+    /**
+     * Método responsável pela alteração de uma postagem no banco de dados
+     * @author Igor Justino Rodrigues
+     * @param p novos dados de postagem, com o ID da postagem a ser alterado já preenchido
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Override
     public void alterar(Postagem p) throws Exception{
         Connection conexao = getConexao();
@@ -58,7 +71,14 @@ public class PostagemDAO extends DAOCRUDBase<Postagem> {
         
         pstmt.executeUpdate();
     }
-
+    
+    /**
+     * Método responsável por selecionar uma postagem no banco de dados
+     * @author Igor Justino Rodrigues
+     * @param id da postagem a ser selecionada
+     * @return a postagem selecionada
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Override
     public Postagem selecionar(int id) throws Exception {
         Connection conexao = getConexao();

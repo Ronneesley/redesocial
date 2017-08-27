@@ -78,6 +78,12 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
         }
     }
 
+      /**
+     * Método que lista todos os comentarios ordenado pela data do comentário do banco de dados
+     * @author Igor Justino Rodrigues
+     * @return lista de comentarios ordenados pela data do comentário
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Override
     public List listar() throws Exception {
         Connection conexao = getConexao();

@@ -67,9 +67,17 @@ public class UsuarioBOTest {
         }
     }
     
+    /**
+     * Método de teste responsável por listar os usuarios no banco de dados
+     * @author Igor Justino Rodrigues
+     */
     @Test
     public void testMetodoListar() {
-            UsuarioBO usuariobo = new UsuarioBO();
+
+        /*
+        *Criação e Inserção de Usuario no banco de dados
+        */
+        UsuarioBO usuariobo = new UsuarioBO();
 
         try {
             List existentes = usuariobo.listar();
@@ -119,7 +127,10 @@ public class UsuarioBOTest {
                     fail("Falha ao inserir um álbum: " + ex.getMessage());
                 }
             }
-            List existentesFinal = usuariobo.listar(); //insere os dados perfeitamente quando chega aqui dá erro e n consigo arrumar
+            /*
+            *Lista os usuarios
+            */
+            List existentesFinal = usuariobo.listar();
             int qtdeExistentesFinal = existentesFinal.size();
 
             int diferenca = qtdeExistentesFinal - qtdeExistentes;

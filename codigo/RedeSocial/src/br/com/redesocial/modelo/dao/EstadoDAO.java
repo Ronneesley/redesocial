@@ -67,7 +67,13 @@ public class EstadoDAO extends DAOCRUDBase<Estado> {
         
         dto.setId(getId(pstmt));
     }
-
+    
+      /**
+     * Método que lista todos os estados ordenado pelo nome do banco de dados
+     * @author Igor Justino Rodrigues
+     * @return lista de estado ordenados pelo nome
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Override
     public List listar() throws Exception {
         Connection conexao = getConexao();
