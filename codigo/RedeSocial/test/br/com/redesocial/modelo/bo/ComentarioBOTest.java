@@ -25,7 +25,7 @@ import br.com.redesocial.modelo.dto.Comentario;
  * @author Lara
  */
 public class ComentarioBOTest {
-    /*
+    
     public void testMetodoInserir(){
         //INSIRA O testMetodoInserir AQUI
     }
@@ -150,7 +150,7 @@ public class ComentarioBOTest {
             fail("Erro ao listar: " + ex.getMessage());
         }
     }
-    */
+    
     @Test
     public void testMetodoExcluir(){
        Pais pais = new Pais();
