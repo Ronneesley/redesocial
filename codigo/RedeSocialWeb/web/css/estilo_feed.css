@@ -2,14 +2,16 @@ body{
 	background-color: red;
 	height: auto;
 }
-
+#geral{
+	background-color: green;
+	height: auto;
+}
 #barra_ferramentas{
 	background-color:blue;
 	padding: 10px;
 	border-radius: 2px;
-	float: top;
 	padding: 5px;
-	height: 50px;
+	height: 40px;
 }	
 
 .logo{
@@ -21,15 +23,13 @@ body{
 
 .icones_ferramentas{
 	padding: 5px;
-	float: center;
+	float: left;
 	margin-left: 5px;
 }
 
 .icone_perfil{
-	padding: 10px;
-	margin-right: 50px;
-	margin-left: 50px;
-	float: right;
-	margin-bottom: 10px;
+	margin-left: 550px;
+	float: left;
+	margin-bottom: 15px;
 	border-radius: 3px;
 }
