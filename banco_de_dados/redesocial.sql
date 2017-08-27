@@ -254,6 +254,23 @@ CREATE TABLE IF NOT EXISTS `redesocial`.`participantes` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+-- -----------------------------------------------------
+-- Table `redesocial`.`artigo`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `redesocial`.`artigo` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `idioma` VARCHAR(100) NOT NULL,
+  `revista` VARCHAR(100) NOT NULL,
+  `issn` VARCHAR(200) NOT NULL,
+  `autor` VARCHAR(200) NOT NULL,
+  `data` DATETIME NOT NULL,
+  `areaConhecimento` TEXT NOT NULL,
+  `titulo` VARCHAR(200) NOT NULL,
+  `resumo` TEXT NOT NULL,
+  `url` VARCHAR(200) NOT NULL,
+  `artigo` MEDIUMBLOB NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;	
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
