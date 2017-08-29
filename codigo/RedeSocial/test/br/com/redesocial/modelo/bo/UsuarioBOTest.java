@@ -236,9 +236,16 @@ public class UsuarioBOTest {
                 fail("Falha ao alterar usuario: " + ex.getMessage());
             }
     }
-    
+    /**
+     * Método responsável pelo teste da exclusão de um Usuário no banco de dados
+     * @author Lara Caroline
+     */
     @Test
     public void testMetodoExcluir() throws Exception{
+        /**
+         * Para excluir um usuário o mesmo deve estar inserido.
+         * Ao inserir um usuário, é necessário inserir cidade, estado e país.
+         */
         Pais pais = new Pais();
         pais.setNome("Brasil");
             
@@ -281,14 +288,31 @@ public class UsuarioBOTest {
             bo.inserir(usuario);
 
             int id = usuario.getId();
+            /**
+             * Seleciona o usuário inserido através do id.
+             */
             Usuario usuarioSelecionado = bo.selecionar(id);
+            /**
+             * Se não houver usuário exibe a mensagem de falha.
+             */
             assertNotNull("Usuário não encontrado!", usuarioSelecionado);
-
+            
+            /**
+             * Exclui o usuário selecionado através do id.
+             */
             bo.excluir(id);
+            /**
+             * Seleciona o usuario excluído para saber se o mesmo foi excluído.
+             */
             Usuario usurarioSelecionadoPosExclusao = bo.selecionar(id);
-
+            /**
+             * Se não foi excluído, exibe a mensagem seguinte:
+             */
             assertNull("Usuário encontrado, mesmo após exclusão.", usurarioSelecionadoPosExclusao);
         } catch (Exception ex) {
+            /**
+             * Mensagem exibida quando o usuário não é inserido.
+             */
             fail("Falha ao inserir um usuário: " + ex.getMessage());
         }
     }
