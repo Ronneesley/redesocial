@@ -18,6 +18,14 @@ import java.util.List;
  */
 public class EstadoDAO extends DAOCRUDBase<Estado> {
 
+    /**
+     * Método que seleciona um estado já cadastrado no banco de dados
+     * @author Lara Caroline
+     * @param id identificador do estado
+     * @return Estado selecionado no banco de dados
+     * @throws Exception possíveis exceções que podem acontecer
+     */
+    
     public Estado selecionar(int id) throws Exception {
         Connection conexao = getConexao();
 

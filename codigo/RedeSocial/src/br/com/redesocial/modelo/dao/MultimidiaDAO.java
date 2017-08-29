@@ -34,6 +34,14 @@ public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
         
         m.setId(getId(pstmt));
     }
+    
+    /**
+     * Método que seleciona uma multimídia já cadastrada no banco de dados
+     * @author Lara Caroline
+     * @param id identificador da mídia
+     * @return Multimídia selecionada no banco de dados
+     * @throws Exception possíveis exceções que podem acontecer
+     */
    
     @Override
     public Multimidia selecionar(int id) throws Exception{

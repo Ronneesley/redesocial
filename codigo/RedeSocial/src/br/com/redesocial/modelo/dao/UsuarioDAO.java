@@ -123,6 +123,14 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
       */
         pstmt.executeUpdate();
     }
+    
+    /**
+     * Método responsável pela alteração da senha de um usuário
+     * @author Lara Caroline
+     * @param u nova senha do usuário, com o ID do usuário, a ser alterado, preenchido
+     * @throws Exception possíveis exceções que podem acontecer
+     */
+    
     public void alterarSenha (Usuario  u) throws Exception {
         Connection conexao = getConexao();
 
