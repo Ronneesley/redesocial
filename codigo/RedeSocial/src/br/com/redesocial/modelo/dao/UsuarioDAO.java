@@ -142,6 +142,13 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
        
         pstmt.executeUpdate();
     }
+    
+    /**
+     * Método que lista todos os usuários em ordem alfabética cadastrados no banco de dados
+     * @author Adallberto Lucena Moura
+     * @return lista de usuários ordenados alfabeticamente
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Override
      public List listar() throws Exception {
         Connection conexao = getConexao();
