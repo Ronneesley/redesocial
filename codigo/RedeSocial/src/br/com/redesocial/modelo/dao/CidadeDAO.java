@@ -37,6 +37,12 @@ public class CidadeDAO extends DAOCRUDBase<Cidade> {
         dto.setId(getId(pstmt));     
     }
 
+    /**
+     * Método responsável pela alteração de uma cidade no banco de dados
+     * @author Ianka Talita Bastos de Assis
+     * @param dto novos dados de cidade, com o ID da cidade a ser alterado preenchido
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Override
     public void alterar(Cidade dto) throws Exception {
         Connection conexao = getConexao();
