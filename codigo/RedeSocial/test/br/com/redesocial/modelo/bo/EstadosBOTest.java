@@ -164,23 +164,35 @@ public class EstadosBOTest {
     
         Pais pais = new Pais();
         pais.setNome("Brasil");
-        //criar país
+        /**
+         * criar país
+         */
         
         PaisBO paisBO = new PaisBO();
         paisBO.inserir(pais);
-        //inserir país
+        /**
+         * inserir país
+         */
         
         EstadoBO estadoBO = new EstadoBO();
-        //criar estado
+        /**
+         * criar estado
+         */
         
         try {
             List existentes = estadoBO.listar();
             int qtdeExistentes = existentes.size();
+         /**
+          * função listar estados
+          */
 
             final int qtde = 3;
             for (int i = 0; i < 3; i++){
                 Estado estado = new Estado();
                 estado.setNome("Goiás");
+            /**
+             * 
+             */
 
                 try {
                     estadoBO.inserir(estado);
