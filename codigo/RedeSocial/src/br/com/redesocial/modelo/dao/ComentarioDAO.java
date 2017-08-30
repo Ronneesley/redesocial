@@ -46,7 +46,14 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
 
         pstmt.executeUpdate();
     }
-
+    
+    /**
+     * Método que seleciona um comentário já cadastrado no banco de dados
+     * @author Ianka Talita Bastos de Assis
+     * @param id identificador do comentário
+     * @return comentário selecionado no banco de dados
+     * @throws Exception possíveis exceções que podem acontecer
+     */    
     @Override
     public Comentario selecionar(int id) throws Exception {
         Connection conexao = getConexao();
