@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class EstadosBOTest {
     
-    @Test
+    //@Test
     public void testMetodoInserir() {
         Pais pais = new Pais();
         pais.setNome("Brasil");
@@ -39,7 +39,7 @@ public class EstadosBOTest {
     * Método Alterar, insere dados e depois altera
     * @author Andrey Silva Ribeiro
     */
-    @Test
+    //@Test
     public void testMetodoAlterar() {
         /**
         * responsável pela inserção de um país no banco de dados
@@ -90,7 +90,7 @@ public class EstadosBOTest {
      * Método selecionar, seleciona dados 
      * @author Daniel Moreira Cardoso
      */
-    @Test
+    //@Test
     public void testMetodoSelecionar(){
         /**
          * responsável pela inserção de um estado no banco de dados
@@ -164,12 +164,15 @@ public class EstadosBOTest {
     
         Pais pais = new Pais();
         pais.setNome("Brasil");
+        //criar país
         
         PaisBO paisBO = new PaisBO();
         paisBO.inserir(pais);
+        //inserir país
         
         EstadoBO estadoBO = new EstadoBO();
-
+        //criar estado
+        
         try {
             List existentes = estadoBO.listar();
             int qtdeExistentes = existentes.size();
