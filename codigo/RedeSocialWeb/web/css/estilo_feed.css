@@ -4,7 +4,7 @@ body{
 	font-family: 'Ubuntu', sans-serif;
 }
 
-a:link 
+a:link, a:visited
 { 
  text-decoration:none; 
  color: inherit;
@@ -56,6 +56,15 @@ a:link
 	text-decoration: none;
 }
 
+.resumo_perfil_foto{
+	margin-top: 20px;
+}
+
+#resumo_publicacao{
+	width: 100%;
+	float:left;
+	background-color: blue;
+}
 
 
 
