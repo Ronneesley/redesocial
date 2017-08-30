@@ -278,60 +278,61 @@ public class AlbumBOTest {
     public void testMetodoExcluir () throws Exception {
 	AlbumBO albumBO = new AlbumBO();
 	
-    try{
-	PaisBO paisBO = new PaisBO();
-	Pais pais = new Pais();
-	pais.setNome("Brasil");
-	paisBO.inserir(pais);
+        try{
+            PaisBO paisBO = new PaisBO();
+            Pais pais = new Pais();
+            pais.setNome("Brasil");
+            paisBO.inserir(pais);
 	
-	EstadoBO estadoBO = new EstadoBO();
-	Estado estado = new Estado();
-	estado.setNome("Goiás");
-        estado.setPais(pais);
-	estadoBO.inserir(estado);
+            EstadoBO estadoBO = new EstadoBO();
+            Estado estado = new Estado();
+            estado.setNome("Goiás");
+            estado.setPais(pais);
+            estadoBO.inserir(estado);
 	
-	CidadeBO cidadeBO =  new CidadeBO();
-	Cidade cidade = new Cidade();
-	cidade.setNome("Bragolândia");
-        cidade.setEstado(estado);
-	cidadeBO.inserir(cidade);
+            CidadeBO cidadeBO =  new CidadeBO();
+            Cidade cidade = new Cidade();
+            cidade.setNome("Bragolândia");
+            cidade.setEstado(estado);
+            cidadeBO.inserir(cidade);
 	
-	UsuarioBO usuarioBO = new UsuarioBO();
+            UsuarioBO usuarioBO = new UsuarioBO();
         
-	Usuario usuario = new Usuario();
-	usuario.setNome("Ianka");
-	usuario.setDataCadastro(new Date());
-	usuario.setEmail("iankatalitaa@gmail.com");
-	//usuario.setFoto();
-	Calendar calendario = Calendar.getInstance();
-	calendario.set(1997, 1, 15, 0, 0, 0);
-	usuario.setDataNascimento(calendario.getTime());
-	usuario.setSenha("gaivotinha");
-	usuario.setSexo(Sexo.FEMININO);
-	usuario.setStatus(true);
-	usuario.setTelefone("(62) 98483-0937");
-	usuario.setCidade(cidade);
+            Usuario usuario = new Usuario();
+            usuario.setNome("Ianka");
+            usuario.setDataCadastro(new Date());
+            usuario.setEmail("iankatalitaa@gmail.com");
+            //usuario.setFoto();
 	
-	usuarioBO.inserir(usuario);
+            Calendar calendario = Calendar.getInstance();
+            calendario.set(1997, 1, 15, 0, 0, 0);
+            usuario.setDataNascimento(calendario.getTime());
+            usuario.setSenha("gaivotinha");
+            usuario.setSexo(Sexo.FEMININO);
+            usuario.setStatus(true);
+            usuario.setTelefone("(62) 98483-0937");
+            usuario.setCidade(cidade);
 	
-	calendario.set(2016, 8, 28, 0, 0, 0);
+            usuarioBO.inserir(usuario);
+	
+            calendario.set(2016, 8, 28, 0, 0, 0);
         
-	Album album = new Album ();
-	album.setNome("Desisto, Ronne!");
-	album.setData(calendario.getTime());
-	album.setUsuario(usuario);
-	albumBO.inserir(album);
+            Album album = new Album ();
+            album.setNome("Desisto, Ronne!");
+            album.setData(calendario.getTime());
+            album.setUsuario(usuario);
+            albumBO.inserir(album);
 	
-	int id = album.getId();
-	Album albumSelecionado = albumBO.selecionar(id);
-	assertNotNull("Album não encontrado", albumSelecionado);
+            int id = album.getId();
+            Album albumSelecionado = albumBO.selecionar(id);
+            assertNotNull("Album não encontrado", albumSelecionado);
 	
-	albumBO.excluir(id);
-	Album albumSelecionadoPosExclusao = albumBO.selecionar(id);
+            albumBO.excluir(id);
+            Album albumSelecionadoPosExclusao = albumBO.selecionar(id);
 	
-	assertNull("Album não encontrado", albumSelecionadoPosExclusao);
+            assertNull("Album não encontrado", albumSelecionadoPosExclusao);
 	} catch (Exception ex){
 	fail("Falha ao inserir um album: " + ex.getMessage());
-	}
-  }
+        }
+    }
 }
