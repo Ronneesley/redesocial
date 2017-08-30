@@ -1,15 +1,26 @@
 body{
 	background-color: red;
 	height: auto;
+	font-family: 'Ubuntu', sans-serif;
 }
+
+a:link 
+{ 
+ text-decoration:none; 
+ color: inherit;
+} 
+
+	
 #geral{
-	background-color: green;
+	background-color: red;
 	height: auto;
+
 }
+
 #barra_ferramentas{
 	background-color:blue;
 	padding: 10px;
-	border-radius: 2px;
+	border-radius: 4px;
 	padding: 5px;
 	height: 40px;
 }	
@@ -33,3 +44,25 @@ body{
 	margin-bottom: 15px;
 	border-radius: 3px;
 }
+
+#resumo_perfil{
+	margin-top: 5px;
+	padding-bottom: 5px;
+	width: 30%;
+	height: auto;
+	background-color: green;
+	font-size: 13px;
+	text-align: center;
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
