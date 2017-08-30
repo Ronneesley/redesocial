@@ -278,7 +278,7 @@ public class AlbumBOTest {
     public void testMetodoExcluir () throws Exception {
 	AlbumBO albumBO = new AlbumBO();
 	
-        try{
+        try{ // tenta inserir e em seguida seleciona
             PaisBO paisBO = new PaisBO();
             Pais pais = new Pais();
             pais.setNome("Brasil");
