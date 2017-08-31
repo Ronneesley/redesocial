@@ -17,22 +17,27 @@ public class Comentario {
      * Atributo que identifica a descrição do comentário
      */
     private String descricao;
+    
     /**
      * Atributo que identifica as curtidas do comentário
      */
     private Integer curtidas;
+    
     /**
      * Atributo que identifica a data do comentário
      */
     private Date data;
+    
     /**
      * Atributo que identifica a postagem do comentário
      */
     private Postagem postagem;
+    
     /**
      * Atributo que identifica a resposta do comentário
      */
     private Comentario resposta;
+    
     /**
      * Função que retorna o identificador de um comentário
      * @return identificador
@@ -40,6 +45,7 @@ public class Comentario {
     public Integer getId() {
         return id;
     }
+    
     /**
      * Finção que modifica o identificador de um comentário
      * @param id novo identificador
@@ -47,6 +53,7 @@ public class Comentario {
     public void setId(Integer id) {
         this.id = id;
     }
+    
     /**
      * Função que retorna a descrição de um comentário
      * @return descrição do comentário
@@ -54,6 +61,7 @@ public class Comentario {
     public String getDescricao() {
         return descricao;
     }
+    
     /**
      * Função que modifica a descrição de um comentário
      * @param descricao novo descrição do comentário 
@@ -61,6 +69,7 @@ public class Comentario {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
+    
     /**
      * Função que retorna as curtidas de um comentário
      * @return curtidas do comentário
@@ -68,6 +77,7 @@ public class Comentario {
     public Integer getCurtidas() {
         return curtidas;
     }
+    
     /**
      * Função que modifica as curtidas de um comentário
      * @param curtidas novo curtidas do comentário
@@ -75,6 +85,7 @@ public class Comentario {
     public void setCurtidas(Integer curtidas) {
         this.curtidas = curtidas;
     }
+    
     /**
      * Função que retorna a data de um comentário
      * @return data do comentário
@@ -82,6 +93,7 @@ public class Comentario {
     public Date getData() {
         return data;
     }
+    
     /**
      * Função que modifica a data de um comentário
      * @param data novo data do comentário
@@ -89,6 +101,7 @@ public class Comentario {
     public void setData(Date data) {
         this.data = data;
     }
+    
     /**
      * Função que retorna a postagem de um comentário
      * @return postagem do comentário
@@ -96,6 +109,7 @@ public class Comentario {
     public Postagem getPostagem() {
         return postagem;
     }
+    
     /**
      * Função que modifica a postagem de um comentário
      * @param postagem novo postagem do comentário
@@ -103,6 +117,7 @@ public class Comentario {
     public void setPostagem(Postagem postagem) {
         this.postagem = postagem;
     }
+    
     /**
      * Função que retorna a resposta de um comentário
      * @return resposta do comentário
@@ -110,6 +125,7 @@ public class Comentario {
     public Comentario getResposta() {
         return resposta;
     }
+    
     /**
      * Função que modifica a resposta de um comentário
      * @param resposta novo reposta do comentário
