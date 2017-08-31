@@ -191,7 +191,7 @@ public class EstadosBOTest {
                 Estado estado = new Estado();
                 estado.setNome("Goiás");
             /**
-             * 
+             * inserir novo estado
              */
 
                 try {
@@ -199,6 +199,9 @@ public class EstadosBOTest {
                 } catch (Exception ex) {
                     fail("Falha ao inserir um estado: " + ex.getMessage());
                 }
+                /**
+                 * mensagem caso a inserção falhe
+                 */
             }
 
             List existentesFinal = estadoBO.listar();
