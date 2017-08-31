@@ -42,7 +42,7 @@ a:link, a:visited
 	padding-bottom: 5px;
 	width: 30%;
 	height: auto;
-	background-color: #ddd9ce;
+	background-color: #F0F8FF;
 	text-align: center;
 	font-size:10px;
 	border: 1px solid black;
@@ -58,7 +58,7 @@ a:link, a:visited
 	margin-top: 15px;
 	width: 100%;
 	float:left;
-	background-color: #ddd9ce;
+	background-color: #F0F8FF;
 }
 
 #resumo_p{	
@@ -67,3 +67,18 @@ a:link, a:visited
 	justify-content: space-between;
 
 }
+
+#botao_resumo_perfil{
+	height: auto;
+	width: 100%;
+	background-color: red;
+}
+
+
+
+
+
+
+
+
+
