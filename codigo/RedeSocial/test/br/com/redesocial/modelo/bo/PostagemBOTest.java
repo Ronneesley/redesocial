@@ -88,8 +88,8 @@ public class PostagemBOTest {
     */
      }
 /**
- *
- * @author Warley Rodrigues
+ *@author Warley Rodrigues
+ *Criação e inserção de Pais, Estado, Cidade, Usuario e Postagem no banco de dados
  */        
   @Test
     public void testMetodoSelecionar() {
@@ -131,7 +131,9 @@ public class PostagemBOTest {
             
             UsuarioBO usuarioBO = new UsuarioBO();
             usuarioBO.inserir(usuario);
-            
+           
+            // Usuário, país, estado e cidade foram inseridos no banco de dados
+              
             Postagem postagem = new Postagem();
             postagem.setDescricao("Comentário");
             postagem.setCurtidas(0);
@@ -140,13 +142,21 @@ public class PostagemBOTest {
             calendario.set(1998, 0, 8, 0, 0, 0);            
             postagem.setData(calendario.getTime());
             
+            
+            // Os dados do album foram definidos para inserir no banco de dados
+             
+            
             PostagemBO postagembo = new PostagemBO();
             postagembo.inserir(postagem);
             
             int idpostagem = postagem.getId();
             
+            //Seleção no banco de dados
+            
             Postagem postagemSelecionada = postagembo.selecionar(idpostagem);
             
+            //Mensagem de erro caso não encontre a postagem no banco de dados
+             
             assertNotNull("Postagem não encontrada", postagemSelecionada);
         } catch (Exception ex) {
             fail("Postagem não selecionada: " + ex.getMessage());            
