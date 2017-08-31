@@ -1,6 +1,7 @@
 package br.com.redesocial.modelo.dao;
 
 import br.com.redesocial.modelo.dto.Artigo;
+import br.com.redesocial.modelo.dto.Multimidia;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -19,8 +20,34 @@ public class ArtigoDAO {
         
     }
     @Override
-    public void selecionar(){
+    public Artigo selecionar(int id) throws Exception{
+        Connection conexao = getConexao();
+
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("select * from artigos where id = ?");
         
+        ResultSet rs;
+        rs = pstmt.executeQuery();
+        
+        if (rs.next()){
+            
+            Artigo a = new Artigo();
+            a.setId(rs.getInt("id"));
+            a.setIdioma(rs.getString("idioma"));
+            a.setRevista(rs.getString("revista"));
+            a.setISSN(rs.getString("issn"));
+            a.setAutor(rs.getString("autor"));
+            a.setData(rs.getDate("data"));
+            a.setAreaConhecimento(rs.getString("areaConhecimento"));
+            a.setTitulo(rs.getString("titulo"));
+            a.setResumo(rs.getString("resumo"));
+            a.setURL(rs.getString("URL"));
+            a.setArtigo(rs.getBytes("artigo"));    
+            
+            return a;
+        } else {
+            return null;
+        }
     }
     @Override
     public void excluir(){
@@ -68,5 +95,9 @@ public class ArtigoDAO {
     @Override
     public void alterar(){
         
+    }
+
+    private Connection getConexao() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
