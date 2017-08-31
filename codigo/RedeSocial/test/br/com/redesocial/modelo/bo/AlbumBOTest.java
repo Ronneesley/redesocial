@@ -24,13 +24,11 @@ public class AlbumBOTest {
     /**
      * Método de teste responsável pela inserção de um album no banco de dados
      * @author Gusttavo Nunes Gomes
-     */
-    
+     */    
     @Test
     public void testMetodoInserir() {
-        /**
-         * Para inserir um album é necessário inserir um usuário, país, estado e cidade no banco de dados
-         */  
+        //Para inserir um album é necessário inserir um usuário, país, estado e cidade no banco de dados
+          
         Pais pais = new Pais();
         pais.setNome("EUA");        
         
@@ -70,9 +68,7 @@ public class AlbumBOTest {
             UsuarioBO usuarioBO = new UsuarioBO();
             usuarioBO.inserir(usuario);
             
-            /**
-             * Usuário, país, estado e cidade foram inseridos no banco de dados
-             */  
+            //Usuário, país, estado e cidade foram inseridos no banco de dados        
             
             AlbumBO bo = new AlbumBO();             		
             Album album = new Album();
@@ -80,14 +76,10 @@ public class AlbumBOTest {
             calendario.set(2016, 8, 29, 0, 0, 0);
             album.setData(calendario.getTime()); 
             album.setUsuario(usuario);
-            /**
-             * Os dados do album foram definidos para inserir no banco de dados
-             */  
+            //Os dados do album foram definidos para inserir no banco de dados  
             bo.inserir(album);
         } catch (Exception ex) {
-            /**
-             * Mensagem de erro caso não insira o album no banco de dados
-             */ 
+            //Mensagem de erro caso não insira o album no banco de dados
             fail("Falha ao inserir um album: " + ex.getMessage());
         }		
     } 
