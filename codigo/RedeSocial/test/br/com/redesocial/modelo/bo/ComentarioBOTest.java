@@ -178,15 +178,14 @@ public class ComentarioBOTest {
      * Método responsável pelo teste da exclusão de um comentário no banco de dados
      * @author Luciano de Carvalho Borba
      */
-    
     @Test
     public void testMetodoExcluir(){
        Pais pais = new Pais();
        pais.setNome("Brasil");
        
-       /** 
-        * Criação e inserção de dados de: país, estado, cidade, usuário, postagem e comentário.
-        */
+        
+       //Criação e inserção de dados de: país, estado, cidade, usuário, postagem e comentário.
+        
        try{
            
             PaisBO paisBO = new PaisBO();
@@ -245,34 +244,34 @@ public class ComentarioBOTest {
             comentario.setPostagem(postagem);
             
             bo.inserir(comentario);
-            /**
-              * Verifica se o comentário está cadastrada no banco de dados
-              */ 
+            
+            //Verifica se o comentário está cadastrada no banco de dados
+              
             int id = comentario.getId();
-            /**
-             * Seleciona um cometário inserido atráves do id 
-             */
+            
+            //Seleciona um cometário inserido atráves do id 
+             
             Comentario comentarioSelecionado = bo.selecionar(id);
-            /**
-             * Se não houver comentério exibirá uma mensagem de erro
-             */
+            
+            //Se não houver comentério exibirá uma mensagem de erro
+            
             assertNotNull("Comentario não encontrado", comentarioSelecionado);
-            /**
-             * Exclui comentário selecionado pelo id
-             */
+            
+            //Exclui comentário selecionado pelo id
+            
             bo.excluir(id);
-           /**
-            * seleciona coméntario excluido para saber se ele foi realmente deletado
-            */
+           
+            //Seleciona coméntario excluido para saber se ele foi realmente deletado
+            
            Comentario comentarioSelecionadoPosExclusao = bo.selecionar(id);
-           /**
-            * Caso o coméntario possa ser encontrado no banco de dados mesmo após a exclusão, será exibida uma mensagem de erro ao excluir
-            */
+           
+           //Caso o coméntario possa ser encontrado no banco de dados mesmo após a exclusão, será exibida uma mensagem de erro ao excluir
+           
            assertNull("comentario encontrado, mesmo apos exclui-la", comentarioSelecionadoPosExclusao);
         }catch (Exception ex){
-            /**
-             * Caso houver algum erro ao inserir um comentário no banco de dados
-             */
+            
+            //Caso houver algum erro ao inserir um comentário no banco de dados
+
            fail ("Falha ao inserir um comentario" + ex.getMessage());
         }   
     }
