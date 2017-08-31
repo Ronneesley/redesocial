@@ -19,6 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Controle para Estado
  * @author Paulo Henrique
+ * @since 30/08/2017
  */
 @WebServlet(name = "EstadoControle", urlPatterns = {"/EstadoControle"})
 public class EstadoControle extends HttpServlet {
@@ -35,8 +36,7 @@ public class EstadoControle extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-       response.setContentType("text/html;charset=UTF-8");
-        
+
         String operacao = request.getParameter("operacao");
         
         try {
@@ -51,7 +51,7 @@ public class EstadoControle extends HttpServlet {
     }
     
      /**
-     * Cadastra um país no banco de dados
+     * Cadastra um estado no banco de dados
      * @param request
      * @param response
      * @throws Exception 
@@ -59,12 +59,13 @@ public class EstadoControle extends HttpServlet {
     private void cadastrar(HttpServletRequest request, HttpServletResponse response) throws Exception{
         Estado estado = new Estado();
         estado.setNome(request.getParameter("nome"));
+
         
         request.setAttribute("Estado", estado);
         
         try {
             EstadoBO estadoBO = new EstadoBO();
-            EstadoBO.inserir(estado);
+            estadoBO.inserir(estado);
 
             request.setAttribute("mensagem", "Cadastro realizado com sucesso");
             
