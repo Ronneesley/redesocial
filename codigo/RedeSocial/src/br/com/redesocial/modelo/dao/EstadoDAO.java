@@ -47,7 +47,7 @@ public class EstadoDAO extends DAOCRUDBase<Estado> {
             return null;
         }
     }
-
+    
     @Override
     public void alterar(Estado p) throws SQLException, Exception {
         Connection conexao = getConexao();
@@ -58,10 +58,17 @@ public class EstadoDAO extends DAOCRUDBase<Estado> {
         pstmt.setString(1, p.getNome());
         pstmt.setInt(2, p.getPais().getId());
         pstmt.setInt(3, p.getId());
-
+        
+      // executa uma inserção
+      
         pstmt.executeUpdate();
     }
-
+    
+    /**
+     * Insere um estado no banco de dados na tabela estados
+     * @throws Exception
+     * @author Warley Rodrigues de Andrade
+     */
     @Override
     public void inserir(Estado dto) throws Exception {
         Connection conexao = getConexao();
@@ -70,7 +77,9 @@ public class EstadoDAO extends DAOCRUDBase<Estado> {
 
         pstmt.setString(1, dto.getNome());
         pstmt.setInt(2, dto.getPais().getId());
-
+        
+        // executa uma inserção
+        
         pstmt.executeUpdate();
         
         dto.setId(getId(pstmt));
