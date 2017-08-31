@@ -1,18 +1,15 @@
 package br.com.redesocial.modelo.dao;
 
 import br.com.redesocial.modelo.dto.Artigo;
-import br.com.redesocial.modelo.dto.Multimidia;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-//import java.sql.Statement;
-
 /**
  *
- * @author Gusttavo Nunes
+ * @author Gusttavo Nunes, Gleyson Israel
  */
 public abstract class ArtigoDAO extends DAOCRUDBase<Artigo>  {
     /*@Override
@@ -95,10 +92,8 @@ public abstract class ArtigoDAO extends DAOCRUDBase<Artigo>  {
             a.setURL(rs.getString("URL"));
             a.setArtigo(rs.getBytes("artigo"));    
             lista.add(a);
-        }
-        
-        return lista;
-        
+        }        
+        return lista;        
     }
     /*@Override
     public void alterar(){
