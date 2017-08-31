@@ -212,10 +212,10 @@
 {
 \begin{itemize}
 \item Usuário acessa o site da rede social;
-\item O sistema exibe a página de login (Figura \ref{figura:login})
+\item O sistema exibe a página de login (Figura \ref{figura:login});
 \item Usuário digita seu usuário e senha, em seus respectivos campos;
 \item Após inserir as informações, o usuário aciona a opção de realizar login;
-\item Servidor valida as informações digitadas pelo usuário e abre uma sessão para o usuário.
+\item Servidor valida as informações digitadas pelo usuário e abre uma sessão para o mesmo.
 \end{itemize}
 }
 %Fluxo Alternativo
@@ -230,15 +230,18 @@
 \item Usuário não preencheu o campo de e-mail;
 \item Usuário não preencheu o campo de senha.
 \end{itemize}
-\item Usuário digital e-mail ou senha incorretamente.
+\item Usuário digita e-mail ou senha incorretamente.
+\begin{itemize}
+\item Sistema informa usuário sobre o erro.
+\end{itemize}
 \item Problemas com o servidor que precisam ser notificados ao usuário;
 \begin{itemize}
 \item Problemas com a conexão com o banco de dados;
 \item Problemas com a conexão com o servidor.
 \end{itemize}
-\item Problemas com sua conexão com a internet.
+\item Problemas com sua conexão com a Internet.
 \begin{itemize}
-\item É notificado ao usuário falha com a conexão com a internet.
+\item É notificado ao usuário falha com a conexão com a Internet.
 \end{itemize}
 \end{itemize}
 }
@@ -562,6 +565,7 @@
 
 }
 %--------------------------------------------------------------------------------------------------------
+\casoDeUso
 %Identificador
 {UC12}
 %Nome
@@ -647,3 +651,49 @@
 }
 
 %-----------------------------------------------------------
+<<<<<<< HEAD
+\casoDeUso
+%Identificador
+{UC13}
+%Nome
+{Como Solicitar amizade}
+%Ator Principal
+{Usuário}
+%Interessados
+{
+\begin{itemize}
+	\item Usuário: Deseja solicitar amizade
+\end{itemize}
+
+}
+%Pré-Condições
+{Ter uma conta válida e estar logado no perfil}
+%Pós-condições
+{Amigo adicionado aceitar a solicitação}
+%Fluxo Básico
+{
+\begin{itemize}
+	\item Entrar no perfil do amigo selecionado.
+	\item Clicar no botão Adicionar aos amigos como mostra na figura 12.
+	\item Aguardar o amigo aceitar sua solicitação.	
+\end{itemize}
+}
+%Fluxo Alternativo
+{
+\begin{itemize}
+	\item Usuário desconectado.
+	\item Usuário pode ter atingido o numero máximo de amigos.
+	\item O Amigo Solicitado pode ter atigindo o numero máximo de amigos.
+	\item Usuário não estar conectado a internet
+\end{itemize}
+}
+%Frequência de Ocorrencia
+{Toda vez que o usuario requerir uma solicitação de amizade}
+%Problemas em Aberto
+{
+ 
+}
+
+%-----------------------------------------------------------
+=======
+>>>>>>> 5492f28b0691b09c15032a680e05a7f4a5005750

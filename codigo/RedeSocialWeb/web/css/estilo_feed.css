@@ -3,6 +3,11 @@ body{
 	height: auto;
 	font-family: 'Ubuntu', sans-serif;
 }
+h3{
+	float: left;
+	margin-left: 20px;
+	margin-right: 20px;
+}
 
 a:link, a:visited
 { 
@@ -23,6 +28,7 @@ a:link, a:visited
 	border-radius: 4px;
 	padding: 5px;
 	height: 40px;
+	
 }	
 
 .logo{
@@ -36,10 +42,11 @@ a:link, a:visited
 	padding: 5px;
 	float: left;
 	margin-left: 5px;
+	text-align: center;
 }
 
 .icone_perfil{
-	margin-left: 550px;
+	margin-left: 800px;
 	float: left;
 	margin-bottom: 15px;
 	border-radius: 3px;
@@ -66,9 +73,22 @@ a:link, a:visited
 	background-color: blue;
 }
 
+#resumo_p{	
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
 
+}
 
-
+.botoes {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
 
 
 

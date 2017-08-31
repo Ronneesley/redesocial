@@ -3,7 +3,7 @@ package br.com.redesocial.modelo.dto;
 /**
  * Classe que representa uma cidade
  * @author Daniel, Jônatas e Paulo
- * @sice 29/07/2017
+ * @since 29/07/2017
  */
 public class Cidade {
     

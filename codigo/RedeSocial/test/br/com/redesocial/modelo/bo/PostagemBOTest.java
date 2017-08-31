@@ -231,16 +231,12 @@ public class PostagemBOTest {
      * Método responsável pelo teste da exclusão de uma postagem no banco de dados
      * @author Thalia Santos de Santana
      */
-    
     @Test
     public void testMetodoExcluir() { 
         Pais pais = new Pais();
         pais.setNome("Canadá");
 		
-		/**
-         * Criação e inserção de Pais, Estado, Cidade, Usuario e Postagem no banco de dados
-         */
-        
+        //Criação e inserção de Pais, Estado, Cidade, Usuario e Postagem no banco de dados     
         try {
             PaisBO paisBO = new PaisBO();
             paisBO.inserir(pais);
@@ -289,27 +285,19 @@ public class PostagemBOTest {
         
             bo.inserir(postagem1);
 
-			/**
-              * Verifica se a postagem está cadastrada no banco de dados
-              */ 
+			//Verifica se a postagem está cadastrada no banco de dados
             int id = postagem1.getId();
             Postagem postagem1Selecionada = bo.selecionar(id);
             assertNotNull("Postagem não encontrada", postagem1Selecionada);
 
-			/**
-              * Realiza a exclusão da postagem selecionada
-              */ 
+			//Realiza a exclusão da postagem selecionada
             bo.excluir(id);
             Postagem postagem1SelecionadoPosExclusao = bo.selecionar(id);
 			
-			/**
-              * Caso após a exclusão, a postagem ainda possa ser encontrada no banco de dados, apresenta a mensagem de erro
-              */ 
+			//Caso após a exclusão, a postagem ainda possa ser encontrada no banco de dados, apresenta a mensagem de erro
             assertNull("Postagem encontrada, mesmo após excluí-la", postagem1SelecionadoPosExclusao);
         } catch (Exception ex) {
-			/**
-              * Caso não seja possível inserir a postagem no banco de dados apresenta a mensagem de erro
-              */ 
+            //Caso não seja possível inserir a postagem no banco de dados apresenta a mensagem de erro
             fail("Falha ao inserir uma postagem: " + ex.getMessage());
         }
     }
