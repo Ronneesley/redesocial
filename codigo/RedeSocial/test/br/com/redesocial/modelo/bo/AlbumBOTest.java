@@ -99,23 +99,18 @@ public class AlbumBOTest {
     @Test
     public void testMetodoListar() {
         
-        /**
-         * Para realizar a listagem é necessário que existam dados a serem lidos
-         * por isso precisa inserir inserir usuário, país, estado e cidade no banco de dados
-         */  
+        /* Para realizar a listagem é necessário que existam dados a serem lidos
+        por isso precisa inserir inserir usuário, país, estado e cidade no banco de dados */  
         AlbumBO bo = new AlbumBO();
 
         try {
             
-            /**
-             * Verifica a quantidade de albuns existentes no banco de dados
-             */ 
+            
+            //Verifica a quantidade de albuns existentes no banco de dados 
             List existentes = bo.listar();
             int qtdeExistentes = existentes.size();
 
-            /**
-             * Define a quantidade a ser listada
-             */ 
+            //Define a quantidade a ser listada
             final int qtde = 10;
             
             for (int i = 0; i < 10; i++){
@@ -156,51 +151,37 @@ public class AlbumBOTest {
                 UsuarioBO usuarioBO = new UsuarioBO();
                 usuarioBO.inserir(usuario);
                 
-                /**
-                * Após inserir usuário, país, estado e cidade no banco de dados
-                * é necessário inserir um album no banco de dados
-                */  
+                /* Após inserir usuário, país, estado e cidade no banco de dados
+                é necessário inserir um album no banco de dados */  
                 Album album = new Album();
                 album.setNome("Hollywood");
                 album.setData(new Date()); 
                 album.setUsuario(usuario);
 
-                /**
-                * Os dados do album foram definidos para inserir no banco de dados
-                */  
+                //Os dados do album foram definidos para inserir no banco de dados
                 try {
                     bo.inserir(album);
                 
                 } catch (Exception ex) {
-                    /**
-                    * Caso não seja possível inserir o album no banco de dados
-                    * apresenta a mensagem de erro
-                    */ 
+                    /* Caso não seja possível inserir o album no banco de dados
+                    apresenta a mensagem de erro */ 
                     fail("Falha ao inserir um álbum: " + ex.getMessage());
                 }
             }
             
-            /**
-             * Verifica a quantidade de albuns após inserir
-             */ 
+            //Verifica a quantidade de albuns após inserir
             List existentesFinal = bo.listar(); 
             int qtdeExistentesFinal = existentesFinal.size();
             
-            /**
-             * Verifica a quantidade de albuns realmente inseridos
-             */ 
+            //Verifica a quantidade de albuns realmente inseridos
             int diferenca = qtdeExistentesFinal - qtdeExistentes;
             
-            /**
-             * Compara a quantidade definida para listagem e a quantidade de
-             * albuns inseridos, finaliza se estiver tudo certo
-             */ 
+            /* Compara a quantidade definida para listagem e a quantidade de
+            albuns inseridos, finaliza se estiver tudo certo */ 
             assertEquals(qtde, diferenca);
         } catch (Exception ex){
             
-            /**
-             * Mensagem de erro caso a comparação não seja exata
-             */ 
+            //Mensagem de erro caso a comparação não seja exata
             fail("Erro ao listar: " + ex.getMessage());
         }
     }
