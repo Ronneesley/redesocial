@@ -54,9 +54,15 @@ import static org.junit.Assert.*;
         }
 
     }*/
-   
-    @Test
+    /**
+ 
+    * Unidade de testes para o CidadeBO
+    * @author Eduardo Oliveira
+    * @since 16/08/2017
+    */
+       @Test
     public void testMetodoAlterar() throws Exception {
+        //Para testar é necessário inserir uma Cidade, mas para inserir a cidade é preciso inserir um Pais e um Estado 
         Pais pais = new Pais();
         pais.setNome("Brazil");
         
@@ -74,13 +80,16 @@ import static org.junit.Assert.*;
         cidade.setNome("Ceressssssss");
         cidade.setEstado(estado);
         
+        //realiza a tentativa de inserção da Cidade.
         try {
             CidadeBO bo = new CidadeBO();
             bo.inserir(cidade);
         } catch (Exception ex) {
             fail("Falha ao inserir a cidade: " + ex.getMessage());
+        //Mensagem caso a inserção falhe.
         }
-
+        
+        //alterando o nome da Cidade que foi inserida no banco de dados
         cidade.setNome("Ceres");
 
         try {
