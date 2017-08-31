@@ -127,9 +127,8 @@ public class UsuarioBOTest {
                     fail("Falha ao inserir um álbum: " + ex.getMessage());
                 }
             }
-            /*
-            *Lista os usuarios
-            */
+            //Lista os usuarios
+            
             List existentesFinal = usuariobo.listar();
             int qtdeExistentesFinal = existentesFinal.size();
 
@@ -150,13 +149,10 @@ public class UsuarioBOTest {
     /**
      * Método de teste responsável pela alteração de dados de um usuário no banco de dados
      * @author Gusttavo Nunes Gomes
-     */
-    
+     */    
     @Test
     public void testMetodoAlterar() {
-    /**
-     * Para inserir um usuário, é necessário inserir um país, um estado e cidade no banco de dados
-     */         
+    //Para inserir um usuário, é necessário inserir um país, um estado e cidade no banco de dados              
         
         Pais pais = new Pais();
         pais.setNome("USA");
@@ -169,10 +165,8 @@ public class UsuarioBOTest {
         cidade.setNome("Los Angeles");
         cidade.setEstado(estado);
         
-        /**
-         * O nome do país,estado e cidade a ser inseridos no banco de dados, foram definidos
-         */ 
-        
+        //O nome do país,estado e cidade a ser inseridos no banco de dados, foram definidos
+                
         UsuarioBO bo = new UsuarioBO();  
         
         Usuario usuario = new Usuario();
@@ -188,51 +182,36 @@ public class UsuarioBOTest {
         usuario.setTelefone("(62) 98765-4321");
         usuario.setCidade(cidade);
         
-        /**
-         * O dados do usuário foram definidos para inserir no banco de dados
-         */ 
-        
+        //O dados do usuário foram definidos para inserir no banco de dados
+                 
         try{
             PaisBO paisBO = new PaisBO();
             paisBO.inserir(pais);
             
-            /**
-             * O pais foi inserido no banco de dados
-             */ 
+            //O pais foi inserido no banco de dados 
             
             EstadoBO estadoBO = new EstadoBO();
             estadoBO.inserir(estado);
             
-            /**
-             * O pais foi inserido no banco de dados
-             */ 
+            // O pais foi inserido no banco de dados
             
             CidadeBO cidadeBO = new CidadeBO();
             cidadeBO.inserir(cidade);
 
-            /**
-             * O pais foi inserido no banco de dados
-             */ 
+            // O pais foi inserido no banco de dados
             
             bo.inserir(usuario);
             } catch (Exception ex) {
-                /**
-                 * Mensagem de erro caso não insira o usuario no banco de dados
-                 */ 
+                // Mensagem de erro caso não insira o usuario no banco de dados                 
                 fail("Falha ao inserir um usuario: " + ex.getMessage());
             }           
             
             usuario.setNome("Gusttavo"); 
-            /**
-             * Uma alteração no usuario é feita e deve ser feita essa mudança no banco de dados
-             */ 
-            
+            // Uma alteração no usuario é feita e deve ser feita essa mudança no banco de dados            
             try {
                 bo.alterar(usuario);
             } catch (Exception ex) {
-                /**
-                 * Mensagem de erro caso não altere o usuario no banco de dados
-                 */ 
+                //Mensagem de erro caso não altere o usuario no banco de dados                  
                 fail("Falha ao alterar usuario: " + ex.getMessage());
             }
     }
