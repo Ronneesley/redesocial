@@ -14,11 +14,19 @@ import java.util.List;
  *
  * @author Gusttavo Nunes
  */
-public class ArtigoDAO {
-    @Override
+public abstract class ArtigoDAO extends DAOCRUDBase<Artigo>  {
+    /*@Override
     public void inserir(){
         
     }
+    */
+    /**
+     * Método que seleciona um Artigo já cadastrado no banco de dados
+     * @author Gleyson Israel Alves
+     * @param id identificador do artigo
+     * @return Artigo selecionado no banco de dados
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Override
     public Artigo selecionar(int id) throws Exception{
         Connection conexao = getConexao();
@@ -49,10 +57,10 @@ public class ArtigoDAO {
             return null;
         }
     }
-    @Override
+    /*@Override
     public void excluir(){
         
-    }
+    }*/
     /**
      * Método que lista todos os artigos em ordem descrecem por data do banco de dados
      * @author Gusttavo Nunes Gomes
@@ -92,12 +100,9 @@ public class ArtigoDAO {
         return lista;
         
     }
-    @Override
+    /*@Override
     public void alterar(){
         
-    }
+    }*/
 
-    private Connection getConexao() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
