@@ -1,12 +1,14 @@
 body{
-	background-color: red;
+	background-color: #ddd9ce;
 	height: auto;
 	font-family: 'Ubuntu', sans-serif;
 }
-h3{
+
+#resumo_perfil h4{
 	float: left;
 	margin-left: 20px;
 	margin-right: 20px;
+	
 }
 
 a:link, a:visited
@@ -15,62 +17,48 @@ a:link, a:visited
  color: inherit;
 } 
 
-	
-#geral{
-	background-color: red;
-	height: auto;
-
-}
-
 #barra_ferramentas{
-	background-color:blue;
+	width: 100%;
+	background-color: #eee;
+	height: auto;
 	padding: 10px;
-	border-radius: 4px;
-	padding: 5px;
-	height: 40px;
-	
-}	
-
+}
 .logo{
-	padding: 10px;
-	float: left;
-	margin-right: 420px;
-	margin-left: 50px;
+	margin-left: 55px;
+	margin-top: 7px;
 }
 
 .icones_ferramentas{
-	padding: 5px;
-	float: left;
-	margin-left: 5px;
-	text-align: center;
+	margin-left: 750px;
 }
 
 .icone_perfil{
-	margin-left: 800px;
-	float: left;
-	margin-bottom: 15px;
-	border-radius: 3px;
+	margin-left: 725px;
 }
 
 #resumo_perfil{
+	margin-left:15px;
 	margin-top: 5px;
 	padding-bottom: 5px;
 	width: 30%;
 	height: auto;
-	background-color: green;
-	font-size: 13px;
+	background-color: #ddd9ce;
 	text-align: center;
-	text-decoration: none;
+	font-size:10px;
+	border: 1px solid black;
+	position: absolute;
 }
 
 .resumo_perfil_foto{
 	margin-top: 20px;
+	margin-bottom: 10px;
 }
 
 #resumo_publicacao{
+	margin-top: 15px;
 	width: 100%;
 	float:left;
-	background-color: blue;
+	background-color: #ddd9ce;
 }
 
 #resumo_p{	
@@ -79,20 +67,3 @@ a:link, a:visited
 	justify-content: space-between;
 
 }
-
-.botoes {
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}
-
-
-
-
-
-
-
