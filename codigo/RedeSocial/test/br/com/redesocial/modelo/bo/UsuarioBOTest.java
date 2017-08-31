@@ -16,7 +16,7 @@ import org.junit.Test;
 
 /**
  * Unidade de testes para o UsuarioBO
- * @author Igor Justino Rodrigues, Gusttavo Nunes, Willian Wallace
+ * @author Igor Justino Rodrigues, Gusttavo Nunes, Willian Wallace e Lara Caroline
  * @since 19/08/2017
  */
 public class UsuarioBOTest {
@@ -74,9 +74,7 @@ public class UsuarioBOTest {
     @Test
     public void testMetodoListar() {
 
-        /*
-        *Criação e Inserção de Usuario no banco de dados
-        */
+        //Criação e Inserção de Usuario no banco de dados
         UsuarioBO usuariobo = new UsuarioBO();
 
         try {
@@ -144,8 +142,7 @@ public class UsuarioBOTest {
     @Test
     public void testMetodoSelecionar() {
     
-    }
-    
+    }    
     /**
      * Método de teste responsável pela alteração de dados de um usuário no banco de dados
      * @author Gusttavo Nunes Gomes
@@ -267,31 +264,19 @@ public class UsuarioBOTest {
             bo.inserir(usuario);
 
             int id = usuario.getId();
-            /**
-             * Seleciona o usuário inserido através do id.
-             */
+            //Seleciona o usuário inserido através do id.
             Usuario usuarioSelecionado = bo.selecionar(id);
-            /**
-             * Se não houver usuário exibe a mensagem de falha.
-             */
+            //Se não houver usuário exibe a mensagem de falha.
             assertNotNull("Usuário não encontrado!", usuarioSelecionado);
             
-            /**
-             * Exclui o usuário selecionado através do id.
-             */
+            //Exclui o usuário selecionado através do id.
             bo.excluir(id);
-            /**
-             * Seleciona o usuario excluído para saber se o mesmo foi excluído.
-             */
+            //Seleciona o usuario excluído para saber se o mesmo foi excluído.
             Usuario usurarioSelecionadoPosExclusao = bo.selecionar(id);
-            /**
-             * Se não foi excluído, exibe a mensagem seguinte:
-             */
+            //Se não foi excluído, exibe a mensagem seguinte:
             assertNull("Usuário encontrado, mesmo após exclusão.", usurarioSelecionadoPosExclusao);
         } catch (Exception ex) {
-            /**
-             * Mensagem exibida quando o usuário não é inserido.
-             */
+            //Mensagem exibida quando o usuário não é inserido.
             fail("Falha ao inserir um usuário: " + ex.getMessage());
         }
     }
