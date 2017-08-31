@@ -56,7 +56,6 @@ public class CidadeControle extends HttpServlet {
     private void cadastrar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Cidade cidade = new Cidade();
         cidade.setNome(request.getParameter("nome"));
-        cidade.setEstado(request.getParameter());
         
         request.setAttribute("cidade", cidade);
         
