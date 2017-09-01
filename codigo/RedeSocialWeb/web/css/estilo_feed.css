@@ -40,7 +40,6 @@ a:hover{
 	margin-left: 725px;
 }
 
-
 #resumo_perfil{
 	padding-bottom: 5px;
 	width: 30%;
@@ -51,18 +50,28 @@ a:hover{
 	border: 1px solid black;
 	position: absolute;
 	box-shadow: 0px 0px 1em #666;
+	float: left;
 }
-#bloco{
+
+#lado_esquerdo{
 	margin-left:30px;
 	margin-top: 5px;
+	width: 30%;
+	height: auto;
+	text-align: center;
+	float: left;
+}
+
+#bloco{
 	padding-bottom: 5px;
 	width: 30%;
 	height: 299px;
 	background-color: red;
 	text-align: center;
 	font-size:10px;
+	float: left;
 }
-
+	
 .resumo_perfil_foto{
 	border-radius:50%;
 	margin-top: 20px;
@@ -74,44 +83,102 @@ a:hover{
 	width: 100%;
 	float:left;
 	background-color: #F0F8FF;
+	float: left;
 }
 
-#resumo_p{	
+#resumo_p{
 	text-align: center;
 	display: flex;
 	justify-content: space-between;
-
 }
 
 #botao_resumo_perfil{
 	height: auto;
-	width: 33%;
+	width: 100%;
 	margin-top: 5px;
 	padding-bottom: 5px;
 	text-align: center;	
+	float: left;
 }
 
 .btn1{
 	margin-top: 5px;
-	width: 30%;
+	width: 100%;
 }
 
 #resumo_pub{
-	margin-left:30px;
 	margin-top: 5px;
 	padding-bottom: 5px;
-	width: 30%;
+	width: 100%;
 	height: auto;
 	background-color: #F0F8FF;
 	text-align:center;
 	border: 1px solid black;
 	box-shadow: 0px 0px 1em #666;
+	float: left;
 }
 
 .btn{
 	margin-top: 5px;
 	width: 30%;
 }
+
+#mostra_resumo{
+	margin-top: 5px;
+	padding-bottom: 5px;
+	width: 100%;
+	height: auto;
+	background-color: #F0F8FF;
+	border-top: 1px solid black;
+}
+
+#central{
+	margin-left:15px;
+	margin-top: 5px;
+	width: 45%;
+	height:800px;
+	background-color:red;
+	float: left;
+}
+
+.post{
+	margin-top: 5px;
+	width: 95%;
+	height: auto;
+	background-color: green;
+	border: 1px solid black;
+}
+			
+.post_foto{
+	border-radius:50%;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	float: left;
+}
+
+.post_info{
+	width: 70%;
+    height: auto;
+    float: left;
+    margin-top: 35px;
+	font-family: verdana;
+	font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
