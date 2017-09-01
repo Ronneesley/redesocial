@@ -17,11 +17,15 @@ a:link, a:visited
  color: inherit;
 } 
 
+a:hover{
+	text-decoration: underline;
+}
 #barra_ferramentas{
 	width: 100%;
 	background-color: #eee;
 	height: auto;
 	padding: 10px;
+	box-shadow: 0px 0px 1em #666;
 }
 .logo{
 	margin-left: 55px;
@@ -36,9 +40,8 @@ a:link, a:visited
 	margin-left: 725px;
 }
 
+
 #resumo_perfil{
-	margin-left:15px;
-	margin-top: 5px;
 	padding-bottom: 5px;
 	width: 30%;
 	height: auto;
@@ -47,6 +50,17 @@ a:link, a:visited
 	font-size:10px;
 	border: 1px solid black;
 	position: absolute;
+	box-shadow: 0px 0px 1em #666;
+}
+#bloco{
+	margin-left:30px;
+	margin-top: 5px;
+	padding-bottom: 5px;
+	width: 30%;
+	height: 299px;
+	background-color: red;
+	text-align: center;
+	font-size:10px;
 }
 
 .resumo_perfil_foto{
@@ -70,11 +84,17 @@ a:link, a:visited
 
 #botao_resumo_perfil{
 	height: auto;
-	width: 100%;
-	background-color: red;
+	width: 33%;
+	margin-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;	
 }
 
-
+.btn{
+	margin-top: 5px;
+	width: 30%;
+	box-shadow: 0px 0px 1em #666;
+}
 
 
 
