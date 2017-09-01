@@ -70,6 +70,7 @@ a:hover{
 	text-align: center;
 	font-size:10px;
 	float: left;
+	
 }
 	
 .resumo_perfil_foto{
@@ -136,19 +137,19 @@ a:hover{
 	margin-left:15px;
 	margin-top: 5px;
 	width: 45%;
-	height:800px;
+	height: 1800px;
 	background-color:red;
 	float: left;
 }
 
-.post{
+#post{
 	margin-top: 5px;
-	width: 95%;
-	height: auto;
+	width: 90%;
+	height: 55px;
 	background-color: green;
 	border: 1px solid black;
 }
-			
+	
 .post_foto{
 	border-radius:50%;
 	margin-top: 20px;
@@ -157,12 +158,8 @@ a:hover{
 }
 
 .post_info{
-	width: 70%;
-    height: auto;
     float: left;
-    margin-top: 35px;
-	font-family: verdana;
-	font-size: 12px;
+	font-size: 13px;
 }
 
 
