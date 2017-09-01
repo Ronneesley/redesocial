@@ -64,6 +64,7 @@ a:hover{
 }
 
 .resumo_perfil_foto{
+	border-radius:50%;
 	margin-top: 20px;
 	margin-bottom: 10px;
 }
@@ -90,14 +91,27 @@ a:hover{
 	text-align: center;	
 }
 
-.btn{
+.btn1{
 	margin-top: 5px;
 	width: 30%;
+}
+
+#resumo_pub{
+	margin-left:30px;
+	margin-top: 5px;
+	padding-bottom: 5px;
+	width: 30%;
+	height: auto;
+	background-color: #F0F8FF;
+	text-align:center;
+	border: 1px solid black;
 	box-shadow: 0px 0px 1em #666;
 }
 
-
-
+.btn{
+	margin-top: 5px;
+	width: 30%;
+}
 
 
 
