@@ -575,21 +575,21 @@
 %Interessados
 {
 \begin{itemize}
-	\item Usuário: deseja abrir o chat.	
+	\item Usuário: Deseja acessar o opção chat.	
 \end{itemize}
 
 }
 %Pré-Condições
-{Possuir uma conta válida e estar conectado na rede social}
+{Estar logado na rede social em sua conta}
 %Pós-condições
 {}
 %Fluxo Básico
 {
 \begin{itemize}
-	\item Usuário clica sobre o link mensagens.
-	\item O sistema abre o chat.		
-	\item Usuário visualiza seus amigos online e offline no chat, igual a:  (Figura \ref{figura:chat_ativos}) .	
-	\item O Usuário pode clicar em qualquer contato pra enviar mensagens.
+	\item Usuário seleciona a opção mensagens, que pode ser observado através da (Figura \ref{figura:meus_posts}).	
+	\item O sistema abre o chat, mostrando ao usuário seus amigos que estão online  e offline, igual a:  (Figura \ref{figura:chat_ativos}) .	
+	\item O Usuário seleciona qual contato deseja enviar mensagem.
+	\item O sistema abre a janela para realizar o envio de mensagem como demonstrado no Caso de Uso: Enviar mensagem no chat (UC10).  
 					
 \end{itemize}
 }
@@ -597,8 +597,10 @@
 {
 \begin{itemize}
 	\item Ocorreu falha na conexão com a Internet ou servidor.
-	
-	\item O sistema apresenta uma mensagem de alerta para que o usuário verifique sua conexão com a internet ou aperte F5 para recarregar a página. 	
+	\begin{itemize}
+	\item O sistema apresenta uma mensagem de alerta pedindo para que o usuario verifique sua conexão com a internet e aperte F5 para recarregar a página. 	
+	\end{itemize}
+	\item Usuário minimiza o chat. 
 \end{itemize}
 }
 %Frequência de Ocorrencia
