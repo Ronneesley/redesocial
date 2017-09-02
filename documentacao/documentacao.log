@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.9.1)  1 SEP 2017 20:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.9.1)  1 SEP 2017 21:01
 entering extended mode
 **./documentacao.tex
 (documentacao.tex
@@ -1943,7 +1943,7 @@ Overfull \hbox (12.79996pt too wide) in paragraph at lines 605--605
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (12.79996pt too wide) in paragraph at lines 650--650
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 652--652
 [][] 
  []
 
@@ -1954,10 +1954,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ] [32] [33] [34] [35] [36] [37] [38]
 [39] [40] [41] [42] [43] [44]
-
-LaTeX Warning: Reference `figura:DER' on page 45 undefined on input line 9.
-
-<../banco_de_dados/redesocial.png, id=422, 899.36pt x 1354.05875pt>
+<../banco_de_dados/redesocial.png, id=423, 899.36pt x 1354.05875pt>
 File: ../banco_de_dados/redesocial.png Graphic file (type png)
 
 <use ../banco_de_dados/redesocial.png>
@@ -1970,11 +1967,7 @@ Package pdftex.def Info: ../banco_de_dados/redesocial.png used on input line 15
 
 LaTeX Warning: Text page 46 contains only floats.
 
-[46 <../banco_de_dados/redesocial.png>])
-
-Package lastpage Warning: Rerun to get the references right on input line 45.
-
-
+[46 <../banco_de_dados/redesocial.png>]) 
 AED: lastpage setting LastPage
 [47]
 \tf@lof=\write5
@@ -2006,7 +1999,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 45.
 Here is how much of TeX's memory you used:
  15025 strings out of 493333
  222231 string characters out of 3139195
- 484080 words of memory out of 3000000
+ 485552 words of memory out of 3000000
  18069 multiletter control sequences out of 15000+200000
  17960 words of font info for 84 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2015,9 +2008,9 @@ Here is how much of TeX's memory you used:
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program 
 Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/Program Files/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on documentacao.pdf (48 pages, 1899750 bytes).
+Output written on documentacao.pdf (48 pages, 1899921 bytes).
 PDF statistics:
- 552 PDF objects out of 1000 (max. 8388607)
+ 553 PDF objects out of 1000 (max. 8388607)
  131 named destinations out of 1000 (max. 500000)
  11567 words of extra memory for PDF output out of 12000 (max. 10000000)
 
