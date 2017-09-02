@@ -564,7 +564,6 @@
 {
 
 }
-}
 %--------------------------------------------------------------------------------------------------------
 \casoDeUso
 %Identificador
@@ -576,21 +575,21 @@
 %Interessados
 {
 \begin{itemize}
-	\item Usuário: deseja abrir o chat.	
+	\item Usuário: Deseja acessar o opção chat.	
 \end{itemize}
 
 }
 %Pré-Condições
-{Possuir uma conta válida e estar conectado na rede social}
+{Estar logado na rede social em sua conta}
 %Pós-condições
 {}
 %Fluxo Básico
 {
 \begin{itemize}
-	\item Usuário clica sobre o link mensagens.
-	\item O sistema abre o chat.		
-	\item Usuário visualiza seus amigos online e offline no chat, igual a:  (Figura \ref{figura:chat_ativos}) .	
-	\item O Usuário pode clicar em qualquer contato pra enviar mensagens.
+	\item Usuário seleciona a opção mensagens, que pode ser observado através da (Figura \ref{figura:meus_posts}).	
+	\item O sistema abre o chat, mostrando ao usuário seus amigos que estão online  e offline, igual a:  (Figura \ref{figura:chat_ativos}) .	
+	\item O Usuário seleciona qual contato deseja enviar mensagem.
+	\item O sistema abre a janela para realizar o envio de mensagem como demonstrado no Caso de Uso: Enviar mensagem no chat (UC10).  
 					
 \end{itemize}
 }
@@ -598,8 +597,10 @@
 {
 \begin{itemize}
 	\item Ocorreu falha na conexão com a Internet ou servidor.
-	
-	\item O sistema apresenta uma mensagem de alerta para que o usuário verifique sua conexão com a internet ou aperte F5 para recarregar a página. 	
+	\begin{itemize}
+	\item O sistema apresenta uma mensagem de alerta pedindo para que o usuario verifique sua conexão com a internet e aperte F5 para recarregar a página. 	
+	\end{itemize}
+	\item Usuário minimiza o chat. 
 \end{itemize}
 }
 %Frequência de Ocorrencia
@@ -613,7 +614,7 @@
 %Identificador
 {UC13}
 %Nome
-{Como Solicitar amizade}
+{Solicitação de amizade}
 %Ator Principal
 {Usuário}
 %Interessados
@@ -630,71 +631,29 @@
 %Fluxo Básico
 {
 \begin{itemize}
-	\item Entrar no perfil do amigo selecionado.
-	\item Clicar no botão Adicionar aos amigos como mostra na figura 12.
-	\item Aguardar o amigo aceitar sua solicitação.	
+	\item Solitação enviada
+		\begin{itemize}
+			\item Usuário entra no perfil do amigo selecionado.
+			\item Usuário Clica no botão ''Adicionar aos amigos'', (Figura \ref{figura:solicitacao_amizade})	
+		\end{itemize}
 \end{itemize}
 }
 %Fluxo Alternativo
 {
 \begin{itemize}
-	\item Usuário desconectado.
-	\item Usuário pode ter atingido o numero máximo de amigos.
-	\item O Amigo Solicitado pode ter atigindo o numero máximo de amigos.
-	\item Usuário não estar conectado a internet
+	\item Ocorreu uma falha na conexão com a internet.
+	\begin{itemize}
+		\item O sistema apresenta uma mensagem para o usuário verificar os problemas com a conexão da Internet.
+	\end{itemize}
+	
+	\item Problemas com resposta do servidor ao adicionar o amigo.
+
 \end{itemize}
 }
 %Frequência de Ocorrencia
-{Toda vez que o usuario requerir uma solicitação de amizade}
+{Toda vez que o usuário requerir uma solicitação de amizade}
 %Problemas em Aberto
 {
  
 }
-
 %-----------------------------------------------------------
-<<<<<<< HEAD
-\casoDeUso
-%Identificador
-{UC13}
-%Nome
-{Como Solicitar amizade}
-%Ator Principal
-{Usuário}
-%Interessados
-{
-\begin{itemize}
-	\item Usuário: Deseja solicitar amizade
-\end{itemize}
-
-}
-%Pré-Condições
-{Ter uma conta válida e estar logado no perfil}
-%Pós-condições
-{Amigo adicionado aceitar a solicitação}
-%Fluxo Básico
-{
-\begin{itemize}
-	\item Entrar no perfil do amigo selecionado.
-	\item Clicar no botão Adicionar aos amigos como mostra na figura 12.
-	\item Aguardar o amigo aceitar sua solicitação.	
-\end{itemize}
-}
-%Fluxo Alternativo
-{
-\begin{itemize}
-	\item Usuário desconectado.
-	\item Usuário pode ter atingido o numero máximo de amigos.
-	\item O Amigo Solicitado pode ter atigindo o numero máximo de amigos.
-	\item Usuário não estar conectado a internet
-\end{itemize}
-}
-%Frequência de Ocorrencia
-{Toda vez que o usuario requerir uma solicitação de amizade}
-%Problemas em Aberto
-{
- 
-}
-
-%-----------------------------------------------------------
-=======
->>>>>>> 5492f28b0691b09c15032a680e05a7f4a5005750
