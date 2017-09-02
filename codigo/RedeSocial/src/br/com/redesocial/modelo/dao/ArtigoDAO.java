@@ -11,12 +11,12 @@ import java.util.List;
  *
  * @author Gusttavo Nunes, Gleyson Israel
  */
-public abstract class ArtigoDAO extends DAOCRUDBase<Artigo>  {
-    /*@Override
-    public void inserir(){
+public class ArtigoDAO extends DAOCRUDBase<Artigo>  {
+    @Override
+    public void inserir(Artigo a) throws Exception {
         
     }
-    */
+    
     /**
      * Método que seleciona um Artigo já cadastrado no banco de dados
      * @author Gleyson Israel Alves
@@ -54,10 +54,12 @@ public abstract class ArtigoDAO extends DAOCRUDBase<Artigo>  {
             return null;
         }
     }
-    /*@Override
-    public void excluir(){
+    
+    @Override
+    public void excluir(int id) throws Exception {
         
-    }*/
+    }
+    
     /**
      * Método que lista todos os artigos em ordem descrecem por data do banco de dados
      * @author Gusttavo Nunes Gomes
@@ -95,9 +97,10 @@ public abstract class ArtigoDAO extends DAOCRUDBase<Artigo>  {
         }        
         return lista;        
     }
-    /*@Override
-    public void alterar(){
+    
+    @Override
+    public void alterar(Artigo a) throws Exception {
         
-    }*/
+    }
 
 }
