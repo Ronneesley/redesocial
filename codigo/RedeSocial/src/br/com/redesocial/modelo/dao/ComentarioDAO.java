@@ -123,7 +123,13 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
 
         return lista;
     }
-
+    
+    /**
+     * Método responsável pela inserção de um comentario no banco de dados
+     * @author Fernando Maciel da Silva
+     * @param c comentario a ser inserido     
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Override
     public void inserir(Comentario c) throws Exception {
         

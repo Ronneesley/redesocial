@@ -163,6 +163,10 @@ import static org.junit.Assert.*;
         }
     }
     
+    /**
+     * Teste responsável pela exclusão de uma cidade no banco de dados
+     * @author Fernando Maciel da Silva
+     */
     @Test
     public void testMetodoExcluir() {
         

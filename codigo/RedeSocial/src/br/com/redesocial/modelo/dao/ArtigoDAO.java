@@ -55,9 +55,22 @@ public class ArtigoDAO extends DAOCRUDBase<Artigo>  {
         }
     }
     
+    /**
+     * Método responsável pela exclusão de um Artigo no banco de dados
+     * @author Fernando Maciel da Silva     
+     * @param id identificador do país a ser excluído    
+     * @throws Exception possíveis exceções que podem acontecer
+     */    
     @Override
     public void excluir(int id) throws Exception {
+        Connection conexao = getConexao();
         
+        PreparedStatement pstmt;
+        
+        pstmt = conexao.prepareStatement("delete from artigos where id = ?");        
+        pstmt.setInt(1, id);
+        
+        pstmt.executeUpdate();        
     }
     
     /**
