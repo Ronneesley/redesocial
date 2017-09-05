@@ -99,7 +99,7 @@ import static org.junit.Assert.*;
             fail("Falha ao inserir a cidade: " + ex.getMessage());
         }
     }
-    /**
+    
     @Test
     public void testMetodoSelecionar() {
         Pais pais = new Pais();
@@ -209,7 +209,7 @@ import static org.junit.Assert.*;
         } catch (Exception ex) {
             fail("Falha ao inserir uma cidade: " + ex.getMessage());
         }        
-    }*/
+    }
 }
  
  
