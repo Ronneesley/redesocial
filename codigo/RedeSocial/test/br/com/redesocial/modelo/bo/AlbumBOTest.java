@@ -247,28 +247,39 @@ public class AlbumBOTest {
 
     }
 
+    /**
+     * Método de teste responsável por excluir um album no banco de dados
+     * @author Ianka Talita Bastos de Assis
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Test
     public void testMetodoExcluir () throws Exception {
 	AlbumBO albumBO = new AlbumBO();
 	
-        try{ // tenta inserir e em seguida seleciona
+        /* Criação e inserção de dados de: país, estado, cidade, usuário e álbum.
+           Tenta inserir e em seguida exclui.*/
+        try{ 
+            //País
             PaisBO paisBO = new PaisBO();
             Pais pais = new Pais();
             pais.setNome("Brasil");
             paisBO.inserir(pais);
 	
+            //Estado
             EstadoBO estadoBO = new EstadoBO();
             Estado estado = new Estado();
             estado.setNome("Goiás");
             estado.setPais(pais);
             estadoBO.inserir(estado);
 	
+            //Cidade
             CidadeBO cidadeBO =  new CidadeBO();
             Cidade cidade = new Cidade();
             cidade.setNome("Bragolândia");
             cidade.setEstado(estado);
             cidadeBO.inserir(cidade);
 	
+            //Usuário
             UsuarioBO usuarioBO = new UsuarioBO();
         
             Usuario usuario = new Usuario();
@@ -290,22 +301,35 @@ public class AlbumBOTest {
 	
             calendario.set(2016, 8, 28, 0, 0, 0);
         
+            //Álbum
             Album album = new Album ();
             album.setNome("Desisto, Ronne!");
             album.setData(calendario.getTime());
             album.setUsuario(usuario);
             albumBO.inserir(album);
 	
+            //Verifica se o álbum está cadastrado no banco de dados;            
             int id = album.getId();
+            
+            // Seleciona um álbum inserido atráves do id;
             Album albumSelecionado = albumBO.selecionar(id);
+            
+            // Se o álbum não exitir, exibirá uma mensagem de erro.
             assertNotNull("Album não encontrado", albumSelecionado);
 	
+            //Exclui o álbum selecionado através do id. 
             albumBO.excluir(id);
+            
+            // Seleciona o álbum excluido para confirmação de exclusão. 
             Album albumSelecionadoPosExclusao = albumBO.selecionar(id);
 	
+            /*Caso o álbum possa ser encontrado no banco de dados mesmo após a exclusão,
+            será exibida uma mensagem de erro ao excluir.*/
             assertNull("Album não encontrado", albumSelecionadoPosExclusao);
 	} catch (Exception ex){
-	fail("Falha ao inserir um album: " + ex.getMessage());
+	
+        //Caso haja algum erro ao inserir um álbum no banco de dados    
+        fail("Falha ao inserir um album: " + ex.getMessage());
         }
     }
 }
