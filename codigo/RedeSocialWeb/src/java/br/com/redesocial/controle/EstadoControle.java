@@ -58,7 +58,7 @@ public class EstadoControle extends HttpServlet {
      */
     private void cadastrar(HttpServletRequest request, HttpServletResponse response) throws Exception{
         Estado estado = new Estado();
-        estado.setNome(request.getParameter("nome"));
+        estado.setNome(request.getParameter("estado"));
 
         
         request.setAttribute("Estado", estado);
@@ -118,4 +118,4 @@ public class EstadoControle extends HttpServlet {
         return "Servlet para Estado";
     }// </editor-fold>
 
-}
+    }
