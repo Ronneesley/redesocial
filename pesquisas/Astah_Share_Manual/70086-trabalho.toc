@@ -1,0 +1,5 @@
+\select@language {brazil}
+\contentsline {section}{\numberline {1}O que \IeC {\'e}?}{2}
+\contentsline {section}{\numberline {2}Download e Instala\IeC {\c c}\IeC {\~a}o}{2}
+\contentsline {section}{\numberline {3}Utiliza\IeC {\c c}\IeC {\~a}o do Astah Share}{3}
+\contentsline {section}{\numberline {4}Refer\IeC {\^e}ncias}{4}

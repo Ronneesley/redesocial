@@ -1,0 +1,34 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{1.45.2.1 }
+
+\bibitem[Guimarães 2013]{Guimaraes2013}
+\abntrefinfo{Guimarães}{GUIMARãES}{2013}
+{GUIMARãES, G. \emph{O Algoritmo RadixSort}. 2013.
+\url{http://www.dsc.ufcg.edu.br/~pet/jornal/junho2013/materias/historia_da_computacao.html}.}
+
+\bibitem[Oliveira 2011]{Oliveir2011}
+\abntrefinfo{Oliveira}{OLIVEIRA}{2011}
+{OLIVEIRA, R.~S. de. \emph{Algoritmos e Estruturas de Dados: Ordenação}. Maio
+  2011.
+\url{http://www.romulosilvadeoliveira.eng.br/discipli/cad-fei/Aula-EstruturasDados-14f-Ordenacao.pdf}.}
+
+\bibitem[Prestes 2011]{Prestes2011}
+\abntrefinfo{Prestes}{PRESTES}{2011}
+{PRESTES, E. \emph{Complexidade de Algoritmos}. 2011.
+\url{http://www.inf.ufrgs.br/~prestes/Courses/Complexity/aula1.pdf}.}
+
+\bibitem[Sheet 2016]{Sheet2016}
+\abntrefinfo{Sheet}{SHEET}{2016}
+{SHEET, B.-O.~C. \emph{Big-O Algorithm Complexity Cheat Sheet}. 2016.
+\url{http://bigocheatsheet.com/}.}
+
+\bibitem[WIKIPÉDIA 2016]{WIKIPEDIA2016}
+\abntrefinfo{WIKIPÉDIA}{WIKIPÉDIA}{2016}
+{WIKIPÉDIA. \emph{Radix Sort}. Março 2016.
+\url{https://pt.wikipedia.org/wiki/Radix_sort}.}
+
+\end{thebibliography}
