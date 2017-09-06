@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * Classe que realiza as operações de acesso ao banco de dados da entidade categoria
- * @author Lucas Azevedo
+ * @author Lucas Pereira de Azevedo
  * @since 05/09/2017
  */
 public class CategoriaDAO extends DAOCRUDBase<Categoria> {
