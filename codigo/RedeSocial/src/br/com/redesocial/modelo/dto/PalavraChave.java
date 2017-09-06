@@ -1,20 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.redesocial.modelo.dto;
 
 /**
- *
+ * DESCREVA AQUI O QUE A CLASSE REPRESENTA
  * @author Paulo Henrique
  */
-
 public class PalavraChave {
     //id é o atributo que identifica o usuário
     private Integer id;
     
-    //descicao é o atributo que armazena as palavras chaves 
+    //descricao é o atributo que armazena as palavras chaves 
     private String descricao;
 
     /**
@@ -47,6 +41,5 @@ public class PalavraChave {
      */
     public void setDescricao(String descricao) {
         this.descricao = descricao;
-    }
-    
+    }    
 }
