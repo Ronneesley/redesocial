@@ -1,6 +1,6 @@
 package br.com.redesocial.modelo.dao;
 
-import br.com.redesocial.modelo.bo.Categoria;
+import br.com.redesocial.modelo.dto.Categoria;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
