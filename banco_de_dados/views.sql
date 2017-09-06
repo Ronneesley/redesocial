@@ -12,3 +12,18 @@
         `usuarios`
     GROUP BY `Mês_Ano`
     ORDER BY `usuarios`.`data_cadastro`);
+	
+/**
+ * View para selecionar a quantidade de comentários do usuário
+ * @author Gusttavo Nunes Gomes
+ */
+ CREATE VIEW quantidade_de_comentarios_do_usuario AS
+	(SELECT
+		COUNT(*) AS `Quantidade de Comentarios`,
+		`usuarios`.`nome` AS `Nome Usuário`
+	FROM 
+		((usuarios 
+		INNER JOIN `postagens` ON `usuarios`.`id` = `postagens`.`usuario`)
+		INNER JOIN `comentarios` ON `comentarios`.`postagem` = `postagens`.`id`)
+	GROUP BY `usuarios`.`id`
+	ORDER BY `Quantidade de Comentarios`);
