@@ -6,9 +6,10 @@
 package br.com.redesocial.controle;
 
 import br.com.redesocial.modelo.bo.EstadoBO;
+import br.com.redesocial.modelo.bo.PaisBO;
 import br.com.redesocial.modelo.dto.Estado;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -38,45 +39,82 @@ public class EstadoControle extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
 
         String operacao = request.getParameter("operacao");
-        
+
         try {
             switch (operacao){
+                case "CriarNovo":
+                    this.criarNovo(request, response);
+                    break;
                 case "Cadastrar":
                     this.cadastrar(request, response);
                     break;
             }
         } catch (Exception ex){
-            
+
         }
     }
-    
+
+    private void criarNovo(HttpServletRequest request, HttpServletResponse response) throws Exception{
+        try {
+            Estado estado = new Estado();
+            request.setAttribute("estado", estado);
+
+            PaisBO bo = new PaisBO();
+            List paises = bo.listar();
+            request.setAttribute("paises", paises);
+        } catch (Exception ex){
+            request.setAttribute("erro", ex.getMessage());
+        }
+
+        RequestDispatcher rd = request.getRequestDispatcher("paginas/estados/cadastro_estados.jsp");
+        rd.forward(request, response);
+    }
+
      /**
      * Cadastra um estado no banco de dados
      * @param request
      * @param response
-     * @throws Exception 
+     * @throws Exception
      */
     private void cadastrar(HttpServletRequest request, HttpServletResponse response) throws Exception{
         Estado estado = new Estado();
+
+        if (request.getParameter("id") != null){
+            estado.setId(Integer.parseInt(request.getParameter("id")));
+        }
+
         estado.setNome(request.getParameter("estado"));
 
-        
-        request.setAttribute("Estado", estado);
-        
+        request.setAttribute("estado", estado);
+
+        PaisBO bo = new PaisBO();
+        List paises = bo.listar();
+        request.setAttribute("paises", paises);
+
+        if (estado.getId() == null){
+            this.inserir(estado, request, response);
+        } else {
+            this.alterar(estado, request, response);
+        }
+    }
+
+
+    private void inserir(Estado estado, HttpServletRequest request, HttpServletResponse response) throws Exception{
         try {
             EstadoBO estadoBO = new EstadoBO();
             estadoBO.inserir(estado);
 
             request.setAttribute("mensagem", "Cadastro realizado com sucesso");
-            
-            RequestDispatcher rd = request.getRequestDispatcher("configuracao_perfil.jsp");
-            rd.forward(request, response);
         } catch (Exception ex){
-            request.setAttribute("mensagem", "Erro: " + ex.getMessage());
-            
-            RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
-            rd.forward(request, response);
+            request.setAttribute("erro", ex.getMessage());
         }
+
+        RequestDispatcher rd = request.getRequestDispatcher("paginas/estados/cadastro_estados.jsp");
+        rd.forward(request, response);
+    }
+
+    private void alterar(Estado estado, HttpServletRequest request, HttpServletResponse response) throws Exception{
+        //Para vocês codificarem
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

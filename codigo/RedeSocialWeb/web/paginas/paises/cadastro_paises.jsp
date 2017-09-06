@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title> Cadastro de Estados </title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>Cadastro de Pa&iacute;ses</title>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <style type="text/css">
             #fundo{
                 width: 580px;
@@ -56,36 +58,34 @@
                 font-weight: bolder;
                 font-size: 24px;
                 margin-left: 19px;
-				text-align: center;
             }
             
-            hr{
+            hr {
                 width: 93%;
             }
         </style>
-	</head>
-	
-	<body>
-		<div id="fundo">
-		<h1> Cadastro de Estados</h1>
-		<hr />
-		<form action="EstadoControle?operacao=Cadastrar" method="post">
-			<label for="pais">Pa&iacutes:</label>
-			<br />
-			<select tabindex="1" name="pais" class="campo" id="pais" >
-				<option value="Selecione o Pais">Selecione o Pa&iacutes</option>
-			</select>
-			 <label for="estado">Estado:</label>
+    </head>
+    <body>
+        ${mensagem}
+            
+        ${erro}
+        
+        <div id="fundo">
+            <h1>Cadastro de Pa&iacute;ses</h1>
+            <hr />
+            
+            <form action="PaisControle?operacao=Cadastrar" method="post">
+                <input type="hidden" name="id" value="${pais.id}" />
+                
+                <label for="pais">Pa&iacute;s:</label><br />
+                <input name="nome" type="text" value="${pais.nome}"
+                       class="campo" id="pais" placeholder="Digite o nome do pa&iacute;s"
+                       tabindex="1" />
                 <br />
-                <input tabindex="1" name="estado" type="text" class="campo" id="estado" placeholder="Digite o nome do estado" />
-			<br />
-			
-			<input tabindex="3" type="reset" class="botaoReset" value="Cancelar" />
-			<input tabindex="2" type="submit" class="botaoSubmit" value="Salvar" />
-		</form>
-		
-		</div>		
-	</body>
-	
-	
+                
+                <input tabindex="3" type="reset" class="botaoReset" value="Cancelar" />
+                <input tabindex="2" type="submit" class="botaoSubmit" value="Salvar" />
+            </form>
+        </div>
+    </body>
 </html>
