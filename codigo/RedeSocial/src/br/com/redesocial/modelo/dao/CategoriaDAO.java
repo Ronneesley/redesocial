@@ -1,7 +1,7 @@
 package br.com.redesocial.modelo.dao;
 
 
-import br.com.redesocial.modelo.dto.Categorias;
+import br.com.redesocial.modelo.dto.Categoria;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
@@ -13,7 +13,7 @@ import java.util.List;
  * @author Lucas Pereira de Azevedo
  * @since 05/09/2017
  */
-public class CategoriasDAO extends DAOCRUDBase<Categorias> {
+public class CategoriaDAO extends DAOCRUDBase<Categoria> {
 
     /**
      * Método responsável pela inserção de um categoria no banco de dados
@@ -22,25 +22,25 @@ public class CategoriasDAO extends DAOCRUDBase<Categorias> {
      * @throws Exception possíveis exceções que podem acontecer
      */
     @Override
-    public void inserir(Categorias c) throws Exception {
+    public void inserir(Categoria c) throws Exception {
         Connection conexao = getConexao();
 
         PreparedStatement pstmt;
         pstmt = conexao.prepareStatement("insert into categorias (descricao) values(?)", Statement.RETURN_GENERATED_KEYS);
 
-        pstmt.setString(1,c.getDescricao());
+        pstmt.setString(1, c.getDescricao());
         pstmt.executeUpdate();
 
         c.setId(getId(pstmt));
     }
 
     @Override
-    public void alterar(Categorias dto) throws Exception {
+    public void alterar(Categoria dto) throws Exception {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Categorias selecionar(int id) throws Exception {
+    public Categoria selecionar(int id) throws Exception {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

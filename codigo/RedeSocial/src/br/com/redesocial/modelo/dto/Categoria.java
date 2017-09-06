@@ -7,7 +7,7 @@ package br.com.redesocial.modelo.dto;
  */
 public class Categoria {
 
-    public Object getDescricao() {
+    public String getDescricao() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
