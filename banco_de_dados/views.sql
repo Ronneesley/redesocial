@@ -28,3 +28,18 @@
 		INNER JOIN `comentarios` ON `comentarios`.`postagem` = `postagens`.`id`)
 	GROUP BY `usuarios`.`id`
 	ORDER BY `Qtde. Comentários`);
+    
+/**
+ * View para selecionar os aportes mais "upados"
+ * @author Andrey Silva Ribeiro
+ */
+ CREATE VIEW aportes_mais_upados AS
+	(SELECT
+		`postagens`.`curtidas` AS `Quantidade de UP's`,
+        `aportes`.`titulo` AS `Titulo do aporte`
+	FROM 
+		(postagens
+        INNER JOIN `aportes` ON `postagens`.`id` = `aportes`.`postagem`)
+	GROUP BY `aportes`.`titulo`
+    ORDER BY `postagens`.`curtidas`);
+    
