@@ -344,26 +344,30 @@
 {
 \begin{itemize}
 	\item Usuário desconectado.
-	\begin{itemize}
+		\begin{itemize}
 		\item Exibir mensagem  ao usuário falando que ele está deslogado.
 	\end{itemize}
 	\item Problemas de resposta do servidor.
-	\begin{itemize}
-	\item Exibir mensagem  ao usuário relatando problemas com resposta do servidor.
+		\begin{itemize}
+		\item Exibir mensagem  ao usuário relatando problemas com resposta do servidor.
 	\end{itemize}
 	\item Exibe uma mensagem informando que o usuário foi desconectado.
 	\item Volta para a tela inicial do sistema de fazer login.
-	\begin{itemize}
+		\begin{itemize}
 	\item Problemas com sua conexão com a internet.
-	\begin{itemize}
-	\item Exibe uma mensagem informando que o usuário não esta conectado a internet
+		\begin{itemize}
+		\item Exibe uma mensagem informando que o usuário não esta conectado a internet
 	\end{itemize}
+\end{itemize}
+	
 \end{itemize}
 }
 %Frequência de Ocorrencia
-{Toda  vez que o usuário deseja sair da rede social.}
+{Toda vez que o usuário deseja sair da rede social.}
 %Problemas em Aberto
-{}
+{
+
+}
 %-------------------------------------------------------------------------
 \casoDeUso
 %Identificador
@@ -630,22 +634,22 @@
 %Fluxo Básico
 {
 \begin{itemize}
-	\item Solitação enviada
-		\begin{itemize}
-			\item Usuário entra no perfil do amigo selecionado.
-			\item Usuário Clica no botão ''Adicionar aos amigos'', (Figura \ref{figura:solicitacao_amizade})	
-		\end{itemize}
+		\item Usuário entra no perfil do amigo selecionado.
+		\item Usuário Clica no botão ''Adicionar aos amigos'', (Figura 			 	\ref{figura:solicitacao_amizade})	
 \end{itemize}
 }
 %Fluxo Alternativo
 {
 \begin{itemize}
-	\item Ocorreu uma falha na conexão com a internet.
+	\item Ocorreu uma falha na conexão com a Internet.
 	\begin{itemize}
 		\item O sistema apresenta uma mensagem para o usuário verificar os problemas com a conexão da Internet.
 	\end{itemize}
 	
 	\item Problemas com resposta do servidor ao adicionar o amigo.
+	\begin{itemize}
+	\item O Sistema exibe uma mensagem informando que ouve um problema com resposta do servidor.
+	\end{itemize}
 
 \end{itemize}
 }

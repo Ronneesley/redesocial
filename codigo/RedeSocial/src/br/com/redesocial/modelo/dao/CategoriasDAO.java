@@ -1,11 +1,11 @@
 package br.com.redesocial.modelo.dao;
 
-import br.com.redesocial.modelo.dto.Categoria;
+
+import br.com.redesocial.modelo.dto.Categorias;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
 import java.util.List;
-
 
 
 /**
@@ -13,7 +13,7 @@ import java.util.List;
  * @author Lucas Pereira de Azevedo
  * @since 05/09/2017
  */
-public class CategoriaDAO extends DAOCRUDBase<Categoria> {
+public class CategoriasDAO extends DAOCRUDBase<Categorias> {
 
     /**
      * Método responsável pela inserção de um categoria no banco de dados
@@ -22,29 +22,25 @@ public class CategoriaDAO extends DAOCRUDBase<Categoria> {
      * @throws Exception possíveis exceções que podem acontecer
      */
     @Override
-    public void inserir(Categoria c) throws Exception {
+    public void inserir(Categorias c) throws Exception {
         Connection conexao = getConexao();
 
-        if(c.getDescricao().equals("")){
-            throw new Exception("O campo categoria não pode estar vazio!");
-        }
-
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("insert into categoria (descricao) values(?)", Statement.RETURN_GENERATED_KEYS);
+        pstmt = conexao.prepareStatement("insert into categorias (descricao) values(?)", Statement.RETURN_GENERATED_KEYS);
 
-        pstmt.setString(1, (String) c.getDescricao());
+        pstmt.setString(1,c.getDescricao());
         pstmt.executeUpdate();
 
         c.setId(getId(pstmt));
     }
 
     @Override
-    public void alterar(Categoria dto) throws Exception {
+    public void alterar(Categorias dto) throws Exception {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Categoria selecionar(int id) throws Exception {
+    public Categorias selecionar(int id) throws Exception {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -57,4 +53,5 @@ public class CategoriaDAO extends DAOCRUDBase<Categoria> {
     public void excluir(int id) throws Exception {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
 }
