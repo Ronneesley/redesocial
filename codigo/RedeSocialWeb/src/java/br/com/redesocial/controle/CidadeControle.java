@@ -60,7 +60,7 @@ public class CidadeControle extends HttpServlet {
             cidade.setId(Integer.parseInt(request.getParameter("id")));
         }
 
-        cidade.setNome(request.getParameter("estado"));
+        cidade.setNome(request.getParameter("cidade"));
 
         request.setAttribute("cidade", cidade);
 
