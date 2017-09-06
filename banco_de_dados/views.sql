@@ -19,11 +19,12 @@
  */
  CREATE VIEW quantidade_de_comentarios_do_usuario AS
 	(SELECT
-		COUNT(*) AS `Quantidade de Comentarios`,
-		`usuarios`.`nome` AS `Nome Usuário`
+		`usuarios`.`nome` AS `Usuário`,
+		COUNT(*) AS `Qtde. Comentários`
+		
 	FROM 
 		((usuarios 
 		INNER JOIN `postagens` ON `usuarios`.`id` = `postagens`.`usuario`)
 		INNER JOIN `comentarios` ON `comentarios`.`postagem` = `postagens`.`id`)
 	GROUP BY `usuarios`.`id`
-	ORDER BY `Quantidade de Comentarios`);
+	ORDER BY `Qtde. Comentários`);
