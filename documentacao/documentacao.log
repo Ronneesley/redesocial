@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.9.1)  1 SEP 2017 21:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.9.6)  6 SEP 2017 19:59
 entering extended mode
 **./documentacao.tex
 (documentacao.tex
@@ -1885,7 +1885,7 @@ Overfull \hbox (12.79996pt too wide) in paragraph at lines 312--312
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (12.79996pt too wide) in paragraph at lines 365--365
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 366--366
 [][] 
  []
 
@@ -1893,33 +1893,25 @@ Overfull \hbox (12.79996pt too wide) in paragraph at lines 365--365
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: Reference `perfil' on page 31 undefined on input line 430.
+LaTeX Warning: Reference `perfil' on page 31 undefined on input line 433.
 
 
 LaTeX Warning: Reference `cadastro_usuario_parte3' on page 31 undefined on inpu
-t line 430.
+t line 433.
 
 
-Overfull \hbox (12.79996pt too wide) in paragraph at lines 430--430
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 433--433
 [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 264.62703pt on input line 430.
+LaTeX Warning: Float too large for page by 264.62703pt on input line 433.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (12.79996pt too wide) in paragraph at lines 475--475
-[][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (12.79996pt too wide) in paragraph at lines 519--519
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 478--478
 [][] 
  []
 
@@ -1927,7 +1919,7 @@ Overfull \hbox (12.79996pt too wide) in paragraph at lines 519--519
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (12.79996pt too wide) in paragraph at lines 562--562
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 522--522
 [][] 
  []
 
@@ -1935,7 +1927,7 @@ Overfull \hbox (12.79996pt too wide) in paragraph at lines 562--562
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (12.79996pt too wide) in paragraph at lines 607--607
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 565--565
 [][] 
  []
 
@@ -1943,7 +1935,15 @@ Overfull \hbox (12.79996pt too wide) in paragraph at lines 607--607
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (12.79996pt too wide) in paragraph at lines 654--654
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 610--610
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 657--657
 [][] 
  []
 
@@ -1954,7 +1954,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ] [32] [33] [34] [35] [36] [37] [38]
 [39] [40] [41] [42] [43] [44]
-<../banco_de_dados/redesocial.png, id=424, 899.36pt x 1354.05875pt>
+<../banco_de_dados/redesocial.png, id=425, 899.36pt x 1354.05875pt>
 File: ../banco_de_dados/redesocial.png Graphic file (type png)
 
 <use ../banco_de_dados/redesocial.png>
@@ -1994,10 +1994,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 45.
  ) 
 Here is how much of TeX's memory you used:
- 15025 strings out of 493333
- 222231 string characters out of 3139195
+ 15024 strings out of 493333
+ 222223 string characters out of 3139195
  486562 words of memory out of 3000000
- 18069 multiletter control sequences out of 15000+200000
+ 18068 multiletter control sequences out of 15000+200000
  17960 words of font info for 84 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,12n,45p,868b,546s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2005,9 +2005,9 @@ Here is how much of TeX's memory you used:
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program 
 Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/Program Files/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on documentacao.pdf (48 pages, 1901116 bytes).
+Output written on documentacao.pdf (48 pages, 1900491 bytes).
 PDF statistics:
- 554 PDF objects out of 1000 (max. 8388607)
+ 555 PDF objects out of 1000 (max. 8388607)
  131 named destinations out of 1000 (max. 500000)
  11567 words of extra memory for PDF output out of 12000 (max. 10000000)
 
