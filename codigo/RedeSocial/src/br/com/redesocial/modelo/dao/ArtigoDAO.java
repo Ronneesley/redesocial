@@ -110,9 +110,34 @@ public class ArtigoDAO extends DAOCRUDBase<Artigo>  {
         }        
         return lista;        
     }
-    
+     
+    /**
+     * Método que Altera um Artigo já cadastrado no banco de dados
+     * @author Eduardo Oliveira Silva
+     * @param a attigo a ser alterado
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Override
     public void alterar(Artigo a) throws Exception {
+        Connection conexao = getConexao();
+        
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("update Artigo set  idioma = ?, revista = ?, ISSN = ?, autor = ?, data = ?, "
+                + "areaConhecimento = ?, titulo = ?, resumo = ?, URL = ?, artigo = ? where id = ?");
+        
+        pstmt.setString(1, a.getIdioma());
+        pstmt.setString(2, a.getRevista());
+        pstmt.setString(3, a.getISSN());
+        pstmt.setString(4, a.getAutor());
+        pstmt.setDate(5, new java.sql.Date(a.getData().getTime()));
+        pstmt.setString(6, a.getAreaConhecimento());
+        pstmt.setString(7, a.getTitulo());
+        pstmt.setString(8, a.getResumo());
+        pstmt.setString(9, a.getURL());
+        pstmt.setBytes(10, a.getArtigo());
+        
+        //executa uma atualização/alteração
+        pstmt.executeUpdate();
         
     }
 
