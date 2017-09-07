@@ -108,9 +108,27 @@ public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
         
         return lista;
     }
-
+    
+    
+     /**
+     * Método que Altera todas as multimídias  no banco de dados
+     * @author Jose Gilvan Jacinto Junior
+     * @param m as multimídias a serem alteradas
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Override
-    public void alterar(Multimidia dto) throws Exception {
+    public void alterar(Multimidia m) throws Exception { 
+        Connection conexao = getConexao();
         
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("update Multimidia set midia =?, tipo_conteudo =?, data where id = ?");
+        
+        
+        pstmt.setBytes(1, m.getMidia());
+        pstmt.setString(2, m.getTipoConteudo());
+        pstmt.setDate(3, new java.sql.Date(m.getData().getTime()));
+        
+        //executa uma atualização/alteração
+        pstmt.executeUpdate();
     }
 }
