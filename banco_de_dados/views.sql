@@ -44,7 +44,7 @@
     ORDER BY `postagens`.`curtidas`);
     
 /**
- * View para selecionar os aportes mais visualizados
+ * View para mostrar os aportes mais visualizados
  * @author Jônatas de Souza Rezende
  */
 CREATE VIEW aportes_mais_visualizados AS
@@ -53,3 +53,16 @@ FROM aportes ap
 INNER JOIN postagens post ON ap.postagem = post.id
 ORDER BY post.visualizacoes DESC
 LIMIT 1;
+
+/**
+ * View para mostrar a quantidade de usuários por estado
+ * @author Jônatas de Souza Rezende
+ */
+CREATE VIEW usuarios_por_estado AS
+SELECT est.nome AS Estado, pai.nome AS Pais, COUNT(est.nome) AS Qtde
+FROM usuarios us
+INNER JOIN cidades cid ON us.cidade = cid.id
+INNER JOIN estados est ON cid.estado = est.id
+INNER JOIN paises pai ON est.pais = pai.id
+GROUP BY est.nome
+ORDER BY est.nome;
