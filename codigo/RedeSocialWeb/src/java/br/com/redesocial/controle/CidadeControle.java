@@ -5,11 +5,11 @@
  */
 package br.com.redesocial.controle;
 
-import br.com.redesocial.modelo.bo.CidadeBO;
+import br.com.redesocial.modelo.bo.EstadoBO;
+import br.com.redesocial.modelo.bo.PaisBO;
 import br.com.redesocial.modelo.dto.Cidade;
 import java.io.IOException;
-import java.io.PrintWriter;
-import javax.servlet.RequestDispatcher;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -53,25 +53,29 @@ public class CidadeControle extends HttpServlet {
      * @param response
      * @throws Exception 
      */
-    private void cadastrar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    private void cadastrar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, Exception {
         Cidade cidade = new Cidade();
-        cidade.setNome(request.getParameter("cidade"));
-        
-        request.setAttribute("cidade", cidade);
-        
-        try {
-            CidadeBO usuarioBO = new CidadeBO();
-            usuarioBO.inserir(cidade);
 
-            request.setAttribute("mensagem", "Cadastro realizado com sucesso");
-            
-            RequestDispatcher rd = request.getRequestDispatcher("configuracao_perfil.jsp");
-            rd.forward(request, response);
-        } catch (Exception ex){
-            request.setAttribute("mensagem", "Erro: " + ex.getMessage());
-            
-            RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
-            rd.forward(request, response);
+        if (request.getParameter("id") != null){
+            cidade.setId(Integer.parseInt(request.getParameter("id")));
+        }
+
+        cidade.setNome(request.getParameter("cidade"));
+
+        request.setAttribute("cidade", cidade);
+
+        EstadoBO bo = new EstadoBO();
+        List estados = bo.listar();
+        request.setAttribute("estados", estados);
+        
+        PaisBO pbo = new PaisBO();
+        List paises = pbo.listar();
+        request.setAttribute("paises", paises);
+
+        if (cidade.getId() == null){
+            this.inserir(cidade, request, response);
+        } else {
+            this.alterar(cidade, request, response);
         }
     }
 
@@ -110,5 +114,13 @@ public class CidadeControle extends HttpServlet {
     @Override
     public String getServletInfo() {
         return "Servlet para Cidades";
+    }
+
+    private void alterar(Cidade cidade, HttpServletRequest request, HttpServletResponse response) {
+       //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void inserir(Cidade cidade, HttpServletRequest request, HttpServletResponse response) {
+        //To change body of generated methods, choose Tools | Templates.
     }
 }
