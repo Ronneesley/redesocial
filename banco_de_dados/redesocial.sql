@@ -324,7 +324,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `redesocial`.`aportes` ;
 
 CREATE TABLE IF NOT EXISTS `redesocial`.`aportes` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `titulo` VARCHAR(80) NOT NULL,
   `categoria` INT NOT NULL,
   `postagem` INT NOT NULL,
