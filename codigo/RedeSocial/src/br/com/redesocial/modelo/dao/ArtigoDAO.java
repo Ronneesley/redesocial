@@ -101,7 +101,7 @@ public class ArtigoDAO extends DAOCRUDBase<Artigo>  {
             a.setISSN(rs.getString("issn"));
             a.setAutor(rs.getString("autor"));
             a.setData(rs.getDate("data"));
-            a.setAreaConhecimento(rs.getString("area_Conhecimento"));
+            a.setAreaConhecimento(rs.getString("area_conhecimento"));
             a.setTitulo(rs.getString("titulo"));
             a.setResumo(rs.getString("resumo"));
             a.setURL(rs.getString("url"));
