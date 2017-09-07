@@ -5,6 +5,7 @@ import br.com.redesocial.modelo.dto.Pais;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import java.util.List;
+import java.lang.Exception;
 /**
  *
  * @author Inimigo, Andrey, Daniel,Anny
