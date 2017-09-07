@@ -35,7 +35,7 @@
  */
  CREATE VIEW aportes_mais_upados AS
 	(SELECT
-		`postagens`.`curtidas` AS `Quantidade de UP's`,
+		`postagens`.`curtidas` AS `Quantidade de UPs`,
         `aportes`.`titulo` AS `Titulo do aporte`
 	FROM 
 		(postagens
