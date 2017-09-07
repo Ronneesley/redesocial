@@ -48,10 +48,23 @@ public class CategoriaDAO extends DAOCRUDBase<Categoria> {
     public List listar() throws Exception {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+    
+    /**
+     * Método responsável por excluir uma categoria do banco de dados
+     * @author Luciano de Carvalho Borba
+     * @param id da categoria a ser excluida
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Override
     public void excluir(int id) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+       Connection conexao = getConexao();
+       
+       PreparedStatement pstmt;
+       pstmt = conexao.prepareStatement ("delete from categorias where id = ?");
+       
+       pstmt.setInt(1, id);
+       pstmt.executeUpdate();
     }
 
 }
