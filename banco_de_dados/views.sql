@@ -43,3 +43,13 @@
 	GROUP BY `aportes`.`titulo`
     ORDER BY `postagens`.`curtidas`);
     
+/**
+ * View para selecionar os aportes mais visualizados
+ * @author Jônatas de Souza Rezende
+ */
+CREATE VIEW aportes_mais_visualizados AS
+SELECT ap.id AS id_aporte, titulo AS titulo_do_aporte, post.visualizacoes AS quantidade_de_visualizacoes 
+FROM aportes ap
+INNER JOIN postagens post ON ap.postagem = post.id
+ORDER BY post.visualizacoes DESC
+LIMIT 1;
