@@ -67,6 +67,8 @@
 	</head>
 	
 	<body>
+                ${mensagem}
+            
 		<div id="fundo">
 		<h1> Cadastro de Estados</h1>
 		<hr />

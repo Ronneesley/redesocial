@@ -8,6 +8,7 @@ package br.com.redesocial.controle;
 import br.com.redesocial.modelo.bo.EstadoBO;
 import br.com.redesocial.modelo.bo.PaisBO;
 import br.com.redesocial.modelo.dto.Estado;
+import br.com.redesocial.modelo.dto.Pais;
 import java.io.IOException;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
@@ -84,6 +85,12 @@ public class EstadoControle extends HttpServlet {
         }
 
         estado.setNome(request.getParameter("estado"));
+        
+        PaisBO paisBO = new PaisBO();
+        Integer idPais = Integer.parseInt(request.getParameter("pais"));
+        Pais pais = paisBO.selecionar(idPais);
+        
+        estado.setPais(pais);
 
         request.setAttribute("estado", estado);
 
