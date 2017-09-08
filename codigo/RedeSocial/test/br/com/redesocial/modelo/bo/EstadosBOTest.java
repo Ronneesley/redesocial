@@ -104,8 +104,6 @@ public class EstadosBOTest {
          * @param paisBO identificador de um paisBO
          */
         PaisBO paisBO = new PaisBO();
-        
-        
         /**
          * realiza a tentativa de inserção no banco de dados
          */
@@ -115,37 +113,31 @@ public class EstadosBOTest {
              * @param estado indetificador do estado a ser inserido
              */
             Estado estado = new Estado();
-            
             /**
              * responsável pela inserção de um país no banco de dados
              * @param pais identificador de um pais a ser inserido
              */
             Pais pais = new Pais();
-            
             /**
              * atribuição das características do país a ser inserido
              */
             pais.setNome("Brasil");
             paisBO.inserir(pais);
-            
             /**
              * atribuição das características do estado a ser inserido
              */
             estado.setNome("Goiás");
             estado.setPais(pais);
             estadoBO.inserir(estado);
-            
             /**
              * atribuição do identificador do estado à uma variável
              * @param id identificador do id do estado a ser selecionado
              */
             int id = estado.getId();
-            
             /**
              * seleciona o estado desejado
              */
             Estado estadoSelecionado = estadoBO.selecionar(id);
-            
             /**
              * mensagem de erro caso não encontre o estado
              */
