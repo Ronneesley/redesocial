@@ -7,8 +7,7 @@ import static org.junit.Assert.*;
 import java.util.List;
 import java.lang.Exception;
 /**
- *
- * @author Inimigo, Andrey, Daniel,Anny
+ * @author Inimigo, Andrey, Daniel, 0Anny
  */
 public class EstadosBOTest {
     
@@ -174,8 +173,6 @@ public class EstadosBOTest {
          * criar estado
          */
         EstadoBO estadoBO = new EstadoBO();
-        
-        
             /**
               * função listar estados
               */
