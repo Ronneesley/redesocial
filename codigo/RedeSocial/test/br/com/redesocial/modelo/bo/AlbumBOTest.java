@@ -183,9 +183,8 @@ public class AlbumBOTest {
      */
     @Test
     public void testMetodoSelecionar() {
-        /*
-         * Criação e inserção de Pais, Estado, Cidade, Usuario e Album no banco de dados
-         */
+       
+        //Criação e inserção de Pais, Estado, Cidade, Usuario e Album no banco de dados   
         Pais pais = new Pais();
         pais.setNome("Brasil");
         
@@ -236,9 +235,6 @@ public class AlbumBOTest {
             
             int idalbum = album.getId();
             
-            /*
-             *Seleção no banco de dados 
-             */
             albumbo.selecionar(idalbum);
             
         } catch (Exception ex) {
