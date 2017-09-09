@@ -44,6 +44,16 @@
     ORDER BY `postagens`.`curtidas` desc);
     
 /**
+ * View da quantidade de usuários por sexo
+ * @author Andrey Silva Ribeiro
+ */
+ CREATE VIEW quantidade_usuario_sexo AS
+ SELECT sexo, count(sexo) AS `Qtde. Usuarios por sexo`
+ FROM usuarios
+ GROUP BY sexo
+ ORDER BY sexo desc;
+ 
+/**
  * View para mostrar os aportes mais visualizados
  * @author Jônatas de Souza Rezende
  */
