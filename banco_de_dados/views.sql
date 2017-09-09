@@ -41,7 +41,7 @@
 		(postagens
         INNER JOIN `aportes` ON `postagens`.`id` = `aportes`.`postagem`)
 	GROUP BY `aportes`.`titulo`
-    ORDER BY `postagens`.`curtidas`);
+    ORDER BY `postagens`.`curtidas` desc);
     
 /**
  * View para mostrar os aportes mais visualizados
@@ -66,3 +66,4 @@ INNER JOIN estados est ON cid.estado = est.id
 INNER JOIN paises pai ON est.pais = pai.id
 GROUP BY est.nome
 ORDER BY est.nome;
+
