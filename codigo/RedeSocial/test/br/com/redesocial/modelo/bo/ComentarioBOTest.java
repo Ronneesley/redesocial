@@ -138,11 +138,11 @@ public class ComentarioBOTest {
      */
     //@Test
     public void testMetodoListar() {
-        /**
-         * Para listar comentários é necessário a existência dos mesmos.
-         * Para inserir comentários, deve-se inserir postagem, usuário, cidade
-         * estado e país.
-         */
+        /*
+        Para listar comentários é necessário a existência dos mesmos.
+        Para inserir comentários, deve-se inserir postagem, usuário, cidade
+        estado e país.
+        */
         ComentarioBO bo = new ComentarioBO();
         
         try{
@@ -205,9 +205,9 @@ public class ComentarioBOTest {
             
             PostagemBO postagemBO = new PostagemBO();
             postagemBO.inserir(postagem);
-            /**
-             * Definindo a quantidade de comentários a serem inseridos
-             */
+            
+            //Definindo a quantidade de comentários a serem inseridos
+            
             final int qtde = 3;
             for (int i = 0; i < 3; i++){
                 
@@ -219,32 +219,22 @@ public class ComentarioBOTest {
                 comentario.setPostagem(postagem);
                 
                 try{
-                    /**
-                     * Inserindo comentário no banco de dados
-                     */
+                    //Inserindo comentário no banco de dados
                     bo.inserir(comentario);
                 }catch(Exception ex){
-                    /**
-                     * Mensagem de erro caso falhe
-                     */
+                    //Mensagem de erro caso falhe
                     fail("Falha ao inserir um comentário: " + ex.getMessage());
                 }
             }
-            /**
-             * Verifica a quantidade de comentários após inserção
-             */
+            //Verifica a quantidade de comentários após inserção
             List existentesFinal = bo.listar();
             int qtdeExistentesFinal = existentesFinal.size();
-            /**
-            * Verifica quantos comentários foram inseridos
-            */
+            //Verifica quantos comentários foram inseridos
             int diferenca = qtdeExistentesFinal - qtdeExistentes;
             assertEquals(qtde, diferenca);
             
         }catch (Exception ex){
-            /**
-             * Erro caso a listagem falhe
-             */
+            //Erro caso a listagem falhe
             fail("Erro ao listar: " + ex.getMessage());
         }
     }

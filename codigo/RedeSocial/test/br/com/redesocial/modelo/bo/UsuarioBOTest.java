@@ -218,9 +218,9 @@ public class UsuarioBOTest {
      */
     @Test
     public void testMetodoExcluir() throws Exception{
-        /**
-         * Para excluir um usuário o mesmo deve estar inserido.
-         * Ao inserir um usuário, é necessário inserir cidade, estado e país.
+        /*
+        Para excluir um usuário o mesmo deve estar inserido.
+        Ao inserir um usuário, é necessário inserir cidade, estado e país.
          */
         Pais pais = new Pais();
         pais.setNome("Brasil");
