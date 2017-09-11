@@ -5,11 +5,13 @@
  */
 package br.com.redesocial.controle;
 
+import br.com.redesocial.modelo.bo.CidadeBO;
 import br.com.redesocial.modelo.bo.EstadoBO;
 import br.com.redesocial.modelo.bo.PaisBO;
 import br.com.redesocial.modelo.dto.Cidade;
 import java.io.IOException;
 import java.util.List;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -33,17 +35,29 @@ public class CidadeControle extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        
+
         String operacao = request.getParameter("operacao");
-        
+
         try {
             switch (operacao){
+                case "CriarNovo":
+                    this.criarNovo(request, response);
+                    break;
                 case "Cadastrar":
                     this.cadastrar(request, response);
                     break;
+                case "Listar":
+                    this.listar(request, response);
+                    break;
+                case "Excluir":
+                    this.excluir(request, response);
+                    break;
+                case "Editar":
+                    this.editar(request, response);
+                    break;
             }
         } catch (Exception ex){
-            
+
         }
     }
     
@@ -120,7 +134,33 @@ public class CidadeControle extends HttpServlet {
        //To change body of generated methods, choose Tools | Templates.
     }
 
-    private void inserir(Cidade cidade, HttpServletRequest request, HttpServletResponse response) {
-        //To change body of generated methods, choose Tools | Templates.
+    private void inserir(Cidade cidade, HttpServletRequest request, HttpServletResponse response) throws Exception{
+        try {
+            CidadeBO cidadeBO = new CidadeBO();
+            cidadeBO.inserir(cidade);
+
+            request.setAttribute("mensagem", "Cadastro realizado com sucesso");
+        } catch (Exception ex){
+            request.setAttribute("erro", ex.getMessage());
+        }
+
+        RequestDispatcher rd = request.getRequestDispatcher("paginas/estados/cadastro_estados.jsp");
+        rd.forward(request, response);
+    }
+
+    private void listar(HttpServletRequest request, HttpServletResponse response) {
+
+    }
+
+    private void excluir(HttpServletRequest request, HttpServletResponse response) {
+
+    }
+
+    private void editar(HttpServletRequest request, HttpServletResponse response) {
+
+    }
+
+    private void criarNovo(HttpServletRequest request, HttpServletResponse response) {
+
     }
 }

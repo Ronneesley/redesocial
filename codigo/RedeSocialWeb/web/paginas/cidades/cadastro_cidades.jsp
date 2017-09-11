@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -68,19 +69,31 @@
         </style>
     </head>
     <body>
+        ${mensagem}
+        
         <div id="fundo">
             <h1>Cadastrar cidade</h1>
             <hr/>
             <form action="CidadeControle?operacao=Cadastrar" method="post">
+                <input type="hidden" name="id" value="${cidade.id}" />
+                
                 <label for="paises">Pa&iacutes:</label>
                 <br />
                 <select name="paises" class="campo" id="pais" >
-                    <option value="Selecione o País">Selecione o Pa&iacutes</option>
+                    <option value="${pais.nome}">Selecione o Pa&iacutes</option>
+                    
+                    <c:forEach items="${paises}" var="pais">
+                        <option value="${pais.id}">${pais.nome}</option>
+                    </c:forEach>
                 </select>
                 <label for="estados">Estado:</label>
                 <br />
                 <select name="estados" class="campo" id="estado" >
-                    <option value="Selecione o Estado">Selecione o Estado</option>
+                    <option value="${estado.nome}">Selecione o Estado</option>
+                    
+                    <c:forEach items="${estados}" var="estado">
+                        <option value="${estado.id}">${estado.nome}</option>
+                    </c:forEach>
                 </select>
                 <label for="cidade">Cidade:</label>
                 <br />
