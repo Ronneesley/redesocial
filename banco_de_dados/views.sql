@@ -77,3 +77,13 @@ INNER JOIN paises pai ON est.pais = pai.id
 GROUP BY est.nome
 ORDER BY est.nome;
 
+/**
+ * View para mostrar a quantidade de vezes que uma palavra-chave foi usada nas postagens
+ * @author Thalia Santos de Santana
+ */
+create view palavra_chave_postagem as
+select palavras_chave.descricao as 'Palavra-chave', count(palavras_chave.descricao) as 'Quantidade' from palavras_chave
+inner join postagens_palavras_chave on postagens_palavras_chave.palavra_chave = palavras_chave.id
+inner join postagens ON postagens_palavras_chave.postagem = postagens.id 
+group by palavras_chave.descricao 
+order by palavras_chave.descricao desc;
