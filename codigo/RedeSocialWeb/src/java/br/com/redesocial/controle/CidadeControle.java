@@ -144,7 +144,7 @@ public class CidadeControle extends HttpServlet {
             request.setAttribute("erro", ex.getMessage());
         }
 
-        RequestDispatcher rd = request.getRequestDispatcher("paginas/estados/cadastro_estados.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("paginas/cidades/cadastro_cidades.jsp");
         rd.forward(request, response);
     }
 
