@@ -84,6 +84,18 @@ ORDER BY est.nome;
 create view palavra_chave_postagem as
 select palavras_chave.descricao as 'Palavra-chave', count(palavras_chave.descricao) as 'Quantidade' from palavras_chave
 inner join postagens_palavras_chave on postagens_palavras_chave.palavra_chave = palavras_chave.id
-inner join postagens ON postagens_palavras_chave.postagem = postagens.id 
+inner join postagens on postagens_palavras_chave.postagem = postagens.id 
+group by palavras_chave.descricao 
+order by palavras_chave.descricao desc;
+
+/**
+ * View para mostrar a quantidade de vezes que uma palavra-chave foi usada nos aportes
+ * @author Thalia Santos de Santana
+ */
+create view palavra_chave_aporte as
+select palavras_chave.descricao as 'Palavra-chave', count(palavras_chave.descricao) as 'Quantidade' from palavras_chave
+inner join postagens_palavras_chave on postagens_palavras_chave.palavra_chave = palavras_chave.id
+inner join postagens on postagens_palavras_chave.postagem = postagens.id 
+inner join aportes on postagens_palavras_chave.postagem = aportes.postagem
 group by palavras_chave.descricao 
 order by palavras_chave.descricao desc;
