@@ -33,10 +33,28 @@ public class CategoriaDAO extends DAOCRUDBase<Categoria> {
 
         c.setId(getId(pstmt));
     }
-
+    
+    /**
+     * Método que altera uma categoria já cadastrada no banco de dados
+     * @author Lara Caroline
+     * @param c novos dados da categoria, com o ID da categoria, a ser alterada, preenchido
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Override
-    public void alterar(Categoria dto) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void alterar(Categoria c) throws Exception {
+        Connection conexao = getConexao();
+        
+        if (c.getDescricao().trim().equals("")){
+            throw new Exception("A descrição não pode estar vazia!");
+        }
+        
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("update categorias set descricao = ? where id = ?");
+
+        pstmt.setString(1, c.getDescricao());
+        pstmt.setInt(2, c.getId());
+        
+        pstmt.executeUpdate();
     }
 
     @Override
@@ -48,10 +66,23 @@ public class CategoriaDAO extends DAOCRUDBase<Categoria> {
     public List listar() throws Exception {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+    
+    /**
+     * Método responsável por excluir uma categoria do banco de dados
+     * @author Luciano de Carvalho Borba
+     * @param id da categoria a ser excluida
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Override
     public void excluir(int id) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+       Connection conexao = getConexao();
+       
+       PreparedStatement pstmt;
+       pstmt = conexao.prepareStatement ("delete from categorias where id = ?");
+       
+       pstmt.setInt(1, id);
+       pstmt.executeUpdate();
     }
 
 }

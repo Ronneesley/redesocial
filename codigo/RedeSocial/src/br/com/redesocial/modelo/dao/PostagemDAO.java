@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
  * @author IgorRodrigues
  */
 public class PostagemDAO extends DAOCRUDBase<Postagem> {

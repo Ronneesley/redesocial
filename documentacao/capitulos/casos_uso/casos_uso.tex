@@ -327,7 +327,7 @@
 %Interessados
 {
 \begin{itemize}
-	\item Usuário: Deseja sair da rede social.
+	\item Usuário: Deseja sair e apagar todas as caches e cookies da rede social.
 \end{itemize}
 }
 %Pré-Condições
@@ -337,7 +337,7 @@
 %Fluxo Básico
 {
 \begin{itemize}
-	\item Usuário: Deseja sair da rede social clicando no icone retangular proximo a foto como mostra a figura  \ref{figura:meus_posts}.
+	\item Clicando no botão  \textit{pop up} no canto superior direito da tela próximo a foto. Em seguida, basta escolher a opção “Sair”.  como mostra a Figura  \ref{figura:meus_posts}.
 \end{itemize}
 }
 %Fluxo Alternativo
@@ -389,11 +389,11 @@
 %Fluxo Básico
 {
 \begin{itemize}
-	\item Usuário: Acessa o seu perfil como mostra a Figura \ref{perfil}.
+	\item Usuário: Acessa o seu perfil como mostra a Figura \ref{figura:perfil}.
 	\item Sistema demonstra o seu perfil.
 	\item Usuário: Clicar no menu Sobre.
  	\item Sistema exibe os dados detalhados do perfil do usuário.
-	\item Usuário: Seleciona os campos que deseja alterar clicando nos ícones como mostra a Figura \ref{cadastro_usuario_parte3}.
+	\item Usuário: Seleciona os campos que deseja alterar clicando nos ícones como mostra a Figura \ref{figura:cadastro_usuario_parte3}.
 	\item Usuário: Preenche os campos.
 	\item Usuário: Confirma os campos ao clicar no botão "Confirmar".
 	\item Sistema armazena os dados inseridos, alterados ou excluidos do usuário.
@@ -409,6 +409,8 @@
 		\item Problemas com resposta do servidor ao alterar o campo especificado.
 		\item Exibir a mensagem de erro ao usuário.
 		\item Usuário não estar conectado a internet.
+		\item Perda das alterações realizadas, tendo, que refazer ao restabelecer a conexão com a internet, caso não tenha efetuado alguma alteração mantêm como estava.
+		\item Sistema informar ao usuário sobre o devido erro.
      	    \end{itemize}
 	\item Preenchimento dos campos    
 	    \begin{itemize}
@@ -423,10 +425,10 @@
 	     \end{itemize}
 	\item Alteração e Confirmação dos campos     
 		\item Usuário não confirmar a alteração.
-		\item Informa o usuário se deseja salvar as alterações realizadas.
+		\item Sistema informa o usuário se deseja salvar as alterações realizadas, se sim guarda os dados senão mantêm os dados.
 		\item Usuário encerrar a sessão sem salvar as alterações.
+		\item Sistema não guarda os dados alterados.
 		\item Usuário fechar o navegador.
-	.	\item Perda das alterações realizadas, tendo, que refazer ao restabelecer a conexão com a internet.
 \end{itemize}
 }
 %Frequência de Ocorrência

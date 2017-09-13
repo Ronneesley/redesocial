@@ -9,59 +9,27 @@ import java.util.Date;
  * @since 27/07/2017
  */
 public class Usuario {
-    /**
-     *  Atributo que identifica o usuário
-     */
-    private Integer id;
 
-    /**
-     *  Atributo que armazena o nome do usuário
-     */
+    private Integer id;
+    
     private String nome;
 
-    /**
-     *  Atributo que armazena o email do usuário
-     */
     private String email;
 
-    /**
-     *  Atributo que armazena o telefone do usuário
-     */
     private String telefone;
 
-    /**
-     *  Atributo que armazena a senha do usuário
-     */
     private String senha;
 
-    /**
-     *  Atributo que armazena a data de nascimento do usuário
-     */
     private Date dataNascimento;
 
-    /**
-     *  Atributo que armazena o sexo do usuário
-     */
     private Sexo sexo;
 
-    /**
-     *  Atributo que armazena a data de cadastro do usuário
-     */
     private Date dataCadastro;
 
-    /**
-     *  Atributo que armazena o status da conta do usuário
-     */
     private Boolean status;
 
-    /**
-     *  Atributo que armazena a foto do usuário
-     */
     private Multimidia foto;
 
-    /**
-     *  Atributo que armazena a cidade do usuário
-     */
     private Cidade cidade;
     
     /**

@@ -4,6 +4,7 @@ import br.com.redesocial.modelo.dto.Artigo;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,9 +13,35 @@ import java.util.List;
  * @author Gusttavo Nunes, Gleyson Israel
  */
 public class ArtigoDAO extends DAOCRUDBase<Artigo>  {
+    /**
+     * Método para inserir um artigo no banco de dados
+     * @param dto identificador de artigo
+     * @author Davi de Faria
+     * @throws Exception Possíveis exceções que podem acontecer
+     */
     @Override
-    public void inserir(Artigo a) throws Exception {
+    public void inserir(Artigo dto) throws Exception {
+        Connection conexao = getConexao();
         
+        if (dto.getArtigo().equals("")){
+            throw new Exception("O arquivo do artigo não pode estar vazio!");
+        }
+        
+        PreparedStatement pstmt = conexao.prepareStatement("insert into artigos (idioma, revista, issn, autor, data, area_conhecimento, titulo, resumo, url, artigo) values (?,?,?,?,?,?,?,?,?,?)", Statement.RETURN_GENERATED_KEYS);
+        
+        pstmt.setString(1, dto.getIdioma());
+        pstmt.setString(2, dto.getRevista());
+        pstmt.setString(3, dto.getISSN());
+        pstmt.setString(4, dto.getAutor());
+        pstmt.setDate(5, new java.sql.Date(dto.getData().getTime()));
+        pstmt.setString(6, dto.getAreaConhecimento());
+        pstmt.setString(7, dto.getTitulo());
+        pstmt.setString(8, dto.getURL());
+        pstmt.setBytes(9, dto.getArtigo());
+        
+        pstmt.executeUpdate();
+        
+        dto.setId(getId(pstmt));
     }
     
     /**
@@ -101,7 +128,7 @@ public class ArtigoDAO extends DAOCRUDBase<Artigo>  {
             a.setISSN(rs.getString("issn"));
             a.setAutor(rs.getString("autor"));
             a.setData(rs.getDate("data"));
-            a.setAreaConhecimento(rs.getString("area_Conhecimento"));
+            a.setAreaConhecimento(rs.getString("area_conhecimento"));
             a.setTitulo(rs.getString("titulo"));
             a.setResumo(rs.getString("resumo"));
             a.setURL(rs.getString("url"));

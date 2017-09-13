@@ -1,7 +1,6 @@
 package br.com.redesocial.modelo.dao;
 
 import br.com.redesocial.modelo.dto.Estado;
-import br.com.redesocial.modelo.dto.Pais;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
