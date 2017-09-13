@@ -149,8 +149,8 @@ public class ArtigoDAO extends DAOCRUDBase<Artigo>  {
         Connection conexao = getConexao();
         
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("update Artigo set  idioma = ?, revista = ?, ISSN = ?, autor = ?, data = ?, "
-                + "areaConhecimento = ?, titulo = ?, resumo = ?, URL = ?, artigo = ? where id = ?");
+        pstmt = conexao.prepareStatement("update artigos set  idioma = ?, revista = ?, issn = ?, autor = ?, data = ?, "
+                + "area_conhecimento = ?, titulo = ?, resumo = ?, url = ?, artigo = ? where id = ?");
         
         pstmt.setString(1, a.getIdioma());
         pstmt.setString(2, a.getRevista());
