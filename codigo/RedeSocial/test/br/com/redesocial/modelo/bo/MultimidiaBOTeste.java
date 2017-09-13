@@ -100,12 +100,56 @@ public class MultimidiaBOTeste {
     
     @Test
     public void testMetodoListar() throws Exception {
-        MultimidiaBO bo = new MultimidiaBO();
-
-        try{
+       Pais pais = new Pais();
+       pais.setNome("Dinamarca");
+       
+       MultimidiaBO bo = new MultimidiaBO();
+        
+        try {
             List existentes = bo.listar();
             int qtdeExistentes = existentes.size();
+            
+            PaisBO paisBO = new PaisBO();
+            paisBO.inserir(pais);
 
+            Estado estado = new Estado();
+            estado.setNome("Para");
+            estado.setPais(pais);
+            
+            EstadoBO estadoBO = new EstadoBO();
+            estadoBO.inserir(estado);
+            
+            Cidade cidade = new Cidade();
+            cidade.setNome("Crixas");
+            cidade.setEstado(estado);
+            
+            CidadeBO cidadeBO = new CidadeBO();
+            cidadeBO.inserir(cidade);
+            
+            Usuario usuario = new Usuario();
+            usuario.setNome("Zezim");
+            usuario.setDataCadastro(new Date());
+            usuario.setEmail("Ze@gmail.com");
+            Calendar calendario = Calendar.getInstance();
+            calendario.set(1988, 2, 7, 0, 0, 0);            
+            usuario.setDataNascimento(calendario.getTime());
+            usuario.setSenha("7070");
+            usuario.setSexo(Sexo.MASCULINO);
+            usuario.setStatus(true);
+            usuario.setTelefone("(62) 6060-7070");
+            usuario.setCidade(cidade);
+            
+            UsuarioBO usuarioBO = new UsuarioBO();
+            usuarioBO.inserir(usuario);
+            
+            Album album = new Album();
+            album.setNome("Album1");
+            album.setData(calendario.getTime());
+            album.setUsuario(usuario);
+            
+            AlbumBO albumbo = new AlbumBO();
+            albumbo.inserir(album);
+            
             final int qtde = 10;
             for (int i = 0; i < 10; i++){
                 Multimidia multimidia = new Multimidia();
@@ -115,7 +159,7 @@ public class MultimidiaBOTeste {
                 try {
                     bo.inserir(multimidia);
                 } catch (Exception ex) {
-                    fail("Falha ao inserir uma multimidia: " + ex.getMessage());
+                    fail("Falha ao listar uma multimidia: " + ex.getMessage());
                    }
             }
 

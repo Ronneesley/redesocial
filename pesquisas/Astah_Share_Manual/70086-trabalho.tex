@@ -1,0 +1,119 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[brazil]{babel}
+\usepackage{indentfirst}
+\usepackage{url}
+\usepackage{listings}
+\RequirePackage{graphicx}
+\title{Astah Share}
+\author{Salmi Nunes de Paula Junior \and Thalia Santos Santana}
+\usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
+
+\begin{document}
+\begin{titlepage}
+
+
+\begin{center}
+\begin{figure}[htb]
+		
+		\label{figura:LogoIF}
+	
+		\centering
+		\includegraphics[width=6cm]{logo.png} 
+\end{figure}
+
+
+Instituto Federal Goiano - Campus Ceres\\
+Bacharelado em Sistemas de Informação\\
+Prof. Me. Ronneesley Moura Teles\\\vspace{0.2cm}
+Salmi Nunes de Paula Junior \\
+Thalia Santos de Santana\\\vspace{7.0cm}
+
+\textit{\textbf{\Large{Astah Share}}}\\\vspace{0.5cm}
+\textit{\Large{Manual de Utilização}}\\\vspace{9.5cm}
+
+Setembro\\
+2017\\
+\end{center}
+\end{titlepage}
+
+
+
+\tableofcontents
+
+\newpage
+\begin{center}
+\textbf{\Large{ASTAH SHARE}}\\\vspace{0.5cm}
+\end{center}
+\section{O que é?}%GGN
+
+A edição Astah Share possibilita que membros da mesma e/ou diferentes equipes interajam em tempo real. Qualquer pessoa poderá vir a visualizar os mais diversos diagramas em seu próprio navegador web. Em busca de facilidade; clientes, revisores e equipe comunicam-se, sem a necessidade de instalação do Astah. Também é possível realizar comentários acerca do trabalho produzido. Trata-se de um ferramenta gratuita, que oferece \textit{download} após registro no próprio site (http://astah.net/editions/share).
+
+A primeira versão (2.1), foi lançada em 5 de março de 2010 e hoje, têm-se a versão 2.8, de 13 de fevereiro de 2014. Em seu portal, são informadas novas funções como: suporte para a Versão 6.8 do Astah \textit{Professional}, Astah \textit{Community} e Astah UML. Além disso, também é informado os \textit{bugs} existentes: imagem em miniatura de um CRUD não aparece se sua largura ou altura exceda 2880px. Apesar de estar na 2.8, só houveram 7 versões (omissão do 2.7).
+
+Ademais, ao Astah Share, também é disponibilizado um manual para que usuários e organizações possam ambientar e aprender com a plataforma (http://astah.change-vision.com/en/files/help/share/current/index.html), seguindo de auxílio aos interessados.
+
+\section{Download e Instalação}%GGN
+\begin{itemize}
+
+\item Para \textit{download}, vá até a página oficial do Astah Share: http://astah.net/
+editions/share;
+\item Clique em “Free Download”;
+\item Insira seu nome completo e e-mail (é através dele que será obtida a licença de uso) e clique em “Submit”;
+\item Escolha o sistema operacional desejado clicando em um dos dois símbolos (Windows ou Linux);
+\item Clique em “Download” e aguarde;
+\item Enquanto isso já verifique se sua máquina possui algum servidor como o Apache ou similar instalado (necessário pois o Astah Share faz uso do Tomcat). Caso não, já providencie também o \textit{download};
+\item Após realizar o \textit{download} do Astah Share, no caso do Windows, realize a extração dos arquivos (é baixado um arquivo zip, por isso a extração);
+\item Visite seu e-mail informado anteriormente, para obter a licença (lembre-se sempre de verificar se a mensagem não se encontra na caixa de \textit{spam});
+\item Acesse o link disponibilizado pelo e-mail para obter sua chave de licença e clique em “Download”;
+\item Na pasta extraída (em nosso caso, astah-share-2$\_$8-windows), coloque o 
+arquivo de licença baixado (astah$\_$share$\_$license.xml) dentro da sub pasta “data”;
+\item A partir de agora, poderemos finalmente instalar o Astah Share;
+\item Ainda dentro da pasta “astah-share-2$\_$8-windows”, localize o arquivo "startup.bat" e clique duas vezes;
+\item Uma tela referente ao prompt de comando do Windows (nesse caso), abrirá e realizará as configurações de funcionamento, como ligação ao Tomcat e definição de portas;
+\item Quando o processo for concluído, geralmente uma mensagem semelhante a essa será exibida: Informações: Server Startup in 7230 ms. É importante que essa tela não seja fechada enquanto o Astah Share estiver em execução;
+\item Após ser iniciado com êxito, acesse: “http://Endereço do servidor: Número da porta/astahshare/" do seu navegador da Web;
+\item Caso seja um computador local, provavelmente seguirá o seguinte padrão: http://localhost:7080/astahshare/;
+\item Uma tela de login é exibida;
+\item Por padrão, o primeiro acesso é realizado com a seguinte usuário e senha do administrador: jsadmin@example.com / jsadmin;
+\item Pronto! Agora você criar seus projetos e incluir tudo aquilo que o Astah disponibiliza!
+
+\end{itemize}
+
+\section{Utilização do Astah Share}
+
+\begin{itemize}
+\item Existem cinco menus de funcionalidades na parte superior do Astah Share: \textit{Home; Upload; Admin; Help e Logout};
+\item Primeiramente, você pode fixar seu usuário como “usuário master” do aplicativo. Para isso clique na opção “Admin” no menu superior, e vá na opção “User Information”, lá você pode cadastrar seu e-mail e senha para o próximo acesso. Com isso você já se cadastra como o usuário administrador e dono do projeto, e no próximo acesso você já pode entrar com as informações do seu usuário e não mais como “jsadmin@example.com”;
+\item Depois de logado você pode gerenciar projetos e usuários. Para gerenciar projetos clique na opção “Admin” no menu superior, e vá na opção “Project Management”. Nessa opção você pode criar, editar e deletar projetos. Além disso, você ainda pode dar permissões específicas para os usuários vinculados a esse projeto, dizendo se ele é dono do projeto, membro, comentarista ou apenas visitante;
+\item Para gerenciar usuários, clique na opção “Admin” no menu superior, e vá na opção “User Management”. Este menu permite que você gerencie usuários do aplicativo, com as opções de cadastrar novos usuários, editar ou excluir;
+\item Também é possível importar usuários e senha com um arquivo de formato CSV, desde que contenha apenas caracteres suportados pelo Astah Share. Deve-se seguir o padrão de “user01, user01@example.com, password01”;
+\item No menu superior você também pode encontrar a opção “Upload”, onde você inclui no projeto arquivos construídos no Astah \textit{Community};
+\item Em “Admin”, em “Project Management”, você também pode criar pastas de projetos;
+\item Em cada projeto e seus arquivos, também se pode realizar comentários. Ao clicar em um ator de diagrama de casos de uso, por exemplo, há a possibilidade de comentar a interação e ainda personalizar esse item;
+\item Comentários são exibidos em “Comment List”, no menu inferior esquerdo. Existem três formas de exibição: Mostrar tudo, ocultar tudo e exibir comentários apenas de certo usuário;
+\item Também pode-se imprimir os diagramas e seus comentários;
+\item Reitera-se que mais propriedades do sistema podem ser exibidas e explicadas detalhadamente no manual oferecido pela ferramenta.
+
+\end{itemize}
+
+\section{Referências}
+\begin{enumerate}
+
+\item ASTAH. \textbf{Functionality.} Disponível em: $<$http://astah.net/tutorial/share/
+functionality$>$. Acesso em: 30 de agosto de 2017.
+
+\item ASTAH. \textbf{Astah Share Manual.} Disponível em: $<$http://astah.change-vision.com/en/files/help/share/current/index.html$>$. Acesso em: 30 de agosto de 2017.
+
+\item ASTAH. \textbf{Astah Share Release Notes.} Disponível em: $<$http://astah.
+net/release-notes/share$>$. Acesso em: 01 de setembro de 2017.
+
+\item ASTAH BLOG. \textbf{Astah Share 2.8 Released – Upload \& View diagrams on the web browser.}  Disponível em: $<$https://astahblog.com/
+2014/02/21/astah-share-2-8/$>$. Acesso em: 31 de agosto de 2017.
+
+\end{enumerate}
+
+\end{document}

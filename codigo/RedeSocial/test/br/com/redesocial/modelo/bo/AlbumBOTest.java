@@ -24,13 +24,11 @@ public class AlbumBOTest {
     /**
      * Método de teste responsável pela inserção de um album no banco de dados
      * @author Gusttavo Nunes Gomes
-     */
-    
+     */    
     @Test
     public void testMetodoInserir() {
-        /**
-         * Para inserir um album é necessário inserir um usuário, país, estado e cidade no banco de dados
-         */  
+        //Para inserir um album é necessário inserir um usuário, país, estado e cidade no banco de dados
+          
         Pais pais = new Pais();
         pais.setNome("EUA");        
         
@@ -70,9 +68,7 @@ public class AlbumBOTest {
             UsuarioBO usuarioBO = new UsuarioBO();
             usuarioBO.inserir(usuario);
             
-            /**
-             * Usuário, país, estado e cidade foram inseridos no banco de dados
-             */  
+            //Usuário, país, estado e cidade foram inseridos no banco de dados        
             
             AlbumBO bo = new AlbumBO();             		
             Album album = new Album();
@@ -80,14 +76,10 @@ public class AlbumBOTest {
             calendario.set(2016, 8, 29, 0, 0, 0);
             album.setData(calendario.getTime()); 
             album.setUsuario(usuario);
-            /**
-             * Os dados do album foram definidos para inserir no banco de dados
-             */  
+            //Os dados do album foram definidos para inserir no banco de dados  
             bo.inserir(album);
         } catch (Exception ex) {
-            /**
-             * Mensagem de erro caso não insira o album no banco de dados
-             */ 
+            //Mensagem de erro caso não insira o album no banco de dados
             fail("Falha ao inserir um album: " + ex.getMessage());
         }		
     } 
@@ -191,9 +183,8 @@ public class AlbumBOTest {
      */
     @Test
     public void testMetodoSelecionar() {
-        /*
-         * Criação e inserção de Pais, Estado, Cidade, Usuario e Album no banco de dados
-         */
+       
+        //Criação e inserção de Pais, Estado, Cidade, Usuario e Album no banco de dados   
         Pais pais = new Pais();
         pais.setNome("Brasil");
         
@@ -244,9 +235,6 @@ public class AlbumBOTest {
             
             int idalbum = album.getId();
             
-            /*
-             *Seleção no banco de dados 
-             */
             albumbo.selecionar(idalbum);
             
         } catch (Exception ex) {
@@ -255,28 +243,39 @@ public class AlbumBOTest {
 
     }
 
+    /**
+     * Método de teste responsável por excluir um album no banco de dados
+     * @author Ianka Talita Bastos de Assis
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Test
     public void testMetodoExcluir () throws Exception {
 	AlbumBO albumBO = new AlbumBO();
 	
-        try{ // tenta inserir e em seguida seleciona
+        /* Criação e inserção de dados de: país, estado, cidade, usuário e álbum.
+           Tenta inserir e em seguida exclui.*/
+        try{ 
+            //País
             PaisBO paisBO = new PaisBO();
             Pais pais = new Pais();
             pais.setNome("Brasil");
             paisBO.inserir(pais);
 	
+            //Estado
             EstadoBO estadoBO = new EstadoBO();
             Estado estado = new Estado();
             estado.setNome("Goiás");
             estado.setPais(pais);
             estadoBO.inserir(estado);
 	
+            //Cidade
             CidadeBO cidadeBO =  new CidadeBO();
             Cidade cidade = new Cidade();
             cidade.setNome("Bragolândia");
             cidade.setEstado(estado);
             cidadeBO.inserir(cidade);
 	
+            //Usuário
             UsuarioBO usuarioBO = new UsuarioBO();
         
             Usuario usuario = new Usuario();
@@ -298,22 +297,35 @@ public class AlbumBOTest {
 	
             calendario.set(2016, 8, 28, 0, 0, 0);
         
+            //Álbum
             Album album = new Album ();
             album.setNome("Desisto, Ronne!");
             album.setData(calendario.getTime());
             album.setUsuario(usuario);
             albumBO.inserir(album);
 	
+            //Verifica se o álbum está cadastrado no banco de dados;            
             int id = album.getId();
+            
+            // Seleciona um álbum inserido atráves do id;
             Album albumSelecionado = albumBO.selecionar(id);
+            
+            // Se o álbum não exitir, exibirá uma mensagem de erro.
             assertNotNull("Album não encontrado", albumSelecionado);
 	
+            //Exclui o álbum selecionado através do id. 
             albumBO.excluir(id);
+            
+            // Seleciona o álbum excluido para confirmação de exclusão. 
             Album albumSelecionadoPosExclusao = albumBO.selecionar(id);
 	
+            /*Caso o álbum possa ser encontrado no banco de dados mesmo após a exclusão,
+            será exibida uma mensagem de erro ao excluir.*/
             assertNull("Album não encontrado", albumSelecionadoPosExclusao);
 	} catch (Exception ex){
-	fail("Falha ao inserir um album: " + ex.getMessage());
+	
+        //Caso haja algum erro ao inserir um álbum no banco de dados    
+        fail("Falha ao inserir um album: " + ex.getMessage());
         }
     }
 }

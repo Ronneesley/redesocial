@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.redesocial.modelo.dao;
 
 import br.com.redesocial.modelo.dto.Postagem;
@@ -14,7 +9,7 @@ import java.util.List;
 
 /**
  *
- * @author Wesley Morais
+ * @author Wesley Morais, Paulo Henrique Araujo e Gusttavo Nunes Gomes
  */
 public class PostagemAlbumDAO extends DAOBase {
     
@@ -79,7 +74,4 @@ public class PostagemAlbumDAO extends DAOBase {
             return null;
         } 
     }
-
-
-
 }
