@@ -110,5 +110,5 @@ order by palavras_chave.descricao desc;
         COUNT(*) AS `Quantidade de comentários`
     FROM
         (`postagens` `p`
-        LEFT JOIN `comentarios` `c` ON ((`p`.`id` = `c`.`postagem`)))
+        INNER JOIN `comentarios` `c` ON ((`p`.`id` = `c`.`postagem`)))
     GROUP BY `p`.`id`);
