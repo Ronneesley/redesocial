@@ -1,3 +1,9 @@
+/* Inserção de um país */
+insert into paises(nome) VALues ("Brasil");
+/* Inserção de um estado */
+insert into estados(nome, pais) VALues ("Goiás",1);
+/* Inserção de uma cidade */
+insert into cidades(nome, estado) VALues ("Itapuranga",1);
 /* Inserção de 1 usuário */ 
 INSERT INTO `usuarios` (nome, email, senha, data_nascimento, sexo, data_cadastro, status, cidade) VALUES ('Daniel','qualquer','batata','1999-01-06','M','2017-09-05 15:38:37',1,1);
 /* Inserção de 3 Postagens */
