@@ -9,13 +9,15 @@ import br.com.redesocial.modelo.dto.PalavraChave;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
+import java.util.List;
 
 /**
  *
  * @author Salmi Nunes
  */
-public class PalavraChaveDAO {
+public class PalavraChaveDAO extends DAOCRUDBase<PalavraChave> {
     
+    @Override
     public void inserir(PalavraChave p) throws Exception {
         
         Connection conexao = getConexao();
@@ -27,6 +29,26 @@ public class PalavraChaveDAO {
         pstmt.executeUpdate();
 
         p.setId(getId(pstmt));
+    }
+
+    @Override
+    public void alterar(PalavraChave dto) throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public PalavraChave selecionar(int id) throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List listar() throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void excluir(int id) throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
