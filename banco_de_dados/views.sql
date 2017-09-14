@@ -74,7 +74,7 @@ FROM usuarios us
 INNER JOIN cidades cid ON us.cidade = cid.id
 INNER JOIN estados est ON cid.estado = est.id
 INNER JOIN paises pai ON est.pais = pai.id
-GROUP BY est.nome, pai.nome
+GROUP BY est.nome
 ORDER BY est.nome;
 
 /**
@@ -110,5 +110,17 @@ order by palavras_chave.descricao desc;
         COUNT(*) AS `Quantidade de comentários`
     FROM
         (`postagens` `p`
-        INNER JOIN `comentarios` `c` ON ((`p`.`id` = `c`.`postagem`)))
+        LEFT JOIN `comentarios` `c` ON ((`p`.`id` = `c`.`postagem`)))
     GROUP BY `p`.`id`);
+    
+/**
+ * View para mostrar a quantidade de comentários em uma postagem
+ * @author Gleyson-Alves
+ */
+CREATE VIEW multidias_por_album_de_usuario AS
+SELECT usuarios.nome as usuario, albuns.nome as album, COUNT(multimidias.id) AS qtde_multimidias
+FROM multimidias
+INNER JOIN albuns ON multimidias.album = albuns.id
+INNER JOIN usuarios ON albuns.usuario = usuarios.id
+GROUP BY usuarios.nome, albuns.nome
+ORDER BY usuarios.nome;
