@@ -74,7 +74,7 @@ FROM usuarios us
 INNER JOIN cidades cid ON us.cidade = cid.id
 INNER JOIN estados est ON cid.estado = est.id
 INNER JOIN paises pai ON est.pais = pai.id
-GROUP BY est.nome
+GROUP BY est.nome, pai.nome
 ORDER BY est.nome;
 
 /**
@@ -110,5 +110,5 @@ order by palavras_chave.descricao desc;
         COUNT(*) AS `Quantidade de comentários`
     FROM
         (`postagens` `p`
-        LEFT JOIN `comentarios` `c` ON ((`p`.`id` = `c`.`postagem`)))
+        INNER JOIN `comentarios` `c` ON ((`p`.`id` = `c`.`postagem`)))
     GROUP BY `p`.`id`);

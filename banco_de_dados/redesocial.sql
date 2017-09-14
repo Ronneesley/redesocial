@@ -176,9 +176,11 @@ CREATE TABLE IF NOT EXISTS `redesocial`.`comentarios` (
   `data` DATETIME NOT NULL,
   `postagem` INT NOT NULL,
   `resposta` INT NULL,
+  `usuario` INT NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_Comentarios_Postagens1_idx` (`postagem` ASC),
   INDEX `fk_Comentarios_Comentarios1_idx` (`resposta` ASC),
+  INDEX `fk_Comentarios_Usuarios1_idx` (`usuario` ASC),
   CONSTRAINT `fk_Comentarios_Postagens1`
     FOREIGN KEY (`postagem`)
     REFERENCES `redesocial`.`postagens` (`id`)
@@ -187,6 +189,11 @@ CREATE TABLE IF NOT EXISTS `redesocial`.`comentarios` (
   CONSTRAINT `fk_Comentarios_Comentarios1`
     FOREIGN KEY (`resposta`)
     REFERENCES `redesocial`.`comentarios` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Comentarios_Usuarios1`
+    FOREIGN KEY (`usuario`)
+    REFERENCES `redesocial`.`usuarios` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

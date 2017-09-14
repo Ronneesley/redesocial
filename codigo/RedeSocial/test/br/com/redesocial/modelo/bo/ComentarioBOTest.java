@@ -26,8 +26,95 @@ import br.com.redesocial.modelo.dto.Comentario;
  */
 public class ComentarioBOTest {
     
+   @Test
     public void testMetodoInserir(){
-        //INSIRA O testMetodoInserir AQUI
+        
+        ComentarioBO bo = new ComentarioBO();
+
+        try{
+            List existentes = bo.listar();
+            int qtdeExistentes = existentes.size();
+
+            Calendar calendario = Calendar.getInstance();
+            calendario.set(2017, 7, 18, 10, 55, 13);
+
+            Calendar calendarioPost = Calendar.getInstance();
+            calendarioPost.set(2017, 7, 18, 9, 30, 45);
+
+            Calendar calendarioNascimento = Calendar.getInstance();
+            calendarioNascimento.set(2017, 7, 18, 9, 30, 45);
+
+            Pais pais = new Pais();
+
+            pais.setNome("Brasil");
+
+            PaisBO paisBO = new PaisBO();
+            paisBO.inserir(pais);
+
+            Estado estado = new Estado();
+
+            estado.setNome("Paraná");
+            estado.setPais(pais);
+
+            EstadoBO estadoBO = new EstadoBO();
+            estadoBO.inserir(estado);
+
+            Cidade cidade = new Cidade();
+
+            cidade.setNome("Ceres");
+            cidade.setEstado(estado);
+
+            CidadeBO cidadeBO = new CidadeBO();
+            cidadeBO.inserir(cidade);
+
+            Usuario usuario = new Usuario();
+
+            usuario.setNome("Jeferson Rossini");
+            usuario.setDataCadastro(new Date());
+            usuario.setEmail("contatinho@contato.com");     
+            usuario.setDataNascimento(calendarioNascimento.getTime());
+            usuario.setSenha("202030");
+            usuario.setSexo(Sexo.MASCULINO);
+            usuario.setStatus(true);
+            usuario.setTelefone("(62) 8432-98632");
+            usuario.setCidade(cidade);
+
+            UsuarioBO usuarioBO = new UsuarioBO();
+            usuarioBO.inserir(usuario);
+
+            Postagem postagem = new Postagem();
+
+            postagem.setCurtidas(6);
+            postagem.setDescricao("Texto do Post");
+            postagem.setData(calendarioPost.getTime());
+            postagem.setUsuario(usuario);
+
+            //insere post
+            PostagemBO postagemBO = new PostagemBO();
+            postagemBO.inserir(postagem);
+
+            
+            //instancia comentario e insere
+            Comentario comentario = new Comentario();
+
+            comentario.setDescricao("Comentário escrito aqui!!!");
+            comentario.setCurtidas(2);
+            comentario.setData(calendario.getTime());
+            comentario.setPostagem(postagem);
+
+            try{
+                /**
+                 * Inserindo comentário no banco de dados
+                 */
+                bo.inserir(comentario);
+            } catch(Exception ex){
+                /**
+                 * Mensagem de erro caso falhe
+                 */
+                fail("Falha ao inserir um comentário: " + ex.getMessage());
+            }
+        }
+        
     }
     
     public void testMetodoAlterar(){
