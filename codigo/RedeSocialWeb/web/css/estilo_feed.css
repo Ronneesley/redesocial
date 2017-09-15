@@ -134,27 +134,29 @@ a:hover{
 }
 
 #central{
+	padding-top: 5px;
+	padding-bottom: 15px;
 	margin-left:15px;
 	margin-top: 5px;
 	width: 45%;
-	height: 1800px;
-	background-color:red;
+	height: auto;
+	background-color:#F0F8FF;
+	border-top: 1px solid black;
+	box-shadow: 0px 0px 1em #666;
 	float: left;
 }
 
 #post{
-	margin-top: 5px;
-        margin: 0 auto;
+    margin: 0 auto;
 	width: 90%;
-	height: 55px;
-	background-color: green;
-	border: 1px solid black;
+	height: auto;
+	background-color: #F0F8FF;
 }
 	
 .post_foto {
 	border-radius: 50%;
 	margin-top: 5px;
-        margin-left: 5px;
+    margin-left: 5px;
 	margin-bottom: 10px;
 	float: left;
 }
@@ -166,10 +168,72 @@ a:hover{
     margin-top: 5px;
 }
 
+#container-post{
+	padding: 15px;
+	width: 100%;
+	height: auto;
+	float: left;
+	text-align: justify;
+}
 
+#comentario{ 
+	margin-top: 5px;
+    float: left;              
+}
+			
+#comentario_info{
+	margin-left: 5px;
+	margin-top: 5px;
+    height: auto;
+    float: left;
+	font-family: verdana;
+	font-size: 12px;                
+}
+			
+#comentario_tempo{
+	margin-left: 3px;
+	margin-top: 7px;
+	width: 60%;
+    height: auto;
+    float: left;
+	font-family: verdana;
+	font-size: 10px;                
+}
 
+#caixa_comentario{
+	width: 90%;
+	background-color: #eee;
+	padding: 5px;
+	border: 1px solid #666;
+	border-radius: 3px;
+	margin-top: 5px;
+	float: left;
+}
 
+#reacao{
+	margin-top: 5px;
+	height: auto;
+	background-color: #eee;
+	border: 1px solid #666;
+	border-radius: 3px;
+}
 
+#direita{
+	padding: 5px;
+	margin-right:20px;
+	margin-top: 5px;
+	width: 21%;
+	height: auto;
+	background-color:#F0F8FF;
+	float: right;
+	border: 1px solid black;
+	box-shadow: 0px 0px 1em #666;
+}
+
+#bloco_direita{			
+	padding: 5px;
+	margin-left: 15px;
+}
 
 
 

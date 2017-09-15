@@ -6,11 +6,12 @@
  
  CREATE VIEW `quantidade_de_usuarios_por_mes` AS
     (SELECT 
-        DATE_FORMAT(`usuarios`.`data_cadastro`, '%M/%Y') AS `Mês_Ano`,
+        DATE_FORMAT(`usuarios`.`data_cadastro`, '%M') AS `Mês`,
+        DATE_FORMAT(`usuarios`.`data_cadastro`, '%y') AS `Ano`,
         COUNT(*) AS `Quantidade de novos usuários`
     FROM
         `usuarios`
-    GROUP BY `Mês_Ano`
+    GROUP BY DATE_FORMAT(`usuarios`.`data_cadastro`, '%M-%Y')
     ORDER BY `usuarios`.`data_cadastro`);
 	
 /**
@@ -23,9 +24,9 @@
 		COUNT(*) AS `Qtde. Comentários`
 		
 	FROM 
-		((usuarios 
-		INNER JOIN `postagens` ON `usuarios`.`id` = `postagens`.`usuario`)
-		INNER JOIN `comentarios` ON `comentarios`.`postagem` = `postagens`.`id`)
+		`usuarios` 
+		INNER JOIN `comentarios` ON `comentarios`.`usuario` = `usuarios`.`id`
+		
 	GROUP BY `usuarios`.`id`
 	ORDER BY `Qtde. Comentários`);
     
@@ -35,20 +36,20 @@
  */
  CREATE VIEW aportes_mais_upados AS
 	(SELECT
-		`postagens`.`curtidas` AS `Quantidade de UPs`,
-        `aportes`.`titulo` AS `Titulo do aporte`
+		`postagens`.`curtidas` AS quantidade_ups,
+        `aportes`.`titulo`
 	FROM 
 		(postagens
         INNER JOIN `aportes` ON `postagens`.`id` = `aportes`.`postagem`)
-	GROUP BY `aportes`.`titulo`
     ORDER BY `postagens`.`curtidas` desc);
+    
     
 /**
  * View da quantidade de usuários por sexo
  * @author Andrey Silva Ribeiro
  */
  CREATE VIEW quantidade_usuario_sexo AS
- SELECT sexo, count(sexo) AS `Qtde. Usuarios por sexo`
+ SELECT sexo, count(sexo) AS qtde
  FROM usuarios
  GROUP BY sexo
  ORDER BY sexo desc;
@@ -61,15 +62,15 @@ CREATE VIEW aportes_mais_visualizados AS
 SELECT ap.id AS id_aporte, titulo AS titulo_do_aporte, post.visualizacoes AS quantidade_de_visualizacoes 
 FROM aportes ap
 INNER JOIN postagens post ON ap.postagem = post.id
-ORDER BY post.visualizacoes DESC
-LIMIT 1;
+ORDER BY post.visualizacoes DESC;
+
 
 /**
  * View para mostrar a quantidade de usuários por estado
  * @author Jônatas de Souza Rezende
  */
 CREATE VIEW usuarios_por_estado AS
-SELECT est.nome AS Estado, pai.nome AS Pais, COUNT(est.nome) AS Qtde
+SELECT est.nome AS estado, pai.nome AS pais, COUNT(est.nome) AS qtde
 FROM usuarios us
 INNER JOIN cidades cid ON us.cidade = cid.id
 INNER JOIN estados est ON cid.estado = est.id
@@ -110,5 +111,25 @@ order by palavras_chave.descricao desc;
         COUNT(*) AS `Quantidade de comentários`
     FROM
         (`postagens` `p`
-        INNER JOIN `comentarios` `c` ON ((`p`.`id` = `c`.`postagem`)))
+        LEFT JOIN `comentarios` `c` ON ((`p`.`id` = `c`.`postagem`)))
     GROUP BY `p`.`id`);
+    
+/**
+ * View para mostrar a quantidade de comentários em uma postagem
+ * @author Gleyson-Alves
+ */
+CREATE VIEW multidias_por_album_de_usuario AS
+SELECT usuarios.nome as usuario, albuns.nome as album, COUNT(multimidias.id) AS qtde_multimidias
+FROM multimidias
+INNER JOIN albuns ON multimidias.album = albuns.id
+INNER JOIN usuarios ON albuns.usuario = usuarios.id
+GROUP BY usuarios.nome, albuns.nome
+ORDER BY usuarios.nome;
+
+/**
+ * View para mostrar a quantidade de cidades por estado
+ * @author Adallberto Lucena Moura
+ */
+CREATE VIEW contador_de_cidades_por_estado AS
+SELECT COUNT (*) FROM estados e JOIN cidades c
+ON e.id = c.estado;
