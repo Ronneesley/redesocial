@@ -224,12 +224,16 @@ a:hover{
 	margin-top: 5px;
 	width: 21%;
 	height: auto;
-	background-color:green;
+	background-color:#F0F8FF;
 	float: right;
 	border: 1px solid black;
 	box-shadow: 0px 0px 1em #666;
 }
 
+#bloco_direita{			
+	padding: 5px;
+	margin-left: 15px;
+}
 
 
 
