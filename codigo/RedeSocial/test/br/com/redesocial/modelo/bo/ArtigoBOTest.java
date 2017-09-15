@@ -18,7 +18,7 @@ public class ArtigoBOTest {
 
         Artigo artigo1 = new Artigo();
         artigo1.setIdioma("Portugues");       
-        artigo1.setRevista("Playboy");
+        artigo1.setRevista("SBIS");
         artigo1.setISSN("33333333");
         artigo1.setAutor("Ciencias da terra"); 
         Calendar calendario = Calendar.getInstance();
