@@ -88,7 +88,8 @@ public class ComentarioBOTest {
             postagem.setDescricao("Texto do Post");
             postagem.setData(calendarioPost.getTime());
             postagem.setUsuario(usuario);
-
+            //inserir visualização em todos !!!!!!!
+            
             //insere post
             PostagemBO postagemBO = new PostagemBO();
             postagemBO.inserir(postagem);
@@ -113,9 +114,14 @@ public class ComentarioBOTest {
                  */
                 fail("Falha ao inserir um comentário: " + ex.getMessage());
             }
-        }
-        
+        } catch(Exception ex){
+                /**
+                 * Mensagem de erro caso falhe
+                 */
+                fail("Falha ao inserir um comentário: " + ex.getMessage());
+            }
     }
+    
     
     public void testMetodoAlterar(){
         //INSIRA O testMetodoAlterar AQUI
