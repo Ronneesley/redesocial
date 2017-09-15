@@ -36,8 +36,9 @@ public class ArtigoDAO extends DAOCRUDBase<Artigo>  {
         pstmt.setDate(5, new java.sql.Date(dto.getData().getTime()));
         pstmt.setString(6, dto.getAreaConhecimento());
         pstmt.setString(7, dto.getTitulo());
-        pstmt.setString(8, dto.getURL());
-        pstmt.setBytes(9, dto.getArtigo());
+        pstmt.setString(8, dto.getResumo());
+        pstmt.setString(9, dto.getURL());
+        pstmt.setBytes(10, dto.getArtigo());
         
         pstmt.executeUpdate();
         
@@ -149,8 +150,7 @@ public class ArtigoDAO extends DAOCRUDBase<Artigo>  {
         Connection conexao = getConexao();
         
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("update artigos set  idioma = ?, revista = ?, issn = ?, autor = ?, data = ?, "
-                + "area_conhecimento = ?, titulo = ?, resumo = ?, url = ?, artigo = ? where id = ?");
+        pstmt = conexao.prepareStatement("update artigos set  idioma = ?, revista = ?, issn = ?, autor = ?, data = ?, area_conhecimento = ?, titulo = ?, resumo = ?, url = ?, artigo = ? where id = ?");
         
         pstmt.setString(1, a.getIdioma());
         pstmt.setString(2, a.getRevista());
@@ -162,6 +162,7 @@ public class ArtigoDAO extends DAOCRUDBase<Artigo>  {
         pstmt.setString(8, a.getResumo());
         pstmt.setString(9, a.getURL());
         pstmt.setBytes(10, a.getArtigo());
+        pstmt.setInt(11, a.getId());
         
         //executa uma atualização/alteração
         pstmt.executeUpdate();
