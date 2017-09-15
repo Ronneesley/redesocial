@@ -5,7 +5,7 @@ import java.util.Date;
 
 /**
  * DTO para representação da entidade usuário
- * @author Ronneesley Moura Teles, Igor Justino Rodrigues
+ * @author Ronneesley Moura Teles, Igor Justino Rodrigues, Wesley M Felix
  * @since 27/07/2017
  */
 public class Usuario {
