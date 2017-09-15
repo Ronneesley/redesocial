@@ -164,6 +164,10 @@ public class PostagemBOTest {
 
     }
     
+    /**
+ *@author Wesley Morais Félix
+ *Criação e Listagem de Pais, Estado, Cidade, Usuario e Postagem no banco de dados
+ */ 
    @Test
     public void testMetodoListar() {
        PostagemBO bo = new PostagemBO();

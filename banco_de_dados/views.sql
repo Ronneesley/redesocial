@@ -125,3 +125,11 @@ INNER JOIN albuns ON multimidias.album = albuns.id
 INNER JOIN usuarios ON albuns.usuario = usuarios.id
 GROUP BY usuarios.nome, albuns.nome
 ORDER BY usuarios.nome;
+
+/**
+ * View para mostrar a quantidade de cidades por estado
+ * @author Adallberto Lucena Moura
+ */
+CREATE VIEW contador_de_cidades_por_estado AS
+SELECT COUNT (*) FROM estados e JOIN cidades c
+ON e.id = c.estado;

@@ -57,6 +57,10 @@ public class CidadeDAO extends DAOCRUDBase<Cidade> {
         pstmt.executeUpdate();
     }
 
+    /**
+    *@author Warley Rodrigues
+    *Criação e inserção de Pais, Estado, Cidade, Usuario e Postagem no banco de dados
+    */ 
     @Override
     public Cidade selecionar(int id) throws Exception {
         Connection conexao = getConexao();
