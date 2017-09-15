@@ -1,6 +1,8 @@
 package br.com.redesocial.modelo.bo;
 
 import br.com.redesocial.modelo.dto.Artigo;
+import br.com.redesocial.modelo.utilitarios.Utilitarios;
+import java.io.File;
 import java.util.List;
 import org.junit.Test;
 import java.util.Calendar;
@@ -12,7 +14,7 @@ import static org.junit.Assert.*;
  * @since 15/09/2017
  */
 public class ArtigoBOTest {
-    @Test
+    //@Test
     public void testMetodoInserir() {
         ArtigoBO bo = new ArtigoBO();
 
@@ -36,5 +38,49 @@ public class ArtigoBOTest {
             fail("Falha ao inserir um país: " + ex.getMessage());
         }
 
+    }
+    
+    @Test
+    public void testMetodoAlterar() throws Exception {
+        ArtigoBO bo = new ArtigoBO();
+        
+        Artigo artigo = new Artigo();
+        
+        artigo.setIdioma("Ingles");       
+        artigo.setRevista("RC");
+        artigo.setISSN("1234");
+        artigo.setAutor("João"); 
+        Calendar calendario = Calendar.getInstance();
+        calendario.set(1988, 2, 7, 0, 0, 0);            
+        artigo.setData(calendario.getTime());
+        artigo.setAreaConhecimento("Ciencias da Terra");
+        artigo.setTitulo("Qualquer Coisa");
+        artigo.setResumo("Lorem ipsum é um texto utilizado para preencher o espaço de texto em publicações (jornais, revistas, e websites), com a finalidade de verificar o lay-out, tipografia e formatação antes de utilizar conteúdo real. Muitas vezes este texto também é utilizado em catálogos de tipografia para demonstrar textos e títulos escritos com as fontes.");
+        artigo.setURL("www.artigo.com.br");
+        artigo.setArtigo(Utilitarios.lerArquivo(new File("../../arquivos_teste/nome_arquivo.txt")));
+        
+        try {
+            bo.inserir(artigo);
+        } catch (Exception ex) {
+            fail("Falha ao inserir um artigo: " + ex.getMessage());
+        }
+
+        //Mudança dos dados
+        artigo.setIdioma("Portugues");       
+        artigo.setRevista("RC");
+        artigo.setISSN("1234");
+        artigo.setAutor("João");           
+        artigo.setData(calendario.getTime());
+        artigo.setAreaConhecimento("Ciencias da Terra");
+        artigo.setTitulo("Qualquer Coisa");
+        artigo.setResumo("Lorem ipsum é um texto utilizado para preencher o espaço de texto em publicações (jornais, revistas, e websites), com a finalidade de verificar o lay-out, tipografia e formatação antes de utilizar conteúdo real. Muitas vezes este texto também é utilizado em catálogos de tipografia para demonstrar textos e títulos escritos com as fontes.");
+        artigo.setURL("www.artigo.com.br");
+        artigo.setArtigo(Utilitarios.lerArquivo(new File("../../arquivos_teste/nome_arquivo.txt")));
+        
+        try {
+            bo.alterar(artigo);
+        } catch (Exception ex) {
+            fail("Falha ao inserir um artigo: " + ex.getMessage());
+        }
     }
 }
