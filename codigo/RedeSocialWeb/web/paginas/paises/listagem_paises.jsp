@@ -83,21 +83,27 @@
                 width: 150px;
             }
             
-            .tdpaisnome{
-                width: 200px;
-                font-family: arial;               
-            }
-            
-            .tdbotoes{
-                text-align: center;
+            table{
+                width: 70%;
             }
             
             #mensagem{
                 margin: auto;
                 font-family: arial;
                 font-weight: bolder;
-                padding: 6px;
+                width: 200px;
                 background-color: #00FF00;
+                text-align: center;
+                color: #fff;
+                border-radius: 5px;
+            }
+            
+            #erro{
+                margin: auto;
+                font-family: arial;
+                font-weight: bolder;
+                background-color: #FF0000;
+                width: 93%;
                 text-align: center;
                 color: #fff;
                 border-radius: 5px;
@@ -112,20 +118,22 @@
             <div id="mensagem">
                 ${mensagem}
             </div>
-
-            ${erro}
+            <div id="erro">
+                ${erro}
+            </div>
+            <br/>            
 
             <c:if test="${lista != null}">
                 <table border="1">
                     <tr>
-                        <th>Nome</th>
-                        <th>Op&ccedil;&otilde;es</th>
+                        <th style="width: 60%;">Nome</th>
+                        <th style="width: 50%;">Op&ccedil;&otilde;es</th>
                     </tr>
 
                     <c:forEach items="${lista}" var="pais">
                         <tr>
-                            <td class="tdpaisnome">${pais.nome}</td>
-                            <td class="tdbotoes">
+                            <td style="font-family: arial;">${pais.nome}</td>
+                            <td style="text-align: center; font-family: arial;">
                                 <a class="botao editar" href="./PaisControle?operacao=Editar&amp;id=${pais.id}">Editar</a>
                                 <a class="botao excluir" href="./PaisControle?operacao=Excluir&amp;id=${pais.id}">Excluir</a>
                             </td>
