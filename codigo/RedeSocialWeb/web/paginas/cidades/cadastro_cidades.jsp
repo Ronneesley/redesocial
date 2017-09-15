@@ -71,6 +71,8 @@
     <body>
         ${mensagem}
         
+        ${erro}
+        
         <div id="fundo">
             <h1>Cadastrar cidade</h1>
             <hr/>
