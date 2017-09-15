@@ -6,11 +6,12 @@
  
  CREATE VIEW `quantidade_de_usuarios_por_mes` AS
     (SELECT 
-        DATE_FORMAT(`usuarios`.`data_cadastro`, '%M/%Y') AS `Mês_Ano`,
+        DATE_FORMAT(`usuarios`.`data_cadastro`, '%M') AS `Mês`,
+        DATE_FORMAT(`usuarios`.`data_cadastro`, '%y') AS `Ano`,
         COUNT(*) AS `Quantidade de novos usuários`
     FROM
         `usuarios`
-    GROUP BY `Mês_Ano`
+    GROUP BY DATE_FORMAT(`usuarios`.`data_cadastro`, '%M-%Y')
     ORDER BY `usuarios`.`data_cadastro`);
 	
 /**
