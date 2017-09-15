@@ -9,6 +9,7 @@ import br.com.redesocial.modelo.bo.CidadeBO;
 import br.com.redesocial.modelo.bo.EstadoBO;
 import br.com.redesocial.modelo.bo.PaisBO;
 import br.com.redesocial.modelo.dto.Cidade;
+import br.com.redesocial.modelo.dto.Estado;
 import java.io.IOException;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
@@ -57,7 +58,7 @@ public class CidadeControle extends HttpServlet {
                     break;
             }
         } catch (Exception ex){
-
+                ex.printStackTrace();
         }
     }
     
@@ -70,11 +71,17 @@ public class CidadeControle extends HttpServlet {
     private void cadastrar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, Exception {
         Cidade cidade = new Cidade();
 
-        if (request.getParameter("id") != null){
+        if (!"".equals(request.getParameter("id").trim())){
             cidade.setId(Integer.parseInt(request.getParameter("id")));
         }
 
         cidade.setNome(request.getParameter("cidade"));
+        
+        EstadoBO estadoBO = new EstadoBO();
+        Integer idEstado = Integer.parseInt(request.getParameter("estados"));
+        Estado estado = estadoBO.selecionar(idEstado);
+        
+        cidade.setEstado(estado);
 
         request.setAttribute("cidade", cidade);
 
@@ -131,7 +138,14 @@ public class CidadeControle extends HttpServlet {
     }
 
     private void alterar(Cidade cidade, HttpServletRequest request, HttpServletResponse response) {
-       //To change body of generated methods, choose Tools | Templates.
+       try {
+            CidadeBO cidadeBO = new CidadeBO();
+            cidadeBO.alterar(cidade);
+
+            request.setAttribute("mensagem", "Alteração realizada com sucesso");
+        } catch (Exception ex){
+            request.setAttribute("erro", ex.getMessage());
+        }
     }
 
     private void inserir(Cidade cidade, HttpServletRequest request, HttpServletResponse response) throws Exception{
@@ -148,19 +162,70 @@ public class CidadeControle extends HttpServlet {
         rd.forward(request, response);
     }
 
-    private void listar(HttpServletRequest request, HttpServletResponse response) {
+    private void listar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        try {
+            CidadeBO bo = new CidadeBO();
+            List cidades = bo.listar();
 
+            request.setAttribute("lista", cidades);
+        } catch (Exception ex){
+            request.setAttribute("erro", ex.getMessage());
+        }
+
+        RequestDispatcher rd = request.getRequestDispatcher("paginas/cidades/listagem_cidades.jsp");
+        rd.forward(request, response);
     }
 
-    private void excluir(HttpServletRequest request, HttpServletResponse response) {
+    private void excluir(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        try {
+            Integer id = Integer.parseInt(request.getParameter("id"));
 
+            CidadeBO bo = new CidadeBO();
+            bo.excluir(id);
+
+            request.setAttribute("mensagem", "Excluído com sucesso");
+        } catch (Exception ex){
+            request.setAttribute("erro", ex.getMessage());
+        }
+
+        this.listar(request, response);
     }
 
-    private void editar(HttpServletRequest request, HttpServletResponse response) {
+    private void editar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        try {
+            Integer id = Integer.parseInt(request.getParameter("id"));
 
+            CidadeBO cidadeBO = new CidadeBO();
+            Cidade cidade = cidadeBO.selecionar(id);
+
+            request.setAttribute("cidade", cidade);
+
+            request.setAttribute("mensagem", "Registro selecionado com sucesso");
+        } catch (Exception ex){
+            request.setAttribute("erro", ex.getMessage());
+        }
+
+        RequestDispatcher rd = request.getRequestDispatcher("paginas/cidades/cadastro_cidades.jsp");
+        rd.forward(request, response);
     }
 
-    private void criarNovo(HttpServletRequest request, HttpServletResponse response) {
+    private void criarNovo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        try {
+            Cidade cidade = new Cidade();
+            request.setAttribute("cidade", cidade);
+            
+            PaisBO pbo = new PaisBO();
+            List paises = pbo.listar();
+            request.setAttribute("paises", paises);
+            
+            EstadoBO bo = new EstadoBO();
+            List estados = bo.listar();
+            request.setAttribute("estados", estados);
+        } catch (Exception ex){
+            request.setAttribute("erro", ex.getMessage());
+        }
 
+        RequestDispatcher rd = request.getRequestDispatcher("paginas/cidades/cadastro_cidades.jsp");
+        rd.forward(request, response);
     }
 }
