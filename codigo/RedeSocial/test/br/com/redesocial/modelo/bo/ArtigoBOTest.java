@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 
 /**
  * Unidade de testes para o ArtigoBO
- * @author Andrey Silva Ribeiro
+ * @author Andrey Silva Ribeiro, Lucas Azevedo
  * @since 15/09/2017
 */
 public class ArtigoBOTest {
@@ -87,13 +87,15 @@ public class ArtigoBOTest {
     @Test
     public void testMetodoSelecionar() throws Exception{
         
-        ArtigoBO bo = new ArtigoBO();
+    ArtigoBO bo = new ArtigoBO();
 
-        try{
-            List existentes = bo.listar();
-            int qtdeExistentes = existentes.size();
+    try{
             
-            Artigo artigo2 = new Artigo();
+    List existentes = bo.listar();
+    int qtdeExistentes = existentes.size();
+            
+        Artigo artigo2 = new Artigo();
+        
         artigo2.setIdioma("Ingles");       
         artigo2.setRevista("SBIS");
         artigo2.setISSN("33333333");
@@ -109,24 +111,22 @@ public class ArtigoBOTest {
       
         
         try{
-                /**
-                 * Inserindo comentário no banco de dados
-                 */
-                bo.inserir(artigo2);
+            /**
+            * Inserindo comentário no banco de dados
+            */
+            bo.inserir(artigo2);
             }catch(Exception ex){
-                /**
-                 * Mensagem de erro caso falhe
-                 */
-                fail("Falha ao inserir um artigo: " + ex.getMessage());
+            /**
+            * Mensagem de erro caso falhe
+            */
+            fail("Falha ao inserir um artigo: " + ex.getMessage());
             }
 
-        }catch (Exception ex){
+            }catch (Exception ex){
             /**
-             * Erro caso a listagem falhe
-             */
+            * Erro caso a listagem falhe
+            */
             fail("Erro ao listar: " + ex.getMessage());
         }
-        
-
     }
 }
