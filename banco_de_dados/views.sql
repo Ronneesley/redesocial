@@ -130,6 +130,6 @@ ORDER BY usuarios.nome;
  * View para mostrar a quantidade de cidades por estado
  * @author Adallberto Lucena Moura
  */
-CREATE VIEW contador_de_cidades_por_estado AS
-SELECT COUNT (*) FROM estados e JOIN cidades c
-ON e.id = c.estado;
+CREATE VIEW contador_cidade AS
+SELECT e.nome as Estado, p.nome as Pais, COUNT(*) as Quantidade  FROM estados e JOIN cidades c
+ON e.id = c.estado right join paises p on e.pais = p.id;
