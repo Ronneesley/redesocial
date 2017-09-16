@@ -6,13 +6,41 @@ package br.com.redesocial.modelo.dto;
  * @since 06/09/2017
  */
 public class Categoria {
+    
+    private Integer id;    
+    private String descricao;
 
-    public String getDescricao() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setId(Integer id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    
+    /**
+     * Função que retorna o identificador do usuário
+     * @return identificador
+     */
+    public Integer getId() {
+        return id;
     }
     
+    /**
+     * Função que modifica o identificador do usuário
+     * @param id
+     */
+    public void setId(Integer id) {
+        this.id = id;
+    }
+    
+    /**
+     * Função que modifica a descrição
+     * @param descricao
+     */
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+    
+    /**
+     * Função que retorna a descrição
+     * @param id
+     */
+    public String getDescricao(){
+        return descricao;
+    }
+
 }

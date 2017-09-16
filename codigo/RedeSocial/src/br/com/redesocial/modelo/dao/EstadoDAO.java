@@ -47,6 +47,10 @@ public class EstadoDAO extends DAOCRUDBase<Estado> {
         }
     }
     
+    /**
+    *@author Warley Rodrigues
+    *Criação e inserção de Pais, Estado, Cidade, Usuario e Postagem no banco de dados
+    */ 
     @Override
     public void alterar(Estado p) throws SQLException, Exception {
         Connection conexao = getConexao();

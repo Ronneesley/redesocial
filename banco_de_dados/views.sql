@@ -125,3 +125,24 @@ INNER JOIN albuns ON multimidias.album = albuns.id
 INNER JOIN usuarios ON albuns.usuario = usuarios.id
 GROUP BY usuarios.nome, albuns.nome
 ORDER BY usuarios.nome;
+
+/**
+ * View para mostrar a quantidade de cidades por estado
+ * @author Adallberto Lucena Moura
+ */
+CREATE VIEW contador_cidade AS
+SELECT e.nome as Estado, p.nome as Pais, COUNT(*) as Quantidade  FROM estados e JOIN cidades c
+ON e.id = c.estado right join paises p on e.pais = p.id
+GROUP BY e.nome, p.nome
+ORDER BY p.nome;
+
+/**
+*View para mostrar a quantidade de Postagens por data
+* @author Eduardo Oliveira
+*/
+CREATE VIEW qtde_geral_postagens_por_data AS
+SELECT date_format(data, '%Y-%m-%d') AS data_post,
+COUNT(*) AS qtde
+FROM postagens p
+GROUP BY date_format(data, '%Y-%m-%d')
+ORDER BY date_format(data, '%Y-%m-%d');
