@@ -14,9 +14,8 @@ import static org.junit.Assert.*;
  * @since 15/09/2017
 */
 public class ArtigoBOTest {
-    //@Test
-     /**
-    public void testMetodoInserir() {
+    @Test     
+    public void testMetodoInserir() throws Exception {
         ArtigoBO bo = new ArtigoBO();
 
         Artigo artigo1 = new Artigo();
@@ -31,17 +30,17 @@ public class ArtigoBOTest {
         artigo1.setTitulo("Título teste 1");
         artigo1.setResumo("Em design gráfico e editoração, Lorem ipsum é um texto utilizado para preencher o espaço de texto em publicações (jornais, revistas, e websites), com a finalidade de verificar o lay-out, tipografia e formatação antes de utilizar conteúdo real. Muitas vezes este texto também é utilizado em catálogos de tipografia para demonstrar textos e títulos escritos com as fontes.");
         artigo1.setURL("www.artigo.com.br");
-        
+        artigo1.setArtigo(Utilitarios.lerArquivo(new File("../../arquivos_teste/nome_arquivo.txt")));
         
         try {
             bo.inserir(artigo1);
         } catch (Exception ex) {
-            fail("Falha ao inserir um país: " + ex.getMessage());
+            fail("Falha ao inserir um artigo: " + ex.getMessage());
         }
 
     }
      
-    @Test
+    //@Test
     public void testMetodoAlterar() throws Exception {
         ArtigoBO bo = new ArtigoBO();
         
@@ -84,8 +83,8 @@ public class ArtigoBOTest {
             fail("Falha ao inserir um artigo: " + ex.getMessage());
         }
     }
-    */
-    @Test
+    
+    //@Test
     public void testMetodoSelecionar() throws Exception{
         
         ArtigoBO bo = new ArtigoBO();
