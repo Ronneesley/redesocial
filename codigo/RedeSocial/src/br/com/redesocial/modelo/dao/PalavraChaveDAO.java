@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -67,10 +68,33 @@ public class PalavraChaveDAO extends DAOCRUDBase<PalavraChave> {
             return null;
         }
     }
-
+    
+    /**
+     * Método para listar as palavras chaves existentes
+     * @author Jônatas de Souza Rezende.
+     * @return lista.
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Override
     public List listar() throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Connection conexao = getConexao();
+        
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("select * from palavras_chave order by descricao");
+        ResultSet rs;
+        rs = pstmt.executeQuery();
+        
+        List lista;
+        lista = new ArrayList();
+        
+        while(rs.next()){
+            PalavraChave pc = new PalavraChave();
+            pc.setId(rs.getInt("id"));
+            pc.setDescricao(rs.getString("descricao"));
+            lista.add(pc);
+        }
+        
+        return lista;
     }
 
     @Override
