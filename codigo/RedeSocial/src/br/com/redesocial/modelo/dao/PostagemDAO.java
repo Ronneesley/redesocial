@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,12 +39,14 @@ public class PostagemDAO extends DAOCRUDBase<Postagem> {
         }
         
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("insert into postagens (curtidas,descricao,data, usuario) values (?,?,?,?)", Statement.RETURN_GENERATED_KEYS);
+        pstmt = conexao.prepareStatement("insert into postagens (curtidas,descricao,data, usuario, visualizacoes) values (?,?,?,?,?)", Statement.RETURN_GENERATED_KEYS);
         
         pstmt.setInt(1, p.getCurtidas());
         pstmt.setString(2,p.getDescricao());
-        pstmt.setDate(3, new java.sql.Date(p.getData().getTime()));
+        pstmt.setTimestamp(3, new Timestamp(p.getData().getTime()));
         pstmt.setInt(4, p.getUsuario().getId());
+        pstmt.setInt(5, p.getVisualizacoes());
+        
         pstmt.executeUpdate();
         
         p.setId(getId(pstmt));

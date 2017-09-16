@@ -193,4 +193,10 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
         pstmt.executeUpdate();
 
     }
+
+    public Usuario logar(String nome, String senha) throws Exception {
+        
+        //Selecionar o usuário que possui esta senha
+        return selecionar(1);
+    }
 }

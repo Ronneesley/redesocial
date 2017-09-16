@@ -1,12 +1,22 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 	<head>
-        <title>Rede Social</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Rede Social</title>
+            
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"> 
-        <link rel="stylesheet" type="text/css" href="css/estilo_feed.css">
+            <link rel="stylesheet" type="text/css" href="css/estilo_feed.css">
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+                
+            <script type="text/javascript">
+                function publicar(){
+                    var divPostagem = document.getElementById("postagem");
+                    
+                    divPostagem.style.display = "block";
+                }
+            </script>
 	</head>
 	
 	<body>
@@ -28,8 +38,8 @@
 				<div id="resumo_perfil">
 					
 					<a href="./perfil.html"><img class="resumo_perfil_foto" src="imagens/reumo_perfil.jpg" alt="imagens dos icones" width="150px" height="150px;"/></a>
-					<a href="./perfil.html"><h3 class="perfil">Andrey Ribeiro</h3></a>
-					<a href="http://www.renovafilmes.com" target="_blank"><h6>www.renovafillmes.com</h6></a>
+					<a href="./perfil.html"><h3 class="perfil">${usuario.nome}</h3></a>
+					<a href="http://www.renovafilmes.com" target="_blank"><h6>${usuario.email}</h6></a>
 					
 					<div id="resumo_publicacao">
 						<div id="resumo_p">
@@ -42,7 +52,7 @@
 			</div>
 
 			<div id="botao_resumo_perfil">
-				<button type="button" class="btn btn-light ">Publicar</button>
+				<button type="button" class="btn btn-light" onclick="publicar()">Publicar</button>
 				<button type="button" class="btn btn-light">Novo Aporte</button>
 				<button type="button" class="btn btn-light">Enviar Artigo</button>
 			</div>
@@ -59,30 +69,48 @@
 		</div>
 		
 		<div id="central">
-			<div id="post">
-				<img class="post_foto" src="imagens/reumo_perfil.jpg" alt="imagens dos icones" width="50" height="50"/>
+                    <jsp:include page="postagem.jsp" />
+                    
+                    <c:forEach items="${postagens}" var="postagem">
+                        <div id="post">
+                            <img class="post_foto" src="imagens/reumo_perfil.jpg" alt="imagens dos icones" width="50" height="50"/>
+
+                            <div class="post_info">
+                                ${postagem.usuario.nome}<br />
+                                ${postagem.data} 50 min.<br />
+                            </div>
+
+                            <div id="container-post">
+                                <p>${postagem.descricao}</p>
+                            </div>
+                        </div>
+                    </c:forEach>                    
+                    
+                    <!--
+                    <div id="post">
+                        <img class="post_foto" src="imagens/reumo_perfil.jpg" alt="imagens dos icones" width="50" height="50"/>
                                 
-                    <div class="post_info">
-                        Andrey Ribeiro<br />
-                        50 min <br />
+                        <div class="post_info">
+                            Andrey Ribeiro<br />
+                            50 min <br />
+                        </div>
+					
+                        <div id="container-post">
+                        <p>Muito satisfeito com a receptividade do projeto. Às pessoas que foram me ouvir durante o Workshop
+                        de Inteligência Artificial: pesquisadores, alunos de mestrado e doutorado, alunos de graduação, empresários, comunidade em geral,
+                        muito obrigado pela atenção, vocês fora muito legais.</p>
+
+                        <div id="reacao">
+
+                                <img src="imagens/up.png" width="15px" height="15px;" alt="icone up" /> Maria e outras 20 pessoas deram UP
+
+                        </div>
+
+                        <div id="comentario">
+
+                                <a href="teste_link.html" target="_blank"><img  src="imagens/amigos_susgetao.jpg" width="60px" height="60x;" style="border-radius: 3%;" /></a>
+
                     </div>
-					
-					<div id="container-post">
-                    <p>Muito satisfeito com a receptividade do projeto. Às pessoas que foram me ouvir durante o Workshop
-					de Inteligência Artificial: pesquisadores, alunos de mestrado e doutorado, alunos de graduação, empresários, comunidade em geral,
-					muito obrigado pela atenção, vocês fora muito legais.</p>
-                    					
-					<div id="reacao">
-						
-						<img src="imagens/up.png" width="15px" height="15px;" alt="icone up" /> Maria e outras 20 pessoas deram UP
-						
-					</div>
-					
-					<div id="comentario">
-					
-						<a href="teste_link.html" target="_blank"><img  src="imagens/amigos_susgetao.jpg" width="60px" height="60x;" style="border-radius: 3%;" /></a>
-						
-					</div>
 						<div id="comentario_info">
 							Maria Carolina 							
 						</div>
@@ -132,7 +160,7 @@
                 </div>
                    
 			</div>
-			
+			-->
 			
 		</div>
 		

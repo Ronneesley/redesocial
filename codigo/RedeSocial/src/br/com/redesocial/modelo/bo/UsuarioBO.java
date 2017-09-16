@@ -47,4 +47,9 @@ public class UsuarioBO extends BOCRUDBase<Usuario, UsuarioDAO> {
     protected void validarChavePrimaria(Usuario dto) throws Exception {
         if (dto.getId() == null) throw new Exception("Preencha o campo id");
     }
+
+    public Usuario logar(String nome, String senha) throws Exception {
+        UsuarioDAO dao = new UsuarioDAO();
+        return dao.logar(nome, senha);
+    }
 }

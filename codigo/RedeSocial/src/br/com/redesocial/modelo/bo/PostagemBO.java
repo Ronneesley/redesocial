@@ -2,6 +2,8 @@ package br.com.redesocial.modelo.bo;
 
 import br.com.redesocial.modelo.dao.PostagemDAO;
 import br.com.redesocial.modelo.dto.Postagem;
+import br.com.redesocial.modelo.dto.Usuario;
+import java.util.Date;
 
 /**
  *
@@ -24,6 +26,18 @@ public class PostagemBO extends BOCRUDBase<Postagem, PostagemDAO> {
      @Override
     protected void validarChavePrimaria(Postagem dto) throws Exception {
         if (dto.getId() == null) throw new Exception("Preencha o campo id");
+    }
+
+    public void publicar(Usuario usuario, String mensagem) throws Exception {        
+        Postagem postagem = new Postagem();
+        postagem.setCurtidas(0);
+        postagem.setData(new Date());
+        postagem.setDescricao(mensagem);
+        postagem.setUsuario(usuario);
+        postagem.setVisualizacoes(0);
+                
+        PostagemDAO dao = new PostagemDAO();
+        dao.inserir(postagem);
     }
 }
 

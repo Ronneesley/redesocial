@@ -31,7 +31,7 @@ public class ComentarioBOTest {
         
         ComentarioBO bo = new ComentarioBO();
 
-        try{
+        /*try{
             List existentes = bo.listar();
             int qtdeExistentes = existentes.size();
 
@@ -106,14 +106,14 @@ public class ComentarioBOTest {
                 /**
                  * Inserindo comentário no banco de dados
                  */
-                bo.inserir(comentario);
-            } catch(Exception ex){
+//                bo.inserir(comentario);
+            /*} catch(Exception ex){
                 /**
                  * Mensagem de erro caso falhe
                  */
-                fail("Falha ao inserir um comentário: " + ex.getMessage());
+                /*fail("Falha ao inserir um comentário: " + ex.getMessage());
             }
-        }
+        }*/
         
     }
     

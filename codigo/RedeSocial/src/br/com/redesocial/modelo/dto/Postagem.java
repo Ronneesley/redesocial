@@ -16,6 +16,19 @@ public class Postagem {
     private Date data;
 
     private Usuario usuario;
+    
+    private Integer visualizacoes;
+    
+    public String getTempoPostagem(){
+        //se < 60 segundos -> x seg.
+        //se < 60 minutos  -> x min.
+        //se < 24 horas -> x hora ou horas
+        //se < 48 horas -> ontem
+        //se < 30 dias ->  x dias
+        //se > 30 dias -> dd/mm/YYYY
+        
+        return "";
+    }
 
     public Integer getId(){
         return id;
@@ -55,5 +68,13 @@ public class Postagem {
 
     public void setUsuario(Usuario usuario){
         this.usuario = usuario;
+    }
+
+    public Integer getVisualizacoes() {
+        return visualizacoes;
+    }
+
+    public void setVisualizacoes(Integer visualizacoes) {
+        this.visualizacoes = visualizacoes;
     }
 }
