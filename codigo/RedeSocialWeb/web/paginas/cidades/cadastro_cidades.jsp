@@ -90,7 +90,7 @@
                 </select>
                 <label for="estados">Estado:</label>
                 <br />
-                <select name="estados" class="campo" id="estado" >
+                <select name="estado" class="campo" id="estado" >
                     <option value="${estado.nome}">Selecione o Estado</option>
                     
                     <c:forEach items="${estados}" var="estado">

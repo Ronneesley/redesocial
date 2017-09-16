@@ -78,7 +78,7 @@ public class CidadeControle extends HttpServlet {
         cidade.setNome(request.getParameter("cidade"));
         
         EstadoBO estadoBO = new EstadoBO();
-        Integer idEstado = Integer.parseInt(request.getParameter("estados"));
+        Integer idEstado = Integer.parseInt(request.getParameter("estado"));
         Estado estado = estadoBO.selecionar(idEstado);
         
         cidade.setEstado(estado);
