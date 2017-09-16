@@ -62,8 +62,7 @@ public class Aporte {
      */
     public void setCategoria(Categoria categoria){
         this.categoria = categoria;   
-        
-     }
+    }
     /**
      * Função que retorna a postagem do aporte
      * @return postagem do aporte
