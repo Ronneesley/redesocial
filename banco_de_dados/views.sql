@@ -132,4 +132,6 @@ ORDER BY usuarios.nome;
  */
 CREATE VIEW contador_cidade AS
 SELECT e.nome as Estado, p.nome as Pais, COUNT(*) as Quantidade  FROM estados e JOIN cidades c
-ON e.id = c.estado right join paises p on e.pais = p.id;
+ON e.id = c.estado right join paises p on e.pais = p.id
+GROUP BY e.nome, p.nome
+ORDER BY p.nome;
