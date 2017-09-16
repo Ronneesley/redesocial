@@ -146,3 +146,27 @@ COUNT(*) AS qtde
 FROM postagens p
 GROUP BY date_format(data, '%Y-%m-%d')
 ORDER BY date_format(data, '%Y-%m-%d');
+
+/**
+ * View para selecionar a quantidade de usuários cadastrados por cidade
+ * @author Igor Justino Rodrigues
+ */
+create view `quantidade_de_usuarios_por_cidade` as (
+	select
+		c.id as id_cidade,
+		c.nome as cidade, 
+		e.id as id_estado, 
+		e.nome as estado, 
+		p.id as id_pais, 
+		p.nome as pais, 
+		count(u.nome) as qtde 
+	from 
+		usuarios u 
+			inner join cidades c
+				on u.cidade = c.id 
+			inner join estados e 
+				on c.estado = e.id 
+			inner join paises p 
+				on e.pais = p.id 
+	group by c.nome
+);
