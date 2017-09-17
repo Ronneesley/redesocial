@@ -34,7 +34,7 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
     public void alterar(Comentario p) throws Exception {
         Connection conexao = getConexao();
 
-        PreparedStatement pstmt = conexao.prepareStatement("update comentarios set descricao = ?, curtidas = ?, data = ?, postagem = ? ,resposta = ? where id = ?"); 
+        PreparedStatement pstmt = conexao.prepareStatement("update comentarios set descricao = ?, curtidas = ?, data = ?, postagem = ? ,resposta = ?, usuario = ? where id = ?"); 
         
         pstmt.setString(1, p.getDescricao());
         pstmt.setInt(2, p.getCurtidas());
@@ -144,13 +144,13 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
             throw new Exception("O comentário não pode estar vazio!");
         }
         
-        PreparedStatement pstmt = conexao.prepareStatement("insert into comentarios(descricao, curtidas, data, postagem, resposta) values(?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
+        PreparedStatement pstmt = conexao.prepareStatement("insert into comentarios(descricao, curtidas, data, postagem, resposta, usuario) values(?, ?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
 
         pstmt.setString(1, c.getDescricao());
         pstmt.setInt(2, c.getCurtidas());
         pstmt.setDate(3, new java.sql.Date(c.getData().getTime()));
         pstmt.setInt(4, c.getPostagem().getId());
-        pstmt.setInt(5, c.getUsuario().getId());
+        pstmt.setInt(6, c.getUsuario().getId());
         
         if(c.getResposta() != null){
             pstmt.setInt(5, c.getResposta().getId());
