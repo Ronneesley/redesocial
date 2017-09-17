@@ -170,3 +170,17 @@ create view `quantidade_de_usuarios_por_cidade` as (
 				on e.pais = p.id 
 	group by c.nome
 );
+
+/**
+ * View para mostrar a quantidade de postagens, aportes e artigos por usuário
+ * @author Jônatas de Souza Rezende
+ */
+
+CREATE VIEW qtde_postagens_aportes_artigos_por_usuario AS
+SELECT usuarios.id AS id_usuario, usuarios.nome AS usuario, COUNT(postagens.id) AS qtde_postagens, 
+       COUNT(aportes.id) AS qtde_aportes, COUNT(artigos.id) AS qtde_artigos
+FROM usuarios
+INNER JOIN postagens ON postagens.usuario = usuarios.id
+LEFT JOIN aportes ON aportes.postagem = postagens.id
+LEFT JOIN artigos ON artigos.postagem = postagens.id
+GROUP BY usuarios.nome;
