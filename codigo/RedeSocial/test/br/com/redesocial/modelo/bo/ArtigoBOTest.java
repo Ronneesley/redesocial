@@ -40,7 +40,7 @@ public class ArtigoBOTest {
 
     }
      
-    //@Test
+    @Test
     public void testMetodoAlterar() throws Exception {
         ArtigoBO bo = new ArtigoBO();
         
