@@ -79,8 +79,7 @@
 
                     <div id="container-post">
                         <p>${postagem.descricao}</p>
-                    </div>
-                    
+                    </div>                    
                 </div>
                     </c:forEach>                    
                     
@@ -160,7 +159,7 @@
 			</div>
 			-->
 			
-		</div>
+            </div>
 		
             <div id="direita">
 		<input id="buscar_timeline" type="text" name="buscar" size="40" value="Buscar">			
