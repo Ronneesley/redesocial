@@ -41,7 +41,8 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
         pstmt.setDate(3, new java.sql.Date(p.getData().getTime()));
         pstmt.setInt(4, p.getPostagem().getId());
         pstmt.setInt(5, p.getResposta().getId()); 
-        pstmt.setInt(6, p.getId());
+        pstmt.setInt(6, p.getUsuario().getId());
+        pstmt.setInt(7, p.getId());
 
         pstmt.executeUpdate();
     }
@@ -67,11 +68,13 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
         PostagemDAO postagemDAO = new PostagemDAO();
         if (rs.next()){
             Comentario c = new Comentario();
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
             c.setId(id);
             c.setDescricao(rs.getString("descricao"));
             c.setCurtidas(rs.getInt("curtidas"));
             c.setData(rs.getDate("data"));
             c.setPostagem(postagemDAO.selecionar(rs.getInt("postagem")));
+            c.setUsuario(usuarioDAO.selecionar(rs.getInt("usuario")));
             
             int idResposta = rs.getInt("resposta");            
             if (!rs.wasNull()){
@@ -106,12 +109,14 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
         PostagemDAO postagemDAO = new PostagemDAO();
         while (rs.next()){
             Comentario c = new Comentario();
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
 
             c.setId(rs.getInt("id"));
             c.setDescricao(rs.getString("descricao"));
             c.setCurtidas(rs.getInt("curtidas"));
             c.setData(rs.getDate("data"));
             c.setPostagem(postagemDAO.selecionar(rs.getInt("postagem")));
+            c.setUsuario(usuarioDAO.selecionar(rs.getInt("usuario")));
 
             int idResposta = rs.getInt("resposta");
             if (!rs.wasNull()){
@@ -145,6 +150,7 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
         pstmt.setInt(2, c.getCurtidas());
         pstmt.setDate(3, new java.sql.Date(c.getData().getTime()));
         pstmt.setInt(4, c.getPostagem().getId());
+        pstmt.setInt(5, c.getUsuario().getId());
         
         if(c.getResposta() != null){
             pstmt.setInt(5, c.getResposta().getId());
