@@ -9,6 +9,7 @@ import br.com.redesocial.modelo.dto.PostagemPalavraChave;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -57,12 +58,28 @@ public class PostagemPalavraChaveDAO extends DAOCRUDBase<PostagemPalavraChave>{
     public void alterar(PostagemPalavraChave dto) throws Exception {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+/*
     @Override
     public List listar() throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Connection conexao = getConexao();
+        
+        PreparedStatement pstm;
+        pstmt = conexao.preparedStatement("Select * from postagens_palavras_chave where palavra_chave = ?");
+        
+        ResultSet rs;
+        rs = pstmt.executeQuery();
+        List lista;
+        lista = new ArrayList();
+        
+        while(rs.next()){
+            Postagem_Palavra_Chave ppc = new Postagem_Palavra_Chave();
+            ppc.setPostagem(PostagemDAO.selecionar(rs.getPostagem("postagem")));
+            ppc.setPalavraChave(rs.getPalavraChave("palavra_chave")));
+        
+        }
+        return lista;
     }
-
+*/
     @Override
     public void excluir(int id) throws Exception {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
