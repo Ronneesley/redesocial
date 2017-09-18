@@ -83,9 +83,8 @@ ORDER BY est.nome;
  * @author Thalia Santos de Santana
  */
 create view palavra_chave_postagem as
-select palavras_chave.descricao as 'Palavra-chave', count(palavras_chave.descricao) as 'Quantidade' from palavras_chave
+select palavras_chave.descricao as 'palavra_chave', count(palavras_chave.descricao) as 'quantidade' from palavras_chave
 inner join postagens_palavras_chave on postagens_palavras_chave.palavra_chave = palavras_chave.id
-inner join postagens on postagens_palavras_chave.postagem = postagens.id 
 group by palavras_chave.descricao 
 order by palavras_chave.descricao desc;
 
@@ -94,7 +93,7 @@ order by palavras_chave.descricao desc;
  * @author Thalia Santos de Santana
  */
 create view palavra_chave_aporte as
-select palavras_chave.descricao as 'Palavra-chave', count(palavras_chave.descricao) as 'Quantidade' from palavras_chave
+select palavras_chave.descricao as 'palavra_chave', count(palavras_chave.descricao) as 'quantidade' from palavras_chave
 inner join postagens_palavras_chave on postagens_palavras_chave.palavra_chave = palavras_chave.id
 inner join postagens on postagens_palavras_chave.postagem = postagens.id 
 inner join aportes on postagens_palavras_chave.postagem = aportes.postagem
