@@ -89,7 +89,7 @@ group by palavras_chave.descricao
 order by palavras_chave.descricao desc;
 
 /**
- * View para mostrar a quantidade de vezes que uma palavra-chave foi usada nos aportes
+ * View para mostrar a quantidade de vezes que uma palavra-chave foi usada em aportes
  * @author Thalia Santos de Santana
  */
 create view palavra_chave_aporte as
