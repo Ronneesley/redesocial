@@ -172,7 +172,7 @@ create view `quantidade_de_usuarios_por_cidade` as (
 
 /**
  * View para mostrar a quantidade de postagens, aportes e artigos por usuário
- * @author Jônatas de Souza Rezende
+ * @author Jônatas de Souza Rezende, Paulo Henrique Araujo
  */
 
 CREATE VIEW qtde_postagens_aportes_artigos_por_usuario AS
