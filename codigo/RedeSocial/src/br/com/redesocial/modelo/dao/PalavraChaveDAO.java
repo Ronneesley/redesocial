@@ -99,7 +99,14 @@ public class PalavraChaveDAO extends DAOCRUDBase<PalavraChave> {
 
     @Override
     public void excluir(int id) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Connection conexao = getConexao();
+        
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("delete from palavras_chave where id = ?");
+        
+        pstmt.setInt(1, id);
+        pstmt.executeUpdate();
+       }
     }
     
-}
+
