@@ -130,3 +130,5 @@ public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
         
         //executa uma atualização/alteração
         pstmt.executeUpdate();
+    }
+}
