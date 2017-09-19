@@ -9,12 +9,13 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author Paulo Henrique
- */
+
 
 public class AporteDAO extends DAOCRUDBase<Aporte>  {
+  /**
+ *
+ * @author Maciele
+ */
   
     @Override
     public void inserir(Aporte dto) throws Exception {
@@ -34,6 +35,11 @@ public class AporteDAO extends DAOCRUDBase<Aporte>  {
         
         dto.setId(getId(pstmt));     
     }
+  
+  /**
+ *
+ * @author Paulo Henrique
+ */
     
     @Override
      public List listar() throws Exception {
@@ -61,11 +67,6 @@ public class AporteDAO extends DAOCRUDBase<Aporte>  {
         }
         
         return lista;
-    }
-
-    @Override
-    public void inserir(Aporte dto) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
