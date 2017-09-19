@@ -1,9 +1,11 @@
 package br.com.redesocial.modelo.dao;
 
 import br.com.redesocial.modelo.dto.Aporte;
+import br.com.redesocial.modelo.dto.Artigo;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,13 +15,7 @@ import java.util.List;
  */
 
 public class AporteDAO extends DAOCRUDBase<Aporte>  {
-    
-/**
-* Método que lista todos os aportes do banco de dados
-* @author Paulo Henrique Araujo
-* @return lista de aportes ordenados pelo título
-* @throws Exception possíveis exceções que podem acontecer
-*/
+  
     @Override
     public void inserir(Aporte dto) throws Exception {
         Connection conexao = getConexao();
