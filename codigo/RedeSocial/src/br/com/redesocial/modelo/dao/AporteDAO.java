@@ -12,6 +12,7 @@ import java.util.List;
 
 
 public class AporteDAO extends DAOCRUDBase<Aporte>  {
+  
   /**
  *
  * @author Maciele
