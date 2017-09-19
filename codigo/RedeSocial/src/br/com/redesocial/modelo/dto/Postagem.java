@@ -19,7 +19,7 @@ public class Postagem {
     
     private Integer visualizacoes;
     
-    public String getTempoPostagem(Calendar calendario){//Recebe uma data{Y,M,D,h,m,s}
+    /*public String getTempoPostagem(Calendar calendario){//Recebe uma data{Y,M,D,h,m,s}
         //se < 60 segundos -> x seg.
         //se < 60 minutos  -> x min.
         //se < 24 horas -> x hora ou horas
@@ -31,17 +31,16 @@ public class Postagem {
         dataPostagem = calendario;//Recebe a data da postagem
         Calendar dataAtual = Calendar.getInstance();
         dataAtual.setTime(dataAtual.getTime());//Recebe a data atual        
-        /*
+        
         int ano = calendario.get(Calendar.YEAR); 
         int mes = calendario.get(Calendar.MONTH); 
         int h = calendario.get(Calendar.HOUR_OF_DAY);//Hora no formato de 24 horas e não no de 12  
         int m = calendario.get(Calendar.MINUTE);  
         int s = calendario.get(Calendar.SECOND);  
         int segundos = (h * 60 + m) * 60 + s;  
-        */  
         
         return "";
-    }
+    }*/
 
     public Integer getId(){
         return id;
