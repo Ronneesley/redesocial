@@ -121,7 +121,7 @@ public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
         Connection conexao = getConexao();
         
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("update Multimidia set midia =?, tipo_conteudo =?, data where id = ?");
+        pstmt = conexao.prepareStatement("update multimidias set midia = ?, tipo_conteudo = ?, data = ? where id = ?");
         
         
         pstmt.setBytes(1, m.getMidia());
@@ -130,5 +130,3 @@ public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
         
         //executa uma atualização/alteração
         pstmt.executeUpdate();
-    }
-}
