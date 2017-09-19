@@ -21,6 +21,25 @@ public class AporteDAO extends DAOCRUDBase<Aporte>  {
 * @throws Exception possíveis exceções que podem acontecer
 */
     @Override
+    public void inserir(Aporte dto) throws Exception {
+        Connection conexao = getConexao();
+        
+        if (dto.getAporte().equals("")){
+            throw new Exception("O arquivo do artigo não pode estar vazio!");
+        }
+        
+        PreparedStatement pstmt = conexao.prepareStatement("insert into aporte(titulo) values (?)", Statement.RETURN_GENERATED_KEYS);
+        
+        pstmt.setString(1, dto.getTitulo());
+        pstmt.setInt(2, dto.getCategoria().getId());
+        pstmt.setInt(3, dto.getPostagem().getId());
+        
+        pstmt.executeUpdate();
+        
+        dto.setId(getId(pstmt));     
+    }
+    
+    @Override
      public List listar() throws Exception {
         Connection conexao = getConexao();
         
