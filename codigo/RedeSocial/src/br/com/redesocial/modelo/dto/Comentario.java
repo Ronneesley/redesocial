@@ -37,6 +37,11 @@ public class Comentario {
      * Atributo que identifica a resposta do comentário
      */
     private Comentario resposta;
+
+    /**
+     * Atributo que identifica o usuário que comentou
+     */
+    private Usuario usuario;
     
     /**
      * Função que retorna o identificador de um comentário
@@ -132,5 +137,21 @@ public class Comentario {
      */
     public void setResposta(Comentario resposta) {
         this.resposta = resposta;
+    }
+    
+    /**
+     * Função que retorna o usuario que comentou
+     * @return usuario do comentário
+     */
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    /**
+     * Função que modifica o usuário de um comentário
+     * @param usuario novo usuario comentando
+     */
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 }

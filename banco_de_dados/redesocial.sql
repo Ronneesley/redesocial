@@ -404,7 +404,21 @@ CREATE TABLE IF NOT EXISTS `redesocial`.`artigos` (
   `resumo` TEXT NOT NULL,
   `url` VARCHAR(200) NOT NULL,
   `artigo` MEDIUMBLOB NOT NULL,
-  PRIMARY KEY (`id`))
+  `categoria` INT NOT NULL,
+  `postagem` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_artigos_categorias1_idx` (`categoria` ASC),
+  INDEX `fk_artigos_postagens1_idx` (`postagem` ASC),
+  CONSTRAINT `fk_artigos_categorias1`
+    FOREIGN KEY (`categoria`)
+    REFERENCES `redesocial`.`categorias` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_artigos_postagens1`
+    FOREIGN KEY (`postagem`)
+    REFERENCES `redesocial`.`postagens` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 

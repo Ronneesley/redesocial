@@ -83,18 +83,17 @@ ORDER BY est.nome;
  * @author Thalia Santos de Santana
  */
 create view palavra_chave_postagem as
-select palavras_chave.descricao as 'Palavra-chave', count(palavras_chave.descricao) as 'Quantidade' from palavras_chave
+select palavras_chave.descricao as 'palavra_chave', count(palavras_chave.descricao) as 'quantidade' from palavras_chave
 inner join postagens_palavras_chave on postagens_palavras_chave.palavra_chave = palavras_chave.id
-inner join postagens on postagens_palavras_chave.postagem = postagens.id 
 group by palavras_chave.descricao 
 order by palavras_chave.descricao desc;
 
 /**
- * View para mostrar a quantidade de vezes que uma palavra-chave foi usada nos aportes
+ * View para mostrar a quantidade de vezes que uma palavra-chave foi usada em aportes
  * @author Thalia Santos de Santana
  */
 create view palavra_chave_aporte as
-select palavras_chave.descricao as 'Palavra-chave', count(palavras_chave.descricao) as 'Quantidade' from palavras_chave
+select palavras_chave.descricao as 'palavra_chave', count(palavras_chave.descricao) as 'quantidade' from palavras_chave
 inner join postagens_palavras_chave on postagens_palavras_chave.palavra_chave = palavras_chave.id
 inner join postagens on postagens_palavras_chave.postagem = postagens.id 
 inner join aportes on postagens_palavras_chave.postagem = aportes.postagem
@@ -131,10 +130,10 @@ ORDER BY usuarios.nome;
  * @author Adallberto Lucena Moura
  */
 CREATE VIEW contador_cidade AS
-SELECT e.nome as Estado, p.nome as Pais, COUNT(*) as Quantidade  FROM estados e JOIN cidades c
+SELECT e.id as Id_Estado, e.nome as Estado, p.nome as Pais, COUNT(*) as Quantidade  FROM estados e JOIN cidades c
 ON e.id = c.estado right join paises p on e.pais = p.id
 GROUP BY e.nome, p.nome
-ORDER BY p.nome;
+ORDER BY e.nome, p.nome;
 
 /**
 *View para mostrar a quantidade de Postagens por data
@@ -170,3 +169,17 @@ create view `quantidade_de_usuarios_por_cidade` as (
 				on e.pais = p.id 
 	group by c.nome
 );
+
+/**
+ * View para mostrar a quantidade de postagens, aportes e artigos por usuário
+ * @author Jônatas de Souza Rezende, Paulo Henrique Araujo
+ */
+
+CREATE VIEW qtde_postagens_aportes_artigos_por_usuario AS
+SELECT usuarios.id AS id_usuario, usuarios.nome AS usuario, COUNT(postagens.id) AS qtde_postagens, 
+       COUNT(aportes.id) AS qtde_aportes, COUNT(artigos.id) AS qtde_artigos
+FROM usuarios
+INNER JOIN postagens ON postagens.usuario = usuarios.id
+LEFT JOIN aportes ON aportes.postagem = postagens.id
+LEFT JOIN artigos ON artigos.postagem = postagens.id
+GROUP BY usuarios.nome;

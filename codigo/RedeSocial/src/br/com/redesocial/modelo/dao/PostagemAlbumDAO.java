@@ -5,6 +5,7 @@ import br.com.redesocial.modelo.dto.PostagemAlbum;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -74,4 +75,33 @@ public class PostagemAlbumDAO extends DAOBase {
             return null;
         } 
     }
+    
+    /**
+     * Método responsável por listar as postagens e albuns do banco de dados
+     * @author Paulo Henrique Araujo
+     * @return lista com todos os itens cadastrados no banco de dados
+     * @throws Exception possíveis exceções que podem acontecer
+     */
+    public List listar() throws Exception{
+        Connection conexao = getConexao();
+        
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("select * from postagens order by data desc");
+        ResultSet rs;
+        rs = pstmt.executeQuery();
+        
+        PostagemDAO postagemDAO = new PostagemDAO();
+        AlbumDAO albumDAO = new AlbumDAO();
+        List lista;
+        lista = new ArrayList();
+        
+        while(rs.next()){
+            PostagemAlbum pa = new PostagemAlbum();
+            pa.setPostagem(postagemDAO.selecionar(rs.getInt("postagem")));
+            pa.setAlbum(albumDAO.selecionar(rs.getInt("album")));    
+        }
+        
+        return lista;
+
+    } 
 }
