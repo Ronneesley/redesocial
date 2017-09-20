@@ -54,10 +54,30 @@ public class PostagemPalavraChaveDAO extends DAOCRUDBase<PostagemPalavraChave>{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+   /**
+     * Método responsável por alterar uma postagem a partir de suas palavras chaves
+     * @author José Gilvan
+     * @param palavraChave da postagem a ser alterada
+     * @return a postagem alterada a partir da palavra chave
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Override
     public void alterar(PostagemPalavraChave dto) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Connection conexao = getConexao();
+
+
+         PreparedStatement  pstmt;
+         pstmt = conexao.prepareStatement("update postagens set postagem = ?, palavra_chave = ? where id = ? ");
+       
+       
+        pstmt.setInt(1, dto.getPostagem());
+        pstmt.setInt(2, dto.getPalavraChave());
+        
+       
+        pstmt.executeUpdate();
     }
+        
 /*
     @Override
     public List listar() throws Exception {
