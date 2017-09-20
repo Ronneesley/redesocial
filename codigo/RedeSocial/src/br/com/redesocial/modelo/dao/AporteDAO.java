@@ -1,7 +1,6 @@
 package br.com.redesocial.modelo.dao;
 
 import br.com.redesocial.modelo.dto.Aporte;
-import br.com.redesocial.modelo.dto.Artigo;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -70,9 +69,28 @@ public class AporteDAO extends DAOCRUDBase<Aporte>  {
         return lista;
     }
 
-    @Override
-    public void alterar(Aporte dto) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    /**
+     * Método que Altera um Aporte já cadastrado no banco de dados
+     * @author Macilon Arruda
+     * @param a aporte a ser alterado
+     * @throws Exception possíveis exceções que podem acontecer
+     */
+     
+    @Override 
+    public void alterar(Aporte a) throws Exception {
+        Connection conexao = getConexao();
+        
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("update aporte set  id = ?, titulo = ?, categoria = ?, postagem = ?");
+        
+        pstmt.setId(1, a.getId());
+        pstmt.setString(2, a.getTitulo());
+        pstmt.setCategoria(3, a.getCategoria());
+        pstmt.setPostagem(4, a.getPostagem());
+        
+        //executa uma atualização/alteração
+        pstmt.executeUpdate();
+        
     }
 
     @Override
