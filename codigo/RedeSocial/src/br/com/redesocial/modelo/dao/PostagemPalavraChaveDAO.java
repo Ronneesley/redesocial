@@ -5,6 +5,7 @@
  */
 package br.com.redesocial.modelo.dao;
 
+import br.com.redesocial.modelo.dto.Postagem;
 import br.com.redesocial.modelo.dto.PostagemPalavraChave;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -78,28 +79,31 @@ public class PostagemPalavraChaveDAO extends DAOCRUDBase<PostagemPalavraChave>{
         pstmt.executeUpdate();
     }
         
-/*
+
     @Override
     public List listar() throws Exception {
         Connection conexao = getConexao();
         
-        PreparedStatement pstm;
-        pstmt = conexao.preparedStatement("Select * from postagens_palavras_chave where palavra_chave = ?");
-        
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("Select * from postagens order by data desc");
         ResultSet rs;
         rs = pstmt.executeQuery();
+        
+        PostagemDAO postagemDAO = new PostagemDAO();
+        PalavraChaveDAO palavrachaveDAO = new PalavraChaveDAO();
+        
         List lista;
         lista = new ArrayList();
         
         while(rs.next()){
-            Postagem_Palavra_Chave ppc = new Postagem_Palavra_Chave();
-            ppc.setPostagem(PostagemDAO.selecionar(rs.getPostagem("postagem")));
-            ppc.setPalavraChave(rs.getPalavraChave("palavra_chave")));
+            PostagemPalavraChave ppc = new PostagemPalavraChave();
+            ppc.setPostagem(postagemDAO.selecionar(rs.getInt("postagem")));
+            ppc.setPalavraChave(palavrachaveDAO.selecionar(rs.getInt("palavra_chave")));
         
         }
         return lista;
     }
-*/
+    
     @Override
     public void excluir(int id) throws Exception {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
