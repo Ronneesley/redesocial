@@ -21,13 +21,13 @@ public class AporteDAO extends DAOCRUDBase<Aporte>  {
     public void inserir(Aporte dto) throws Exception {
         Connection conexao = getConexao();
         
-        if (dto.getAporte().equals("")){
+        /*if (dto.getAporte().equals("")){
             throw new Exception("O arquivo do artigo não pode estar vazio!");
-        }
+        }*/
         
         PreparedStatement pstmt = conexao.prepareStatement("insert into aporte(titulo) values (?)", Statement.RETURN_GENERATED_KEYS);
         
-        pstmt.setString(1, dto.getTitulo());
+        //pstmt.setString(1, dto.getTitulo());
         pstmt.setInt(2, dto.getCategoria().getId());
         pstmt.setInt(3, dto.getPostagem().getId());
         
@@ -83,10 +83,10 @@ public class AporteDAO extends DAOCRUDBase<Aporte>  {
         PreparedStatement pstmt;
         pstmt = conexao.prepareStatement("update aporte set  id = ?, titulo = ?, categoria = ?, postagem = ?");
         
-        pstmt.setId(1, a.getId());
-        pstmt.setString(2, a.getTitulo());
-        pstmt.setCategoria(3, a.getCategoria());
-        pstmt.setPostagem(4, a.getPostagem());
+        //pstmt.setId(1, a.getId());
+        //pstmt.setString(2, a.getTitulo());
+        /*pstmt.setCategoria(3, a.getCategoria());
+        pstmt.setPostagem(4, a.getPostagem());*/
         
         //executa uma atualização/alteração
         pstmt.executeUpdate();

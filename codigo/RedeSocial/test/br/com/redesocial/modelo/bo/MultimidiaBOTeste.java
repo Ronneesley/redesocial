@@ -314,4 +314,78 @@ public class MultimidiaBOTeste {
         }
         
     }
+	
+@Test
+    public void testMetodoAlterar() {
+            Pais pais = new Pais();
+            pais.setNome("Brasil");        
+        
+	try {
+            PaisBO paisBO = new PaisBO();
+            paisBO.inserir(pais);
+
+            br.com.redesocial.modelo.dto.Estado estado = new br.com.redesocial.modelo.dto.Estado();
+            estado.setNome("Goiás");
+            estado.setPais(pais);
+            
+            EstadoBO estadoBO = new EstadoBO();
+            estadoBO.inserir(estado);
+            
+            Cidade cidade = new Cidade();
+            cidade.setNome("Itapaci");
+            cidade.setEstado(estado);
+            
+            CidadeBO cidadeBO = new CidadeBO();
+            cidadeBO.inserir(cidade);
+            
+            Usuario usuario = new Usuario();
+            usuario.setNome("Maciele");
+            usuario.setDataCadastro(new Date());
+            usuario.setEmail("maciele@gmail.com");
+            //usuario.setFoto();
+           
+            Calendar calendario = Calendar.getInstance();
+            calendario.set(1988, 2, 7, 0, 0, 0);            
+            usuario.setDataNascimento(calendario.getTime());
+            usuario.setSenha("111");
+            usuario.setSexo(Sexo.FEMININO);
+            usuario.setStatus(true);
+            usuario.setTelefone("(62) 94321-9874");
+            usuario.setCidade(cidade);
+            
+            UsuarioBO usuarioBO = new UsuarioBO();
+            usuarioBO.inserir(usuario);
+            
+            AlbumBO bo = new AlbumBO();           		
+            Album album = new Album();
+            album.setNome("California");
+            calendario.set(2016, 8, 29, 0, 0, 0);
+            album.setData(calendario.getTime()); 
+            album.setUsuario(usuario);
+            bo.inserir(album); 
+            
+            AlbumBO albumBO = new AlbumBO();
+            albumBO.inserir(album);
+            
+            MultimidiaBO mult = new MultimidiaBO();             		
+            Multimidia multimidia = new Multimidia();
+            multimidia.setAlbum(album);
+            multimidia.setMidia(Utilitarios.lerArquivo(new File("../../arquivos_teste/nome_arquivo.txt")));
+            multimidia.setTipoConteudo("foto");
+            calendario.set(2017, 8, 20, 8, 0, 0);
+            multimidia.setData(calendario.getTime());
+            mult.inserir(multimidia);
+        } catch (Exception ex) {
+            
+             /**
+             * Mensagem de erro caso não insira uma multímida no banco de dados
+             */ 
+            fail("Falha ao inserir uma multimidia: " + ex.getMessage());
+        }		
+        try {
+            MultimidiaBO bo = new MultimidiaBO();
+        } catch (Exception ex) {
+            fail("Falha ao inserir uma multimidia: " + ex.getMessage());
+        }
+    }
 }
