@@ -130,10 +130,10 @@ ORDER BY usuarios.nome;
  * @author Adallberto Lucena Moura
  */
 CREATE VIEW contador_cidade AS
-SELECT e.nome as Estado, p.nome as Pais, COUNT(*) as Quantidade  FROM estados e JOIN cidades c
+SELECT e.id as Id_Estado, e.nome as Estado, p.nome as Pais, COUNT(*) as Quantidade  FROM estados e JOIN cidades c
 ON e.id = c.estado right join paises p on e.pais = p.id
 GROUP BY e.nome, p.nome
-ORDER BY p.nome;
+ORDER BY e.nome, p.nome;
 
 /**
 *View para mostrar a quantidade de Postagens por data
