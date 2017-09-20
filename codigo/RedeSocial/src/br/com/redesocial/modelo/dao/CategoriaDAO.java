@@ -1,5 +1,6 @@
 package br.com.redesocial.modelo.dao;
 
+import java.sql.ResultSet;
 import br.com.redesocial.modelo.dto.Categoria;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -34,6 +35,36 @@ public class CategoriaDAO extends DAOCRUDBase<Categoria> {
     }
     
     /**
+     * Método que seleciona uma categoria já cadastrada no banco de dados
+     * @author Macilon Arruda
+     * @param id identificador da categoria
+     * @return Categoria selecionada no banco de dados
+     * @throws Exception possíveis exceções que podem acontecer
+     */
+   
+    @Override
+    public Categoria selecionar(int id) throws Exception{
+        Connection conexao = getConexao();
+
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("select * from multimidias where id = ?");
+        pstmt.setInt(1, id);
+
+        ResultSet rs;
+        rs = pstmt.executeQuery();
+
+        if (rs.next()){
+            Categoria c = new Categoria();
+            c.setId(rs.getInt("id"));
+            c.setDescricao(rs.getString("descricao"));
+
+            return c;
+        } else {
+            return null;
+        }
+    }
+    
+    /**
      * Método que altera uma categoria já cadastrada no banco de dados
      * @author Lara Caroline
      * @param c novos dados da categoria, com o ID da categoria, a ser alterada, preenchido
@@ -56,10 +87,6 @@ public class CategoriaDAO extends DAOCRUDBase<Categoria> {
         pstmt.executeUpdate();
     }
 
-    @Override
-    public Categoria selecionar(int id) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
     @Override
     public List listar() throws Exception {
