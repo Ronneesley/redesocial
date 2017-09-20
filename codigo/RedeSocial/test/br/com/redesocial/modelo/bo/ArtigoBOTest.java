@@ -87,15 +87,15 @@ public class ArtigoBOTest {
     @Test
     public void testMetodoSelecionar() throws Exception{
         
-    ArtigoBO bo = new ArtigoBO();
+        ArtigoBO bo = new ArtigoBO();
 
-    try{
+        try{
             
-    List existentes = bo.listar();
-    int qtdeExistentes = existentes.size();
+        List existentes = bo.listar();
+        int qtdeExistentes = existentes.size();
             
         Artigo artigo2 = new Artigo();
-        
+
         artigo2.setIdioma("Ingles");       
         artigo2.setRevista("SBIS");
         artigo2.setISSN("33333333");
@@ -108,25 +108,16 @@ public class ArtigoBOTest {
         artigo2.setResumo("Em design gráfico e editoração, Lorem ipsum é um texto utilizado para preencher o espaço de texto em publicações (jornais, revistas, e websites), com a finalidade de verificar o lay-out, tipografia e formatação antes de utilizar conteúdo real. Muitas vezes este texto também é utilizado em catálogos de tipografia para demonstrar textos e títulos escritos com as fontes.");
         artigo2.setURL("www.artigo.com.br");
         artigo2.setArtigo(Utilitarios.lerArquivo(new File("../../arquivos_teste/nome_arquivo.txt")));
-      
+
         
         try{
-            /**
-            * Inserindo comentário no banco de dados
-            */
             bo.inserir(artigo2);
-            }catch(Exception ex){
-            /**
-            * Mensagem de erro caso falhe
-            */
+                }catch(Exception ex){
+           
             fail("Falha ao inserir um artigo: " + ex.getMessage());
-            }
-
+                }
             }catch (Exception ex){
-            /**
-            * Erro caso a listagem falhe
-            */
-            fail("Erro ao listar: " + ex.getMessage());
+                fail("Erro ao listar: " + ex.getMessage());
         }
     }
 }
