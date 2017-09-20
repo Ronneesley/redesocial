@@ -99,13 +99,15 @@ public class CidadeDAO extends DAOCRUDBase<Cidade> {
         List lista;
         lista = new ArrayList();
         
-        EstadoDAO estadoDAO = new EstadoDAO();
+        
         while (rs.next()){
-            Cidade c = new Cidade();
-
-            c.setId(rs.getInt("id"));
-            c.setNome(rs.getString("nome"));
-            lista.add(c);
+            Cidade p = new Cidade();
+            EstadoDAO estadoDAO = new EstadoDAO();
+            
+            p.setId(rs.getInt("id"));
+            p.setEstado(estadoDAO.selecionar(rs.getInt("estado")));
+            p.setNome(rs.getString("nome"));
+            
         }
 
         return lista;
