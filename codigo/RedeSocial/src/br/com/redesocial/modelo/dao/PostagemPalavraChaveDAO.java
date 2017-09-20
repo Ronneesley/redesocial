@@ -91,7 +91,6 @@ public class PostagemPalavraChaveDAO extends DAOCRUDBase<PostagemPalavraChave>{
         
         PostagemDAO postagemDAO = new PostagemDAO();
         PalavraChaveDAO palavrachaveDAO = new PalavraChaveDAO();
-        
         List lista;
         lista = new ArrayList();
         
@@ -99,7 +98,6 @@ public class PostagemPalavraChaveDAO extends DAOCRUDBase<PostagemPalavraChave>{
             PostagemPalavraChave ppc = new PostagemPalavraChave();
             ppc.setPostagem(postagemDAO.selecionar(rs.getInt("postagem")));
             ppc.setPalavraChave(palavrachaveDAO.selecionar(rs.getInt("palavra_chave")));
-        
         }
         return lista;
     }
