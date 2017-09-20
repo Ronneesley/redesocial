@@ -16,7 +16,7 @@ public class PostagemPalavraChaveDAO extends DAOBase {
     /**
      * Método responsável por selecionar uma postagem a partir de suas palavras chaves
      * @author Lara Caroline
-     * @param palavraChave da postagem a ser selecionada
+     * @param palavraChave e postagem, da postagem a ser selecionada
      * @return a postagem selecionada a partir da palavra chave
      * @throws Exception possíveis exceções que podem acontecer
      */
@@ -24,8 +24,9 @@ public class PostagemPalavraChaveDAO extends DAOBase {
         Connection conexao = getConexao();
 
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("select * from postagens_palavras_chave where palavra_chave = ?");
+        pstmt = conexao.prepareStatement("select * from postagens_palavras_chave where palavra_chave = ? and postagem = ?");
         pstmt.setInt(1, palavraChave);
+        pstmt.setInt(2, postagem);
 
         ResultSet rs;
         rs = pstmt.executeQuery();
