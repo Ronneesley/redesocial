@@ -3,12 +3,17 @@ package br.com.redesocial.modelo.utilitarios;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.util.Date;
 
 /**
  *
  * @author Ronneesley
  */
 public class Utilitarios {
+    
+    public static String diferencaHumanizada(Date dataAnterior, Date dataPosterior){
+        return "";
+    }
 
     public static byte[] lerArquivo(File arquivo) throws Exception {
         byte[] bytes;
