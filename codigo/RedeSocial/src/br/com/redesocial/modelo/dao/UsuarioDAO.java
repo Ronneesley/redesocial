@@ -194,20 +194,21 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
 
     }
 
-    public Usuario logar(String nome, String senha) throws Exception {
+    public Usuario logar(String email, String senha) throws Exception {
         Connection conexao = getConexao();
         
         PreparedStatement  pstmt; 
-        pstmt = conexao.prepareStatement("select * from usuarios where nome = ? and senha = ?");
-        pstmt.setString(1, nome);
+        pstmt = conexao.prepareStatement("select * from usuarios where email = ? and senha = ?");
+        pstmt.setString(1, email);
         pstmt.setString(2, senha);
         
         ResultSet rs;
         rs = pstmt.executeQuery();
 
-        MultimidiaDAO multimidiaDAO = new MultimidiaDAO();
-        CidadeDAO cidadeDAO = new CidadeDAO();
         if (rs.next()){
+            MultimidiaDAO multimidiaDAO = new MultimidiaDAO();
+            CidadeDAO cidadeDAO = new CidadeDAO();
+            
             Usuario u = new Usuario();
             u.setId(rs.getInt("id"));
             u.setNome(rs.getString("nome"));
@@ -226,6 +227,4 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
             return null;
         }
     } 
-        //Selecionar o usuário que possui esta senha
-        //return selecionar(1);
 }

@@ -48,8 +48,8 @@ public class UsuarioBO extends BOCRUDBase<Usuario, UsuarioDAO> {
         if (dto.getId() == null) throw new Exception("Preencha o campo id");
     }
 
-    public Usuario logar(String nome, String senha) throws Exception {
+    public Usuario logar(String email, String senha) throws Exception {
         UsuarioDAO dao = new UsuarioDAO();
-        return dao.logar(nome, senha);
+        return dao.logar(email, senha);
     }
 }
