@@ -83,10 +83,10 @@ public class AporteDAO extends DAOCRUDBase<Aporte>  {
         PreparedStatement pstmt;
         pstmt = conexao.prepareStatement("update aporte set  id = ?, titulo = ?, categoria = ?, postagem = ?");
         
-        //pstmt.setId(1, a.getId());
-        //pstmt.setString(2, a.getTitulo());
-        /*pstmt.setCategoria(3, a.getCategoria());
-        pstmt.setPostagem(4, a.getPostagem());*/
+        pstmt.setInt(1, a.getId());
+        pstmt.setString(2, a.getTitulo());
+        pstmt.setInt(3, a.getCategoria().getId());
+        pstmt.setInt(4, a.getPostagem().getId());
         
         //executa uma atualização/alteração
         pstmt.executeUpdate();
