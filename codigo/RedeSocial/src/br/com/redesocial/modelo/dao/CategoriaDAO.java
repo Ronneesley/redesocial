@@ -88,9 +88,33 @@ public class CategoriaDAO extends DAOCRUDBase<Categoria> {
     }
 
 
+   /**
+     * Método que lista uma categoria já cadastrada no banco de dados
+     * @author José Gilvan
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Override
     public List listar() throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    Connection conexao = getConexao();
+        
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("select * from categorias order by data desc");
+        
+        ResultSet rs;
+        rs = pstmt.executeQuery();
+        
+        List lista;
+        lista = new ArrayList();
+        
+        while (rs.next()){
+            Categoria c = new Categoria();
+            pstmt.setString(1, c.getDescricao());
+            pstmt.setInt(2, c.getId());
+        
+            lista.add(c);
+        }
+        
+        return lista;
     }
     
     /**
