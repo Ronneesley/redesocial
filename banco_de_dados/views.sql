@@ -193,8 +193,7 @@ create view publico_alvo as
 (SELECT
     count(*) as quantidade, YEAR(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS(data_nascimento))) AS idade
 FROM
-    usuarios
-    
+    usuarios    
     group by idade
     order by quantidade desc);
     
