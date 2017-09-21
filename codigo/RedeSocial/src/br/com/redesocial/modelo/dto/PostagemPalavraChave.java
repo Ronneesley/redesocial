@@ -24,6 +24,10 @@ public class PostagemPalavraChave {
         this.palavra_chave = palavra_chave;
     }
 
+    public PostagemPalavraChave() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     /**
      * Função que retorna o identificador de uma postagem
      * @return identificador
