@@ -12,7 +12,7 @@ package br.com.redesocial.modelo.dto;
 public class PostagemPalavraChave {
     
     private Postagem postagem;
-    private PalavraChave palavra_chave;
+    private PalavraChave palavraChave;
 
     public PostagemPalavraChave() {
     }
@@ -20,11 +20,11 @@ public class PostagemPalavraChave {
      /**
      * Construtor da classe PostagemPalavraChave com dois parâmetros
      * @param postagem identificador da postagem
-     * @param palavra_chave nome desejado para a PalavraChave
+     * @param palavraChave nome desejado para a PalavraChave
      */
-    public PostagemPalavraChave(Postagem postagem, PalavraChave palavra_chave) {
+    public PostagemPalavraChave(Postagem postagem, PalavraChave palavraChave) {
         this.postagem = postagem;
-        this.palavra_chave = palavra_chave;
+        this.palavraChave = palavraChave;
     }
 
     /**
@@ -44,18 +44,18 @@ public class PostagemPalavraChave {
     }
 
     /**
-     * Função que retorna o identificador de uma palavra_chave
+     * Função que retorna o identificador de uma palavraChave
      * @return identificador
      */
     public PalavraChave getPalavraChave() {
-        return palavra_chave;
+        return palavraChave;
     }
     /**
-     * Função que modifica o nome da palavra_chave
-     * @param palavra_chave novo nome da palavra_chave
+     * Função que modifica o nome da palavraChave
+     * @param palavraChave novo nome da palavraChave
      */
-    public void setPalavraChave(PalavraChave palavra_chave) {
-        this.palavra_chave = palavra_chave;
+    public void setPalavraChave(PalavraChave palavraChave) {
+        this.palavraChave = palavraChave;
     }
     
     
