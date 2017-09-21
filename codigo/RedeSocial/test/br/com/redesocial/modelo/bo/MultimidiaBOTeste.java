@@ -153,8 +153,12 @@ public class MultimidiaBOTeste {
             final int qtde = 10;
             for (int i = 0; i < 10; i++){
                 Multimidia multimidia = new Multimidia();
-                multimidia.setMidia(Utilitarios.lerArquivo(new File("../../../../../../nome_arquivo.txt")));
+                multimidia.setMidia(Utilitarios.lerArquivo(new File("../../arquivos_teste/nome_arquivo.txt")));
                 multimidia.setTipoConteudo("foto");
+                calendario.set(2017, 8, 20, 8, 0, 0);
+                multimidia.setData(calendario.getTime());
+                multimidia.setAlbum(album);
+
 
                 try {
                     bo.inserir(multimidia);
