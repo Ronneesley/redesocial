@@ -116,7 +116,7 @@ public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
      * @param m as multimídias a serem alteradas
      * @throws Exception possíveis exceções que podem acontecer
      */
-   @Override
+  @Override
     public void alterar(Multimidia m) throws Exception { 
         Connection conexao = getConexao();
         
@@ -126,8 +126,9 @@ public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
         
         pstmt.setBytes(1, m.getMidia());
         pstmt.setString(2, m.getTipoConteudo());
-        pstmt.setInt(3, m.getAlbum().getId());
-        pstmt.setDate(4, new java.sql.Date(m.getData().getTime()));
+        pstmt.setDate(3, new java.sql.Date(m.getData().getTime()));
+        pstmt.setInt(4, m.getAlbum().getId());
+        
         
         //executa uma atualização/alteração
         pstmt.executeUpdate();
