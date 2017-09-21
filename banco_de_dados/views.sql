@@ -20,7 +20,6 @@
  */
  CREATE VIEW quantidade_de_comentarios_do_usuario AS
 	(SELECT
-		`usuarios`.`id` AS `Usuário Id`,
 	 	`usuarios`.`nome` AS `Usuário`,
 		COUNT(*) AS `Qtde. Comentários`
 		
