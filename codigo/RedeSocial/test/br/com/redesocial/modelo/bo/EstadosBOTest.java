@@ -185,6 +185,8 @@ public class EstadosBOTest {
             for (int i = 0; i < 3; i++) {
                 Estado estado = new Estado();
                 estado.setNome("Goiás");
+                pais.setNome("Brasil");
+                
 
                 try {
                     estadoBO.inserir(estado);
