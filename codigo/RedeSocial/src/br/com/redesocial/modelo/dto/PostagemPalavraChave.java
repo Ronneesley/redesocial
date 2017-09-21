@@ -13,6 +13,9 @@ public class PostagemPalavraChave {
     
     private Postagem postagem;
     private PalavraChave palavra_chave;
+
+    public PostagemPalavraChave() {
+    }
     
      /**
      * Construtor da classe PostagemPalavraChave com dois parâmetros

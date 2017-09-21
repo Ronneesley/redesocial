@@ -88,8 +88,8 @@ public class PostagemPalavraChaveDAO extends DAOBase {
         
         while(rs.next()){
             PostagemPalavraChave ppc = new PostagemPalavraChave();
-            /*ppc.setPostagem(postagemDAO.selecionar(rs.getInt("postagem")));
-            ppc.setPalavraChave(palavrachaveDAO.selecionar(rs.getInt("palavra_chave")));*/
+            ppc.setPostagem(postagemDAO.selecionar(rs.getInt("postagem")));
+            ppc.setPalavraChave(palavrachaveDAO.selecionar(rs.getInt("palavra_chave")));
         }
         return lista;
     }
