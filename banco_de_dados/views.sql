@@ -20,7 +20,7 @@
  */
  CREATE VIEW quantidade_de_comentarios_do_usuario AS
 	(SELECT
-		`usuarios`.`nome` AS `Usuário`,
+	 	`usuarios`.`nome` AS `Usuário`,
 		COUNT(*) AS `Qtde. Comentários`
 		
 	FROM 
@@ -130,10 +130,10 @@ ORDER BY usuarios.nome;
  * @author Adallberto Lucena Moura
  */
 CREATE VIEW contador_cidade AS
-SELECT e.nome as Estado, p.nome as Pais, COUNT(*) as Quantidade  FROM estados e JOIN cidades c
+SELECT e.id as Id_Estado, e.nome as Estado, p.nome as Pais, COUNT(*) as Quantidade  FROM estados e JOIN cidades c
 ON e.id = c.estado right join paises p on e.pais = p.id
 GROUP BY e.nome, p.nome
-ORDER BY p.nome;
+ORDER BY e.nome, p.nome;
 
 /**
 *View para mostrar a quantidade de Postagens por data
@@ -184,6 +184,7 @@ LEFT JOIN aportes ON aportes.postagem = postagens.id
 LEFT JOIN artigos ON artigos.postagem = postagens.id
 GROUP BY usuarios.nome;
 
+<<<<<<< HEAD
 
 /**
  * View do intervalo de idades segundo o painel final (administrativo)
@@ -211,3 +212,19 @@ CREATE VIEW `intervalo_idades_com_percentual` AS
 	union
 	select '65+' as intervalo, sum(quantidade) as qtde, (select sum(quantidade))*100/(select sum(quantidade) 
 	from publico_alvo)as  percentual from publico_alvo where idade > 65;
+=======
+/**
+ * View para mostrar a quantidade de publico alvo por idade
+ * @author Willian
+ */
+ 
+create view publico_alvo as
+(SELECT
+    count(*) as quantidade, YEAR(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS(data_nascimento))) AS idade
+FROM
+    usuarios    
+    group by idade
+    order by quantidade desc);
+    
+    
+>>>>>>> 3008255646862039faa6eec7ca1e4da91e314eae

@@ -91,23 +91,23 @@ public class ArtigoBOTest {
 
         try{
             
-        List existentes = bo.listar();
-        int qtdeExistentes = existentes.size();
-            
-        Artigo artigo2 = new Artigo();
+            List existentes = bo.listar();
+            int qtdeExistentes = existentes.size();
 
-        artigo2.setIdioma("Ingles");       
-        artigo2.setRevista("SBIS");
-        artigo2.setISSN("33333333");
-        artigo2.setAutor("Ciencias da terra"); 
-        Calendar calendario = Calendar.getInstance();
-        calendario.set(1988, 2, 7, 0, 0, 0);            
-        artigo2.setData(calendario.getTime());
-        artigo2.setAreaConhecimento("Ciencias da terra");
-        artigo2.setTitulo("Título teste 1");
-        artigo2.setResumo("Em design gráfico e editoração, Lorem ipsum é um texto utilizado para preencher o espaço de texto em publicações (jornais, revistas, e websites), com a finalidade de verificar o lay-out, tipografia e formatação antes de utilizar conteúdo real. Muitas vezes este texto também é utilizado em catálogos de tipografia para demonstrar textos e títulos escritos com as fontes.");
-        artigo2.setURL("www.artigo.com.br");
-        artigo2.setArtigo(Utilitarios.lerArquivo(new File("../../arquivos_teste/nome_arquivo.txt")));
+            Artigo artigo2 = new Artigo();
+
+            artigo2.setIdioma("Ingles");       
+            artigo2.setRevista("SBIS");
+            artigo2.setISSN("33333333");
+            artigo2.setAutor("Ciencias da terra"); 
+            Calendar calendario = Calendar.getInstance();
+            calendario.set(1988, 2, 7, 0, 0, 0);            
+            artigo2.setData(calendario.getTime());
+            artigo2.setAreaConhecimento("Ciencias da terra");
+            artigo2.setTitulo("Título teste 1");
+            artigo2.setResumo("Em design gráfico e editoração, Lorem ipsum é um texto utilizado para preencher o espaço de texto em publicações (jornais, revistas, e websites), com a finalidade de verificar o lay-out, tipografia e formatação antes de utilizar conteúdo real. Muitas vezes este texto também é utilizado em catálogos de tipografia para demonstrar textos e títulos escritos com as fontes.");
+            artigo2.setURL("www.artigo.com.br");
+            artigo2.setArtigo(Utilitarios.lerArquivo(new File("../../arquivos_teste/nome_arquivo.txt")));
 
         
         try{

@@ -91,14 +91,19 @@
                         <img src="logo.png" alt="Logo" class="logo" />
                     </div>
                     <h1>LOGIN:</h1>
+                    
+                    ${mensagem}
+                    
                     <form action="./LoginControle?operacao=Logar" method="post">
                         <div class="campos">
-                            <input type="text" placeholder="Telefone ou E-mail" class="inputCampo" name="login" />
+                            <input type="text" placeholder="Telefone ou E-mail" class="inputCampo" name="email" />
                             <input type="password" placeholder="***Senha***" class="inputCampo" name="senha" />
+                            
                             <div class="button">
                                 <input type="button" class="botao" value="ESQUECEU A SENHA?" />
                                 <input type="submit" class="botao" value="ENTRAR" />
                             </div>
+                            
                             <div class="button">
                                 <input type="button" class="botao" value="REGISTRAR-SE" style="margin-left: 100px; border-radius: 5px;" />
                             </div>    

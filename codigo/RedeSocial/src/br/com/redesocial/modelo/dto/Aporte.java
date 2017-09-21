@@ -56,7 +56,12 @@ public class Aporte {
     public void setTitulo(String titulo){
         this.titulo = titulo;
         
-    }   
+    }
+    
+    public String getTitulo(){
+        return titulo;
+    }
+    
     /**
      * Função que retorna categoria responsável pela criação do aporte
      * @return categoria do aporte

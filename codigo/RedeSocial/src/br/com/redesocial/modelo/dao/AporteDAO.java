@@ -81,21 +81,50 @@ public class AporteDAO extends DAOCRUDBase<Aporte>  {
         Connection conexao = getConexao();
         
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("update aporte set  id = ?, titulo = ?, categoria = ?, postagem = ?");
+        pstmt = conexao.prepareStatement("update aporte set  titulo = ?, categoria = ?, postagem = ?, id = ?");
         
-        //pstmt.setId(1, a.getId());
-        //pstmt.setString(2, a.getTitulo());
-        /*pstmt.setCategoria(3, a.getCategoria());
-        pstmt.setPostagem(4, a.getPostagem());*/
+        pstmt.setString(1, a.getTitulo());
+        pstmt.setInt(2, a.getCategoria().getId());
+        pstmt.setInt(3, a.getPostagem().getId());
+        pstmt.setInt(4, a.getId());
         
         //executa uma atualização/alteração
         pstmt.executeUpdate();
         
     }
-
+    
+    /**
+     * Método que seleciona um aporte já cadastrada no banco de dados
+     * @author Warley
+     * @param id identificador do aportes
+     * @return Aporte selecionado no banco de dados
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Override
-    public Aporte selecionar(int id) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Aporte selecionar(int id) throws Exception{
+        Connection conexao = getConexao();
+
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("select * from aportes where id = ?");
+        pstmt.setInt(1, id);
+
+        ResultSet rs;
+        rs = pstmt.executeQuery();
+
+        if (rs.next()){
+            Aporte c = new Aporte();
+            CategoriaDAO categoriaDAO = new CategoriaDAO();
+            PostagemDAO postagemDAO = new PostagemDAO();
+            
+            c.setId(rs.getInt("id"));
+            c.setTitulo(rs.getString("titulo"));
+            c.setCategoria(categoriaDAO.selecionar(rs.getInt("categoria")));
+            c.setPostagem(postagemDAO.selecionar(rs.getInt("postagem")));
+
+            return c;
+        } else {
+            return null;
+        }
     }
 
     @Override
