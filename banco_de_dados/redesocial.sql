@@ -421,6 +421,29 @@ CREATE TABLE IF NOT EXISTS `redesocial`.`artigos` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+-- -----------------------------------------------------
+-- Table `redesocial`.`autores`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `redesocial`.`autores` ;
+
+CREATE TABLE IF NOT EXISTS `redesocial`.`autores` (
+  `usuarios` INT NOT NULL,
+  `artigos` INT NOT NULL,
+  PRIMARY KEY (`usuarios`, `artigos`),
+  INDEX `fk_usuarios_has_artigos_artigos1_idx` (`artigos` ASC),
+  INDEX `fk_usuarios_has_artigos_usuarios1_idx` (`usuarios` ASC),
+  CONSTRAINT `fk_usuarios_has_artigos_usuarios1`
+    FOREIGN KEY (`usuarios`)
+    REFERENCES `redesocial`.`usuarios` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_usuarios_has_artigos_artigos1`
+    FOREIGN KEY (`artigos`)
+    REFERENCES `redesocial`.`artigos` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
