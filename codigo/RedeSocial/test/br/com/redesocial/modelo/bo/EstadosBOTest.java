@@ -150,70 +150,66 @@ public class EstadosBOTest {
     }
     
 
-/**
+    /**
       * criação do método listar Estados
       */
- @Test
- public void testMetodoListar() throws Exception {
-     
+    @Test
+    public void testMetodoListar() throws Exception {
+
         /**
-        * criar país
-        */
+         * criar país
+         */
         Pais pais = new Pais();
         pais.setNome("Brasil");
-        
+
         /**
          * inserir país
          */
         PaisBO paisBO = new PaisBO();
         paisBO.inserir(pais);
-        
-        
+
         /**
          * criar estado
          */
         EstadoBO estadoBO = new EstadoBO();
+        /**
+         * função listar estados
+         */
+        try {
+            List existentes = estadoBO.listar();
+            int qtdeExistentes = existentes.size();
+            final int qtde = 3;
             /**
-              * função listar estados
-              */
-            try {
-                List existentes = estadoBO.listar();
-                int qtdeExistentes = existentes.size();
-             
-                final int qtde = 3;
-                    /**
-                     * inserir novo estado
-                     */
-                    for (int i = 0; i < 3; i++){
-                        Estado estado = new Estado();
-                        estado.setNome("Goiás");
-                    
+             * inserir novo estado
+             */
+            for (int i = 0; i < 3; i++) {
+                Estado estado = new Estado();
+                estado.setNome("Goiás");
 
-            try {
-                estadoBO.inserir(estado);
+                try {
+                    estadoBO.inserir(estado);
                 } catch (Exception ex) {
                     /**
-                    * mensagem caso a inserção falhe
-                    */
-                     fail("Falha ao inserir um estado: " + ex.getMessage());
+                     * mensagem caso a inserção falhe
+                     */
+                    fail("Falha ao inserir um estado: " + ex.getMessage());
                 }
             }
 
-        /**
-         * Listar Estados existentes
-         */            
-        List existentesFinal = estadoBO.listar();
-        
+            /**
+             * Listar Estados existentes
+             */
+            List existentesFinal = estadoBO.listar();
+
             int qtdeExistentesFinal = existentesFinal.size();
             int diferenca = qtdeExistentesFinal - qtdeExistentes;
-            
 
             assertEquals(qtde, diferenca);
-        } catch (Exception ex){
+        } catch (Exception ex) {
             /**
              * Mensagem caso haja um erro na listagem de Estados
              */
             fail("Erro ao listar: " + ex.getMessage());
         }
     }
- }
+}
