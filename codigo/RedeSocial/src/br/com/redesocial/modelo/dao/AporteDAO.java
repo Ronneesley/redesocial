@@ -92,10 +92,34 @@ public class AporteDAO extends DAOCRUDBase<Aporte>  {
         pstmt.executeUpdate();
         
     }
-
+    
+    /**
+     * Método que seleciona um aporte já cadastrada no banco de dados
+     * @author Warley
+     * @param id identificador do aporte
+     * @return Aporte selecionada no banco de dados
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Override
-    public Aporte selecionar(int id) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Aporte selecionar(int id) throws Exception{
+        Connection conexao = getConexao();
+
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("select * from aportes where id = ?");
+        pstmt.setInt(1, id);
+
+        ResultSet rs;
+        rs = pstmt.executeQuery();
+
+        if (rs.next()){
+            Aporte c = new Aporte();
+            c.setId(rs.getInt("id"));
+            c.setTitulo(rs.getString("titulo"));
+
+            return c;
+        } else {
+            return null;
+        }
     }
 
     @Override
