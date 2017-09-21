@@ -187,6 +187,8 @@ GROUP BY usuarios.nome;
 /**
  * View para mostrar a quantidade de publico alvo por idade
  * @author Willian
+ */
+ 
 create view publico_alvo as
 (SELECT
     count(*) as quantidade, YEAR(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS(data_nascimento))) AS idade
