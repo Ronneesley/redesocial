@@ -39,7 +39,7 @@ public class LoginControle extends HttpServlet {
                     break;
             }
         } catch (Exception ex){
-            
+            ex.printStackTrace();
         }
     }
 
@@ -83,11 +83,11 @@ public class LoginControle extends HttpServlet {
     }// </editor-fold>
 
     private void logar(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        String nomeUsuario = request.getParameter("usuario");
+        String email = request.getParameter("email");
         String senha = request.getParameter("senha");
         
         UsuarioBO bo = new UsuarioBO();
-        Usuario usuario = bo.logar(nomeUsuario, senha);
+        Usuario usuario = bo.logar(email, senha);
         
         if (usuario != null){
             request.setAttribute("usuario", usuario);
@@ -97,6 +97,8 @@ public class LoginControle extends HttpServlet {
             RequestDispatcher rd = request.getRequestDispatcher("paginas/layout.jsp");
             rd.forward(request, response);
         } else {
+            request.setAttribute("mensagem", "Usuário ou senha inválidos");
+            
             RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
             rd.forward(request, response);
         }
