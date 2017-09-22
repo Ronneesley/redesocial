@@ -10,9 +10,9 @@
 \contentsline {subsection}{\numberline {3.3}Resultado}{5}
 \contentsline {section}{\numberline {4}SummerNote}{5}
 \contentsline {subsection}{\numberline {4.1}Vantagens}{5}
-\contentsline {subsection}{\numberline {4.2}Como utilizar?}{5}
+\contentsline {subsection}{\numberline {4.2}Como utilizar?}{6}
 \contentsline {subsection}{\numberline {4.3}Resultado}{6}
-\contentsline {section}{\numberline {5}Bootstrap WYSIWYG editor}{7}
-\contentsline {subsection}{\numberline {5.1}Vantagens}{7}
+\contentsline {section}{\numberline {5}Bootstrap WYSIWYG editor}{6}
+\contentsline {subsection}{\numberline {5.1}Vantagens}{6}
 \contentsline {subsection}{\numberline {5.2}Como utilizar?}{7}
 \contentsline {subsection}{\numberline {5.3}Resultado}{10}
