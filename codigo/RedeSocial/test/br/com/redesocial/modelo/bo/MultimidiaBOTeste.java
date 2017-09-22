@@ -25,7 +25,7 @@ public class MultimidiaBOTeste {
      * Método de teste responsável pela inserção de multímidia  no banco de dados
      * @author Lucas Azevedo
      */
-    
+  
     @Test
     public void testMetodoInserir() {
         /**
@@ -153,12 +153,8 @@ public class MultimidiaBOTeste {
             final int qtde = 10;
             for (int i = 0; i < 10; i++){
                 Multimidia multimidia = new Multimidia();
-                multimidia.setMidia(Utilitarios.lerArquivo(new File("../../arquivos_teste/nome_arquivo.txt")));
+                multimidia.setMidia(Utilitarios.lerArquivo(new File("../../../../../../nome_arquivo.txt")));
                 multimidia.setTipoConteudo("foto");
-                calendario.set(2017, 8, 20, 8, 0, 0);
-                multimidia.setData(calendario.getTime());
-                multimidia.setAlbum(album);
-
 
                 try {
                     bo.inserir(multimidia);
@@ -318,13 +314,16 @@ public class MultimidiaBOTeste {
         }
         
     }
-	
-@Test
-    public void testMetodoAlterar() {
+
+  @Test
+    public void testMetodoAlterar() throws Exception {
+        MultimidiaBO bo = new MultimidiaBO();
+        
+        MultimidiaBO multimidiaBO = new MultimidiaBO();
+        
             Pais pais = new Pais();
             pais.setNome("Brasil");        
-        
-	try {
+       
             PaisBO paisBO = new PaisBO();
             paisBO.inserir(pais);
 
@@ -360,13 +359,13 @@ public class MultimidiaBOTeste {
             UsuarioBO usuarioBO = new UsuarioBO();
             usuarioBO.inserir(usuario);
             
-            AlbumBO bo = new AlbumBO();           		
+            AlbumBO albumbo = new AlbumBO();           		
             Album album = new Album();
             album.setNome("California");
             calendario.set(2016, 8, 29, 0, 0, 0);
             album.setData(calendario.getTime()); 
             album.setUsuario(usuario);
-            bo.inserir(album); 
+            albumbo.inserir(album); 
             
             AlbumBO albumBO = new AlbumBO();
             albumBO.inserir(album);
@@ -379,17 +378,26 @@ public class MultimidiaBOTeste {
             calendario.set(2017, 8, 20, 8, 0, 0);
             multimidia.setData(calendario.getTime());
             mult.inserir(multimidia);
-        } catch (Exception ex) {
             
-             /**
-             * Mensagem de erro caso não insira uma multímida no banco de dados
-             */ 
-            fail("Falha ao inserir uma multimidia: " + ex.getMessage());
-        }		
         try {
-            MultimidiaBO bo = new MultimidiaBO();
+            bo.inserir(multimidia);
         } catch (Exception ex) {
             fail("Falha ao inserir uma multimidia: " + ex.getMessage());
+        }
+            
+            //Mudança dos dados
+            
+            multimidia.setAlbum(album);
+            multimidia.setMidia(Utilitarios.lerArquivo(new File("../../arquivos_teste/nome_arquivo.txt")));
+            multimidia.setTipoConteudo("foto");
+            calendario.set(2017, 8, 20, 8, 0, 0);
+            multimidia.setData(calendario.getTime());
+            mult.inserir(multimidia);
+         
+        try {
+            bo.alterar(multimidia);
+        } catch (Exception ex) {
+            fail("Falha ao alterar a multimidia: " + ex.getMessage());
         }
     }
 }

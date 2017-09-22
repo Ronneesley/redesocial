@@ -36,8 +36,8 @@ public class PostagemPalavraChaveDAO extends DAOBase {
             PostagemDAO postagemDAO = new PostagemDAO();
             PalavraChaveDAO palavraChaveDAO = new PalavraChaveDAO();
 
-            /*ppc.setPostagem(postagemDAO.selecionar(rs.getInt("postagem")));
-            ppc.setPalavraChave(palavraChaveDAO.selecionar(rs.getInt("palavra_chave")));*/
+            ppc.setPostagem(postagemDAO.selecionar(rs.getInt("postagem")));
+            ppc.setPalavraChave(palavraChaveDAO.selecionar(rs.getInt("palavra_chave")));
     
             return ppc;
         }else{
@@ -88,8 +88,8 @@ public class PostagemPalavraChaveDAO extends DAOBase {
         
         while(rs.next()){
             PostagemPalavraChave ppc = new PostagemPalavraChave();
-            /*ppc.setPostagem(postagemDAO.selecionar(rs.getInt("postagem")));
-            ppc.setPalavraChave(palavrachaveDAO.selecionar(rs.getInt("palavra_chave")));*/
+            ppc.setPostagem(postagemDAO.selecionar(rs.getInt("postagem")));
+            ppc.setPalavraChave(palavrachaveDAO.selecionar(rs.getInt("palavra_chave")));
         }
         return lista;
     }

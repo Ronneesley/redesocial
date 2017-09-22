@@ -34,8 +34,17 @@ public class PalavraChaveDAO extends DAOCRUDBase<PalavraChave> {
     }
 
     @Override
-    public void alterar(PalavraChave dto) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    
+    public void alterar(PalavraChave p) throws Exception {
+        Connection conexao = getConexao();
+        
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("update palavras_chave (descricao) values(?)");
+
+        pstmt.setString(1, p.getDescricao());
+        pstmt.executeUpdate();
+
+        pstmt.executeUpdate();
     }
 
     /**
@@ -107,6 +116,10 @@ public class PalavraChaveDAO extends DAOCRUDBase<PalavraChave> {
         pstmt.setInt(1, id);
         pstmt.executeUpdate();
        }
-    }
+    
+    
+    
+}
+    
     
 

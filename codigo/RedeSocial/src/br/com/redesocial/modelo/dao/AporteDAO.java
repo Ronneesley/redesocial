@@ -96,8 +96,8 @@ public class AporteDAO extends DAOCRUDBase<Aporte>  {
     /**
      * Método que seleciona um aporte já cadastrada no banco de dados
      * @author Warley
-     * @param id identificador do aporte
-     * @return Aporte selecionada no banco de dados
+     * @param id identificador do aportes
+     * @return Aporte selecionado no banco de dados
      * @throws Exception possíveis exceções que podem acontecer
      */
     @Override
@@ -113,8 +113,13 @@ public class AporteDAO extends DAOCRUDBase<Aporte>  {
 
         if (rs.next()){
             Aporte c = new Aporte();
+            CategoriaDAO categoriaDAO = new CategoriaDAO();
+            PostagemDAO postagemDAO = new PostagemDAO();
+            
             c.setId(rs.getInt("id"));
             c.setTitulo(rs.getString("titulo"));
+            c.setCategoria(categoriaDAO.selecionar(rs.getInt("categoria")));
+            c.setPostagem(postagemDAO.selecionar(rs.getInt("postagem")));
 
             return c;
         } else {
@@ -124,7 +129,13 @@ public class AporteDAO extends DAOCRUDBase<Aporte>  {
 
     @Override
     public void excluir(int id) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Connection conexao = getConexao();
+        
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("delete from aporte where id = ?");
+        
+        pstmt.setInt(1, id);
+        pstmt.executeUpdate();
     }
 
     

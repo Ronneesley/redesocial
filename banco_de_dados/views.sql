@@ -20,7 +20,8 @@
  */
  CREATE VIEW quantidade_de_comentarios_do_usuario AS
 	(SELECT
-	 	`usuarios`.`nome` AS `Usuário`,
+	 	`usuarios`.`id` AS `Usuário Id`,
+		`usuarios`.`nome` AS `Usuário`,
 		COUNT(*) AS `Qtde. Comentários`
 		
 	FROM 
@@ -184,6 +185,35 @@ LEFT JOIN aportes ON aportes.postagem = postagens.id
 LEFT JOIN artigos ON artigos.postagem = postagens.id
 GROUP BY usuarios.nome;
 
+<<<<<<< HEAD
+
+/**
+ * View do intervalo de idades segundo o painel final (administrativo)
+ * @author Salmi Nunes de Paula, Willian Walace
+ */
+
+CREATE VIEW `intervalo_idades_com_percentual` AS 
+	select '-18' as intervalo, sum(quantidade) as qtde, (select sum(quantidade))*100/(select sum(quantidade) 
+	from publico_alvo)as  percentual from publico_alvo where idade < 18
+	union
+	select '18 - 24' as intervalo, sum(quantidade) as qtde, (select sum(quantidade))*100/(select sum(quantidade) 
+	from publico_alvo)as  percentual from publico_alvo where idade >= 18 and idade <= 24
+	union
+	select '25 - 34' as intervalo, sum(quantidade) as qtde, (select sum(quantidade))*100/(select sum(quantidade) 
+	from publico_alvo)as  percentual from publico_alvo where idade >= 25 and idade <= 34
+	union
+	select '35 - 44' as intervalo, sum(quantidade) as qtde, (select sum(quantidade))*100/(select sum(quantidade) 
+	from publico_alvo)as  percentual from publico_alvo where idade >= 35 and idade <= 44
+	union
+	select '45 - 54' as intervalo, sum(quantidade) as qtde, (select sum(quantidade))*100/(select sum(quantidade) 
+	from publico_alvo)as  percentual from publico_alvo where idade >= 45 and idade <= 54
+	union
+	select '55 - 64' as intervalo, sum(quantidade) as qtde, (select sum(quantidade))*100/(select sum(quantidade) 
+	from publico_alvo)as  percentual from publico_alvo where idade >= 55 and idade <= 64
+	union
+	select '65+' as intervalo, sum(quantidade) as qtde, (select sum(quantidade))*100/(select sum(quantidade) 
+	from publico_alvo)as  percentual from publico_alvo where idade > 65;
+=======
 /**
  * View para mostrar a quantidade de publico alvo por idade
  * @author Willian
@@ -198,3 +228,4 @@ FROM
     order by quantidade desc);
     
     
+>>>>>>> 3008255646862039faa6eec7ca1e4da91e314eae
