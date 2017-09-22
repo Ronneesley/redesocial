@@ -5,6 +5,7 @@ import br.com.redesocial.modelo.dto.Categoria;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
 
