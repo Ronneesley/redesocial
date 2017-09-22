@@ -13,6 +13,6 @@
 \contentsline {subsection}{\numberline {4.2}Como utilizar?}{6}
 \contentsline {subsection}{\numberline {4.3}Resultado}{6}
 \contentsline {section}{\numberline {5}Bootstrap WYSIWYG editor}{6}
-\contentsline {subsection}{\numberline {5.1}Vantagens}{6}
+\contentsline {subsection}{\numberline {5.1}Vantagens}{7}
 \contentsline {subsection}{\numberline {5.2}Como utilizar?}{7}
 \contentsline {subsection}{\numberline {5.3}Resultado}{10}

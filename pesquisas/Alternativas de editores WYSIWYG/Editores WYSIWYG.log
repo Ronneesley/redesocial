@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.7.28)  22 SEP 2017 19:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.7.28)  22 SEP 2017 19:36
 entering extended mode
 **"./Editores WYSIWYG.tex"
 ("Editores WYSIWYG.tex"
@@ -841,15 +841,15 @@ File: recursos/TinyMCE/TinyMCE.png Graphic file (type png)
 Package pdftex.def Info: recursos/TinyMCE/TinyMCE.png used on input line 390.
 (pdftex.def)             Requested size: 369.88582pt x 154.99725pt.
  [3 <./recursos/TinyMCE/TinyMCE.png>]
-(recursos/NicEdit/NicEdit.html)
-<recursos/NicEdit/NicEdit.jpg, id=26, 548.0475pt x 305.14pt>
+(recursos/NicEdit/NicEdit.html [4])
+<recursos/NicEdit/NicEdit.jpg, id=29, 548.0475pt x 305.14pt>
 File: recursos/NicEdit/NicEdit.jpg Graphic file (type jpg)
 
 <use recursos/NicEdit/NicEdit.jpg>
 Package pdftex.def Info: recursos/NicEdit/NicEdit.jpg used on input line 422.
 (pdftex.def)             Requested size: 369.88582pt x 205.94662pt.
- [4] (recursos/SummerNote/Step1.html [5 <./recursos/NicEdit/NicEdit.jpg>]) (rec
-ursos/SummerNote/Step2.html)
+ [5 <./recursos/NicEdit/NicEdit.jpg>]
+(recursos/SummerNote/Step1.html) (recursos/SummerNote/Step2.html)
 (recursos/SummerNote/Step3.html) (recursos/SummerNote/Step4.html)
 <recursos/SummerNote/SummerNote.jpg, id=33, 747.79375pt x 361.35pt>
 File: recursos/SummerNote/SummerNote.jpg Graphic file (type jpg)
@@ -894,10 +894,10 @@ Overfull \hbox (38.175pt too wide) in paragraph at lines 516--517
 
 [10 <./recursos/modelo/Bootstrap.png>] ("Editores WYSIWYG.aux") ) 
 Here is how much of TeX's memory you used:
- 6966 strings out of 493329
- 91112 string characters out of 3139063
- 390612 words of memory out of 3000000
- 10340 multiletter control sequences out of 15000+200000
+ 6971 strings out of 493329
+ 91168 string characters out of 3139063
+ 391612 words of memory out of 3000000
+ 10345 multiletter control sequences out of 15000+200000
  12140 words of font info for 45 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,6n,58p,1078b,2174s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -910,7 +910,7 @@ ic/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
 tt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1200.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on "Editores WYSIWYG.pdf" (11 pages, 268385 bytes).
+Output written on "Editores WYSIWYG.pdf" (11 pages, 269118 bytes).
 PDF statistics:
  78 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

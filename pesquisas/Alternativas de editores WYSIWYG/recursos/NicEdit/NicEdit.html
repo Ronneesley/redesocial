@@ -1,18 +1,24 @@
-<html>
-  <head>
-    <title>CKEditor</title>
-    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
-    <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
-    <script type="text/javascript">
-      window.onload = function()  {
-        CKEDITOR.replace( 'editor1' );
-     };
-    </script>
-  </head>
-  <body>
-    <form action="request.php" method="post">
-      <textarea id="editor1" name="editor1">&lt;p&gt;Valor inicial.&lt;/p&gt;</textarea>
-      <input type="submit" value="Submit" />
-    </form>  
-  </body>
-</html>
+<div id="sample">
+  <script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js"></script> <script type="text/javascript">
+//<![CDATA[
+        bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+  //]]>
+  </script>
+  <h4>
+    First Textarea
+  </h4>
+  <textarea name="area1" cols="40">
+</textarea><br />
+  <h4>
+    Second Textarea
+  </h4>
+  <textarea name="area2" style="width: 100%;">
+       Some Initial Content was in this textarea
+</textarea><br />
+  <h4>
+    Third Textarea
+  </h4>
+  <textarea name="area3" style="width: 300px; height: 100px;">
+       HTML content default in textarea
+</textarea>
+</div>
