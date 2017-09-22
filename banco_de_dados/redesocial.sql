@@ -397,7 +397,6 @@ CREATE TABLE IF NOT EXISTS `redesocial`.`artigos` (
   `idioma` VARCHAR(100) NOT NULL,
   `revista` VARCHAR(100) NOT NULL,
   `issn` VARCHAR(200) NOT NULL,
-  `autor` VARCHAR(200) NOT NULL,
   `data` DATETIME NOT NULL,
   `area_conhecimento` TEXT NOT NULL,
   `titulo` VARCHAR(200) NOT NULL,
