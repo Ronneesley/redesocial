@@ -77,7 +77,7 @@ public class PostagemPalavraChaveDAO extends DAOBase {
         Connection conexao = getConexao();
         
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("Select * from postagens order by data desc");
+        pstmt = conexao.prepareStatement("select * from postagens_palavras_chave order by data desc");
         ResultSet rs;
         rs = pstmt.executeQuery();
         
