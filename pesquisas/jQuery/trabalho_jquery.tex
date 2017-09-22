@@ -1,0 +1,162 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[brazil]{babel}
+\usepackage{indentfirst}
+\usepackage{listings}
+\usepackage{url}
+\lstset{numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt}
+\RequirePackage{graphicx}
+\title{jQuery}
+\usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
+
+\usepackage{color}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=Octave,                 % the language of the code
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,	                   % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+\begin{document}
+\begin{titlepage}
+
+
+\begin{center}
+\begin{figure}[htb]
+		
+		\label{figura:LogoIF}
+	
+		\centering
+		\includegraphics[width=6cm]{logo.png} 
+\end{figure}
+
+
+Instituto Federal Goiano - Campus Ceres\\
+Bacharelado em Sistemas de Informação\\
+Prof. Me. Ronneesley Moura Teles\\\vspace{0.2cm}
+Davi Ildeu de Faria \\
+Marcos Antonio Arriel Rodrigues \\
+Paulo Henrique Rodrigues Araujo \\
+Salmi Nunes de Paula Junior \\
+Thalia Santos de Santana\\
+Warley Rodrigues de Andrade \\
+Wesley Morais Felix \\
+Willian Wallace de Matteus Silva\\\vspace{6.0cm}
+
+\textit{\textbf{\Large{jQuery}}}\\\vspace{0.5cm}
+\textit{\Large{Principais Funcionalidades}}\\\vspace{8.5cm}
+
+Setembro\\
+2017\\
+\end{center}
+\end{titlepage}
+
+
+
+\tableofcontents
+
+\newpage
+\begin{center}
+\textbf{\Large{O jQuery}}\\\vspace{0.5cm}
+\end{center}
+\section{O que é?}%GGN
+
+O jQuery trata-se de uma biblioteca de JavaScript com uma série de diversas funções, capazes de ajudar desenvolvedores. Considerada como uma biblioteca popular e padrão para programação \textit{front-end} (refere-se a interfaces de \textit{websites}), é mantida pela Fundação jQuery. De acordo com o site oficial é “[...] rápida, pequena e rica em recursos”. Ademais, acaba trabalhando com a manipulação de eventos, AJAX e HTML, proporcionando uma maior integração, compatibilidade e funcionamento nos mais variados navegadores. No caso de páginas \textit{web}, auxilia principalmente para o uso de JavaScript (JS) com interações HTML.
+
+A biblioteca foi criada em 2006, por John Resig, diante das frustrações decorrentes de códigos JS incompatíveis em navegadores diferentes. Para sua concepção, pensou-se em um agregado de funções com o intuito de resolver problemas mais complexos de serem resolvidos puramente com JavaScript.
+
+
+\section{Como incluir}%GGN
+
+Inicialmente, deve-se realizar o \textit{download} da versão mais recente (3.2.1) da biblioteca jQuery no site oficial (http://jquery.com).
+Depois, é necessária sua referência no cabeçalho da página HTML, conforme código abaixo:\vspace{0.3cm}
+
+\lstinputlisting{codigos/incluir.html} 
+
+\vspace{0.3cm}
+Ressalta-se que caminho do arquivo e o nome do \textit{.js} deve ser o mesmo usado ao baixar a biblioteca.
+
+\section{Função do \$}
+
+A função \$() permite selecionar elementos com maior facilidade, maior compatibilidade, com menos código e de maneira intuitiva.
+
+\begin{itemize}
+\item Código em JavaScript “Puro” \vspace{0.5cm}
+
+\lstinputlisting{codigos/cabecalho_js.js}
+
+O código acima adiciona um evento onde o id é “cabeçalho”. \vspace{0.5cm}
+
+\item Código com jQuery \vspace{0.5cm}
+
+\lstinputlisting{codigos/cabecalho_jquery.js}
+
+A sintaxe é bem menor, e a biblioteca se encarrega de encontrar o modo mais compatível para adicionar o evento ao elemento de id “cabecalho”.
+
+\end{itemize}
+
+\section{Alteração de CSS}%GGN
+\begin{itemize}
+
+\item Insira seu texto aqui;
+\end{itemize}
+
+\section{Função HTML()}%GGN
+\begin{itemize}
+
+\item Insira seu texto aqui;
+\end{itemize}
+
+\section{Função Append()}%GGN
+\begin{itemize}
+
+\item Insira seu texto aqui;
+\end{itemize}
+
+
+\section{Referências}
+\begin{enumerate}
+
+\item KHAN ACADEMY. \textbf{Pausa para a história: como John criou o jQuery?} Disponível em: $<$http://https://pt.khanacademy.org/computing/computer-pro
+gramming/html-js-jquery/jquery-dom-access/a/history-of-jquery$>$. Acesso em: 28 de setembro de 2017.
+
+\item ASTAH. \textbf{Astah Share Manual.} Disponível em: $<$http://astah.change-vision.com/en/files/help/share/current/index.html$>$. Acesso em: 30 de agosto de 2017.
+
+\item ASTAH. \textbf{Astah Share Release Notes.} Disponível em: $<$http://astah.
+net/release-notes/share$>$. Acesso em: 01 de setembro de 2017.
+
+\item ASTAH BLOG. \textbf{Astah Share 2.8 Released – Upload \& View diagrams on the web browser.}  Disponível em: $<$https://astahblog.com/
+2014/02/21/astah-share-2-8/$>$. Acesso em: 31 de agosto de 2017.
+
+\end{enumerate}
+
+\end{document}
