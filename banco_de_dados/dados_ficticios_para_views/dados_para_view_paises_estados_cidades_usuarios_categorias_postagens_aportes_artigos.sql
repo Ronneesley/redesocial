@@ -55,8 +55,15 @@ INSERT INTO `aportes` VALUES
 (4, 'Novidade!!', 4, 1);
 /*inserindo artigos*/
 INSERT INTO `artigos` VALUES
-(1,'PORTUGUES', 'ISTOE', '2530-1123', 'JONATAS', '2017-04-16', 'INFORMATICA', 'NANODEGREE', 'Proin vel turpis fringilla, congue mauris sit amet, interdum ante. Etiam ut massa eu odio bibendum ornare nec ac leo. Suspendisse sit amet nisi pulvinar, mollis felis ut, dapibus nunc. Sed eu convallis leo. Nunc et fringilla turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas scelerisque scelerisque porta.', 'www.istoe.com.br', LOAD_FILE("d:/git/redesocial/banco_de_dados/dados_ficticios_para_views/imagem.jpg"), 1, 1),
-(2,'PORTUGUES', 'VEJA', '2250-1003', 'JONATAS', '2017-07-10', 'INFORMATICA', 'APPS', 'Proin vel turpis fringilla, congue mauris sit amet, interdum ante. Etiam ut massa eu odio bibendum ornare nec ac leo. Suspendisse sit amet nisi pulvinar, mollis felis ut, dapibus nunc. Sed eu convallis leo. Nunc et fringilla turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas scelerisque scelerisque porta.', 'www.veja.com.br', LOAD_FILE("d:/git/redesocial/banco_de_dados/dados_ficticios_para_views/imagem.jpg"), 2, 2),
-(3,'PORTUGUES', 'EXAME', '2125-0023', 'JONATAS', '2017-09-06', 'INFORMATICA', 'PHP', 'Proin vel turpis fringilla, congue mauris sit amet, interdum ante. Etiam ut massa eu odio bibendum ornare nec ac leo. Suspendisse sit amet nisi pulvinar, mollis felis ut, dapibus nunc. Sed eu convallis leo. Nunc et fringilla turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas scelerisque scelerisque porta.', 'www.exame.com.br', LOAD_FILE("d:/git/redesocial/banco_de_dados/dados_ficticios_para_views/imagem.jpg"), 3, 3),
-(4,'PORTUGUES', 'REVISTA1', '8888-9999', 'JONATAS', '2017-09-15', 'INFORMATICA', 'JQUERY', 'Proin vel turpis fringilla', 'www.revista1.com.br', LOAD_FILE("d:/git/redesocial/banco_de_dados/dados_ficticios_para_views/imagem.jpg"), 1, 2),
-(5,'PORTUGUES', 'REVISTA2', '9999-9999', 'JONATAS', '2017-09-15', 'INFORMATICA', 'HTML', 'Proin vel turpis fringilla', 'www.revista2.com.br', LOAD_FILE("d:/git/redesocial/banco_de_dados/dados_ficticios_para_views/imagem.jpg"), 1, 1);
+(1,'PORTUGUES', 'ISTOE', '2530-1123', 'JONATAS', '2017-04-16', 'INFORMATICA', 'NANODEGREE', 'Proin vel turpis fringilla, congue mauris sit amet, interdum ante. Etiam ut massa eu odio bibendum ornare nec ac leo. Suspendisse sit amet nisi pulvinar, mollis felis ut, dapibus nunc. Sed eu convallis leo. Nunc et fringilla turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas scelerisque scelerisque porta.', 'www.istoe.com.br', ?, 1, 1),
+(2,'PORTUGUES', 'VEJA', '2250-1003', 'JONATAS', '2017-07-10', 'INFORMATICA', 'APPS', 'Proin vel turpis fringilla, congue mauris sit amet, interdum ante. Etiam ut massa eu odio bibendum ornare nec ac leo. Suspendisse sit amet nisi pulvinar, mollis felis ut, dapibus nunc. Sed eu convallis leo. Nunc et fringilla turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas scelerisque scelerisque porta.', 'www.veja.com.br', 2, 2),
+(3,'PORTUGUES', 'EXAME', '2125-0023', 'JONATAS', '2017-09-06', 'INFORMATICA', 'PHP', 'Proin vel turpis fringilla, congue mauris sit amet, interdum ante. Etiam ut massa eu odio bibendum ornare nec ac leo. Suspendisse sit amet nisi pulvinar, mollis felis ut, dapibus nunc. Sed eu convallis leo. Nunc et fringilla turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas scelerisque scelerisque porta.', 'www.exame.com.br', 3, 3),
+(4,'PORTUGUES', 'REVISTA1', '8888-9999', 'JONATAS', '2017-09-15', 'INFORMATICA', 'JQUERY', 'Proin vel turpis fringilla', 'www.revista1.com.br', 1, 2),
+(5,'PORTUGUES', 'REVISTA2', '9999-9999', 'JONATAS', '2017-09-15', 'INFORMATICA', 'HTML', 'Proin vel turpis fringilla', 'www.revista2.com.br', 1, 1);
+/*inserindo autores*/
+INSERT INTO `autores` VALUES
+(3, 5),
+(3, 5),
+(3, 5),
+(3, 5),
+(3, 5);
