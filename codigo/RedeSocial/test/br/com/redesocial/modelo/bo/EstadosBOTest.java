@@ -185,12 +185,12 @@ public class EstadosBOTest {
             for (int i = 0; i < 3; i++) {
                 Estado estado = new Estado();
                 estado.setNome("Goiás");
-                pais.setNome("Brasil");
+                estado.setPais(pais);
                 
 
                 try {
                     estadoBO.inserir(estado);
-                } catch (Exception ex) {
+                }catch (Exception ex) {
                     /**
                      * mensagem caso a inserção falhe
                      */
