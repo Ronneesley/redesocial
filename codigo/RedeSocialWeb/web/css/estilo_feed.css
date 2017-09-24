@@ -66,7 +66,6 @@ a:hover{
 	padding-bottom: 5px;
 	width: 30%;
 	height: 299px;
-	background-color: red;
 	text-align: center;
 	font-size:10px;
 	float: left;
@@ -138,7 +137,7 @@ a:hover{
 	padding-bottom: 15px;
 	margin-left:15px;
 	margin-top: 5px;
-	width: 45%;
+	width: 33%;
 	height: auto;
 	background-color:#F0F8FF;
 	border-top: 1px solid black;
