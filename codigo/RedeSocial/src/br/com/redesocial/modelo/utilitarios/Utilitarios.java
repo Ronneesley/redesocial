@@ -54,8 +54,9 @@ public class Utilitarios {
             }
             
         } else {
-            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
-            mensagemData = sdf.format(dataPostagem);
+            SimpleDateFormat diaHoraPostagem = new SimpleDateFormat("dd/MM/yyyy 'às' HH:mm");
+            
+            mensagemData = diaHoraPostagem.format(dataPostagem);
         }
 
         return mensagemData;

@@ -176,7 +176,7 @@ public class UtilitariosTest {
 
             String resultado = Utilitarios.diferencaHumanizada(data1, data2);
 
-            assertEquals("20/07/2017 12:00", resultado);
+            assertEquals("20/07/2017 às 12:00", resultado);
         } catch (Exception ex){
             fail(ex.getMessage());
         }
