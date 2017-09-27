@@ -426,23 +426,22 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `redesocial`.`autores` ;
 
 CREATE TABLE IF NOT EXISTS `redesocial`.`autores` (
-  `usuarios` INT NOT NULL,
-  `artigos` INT NOT NULL,
-  PRIMARY KEY (`usuarios`, `artigos`),
-  INDEX `fk_usuarios_has_artigos_artigos1_idx` (`artigos` ASC),
-  INDEX `fk_usuarios_has_artigos_usuarios1_idx` (`usuarios` ASC),
+  `usuario` INT NOT NULL,
+  `artigo` INT NOT NULL,
+  PRIMARY KEY (`usuario`, `artigo`),
+  INDEX `fk_usuarios_has_artigos_artigos1_idx` (`artigo` ASC),
+  INDEX `fk_usuarios_has_artigos_usuarios1_idx` (`usuario` ASC),
   CONSTRAINT `fk_usuarios_has_artigos_usuarios1`
-    FOREIGN KEY (`usuarios`)
+    FOREIGN KEY (`usuario`)
     REFERENCES `redesocial`.`usuarios` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_usuarios_has_artigos_artigos1`
-    FOREIGN KEY (`artigos`)
+    FOREIGN KEY (`artigo`)
     REFERENCES `redesocial`.`artigos` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
-
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
