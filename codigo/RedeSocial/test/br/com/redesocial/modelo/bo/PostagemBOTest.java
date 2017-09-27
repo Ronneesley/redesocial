@@ -163,6 +163,85 @@ public class PostagemBOTest {
         }
 
     }
+  
+/**
+ *@author Salmi Nunes
+ *Metodo alterar de postagem
+     * @throws java.lang.Exception
+ */        
+  @Test
+    public void testMetodoAlterar() throws Exception{
+        
+        Pais pais = new Pais();
+        pais.setNome("Brasil");
+        Postagem postagem1 = new Postagem();
+        Calendar calendario = Calendar.getInstance();
+        
+        try {
+            PaisBO paisBO = new PaisBO();
+            paisBO.inserir(pais);
+
+            Estado estado = new Estado();
+            estado.setNome("Goiás");
+            estado.setPais(pais);
+            
+            EstadoBO estadoBO = new EstadoBO();
+            estadoBO.inserir(estado);
+            
+            Cidade cidade = new Cidade();
+            cidade.setNome("Ceres");
+            cidade.setEstado(estado);
+            
+            CidadeBO cidadeBO = new CidadeBO();
+            cidadeBO.inserir(cidade);
+            
+            Usuario usuario = new Usuario();
+            usuario.setNome("Joao");
+            usuario.setDataCadastro(new Date());
+            usuario.setEmail("joao@gmail.com");
+            //usuario.setFoto();
+           
+            calendario.set(1988, 2, 7, 0, 0, 0);            
+            usuario.setDataNascimento(calendario.getTime());
+            usuario.setSenha("teste");
+            usuario.setSexo(Sexo.MASCULINO);
+            usuario.setStatus(true);
+            usuario.setTelefone("(62) 98419-0000");
+            usuario.setCidade(cidade);
+            
+            UsuarioBO usuarioBO = new UsuarioBO();
+            usuarioBO.inserir(usuario);
+
+            PostagemBO bo = new PostagemBO();
+
+            postagem1.setDescricao("Primeiro Comentario");
+            postagem1.setCurtidas(0);
+            postagem1.setUsuario(usuario);
+
+            calendario.set(2017, 7, 16, 21, 58, 0);
+            postagem1.setData(calendario.getTime());
+        
+            bo.inserir(postagem1);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            fail("Falha ao inserir uma postagem: " + ex.getMessage());            
+        }
+        
+        //alterando a descricao da postagem
+        postagem1.setDescricao("Teste Postagem");
+        postagem1.setCurtidas(3);
+        calendario.set(2017, 6, 15, 11, 48, 0);
+        postagem1.setData(calendario.getTime());
+
+        try {
+            PostagemBO bo = new PostagemBO();
+            bo.alterar(postagem1);
+        } catch (Exception ex) {
+            fail("Falha ao alterar postagem: " + ex.getMessage());
+        }
+    
+    }
+        
     
     /**
  *@author Wesley Morais Félix
