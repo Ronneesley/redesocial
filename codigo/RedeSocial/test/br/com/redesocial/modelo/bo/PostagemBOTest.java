@@ -217,6 +217,7 @@ public class PostagemBOTest {
             postagem1.setDescricao("Primeiro Comentario");
             postagem1.setCurtidas(0);
             postagem1.setUsuario(usuario);
+            postagem1.setVisualizacoes(10);
 
             calendario.set(2017, 7, 16, 21, 58, 0);
             postagem1.setData(calendario.getTime());
@@ -230,6 +231,7 @@ public class PostagemBOTest {
         //alterando a descricao da postagem
         postagem1.setDescricao("Teste Postagem");
         postagem1.setCurtidas(3);
+        postagem1.setVisualizacoes(5);
         calendario.set(2017, 6, 15, 11, 48, 0);
         postagem1.setData(calendario.getTime());
 
