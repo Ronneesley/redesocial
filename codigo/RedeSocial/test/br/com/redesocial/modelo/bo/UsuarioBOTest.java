@@ -139,10 +139,75 @@ public class UsuarioBOTest {
     
     }
    
-    @Test
-    public void testMetodoSelecionar() {
     
-    }    
+    /**
+     * Método de teste responsável por selecionar um usuario
+     * @author Salmi Nunes
+     */
+    @Test
+    
+    public void testMetodoSelecionar() {
+
+        //Criação e Inserção de Usuario no banco de dados
+        UsuarioBO usuariobo = new UsuarioBO();
+
+        try {
+            
+            for (int i = 0; i < 2; i++){
+                Pais pais = new Pais();
+                pais.setNome("Brasil");
+                
+                PaisBO paisBO = new PaisBO();
+                paisBO.inserir(pais);
+
+                Estado estado = new Estado();
+                estado.setNome("Goias");
+                estado.setPais(pais);
+
+                EstadoBO estadoBO = new EstadoBO();
+                estadoBO.inserir(estado);
+
+                Cidade cidade = new Cidade();
+                cidade.setNome("Rialma");
+                cidade.setEstado(estado);
+
+                CidadeBO cidadeBO = new CidadeBO();
+                cidadeBO.inserir(cidade);
+
+                Usuario usuario = new Usuario();
+                usuario.setNome("Junior");
+                usuario.setDataCadastro(new Date());
+                usuario.setEmail("junior@gmail.com");
+
+                Calendar calendario = Calendar.getInstance();
+                calendario.set(1998, 0, 8, 0, 0, 0);            
+                usuario.setDataNascimento(calendario.getTime());
+                usuario.setSenha("101010");
+                usuario.setSexo(Sexo.MASCULINO);
+                usuario.setStatus(true);
+                usuario.setTelefone("(62) 99000-0000");
+                usuario.setCidade(cidade);
+
+                
+                try {
+                    usuariobo.inserir(usuario);
+                } catch (Exception ex) {
+                    fail("Falha ao inserir um usuario: " + ex.getMessage());
+                }
+                
+                int idusuario = usuario.getId();
+                
+                Usuario usuarioSelecionado = usuariobo.selecionar(idusuario);
+                assertNotNull("Usuario não encontrado", usuarioSelecionado);
+                
+            }
+            
+        } catch (Exception ex){
+            fail("Erro ao selecionnar: " + ex.getMessage());
+        }
+    
+    }
+   
     /**
      * Método de teste responsável pela alteração de dados de um usuário no banco de dados
      * @author Gusttavo Nunes Gomes
