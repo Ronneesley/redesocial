@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.16)  22 SEP 2017 16:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.12)  29 SEP 2017 00:39
 entering extended mode
 **./trabalho_jquery.tex
 (trabalho_jquery.tex
-LaTeX2e <2016/03/31> patch level 3
-Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 75 language(s) loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo"
@@ -27,14 +27,14 @@ Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@posthook=\toks15
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
-File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
+File: t1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -246,6 +246,8 @@ File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+0219 (decimal 537)
    defining Unicode char U+021A (decimal 538)
    defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+0232 (decimal 562)
+   defining Unicode char U+0233 (decimal 563)
    defining Unicode char U+1E02 (decimal 7682)
    defining Unicode char U+1E03 (decimal 7683)
    defining Unicode char U+200C (decimal 8204)
@@ -266,12 +268,14 @@ File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+2039 (decimal 8249)
    defining Unicode char U+203A (decimal 8250)
    defining Unicode char U+2423 (decimal 9251)
+   defining Unicode char U+1E20 (decimal 7712)
+   defining Unicode char U+1E21 (decimal 7713)
 )
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
-File: ot1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
+File: ot1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -312,7 +316,7 @@ Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
-File: omsenc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
+File: omsenc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -336,7 +340,7 @@ Now handling font encoding U ...
    defining Unicode char U+2423 (decimal 9251)
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
-Package: amsmath 2016/06/28 v2.15d AMS math features
+Package: amsmath 2016/11/05 v2.16a AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
@@ -356,20 +360,20 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count87
-LaTeX Info: Redefining \frac on input line 199.
+LaTeX Info: Redefining \frac on input line 213.
 \uproot@=\count88
 \leftroot@=\count89
-LaTeX Info: Redefining \overline on input line 297.
+LaTeX Info: Redefining \overline on input line 375.
 \classnum@=\count90
 \DOTSCASE@=\count91
-LaTeX Info: Redefining \ldots on input line 394.
-LaTeX Info: Redefining \dots on input line 397.
-LaTeX Info: Redefining \cdots on input line 518.
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
 \big@size=\dimen105
-LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \macc@depth=\count92
 \c@MaxMatrixCols=\count93
 \dotsspace@=\muskip10
@@ -390,8 +394,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 \multlinegap=\skip44
 \multlinetaggap=\skip45
 \mathdisplay@stack=\toks20
-LaTeX Info: Redefining \[ on input line 2739.
-LaTeX Info: Redefining \] on input line 2740.
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
@@ -404,7 +408,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
-Package: babel 2016/04/23 3.9r The Babel package
+Package: babel 2017/05/19 3.10 The Babel package
 
 *************************************
 * Local config file bblopts.cfg used
@@ -417,7 +421,7 @@ File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
 Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
-File: babel.def 2016/04/23 3.9r Babel common definitions
+File: babel.def 2017/05/19 3.10 Babel common definitions
 \babel@savecnt=\count99
 \U@D=\dimen112
 )
@@ -464,18 +468,18 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2016/07/10 v1.0t Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
-File: pdftex.def 2016/07/10 v0.06j Graphics/color for pdfTeX
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
@@ -492,7 +496,7 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
-Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
@@ -518,7 +522,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
@@ -557,7 +561,7 @@ LaTeX Font Info:    ... okay on input line 49.
 \makeMPintoPDFobject=\count118
 \everyMPtoPDFconversion=\toks25
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
-Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
@@ -1040,41 +1044,73 @@ You need to provide a definition with \DeclareInputText
 or \DeclareInputMath before using this key.
 
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 149.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.135 \item A
+              função html tem dois usos distintos:
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) detected at line 135
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--145
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--145
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--145
+
+ []
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 156.
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 149.
+LaTeX Font Info:    Try loading font information for U+msb on input line 156.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (6.94026pt too wide) in paragraph at lines 149--151
+Overfull \hbox (6.94026pt too wide) in paragraph at lines 156--158
 \OT1/cmr/m/n/12 Dis-ponvel em: $\OML/cmm/m/it/12 <$\OT1/cmr/m/n/12 http://htt
 ps://pt.khanacademy.org/computing/computer-pro
  []
 
 
-Overfull \hbox (6.6009pt too wide) in paragraph at lines 149--151
+Overfull \hbox (6.6009pt too wide) in paragraph at lines 156--158
 \OT1/cmr/m/n/12 gramming/html-js-jquery/jquery-dom-access/a/history-of-jquery$\
 OML/cmm/m/it/12 >$\OT1/cmr/m/n/12 . Acesso em:
  []
 
 
-Overfull \hbox (1.70512pt too wide) in paragraph at lines 152--153
+Overfull \hbox (1.70512pt too wide) in paragraph at lines 159--160
 \OT1/cmr/m/n/12 vision.com/en/files/help/share/current/index.html$\OML/cmm/m/it
 /12 >$\OT1/cmr/m/n/12 . Acesso em: 30 de agosto
  []
 
 [3] (trabalho_jquery.aux) ) 
 Here is how much of TeX's memory you used:
- 6034 strings out of 493334
- 77415 string characters out of 3139254
- 225747 words of memory out of 3000000
- 9445 multiletter control sequences out of 15000+200000
+ 6079 strings out of 493323
+ 78059 string characters out of 3139066
+ 227881 words of memory out of 3000000
+ 9498 multiletter control sequences out of 15000+200000
  10610 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,6n,36p,697b,1849s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,6n,36p,697b,1849s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 cmbxti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10
@@ -1084,7 +1120,7 @@ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmti12.pfb>
-Output written on trabalho_jquery.pdf (4 pages, 137483 bytes).
+Output written on trabalho_jquery.pdf (4 pages, 136957 bytes).
 PDF statistics:
  54 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
