@@ -661,3 +661,51 @@
  
 }
 %-----------------------------------------------------------
+\casoDeUso
+%Identificador
+{UC14}
+%Nome
+{Aceite Solicitação de amizade}
+%Ator Principal
+{Usuário}
+%Interessados
+{
+\begin{itemize}
+	\item Usuário: Recebe uma Solicitação de amizade
+\end{itemize}
+
+}
+%Pré-Condições
+{Amigo ter enviado uma solicitação de amizade}
+%Pós-condições
+{Usuário aceitar a solicitação.}
+%Fluxo Básico
+{
+\begin{itemize}
+		\item Usuário ira receber uma notificação de amizade. (Figura X)
+		\item Usuário Clica no botão ''Aceitar', para aceitar o amigo.
+\end{itemize}
+}
+%Fluxo Alternativo
+{
+\begin{itemize}
+	\item Ocorreu uma falha na conexão com a Internet.
+	\begin{itemize}
+		\item O sistema apresenta uma mensagem para o usuário verificar os problemas com a conexão da Internet.
+	\end{itemize}
+	
+	\item Problemas com resposta do servidor ao adicionar o amigo.
+	\begin{itemize}
+	\item O Sistema exibe uma mensagem informando que houve um problema com resposta do servidor.
+	\end{itemize}
+
+\end{itemize}
+}
+%Frequência de Ocorrencia
+{Toda vez que o usuário aceitar ou recusar uma solitação de amizade.}
+%Problemas em Aberto
+{
+ 
+}
+%-----------------------------------------------------------
+
