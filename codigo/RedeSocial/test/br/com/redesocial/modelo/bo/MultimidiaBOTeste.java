@@ -156,7 +156,7 @@ public class MultimidiaBOTeste {
             final int qtde = 10;
             for (int i = 0; i < 10; i++) {
                 Multimidia multimidia = new Multimidia();
-                multimidia.setMidia(Utilitarios.lerArquivo(new File("../../../../../../nome_arquivo.txt")));
+                multimidia.setMidia(Utilitarios.lerArquivo(new File("../../arquivos_teste/nome_arquivo.txt")));
                 multimidia.setTipoConteudo("foto");
 
                 try {
@@ -173,7 +173,7 @@ public class MultimidiaBOTeste {
 
             assertEquals(qtde, diferenca);
         } catch (Exception ex) {
-
+            fail("Falha ao listar uma multimidia: " + ex.getMessage());
         }
     }
 
