@@ -86,8 +86,4 @@ public class Cidade {
     public void setNome(String nome) {
         this.nome = nome;
     }
-
-    public void setPais(Pais selecionar) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
