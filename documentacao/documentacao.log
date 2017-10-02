@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350) (preloaded format=pdflatex 2017.8.15)  22 SEP 2017 14:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350) (preloaded format=pdflatex 2017.8.15)  2 OCT 2017 11:22
 entering extended mode
 **./documentacao.tex
 (documentacao.tex
@@ -1946,22 +1946,30 @@ Overfull \hbox (12.79996pt too wide) in paragraph at lines 658--658
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 705--705
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 ) (capitulos/projeto/projeto.tex [31
 
 ] [32] [33] [34] [35] [36] [37] [38]
-[39] [40] [41] [42] [43] [44]
-<../banco_de_dados/redesocial.png, id=430, 1102.1175pt x 1223.57124pt>
+[39] [40] [41] [42] [43] [44] [45]
+<../banco_de_dados/redesocial.png, id=435, 1102.1175pt x 1223.57124pt>
 File: ../banco_de_dados/redesocial.png Graphic file (type png)
 
 <use ../banco_de_dados/redesocial.png>
 Package pdftex.def Info: ../banco_de_dados/redesocial.png used on input line 15
 .
 (pdftex.def)             Requested size: 426.79134pt x 473.83025pt.
- [45
+ [46
 
 ]
 <../documentacao/capitulos/projeto/diagramas/multimidia_album_classdiagram.png,
- id=436, 393.72093pt x 173.89969pt>
+ id=441, 529.98pt x 294.34969pt>
 File: ../documentacao/capitulos/projeto/diagramas/multimidia_album_classdiagram
 .png Graphic file (type png)
 
@@ -1969,10 +1977,10 @@ File: ../documentacao/capitulos/projeto/diagramas/multimidia_album_classdiagram
 png>
 Package pdftex.def Info: ../documentacao/capitulos/projeto/diagramas/multimidia
 _album_classdiagram.png used on input line 27.
-(pdftex.def)             Requested size: 426.79134pt x 188.50671pt.
- [46 <../banco_de_dados/redesocial.png>]) 
+(pdftex.def)             Requested size: 426.79134pt x 237.04306pt.
+ [47 <../banco_de_dados/redesocial.png>]) 
 AED: lastpage setting LastPage
-[47 <../documentacao/capitulos/projeto/diagramas/multimidia_album_classdiagram.
+[48 <../documentacao/capitulos/projeto/diagramas/multimidia_album_classdiagram.
 png>]
 \tf@lof=\write5
 \openout5 = `documentacao.lof'.
@@ -1995,13 +2003,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 45.
  ) 
 Here is how much of TeX's memory you used:
- 15080 strings out of 493323
- 223318 string characters out of 3139069
- 488692 words of memory out of 3000000
- 18122 multiletter control sequences out of 15000+200000
+ 15083 strings out of 493323
+ 223348 string characters out of 3139069
+ 493692 words of memory out of 3000000
+ 18123 multiletter control sequences out of 15000+200000
  18519 words of font info for 88 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,12n,45p,868b,546s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2010,9 +2021,9 @@ ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss9.pfb><d:/Program Fil
 es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><d:/Program Files/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><d:/Program Files/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on documentacao.pdf (48 pages, 1998464 bytes).
+Output written on documentacao.pdf (49 pages, 1886700 bytes).
 PDF statistics:
- 566 PDF objects out of 1000 (max. 8388607)
- 132 named destinations out of 1000 (max. 500000)
+ 572 PDF objects out of 1000 (max. 8388607)
+ 134 named destinations out of 1000 (max. 500000)
  12084 words of extra memory for PDF output out of 14400 (max. 10000000)
 
