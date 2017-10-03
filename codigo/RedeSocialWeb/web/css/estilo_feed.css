@@ -33,11 +33,11 @@ a:hover{
 }
 
 .icones_ferramentas{
-	margin-left: 750px;
+	margin-left: 550px;
 }
 
 .icone_perfil{
-	margin-left: 725px;
+	margin-left: 325px;
 }
 
 #resumo_perfil{
@@ -137,7 +137,7 @@ a:hover{
 	padding-bottom: 15px;
 	margin-left:15px;
 	margin-top: 5px;
-	width: 33%;
+	width: 43%;
 	height: auto;
 	background-color:#F0F8FF;
 	border-top: 1px solid black;
