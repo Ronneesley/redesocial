@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.12)  3 OCT 2017 15:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.12)  3 OCT 2017 15:42
 entering extended mode
 **./trabalho_jquery.tex
 (trabalho_jquery.tex
@@ -863,7 +863,7 @@ or \DeclareInputMath before using this key.
 ! Missing number, treated as zero.
 <to be read again> 
                    \relax 
-l.138 ...egraphics[width=15cm\textwidth]{html.png}
+l.139 ...egraphics[width=15cm\textwidth]{html.png}
                                                   
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -872,7 +872,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.138 ...egraphics[width=15cm\textwidth]{html.png}
+l.139 ...egraphics[width=15cm\textwidth]{html.png}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -884,7 +884,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing number, treated as zero.
 <to be read again> 
                    \relax 
-l.138 ...egraphics[width=15cm\textwidth]{html.png}
+l.139 ...egraphics[width=15cm\textwidth]{html.png}
                                                   
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -893,7 +893,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.138 ...egraphics[width=15cm\textwidth]{html.png}
+l.139 ...egraphics[width=15cm\textwidth]{html.png}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -904,36 +904,36 @@ two letters. (See Chapter 27 of The TeXbook.)
 
 File: html.png Graphic file (type png)
 <use html.png>
-Package pdftex.def Info: html.png used on input line 138.
+Package pdftex.def Info: html.png used on input line 139.
 (pdftex.def)             Requested size: 426.79134pt x 366.34924pt.
 
-Overfull \hbox (0.31905pt too wide) in paragraph at lines 137--139
+Overfull \hbox (0.31905pt too wide) in paragraph at lines 138--140
 []  [] 
  []
 
 [3 <./html.png>]
-LaTeX Font Info:    Try loading font information for U+msa on input line 150.
+LaTeX Font Info:    Try loading font information for U+msa on input line 151.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 150.
+LaTeX Font Info:    Try loading font information for U+msb on input line 151.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (6.94026pt too wide) in paragraph at lines 150--152
+Overfull \hbox (6.94026pt too wide) in paragraph at lines 151--153
 \OT1/cmr/m/n/12 Dis-ponvel em: $\OML/cmm/m/it/12 <$\OT1/cmr/m/n/12 http://htt
 ps://pt.khanacademy.org/computing/computer-pro
  []
 
 
-Overfull \hbox (6.6009pt too wide) in paragraph at lines 150--152
+Overfull \hbox (6.6009pt too wide) in paragraph at lines 151--153
 \OT1/cmr/m/n/12 gramming/html-js-jquery/jquery-dom-access/a/history-of-jquery$\
 OML/cmm/m/it/12 >$\OT1/cmr/m/n/12 . Acesso em:
  []
 
 
-Overfull \hbox (13.01364pt too wide) in paragraph at lines 153--154
+Overfull \hbox (13.01364pt too wide) in paragraph at lines 154--155
 []\OT1/cmr/m/n/12 JQUERY. \OT1/cmr/bx/n/12 jQuery, write less, do more. \OT1/cm
 r/m/n/12 Dis-ponvel em: $\OML/cmm/m/it/12 <$\OT1/cmr/m/n/12 http://jquery.com
 $\OML/cmm/m/it/12 >$\OT1/cmr/m/n/12 .
