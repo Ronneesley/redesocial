@@ -96,6 +96,7 @@ public class LoginControle extends HttpServlet {
             
             RequestDispatcher rd = request.getRequestDispatcher("paginas/layout.jsp");
             rd.forward(request, response);
+            response.sendRedirect("postagem.jsp");
         } else {
             request.setAttribute("mensagem", "Usuário ou senha inválidos");
             
