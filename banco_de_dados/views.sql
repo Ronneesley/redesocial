@@ -207,3 +207,18 @@ inner join estado est on us.estado = est.id
 inner join pais paiss on us.pais = paiss.id
 group by pais.nome,estado.nome
 order by pais.nome;
+
+/**
+ * View para mostrar a quantidade de Usuarios por Pais
+ * @author Jonathan Silvestre Sousa
+ */
+CREATE VIEW `usuarios_por_pais` AS
+    SELECT 
+        `pai`.`nome` AS `pais`,
+        COUNT(`pai`.`nome`) AS `qtde`
+    FROM
+        (((`usuarios` `us`
+        JOIN `cidades` `cid` ON ((`us`.`cidade` = `cid`.`id`)))
+        JOIN `estados` `est` ON ((`cid`.`estado` = `est`.`id`)))
+        JOIN `paises` `pai` ON ((`est`.`pais` = `pai`.`id`)))
+    GROUP BY `pai`.`nome`;
