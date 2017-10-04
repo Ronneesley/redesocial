@@ -1,4 +1,4 @@
-/* Todos os códigos das views serão adicionados aqui */
+﻿/* Todos os códigos das views serão adicionados aqui */
 /**
  * View para selecionar a quantidade de usuários cadastrados por mês
  * @author Daniel Moreira Cardoso
@@ -197,16 +197,22 @@ FROM
     group by idade
     order by quantidade desc);
     
-/**
- * View para mostrar a quantidade de publico alvo por idade
- * @author Anny Karoliny Moraes Ribeiro
+/** Quantidade de estados por pais 
+*@author Anny Karoliny Moraes Ribeiro
  */
+
 create view quantidade_de_estados_por_pais as
-select pais.nome as pais, estado.nome as estado, count(pais)as qtde from estado us 
-inner join estado est on us.estado = est.id
-inner join pais paiss on us.pais = paiss.id
-group by pais.nome,estado.nome
-order by pais.nome;
+
+select
+ 
+	p.nome AS Pais, count(p.id) AS 'Qtde Estados'
+
+from 
+	estados e 
+
+inner join paises p on e.pais = p.id
+
+group by p.id;
 
 /**
  * View para mostrar a quantidade de Usuarios por Pais
