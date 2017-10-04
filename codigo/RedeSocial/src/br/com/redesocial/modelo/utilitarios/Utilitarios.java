@@ -33,29 +33,30 @@ public class Utilitarios {
         } else if (diferencaSeg < 3600){
             diferencaMins = diferencaSeg / 60;
             if(diferencaMins==1){
-               mensagemData = diferencaMins + "minuto";
+               mensagemData = diferencaMins + " minuto";
             }else{
-                mensagemData = diferencaMins + "minutos";
+                mensagemData = diferencaMins + " minutos";
             }
             
         } else if (diferencaSeg < 86400){
             diferencaHrs = (diferencaSeg / 60)/ 60;
             if(diferencaHrs==1){
-               mensagemData = diferencaHrs + "hora";
+               mensagemData = diferencaHrs + " hora";
             }else{
-                mensagemData = diferencaHrs + "horas";
+                mensagemData = diferencaHrs + " horas";
             }            
         } else if(diferencaSeg<345600){
             diferencaDias = ((diferencaSeg / 60)/ 60)/24;
             if(diferencaDias==1){
-               mensagemData = diferencaDias + "dia";
+               mensagemData = diferencaDias + " dia";
             }else{
-                mensagemData = diferencaDias + "dias";
+                mensagemData = diferencaDias + " dias";
             }
             
         } else {
-            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-            mensagemData = sdf.format(dataPostagem);
+            SimpleDateFormat diaHoraPostagem = new SimpleDateFormat("dd/MM/yyyy 'às' HH:mm");
+            
+            mensagemData = diaHoraPostagem.format(dataPostagem);
         }
 
         return mensagemData;

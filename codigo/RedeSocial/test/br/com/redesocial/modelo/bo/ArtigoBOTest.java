@@ -1,16 +1,23 @@
 package br.com.redesocial.modelo.bo;
 
 import br.com.redesocial.modelo.dto.Artigo;
+import br.com.redesocial.modelo.dto.Pais;
+import br.com.redesocial.modelo.dto.Estado;
+import br.com.redesocial.modelo.dto.Cidade;
+import br.com.redesocial.modelo.dto.Usuario;
+import br.com.redesocial.modelo.dto.Postagem;
+import br.com.redesocial.modelo.dto.enumeracoes.Sexo;
 import br.com.redesocial.modelo.utilitarios.Utilitarios;
 import java.io.File;
 import java.util.List;
 import org.junit.Test;
 import java.util.Calendar;
+import java.util.Date;
 import static org.junit.Assert.*;
 
 /**
  * Unidade de testes para o ArtigoBO
- * @author Andrey Silva Ribeiro, Lucas Azevedo
+ * @author Andrey Silva Ribeiro, Lucas Azevedo, Macilon Arruda
  * @since 15/09/2017
 */
 public class ArtigoBOTest {
@@ -39,7 +46,110 @@ public class ArtigoBOTest {
         }
 
     }
-     
+    
+    /**
+     * Método de teste responsável pela listagem dos artigos existentes no banco de dados
+     * @author Macilon Arruda
+     */
+    @Test
+    public void testMetodoListar() {
+        
+        /* Para realizar a listagem é necessário que existam dados a serem lidos
+        por isso precisa inserir usuário, país, estado e cidade no banco de dados */  
+        ArtigoBO bo = new ArtigoBO();
+
+        try {            
+            
+            //Verifica a quantidade de artigos existentes no banco de dados 
+            List existentes = bo.listar();
+            int qtdeExistentes = existentes.size();
+
+            //Define a quantidade a ser listada
+            final int qtde = 2;
+            
+            for (int i = 0; i < 2; i++){
+            Pais pais = new Pais();
+            pais.setNome("Brasil");
+        
+       
+            PaisBO paisBO = new PaisBO();
+            paisBO.inserir(pais);
+
+            Estado estado = new Estado();
+            estado.setNome("Goiás");
+            estado.setPais(pais);
+            
+            EstadoBO estadoBO = new EstadoBO();
+            estadoBO.inserir(estado);
+            
+            Cidade cidade = new Cidade();
+            cidade.setNome("Uruana");
+            cidade.setEstado(estado);
+            
+            CidadeBO cidadeBO = new CidadeBO();
+            cidadeBO.inserir(cidade);
+            
+            Usuario usuario = new Usuario();
+            usuario.setNome("Cilon");
+            usuario.setDataCadastro(new Date());
+            usuario.setEmail("macilonarruda@outlook.com");
+            //usuario.setFoto();
+           
+            Calendar calendario = Calendar.getInstance();
+            calendario.set(1988, 2, 7, 0, 0, 0);            
+            usuario.setDataNascimento(calendario.getTime());
+            usuario.setSenha("123");
+            usuario.setSexo(Sexo.MASCULINO);
+            usuario.setStatus(true);
+            usuario.setTelefone("(62) 91234-4567");
+            usuario.setCidade(cidade);
+            
+            UsuarioBO usuarioBO = new UsuarioBO();
+            usuarioBO.inserir(usuario);
+
+            
+            Postagem postagem1 = new Postagem();
+            postagem1.setDescricao("Comentário");
+            postagem1.setCurtidas(0);
+            postagem1.setUsuario(usuario);
+
+            ArtigoBO art = new ArtigoBO();
+            Artigo artigo = new Artigo();
+            artigo.setIdioma("Português");
+            artigo.setRevista("Veja");
+            artigo.setISSN("12345678");
+            artigo.setAutor("Jorge Fernando");
+            artigo.setData(new Date());
+            artigo.setAreaConhecimento("Matemática");
+            artigo.setTitulo("A matemática no seu cotidiano");
+            artigo.setResumo("As exatas te persegue eu qualquer área que você estiver.");
+            artigo.setURL("http://www.matematicapravidatoda.com.br");
+            
+            try {
+                    art.inserir(artigo);
+                    
+                } catch (Exception ex) {
+                    fail("Falha ao inserir um artigo: " + ex.getMessage());
+                }
+            }
+            
+            //Verifica a quantidade de artigos após inserir
+            List existentesFinal = bo.listar(); 
+            int qtdeExistentesFinal = existentesFinal.size();
+            
+            //Verifica a quantidade de albuns realmente inseridos
+            int diferenca = qtdeExistentesFinal - qtdeExistentes;
+            
+            /* Compara a quantidade definida para listagem e a quantidade de
+            artigos inseridos, finaliza se estiver tudo certo */ 
+            assertEquals(qtde, diferenca);
+        } catch (Exception ex){
+            
+            //Mensagem de erro caso a comparação não seja exata
+            fail("Erro ao listar: " + ex.getMessage());
+        }
+    }
+    
     @Test
     public void testMetodoAlterar() throws Exception {
         ArtigoBO bo = new ArtigoBO();
@@ -119,5 +229,85 @@ public class ArtigoBOTest {
             }catch (Exception ex){
                 fail("Erro ao listar: " + ex.getMessage());
         }
+    }
+    
+     @Test
+    public void testMetodoExcluir() throws Exception{
+        
+            Pais pais = new Pais();
+            pais.setNome("Brasil");
+       
+            PaisBO paisBO = new PaisBO();
+            paisBO.inserir(pais);
+
+            Estado estado = new Estado();
+            estado.setNome("Goiás");
+            estado.setPais(pais);
+            
+            EstadoBO estadoBO = new EstadoBO();
+            estadoBO.inserir(estado);
+            
+            Cidade cidade = new Cidade();
+            cidade.setNome("Uruana");
+            cidade.setEstado(estado);
+            
+            CidadeBO cidadeBO = new CidadeBO();
+            cidadeBO.inserir(cidade);
+            
+            Usuario usuario = new Usuario();
+            usuario.setNome("Cilon");
+            usuario.setDataCadastro(new Date());
+            usuario.setEmail("macilonarruda@outlook.com");
+            //usuario.setFoto();
+           
+            Calendar calendario = Calendar.getInstance();
+            calendario.set(1988, 2, 7, 0, 0, 0);            
+            usuario.setDataNascimento(calendario.getTime());
+            usuario.setSenha("123");
+            usuario.setSexo(Sexo.MASCULINO);
+            usuario.setStatus(true);
+            usuario.setTelefone("(62) 91234-4567");
+            usuario.setCidade(cidade);
+            
+            UsuarioBO usuarioBO = new UsuarioBO();
+            usuarioBO.inserir(usuario);
+
+            
+            Postagem postagem1 = new Postagem();
+            postagem1.setDescricao("Comentário");
+            postagem1.setCurtidas(0);
+            postagem1.setUsuario(usuario);
+
+            ArtigoBO bo = new ArtigoBO();
+            Artigo artigo = new Artigo();
+            artigo.setIdioma("Português");
+            artigo.setRevista("Veja");
+            artigo.setISSN("12345678");
+            artigo.setAutor("Jorge Fernando");
+            artigo.setData(new Date());
+            artigo.setAreaConhecimento("Matemática");
+            artigo.setTitulo("A matemática no seu cotidiano");
+            artigo.setResumo("As exatas te persegue eu qualquer área que você estiver.");
+            artigo.setURL("http://www.matematicapravidatoda.com.br");
+        
+        try {
+            bo.inserir(artigo);
+            
+        int id = artigo.getId();
+        
+        Artigo artigoSelecionado = bo.selecionar(id);
+        
+        assertNotNull("Artigo não encontrado", artigoSelecionado);
+        
+        bo.excluir(id);
+        
+        Artigo artigoSelecionadoPosExclusao = bo.selecionar(id);
+        
+        assertNull("comentario encontrado, mesmo apos exclui-lo", artigoSelecionadoPosExclusao);
+        } catch (Exception ex) {
+            fail("Falha ao inserir um artigo: " + ex.getMessage());
+        }
+        
+        
     }
 }

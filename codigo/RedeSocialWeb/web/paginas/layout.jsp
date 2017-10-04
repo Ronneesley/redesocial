@@ -46,7 +46,7 @@
 					<a href="./teste_link.html"><h4 class="resumo">3 Artigos</h4></a>
 				</div>
                             </div>
-                    </div>								
+                        </div>								
                 </div>
 
 		<div id="botao_resumo_perfil">
@@ -162,7 +162,7 @@
             </div>
 		
             <div id="direita">
-		<input id="buscar_timeline" type="text" name="buscar" size="40" value="Buscar">			
+		<input id="buscar_timeline" type="text" name="buscar" size="20" value="Buscar">			
                 <div id="bloco_direita">
                     <p><a href="./perfil.html">Perfil</a></p>
                     <p><a href="teste_link.html" target="_blank">Lattes</a></p>

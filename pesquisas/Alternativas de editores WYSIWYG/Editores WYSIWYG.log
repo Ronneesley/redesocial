@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.7.28)  22 SEP 2017 19:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.7.28)  27 SEP 2017 00:04
 entering extended mode
 **"./Editores WYSIWYG.tex"
 ("Editores WYSIWYG.tex"
@@ -857,7 +857,7 @@ File: recursos/SummerNote/SummerNote.jpg Graphic file (type jpg)
 <use recursos/SummerNote/SummerNote.jpg>
 Package pdftex.def Info: recursos/SummerNote/SummerNote.jpg used on input line 
 471.
-(pdftex.def)             Requested size: 369.88582pt x 178.73923pt.
+(pdftex.def)             Requested size: 256.0748pt x 123.73956pt.
 
 Underfull \hbox (badness 2486) in paragraph at lines 473--473
 []\OT1/cmr/m/n/12 Figura 3: Sum-mer-Note. Fonte:https://https://goo.gl/HjyaTd; 
@@ -865,52 +865,59 @@ Acesso em
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Overfull \hbox (32.00883pt too wide) in paragraph at lines 476--480
+[]\OT1/cmr/m/n/12 Gostou da fer-ra-menta? Saiba mais em: $\OT1/cmtt/m/n/12 http
+s : / / summernote . org / getting-[]started/$
+ []
 
-[6] (recursos/modelo/modelo.html [7 <./recursos/SummerNote/SummerNote.jpg>]
-[8] [9]) <recursos/modelo/Bootstrap.png, id=47, 804.75656pt x 290.58563pt>
+[6 <./recursos/SummerNote/SummerNote.jpg>] (recursos/modelo/modelo.html
+[7] [8] [9]) <recursos/modelo/Bootstrap.png, id=47, 804.75656pt x 290.58563pt>
 File: recursos/modelo/Bootstrap.png Graphic file (type png)
 
 <use recursos/modelo/Bootstrap.png>
-Package pdftex.def Info: recursos/modelo/Bootstrap.png used on input line 511.
+Package pdftex.def Info: recursos/modelo/Bootstrap.png used on input line 508.
 (pdftex.def)             Requested size: 426.79134pt x 154.1072pt.
 
-Underfull \hbox (badness 1721) in paragraph at lines 513--513
+Underfull \hbox (badness 1721) in paragraph at lines 510--510
 []\OT1/cmr/m/n/12 Figura 4: Bo-ots-trap WY-SIWYG. Fonte:http://mindmup.github.i
 o/bootstrap-
  []
 
 
-Overfull \hbox (59.9727pt too wide) in paragraph at lines 516--517
+Overfull \hbox (59.9727pt too wide) in paragraph at lines 513--514
 []\OT1/cmr/m/n/12 Gostou da fer-ra-menta? Saiba mais em: $\OT1/cmtt/m/n/12 http
  : / / mindmup . github . io / bootstrap-[]wysiwyg/$\OT1/cmr/m/n/12 .
  []
 
 
-Overfull \hbox (38.175pt too wide) in paragraph at lines 516--517
+Overfull \hbox (38.175pt too wide) in paragraph at lines 513--514
 \OT1/cmr/m/n/12 E tambem um re-po-sitorio no github: $\OT1/cmtt/m/n/12 https 
 : / / github . com / mindmup / bootstrap-[]wysiwyg/$
  []
 
-[10 <./recursos/modelo/Bootstrap.png>] ("Editores WYSIWYG.aux") ) 
+[10 <./recursos/modelo/Bootstrap.png>] ("Editores WYSIWYG.aux")
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
  6971 strings out of 493329
  91168 string characters out of 3139063
- 391612 words of memory out of 3000000
+ 379612 words of memory out of 3000000
  10345 multiletter control sequences out of 15000+200000
  12140 words of font info for 45 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,6n,58p,1078b,2174s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Fi
-les/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-tt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1200.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on "Editores WYSIWYG.pdf" (11 pages, 269118 bytes).
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-sup
+er/sfrm1200.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sftt10
+95.pfb>
+Output written on "Editores WYSIWYG.pdf" (11 pages, 269420 bytes).
 PDF statistics:
  78 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
