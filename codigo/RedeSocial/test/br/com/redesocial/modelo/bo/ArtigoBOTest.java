@@ -230,4 +230,84 @@ public class ArtigoBOTest {
                 fail("Erro ao listar: " + ex.getMessage());
         }
     }
+    
+     @Test
+    public void testMetodoExcluir() throws Exception{
+        
+            Pais pais = new Pais();
+            pais.setNome("Brasil");
+       
+            PaisBO paisBO = new PaisBO();
+            paisBO.inserir(pais);
+
+            Estado estado = new Estado();
+            estado.setNome("Goiás");
+            estado.setPais(pais);
+            
+            EstadoBO estadoBO = new EstadoBO();
+            estadoBO.inserir(estado);
+            
+            Cidade cidade = new Cidade();
+            cidade.setNome("Uruana");
+            cidade.setEstado(estado);
+            
+            CidadeBO cidadeBO = new CidadeBO();
+            cidadeBO.inserir(cidade);
+            
+            Usuario usuario = new Usuario();
+            usuario.setNome("Cilon");
+            usuario.setDataCadastro(new Date());
+            usuario.setEmail("macilonarruda@outlook.com");
+            //usuario.setFoto();
+           
+            Calendar calendario = Calendar.getInstance();
+            calendario.set(1988, 2, 7, 0, 0, 0);            
+            usuario.setDataNascimento(calendario.getTime());
+            usuario.setSenha("123");
+            usuario.setSexo(Sexo.MASCULINO);
+            usuario.setStatus(true);
+            usuario.setTelefone("(62) 91234-4567");
+            usuario.setCidade(cidade);
+            
+            UsuarioBO usuarioBO = new UsuarioBO();
+            usuarioBO.inserir(usuario);
+
+            
+            Postagem postagem1 = new Postagem();
+            postagem1.setDescricao("Comentário");
+            postagem1.setCurtidas(0);
+            postagem1.setUsuario(usuario);
+
+            ArtigoBO bo = new ArtigoBO();
+            Artigo artigo = new Artigo();
+            artigo.setIdioma("Português");
+            artigo.setRevista("Veja");
+            artigo.setISSN("12345678");
+            artigo.setAutor("Jorge Fernando");
+            artigo.setData(new Date());
+            artigo.setAreaConhecimento("Matemática");
+            artigo.setTitulo("A matemática no seu cotidiano");
+            artigo.setResumo("As exatas te persegue eu qualquer área que você estiver.");
+            artigo.setURL("http://www.matematicapravidatoda.com.br");
+        
+        try {
+            bo.inserir(artigo);
+            
+        int id = artigo.getId();
+        
+        Artigo artigoSelecionado = bo.selecionar(id);
+        
+        assertNotNull("Artigo não encontrado", artigoSelecionado);
+        
+        bo.excluir(id);
+        
+        Artigo artigoSelecionadoPosExclusao = bo.selecionar(id);
+        
+        assertNull("comentario encontrado, mesmo apos exclui-lo", artigoSelecionadoPosExclusao);
+        } catch (Exception ex) {
+            fail("Falha ao inserir um artigo: " + ex.getMessage());
+        }
+        
+        
+    }
 }
