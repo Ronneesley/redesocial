@@ -206,7 +206,7 @@ create view quantidade_de_estados_por_pais as
 
 select
  
-	p.nome AS Pais, count(p.id) AS 'Qtde Estados'
+	p.nome AS pais, count(p.id) AS 'qtde_estados'
 
 from 
 	estados e 
