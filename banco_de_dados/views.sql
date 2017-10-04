@@ -197,8 +197,9 @@ FROM
     group by idade
     order by quantidade desc);
     
-/** Quantidade de estados por pais 
-*@author Anny Karoliny Moraes Ribeiro
+/**
+ * View para mostrar a quantidade de estados por pais
+ * @author Anny Karoliny Moraes Ribeiro
  */
 
 create view quantidade_de_estados_por_pais as
