@@ -1,9 +1,12 @@
 package br.com.redesocial.modelo.dao;
 
+import br.com.redesocial.modelo.dto.PalavraChave;
+import br.com.redesocial.modelo.dto.Postagem;
 import br.com.redesocial.modelo.dto.PostagemPalavraChave;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,10 +47,27 @@ public class PostagemPalavraChaveDAO extends DAOBase {
             return null;
         }
     }
+    
+    
+   /**
+     * Método responsável por criar um registro de palavras chaves na tabela
+     * postagens_palavras_chave
+     * @author Jeferson Rossini
+     * @param palavra da palavraChave
+     * @param post da postagem
+     * @throws Exception possíveis exceções que podem acontecer
+     */
+    public void inserir(PalavraChave palavra, Postagem post) throws Exception {
+        Connection conexao = getConexao();
 
-    public void inserir(PostagemPalavraChave dto) throws Exception {
-        
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("insert into postagens_palavras_chave (palavra_chave, postagem) values(?,?)", Statement.RETURN_GENERATED_KEYS);
+
+        pstmt.setInt(1, palavra.getId());
+        pstmt.setInt(2, post.getId());
+        pstmt.executeQuery();
     }
+    
 
    /**
      * Método responsável por alterar uma postagem a partir de suas palavras chaves
@@ -94,8 +114,23 @@ public class PostagemPalavraChaveDAO extends DAOBase {
         return lista;
     }
     
-    public void excluir(int palavraChave, int postagem) throws Exception {
+       /**
+     * Método responsável por excluir registro da tabela postagens_palavras_chave
+     * @author Jeferson Rossini
+     * @param postagem da palavraChave
+     * @throws Exception possíveis exceções que podem acontecer
+     */
+    public void excluir(int postagem) throws Exception {
+
         
+       Connection conexao = getConexao();
+       
+       PreparedStatement pstmt;
+       pstmt = conexao.prepareStatement ("delete from postagens_palavras_chave where postagem = ?");
+       
+       pstmt.setInt(1, postagem);
+       pstmt.executeUpdate();
+
     }
 
 }
