@@ -2,10 +2,10 @@ var cabecalho = document.getElementById("cabecalho");
 
 if (cabecalho.attachEvent) {
   cabecalho.attachEvent("onclick", function (event) {
-    alert("VocÃª clicou no cabeÃ§alho, usuÃ¡rio do IE!");
+    alert("Você clicou no cabeçalho, usuário do IE!");
   });
 } else if (cabecalho.addEventListener) {
   cabecalho.addEventListener("click", function (event) {
-    alert("VocÃª clicou no cabeÃ§alho!")
+    alert("Você clicou no cabeçalho!")
   }, false);
 }
