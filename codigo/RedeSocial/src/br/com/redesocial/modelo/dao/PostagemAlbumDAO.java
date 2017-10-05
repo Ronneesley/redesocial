@@ -64,7 +64,8 @@ public class PostagemAlbumDAO extends DAOBase {
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             
             p.setId(rs.getInt("id"));
-            p.setCurtidas(rs.getInt("curtidas"));
+            p.setUps(rs.getInt("ups"));
+            p.setUps(rs.getInt("downs"));
             p.setDescricao(rs.getString("descricao"));
             p.setData(rs.getDate("data"));
             

@@ -39,7 +39,8 @@ public class ComentarioBO extends BOCRUDBase<Comentario, ComentarioDAO>{
     @Override
     protected void validar(Comentario dto) throws Exception {
          if (dto.getDescricao().trim().equals("")) throw new Exception("Insira o comentário.");
-         if (dto.getCurtidas()== null) throw new Exception("Insira as comentários");
+         if (dto.getUps()== null) throw new Exception("Insira as comentários");
+         if (dto.getDowns()== null) throw new Exception("Insira as comentários");
          if (dto.getData() == null) throw new Exception("Preencha o data da comentários");
          if (dto.getPostagem() == null) throw new Exception("Preencha a postagem do comentário");
     }

@@ -62,7 +62,8 @@ public class PostagemBOTest {
 
             Postagem postagem1 = new Postagem();
             postagem1.setDescricao("Comentário");
-            postagem1.setCurtidas(0);
+            postagem1.setUps(0);
+            postagem1.setDowns(0);
             postagem1.setUsuario(usuario);
 
             calendario.set(2017, 7, 16, 21, 58, 0);
@@ -74,18 +75,7 @@ public class PostagemBOTest {
             fail("Falha ao inserir um comentário: " + ex.getMessage());            
         }
 
-      /**
-        Postagem postagem2 = new Postagem();
-        postagem2.setDescricao("Novo Comentário");
-        postagem2.setCurtidas(0);
-        postagem1.setData(calendario.getTime());
-
-        try {
-            bo.inserir(postagem2);
-        } catch (Exception ex) {
-            fail("Falha ao inserir um comentário: " + ex.getMessage());
-        }
-    */
+     
      }
 /**
  *@author Warley Rodrigues
@@ -136,7 +126,8 @@ public class PostagemBOTest {
               
             Postagem postagem = new Postagem();
             postagem.setDescricao("Comentário");
-            postagem.setCurtidas(0);
+            postagem.setUps(0);
+            postagem.setDowns(0);
             postagem.setUsuario(usuario);
             
             calendario.set(1998, 0, 8, 0, 0, 0);            
@@ -215,7 +206,8 @@ public class PostagemBOTest {
             PostagemBO bo = new PostagemBO();
 
             postagem1.setDescricao("Primeiro Comentario");
-            postagem1.setCurtidas(0);
+            postagem1.setUps(0);
+            postagem1.setDowns(0);
             postagem1.setUsuario(usuario);
             postagem1.setVisualizacoes(10);
 
@@ -230,7 +222,8 @@ public class PostagemBOTest {
         
         //alterando a descricao da postagem
         postagem1.setDescricao("Teste Postagem");
-        postagem1.setCurtidas(3);
+        postagem1.setUps(2);
+        postagem1.setDowns(3);
         postagem1.setVisualizacoes(5);
         calendario.set(2017, 6, 15, 11, 48, 0);
         postagem1.setData(calendario.getTime());
@@ -302,7 +295,8 @@ public class PostagemBOTest {
             
             Postagem postagem1 = new Postagem();
             postagem1.setDescricao("Comentário");
-            postagem1.setCurtidas(0);
+            postagem1.setUps(0);
+            postagem1.setDowns(0);
             postagem1.setUsuario(usuario);
 
             calendario.set(2017, 7, 16, 21, 58, 0);
@@ -372,7 +366,8 @@ public class PostagemBOTest {
 
             Postagem postagem1 = new Postagem();
             postagem1.setDescricao("Comentário");
-            postagem1.setCurtidas(0);
+            postagem1.setUps(0);
+            postagem1.setDowns(0);
             postagem1.setUsuario(usuario);
 
             calendario.set(2017, 7, 16, 21, 58, 0);

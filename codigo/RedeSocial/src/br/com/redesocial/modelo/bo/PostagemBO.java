@@ -17,7 +17,8 @@ public class PostagemBO extends BOCRUDBase<Postagem, PostagemDAO> {
      @Override
     protected void validar(Postagem dto) throws Exception {
         //Validações
-        if (dto.getCurtidas() == null) throw new Exception("Preencha o campo Curtidas");
+        if (dto.getUps() == null) throw new Exception("Preencha o campo ups");
+        if (dto.getDowns() == null) throw new Exception("Preencha o campo downs");
         if (dto.getDescricao() == null || dto.getDescricao().trim().equals("")) throw new Exception("Preencha o campo Descricao");
         if (dto.getData() == null) throw new Exception("Preencha a Data");
         if (dto.getUsuario()== null) throw new Exception("Preencha o campo usuário");
@@ -30,7 +31,8 @@ public class PostagemBO extends BOCRUDBase<Postagem, PostagemDAO> {
 
     public void publicar(Usuario usuario, String mensagem) throws Exception {        
         Postagem postagem = new Postagem();
-        postagem.setCurtidas(0);
+        postagem.setUps(0);
+        postagem.setDowns(0);
         postagem.setData(new Date());
         postagem.setDescricao(mensagem);
         postagem.setUsuario(usuario);

@@ -110,7 +110,8 @@ public class ArtigoBOTest {
             
             Postagem postagem1 = new Postagem();
             postagem1.setDescricao("Comentário");
-            postagem1.setCurtidas(0);
+            postagem1.setUps(0);
+            postagem1.setDowns(0);
             postagem1.setUsuario(usuario);
 
             ArtigoBO art = new ArtigoBO();
@@ -275,7 +276,8 @@ public class ArtigoBOTest {
             
             Postagem postagem1 = new Postagem();
             postagem1.setDescricao("Comentário");
-            postagem1.setCurtidas(0);
+            postagem1.setUps(0);
+            postagem1.setDowns(0);
             postagem1.setUsuario(usuario);
 
             ArtigoBO bo = new ArtigoBO();

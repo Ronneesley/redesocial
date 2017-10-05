@@ -34,15 +34,16 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
     public void alterar(Comentario p) throws Exception {
         Connection conexao = getConexao();
 
-        PreparedStatement pstmt = conexao.prepareStatement("update comentarios set descricao = ?, curtidas = ?, data = ?, postagem = ? ,resposta = ?, usuario = ? where id = ?"); 
+        PreparedStatement pstmt = conexao.prepareStatement("update comentarios set descricao = ?, ups = ?, downs = ? data = ?, postagem = ? ,resposta = ?, usuario = ? where id = ?"); 
         
         pstmt.setString(1, p.getDescricao());
-        pstmt.setInt(2, p.getCurtidas());
-        pstmt.setDate(3, new java.sql.Date(p.getData().getTime()));
-        pstmt.setInt(4, p.getPostagem().getId());
-        pstmt.setInt(5, p.getResposta().getId()); 
-        pstmt.setInt(6, p.getUsuario().getId());
-        pstmt.setInt(7, p.getId());
+        pstmt.setInt(2, p.getUps());
+        pstmt.setInt(3, p.getDowns());
+        pstmt.setDate(4, new java.sql.Date(p.getData().getTime()));
+        pstmt.setInt(5, p.getPostagem().getId());
+        pstmt.setInt(6, p.getResposta().getId()); 
+        pstmt.setInt(7, p.getUsuario().getId());
+        pstmt.setInt(8, p.getId());
 
         pstmt.executeUpdate();
     }
@@ -71,7 +72,8 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             c.setId(id);
             c.setDescricao(rs.getString("descricao"));
-            c.setCurtidas(rs.getInt("curtidas"));
+            c.setUps(rs.getInt("ups"));
+            c.setDowns(rs.getInt("downs"));
             c.setData(rs.getDate("data"));
             c.setPostagem(postagemDAO.selecionar(rs.getInt("postagem")));
             c.setUsuario(usuarioDAO.selecionar(rs.getInt("usuario")));
@@ -113,7 +115,8 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
 
             c.setId(rs.getInt("id"));
             c.setDescricao(rs.getString("descricao"));
-            c.setCurtidas(rs.getInt("curtidas"));
+            c.setUps(rs.getInt("Ups"));
+            c.setDowns(rs.getInt("Downs"));;
             c.setData(rs.getDate("data"));
             c.setPostagem(postagemDAO.selecionar(rs.getInt("postagem")));
             c.setUsuario(usuarioDAO.selecionar(rs.getInt("usuario")));
@@ -144,13 +147,15 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
             throw new Exception("O comentário não pode estar vazio!");
         }
         
-        PreparedStatement pstmt = conexao.prepareStatement("insert into comentarios(descricao, curtidas, data, postagem, resposta, usuario) values(?, ?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
+        PreparedStatement pstmt = conexao.prepareStatement("insert into comentarios(descricao, ups, downs, data, postagem, resposta, usuario) values(?, ?, ?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
 
         pstmt.setString(1, c.getDescricao());
-        pstmt.setInt(2, c.getCurtidas());
-        pstmt.setDate(3, new java.sql.Date(c.getData().getTime()));
-        pstmt.setInt(4, c.getPostagem().getId());
-        pstmt.setInt(6, c.getUsuario().getId());
+        pstmt.setInt(2, c.getUps());
+        pstmt.setInt(3, c.getDowns());
+        pstmt.setDate(4, new java.sql.Date(c.getData().getTime()));
+        pstmt.setInt(5, c.getPostagem().getId());
+        pstmt.setInt(6, c.getResposta().getId());
+        pstmt.setInt(7, c.getUsuario().getId());
         
         if(c.getResposta() != null){
             pstmt.setInt(5, c.getResposta().getId());

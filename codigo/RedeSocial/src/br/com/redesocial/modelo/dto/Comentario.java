@@ -19,9 +19,14 @@ public class Comentario {
     private String descricao;
     
     /**
-     * Atributo que identifica as curtidas do comentário
+     * Atributo que identifica os ups do comentário
      */
-    private Integer curtidas;
+    private Integer ups;
+    
+    /**
+     * Atributo que identifica os Downs do comentário
+     */
+    private Integer Downs;
     
     /**
      * Atributo que identifica a data do comentário
@@ -76,19 +81,35 @@ public class Comentario {
     }
     
     /**
-     * Função que retorna as curtidas de um comentário
-     * @return curtidas do comentário
+     * Função que retorna os Ups de um comentário
+     * @return Ups do comentário
      */
-    public Integer getCurtidas() {
-        return curtidas;
+    public Integer getUps() {
+        return ups;
     }
     
     /**
      * Função que modifica as curtidas de um comentário
-     * @param curtidas novo curtidas do comentário
+     * @param ups novo curtidas do comentário
      */
-    public void setCurtidas(Integer curtidas) {
-        this.curtidas = curtidas;
+    public void setUps(Integer ups) {
+        this.ups = ups;
+    }
+    
+    /**
+     * Função que retorna os Downs de um comentário
+     * @return Downs do comentário
+     */
+    public Integer getDowns() {
+        return Downs;
+    }
+    
+    /**
+     * Função que modifica as curtidas de um comentário
+     * @param downs novo curtidas do comentário
+     */
+    public void setDowns(Integer downs) {
+        this.Downs = downs;
     }
     
     /**

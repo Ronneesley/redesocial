@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author IgorRodrigues
+ * @author IgorRodrigues, JonathanSilvestre
  */
 public class PostagemDAO extends DAOCRUDBase<Postagem> {
     
@@ -39,13 +39,14 @@ public class PostagemDAO extends DAOCRUDBase<Postagem> {
         }
         
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("insert into postagens (curtidas,descricao,data, usuario, visualizacoes) values (?,?,?,?,?)", Statement.RETURN_GENERATED_KEYS);
+        pstmt = conexao.prepareStatement("insert into postagens (ups,downs,descricao,data, usuario, visualizacoes) values (?,?,?,?,?,?)", Statement.RETURN_GENERATED_KEYS);
         
-        pstmt.setInt(1, p.getCurtidas());
-        pstmt.setString(2,p.getDescricao());
-        pstmt.setTimestamp(3, new Timestamp(p.getData().getTime()));
-        pstmt.setInt(4, p.getUsuario().getId());
-        pstmt.setInt(5, p.getVisualizacoes());
+        pstmt.setInt(1, p.getUps());
+        pstmt.setInt(2, p.getDowns());
+        pstmt.setString(3,p.getDescricao());
+        pstmt.setTimestamp(4, new Timestamp(p.getData().getTime()));
+        pstmt.setInt(5, p.getUsuario().getId());
+        pstmt.setInt(6, p.getVisualizacoes());
         
         pstmt.executeUpdate();
         
@@ -63,13 +64,14 @@ public class PostagemDAO extends DAOCRUDBase<Postagem> {
         Connection conexao = getConexao();
         
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("update postagens set curtidas = ?, descricao = ?, data = ?, usuario = ? where id = ?");
+        pstmt = conexao.prepareStatement("update postagens set ups = ?, downs = ?, descricao = ?, data = ?, usuario = ? where id = ?");
         
-        pstmt.setInt(1, p.getCurtidas());
-        pstmt.setString(2, p.getDescricao());
-        pstmt.setDate(3, new java.sql.Date(p.getData().getTime()));
-        pstmt.setInt(4, p.getUsuario().getId());
-        pstmt.setInt(5, p.getId());
+        pstmt.setInt(1, p.getUps());
+        pstmt.setInt(2, p.getDowns());
+        pstmt.setString(3, p.getDescricao());
+        pstmt.setDate(4, new java.sql.Date(p.getData().getTime()));
+        pstmt.setInt(5, p.getUsuario().getId());
+        pstmt.setInt(6, p.getId());
         
         pstmt.executeUpdate();
     }
@@ -98,7 +100,8 @@ public class PostagemDAO extends DAOCRUDBase<Postagem> {
             
             //SETA DADOS NA ENTIDADE DE POSTAGEM
             p.setId(rs.getInt("id"));
-            p.setCurtidas(rs.getInt("curtidas"));
+            p.setUps(rs.getInt("ups"));
+            p.setDowns(rs.getInt("downs"));
             p.setDescricao(rs.getString("descricao"));
             p.setData(rs.getDate("data"));
             
@@ -134,7 +137,8 @@ public class PostagemDAO extends DAOCRUDBase<Postagem> {
         while(rs.next()){
             Postagem p = new Postagem();
             p.setId(rs.getInt("id"));
-            p.setCurtidas(rs.getInt("curtidas"));
+            p.setUps(rs.getInt("ups"));
+            p.setDowns(rs.getInt("downs"));
             p.setDescricao(rs.getString("descricao"));
             p.setData(rs.getDate("data"));
             p.setUsuario(usuarioDAO.selecionar(rs.getInt("usuario")));

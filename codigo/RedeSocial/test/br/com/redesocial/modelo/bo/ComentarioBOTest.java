@@ -68,9 +68,10 @@ public class ComentarioBOTest {
        
             Postagem postagem = new Postagem();
             postagem.setDescricao("Comentário");
-            postagem.setCurtidas(0);
+            postagem.setUps(0);
+            postagem.setDowns(0);
             postagem.setUsuario(usuario);
-            //inserir visualização em todos !!!!!!!
+            postagem.setVisualizacoes(0);
 
             calendario.set(2017, 7, 16, 21, 58, 0);
             postagem.setData(calendario.getTime());
@@ -84,7 +85,8 @@ public class ComentarioBOTest {
             Comentario comentario = new Comentario();
             comentario.setDescricao("bommm");
             comentario.setResposta(comentario);
-            comentario.setCurtidas(0);
+            comentario.setUps(0);
+            comentario.setDowns(0);
             calendario.set(1986, 4, 8, 0, 0, 0);            
             comentario.setData(calendario.getTime());
             comentario.setPostagem(postagem);
@@ -257,7 +259,8 @@ public class ComentarioBOTest {
 
             Postagem postagem = new Postagem();
 
-            postagem.setCurtidas(6);
+            postagem.setUps(0);
+            postagem.setDowns(0);
             postagem.setDescricao("Texto do Post");
             postagem.setData(calendarioPost.getTime());
             postagem.setUsuario(usuario);
@@ -271,7 +274,8 @@ public class ComentarioBOTest {
             Comentario comentario = new Comentario();
 
             comentario.setDescricao("Comentário escrito aqui!!!");
-            comentario.setCurtidas(2);
+            comentario.setUps(0);
+            comentario.setDowns(0);
             comentario.setData(calendario.getTime());
             comentario.setPostagem(postagem);
 
@@ -363,7 +367,8 @@ public class ComentarioBOTest {
             
             Postagem postagem = new Postagem();
             
-            postagem.setCurtidas(6);
+            postagem.setUps(0);
+            postagem.setDowns(0);
             postagem.setDescricao("Post de texto");
             postagem.setData(calendarioPost.getTime());
             postagem.setUsuario(usuario);
@@ -379,7 +384,8 @@ public class ComentarioBOTest {
                 Comentario comentario = new Comentario();
                 
                 comentario.setDescricao("Que legal!");
-                comentario.setCurtidas(2);
+                comentario.setUps(0);
+                comentario.setDowns(0);
                 comentario.setData(calendario.getTime());
                 comentario.setPostagem(postagem);
                 
@@ -454,7 +460,8 @@ public class ComentarioBOTest {
 
             Postagem postagem = new Postagem();
             postagem.setDescricao("Comentário");
-            postagem.setCurtidas(0);
+            postagem.setUps(0);
+            postagem.setDowns(0);
             postagem.setUsuario(usuario);
 
             calendario.set(2017, 7, 16, 21, 58, 0);
@@ -467,7 +474,8 @@ public class ComentarioBOTest {
             
             Comentario comentario = new Comentario();
             comentario.setDescricao("bommm");
-            comentario.setCurtidas(0);
+            comentario.setUps(0);
+            comentario.setDowns(0);
             
             calendario.set(1986, 4, 8, 0, 0, 0);            
             comentario.setData(calendario.getTime());

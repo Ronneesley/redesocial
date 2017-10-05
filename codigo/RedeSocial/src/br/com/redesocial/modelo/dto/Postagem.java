@@ -4,13 +4,15 @@ import java.util.Date;
 
 /**
  *
- * @author Lara, Gusttavo Nunes
+ * @author Lara, Gusttavo Nunes, Jonathan Silvestre
  */
 public class Postagem {
     private Integer id;
 
-    private Integer curtidas;
+    private Integer ups;
 
+    private Integer downs;
+    
     private String descricao;
 
     private Date data;
@@ -18,29 +20,6 @@ public class Postagem {
     private Usuario usuario;
     
     private Integer visualizacoes;
-    
-    /*public String getTempoPostagem(Calendar calendario){//Recebe uma data{Y,M,D,h,m,s}
-        //se < 60 segundos -> x seg.
-        //se < 60 minutos  -> x min.
-        //se < 24 horas -> x hora ou horas
-        //se < 48 horas -> ontem
-        //se < 30 dias ->  x dias
-        //se > 30 dias -> dd/mm/YYYY
-        
-        Calendar dataPostagem = Calendar.getInstance();
-        dataPostagem = calendario;//Recebe a data da postagem
-        Calendar dataAtual = Calendar.getInstance();
-        dataAtual.setTime(dataAtual.getTime());//Recebe a data atual        
-        
-        int ano = calendario.get(Calendar.YEAR); 
-        int mes = calendario.get(Calendar.MONTH); 
-        int h = calendario.get(Calendar.HOUR_OF_DAY);//Hora no formato de 24 horas e não no de 12  
-        int m = calendario.get(Calendar.MINUTE);  
-        int s = calendario.get(Calendar.SECOND);  
-        int segundos = (h * 60 + m) * 60 + s;  
-        
-        return "";
-    }*/
 
     public Integer getId(){
         return id;
@@ -50,12 +29,37 @@ public class Postagem {
         this.id = id;
     }
 
-    public Integer getCurtidas(){
-        return curtidas;
+    /**
+     * Função que retorna os Ups de um comentário
+     * @return Ups do comentário
+     */
+    public Integer getUps() {
+        return ups;
     }
-
-    public void setCurtidas(Integer curtidas){
-        this.curtidas = curtidas;
+    
+    /**
+     * Função que modifica as curtidas de um comentário
+     * @param ups novo curtidas do comentário
+     */
+    public void setUps(Integer ups) {
+        this.ups = ups;
+    }
+    
+    /**
+     * Função que retorna os Downs de um comentário
+     * @return Downs do comentário
+     */
+    public Integer getDowns() {
+        return downs;
+    }
+    
+    /**
+     * Função que modifica as curtidas de um comentário
+     * @param downs novo curtidas do comentário
+     */
+    
+    public void setDowns(Integer downs) {
+        this.downs = downs;
     }
 
     public String getDescricao(){
