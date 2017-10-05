@@ -229,3 +229,13 @@ CREATE VIEW `usuarios_por_pais` AS
         JOIN `estados` `est` ON ((`cid`.`estado` = `est`.`id`)))
         JOIN `paises` `pai` ON ((`est`.`pais` = `pai`.`id`)))
     GROUP BY `pai`.`nome`;
+    
+   /**
+   *View de quantidades de aportes por catgoria
+   *@author Brener Gomes de Jesus
+   */
+   CREATE VIEW `AportesPorQuantidade` AS
+   SELECT categorias.descricao, COUNT(*)
+   FROM aportes, categorias
+   where aportes.categoria = categorias.id
+   GROUP BY aportes.categoria;
