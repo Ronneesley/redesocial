@@ -43,7 +43,7 @@ public class FeedControle extends HttpServlet {
                     break;
             }
         } catch (Exception ex){
-            
+            ex.printStackTrace();
         }
     }
 
@@ -87,8 +87,7 @@ public class FeedControle extends HttpServlet {
     }// </editor-fold>
 
     private void postar(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        String mensagem = request.getParameter("mensagem");
-        
+        String mensagem = request.getParameter("mensagem");        
         Usuario usuario = (Usuario) request.getSession().getAttribute("usuario");
         
         PostagemBO bo = new PostagemBO();
@@ -96,8 +95,7 @@ public class FeedControle extends HttpServlet {
         
         request.setAttribute("usuario", usuario);
         
-        RequestDispatcher rd = request.getRequestDispatcher("paginas/layout.jsp");
-        rd.forward(request, response);
+        atualizar(request, response);
     }
 
     private void atualizar(HttpServletRequest request, HttpServletResponse response) throws Exception {

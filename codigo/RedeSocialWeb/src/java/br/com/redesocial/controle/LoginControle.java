@@ -94,10 +94,7 @@ public class LoginControle extends HttpServlet {
             
             request.getSession().setAttribute("usuario", usuario);
             
-            RequestDispatcher rd = request.getRequestDispatcher("paginas/layout.jsp");
-            rd.forward(request, response);
-            
-            response.sendRedirect("/FeedControle?operacao=Atualizar");
+            response.sendRedirect("./FeedControle?operacao=Atualizar");
         } else {
             request.setAttribute("mensagem", "Usuário ou senha inválidos");
             
