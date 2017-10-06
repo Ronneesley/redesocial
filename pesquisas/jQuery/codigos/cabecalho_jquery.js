@@ -1,3 +1,3 @@
 $("#cabecalho").click(function (event) {
-  alert("VocÃª clicou no cabeÃ§alho!");
+	alert("Você clicou no cabeçalho!");
 });

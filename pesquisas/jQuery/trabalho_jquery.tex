@@ -1,5 +1,5 @@
 \documentclass[12pt,a4paper]{article}
-\usepackage[utf8]{inputenc}
+\usepackage[latin1]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -61,7 +61,7 @@
 
 
 Instituto Federal Goiano - Campus Ceres\\
-Bacharelado em Sistemas de InformaÃ§Ã£o\\
+Bacharelado em Sistemas de Informação\\
 Prof. Me. Ronneesley Moura Teles\\\vspace{0.2cm}
 Davi Ildeu de Faria \\
 Marcos Antonio Arriel Rodrigues \\
@@ -88,74 +88,84 @@ Outubro\\
 \begin{center}
 \textbf{\Large{O jQuery}}\\\vspace{0.5cm}
 \end{center}
-\section{O que Ã©?}%GGN
+\section{O que é?}%GGN
 
-O jQuery trata-se de uma biblioteca de JavaScript com uma sÃ©rie de diversas funÃ§Ãµes, capazes de ajudar desenvolvedores. Considerada como uma biblioteca popular e padrÃ£o para programaÃ§Ã£o \textit{front-end} (refere-se a interfaces de \textit{websites}), Ã© mantida pela FundaÃ§Ã£o jQuery. De acordo com o site oficial Ã© â€œ[...] rÃ¡pida, pequena e rica em recursosâ€. Ademais, acaba trabalhando com a manipulaÃ§Ã£o de eventos, AJAX e HTML, proporcionando uma maior integraÃ§Ã£o, compatibilidade e funcionamento nos mais variados navegadores. No caso de pÃ¡ginas \textit{web}, auxilia principalmente para o uso de JavaScript (JS) com interaÃ§Ãµes HTML.
+	O jQuery trata-se de uma biblioteca de JavaScript com uma série de diversas funções, capazes de ajudar desenvolvedores. Considerada como uma biblioteca popular e padrão para programação \textit{front-end} (refere-se a interfaces de \textit{websites}), é mantida pela Fundação jQuery. De acordo com o site oficial é ``[...] rápida, pequena e rica em recursos''. Ademais, acaba trabalhando com a manipulação de eventos, AJAX e HTML, proporcionando uma maior integração, compatibilidade e funcionamento nos mais variados navegadores. No caso de páginas \textit{web}, auxilia principalmente para o uso de JavaScript (JS) com interações HTML.
 
-A biblioteca foi criada em 2006, por John Resig, diante das frustraÃ§Ãµes decorrentes de cÃ³digos JS incompatÃ­veis em navegadores diferentes. Para sua concepÃ§Ã£o, pensou-se em um agregado de funÃ§Ãµes com o intuito de resolver problemas mais complexos de serem resolvidos puramente com JavaScript.
+A biblioteca foi criada em 2006, por John Resig, diante das frustrações decorrentes de códigos JS incompatíveis em navegadores diferentes. Para sua concepção, pensou-se em um agregado de funções com o intuito de resolver problemas mais complexos de serem resolvidos puramente com JavaScript.
 
 
 \section{Como incluir}%GGN
 
-Inicialmente, deve-se realizar o \textit{download} da versÃ£o mais recente (3.2.1) da biblioteca jQuery no site oficial (http://jquery.com).
-Depois, Ã© necessÃ¡ria sua referÃªncia no cabeÃ§alho da pÃ¡gina HTML, conforme cÃ³digo abaixo:\vspace{0.3cm}
+Inicialmente, deve-se realizar o \textit{download} da versão mais recente (3.2.1) da biblioteca jQuery no site oficial (http://jquery.com).
+Depois, é necessária sua referência no cabeçalho da página HTML, conforme código abaixo. Ressalta-se que caminho do arquivo e o nome do \textit{.js} deve ser o mesmo usado ao baixar a biblioteca. Também pode-se incuir por meio de referência externa. \vspace{0.3cm}
 
 \lstinputlisting{codigos/incluir.html} 
 
 \vspace{0.3cm}
-Ressalta-se que caminho do arquivo e o nome do \textit{.js} deve ser o mesmo usado ao baixar a biblioteca.
 
-\section{FunÃ§Ã£o do \$}
 
-A funÃ§Ã£o \$() permite selecionar elementos com maior facilidade, maior compatibilidade, com menos cÃ³digo e de maneira intuitiva.
+\section{Função do \$}
+
+A função \$() permite selecionar elementos com maior facilidade, maior compatibilidade, com menos código e de maneira intuitiva.
 
 \begin{itemize}
-\item CÃ³digo em JavaScript â€œPuroâ€ \vspace{0.5cm}
+\item Código em JavaScript ``Puro'' \vspace{0.5cm}
 
 \lstinputlisting{codigos/cabecalho_js.js}
 
-O cÃ³digo acima adiciona um evento onde o id Ã© â€œcabeÃ§alhoâ€. \vspace{0.5cm}
+O código acima adiciona um evento onde o id é ``cabeçalho''. \vspace{0.5cm}
 
-\item CÃ³digo com jQuery \vspace{0.5cm}
+\item Código com jQuery \vspace{0.5cm}
 
 \lstinputlisting{codigos/cabecalho_jquery.js}
 
-A sintaxe Ã© bem menor, e a biblioteca se encarrega de encontrar o modo mais compatÃ­vel para adicionar o evento ao elemento de id â€œcabecalhoâ€.
+A sintaxe é bem menor, e a biblioteca se encarrega de encontrar o modo mais compatível para adicionar o evento ao elemento de id ``cabecalho''.
 
 \end{itemize}
 
-\section{AlteraÃ§Ã£o de CSS}%GGN
+\section{Alteração de CSS}%GGN
 \begin{itemize}
 
 \item Insira seu texto aqui;
 \end{itemize}
 
-\section{FunÃ§Ã£o HTML()}%GGN
+\section{Função HTML()}%GGN
 
-A funÃ§Ã£o HTML() tem dois usos distintos: Pode-se usÃ¡-la para obter o conteÃºdo em html de um determinado elemento e para definir esse conteÃºdo. Na primeira forma, basta que o mÃ©todo seja invocado sem a passagem de parÃ¢metros, na segunda deve-se passar o conteÃºdo total do elemento. 
-\vspace{0.5cm}
+A função HTML() tem dois usos distintos: Pode-se usá-la para obter o conteúdo em html de um determinado elemento e para definir esse conteúdo. Na primeira forma, basta que o método seja invocado sem a passagem de parâmetros, na segunda deve-se passar o conteúdo total do elemento. \vspace{0.3cm}
+\lstinputlisting{codigos/html.html}
 
-\hspace{-0.7 cm}
-\includegraphics[width=15cm\textwidth]{html.png}
+\section{Função Append()}%GGN
 
-\section{FunÃ§Ã£o Append()}%GGN
+Em alguns casos pode ser necessário adicionar conteúdos dentro do código HTML. Os métodos append(), appendTo(), prepend() e prependTo() podem ser usados para esse fim, adicionando novos objetos a um elemento existente. 
+
 \begin{itemize}
+\item Append(): Usa um conteúdo passado como parâmetro inserindo-o no final de um controle alvo, também passado como parâmetro. Cada vez que o botão for clicado o conteúdo será inserido novamente sempre. \vspace{0.3cm}
+\lstinputlisting{codigos/append.html}
 
-\item Insira seu texto aqui;
+\item Prepend(): A diferença do Append() é apenas que o conteúdo passada no parâmetro será adicionado no início do controle alvo, antes do conteúdo inicial. \vspace{0.3cm}
+\lstinputlisting{codigos/prepend.html}
+
+\item AppendTo(): Nesse modelo o conteúdo é transferido de um alvo para outro, funcionando como um recorte de conteúdo. A div ``novo$\_$conteudo'' é transferida para dentro da div ``conteudo'' sendo inserida após o conteúdo original da div. \vspace{0.3cm}
+\lstinputlisting{codigos/appendTo.html}
+
+\item PrependTo(): No caso do PrependTo() acontece da mesma forma do AppendTo(), porém a div ``novo$\_$conteudo'' é inserida antes do conteúdo original da div alvo. \vspace{0.5cm}
+\lstinputlisting{codigos/prependTo.html}
+
 \end{itemize}
 
 
-\section{ReferÃªncias}
+\section{Referências}
 \begin{enumerate}
 
-\item KHAN ACADEMY. \textbf{Pausa para a histÃ³ria: como John criou o jQuery?} DisponÃ­vel em: $<$http://https://pt.khanacademy.org/computing/computer-pro
+\item KHAN ACADEMY. \textbf{Pausa para a história: como John criou o jQuery?} Disponível em: $<$http://https://pt.khanacademy.org/computing/computer-pro
 gramming/html-js-jquery/jquery-dom-access/a/history-of-jquery$>$. Acesso em: 22 de setembro de 2017.
 
-\item JQUERY. \textbf{jQuery, write less, do more.} DisponÃ­vel em: $<$http://jquery.com$>$. Acesso em: 21 de setembro de 2017.
+\item JQUERY. \textbf{jQuery, write less, do more.} Disponível em: $<$http://jquery.com$>$. Acesso em: 21 de setembro de 2017.
 
-\item CAELUM. \textbf{Apostila Desenvolvimento Web com HTML, CSS e JavaScript.} DisponÃ­vel em: $<$https://www.caelum.com.br/apostila-html-css-javascript/jquery/$>$. Acesso em: 22 de setembro de 2017.
+\item CAELUM. \textbf{Apostila Desenvolvimento Web com HTML, CSS e JavaScript.} Disponível em: $<$https://www.caelum.com.br/apostila-html-css-javascript/jquery/$>$. Acesso em: 22 de setembro de 2017.
 
-\item W3SCHOOLS. \textbf{jQuery html() Method.} DisponÃ­vel em: $<$https://www.w3
+\item W3SCHOOLS. \textbf{jQuery html() Method.} Disponível em: $<$https://www.w3
 schools.com/jquery/html$\_$html.asp$>$. Acesso em: 28 de setembro de 2017.
 
 \end{enumerate}
