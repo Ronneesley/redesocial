@@ -38,12 +38,16 @@ public class PalavraChaveDAO extends DAOCRUDBase<PalavraChave> {
     public void alterar(PalavraChave p) throws Exception {
         Connection conexao = getConexao();
         
+        if (p.getDescricao().trim().equals("")){
+            throw new Exception("A descrição não pode estar vazia!");
+        }
+        
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("update palavras_chave (descricao) values(?)");
+        pstmt = conexao.prepareStatement("update palavras_chave set descricao = ? where id = ?");
 
         pstmt.setString(1, p.getDescricao());
-        pstmt.executeUpdate();
-
+        pstmt.setInt(2, p.getId());
+        
         pstmt.executeUpdate();
     }
 
