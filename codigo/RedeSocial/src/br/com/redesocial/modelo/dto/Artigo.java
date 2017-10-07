@@ -17,8 +17,6 @@ public class Artigo {
     //Atributo que identifica o ISSN
     private String ISSN;
     //Atributo que identifica o autor do artigo
-    private String autor;
-    //Atributo que identifica a data em que o artigo foi postado
     private Date data;
     //Atributo que identifica a area de conhecimentod do artigo
     private String areaConhecimento;
@@ -30,6 +28,8 @@ public class Artigo {
     private String URL;
     //Atributo que identifica o arquivo do artigo
     private byte[] artigo;
+    //Atributo que identifica a categoria do artigo
+    private Categoria categoria;
     
     //Construtor vazio para a classe
     public Artigo() {
@@ -37,18 +37,18 @@ public class Artigo {
     }
     
     //Construtor para a classe com parâmetros
-    public Artigo(Integer id, String idioma, String revista, String ISSN, String autor, Date data, String areaConhecimento, String titulo, String resumo, String URL, byte[] artigo) {
+    public Artigo(Integer id, String idioma, String revista, String ISSN, Date data, String areaConhecimento, String titulo, String resumo, String URL, byte[] artigo, Categoria categoria) {
         this.id = id;
         this.idioma = idioma;
         this.revista = revista;
         this.ISSN = ISSN;
-        this.autor = autor;
         this.data = data;
         this.areaConhecimento = areaConhecimento;
         this.titulo = titulo;
         this.resumo = resumo;
         this.URL = URL;
         this.artigo = artigo;
+        this.categoria = categoria;
     }
     
     //Função que retorna um identificador de um artigo
@@ -89,16 +89,6 @@ public class Artigo {
     //Função que modifica um ISSN
     public void setISSN(String ISSN) {
         this.ISSN = ISSN;
-    }
-    
-    //Função que retorna um autor
-    public String getAutor() {
-        return autor;
-    }
-
-    //Função que modifica um autor
-    public void setAutor(String autor) {
-        this.autor = autor;
     }
 
     //Função que retorna uma data
@@ -159,5 +149,15 @@ public class Artigo {
     //Função que modifica o arquivo de um artigo
     public void setArtigo(byte[] artigo) {
         this.artigo = artigo;
+    }
+    
+    //Função que retorna uma categoria
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    //Função que modifica um autor
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
     }
 }
