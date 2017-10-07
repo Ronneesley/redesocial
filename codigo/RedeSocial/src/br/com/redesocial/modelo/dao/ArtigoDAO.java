@@ -27,18 +27,18 @@ public class ArtigoDAO extends DAOCRUDBase<Artigo>  {
             throw new Exception("O arquivo do artigo não pode estar vazio!");
         }
         
-        PreparedStatement pstmt = conexao.prepareStatement("insert into artigos (idioma, revista, issn, autor, data, area_conhecimento, titulo, resumo, url, artigo) values (?,?,?,?,?,?,?,?,?,?)", Statement.RETURN_GENERATED_KEYS);
+        PreparedStatement pstmt = conexao.prepareStatement("insert into artigos (idioma, revista, issn, data, area_conhecimento, titulo, resumo, url, artigo, categoria) values (?,?,?,?,?,?,?,?,?,?)", Statement.RETURN_GENERATED_KEYS);
         
         pstmt.setString(1, dto.getIdioma());
         pstmt.setString(2, dto.getRevista());
         pstmt.setString(3, dto.getISSN());
-        pstmt.setString(4, dto.getAutor());
-        pstmt.setDate(5, new java.sql.Date(dto.getData().getTime()));
-        pstmt.setString(6, dto.getAreaConhecimento());
-        pstmt.setString(7, dto.getTitulo());
-        pstmt.setString(8, dto.getResumo());
-        pstmt.setString(9, dto.getURL());
-        pstmt.setBytes(10, dto.getArtigo());
+        pstmt.setDate(4, new java.sql.Date(dto.getData().getTime()));
+        pstmt.setString(5, dto.getAreaConhecimento());
+        pstmt.setString(6, dto.getTitulo());
+        pstmt.setString(7, dto.getResumo());
+        pstmt.setString(8, dto.getURL());
+        pstmt.setBytes(9, dto.getArtigo());
+        pstmt.setInt(10, dto.getCategoria().getId());
         
         pstmt.executeUpdate();
         
@@ -62,6 +62,7 @@ public class ArtigoDAO extends DAOCRUDBase<Artigo>  {
         ResultSet rs;
         rs = pstmt.executeQuery();
         
+        CategoriaDAO categoriaDAO = new CategoriaDAO();
         if (rs.next()){
             
             Artigo a = new Artigo();
@@ -69,13 +70,13 @@ public class ArtigoDAO extends DAOCRUDBase<Artigo>  {
             a.setIdioma(rs.getString("idioma"));
             a.setRevista(rs.getString("revista"));
             a.setISSN(rs.getString("issn"));
-            a.setAutor(rs.getString("autor"));
             a.setData(rs.getDate("data"));
             a.setAreaConhecimento(rs.getString("areaConhecimento"));
             a.setTitulo(rs.getString("titulo"));
             a.setResumo(rs.getString("resumo"));
             a.setURL(rs.getString("URL"));
-            a.setArtigo(rs.getBytes("artigo"));    
+            a.setArtigo(rs.getBytes("artigo"));  
+            a.setCategoria(categoriaDAO.selecionar(rs.getInt("categoria")));
             
             return a;
         } else {
@@ -120,6 +121,7 @@ public class ArtigoDAO extends DAOCRUDBase<Artigo>  {
         List lista;
         lista = new ArrayList();
         
+        CategoriaDAO categoriaDAO = new CategoriaDAO();
         while (rs.next()){
             
             Artigo a = new Artigo();
@@ -127,13 +129,14 @@ public class ArtigoDAO extends DAOCRUDBase<Artigo>  {
             a.setIdioma(rs.getString("idioma"));
             a.setRevista(rs.getString("revista"));
             a.setISSN(rs.getString("issn"));
-            a.setAutor(rs.getString("autor"));
             a.setData(rs.getDate("data"));
             a.setAreaConhecimento(rs.getString("area_conhecimento"));
             a.setTitulo(rs.getString("titulo"));
             a.setResumo(rs.getString("resumo"));
             a.setURL(rs.getString("url"));
-            a.setArtigo(rs.getBytes("artigo"));    
+            a.setArtigo(rs.getBytes("artigo")); 
+            a.setCategoria(categoriaDAO.selecionar(rs.getInt("categoria")));
+            
             lista.add(a);
         }        
         return lista;        
@@ -142,7 +145,7 @@ public class ArtigoDAO extends DAOCRUDBase<Artigo>  {
     /**
      * Método que Altera um Artigo já cadastrado no banco de dados
      * @author Eduardo Oliveira Silva
-     * @param a attigo a ser alterado
+     * @param a artigo a ser alterado
      * @throws Exception possíveis exceções que podem acontecer
      */
     @Override
@@ -150,18 +153,18 @@ public class ArtigoDAO extends DAOCRUDBase<Artigo>  {
         Connection conexao = getConexao();
         
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("update artigos set  idioma = ?, revista = ?, issn = ?, autor = ?, data = ?, area_conhecimento = ?, titulo = ?, resumo = ?, url = ?, artigo = ? where id = ?");
+        pstmt = conexao.prepareStatement("update artigos set  idioma = ?, revista = ?, issn = ?, data = ?, area_conhecimento = ?, titulo = ?, resumo = ?, url = ?, artigo = ?, categoria = ? where id = ?");
         
         pstmt.setString(1, a.getIdioma());
         pstmt.setString(2, a.getRevista());
         pstmt.setString(3, a.getISSN());
-        pstmt.setString(4, a.getAutor());
-        pstmt.setDate(5, new java.sql.Date(a.getData().getTime()));
-        pstmt.setString(6, a.getAreaConhecimento());
-        pstmt.setString(7, a.getTitulo());
-        pstmt.setString(8, a.getResumo());
-        pstmt.setString(9, a.getURL());
-        pstmt.setBytes(10, a.getArtigo());
+        pstmt.setDate(4, new java.sql.Date(a.getData().getTime()));
+        pstmt.setString(5, a.getAreaConhecimento());
+        pstmt.setString(6, a.getTitulo());
+        pstmt.setString(7, a.getResumo());
+        pstmt.setString(8, a.getURL());
+        pstmt.setBytes(9, a.getArtigo());
+        pstmt.setInt(10, a.getCategoria().getId());
         pstmt.setInt(11, a.getId());
         
         //executa uma atualização/alteração
