@@ -34,12 +34,12 @@ public class ArtigoBO extends BOCRUDBase<Artigo, ArtigoDAO> {
         if (dto.getIdioma() == null) throw new Exception("Preencha o idioma do artigo.");
         if (dto.getRevista() == null) throw new Exception("Preencha a revista do artigo.");
         if (dto.getISSN() == null) throw new Exception("Preencha o ISSN do artigo.");
-        if (dto.getAutor() == null) throw new Exception("Preencha o nome do autor do artigo.");
         if (dto.getData() == null) throw new Exception("Preencha a data do artigo.");
         if (dto.getAreaConhecimento() == null) throw new Exception("Preencha a área de conhecimento do artigo.");
         if (dto.getTitulo().trim().equals("")) throw new Exception("Preencha o título do artigo.");
         if (dto.getResumo() == null) throw new Exception("Preencha o resumo do artigo.");
         if (dto.getURL() == null) throw new Exception("Preencha a URL do artigo.");
+        if (dto.getCategoria() == null) throw new Exception("Preencha a categoria do artigo.");
         // private byte[] artigo;
     }
     

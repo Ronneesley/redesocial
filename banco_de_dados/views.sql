@@ -171,18 +171,32 @@ create view `quantidade_de_usuarios_por_cidade` as (
 );
 
 /**
- * View para mostrar a quantidade de postagens, aportes e artigos por usuário
+ * Views para mostrar a quantidade de postagens, aportes e artigos por usuário
  * @author Jônatas de Souza Rezende, Paulo Henrique Araujo
  */
 
-CREATE VIEW qtde_postagens_aportes_artigos_por_usuario AS
-SELECT usuarios.id AS id_usuario, usuarios.nome AS usuario, COUNT(postagens.id) AS qtde_postagens, 
-       COUNT(aportes.id) AS qtde_aportes, COUNT(artigos.id) AS qtde_artigos
+CREATE OR REPLACE VIEW postagens_aportes_por_usuario AS
+SELECT 
+	usuarios.id AS id_usuario, 
+	usuarios.nome AS usuario, 
+    COUNT(postagens.id) AS qtde_postagens, 
+    COUNT(aportes.postagem) AS qtde_aportes    
 FROM usuarios
-INNER JOIN postagens ON postagens.usuario = usuarios.id
-LEFT JOIN aportes ON aportes.postagem = postagens.id
-LEFT JOIN artigos ON artigos.postagem = postagens.id
-GROUP BY usuarios.nome;
+	LEFT JOIN postagens ON postagens.usuario = usuarios.id
+    LEFT JOIN aportes ON aportes.postagem = postagens.id
+   	GROUP BY usuarios.id;
+
+CREATE OR REPLACE VIEW postagens_aportes_artigos_por_usuario AS
+SELECT 
+	id_usuario,
+    papu.usuario,
+    qtde_postagens,
+    qtde_aportes,
+	COUNT(autores.usuario) AS qtde_artigos
+FROM postagens_aportes_por_usuario papu
+	LEFT JOIN autores ON papu.id_usuario = autores.usuario
+    GROUP BY id_usuario;    
+    
 
 /**
  * View para mostrar a quantidade de publico alvo por idade
@@ -239,3 +253,19 @@ CREATE VIEW `usuarios_por_pais` AS
    FROM aportes, categorias
    where aportes.categoria = categorias.id
    GROUP BY aportes.categoria;
+   
+   
+ /**
+ * View para selecionar a quantidade de relações de usuarios por tipo.
+ * @author Fernando Maciel da Silva
+ */
+create view `usuariosQtdeRelacionamentos` as (
+
+	SELECT u.nome, t.nome as tipo, count(*) as Qtde 
+	FROM redesocial.relacionamentos r 
+    
+	inner join	usuarios u on r.usuario_1 = u.id 
+	inner join	tipos t on r.tipo = t.id
+	group by u.nome, t.nome 
+	order by u.nome asc
+);

@@ -1,6 +1,7 @@
 package br.com.redesocial.modelo.bo;
 
 import br.com.redesocial.modelo.dto.Artigo;
+import br.com.redesocial.modelo.dto.Categoria;
 import br.com.redesocial.modelo.dto.Pais;
 import br.com.redesocial.modelo.dto.Estado;
 import br.com.redesocial.modelo.dto.Cidade;
@@ -29,7 +30,7 @@ public class ArtigoBOTest {
         artigo1.setIdioma("Portugues");       
         artigo1.setRevista("SBIS");
         artigo1.setISSN("33333333");
-        artigo1.setAutor("Ciencias da terra"); 
+        //artigo1.setAutor("Ciencias da terra"); 
         Calendar calendario = Calendar.getInstance();
         calendario.set(1988, 2, 7, 0, 0, 0);            
         artigo1.setData(calendario.getTime());
@@ -107,27 +108,39 @@ public class ArtigoBOTest {
             UsuarioBO usuarioBO = new UsuarioBO();
             usuarioBO.inserir(usuario);
 
-            
             Postagem postagem1 = new Postagem();
-            postagem1.setDescricao("Comentário");
             postagem1.setUps(0);
             postagem1.setDowns(0);
+            postagem1.setDescricao("Comentário");
+            postagem1.setData(calendario.getTime());
+            postagem1.setVisualizacoes(3);
             postagem1.setUsuario(usuario);
+            
+            PostagemBO postagemBO = new PostagemBO();
+            postagemBO.inserir(postagem1);
 
-            ArtigoBO art = new ArtigoBO();
+            Categoria categoria = new Categoria();
+            categoria.setDescricao("Qualquer coisa.");
+            
+            CategoriaBO categoriaBO = new CategoriaBO();
+            categoriaBO.inserir(categoria);
+            
             Artigo artigo = new Artigo();
             artigo.setIdioma("Português");
             artigo.setRevista("Veja");
             artigo.setISSN("12345678");
-            artigo.setAutor("Jorge Fernando");
             artigo.setData(new Date());
             artigo.setAreaConhecimento("Matemática");
             artigo.setTitulo("A matemática no seu cotidiano");
             artigo.setResumo("As exatas te persegue eu qualquer área que você estiver.");
             artigo.setURL("http://www.matematicapravidatoda.com.br");
+            artigo.setArtigo(Utilitarios.lerArquivo(new File("../../arquivos_teste/nome_arquivo.txt")));
+            artigo.setCategoria(categoria);
+            
+            ArtigoBO artigoBO = new ArtigoBO();
             
             try {
-                    art.inserir(artigo);
+                    artigoBO.inserir(artigo);
                     
                 } catch (Exception ex) {
                     fail("Falha ao inserir um artigo: " + ex.getMessage());
@@ -160,7 +173,7 @@ public class ArtigoBOTest {
         artigo.setIdioma("Ingles");       
         artigo.setRevista("RC");
         artigo.setISSN("1234");
-        artigo.setAutor("João"); 
+        //artigo.setAutor("João"); 
         Calendar calendario = Calendar.getInstance();
         calendario.set(1988, 2, 7, 0, 0, 0);            
         artigo.setData(calendario.getTime());
@@ -180,7 +193,7 @@ public class ArtigoBOTest {
         artigo.setIdioma("Portugues");       
         artigo.setRevista("RC");
         artigo.setISSN("1234");
-        artigo.setAutor("João");           
+        //artigo.setAutor("João");           
         artigo.setData(calendario.getTime());
         artigo.setAreaConhecimento("Ciencias da Terra");
         artigo.setTitulo("Qualquer Coisa");
@@ -210,7 +223,7 @@ public class ArtigoBOTest {
             artigo2.setIdioma("Ingles");       
             artigo2.setRevista("SBIS");
             artigo2.setISSN("33333333");
-            artigo2.setAutor("Ciencias da terra"); 
+            //artigo2.setAutor("Ciencias da terra"); 
             Calendar calendario = Calendar.getInstance();
             calendario.set(1988, 2, 7, 0, 0, 0);            
             artigo2.setData(calendario.getTime());
@@ -285,7 +298,7 @@ public class ArtigoBOTest {
             artigo.setIdioma("Português");
             artigo.setRevista("Veja");
             artigo.setISSN("12345678");
-            artigo.setAutor("Jorge Fernando");
+            //artigo.setAutor("Jorge Fernando");
             artigo.setData(new Date());
             artigo.setAreaConhecimento("Matemática");
             artigo.setTitulo("A matemática no seu cotidiano");
