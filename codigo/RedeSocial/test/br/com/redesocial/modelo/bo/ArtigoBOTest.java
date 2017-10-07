@@ -52,7 +52,7 @@ public class ArtigoBOTest {
      * Método de teste responsável pela listagem dos artigos existentes no banco de dados
      * @author Macilon Arruda
      */
-    @Test
+    //@Test
     public void testMetodoListar() {
         
         /* Para realizar a listagem é necessário que existam dados a serem lidos
@@ -269,9 +269,9 @@ public class ArtigoBOTest {
             cidadeBO.inserir(cidade);
             
             Usuario usuario = new Usuario();
-            usuario.setNome("Cilon");
+            usuario.setNome("Luciano");
             usuario.setDataCadastro(new Date());
-            usuario.setEmail("macilonarruda@outlook.com");
+            usuario.setEmail("luciano@gmail.com");
             //usuario.setFoto();
            
             Calendar calendario = Calendar.getInstance();
@@ -293,34 +293,39 @@ public class ArtigoBOTest {
             postagem1.setDowns(0);
             postagem1.setUsuario(usuario);
 
-            ArtigoBO bo = new ArtigoBO();
+            Categoria categoria = new Categoria();
+            categoria.setDescricao("Qualquer coisa2.");
+            
+            CategoriaBO categoriaBO = new CategoriaBO();
+            categoriaBO.inserir(categoria);
+            
             Artigo artigo = new Artigo();
             artigo.setIdioma("Português");
             artigo.setRevista("Veja");
             artigo.setISSN("12345678");
-            //artigo.setAutor("Jorge Fernando");
             artigo.setData(new Date());
             artigo.setAreaConhecimento("Matemática");
             artigo.setTitulo("A matemática no seu cotidiano");
             artigo.setResumo("As exatas te persegue eu qualquer área que você estiver.");
             artigo.setURL("http://www.matematicapravidatoda.com.br");
+            artigo.setArtigo(Utilitarios.lerArquivo(new File("../../arquivos_teste/nome_arquivo.txt")));
+            artigo.setCategoria(categoria);
+            
+            ArtigoBO bo = new ArtigoBO();
         
-        try {
-            bo.inserir(artigo);
+        try{
+        bo.inserir(artigo);
             
         int id = artigo.getId();
-        
         Artigo artigoSelecionado = bo.selecionar(id);
-        
         assertNotNull("Artigo não encontrado", artigoSelecionado);
         
         bo.excluir(id);
-        
         Artigo artigoSelecionadoPosExclusao = bo.selecionar(id);
         
         assertNull("comentario encontrado, mesmo apos exclui-lo", artigoSelecionadoPosExclusao);
         } catch (Exception ex) {
-            fail("Falha ao inserir um artigo: " + ex.getMessage());
+            fail("Falha ao exlcuir um artigo: " + ex.getMessage());
         }
         
         
