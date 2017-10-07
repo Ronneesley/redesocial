@@ -48,7 +48,7 @@ public class CategoriaDAO extends DAOCRUDBase<Categoria> {
         Connection conexao = getConexao();
 
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("select * from multimidias where id = ?");
+        pstmt = conexao.prepareStatement("select * from categorias where id = ?");
         pstmt.setInt(1, id);
 
         ResultSet rs;
