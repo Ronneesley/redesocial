@@ -244,8 +244,11 @@ public class ArtigoBOTest {
                 fail("Erro ao listar: " + ex.getMessage());
         }
     }
-    
-     @Test
+    /**
+     * Método de teste responsável pela exclusão dos artigos existentes no banco de dados
+     * @author Luciano de Carvalho Borba
+     */
+    @Test
     public void testMetodoExcluir() throws Exception{
         
             Pais pais = new Pais();
@@ -315,20 +318,18 @@ public class ArtigoBOTest {
             ArtigoBO bo = new ArtigoBO();
         
         try{
-        bo.inserir(artigo);
-            
-        int id = artigo.getId();
-        Artigo artigoSelecionado = bo.selecionar(id);
-        assertNotNull("Artigo não encontrado", artigoSelecionado);
-        
-        bo.excluir(id);
-        Artigo artigoSelecionadoPosExclusao = bo.selecionar(id);
-        
-        assertNull("Artigo encontrado, mesmo apos exclui-lo", artigoSelecionadoPosExclusao);
-        } catch (Exception ex) {
+            bo.inserir(artigo);
+
+            int id = artigo.getId();
+            Artigo artigoSelecionado = bo.selecionar(id);
+            assertNotNull("Artigo não encontrado", artigoSelecionado);
+
+            bo.excluir(id);
+            Artigo artigoSelecionadoPosExclusao = bo.selecionar(id);
+
+            assertNull("Artigo encontrado, mesmo apos exclui-lo", artigoSelecionadoPosExclusao);
+        }catch (Exception ex) {
             fail("Falha ao exlcuir um artigo: " + ex.getMessage());
         }
-        
-        
     }
 }
