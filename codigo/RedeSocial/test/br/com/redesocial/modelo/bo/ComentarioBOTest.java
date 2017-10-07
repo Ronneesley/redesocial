@@ -124,7 +124,7 @@ public class ComentarioBOTest {
     @Test
     
     public void testMetodoAlterar(){
-    /*ComentarioBO bo = new ComentarioBO();
+       ComentarioBO bo = new ComentarioBO();
         
         
             Calendar calendario = Calendar.getInstance();
@@ -141,7 +141,7 @@ public class ComentarioBOTest {
             pais.setNome("Brasil");
 
             PaisBO paisBO = new PaisBO();
-            paisBO.inserir(pais);
+           // paisBO.inserir(pais);
 
             Estado estado = new Estado();
 
@@ -149,7 +149,7 @@ public class ComentarioBOTest {
             estado.setPais(pais);
 
             EstadoBO estadoBO = new EstadoBO();
-            estadoBO.inserir(estado);
+            //estadoBO.inserir(estado);
 
             Cidade cidade = new Cidade();
 
@@ -157,7 +157,7 @@ public class ComentarioBOTest {
             cidade.setEstado(estado);
 
             CidadeBO cidadeBO = new CidadeBO();
-            cidadeBO.inserir(cidade);
+           // cidadeBO.inserir(cidade);
 
             Usuario usuario = new Usuario();
 
@@ -172,7 +172,7 @@ public class ComentarioBOTest {
             usuario.setCidade(cidade);
 
             UsuarioBO usuarioBO = new UsuarioBO();
-            usuarioBO.inserir(usuario);
+           // usuarioBO.inserir(usuario);
 
             Postagem postagem = new Postagem();
 
@@ -183,10 +183,10 @@ public class ComentarioBOTest {
 
             //insere post
             PostagemBO postagemBO = new PostagemBO();
-            postagemBO.inserir(postagem);
+           // postagemBO.inserir(postagem);
             
 
-            
+           
             //instancia comentario e insere
             Comentario comentario = new Comentario();
 
@@ -194,8 +194,9 @@ public class ComentarioBOTest {
             comentario.setCurtidas(2);
             comentario.setData(calendario.getTime());
             comentario.setPostagem(postagem);
+             ComentarioBO comentarioBO = new ComentarioBO();
 
-            try{
+             try{
                                 
                 bo.inserir(comentario);
             } catch(Exception ex){
@@ -214,11 +215,9 @@ public class ComentarioBOTest {
             bo.alterar(comentario);
         } catch (Exception ex) {
             //Mensagem de erro caso falhe
-            fail("Falha ao inserir o comentario: " + ex.getMessage());
+            fail("Falha ao alterar o comentario: " + ex.getMessage());
         }
         }
-    }*/
-    }
     
     
     @Test
