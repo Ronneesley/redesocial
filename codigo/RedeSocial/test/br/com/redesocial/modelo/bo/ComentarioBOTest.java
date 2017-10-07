@@ -102,6 +102,8 @@ public class ComentarioBOTest {
             comentario.setPostagem(postagem);
             comentario.setResposta(comentario);
             comentario.setUsuario(usuario);
+            comentario.setId(2);
+            
 
             try{
                 //Inserindo comentário no banco de dados
