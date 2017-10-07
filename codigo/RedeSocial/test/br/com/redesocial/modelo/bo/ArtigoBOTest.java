@@ -292,6 +292,7 @@ public class ArtigoBOTest {
             postagem1.setUps(0);
             postagem1.setDowns(0);
             postagem1.setUsuario(usuario);
+            
 
             Categoria categoria = new Categoria();
             categoria.setDescricao("Qualquer coisa2.");
@@ -323,7 +324,7 @@ public class ArtigoBOTest {
         bo.excluir(id);
         Artigo artigoSelecionadoPosExclusao = bo.selecionar(id);
         
-        assertNull("comentario encontrado, mesmo apos exclui-lo", artigoSelecionadoPosExclusao);
+        assertNull("Artigo encontrado, mesmo apos exclui-lo", artigoSelecionadoPosExclusao);
         } catch (Exception ex) {
             fail("Falha ao exlcuir um artigo: " + ex.getMessage());
         }
