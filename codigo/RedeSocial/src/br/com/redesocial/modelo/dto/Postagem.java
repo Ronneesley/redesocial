@@ -62,10 +62,18 @@ public class Postagem {
         this.downs = downs;
     }
 
+    /**
+     * Função que retorna a descricao de uma postagem
+     * @return identificador
+     */
     public String getDescricao(){
         return descricao;
     }
 
+    /**
+     * Função que modifica o identificador de uma postagem
+     * @param id novo identificador
+     */
     public void setDescricao(String descricao){
         this.descricao = descricao;
     }
