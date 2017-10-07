@@ -253,3 +253,19 @@ CREATE VIEW `usuarios_por_pais` AS
    FROM aportes, categorias
    where aportes.categoria = categorias.id
    GROUP BY aportes.categoria;
+   
+   
+ /**
+ * View para selecionar a quantidade de relações de usuarios por tipo.
+ * @author Fernando Maciel da Silva
+ */
+create view `usuariosQtdeRelacionamentos` as (
+
+	SELECT u.nome, t.nome as tipo, count(*) as Qtde 
+	FROM redesocial.relacionamentos r 
+    
+	inner join	usuarios u on r.usuario_1 = u.id 
+	inner join	tipos t on r.tipo = t.id
+	group by u.nome, t.nome 
+	order by u.nome asc
+);
