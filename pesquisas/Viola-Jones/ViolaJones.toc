@@ -1,3 +1,9 @@
 \select@language {brazil}
-\contentsline {section}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{2}
-\contentsline {section}{\numberline {2}Refer\IeC {\^e}ncias Bibliogr\IeC {\'a}fica}{2}
+\contentsline {section}{\numberline {1}O artigo}{2}
+\contentsline {section}{\numberline {2}Vantagem}{2}
+\contentsline {section}{\numberline {3}Desvantagem}{2}
+\contentsline {section}{\numberline {4}Exemplos de Implementa\IeC {\c c}\IeC {\~a}o}{2}
+\contentsline {subsection}{\numberline {4.1}MatLab}{2}
+\contentsline {subsection}{\numberline {4.2}Python}{3}
+\contentsline {subsection}{\numberline {4.3}Java}{3}
+\contentsline {section}{\numberline {5}Refer\IeC {\^e}ncias Bibliogr\IeC {\'a}fica}{4}
