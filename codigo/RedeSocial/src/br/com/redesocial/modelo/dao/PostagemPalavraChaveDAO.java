@@ -70,26 +70,28 @@ public class PostagemPalavraChaveDAO extends DAOBase {
     
 
    /**
-     * Método responsável por alterar uma postagem a partir de suas palavras chaves
-     * @author José Gilvan
-     * @param palavraChave da postagem a ser alterada
-     * @return a postagem alterada a partir da palavra chave
+     * Método responsável por relacionar uma postagem a uma palavra chave
+     * @author Paulo Henrique Araujo
+     * @param dto, valores antigos
+     * @param dtoNovo, valores novos
      * @throws Exception possíveis exceções que podem acontecer
      */
-    public void alterar(PostagemPalavraChave dto) throws Exception {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void alterar(PostagemPalavraChave dto, PostagemPalavraChave dtoNovo) throws Exception {
+        
         Connection conexao = getConexao();
 
 
-         PreparedStatement  pstmt;
-         pstmt = conexao.prepareStatement("update postagens set postagem = ?, palavra_chave = ? where id = ? ");
+        PreparedStatement  pstmt;
+        pstmt = conexao.prepareStatement("update postagens_palavras_chaves set postagem = ?, palavra_chave = ? where postagem = ? and palavra_chave = ? ");
        
        
-        /*pstmt.setInt(1, dto.getPostagem());
-        pstmt.setInt(2, dto.getPalavraChave());*/
+        pstmt.setInt(1, dtoNovo.getPostagem().getId());
+        pstmt.setInt(2, dtoNovo.getPalavraChave().getId());
+        pstmt.setInt(3, dto.getPostagem().getId());
+        pstmt.setInt(4, dto.getPalavraChave().getId());
         
        
-        pstmt.executeUpdate();
+        pstmt.executeQuery();
     }
         
 
