@@ -7,23 +7,28 @@
 %\casoDeUso{Identificador}{Nome}{Ator Principal}{Interessados}{Pré-Condições}{Pós-condições}{Fluxo Básico}{Fluxo Alternativo}{Frequência de Ocorrencia}
 
 \newcommand{\casoDeUso}[9]{
-	\begin{table}[h!]
-		\caption{Caso de Uso: #2}
-		\label{tabela:#1}
-		\begin{tabular}{|p{2.5cm}|p{2.5cm}|p{2cm}|p{5cm}|}
-		\hline
-			\cellcolor{cinzaClaro} Identificador & #1 & \cellcolor{cinzaClaro} Nome & #2 \\ \hline
-			\cellcolor{cinzaClaro} Ator Principal & \multicolumn{3}{p{12cm}|}{#3} \\ \hline
-			\multicolumn{4}{|c|}{\cellcolor{cinzaClaro} Interessados } \\ \hline
-			\multicolumn{4}{|p{16cm}|}{#4} \\ \hline
-			\cellcolor{cinzaClaro} Pré-Condições & \multicolumn{3}{p{12cm}|}{#5} \\ \hline
-			\cellcolor{cinzaClaro} Pós-Condições & \multicolumn{3}{p{12cm}|}{#6} \\ \hline
-			\multicolumn{4}{|c|}{\cellcolor{cinzaClaro} Fluxo Básico } \\ \hline
-			\multicolumn{4}{|p{16cm}|}{#7} \\ \hline
-			\multicolumn{4}{|c|}{\cellcolor{cinzaClaro} Fluxo Alternativo } \\ \hline
-			\multicolumn{4}{|p{16cm}|}{#8} \\ \hline
-			\cellcolor{cinzaClaro} Frequência de Ocorrência & \multicolumn{3}{l|}{#9} \\ \hline
-		\end{tabular}
-	\end{table}
+	\caption{Caso de Uso: #2}
+	\label{tabela:#1}
+	\begin{longtable}{|p{2.5cm}|p{2.5cm}|p{2cm}|p{5cm}|}
+	\endfirsthead
+	\multicolumn{4}{|p{16cm}|}{\tablename\ \thetable\ -- \textit{Continuação}} \\ \hline
+	\endhead
+	\hline 
+	\multicolumn{4}{|p{16cm}|}{\textit{Continua na proxima pagina}} \\ \hline
+	\endfoot
+	\hline
+	\endlastfoot
+	\hline
+		\cellcolor{cinzaClaro} Identificador & #1 & \cellcolor{cinzaClaro} Nome & #2 \\ \hline
+		\cellcolor{cinzaClaro} Ator Principal & \multicolumn{3}{p{12cm}|}{#3} \\ \hline
+		\multicolumn{4}{|c|}{\cellcolor{cinzaClaro} Interessados } \\ \hline
+		\multicolumn{4}{|p{16cm}|}{#4} \\ \hline
+		\cellcolor{cinzaClaro} Pré-Condições & \multicolumn{3}{p{12cm}|}{#5} \\ \hline
+		\cellcolor{cinzaClaro} Pós-Condições & \multicolumn{3}{p{12cm}|}{#6} \\ \hline
+		\multicolumn{4}{|c|}{\cellcolor{cinzaClaro} Fluxo Básico } \\ \hline
+		\multicolumn{4}{|p{16cm}|}{#7} \\ \hline
+		\multicolumn{4}{|c|}{\cellcolor{cinzaClaro} Fluxo Alternativo } \\ \hline
+		\multicolumn{4}{|p{16cm}|}{#8} \\ \hline
+		\cellcolor{cinzaClaro} Frequência de Ocorrência & \multicolumn{3}{l|}{#9} \\ \hline
+	\end{longtable}
 }
-
