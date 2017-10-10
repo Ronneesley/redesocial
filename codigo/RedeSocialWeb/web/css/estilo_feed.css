@@ -1,3 +1,7 @@
+/*=================================================================
+	minimo 801px   
+==================================================================*/
+@media screen and (min-width: 801px){
 body{
 	background-color: #ddd9ce;
 	height: auto;
@@ -65,7 +69,7 @@ a:hover{
 #bloco{
 	padding-bottom: 5px;
 	width: 30%;
-	height: 299px;
+	height: 270px;
 	text-align: center;
 	font-size:10px;
 	float: left;
@@ -233,8 +237,249 @@ a:hover{
 	padding: 5px;
 	margin-left: 15px;
 }
+}
 
+/*=================================================================
+	minimo 200px                  maximo 480px
+==================================================================*/
+@media screen and (min-width: 200px) and (max-width: 480px) {
+body{
+	background-color: #ddd9ce;
+	height: auto;
+	font-family: 'Ubuntu', sans-serif;
+}
 
+#resumo_perfil h4{
+	float: left;
+	margin-left: 5px;
+	margin-right: 5px;
+	
+}
+
+a:link, a:visited
+{ 
+ text-decoration:none; 
+ color: inherit;
+} 
+
+a:hover{
+	text-decoration: underline;
+}
+#barra_ferramentas{
+	width: 100%;
+	background-color: #eee;
+	height: auto;
+	padding: 2px;
+	box-shadow: 0px 0px 1em #666;
+}
+.logo{
+	margin-left: 10px;
+	margin-top: 2px;
+}
+
+.icones_ferramentas{
+	margin-left: 60px;
+}
+
+.icone_perfil{
+	margin-left: 75px;
+}
+
+#resumo_perfil{
+	padding-bottom: 5px;
+	width: 30%;
+	height: auto;
+	background-color: #F0F8FF;
+	text-align: center;
+	font-size:2px;
+	border: 1px solid black;
+	position: absolute;
+	box-shadow: 0px 0px 1em #666;
+	float: left;
+}
+
+#lado_esquerdo{
+	margin-left:10px;
+	margin-top: 5px;
+	width: 30%;
+	height: auto;
+	text-align: center;
+	float: left;
+}
+
+#bloco{
+	padding-bottom: 5px;
+	width: 30%;
+	height: 250px;
+	text-align: center;
+	font-size:10px;
+	float: left;
+	
+}
+	
+.resumo_perfil_foto{
+	border-radius:50%;
+	margin-top: 20px;
+	margin-bottom: 10px;
+        width: 70px;
+        height: 70px;
+}
+
+#resumo_publicacao{
+	margin-top: 15px;
+	width: 100%;
+	float:left;
+	background-color: #F0F8FF;
+	float: left;
+}
+
+#resumo_p{
+	display: flex;
+	justify-content: space-between;
+}
+
+#botao_resumo_perfil{
+	height: auto;
+	width: 100%;
+	margin-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;	
+	float: left;
+}
+
+.btn1{
+	margin-top: 5px;
+	width: 100%;
+}
+
+#resumo_pub{
+	margin-top: 5px;
+	padding-bottom: 5px;
+	width: 100%;
+	height: auto;
+	background-color: #F0F8FF;
+	text-align:center;
+	border: 1px solid black;
+	box-shadow: 0px 0px 1em #666;
+	float: left;
+}
+
+.btn{
+	margin-top: 5px;
+	width: 30%;
+}
+
+#mostra_resumo{
+	margin-top: 5px;
+	padding-bottom: 5px;
+	width: 100%;
+	height: auto;
+	background-color: #F0F8FF;
+	border-top: 1px solid black;
+}
+
+#central{
+	padding-top: 5px;
+	padding-bottom: 15px;
+	margin-left:15px;
+	margin-top: 5px;
+	width: 43%;
+	height: auto;
+	background-color:#F0F8FF;
+	border-top: 1px solid black;
+	box-shadow: 0px 0px 1em #666;
+	float: left;
+}
+
+#post{
+    margin: 0 auto;
+	width: 90%;
+	height: auto;
+	background-color: #F0F8FF;
+}
+	
+.post_foto {
+	border-radius: 50%;
+	margin-top: 5px;
+        margin-left: 5px;
+	margin-bottom: 10px;
+	float: left;
+}
+
+.post_info {
+    float: left;
+    font-size: 13px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+#container-post{
+	padding: 15px;
+	width: 100%;
+	height: auto;
+	float: left;
+	text-align: justify;
+}
+
+#comentario{ 
+	margin-top: 5px;
+    float: left;              
+}
+			
+#comentario_info{
+	margin-left: 5px;
+	margin-top: 5px;
+    height: auto;
+    float: left;
+	font-family: verdana;
+	font-size: 12px;                
+}
+			
+#comentario_tempo{
+	margin-left: 3px;
+	margin-top: 7px;
+	width: 60%;
+    height: auto;
+    float: left;
+	font-family: verdana;
+	font-size: 10px;                
+}
+
+#caixa_comentario{
+	width: 90%;
+	background-color: #eee;
+	padding: 5px;
+	border: 1px solid #666;
+	border-radius: 3px;
+	margin-top: 5px;
+	float: left;
+}
+
+#reacao{
+	margin-top: 5px;
+	height: auto;
+	background-color: #eee;
+	border: 1px solid #666;
+	border-radius: 3px;
+}
+
+#direita{
+	padding: 5px;
+	margin-right:5px;
+	margin-top: 5px;
+	width: 11%;
+	height: auto;
+	background-color:#F0F8FF;
+	float: right;
+	border: 1px solid black;
+	box-shadow: 0px 0px 1em #666;
+}
+
+#bloco_direita{			
+	padding: 5px;
+	margin-left: 5px;
+}
+} 
 
 
 

@@ -1,0 +1,148 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[brazil]{babel}
+\usepackage{indentfirst}
+\usepackage{url}
+\usepackage{listings}
+\RequirePackage{graphicx}
+\title{Algoritmo Viola-Jones}
+\author{Adallberto Lucena \and Andrey Silva \and Anny Karoliny \and Brener Gomes \and Davi Ildeu \and Eduardo de Oliveira \and Gleyson Israel \and Gusttavo Nunes \and Ianka Talita \and Ígor Justino}
+
+ 
+\usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
+
+
+\begin{document}
+\begin{titlepage}
+
+
+\begin{center}
+\begin{figure}[htb]
+		
+		\label{figura:LogoIF}
+	
+		\centering
+		\includegraphics[width=6cm]{logo.png} 
+\end{figure}
+
+
+Instituto Federal Goiano - Campus Ceres\\
+Bacharelado em Sistemas de Informação\\
+Prof. Me. Ronneesley Moura Teles\\\vspace{0.5cm}
+Adallberto Lucena Moura \\
+Andrey Silva Ribeiro\\
+Anny Karoliny Moraes Ribeiro \\
+Brener Gomes de Jesus\\
+Davi Ildeu de Faria\\
+Eduardo de Oliveira Silva\\
+Gleyson Israel Alves\\
+Gusttavo Nunes Gomes\\
+Ianka Talita Bastos de Assis\\
+Ígor Justino Rodrigues\\
+
+
+
+\vspace{5.0cm}
+
+\textit{\textbf{\Large{Algoritmo Viola-Jones}}}\\\vspace{0.5cm}
+\vspace{9.5cm}
+
+Outubro\\
+2017\\
+\end{center}
+\end{titlepage}
+
+
+
+\tableofcontents
+
+\newpage
+\begin{center}
+\textbf{\Large{Algoritmo Viola-Jones}}\\\vspace{0.5cm}
+\end{center}
+
+\section{O artigo}
+Em 2001, \textit{Paul Viola} e \textit{Michael Jones}, dois pesquisadores de Cambridge publicaram uma artigo entitulado: “\textit{Rapid Object Detection using a Boosted Cascade of Simple Features}” que demonstrava um novo método de detecção de faces. O artigo se diferencia e se paltava em 3 pontos importantes. 
+
+A primeira foi uma nova maneira de se representar uma imagem, a “imagem integral” (\textit{Integral Image}, em inglês), que permitiu os detectores usados por eles, computarem a imagem de maneira mais rápida.
+
+A segunda foi o algoritmo de aprendizado baseado no \textit{AdaBoost}, que selecionava um número pequeno de características visuais críticas de um conjunto maior e com seus classificadores, extremamente eficientes.
+
+O terceiro aspecto importante, foi o método de combinar e incrementar classificadores em “cascata”, o que permitia regiões do fundo da foto de serem rapidamente descatadas, disponibilizando maior processamento computacional em posições com maior possíbilidade de ser o objeto no qual se está procurando, como um rosto.
+
+Os autores aprofundaram seus métodos de como construiram esse algoritmo, de como funcionavam as equações e apresentaram os resultados encontrados e compararam com algoritmos similares da época, e como os algoritmos “\textit{Rowley-Baluja-Kanade}”, “\textit{Schneiderman-Kanade}” e “\textit{Roth-Yang-Ahuja}”.
+
+Devido sua implementação seguir uma abordagem diferente para  construção de um sistema de detecção de face, aproximadamente 15 vezes mais rápida que os métodos anteriores, o algoritmo \textit{Viola-Jones} revolucionou esse campo da computação se tornando uma referência.
+
+\section{Funcionamento do algoritmo}
+
+
+
+\section{Vantagem}
+\begin{itemize}
+	\item 15 vezes mais rápido que o algoritmo “\textit{Rowley-Baluja-Kanade}” no processamento da imagem.
+
+	\item 600 vezes se comparado ao “\textit{Schneiderman-Kanade}”.
+\end{itemize}
+
+\section{Desvantagem}
+\begin{itemize}
+	\item A detecção de faces, só é possível se o rosto estiver na posição frontal.
+	\item A base de dados usada, precisa de faces em diferentes condições incluindo: iluminação, brilho, escala, pose e variações de câmera.
+	\item Nível de detecção na literatura - 80\% (FAUX,2012)
+	\item É um algoritmo de detecção de face e não de reconhecimento facial.
+\end{itemize}
+
+\section{Exemplos de Implementação}
+\subsection{MatLab}
+\url{http://www.mathworks.com/matlabcentral/fileexchange/29437- viola-jones-object-detection?requestedDomain=www.mathworks.com}
+
+\url{http://www.mathworks.com/help/vision/ref/ vision.cascadeobjectdetector-system-object.html}
+
+\subsection{Python}
+\url{https://github.com/Simon-Hohberg/Viola-Jones}
+
+\subsection{Java}
+
+\url{https://github.com/tc/jviolajones}
+
+\url{https://github.com/jameel263/java-face-detection}
+
+\url{https://github.com/INVASIS/Viola-Jones}
+
+
+ 
+
+
+
+
+
+\newpage
+\section{Referências Bibliográfica}
+\noindent VIOLA, P. e JONES, M.\textbf{ Rapid object detection using a boosted cascade of simple features.} Proceedings of the 2001 IEEE Computer Society Conference on Computer Vision and Pattern Recognition. CVPR 2001, v. 1, p. I-511-I-518, 2001. Disponível em: $<$\url{http://ieeexplore.ieee.org/document/990517/}$>$.\\\vspace{0.2cm}
+
+\noindent IRGENS, Peter et al. \textbf{An efficient and cost effective FPGA based implementation of the Viola-Jones face detection algorithm.} HardwareX, v. 1, p. 68–75, 2017. Disponível em: $<$\url{http://linkinghub.elsevier.com/retrieve/pii/S2468067216300116}$>$.\\\vspace{0.2cm}
+
+\noindent SANTOS, Ligneul. \textbf{Detecção de faces através do algoritmo de Viola-Jones}. Coppe/Ufrj, 2011.\\\vspace{0.2cm}
+
+\noindent FAUX, Francis e LUTHON, Franck. \textbf{Theory of evidence for face detection and tracking}. International Journal of Approximate Reasoning, v. 53, n. 5, p. 728–746, 2012. Disponível em: $<$\url{http://dx.doi.org/10.1016/j.ijar.2012.02.002}$>$.\\\vspace{0.2cm}
+
+\noindent BODHI, S. R. e NAVEEN, S. \textbf{Face detection, registration and feature localization experiments with RGB-D face database}. Procedia Computer Science, v. 46, n. Icict 2014, p. 1778–1785, 2015. Disponível em: $<$\url{http://dx.doi.org/10.1016/j.procs.2015.02.132}$>$.
+
+
+
+
+
+\end{document}
+
+%Modelo de código para inserir figura
+
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=15cm]{logo.png}
+%\label{4}
+%\caption{Fonte:http://...; Acesso em 07/10/2017}
+%\end{figure}

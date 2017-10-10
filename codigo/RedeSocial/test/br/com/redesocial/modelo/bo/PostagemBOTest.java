@@ -65,6 +65,7 @@ public class PostagemBOTest {
             postagem1.setUps(0);
             postagem1.setDowns(0);
             postagem1.setUsuario(usuario);
+            postagem1.setVisualizacoes(0);
 
             calendario.set(2017, 7, 16, 21, 58, 0);
             postagem1.setData(calendario.getTime());
@@ -129,6 +130,7 @@ public class PostagemBOTest {
             postagem.setUps(0);
             postagem.setDowns(0);
             postagem.setUsuario(usuario);
+            postagem.setVisualizacoes(0);
             
             calendario.set(1998, 0, 8, 0, 0, 0);            
             postagem.setData(calendario.getTime());
@@ -298,6 +300,7 @@ public class PostagemBOTest {
             postagem1.setUps(0);
             postagem1.setDowns(0);
             postagem1.setUsuario(usuario);
+            postagem1.setVisualizacoes(0);
 
             calendario.set(2017, 7, 16, 21, 58, 0);
             postagem1.setData(calendario.getTime());
@@ -369,6 +372,7 @@ public class PostagemBOTest {
             postagem1.setUps(0);
             postagem1.setDowns(0);
             postagem1.setUsuario(usuario);
+            postagem1.setVisualizacoes(0);
 
             calendario.set(2017, 7, 16, 21, 58, 0);
             postagem1.setData(calendario.getTime());

@@ -28,75 +28,95 @@ public class ComentarioBOTest {
     
    @Test
     public void testMetodoInserir() throws Exception{
-        Pais pais = new Pais();
-
-        pais.setNome("Brasil");
+        ComentarioBO bo = new ComentarioBO();
         
         try{
+            
+            Calendar calendario = Calendar.getInstance();
+            calendario.set(2017, 7, 18, 10, 55, 13);
+            
+            Calendar calendarioPost = Calendar.getInstance();
+            calendarioPost.set(2017, 7, 18, 9, 30, 45);
+            
+            Calendar calendarioNascimento = Calendar.getInstance();
+            calendarioNascimento.set(2017, 7, 18, 9, 30, 45);
+            
+            Pais pais = new Pais();
+            
+            pais.setNome("Brasil");
+            
             PaisBO paisBO = new PaisBO();
             paisBO.inserir(pais);
-
+            
             Estado estado = new Estado();
-            estado.setNome("São Paulo");
+            
+            estado.setNome("Goiás");
             estado.setPais(pais);
             
             EstadoBO estadoBO = new EstadoBO();
             estadoBO.inserir(estado);
             
             Cidade cidade = new Cidade();
-            cidade.setNome("Riberão Preto");
+            
+            cidade.setNome("Goiânia");
             cidade.setEstado(estado);
             
             CidadeBO cidadeBO = new CidadeBO();
             cidadeBO.inserir(cidade);
             
             Usuario usuario = new Usuario();
-            usuario.setNome("Marcos A.");
+            
+            usuario.setNome("Joana");
             usuario.setDataCadastro(new Date());
-            usuario.setEmail("raul@gmail.com");
-            Calendar calendario = Calendar.getInstance();
-            calendario.set(1986, 2, 8, 0, 0, 0);            
-            usuario.setDataNascimento(calendario.getTime());
-            usuario.setSenha("123789");
-            usuario.setSexo(Sexo.MASCULINO);
+            usuario.setEmail("joaninha@contato.com");     
+            usuario.setDataNascimento(calendarioNascimento.getTime());
+            usuario.setSenha("192837");
+            usuario.setSexo(Sexo.FEMININO);
             usuario.setStatus(true);
-            usuario.setTelefone("(62) 91432-9867");
+            usuario.setTelefone("(62) 91234-4567");
             usuario.setCidade(cidade);
             
             UsuarioBO usuarioBO = new UsuarioBO();
             usuarioBO.inserir(usuario);
-       
+            
             Postagem postagem = new Postagem();
-            postagem.setDescricao("Comentário");
+            
             postagem.setUps(0);
             postagem.setDowns(0);
+            postagem.setDescricao("Post de texto");
+            postagem.setData(calendarioPost.getTime());
             postagem.setUsuario(usuario);
             postagem.setVisualizacoes(0);
-
-            calendario.set(2017, 7, 16, 21, 58, 0);
-            postagem.setData(calendario.getTime());
             
-            PostagemBO postagemBO  = new PostagemBO();
+            PostagemBO postagemBO = new PostagemBO();
             postagemBO.inserir(postagem);
-            
-            ComentarioBO bo = new ComentarioBO();
+           
             
             //instancia comentario e insere
             Comentario comentario = new Comentario();
-            comentario.setDescricao("bommm");
-            comentario.setResposta(comentario);
-            comentario.setUps(0);
-            comentario.setDowns(0);
-            calendario.set(1986, 4, 8, 0, 0, 0);            
+
+            comentario.setDescricao("Teste Inserir comentario! ");
+            comentario.setUps(5);
+            comentario.setDowns(2);
             comentario.setData(calendario.getTime());
             comentario.setPostagem(postagem);
+            comentario.setResposta(comentario);
+            comentario.setUsuario(usuario);
+            comentario.setId(2);
             
-            bo.inserir(comentario);
-           
-        } catch(Exception ex){
-                    //Mensagem de erro caso falhe
-                    fail("Falha ao inserir um comentário: " + ex.getMessage());
-        }
+
+            try{
+                //Inserindo comentário no banco de dados
+                bo.inserir(comentario);
+            }catch(Exception ex){
+                //Mensagem de erro caso falhe
+                fail("Falha ao inserir um comentário: " + ex.getMessage());
+            }
+
+            } catch(Exception ex){
+                        //Mensagem de erro caso falhe
+                        fail("Falha ao inserir um comentário: " + ex.getMessage());
+            }
     }
 
 
@@ -104,7 +124,7 @@ public class ComentarioBOTest {
     @Test
     
     public void testMetodoAlterar(){
-    /*ComentarioBO bo = new ComentarioBO();
+       ComentarioBO bo = new ComentarioBO();
         
         
             Calendar calendario = Calendar.getInstance();
@@ -121,7 +141,7 @@ public class ComentarioBOTest {
             pais.setNome("Brasil");
 
             PaisBO paisBO = new PaisBO();
-            paisBO.inserir(pais);
+           // paisBO.inserir(pais);
 
             Estado estado = new Estado();
 
@@ -129,7 +149,7 @@ public class ComentarioBOTest {
             estado.setPais(pais);
 
             EstadoBO estadoBO = new EstadoBO();
-            estadoBO.inserir(estado);
+            //estadoBO.inserir(estado);
 
             Cidade cidade = new Cidade();
 
@@ -137,7 +157,7 @@ public class ComentarioBOTest {
             cidade.setEstado(estado);
 
             CidadeBO cidadeBO = new CidadeBO();
-            cidadeBO.inserir(cidade);
+           // cidadeBO.inserir(cidade);
 
             Usuario usuario = new Usuario();
 
@@ -152,7 +172,7 @@ public class ComentarioBOTest {
             usuario.setCidade(cidade);
 
             UsuarioBO usuarioBO = new UsuarioBO();
-            usuarioBO.inserir(usuario);
+           // usuarioBO.inserir(usuario);
 
             Postagem postagem = new Postagem();
 
@@ -163,10 +183,10 @@ public class ComentarioBOTest {
 
             //insere post
             PostagemBO postagemBO = new PostagemBO();
-            postagemBO.inserir(postagem);
+           // postagemBO.inserir(postagem);
             
 
-            
+           
             //instancia comentario e insere
             Comentario comentario = new Comentario();
 
@@ -174,8 +194,9 @@ public class ComentarioBOTest {
             comentario.setCurtidas(2);
             comentario.setData(calendario.getTime());
             comentario.setPostagem(postagem);
+             ComentarioBO comentarioBO = new ComentarioBO();
 
-            try{
+             try{
                                 
                 bo.inserir(comentario);
             } catch(Exception ex){
@@ -194,11 +215,9 @@ public class ComentarioBOTest {
             bo.alterar(comentario);
         } catch (Exception ex) {
             //Mensagem de erro caso falhe
-            fail("Falha ao inserir o comentario: " + ex.getMessage());
+            fail("Falha ao alterar o comentario: " + ex.getMessage());
         }
         }
-    }*/
-    }
     
     
     @Test

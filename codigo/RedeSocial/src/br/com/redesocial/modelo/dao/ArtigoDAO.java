@@ -59,6 +59,8 @@ public class ArtigoDAO extends DAOCRUDBase<Artigo>  {
         PreparedStatement pstmt;
         pstmt = conexao.prepareStatement("select * from artigos where id = ?");
         
+        pstmt.setInt(1, id);
+        
         ResultSet rs;
         rs = pstmt.executeQuery();
         
@@ -71,7 +73,7 @@ public class ArtigoDAO extends DAOCRUDBase<Artigo>  {
             a.setRevista(rs.getString("revista"));
             a.setISSN(rs.getString("issn"));
             a.setData(rs.getDate("data"));
-            a.setAreaConhecimento(rs.getString("areaConhecimento"));
+            a.setAreaConhecimento(rs.getString("area_conhecimento"));
             a.setTitulo(rs.getString("titulo"));
             a.setResumo(rs.getString("resumo"));
             a.setURL(rs.getString("URL"));
