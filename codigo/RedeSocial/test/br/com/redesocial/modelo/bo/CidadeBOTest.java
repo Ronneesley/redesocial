@@ -100,38 +100,42 @@ import static org.junit.Assert.*;
         }
     }
     
-    @Test
+  @Test
     public void testMetodoSelecionar() {
-        Pais pais = new Pais();
-        pais.setNome("Brazil");
-
+         PaisBO paisBO = new PaisBO();
+         EstadoBO estadoBO = new EstadoBO();
+         CidadeBO cidadeBO = new CidadeBO();
+        
         try{
-            PaisBO paisBO = new PaisBO();
-            paisBO.inserir(pais);
-
-            Estado estado = new Estado();
-            estado.setNome("Summonners Troll");
-            estado.setPais(pais);
-            
-            EstadoBO estadoBO = new EstadoBO();
-            estadoBO.inserir(estado); 
-         
-            CidadeBO bo = new CidadeBO();
             Cidade cidade = new Cidade();
-            cidade.setEstado(estado);
-            //cidade.setId();
+            Estado estado = new Estado();
+            Pais pais = new Pais();
+            
+            pais.setNome("Brasil");
+            paisBO.inserir(pais);
          
-            bo.inserir(cidade);
+            estado.setNome("Goiás");
+            estado.setPais(pais);
+            estadoBO.inserir(estado);
+            
+            cidade.setNome("Ceres");
+            cidade.setEstado(estado);
+            cidadeBO.inserir(cidade);
+           
             int id = cidade.getId();
-
-            Cidade cidadeSelecionado = bo.selecionar(id);
-
-            assertNotNull("Cidade nao encontrada", cidadeSelecionado);
-        } catch (Exception ex){
+            /**
+             * seleciona o estado desejado
+             */
+            Cidade cidadeSelecionado = cidadeBO.selecionar(id);
+            
+            assertNotNull("Cidade não encontrada", cidadeSelecionado);
+        } catch (Exception ex) {
+           
             fail("Falha ao inserir uma cidade: " + ex.getMessage());
         }
     }
-    
+} 
+
     @Test
     public void testMetodoListar() {
         CidadeBO bo = new CidadeBO();
