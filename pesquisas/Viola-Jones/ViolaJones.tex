@@ -6,6 +6,7 @@
 \usepackage[brazil]{babel}
 \usepackage{indentfirst}
 \usepackage{url}
+
 \usepackage{listings}
 \usepackage{color}
 \lstset{language=Python}
@@ -104,7 +105,49 @@ O método \textit{Viola-Jones} proposto por \textit{Paul Viola} e \textit{Michae
 
 \subsection{Filtros Haar e Imagem Integral}
 
-As características de Haar proposta pelo matemático húngaro Alfred Haar em 1909, foi a primeira maneira considerada nova de representar uma “\textit{imagem integral}” (\textit{Integral Image}, em inglês), que permitiu os detectores utilizados por eles, computarem as imagens de forma rápida e eficaz. \textit{Haar} é uma característica intitulada como transformada onde varia da matemática discreta que faz uso em diversos processos de análises de sinais, em meios de compressão de dados e amplas outras aplicações no ramo de engenharia e ciência da computação. 
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=5cm]{recursos/imagens/Integral.png}
+\label{4}
+\caption{Integral Image}
+\end{figure} 
+
+As características de Haar proposta pelo matemático húngaro Alfred Haar em 1909, foi a primeira maneira considerada nova de representar uma “\textit{imagem integral}” (\textit{Integral Image}, em inglês), que permitiu os detectores utilizados por eles, computarem as imagens de forma rápida e eficaz. \textit{Haar} é uma característica intitulada como transformada onde varia da matemática discreta que faz uso em diversos processos de análises de sinais, em meios de compressão de dados e amplas outras aplicações no ramo de engenharia e ciência da computação.
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=5cm]{recursos/imagens/Haar.png}
+\label{4}
+\caption{Haar}
+\end{figure} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \subsection{AdaBoost}
 
@@ -128,30 +171,24 @@ O algoritmo Viola-Jones é uma variação do \textit{AdaBoost}, algoritmo de apr
 
 \section{Desvantagem}
 \begin{itemize}
-	\item A detecção de faces, só é possível se o rosto estiver na posição frontal.
-	\item A base de dados usada, precisa de faces em diferentes condições incluindo: iluminação, brilho, escala, pose e variações de câmera.
-	\item Nível de detecção na literatura - 80\% (FAUX,2012)
-	\item É um algoritmo de detecção de face e não de reconhecimento facial.
+	\item A detecção de faces só é possível se o rosto estiver na posição frontal.
+	\item A base de dados usada precisa de faces em diferentes condições, sendo elas: iluminação, brilho, escala, pose e variações de câmera.
+	\item Nível de detecção na literatura - 80\% (FAUX,2012);
+	\item É um algoritmo de detecção de face não de reconhecimento facial.
 \end{itemize}
 
 \section{Implementação Viola-Jones em Python}
 
 \subsection{Por quê a implementação em Python?}
-Existem inúmeras implementações do algoritmo na internet, nas mais diversas linguagens, sendo mais comuns em \textit{MatLab}, \textit{Java} e \textit{Python}. 
+Existem inúmeras implementações do algoritmo disponíveis em plataformas confiáveis para utilização. Diversas linguagens foram desenvolvidas sendo elas as mais comuns em \textit{MatLab}, \textit{Java} e \textit{Python}. A implementação em MatLab não é de extrema importância devido a ferramenta em si, não descartando sua utilização e benefícios para desenvolver procedimentos como o de detecção facial. Porém, é uma ferramenta paga e um projeto que demanda uma alta porcentagem de acertos e usabilidade, onde a interação de muitos indivíduos seriam colocados em pauta, viria deixar de ser uma solução para então tornar-se um problema se o usuário não obtiver a licença de uso, ou seja, dificultaria o processo e por delonga foi devidamente descartado.  
 
-A implementação em MatLab não era muito interessante devido a ferramenta em si, é uma boa ferramenta para desenvolver procedimentos tais como esse de detecção facial. Entretanto é uma ferramenta paga, e em um projeto nessa escala, no qual muitas pessoas iriam interagir, não ter a licença de uso, dificultaria muito o processo, e por isso foi descartada.
-
-\textit{Java} era muito abundante no \textit{GitHub}, entretanto a maioria estava incompleta, não possuindo os códigos para treinar a rede, o que é fundamental para o sucesso do algoritmo, ter uma base de dados ampla gerando uma maior eficiência na detecção de imagens. Os códigos que estavam completos, a documentação era quase inexistente, o que dificultaria a utilização, sendo mais vantajoso desenvolver desde o início uma amplicação do que gastar tempo em código alheio. 
+Java era bastante abundante no \textit{GitHub}, entretanto a maioria estava incompleta ou não possuía os códigos necessários para o treinamento da rede, o que faz-se importante para o sucesso do algoritmo e para que tenham uma base de dados ampla gerando uma maior eficiência na detecção de imagens. Os códigos que estavam aparentemente completos deixava a desejar a documentação estando assim incoerente ou inexistente o que por sua vez, dificultou a utilização do mesmo, sendo mais vantajoso optar por uma ampliação do que gastar tempo em códigos alheios. 
 
 
-Entretanto escolhemos a implementação de \textit{Simon Hohberg} do algoritmo em \textit{Python} disponibilizado no seu \textit{GitHub} pessoal:
-\url{https://github.com/Simon-Hohberg/Viola-Jones}
-
-
-\textit{Python} é uma linguagem mais simples, mas nem por isso menos robusta, é amplamente usada em processos de \textit{machine learning} e a implementação encontrada, está com todas as partes do algoritmo, desde a parte de detecção até a de treinamento, e a documentação do código está bem feita, o que possibilitaria o uso.
-
-A seguir segue os principais códigos do algoritmo implementado em \textit{Python} por \textit{Simon Hohberg}:
-\url{https://github.com/Simon-Hohberg/Viola-Jones}
+Deste modo, escolhemos a implementação de \textit{Simon Hohberg} com o algoritmo em Python,
+que por conseguinte, estava disponível no \textit{Github} pessoal do desenvolvedor:
+\url{https://github.com/Simon-Hohberg/Viola-Jones}. \textit{Python} é considerada uma linguagem simples, mas nem por isso menos robusta. Nota-se que é amplamente utilizada em processos de \textit{Machine Learning} (aprendizado de máquina, em português) e a implementação encontrada está com todas as partes do algoritmo, desde a detecção até o treinamento, sendo assim, a documentação do código
+bem-feita e planejada, o que possibilitaria o uso. 
 
 
 
