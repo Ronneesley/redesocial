@@ -52,7 +52,7 @@ public class ArtigoBOTest {
      * Método de teste responsável pela listagem dos artigos existentes no banco de dados
      * @author Macilon Arruda
      */
-    //@Test
+    @Test
     public void testMetodoListar() {
         
         /* Para realizar a listagem é necessário que existam dados a serem lidos

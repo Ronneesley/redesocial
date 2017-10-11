@@ -176,7 +176,7 @@ public class ComentarioBOTest {
 
             Postagem postagem = new Postagem();
 
-            postagem.setCurtidas(6);
+            //postagem.setCurtidas(6);
             postagem.setDescricao("postagem");
             postagem.setData(calendarioPost.getTime());
             postagem.setUsuario(usuario);
@@ -191,7 +191,7 @@ public class ComentarioBOTest {
             Comentario comentario = new Comentario();
 
             comentario.setDescricao("Comentario escrito");
-            comentario.setCurtidas(2);
+            //comentario.setCurtidas(2);
             comentario.setData(calendario.getTime());
             comentario.setPostagem(postagem);
              ComentarioBO comentarioBO = new ComentarioBO();
@@ -206,7 +206,7 @@ public class ComentarioBOTest {
             }
             //alterando o comentario que foi inserido no banco de dados
             comentario.setDescricao("Ola");
-            comentario.setCurtidas(2);
+            //comentario.setCurtidas(2);
             comentario.setData(calendario.getTime());
             comentario.setPostagem(postagem);
 

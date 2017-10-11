@@ -125,9 +125,31 @@ A sintaxe é bem menor, e a biblioteca se encarrega de encontrar o modo mais comp
 \end{itemize}
 
 \section{Alteração de CSS}%GGN
+
+A biblioteca jQuery fornece algumas funções para interagir com o estilo (CSS) dos elementos, permitindo obter e modificar os valores de vários atributos especificados. Abaixo, há exemplos de estruturas HTML e CSS, para aplicação das funções: \vspace{0.3cm}
+\lstinputlisting{codigos/divHtml.html} \vspace{0.5cm}
+\lstinputlisting{codigos/divCss.html}
+
+Neste, faz-se uso de funções de \textit{css(), addClass(), removeClass(), toggleClass() e hasClass()}. 
+
 \begin{itemize}
 
-\item Insira seu texto aqui;
+\item css(): Esta função permite obter ou definir um atributo CSS do(s) elemento(s) selecionados.
+\lstinputlisting{codigos/css.html}
+
+\item addClass(): Utilizada para adicionar uma classe CSS pré-definida a um ou a vários elementos. Na folha de estilos exemplificada, já temos duas classes prontas, ``divVermelha'' e ``divAzul'', as quais serão de uso como argumento desta função para alterar a aparência de duas das divs internas.
+\lstinputlisting{codigos/addClass.html}
+
+\item removeClass(): Busca remover uma classe CSS de certo elemento.
+\lstinputlisting{codigos/removeClass.html}
+
+\item toggleClass(): Adiciona ou remove uma classe a um elemento, dependendo de sua existência ou não. Se o elemento já a tiver, será removida e se não, será adicionada.
+\lstinputlisting{codigos/toggleClass.html}
+
+\item hasClass(): A função retorna \textit{true}, caso o elemento selecionado tenha a classe passada como parâmetro, ou \textit{false} em negativo.
+\lstinputlisting{codigos/hasClass.html}
+
+
 \end{itemize}
 
 \section{Função HTML()}%GGN
@@ -137,7 +159,7 @@ A função HTML() tem dois usos distintos: Pode-se usá-la para obter o conteúdo em
 
 \section{Função Append()}%GGN
 
-Em alguns casos pode ser necessário adicionar conteúdos dentro do código HTML. Os métodos append(), appendTo(), prepend() e prependTo() podem ser usados para esse fim, adicionando novos objetos a um elemento existente. 
+Em alguns casos pode ser necessário adicionar conteúdos dentro do código HTML. Os métodos \textit{append(), appendTo(), prepend() e prependTo()} podem ser usados para esse fim, adicionando novos objetos a um elemento existente. 
 
 \begin{itemize}
 \item Append(): Usa um conteúdo passado como parâmetro inserindo-o no final de um controle alvo, também passado como parâmetro. Cada vez que o botão for clicado o conteúdo será inserido novamente sempre. \vspace{0.3cm}
@@ -176,6 +198,8 @@ balhando-com-insercao-de-conteudo-com-jquery.aspx$>$. Acesso em: 03 de outubro d
 
 \item FÓRUM IMASTERS. \textbf{Entendendo prepend(), prependTo(), appeend() e appeendTo() do Jquery.} Disponível em: $<$https://forum.imasters.com.br/
 topic/409747-entendendo-prepend-prependto-appeend-e-appeendto-do-jquery/$>$. Acesso em: 03 de outubro de 2017.
+
+\item LINHA DE CÓDIGO. \textbf{Interação com classes e atributos CSS no jQuery.} Disponível em: $<$http://www.linhadecodigo.com.br/artigo/3475/interacao-com-classes-e-atributos-css-no-jquery.aspx$>$. Acesso em: 06 de outubro de 2017.
 
 \end{enumerate}
 

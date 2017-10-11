@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.10.6)  6 OCT 2017 21:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.16)  11 OCT 2017 13:23
 entering extended mode
 **./trabalho_jquery.tex
 (trabalho_jquery.tex
@@ -163,7 +163,7 @@ Package: graphics 2016/07/10 v1.0t Standard LaTeX Graphics (DPC,SPQR)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
@@ -212,7 +212,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg"
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
@@ -367,72 +367,80 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (codigos/cabecalho_js.js
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 3.
- [2]) (codigos/cabecalho_jquery.js) (codigos/html.html
-[3])
-Overfull \hbox (0.89172pt too wide) in paragraph at lines 140--141
+ [2]) (codigos/cabecalho_jquery.js)
+(codigos/divHtml.html) (codigos/divCss.html [3]) (codigos/css.html)
+(codigos/addClass.html) (codigos/removeClass.html) (codigos/toggleClass.html)
+(codigos/hasClass.html) [4] (codigos/html.html)
+Overfull \hbox (0.89172pt too wide) in paragraph at lines 162--163
 []\OT1/cmr/m/n/12 Em al-guns ca-sos pode ser ne-cessario adi-ci-o-nar conteud
 os den-tro do codigo HTML.
  []
 
-(codigos/append.html [4]) (codigos/prepend.html) (codigos/appendTo.html
-[5]) (codigos/prependTo.html [6])
-Overfull \hbox (6.94026pt too wide) in paragraph at lines 161--163
+[5] (codigos/append.html) (codigos/prepend.html [6]) (codigos/appendTo.html
+[7]) (codigos/prependTo.html [8])
+Overfull \hbox (6.94026pt too wide) in paragraph at lines 183--185
 \OT1/cmr/m/n/12 Dis-ponvel em: $\OML/cmm/m/it/12 <$\OT1/cmr/m/n/12 http://htt
 ps://pt.khanacademy.org/computing/computer-pro
  []
 
 
-Overfull \hbox (6.6009pt too wide) in paragraph at lines 161--163
+Overfull \hbox (6.6009pt too wide) in paragraph at lines 183--185
 \OT1/cmr/m/n/12 gramming/html-js-jquery/jquery-dom-access/a/history-of-jquery$\
 OML/cmm/m/it/12 >$\OT1/cmr/m/n/12 . Acesso em:
  []
 
 
-Overfull \hbox (13.01364pt too wide) in paragraph at lines 164--165
+Overfull \hbox (13.01364pt too wide) in paragraph at lines 186--187
 []\OT1/cmr/m/n/12 JQUERY. \OT1/cmr/bx/n/12 jQuery, write less, do more. \OT1/cm
 r/m/n/12 Dis-ponvel em: $\OML/cmm/m/it/12 <$\OT1/cmr/m/n/12 http://jquery.com
 $\OML/cmm/m/it/12 >$\OT1/cmr/m/n/12 .
  []
 
 
-Overfull \hbox (3.96527pt too wide) in paragraph at lines 174--176
+Overfull \hbox (3.96527pt too wide) in paragraph at lines 196--198
 \OT1/cmr/bx/n/12 pend(). \OT1/cmr/m/n/12 Dis-ponvel em: $\OML/cmm/m/it/12 <$\
 OT1/cmr/m/n/12 https://spigandoeaprendendo.wordpress.com/2014/
  []
 
 
-Overfull \hbox (5.0052pt too wide) in paragraph at lines 177--179
+Overfull \hbox (5.0052pt too wide) in paragraph at lines 199--201
 \OT1/cmr/bx/n/12 e ap-pe-endTo() do Jquery. \OT1/cmr/m/n/12 Dis-ponvel em: $\
 OML/cmm/m/it/12 <$\OT1/cmr/m/n/12 https://forum.imasters.com.br/
  []
 
 
-Overfull \hbox (16.44016pt too wide) in paragraph at lines 177--179
+Overfull \hbox (16.44016pt too wide) in paragraph at lines 199--201
 \OT1/cmr/m/n/12 topic/409747-entendendo-prepend-prependto-appeend-e-appeendto-d
 o-jquery/$\OML/cmm/m/it/12 >$\OT1/cmr/m/n/12 .
  []
 
-[7] [8] (trabalho_jquery.aux) ) 
+
+Overfull \hbox (11.77077pt too wide) in paragraph at lines 202--203
+\OT1/cmr/m/n/12 Dis-ponvel em: $\OML/cmm/m/it/12 <$\OT1/cmr/m/n/12 http://www
+.linhadecodigo.com.br/artigo/3475/interacao-com-
+ []
+
+[9] (trabalho_jquery.aux) ) 
 Here is how much of TeX's memory you used:
- 5845 strings out of 493333
- 76549 string characters out of 3139194
- 336411 words of memory out of 3000000
- 9247 multiletter control sequences out of 15000+200000
+ 5887 strings out of 493334
+ 77081 string characters out of 3139254
+ 354411 words of memory out of 3000000
+ 9269 multiletter control sequences out of 15000+200000
  12309 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,6n,36p,678b,1849s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmbxti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-mi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmti12.pfb>
-Output written on trabalho_jquery.pdf (9 pages, 165686 bytes).
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmbxti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmti12.pfb>
+Output written on trabalho_jquery.pdf (10 pages, 175128 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
+ 74 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
