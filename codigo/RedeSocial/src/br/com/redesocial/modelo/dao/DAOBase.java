@@ -12,6 +12,8 @@ import java.sql.Statement;
  * @since 27/07/2017
  */
 public abstract class DAOBase {
+    private static Connection conexao = null;
+    
     /**
      * Retorna uma conexão ativa com o banco de dados MySQL
      * @return conexão ativa com o banco de dados
@@ -19,9 +21,13 @@ public abstract class DAOBase {
      * @throws java.lang.ClassNotFoundException caso não encontre o driver do banco de dados
      */
     protected Connection getConexao() throws SQLException, ClassNotFoundException {
-        Class.forName("com.mysql.jdbc.Driver");
+        if (conexao == null){
+            Class.forName("com.mysql.jdbc.Driver");
+            
+            conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/redesocial", "admin", "redesocial");
+        }
         
-        return DriverManager.getConnection("jdbc:mysql://localhost:3306/redesocial", "admin", "redesocial");
+        return conexao;
     }
     
     /**
