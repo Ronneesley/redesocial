@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.8.12)  11 OCT 2017 11:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.8.12)  11 OCT 2017 12:28
 entering extended mode
 **./ViolaJones.tex
 (ViolaJones.tex
@@ -639,22 +639,24 @@ G,.JBIG2,.JB2,.eps]
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<logo.png, id=1, 1333.98375pt x 304.88907pt>
-File: logo.png Graphic file (type png)
- <use logo.png>
-Package pdftex.def Info: logo.png used on input line 61.
+<recursos/imagens/logo.png, id=1, 1333.98375pt x 304.88907pt>
+File: recursos/imagens/logo.png Graphic file (type png)
+
+<use recursos/imagens/logo.png>
+Package pdftex.def Info: recursos/imagens/logo.png used on input line 61.
 (pdftex.def)             Requested size: 170.71652pt x 39.01822pt.
  [1
 
 {C:/Users/gusttavo nunes/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./
-logo.png>]
-(ViolaJones.toc
+recursos/imagens/logo.png>] (ViolaJones.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 7.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 7.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 \tf@toc=\write3
@@ -694,8 +696,8 @@ LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
 [10]) (recursos/codigo_python/Viola-Jones-master/example.py [11]) [12] [13]
 (ViolaJones.aux) ) 
 Here is how much of TeX's memory you used:
- 5753 strings out of 493335
- 76146 string characters out of 3136651
+ 5754 strings out of 493335
+ 76231 string characters out of 3136651
  620470 words of memory out of 3000000
  9152 multiletter control sequences out of 15000+200000
  12736 words of font info for 49 fonts, out of 3000000 for 9000
