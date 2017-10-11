@@ -98,17 +98,18 @@ Outubro\\
 \end{center}
 
 \section{O artigo}
-Em 2001, \textit{Paul Viola} e \textit{Michael Jones}, dois pesquisadores de Cambridge publicaram uma artigo entitulado: “\textit{Rapid Object Detection using a Boosted Cascade of Simple Features}” que demonstrava um novo método de detecção de faces. O artigo se diferencia e se paltava em 3 pontos importantes. 
+O método \textit{Viola-Jones} proposto por \textit{Paul Viola} e \textit{Michael Jones} em 2001, é um algoritmo utilizado em diversas áreas da tecnologia, uma delas é a detecção de faces. Paul e Michael eram pesquisadores de Cambrigde onde optaram por explorar o lado radical da programação, sendo assim, publicaram um artigo intitulado: “\textit{Rapid Object Detection using a Boosted Cascade of Simple Features}” que demonstrou uma nova forma de detectar faces. O artigo bem como o conceito Viola-Jones faz uso de 3 abordagens diferenciadas, pautando pontos considerados de extrema importância, sendo eles: as características de \textit{Haar}, o algoritmo de aprendizado \textit{AdaBoost} e os classificadores em Cascata. 
 
-A primeira foi uma nova maneira de se representar uma imagem, a “imagem integral” (\textit{Integral Image}, em inglês), que permitiu os detectores usados por eles, computarem a imagem de maneira mais rápida.
+As características de Haar proposta pelo matemático húngaro Alfred Haar em 1909, foi a primeira maneira considerada nova de representar uma “\textit{imagem integral}” (\textit{Integral Image}, em inglês), que permitiu os detectores utilizados por eles, computarem as imagens de forma rápida e eficaz. \textit{Haar} é uma característica intitulada como transformada onde varia da matemática discreta que faz uso em diversos processos de análises de sinais, em meios de compressão de dados e amplas outras aplicações no ramo de engenharia e ciência da computação. 
 
-A segunda foi o algoritmo de aprendizado baseado no \textit{AdaBoost}, que selecionava um número pequeno de características visuais críticas de um conjunto maior e com seus classificadores, extremamente eficientes.
+A segunda abordagem essencial foi o algoritmo de aprendizado baseado em \textit{AdaBoost}. O algoritmo AdaBoost é caracterizado por algoritmo de\textit{ Machine Learning} (aprendizado de máquina, em português) inventado por Yoav Freund e Robert Schapire, o algoritmo meta-heurístico é usado para aumentar significativamente a performance dos algoritmos de aprendizagem. \textit{AdaBoost} é derivado do nome \textit{Adaptive Boosting} (impulso adaptativo, significado em português) algoritmo colocado como ajustável a diversas circunstâncias e adaptável para classificações subsequentes. O algoritmo seleciona um número pequeno de características visuais críticas de um conjunto maior e com seus classificadores torna-se extremamente eficiente. 
 
-O terceiro aspecto importante, foi o método de combinar e incrementar classificadores em “cascata”, o que permitia regiões do fundo da foto de serem rapidamente descatadas, disponibilizando maior processamento computacional em posições com maior possíbilidade de ser o objeto no qual se está procurando, como um rosto.
 
-Os autores aprofundaram seus métodos de como construiram esse algoritmo, de como funcionavam as equações e apresentaram os resultados encontrados e compararam com algoritmos similares da época, e como os algoritmos “\textit{Rowley-Baluja-Kanade}”, “\textit{Schneiderman-Kanade}” e “\textit{Roth-Yang-Ahuja}”.
+Tendo em vista tais ferramentas úteis para elaboração do algoritmo, Paul e Michael implementaram os classificadores em Cascata. Os classificadores são responsáveis por selecionar criteriosamente um determinado objeto, levando em consideração a concomitância de suas principais características. As características necessárias para utilização são encontradas a partir de amplos algoritmos de aprendizado como \textit{Support Vector Machine}, redes neurais, entre outros. Os classificadores em cascata possuem como principal função combinar e incrementar métodos que tendenciam melhorar a perspectiva do objeto, ou seja, permitiam com que diversas regiões do fundo da foto fossem rapidamente destacadas disponibilizando maior processamento computacional.
 
-Devido sua implementação seguir uma abordagem diferente para  construção de um sistema de detecção de face, aproximadamente 15 vezes mais rápida que os métodos anteriores, o algoritmo \textit{Viola-Jones} revolucionou esse campo da computação se tornando uma referência.
+Por conseguinte, rejeitavam um largo número de regiões que demostravam ter o aspecto escolhido tornando-o então, cada vez mais prudente para que não ocorresse casos de falsos objetos nas análises dos mesmos. Os autores aprofundaram seus métodos de acordo com a construção do algoritmo, deste modo, realizaram comparações em relação a diferentes algoritmos similares da época, bem como, \textit{Rowley-Baluja-Kanade}, \textit{Schneiderman-Kanade} e\textit{ Roth-Yang-Ahuja} para que pudessem encontrar meios de solucionar a forma como funcionavam as equações e obter assim, resultados satisfatórios. 
+
+O algoritmo Viola-Jones é uma variação do \textit{AdaBoost}, algoritmo de aprendizado. Porém,por ser uma alternância, o algoritmo Viola-Jones é bastante utilizado. Devido sua implementação seguir uma abordagem diferente para construir um novo sistema de detecção, ele consegue alcançar aproximadamente 15 vezes mais rápido que os métodos anteriores. Viola-Jones é perfeitamente apto a detectar faces com maior precisão usando \textit{Haar} como uma das implementações, é notório a perspectiva que há em aplicar o algoritmo em diversas situações. O método Viola-Jones revolucionou o campo da computação tornando-se referência para os demais.
 
 \section{Funcionamento do algoritmo}
 
@@ -131,7 +132,7 @@ Devido sua implementação seguir uma abordagem diferente para  construção de 
 
 \section{Implementação Viola-Jones em Python}
 
-\subsection{Porquê a implementação em Python?}
+\subsection{Por quê a implementação em Python?}
 Existem inúmeras implementações do algoritmo na internet, nas mais diversas linguagens, sendo mais comuns em \textit{MatLab}, \textit{Java} e \textit{Python}. 
 
 A implementação em MatLab não era muito interessante devido a ferramenta em si, é uma boa ferramenta para desenvolver procedimentos tais como esse de detecção facial. Entretanto é uma ferramenta paga, e em um projeto nessa escala, no qual muitas pessoas iriam interagir, não ter a licença de uso, dificultaria muito o processo, e por isso foi descartada.
@@ -152,7 +153,6 @@ A seguir segue os principais códigos do algoritmo implementado em \textit{Pytho
 
 \subsection{IntegralImage.py}
 
-%$$ ii(x, y ) = \Sigma $$
 
  \lstinputlisting[language=Python]{recursos/codigo_python/Viola-Jones-master/violajones/IntegralImage.py}
  
