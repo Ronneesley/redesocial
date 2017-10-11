@@ -129,27 +129,43 @@ Devido sua implementação seguir uma abordagem diferente para  construção de 
 	\item É um algoritmo de detecção de face e não de reconhecimento facial.
 \end{itemize}
 
-\section{Exemplos de Implementação}
+\section{Implementação Viola-Jones em Python}
 
-\subsection{Python}
+\subsection{Porquê a implementação em Python?}
+Existem inúmeras implementações do algoritmo na internet, nas mais diversas linguagens, sendo mais comuns em \textit{MatLab}, \textit{Java} e \textit{Python}. 
+
+A implementação em MatLab não era muito interessante devido a ferramenta em si, é uma boa ferramenta para desenvolver procedimentos tais como esse de detecção facial. entretanto é uma ferramenta paga,e  em um projeto nessa escala, no qual muitas pessoas iriam interagir, não ter a licença de uso, dificultaria muito o processo, e por isso foi descartada.
+
+\textit{Java} era muito abundante no \textit{GitHub}, entretanto a maioria estava incompleta, não possuindo os códigos para treinar a rede, o que é fundamental para o sucesso do algoritmo, ter uma base de dados ampla gerando uma maior eficiência na detecção de imagens. Os códigos que estavam completos, a documentação era quase inexistente, o que dificultaria a utilização, sendo talvezmais vantajoso desenvolver desde o início uma amplicação do que gastar tempo em código alheio. 
+
+
+Entretanto escolhemos a implementação de \textit{Simon Hohberg} do algoritmo em \textit{Python} disponibilizado no seu \textit{GitHub} pessoal:
 \url{https://github.com/Simon-Hohberg/Viola-Jones}
 
-\subsection{Integral - Image}
+
+\textit{Python} é uma linguagem mais simples, mas nem por isso menos robusta, é amplamente usada em processos de \textit{machine learning} e a implementação encontrada, está com todas as partes do algoritmo, desde a parte de detecção até a de treinamento, e a documentação do código está bem feita, o que possibilitaria o uso.
+
+A seguir segue os principais códigos do algoritmo implementado em \textit{Python} por \textit{Simon Hohberg}:
+\url{https://github.com/Simon-Hohberg/Viola-Jones}
+
+
+
+\subsection{IntegralImage.py}
 
  \lstinputlisting[language=Python, firstline=1, lastline=58]{recursos/codigo_python/Viola-Jones-master/violajones/IntegralImage.py}
  
- \subsection{Haar Like Feature}
+ \subsection{HaarLikeFeature.py}
 
  \lstinputlisting[language=Python, firstline=1, lastline=89]{recursos/codigo_python/Viola-Jones-master/violajones/HaarLikeFeature.py}
 
-\subsection{AdaBoost}
+\subsection{AdaBoost.py}
 \lstinputlisting[language=Python, firstline=1, lastline=122]{recursos/codigo_python/Viola-Jones-master/violajones/AdaBoost.py}
 
-\subsection{Utils}
+\subsection{Utils.py}
 
 \lstinputlisting[language=Python, firstline=1, lastline=108]{recursos/codigo_python/Viola-Jones-master/violajones/Utils.py}
 
-\subsection{example}
+\subsection{example.py}
 
 \lstinputlisting[language=Python, firstline=1, lastline=108]{recursos/codigo_python/Viola-Jones-master/example.py}
 
@@ -159,7 +175,12 @@ Devido sua implementação seguir uma abordagem diferente para  construção de 
 
 \newpage
 \section{Referências Bibliográfica}
-\noindent VIOLA, P. e JONES, M.\textbf{ Rapid object detection using a boosted cascade of simple features.} Proceedings of the 2001 IEEE Computer Society Conference on Computer Vision and Pattern Recognition. CVPR 2001, v. 1, p. I-511-I-518, 2001. Disponível em: $<$\url{http://ieeexplore.ieee.org/document/990517/}$>$.\\\vspace{0.2cm}
+\noindent VIOLA, P. e JONES, M. \textbf{Rapid object detection using a boosted cascade of simple features.} Proceedings of the 2001 IEEE Computer Society Conference on Computer Vision and Pattern Recognition. CVPR 2001, v. 1, p. I-511-I-518, 2001. Disponível em: $<$\url{http://ieeexplore.ieee.org/document/990517/}$>$.\\\vspace{0.2cm}
+
+\noindent VIOLA, P. e JONES, M. \textbf{Robust Real-Time Face
+Detection}  International Journal of Computer Vision
+57(2), 137–154, 2004.\\\vspace{0.2cm}
+
 
 \noindent IRGENS, Peter et al. \textbf{An efficient and cost effective FPGA based implementation of the Viola-Jones face detection algorithm.} HardwareX, v. 1, p. 68–75, 2017. Disponível em: $<$\url{http://linkinghub.elsevier.com/retrieve/pii/S2468067216300116}$>$.\\\vspace{0.2cm}
 
@@ -168,6 +189,8 @@ Devido sua implementação seguir uma abordagem diferente para  construção de 
 \noindent FAUX, Francis e LUTHON, Franck. \textbf{Theory of evidence for face detection and tracking}. International Journal of Approximate Reasoning, v. 53, n. 5, p. 728–746, 2012. Disponível em: $<$\url{http://dx.doi.org/10.1016/j.ijar.2012.02.002}$>$.\\\vspace{0.2cm}
 
 \noindent BODHI, S. R. e NAVEEN, S. \textbf{Face detection, registration and feature localization experiments with RGB-D face database}. Procedia Computer Science, v. 46, n. Icict 2014, p. 1778–1785, 2015. Disponível em: $<$\url{http://dx.doi.org/10.1016/j.procs.2015.02.132}$>$.
+
+
 
 
 
