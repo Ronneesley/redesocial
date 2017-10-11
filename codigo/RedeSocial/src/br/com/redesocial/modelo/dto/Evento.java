@@ -5,7 +5,7 @@ package br.com.redesocial.modelo.dto;
  * @author Gusttavo Nunes
  * @since
  */
-public class Eventos {
+public class Evento {
     
     /**
      * Atributo que identifica a evento
