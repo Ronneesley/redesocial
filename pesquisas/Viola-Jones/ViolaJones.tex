@@ -7,6 +7,39 @@
 \usepackage{indentfirst}
 \usepackage{url}
 \usepackage{listings}
+\usepackage{color}
+\lstset{language=Python}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=Octave,                 % the language of the code
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,	                   % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
 \RequirePackage{graphicx}
 \title{Algoritmo Viola-Jones}
 \author{Adallberto Lucena \and Andrey Silva \and Anny Karoliny \and Brener Gomes \and Davi Ildeu \and Eduardo de Oliveira \and Gleyson Israel \and Gusttavo Nunes \and Ianka Talita \and Ígor Justino}
@@ -96,33 +129,61 @@ Devido sua implementação seguir uma abordagem diferente para  construção de 
 	\item É um algoritmo de detecção de face e não de reconhecimento facial.
 \end{itemize}
 
-\section{Exemplos de Implementação}
-\subsection{MatLab}
-\url{http://www.mathworks.com/matlabcentral/fileexchange/29437- viola-jones-object-detection?requestedDomain=www.mathworks.com}
+\section{Implementação Viola-Jones em Python}
 
-\url{http://www.mathworks.com/help/vision/ref/ vision.cascadeobjectdetector-system-object.html}
+\subsection{Porquê a implementação em Python?}
+Existem inúmeras implementações do algoritmo na internet, nas mais diversas linguagens, sendo mais comuns em \textit{MatLab}, \textit{Java} e \textit{Python}. 
 
-\subsection{Python}
+A implementação em MatLab não era muito interessante devido a ferramenta em si, é uma boa ferramenta para desenvolver procedimentos tais como esse de detecção facial. entretanto é uma ferramenta paga,e  em um projeto nessa escala, no qual muitas pessoas iriam interagir, não ter a licença de uso, dificultaria muito o processo, e por isso foi descartada.
+
+\textit{Java} era muito abundante no \textit{GitHub}, entretanto a maioria estava incompleta, não possuindo os códigos para treinar a rede, o que é fundamental para o sucesso do algoritmo, ter uma base de dados ampla gerando uma maior eficiência na detecção de imagens. Os códigos que estavam completos, a documentação era quase inexistente, o que dificultaria a utilização, sendo talvezmais vantajoso desenvolver desde o início uma amplicação do que gastar tempo em código alheio. 
+
+
+Entretanto escolhemos a implementação de \textit{Simon Hohberg} do algoritmo em \textit{Python} disponibilizado no seu \textit{GitHub} pessoal:
 \url{https://github.com/Simon-Hohberg/Viola-Jones}
 
-\subsection{Java}
 
-\url{https://github.com/tc/jviolajones}
+\textit{Python} é uma linguagem mais simples, mas nem por isso menos robusta, é amplamente usada em processos de \textit{machine learning} e a implementação encontrada, está com todas as partes do algoritmo, desde a parte de detecção até a de treinamento, e a documentação do código está bem feita, o que possibilitaria o uso.
 
-\url{https://github.com/jameel263/java-face-detection}
-
-\url{https://github.com/INVASIS/Viola-Jones}
+A seguir segue os principais códigos do algoritmo implementado em \textit{Python} por \textit{Simon Hohberg}:
+\url{https://github.com/Simon-Hohberg/Viola-Jones}
 
 
+
+\subsection{IntegralImage.py}
+
+ \lstinputlisting[language=Python, firstline=1, lastline=58]{recursos/codigo_python/Viola-Jones-master/violajones/IntegralImage.py}
  
+ \subsection{HaarLikeFeature.py}
+
+ \lstinputlisting[language=Python, firstline=1, lastline=89]{recursos/codigo_python/Viola-Jones-master/violajones/HaarLikeFeature.py}
+
+\subsection{AdaBoost.py}
+\lstinputlisting[language=Python, firstline=1, lastline=122]{recursos/codigo_python/Viola-Jones-master/violajones/AdaBoost.py}
+
+\subsection{Utils.py}
+
+\lstinputlisting[language=Python, firstline=1, lastline=108]{recursos/codigo_python/Viola-Jones-master/violajones/Utils.py}
+
+\subsection{example.py}
+
+\lstinputlisting[language=Python, firstline=1, lastline=108]{recursos/codigo_python/Viola-Jones-master/example.py}
 
 
-
+%\lstinputlisting[language=Python, firstline=37, lastline=45]{source_filename.py}
 
 
 \newpage
 \section{Referências Bibliográfica}
-\noindent VIOLA, P. e JONES, M.\textbf{ Rapid object detection using a boosted cascade of simple features.} Proceedings of the 2001 IEEE Computer Society Conference on Computer Vision and Pattern Recognition. CVPR 2001, v. 1, p. I-511-I-518, 2001. Disponível em: $<$\url{http://ieeexplore.ieee.org/document/990517/}$>$.\\\vspace{0.2cm}
+\noindent VIOLA, Paul; JONES, Michael. \textbf{Rapid object detection using a boosted cascade of simple features.} Proceedings of the 2001 IEEE Computer Society Conference on Computer Vision and Pattern Recognition. CVPR 2001, v. 1, p. I-511-I-518, 2001. Disponível em: $<$\url{http://ieeexplore.ieee.org/document/990517/}$>$.\\\vspace{0.2cm}
+
+\noindent VIOLA, Paul; JONES, Michael. \textbf{Robust Real-Time Face
+Detection}  International Journal of Computer Vision
+57(2), 137–154, 2004.\\\vspace{0.2cm}
+
+
+\noindent CHAVES, Bruno Butilhão. \textbf{Estudo do algoritmo AdaBoost de aprendizagem de máquina aplicado a sensores e sistemas embarcados}. 2011. Dissertação (Mestrado em Engenharia de Controle e Automação Mecânica) - Escola Politécnica, Universidade de São Paulo, São Paulo, 2011. doi:10.11606/D.3.2011.tde-12062012-163740. Acesso em: 2017-10-11..\\\vspace{0.2cm}
+
 
 \noindent IRGENS, Peter et al. \textbf{An efficient and cost effective FPGA based implementation of the Viola-Jones face detection algorithm.} HardwareX, v. 1, p. 68–75, 2017. Disponível em: $<$\url{http://linkinghub.elsevier.com/retrieve/pii/S2468067216300116}$>$.\\\vspace{0.2cm}
 
@@ -131,6 +192,8 @@ Devido sua implementação seguir uma abordagem diferente para  construção de 
 \noindent FAUX, Francis e LUTHON, Franck. \textbf{Theory of evidence for face detection and tracking}. International Journal of Approximate Reasoning, v. 53, n. 5, p. 728–746, 2012. Disponível em: $<$\url{http://dx.doi.org/10.1016/j.ijar.2012.02.002}$>$.\\\vspace{0.2cm}
 
 \noindent BODHI, S. R. e NAVEEN, S. \textbf{Face detection, registration and feature localization experiments with RGB-D face database}. Procedia Computer Science, v. 46, n. Icict 2014, p. 1778–1785, 2015. Disponível em: $<$\url{http://dx.doi.org/10.1016/j.procs.2015.02.132}$>$.
+
+
 
 
 
