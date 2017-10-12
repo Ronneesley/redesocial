@@ -108,7 +108,9 @@ public class CidadeDAO extends DAOCRUDBase<Cidade> {
             p.setEstado(estadoDAO.selecionar(rs.getInt("estado")));
             p.setNome(rs.getString("nome"));
             
+            lista.add(p);
         }
+        
 
         return lista;
     }
