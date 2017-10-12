@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Cria√ß√£o de novo aporte</title>
+        <title>CriaÁ„o de novo aporte</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
@@ -184,13 +184,13 @@ and open the template in the editor.
         
         <div id="background">
             <div id="topo">
-                <h1> Cria√ß√£o de novo aporte</h1>
+                <h1> CriaÁ„o de novo aporte</h1>
                 <div id="hr"></div>                
             </div>  
 
             <div id="conteudo">
                 <form action="" method="post">
-                    <label> T√≠tulo * </label> <br>
+                    <label> Titulo * </label> <br>
                     <input  size="90" type="text" name="TituloAporte" value="Aporte de Teste"><br> 
                     <br>
                     <label> Categoria * </label><br>
@@ -201,7 +201,7 @@ and open the template in the editor.
                     </select>
                     <br>
                     <br>
-                    <label> Imagem /v√≠deo (opcional)</label>
+                    <label> Imagem /video (opcional)</label>
                     <br>
 
                     <div id="botao_arquivo">
@@ -218,14 +218,14 @@ and open the template in the editor.
                          <input name="fakeupload" class="fakeupload_nome"  type="text" readonly>    
                          <br>
 
-                         <p class="info"> descri√ß√£o_do_arquivo </p>
+                         <p class="info"> descriÁ„o_do_arquivo </p>
                     </div>
 
 
 
                     <div id="descricao">
                         <br>
-                        <label> Descri√ß√£o (opcional)</label> <br>
+                        <label> DescriÁ„o (opcional)</label> <br>
                         <textarea placeholder="Digite uma descri√ß√£o"  class="descricao"></textarea>
                     </div>
 
