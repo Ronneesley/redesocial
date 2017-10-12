@@ -5,8 +5,11 @@
  */
 package br.com.redesocial.controle;
 
+import br.com.redesocial.modelo.bo.CategoriaBO;
 import br.com.redesocial.modelo.dto.Aporte;
+import br.com.redesocial.modelo.dto.Postagem;
 import java.io.IOException;
+import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -101,13 +104,24 @@ public class AporteControle extends HttpServlet {
     private void criarNovo(HttpServletRequest request, HttpServletResponse response) throws Exception{
        try {
             Aporte aporte = new Aporte();
-           
+            
             request.setAttribute("aporte", aporte);
+
+            CategoriaBO  categoriaBO = new CategoriaBO();
+            List categoria = categoriaBO.listar();
+
+            request.setAttribute("categoria", categoria);
+            
+            Postagem postagem = new Postagem();
+            
+            request.setAttribute("postagem", postagem);
+            
         }
        catch (Exception ex){
             request.setAttribute("erro", ex.getMessage());
         }
-       RequestDispatcher rd = request.getRequestDispatcher("paginas/aporte/cadastro_novo_aporte.jsp");
+       
+       RequestDispatcher rd = request.getRequestDispatcher("paginas/aporte/criar_novo_aporte.jsp");
        rd.forward(request, response);
     }
 
@@ -117,6 +131,10 @@ public class AporteControle extends HttpServlet {
         if(!"".equals(request.getParameter("id").trim())){
             aporte.setId(Integer.parseInt(request.getParameter("id")));
         }
+        
+        aporte.setTitulo(request.getParameter("titulo"));
+        request.setAttribute("titulo", aporte);
+        
         
 
     }
