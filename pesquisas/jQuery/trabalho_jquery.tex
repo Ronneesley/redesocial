@@ -157,21 +157,21 @@ Neste, faz-se uso de funções de \textit{css(), addClass(), removeClass(), toggle
 A função HTML() tem dois usos distintos: Pode-se usá-la para obter o conteúdo em html de um determinado elemento e para definir esse conteúdo. Na primeira forma, basta que o método seja invocado sem a passagem de parâmetros, na segunda deve-se passar o conteúdo total do elemento. \vspace{0.3cm}
 \lstinputlisting{codigos/html.html}
 
-\section{Função Append()}%GGN
+\section{Função append(), appendTo(), prepend() e prependTo()}%GGN
 
 Em alguns casos pode ser necessário adicionar conteúdos dentro do código HTML. Os métodos \textit{append(), appendTo(), prepend() e prependTo()} podem ser usados para esse fim, adicionando novos objetos a um elemento existente. 
 
 \begin{itemize}
-\item Append(): Usa um conteúdo passado como parâmetro inserindo-o no final de um controle alvo, também passado como parâmetro. Cada vez que o botão for clicado o conteúdo será inserido novamente sempre. \vspace{0.3cm}
+\item append(): Usa um conteúdo passado como parâmetro inserindo-o no final de um controle alvo, também passado como parâmetro. Cada vez que o botão for clicado o conteúdo será inserido novamente. \vspace{0.3cm}
 \lstinputlisting{codigos/append.html}
 
-\item Prepend(): A diferença do Append() é apenas que o conteúdo passada no parâmetro será adicionado no início do controle alvo, antes do conteúdo inicial. \vspace{0.3cm}
+\item prepend(): A diferença do Append() é apenas que o conteúdo passada no parâmetro será adicionado no início do controle alvo, antes do conteúdo inicial. \vspace{0.3cm}
 \lstinputlisting{codigos/prepend.html}
 
-\item AppendTo(): Nesse modelo o conteúdo é transferido de um alvo para outro, funcionando como um recorte de conteúdo. A div ``novo$\_$conteudo'' é transferida para dentro da div ``conteudo'' sendo inserida após o conteúdo original da div. \vspace{0.3cm}
+\item appendTo(): Nesse modelo o conteúdo é transferido de um alvo para outro, funcionando como um recorte de conteúdo. A div ``novo$\_$conteudo'' é transferida para dentro da div ``conteudo'' sendo inserida após o conteúdo original da div. \vspace{0.3cm}
 \lstinputlisting{codigos/appendTo.html}
 
-\item PrependTo(): No caso do PrependTo() acontece da mesma forma do AppendTo(), porém a div ``novo$\_$conteudo'' é inserida antes do conteúdo original da div alvo. \vspace{0.5cm}
+\item prependTo(): No caso do PrependTo() acontece da mesma forma do AppendTo(), porém a div ``novo$\_$conteudo'' é inserida antes do conteúdo original da div alvo. \vspace{0.5cm}
 \lstinputlisting{codigos/prependTo.html}
 
 \end{itemize}
