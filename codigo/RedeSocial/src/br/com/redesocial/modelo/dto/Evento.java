@@ -64,7 +64,7 @@ public class Evento {
 
     /**
      * Função que modifica o identificador de um evento
-     * @param id novo identificador
+     * @param descricao
      */
     public void setDescricao(String descricao){
         this.descricao = descricao;
