@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.8.16)  25 AUG 2017 14:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.5.2)  14 OCT 2017 10:34
 entering extended mode
 **./prototipos.tex
 (prototipos.tex
-LaTeX2e <2016/03/31> patch level 1
-Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
+LaTeX2e <2015/10/01> patch level 2
+Babel <3.9n> and hyphenation patterns for 69 languages loaded.
 ! Undefined control sequence.
 l.1 \chapter
             {Prot√≥tipos}
@@ -48,7 +48,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 A
+l.3 A
       Figura \ref{figura:login} apresenta a tela de login, onde o usu√°rio p...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -64,7 +64,7 @@ Missing character: There is no a in font nullfont!
 ! Undefined control sequence.
 <write> ...erence `figura:login' on page \thepage 
                                                   \space undefined\on@line .
-l.4 A Figura \ref{figura:login}
+l.3 A Figura \ref{figura:login}
                                 apresenta a tela de login, onde o usu√°rio p...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -73,7 +73,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `figura:login' on page  undefined on input line 4.
+LaTeX Warning: Reference `figura:login' on page  undefined on input line 3.
 
 Missing character: There is no a in font nullfont!
 Missing character: There is no p in font nullfont!
@@ -175,11 +175,9 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no o in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no g in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
 Missing character: There is no u in font nullfont!
-Missing character: There is no n in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no a in font nullfont!
@@ -196,17 +194,17 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 4--5
+Overfull \hbox (20.0pt too wide) in paragraph at lines 3--4
 []
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 4--5
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 3--4
 []
  []
 
 ! Undefined control sequence.
-l.6 \figura
+l.5 \figura
            {login}{15}{../prototipos/resultados/login.png}{Prot√≥tipo de login}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -221,7 +219,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.6 \figura{l
+l.5 \figura{l
              ogin}{15}{../prototipos/resultados/login.png}{Prot√≥tipo de login}
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -286,7 +284,7 @@ Missing character: There is no g in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 6--7
+Overfull \hbox (20.0pt too wide) in paragraph at lines 5--6
 []
  []
 
@@ -297,7 +295,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.8 A
+l.7 A
       Figura \ref{figura:cadastro_usuario_parte2}  apresenta a tela onde o u...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -313,7 +311,7 @@ Missing character: There is no a in font nullfont!
 ! Undefined control sequence.
 <write> ...astro_usuario_parte2' on page \thepage 
                                                   \space undefined\on@line .
-l.8 A Figura \ref{figura:cadastro_usuario_parte2}
+l.7 A Figura \ref{figura:cadastro_usuario_parte2}
                                                    apresenta a tela onde o u...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -323,7 +321,7 @@ and I'll forget about whatever was undefined.
 
 
 LaTeX Warning: Reference `figura:cadastro_usuario_parte2' on page  undefined on
- input line 8.
+ input line 7.
 
 Missing character: There is no a in font nullfont!
 Missing character: There is no p in font nullfont!
@@ -379,8 +377,7 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no a in font nullfont!
+Missing character: There is no u in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no t in font nullfont!
@@ -452,18 +449,18 @@ Missing character: There is no c in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 8--9
+Overfull \hbox (20.0pt too wide) in paragraph at lines 7--8
 []
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 8--9
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 7--8
 []
  []
 
 ! Undefined control sequence.
-l.10 \figura
-            {cadastro_usuario_parte2}{13}{../prototipos/resultados/cadastro_...
+l.9 \figura
+           {cadastro_usuario_parte2}{13}{../prototipos/resultados/cadastro_u...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -477,8 +474,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.10 \figura{c
-              adastro_usuario_parte2}{13}{../prototipos/resultados/cadastro_...
+l.9 \figura{c
+             adastro_usuario_parte2}{13}{../prototipos/resultados/cadastro_u...
 
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -494,18 +491,18 @@ Missing character: There is no o in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.10 \figura{cadastro_
-                      usuario_parte2}{13}{../prototipos/resultados/cadastro_...
+l.9 \figura{cadastro_
+                     usuario_parte2}{13}{../prototipos/resultados/cadastro_u...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 10.
+(Font)              <7> on input line 9.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 10.
+(Font)              <5> on input line 9.
 ! Extra }, or forgotten $.
-l.10 \figura{cadastro_usuario_parte2}
-                                     {13}{../prototipos/resultados/cadastro_...
+l.9 \figura{cadastro_usuario_parte2}
+                                    {13}{../prototipos/resultados/cadastro_u...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -515,7 +512,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.11 
+l.10 
      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -527,7 +524,7 @@ Missing character: There is no ß in font cmr10!
 Missing character: There is no √ in font cmr10!
 Missing character: There is no £ in font cmr10!
 
-Overfull \hbox (466.67567pt too wide) in paragraph at lines 10--11
+Overfull \hbox (580.21057pt too wide) in paragraph at lines 9--10
 []$[]\OML/cmm/m/it/10 suario[]arte\OT1/cmr/m/n/10 2[][][]$ 
  []
 
@@ -538,7 +535,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.12 A
+l.11 A
        Figura \ref{figura:cadastro_usuario_parte3} apresenta a tela que o us...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -554,7 +551,7 @@ Missing character: There is no a in font nullfont!
 ! Undefined control sequence.
 <write> ...astro_usuario_parte3' on page \thepage 
                                                   \space undefined\on@line .
-l.12 A Figura \ref{figura:cadastro_usuario_parte3}
+l.11 A Figura \ref{figura:cadastro_usuario_parte3}
                                                    apresenta a tela que o us...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -564,7 +561,7 @@ and I'll forget about whatever was undefined.
 
 
 LaTeX Warning: Reference `figura:cadastro_usuario_parte3' on page  undefined on
- input line 12.
+ input line 11.
 
 Missing character: There is no a in font nullfont!
 Missing character: There is no p in font nullfont!
@@ -664,6 +661,12 @@ Missing character: There is no u in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no √ in font nullfont!
+Missing character: There is no £ in font nullfont!
+Missing character: There is no o in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no s in font nullfont!
@@ -677,26 +680,33 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no z in font nullfont!
 Missing character: There is no a in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no a in font nullfont!
-Missing character: There is no q in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no e in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no r in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no s in font nullfont!
 Missing character: There is no o in font nullfont!
-Missing character: There is no a in font nullfont!
 Missing character: There is no s in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no √ in font nullfont!
+Missing character: There is no ° in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no q in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
@@ -711,17 +721,17 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 12--13
+Overfull \hbox (20.0pt too wide) in paragraph at lines 11--12
 []
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 12--13
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 11--12
 []
  []
 
 ! Undefined control sequence.
-l.14 \figura
+l.13 \figura
             {cadastro_usuario_parte3}{16}{../prototipos/resultados/cadastro_...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -736,7 +746,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.14 \figura{c
+l.13 \figura{c
               adastro_usuario_parte3}{16}{../prototipos/resultados/cadastro_...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -753,13 +763,13 @@ Missing character: There is no o in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.14 \figura{cadastro_
+l.13 \figura{cadastro_
                       usuario_parte3}{16}{../prototipos/resultados/cadastro_...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.14 \figura{cadastro_usuario_parte3}
+l.13 \figura{cadastro_usuario_parte3}
                                      {16}{../prototipos/resultados/cadastro_...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -770,15 +780,19 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.15 
+l.14 
      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 Missing character: There is no √ in font cmr10!
 Missing character: There is no ≥ in font cmr10!
+Missing character: There is no √ in font cmr10!
+Missing character: There is no ß in font cmr10!
+Missing character: There is no √ in font cmr10!
+Missing character: There is no µ in font cmr10!
 
-Overfull \hbox (479.84679pt too wide) in paragraph at lines 14--15
+Overfull \hbox (568.95663pt too wide) in paragraph at lines 13--14
 []$[]\OML/cmm/m/it/10 suario[]arte\OT1/cmr/m/n/10 3[][][]$ 
  []
 
@@ -789,7 +803,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.16 A
+l.15 A
        Figura \ref{figura:cadastro_usuario_parte4} apresenta a tela onde o u...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -805,7 +819,7 @@ Missing character: There is no a in font nullfont!
 ! Undefined control sequence.
 <write> ...astro_usuario_parte4' on page \thepage 
                                                   \space undefined\on@line .
-l.16 A Figura \ref{figura:cadastro_usuario_parte4}
+l.15 A Figura \ref{figura:cadastro_usuario_parte4}
                                                    apresenta a tela onde o u...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -815,7 +829,7 @@ and I'll forget about whatever was undefined.
 
 
 LaTeX Warning: Reference `figura:cadastro_usuario_parte4' on page  undefined on
- input line 16.
+ input line 15.
 
 Missing character: There is no a in font nullfont!
 Missing character: There is no p in font nullfont!
@@ -971,25 +985,25 @@ Missing character: There is no p in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no a in font nullfont!
-Missing character: There is no w in font nullfont!
+Missing character: There is no W in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no b in font nullfont!
-Missing character: There is no c in font nullfont!
+Missing character: There is no C in font nullfont!
 Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
+Missing character: There is no m in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 16--17
+Overfull \hbox (20.0pt too wide) in paragraph at lines 15--16
 []
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 16--17
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 15--16
 []
  []
 
 ! Undefined control sequence.
-l.18 \figura
+l.17 \figura
             {cadastro_usuario_parte4}{16}{../prototipos/resultados/cadastro_...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1004,7 +1018,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.18 \figura{c
+l.17 \figura{c
               adastro_usuario_parte4}{16}{../prototipos/resultados/cadastro_...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -1021,13 +1035,13 @@ Missing character: There is no o in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.18 \figura{cadastro_
+l.17 \figura{cadastro_
                       usuario_parte4}{16}{../prototipos/resultados/cadastro_...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.18 \figura{cadastro_usuario_parte4}
+l.17 \figura{cadastro_usuario_parte4}
                                      {16}{../prototipos/resultados/cadastro_...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1038,7 +1052,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.19 
+l.18 
      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1046,12 +1060,151 @@ you left one out. Proceed, with fingers crossed.
 Missing character: There is no √ in font cmr10!
 Missing character: There is no ≥ in font cmr10!
 
-Overfull \hbox (478.71783pt too wide) in paragraph at lines 18--19
+Overfull \hbox (533.33484pt too wide) in paragraph at lines 17--18
 []$[]\OML/cmm/m/it/10 suario[]arte\OT1/cmr/m/n/10 4[][][]$ 
  []
 
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 A
+       Figura \ref{figura:perfil} apresenta o perfil inicial da rede social,...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no A in font nullfont!
+Missing character: There is no F in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
 ! Undefined control sequence.
-l.20 \figura
+<write> ...rence `figura:perfil' on page \thepage 
+                                                  \space undefined\on@line .
+l.19 A Figura \ref{figura:perfil}
+                                  apresenta o perfil inicial da rede social,...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `figura:perfil' on page  undefined on input line 19.
+
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no √ in font nullfont!
+Missing character: There is no ß in font nullfont!
+Missing character: There is no √ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no √ in font nullfont!
+Missing character: There is no ß in font nullfont!
+Missing character: There is no √ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no √ in font nullfont!
+Missing character: There is no ° in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no . in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 19--20
+[]
+ []
+
+
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 19--20
+[]
+ []
+
+! Undefined control sequence.
+l.21 \figura
             {perfil}{15}{../prototipos/resultados/perfil.png}{Prot√≥tipo de ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1066,7 +1219,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.20 \figura{p
+l.21 \figura{p
               erfil}{15}{../prototipos/resultados/perfil.png}{Prot√≥tipo de ...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -1134,12 +1287,164 @@ Missing character: There is no f in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no l in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 20--21
+Overfull \hbox (20.0pt too wide) in paragraph at lines 21--22
+[]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 A
+       Figura \ref{figura:postagem} apresenta a tela de postagem, que poder√...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no A in font nullfont!
+Missing character: There is no F in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+! Undefined control sequence.
+<write> ...nce `figura:postagem' on page \thepage 
+                                                  \space undefined\on@line .
+l.23 A Figura \ref{figura:postagem}
+                                    apresenta a tela de postagem, que poder√...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `figura:postagem' on page  undefined on input line 23.
+
+
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no q in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no √ in font nullfont!
+Missing character: There is no ° in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no √ in font nullfont!
+Missing character: There is no ≠ in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no √ in font nullfont!
+Missing character: There is no ß in font nullfont!
+Missing character: There is no √ in font nullfont!
+Missing character: There is no £ in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no √ in font nullfont!
+Missing character: There is no © in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no . in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 23--24
+[]
+ []
+
+
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 23--24
 []
  []
 
 ! Undefined control sequence.
-l.22 \figura
+l.25 \figura
             {postagem}{15}{../prototipos/resultados/postagem.png}{Prot√≥tipo...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1154,7 +1459,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.22 \figura{p
+l.25 \figura{p
               ostagem}{15}{../prototipos/resultados/postagem.png}{Prot√≥tipo...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -1228,12 +1533,140 @@ Missing character: There is no g in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no m in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 22--23
+Overfull \hbox (20.0pt too wide) in paragraph at lines 25--26
+[]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.27 A
+       Figura \ref{figura:meus_posts} apresenta a tela com todas as suas pos...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no A in font nullfont!
+Missing character: There is no F in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+! Undefined control sequence.
+<write> ...e `figura:meus_posts' on page \thepage 
+                                                  \space undefined\on@line .
+l.27 A Figura \ref{figura:meus_posts}
+                                      apresenta a tela com todas as suas pos...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `figura:meus_posts' on page  undefined on input line 2
+7.
+
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no √ in font nullfont!
+Missing character: There is no ° in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no √ in font nullfont!
+Missing character: There is no © in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no √ in font nullfont!
+Missing character: There is no ß in font nullfont!
+Missing character: There is no √ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no . in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 27--28
+[]
+ []
+
+
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 27--28
 []
  []
 
 ! Undefined control sequence.
-l.24 \figura
+l.29 \figura
             {meus_posts}{19}{../prototipos/resultados/meus_posts.png}{Prot√≥...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1248,7 +1681,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.24 \figura{m
+l.29 \figura{m
               eus_posts}{19}{../prototipos/resultados/meus_posts.png}{Prot√≥...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -1261,13 +1694,13 @@ Missing character: There is no s in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.24 \figura{meus_
+l.29 \figura{meus_
                   posts}{19}{../prototipos/resultados/meus_posts.png}{Prot√≥...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.24 \figura{meus_posts}
+l.29 \figura{meus_posts}
                         {19}{../prototipos/resultados/meus_posts.png}{Prot√≥...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1278,7 +1711,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.25 
+l.30 
      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1286,13 +1719,127 @@ you left one out. Proceed, with fingers crossed.
 Missing character: There is no √ in font cmr10!
 Missing character: There is no ≥ in font cmr10!
 
-Overfull \hbox (337.7241pt too wide) in paragraph at lines 24--25
+Overfull \hbox (337.7241pt too wide) in paragraph at lines 29--30
 []$[]\OML/cmm/m/it/10 osts[][][]$ 
  []
 
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.31 A
+       Figura \ref{figura:chat_ativos_e_inativos} apresenta a tela com todas...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no A in font nullfont!
+Missing character: There is no F in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
 ! Undefined control sequence.
-l.26 \figura
-            {chat_ativos}{10}{../prototipos/resultados/chat_ativos_e_inativo...
+<write> ...at_ativos_e_inativos' on page \thepage 
+                                                  \space undefined\on@line .
+l.31 A Figura \ref{figura:chat_ativos_e_inativos}
+                                                  apresenta a tela com todas...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `figura:chat_ativos_e_inativos' on page  undefined on 
+input line 31.
+
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no √ in font nullfont!
+Missing character: There is no ° in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no q in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no j in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no . in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 31--32
+[]
+ []
+
+
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 31--32
+[]
+ []
+
+! Undefined control sequence.
+l.33 \figura
+            {chat_ativos_e_inativos}{10}{../prototipos/resultados/chat_ativo...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1306,8 +1853,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.26 \figura{c
-              hat_ativos}{10}{../prototipos/resultados/chat_ativos_e_inativo...
+l.33 \figura{c
+              hat_ativos_e_inativos}{10}{../prototipos/resultados/chat_ativo...
 
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1319,14 +1866,19 @@ Missing character: There is no t in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.26 \figura{chat_
-                  ativos}{10}{../prototipos/resultados/chat_ativos_e_inativo...
+l.33 \figura{chat_
+                  ativos_e_inativos}{10}{../prototipos/resultados/chat_ativo...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
+! Double subscript.
+l.33 \figura{chat_ativos_e_
+                           inativos}{10}{../prototipos/resultados/chat_ativo...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
 ! Extra }, or forgotten $.
-l.26 \figura{chat_ativos}
-                         {10}{../prototipos/resultados/chat_ativos_e_inativo...
+l.33 \figura{chat_ativos_e_inativos}
+                                    {10}{../prototipos/resultados/chat_ativo...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -1334,14 +1886,14 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 ! Double subscript.
-l.26 ...0}{../prototipos/resultados/chat_ativos_e_
+l.33 ...0}{../prototipos/resultados/chat_ativos_e_
                                                   inativos.png}{Prot√≥tipo d...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.27 
+l.34 
      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1349,12 +1901,153 @@ you left one out. Proceed, with fingers crossed.
 Missing character: There is no √ in font cmr10!
 Missing character: There is no ≥ in font cmr10!
 
-Overfull \hbox (408.99104pt too wide) in paragraph at lines 26--27
-[]$[]\OML/cmm/m/it/10 tivos[][][]$ 
+Overfull \hbox (491.73514pt too wide) in paragraph at lines 33--34
+[]$[]\OML/cmm/m/it/10 tivos[][]nativos[][][]$ 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.35 A
+       Figura \ref{figura:mensagens} apresenta a tela de chat de mensagens, ...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no A in font nullfont!
+Missing character: There is no F in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+! Undefined control sequence.
+<write> ...ce `figura:mensagens' on page \thepage 
+                                                  \space undefined\on@line .
+l.35 A Figura \ref{figura:mensagens}
+                                     apresenta a tela de chat de mensagens, ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `figura:mensagens' on page  undefined on input line 35
+.
+
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no √ in font nullfont!
+Missing character: There is no ° in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no √ in font nullfont!
+Missing character: There is no ° in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no . in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 35--36
+[]
+ []
+
+
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 35--36
+[]
  []
 
 ! Undefined control sequence.
-l.28 \figura
+l.37 \figura
             {mensagens}{10}{../prototipos/resultados/mensagens.png}{Prot√≥ti...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1369,7 +2062,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.28 \figura{m
+l.37 \figura{m
               ensagens}{10}{../prototipos/resultados/mensagens.png}{Prot√≥ti...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -1452,13 +2145,132 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no s in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 28--29
+Overfull \hbox (20.0pt too wide) in paragraph at lines 37--38
+[]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39 A
+       Figura \ref{figura:recuperacao_senha} permite que os usu√°rios recupe...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no A in font nullfont!
+Missing character: There is no F in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+! Undefined control sequence.
+<write> ...ra:recuperacao_senha' on page \thepage 
+                                                  \space undefined\on@line .
+l.39 A Figura \ref{figura:recuperacao_senha}
+                                             permite que os usu√°rios recupe...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `figura:recuperacao_senha' on page  undefined on input
+ line 39.
+
+Missing character: There is no p in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no q in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no √ in font nullfont!
+Missing character: There is no ° in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no . in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 39--40
+[]
+ []
+
+
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 39--40
 []
  []
 
 ! Undefined control sequence.
-l.30 \figura
-            {prototipo_recuperacao_senha}{15}{../prototipos/resultados/proto...
+l.41 \figura
+            {recuperacao_senha}{15}{../prototipos/resultados/prototipo_recup...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1472,32 +2284,34 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.30 \figura{p
-              rototipo_recuperacao_senha}{15}{../prototipos/resultados/proto...
+l.41 \figura{r
+              ecuperacao_senha}{15}{../prototipos/resultados/prototipo_recup...
 
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-Missing character: There is no p in font nullfont!
 Missing character: There is no r in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
 Missing character: There is no p in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
 Missing character: There is no o in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.30 \figura{prototipo_
-                       recuperacao_senha}{15}{../prototipos/resultados/proto...
+l.41 \figura{recuperacao_
+                         senha}{15}{../prototipos/resultados/prototipo_recup...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.30 \figura{prototipo_recuperacao_senha}
-                                         {15}{../prototipos/resultados/proto...
+l.41 \figura{recuperacao_senha}
+                               {15}{../prototipos/resultados/prototipo_recup...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -1507,7 +2321,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.31 
+l.42 
      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1515,12 +2329,12 @@ you left one out. Proceed, with fingers crossed.
 Missing character: There is no √ in font cmr10!
 Missing character: There is no ≥ in font cmr10!
 
-Overfull \hbox (497.48927pt too wide) in paragraph at lines 30--31
-[]$[]\OML/cmm/m/it/10 ecuperacao[]enha[][][]$ 
+Overfull \hbox (444.12917pt too wide) in paragraph at lines 41--42
+[]$[]\OML/cmm/m/it/10 enha[][][]$ 
  []
 
 ! Undefined control sequence.
-l.32 \figura
+l.43 \figura
             {galeria_fotos}{19}{../prototipos/resultados/galeria_fotos.png}{...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1535,7 +2349,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.32 \figura{g
+l.43 \figura{g
               aleria_fotos}{19}{../prototipos/resultados/galeria_fotos.png}{...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -1551,13 +2365,13 @@ Missing character: There is no a in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.32 \figura{galeria_
+l.43 \figura{galeria_
                      fotos}{19}{../prototipos/resultados/galeria_fotos.png}{...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.32 \figura{galeria_fotos}
+l.43 \figura{galeria_fotos}
                            {19}{../prototipos/resultados/galeria_fotos.png}{...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1568,7 +2382,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.33 
+l.44 
      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1576,12 +2390,12 @@ you left one out. Proceed, with fingers crossed.
 Missing character: There is no √ in font cmr10!
 Missing character: There is no ≥ in font cmr10!
 
-Overfull \hbox (353.12494pt too wide) in paragraph at lines 32--33
+Overfull \hbox (353.12494pt too wide) in paragraph at lines 43--44
 []$[]\OML/cmm/m/it/10 otos[][][]$ 
  []
 
 ! Undefined control sequence.
-l.34 \figura
+l.45 \figura
             {solicitacao_amizade}{10}{../prototipos/resultados/solicitacao_a...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1596,7 +2410,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.34 \figura{s
+l.45 \figura{s
               olicitacao_amizade}{10}{../prototipos/resultados/solicitacao_a...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -1616,13 +2430,13 @@ Missing character: There is no o in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.34 \figura{solicitacao_
+l.45 \figura{solicitacao_
                          amizade}{10}{../prototipos/resultados/solicitacao_a...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.34 \figura{solicitacao_amizade}
+l.45 \figura{solicitacao_amizade}
                                  {10}{../prototipos/resultados/solicitacao_a...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1633,7 +2447,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.35 
+l.46 
      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1645,12 +2459,12 @@ Missing character: There is no ß in font cmr10!
 Missing character: There is no √ in font cmr10!
 Missing character: There is no £ in font cmr10!
 
-Overfull \hbox (415.94962pt too wide) in paragraph at lines 34--35
+Overfull \hbox (415.94962pt too wide) in paragraph at lines 45--46
 []$[]\OML/cmm/m/it/10 mizade[][][]$ 
  []
 
 ! Undefined control sequence.
-l.36 \figura
+l.47 \figura
             {entrar_grupo}{15}{../prototipos/resultados/entrar_grupo.png}{Pr...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1665,7 +2479,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.36 \figura{e
+l.47 \figura{e
               ntrar_grupo}{15}{../prototipos/resultados/entrar_grupo.png}{Pr...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -1680,13 +2494,13 @@ Missing character: There is no r in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.36 \figura{entrar_
+l.47 \figura{entrar_
                     grupo}{15}{../prototipos/resultados/entrar_grupo.png}{Pr...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.36 \figura{entrar_grupo}
+l.47 \figura{entrar_grupo}
                           {15}{../prototipos/resultados/entrar_grupo.png}{Pr...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1697,7 +2511,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.37 
+l.48 
      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1705,12 +2519,12 @@ you left one out. Proceed, with fingers crossed.
 Missing character: There is no √ in font cmr10!
 Missing character: There is no ≥ in font cmr10!
 
-Overfull \hbox (355.80936pt too wide) in paragraph at lines 36--37
+Overfull \hbox (355.80936pt too wide) in paragraph at lines 47--48
 []$[]\OML/cmm/m/it/10 rupo[][][]$ 
  []
 
 ! Undefined control sequence.
-l.38 \figura
+l.49 \figura
             {criar_grupo}{15}{../prototipos/resultados/criar_grupo.png}{Prot...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1725,7 +2539,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.38 \figura{c
+l.49 \figura{c
               riar_grupo}{15}{../prototipos/resultados/criar_grupo.png}{Prot...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -1739,13 +2553,13 @@ Missing character: There is no r in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.38 \figura{criar_
+l.49 \figura{criar_
                    grupo}{15}{../prototipos/resultados/criar_grupo.png}{Prot...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.38 \figura{criar_grupo}
+l.49 \figura{criar_grupo}
                          {15}{../prototipos/resultados/criar_grupo.png}{Prot...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1756,7 +2570,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.39 
+l.50 
      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1768,12 +2582,12 @@ Missing character: There is no ß in font cmr10!
 Missing character: There is no √ in font cmr10!
 Missing character: There is no £ in font cmr10!
 
-Overfull \hbox (339.29787pt too wide) in paragraph at lines 38--39
+Overfull \hbox (339.29787pt too wide) in paragraph at lines 49--50
 []$[]\OML/cmm/m/it/10 rupo[][][]$ 
  []
 
 ! Undefined control sequence.
-l.40 \figura
+l.51 \figura
             {denunciar_grupo}{15}{../prototipos/resultados/denunciar_grupo.p...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1788,7 +2602,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.40 \figura{d
+l.51 \figura{d
               enunciar_grupo}{15}{../prototipos/resultados/denunciar_grupo.p...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -1806,13 +2620,13 @@ Missing character: There is no r in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.40 \figura{denunciar_
+l.51 \figura{denunciar_
                        grupo}{15}{../prototipos/resultados/denunciar_grupo.p...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.40 \figura{denunciar_grupo}
+l.51 \figura{denunciar_grupo}
                              {15}{../prototipos/resultados/denunciar_grupo.p...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1823,7 +2637,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.41 
+l.52 
      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1833,12 +2647,12 @@ Missing character: There is no ≥ in font cmr10!
 Missing character: There is no √ in font cmr10!
 Missing character: There is no ∫ in font cmr10!
 
-Overfull \hbox (364.46701pt too wide) in paragraph at lines 40--41
+Overfull \hbox (364.46701pt too wide) in paragraph at lines 51--52
 []$[]\OML/cmm/m/it/10 rupo[][][]$ 
  []
 
 ! Undefined control sequence.
-l.42 \figura
+l.53 \figura
             {opcoes_grupo}{15}{../prototipos/resultados/opcoes_grupo.png}{Pr...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1853,7 +2667,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.42 \figura{o
+l.53 \figura{o
               pcoes_grupo}{15}{../prototipos/resultados/opcoes_grupo.png}{Pr...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -1868,13 +2682,13 @@ Missing character: There is no s in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.42 \figura{opcoes_
+l.53 \figura{opcoes_
                     grupo}{15}{../prototipos/resultados/opcoes_grupo.png}{Pr...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.42 \figura{opcoes_grupo}
+l.53 \figura{opcoes_grupo}
                           {15}{../prototipos/resultados/opcoes_grupo.png}{Pr...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1885,7 +2699,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.43 
+l.54 
      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1897,12 +2711,12 @@ Missing character: There is no ß in font cmr10!
 Missing character: There is no √ in font cmr10!
 Missing character: There is no µ in font cmr10!
 
-Overfull \hbox (341.86244pt too wide) in paragraph at lines 42--43
+Overfull \hbox (341.86244pt too wide) in paragraph at lines 53--54
 []$[]\OML/cmm/m/it/10 rupo[][][]$ 
  []
 
 ! Undefined control sequence.
-l.44 \figura
+l.55 \figura
             {cadastro_artigos}{15}{../prototipos/resultados/cadastro_artigos...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1917,7 +2731,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.44 \figura{c
+l.55 \figura{c
               adastro_artigos}{15}{../prototipos/resultados/cadastro_artigos...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -1934,13 +2748,13 @@ Missing character: There is no o in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.44 \figura{cadastro_
+l.55 \figura{cadastro_
                       artigos}{15}{../prototipos/resultados/cadastro_artigos...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.44 \figura{cadastro_artigos}
+l.55 \figura{cadastro_artigos}
                               {15}{../prototipos/resultados/cadastro_artigos...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1951,7 +2765,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.45 
+l.56 
      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1959,12 +2773,12 @@ you left one out. Proceed, with fingers crossed.
 Missing character: There is no √ in font cmr10!
 Missing character: There is no ≥ in font cmr10!
 
-Overfull \hbox (389.19894pt too wide) in paragraph at lines 44--45
+Overfull \hbox (389.19894pt too wide) in paragraph at lines 55--56
 []$[]\OML/cmm/m/it/10 rtigos[][][]$ 
  []
 
 ! Undefined control sequence.
-l.46 \figura
+l.57 \figura
             {sair_grupo}{15}{../prototipos/resultados/sair_grupo.png}{Prot√≥...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1979,7 +2793,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.46 \figura{s
+l.57 \figura{s
               air_grupo}{15}{../prototipos/resultados/sair_grupo.png}{Prot√≥...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -1992,13 +2806,13 @@ Missing character: There is no r in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.46 \figura{sair_
+l.57 \figura{sair_
                   grupo}{15}{../prototipos/resultados/sair_grupo.png}{Prot√≥...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.46 \figura{sair_grupo}
+l.57 \figura{sair_grupo}
                         {15}{../prototipos/resultados/sair_grupo.png}{Prot√≥...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2009,7 +2823,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.47 
+l.58 
      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2017,12 +2831,12 @@ you left one out. Proceed, with fingers crossed.
 Missing character: There is no √ in font cmr10!
 Missing character: There is no ≥ in font cmr10!
 
-Overfull \hbox (330.57211pt too wide) in paragraph at lines 46--47
+Overfull \hbox (330.57211pt too wide) in paragraph at lines 57--58
 []$[]\OML/cmm/m/it/10 rupo[][][]$ 
  []
 
 ! Undefined control sequence.
-l.48 \figura
+l.59 \figura
             {painel_admin}{15}{../prototipos/resultados/painel_final.png}{Pr...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2037,7 +2851,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.48 \figura{p
+l.59 \figura{p
               ainel_admin}{15}{../prototipos/resultados/painel_final.png}{Pr...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -2052,13 +2866,13 @@ Missing character: There is no l in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.48 \figura{painel_
+l.59 \figura{painel_
                     admin}{15}{../prototipos/resultados/painel_final.png}{Pr...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.48 \figura{painel_admin}
+l.59 \figura{painel_admin}
                           {15}{../prototipos/resultados/painel_final.png}{Pr...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2066,20 +2880,23 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.49 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+! Undefined control sequence.
+l.60 \figura
+            {Seus_Albuns}{15}{../prototipos/resultados/Seus_Albuns.png}{Prot...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ≥ in font cmr10!
-
-Overfull \hbox (382.79253pt too wide) in paragraph at lines 48--49
-[]$[]\OML/cmm/m/it/10 dmin[][][]$ 
- []
+! Undefined control sequence.
+l.61 \figura
+            {Suas_fotos}{15}{../prototipos/resultados/Suas_fotos.png}{Prot√≥...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 )
 ! Emergency stop.
@@ -2089,11 +2906,11 @@ Overfull \hbox (382.79253pt too wide) in paragraph at lines 48--49
 
  
 Here is how much of TeX's memory you used:
- 15 strings out of 493335
- 265 string characters out of 3136674
- 56225 words of memory out of 3000000
- 3643 multiletter control sequences out of 15000+200000
+ 21 strings out of 493634
+ 391 string characters out of 3131976
+ 56604 words of memory out of 3000000
+ 3505 multiletter control sequences out of 15000+200000
  3948 words of font info for 15 fonts, out of 3000000 for 9000
- 1141 hyphenation exceptions out of 8191
+ 1025 hyphenation exceptions out of 8191
  19i,2n,19p,290b,89s stack positions out of 5000i,500n,10000p,200000b,50000s
 !  ==> Fatal error occurred, no output PDF file produced!
