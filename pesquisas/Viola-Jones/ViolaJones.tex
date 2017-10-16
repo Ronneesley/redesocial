@@ -161,19 +161,18 @@ Outubro\\
 
 \section{Desvantagem}
 \begin{itemize}
-	\item A detecção de faces só é possível se o rosto estiver na posição frontal.
-	\item A base de dados usada precisa de faces em diferentes condições, sendo elas: iluminação, brilho, escala, pose e variações de câmera.
+	\item A detecção de faces só é possível se o rosto estiver na posição frontal;
+	\item A base de dados usada precisa de faces em diferentes condições, sendo elas: iluminação, brilho, escala, pose e variações de câmera;
 	\item Nível de detecção na literatura - 80\% (FAUX,2012);
 	\item É um algoritmo de detecção de face não de reconhecimento facial.
 \end{itemize}
 
 \section{Implementação Viola-Jones em Python}
 
-\subsection{Por quê a implementação em Python?}
+\subsection{Por que a implementação em Python?}
 	Existem inúmeras implementações do algoritmo disponíveis em plataformas confiáveis para utilização. Diversas linguagens foram desenvolvidas sendo elas as mais comuns em \textit{MatLab}, \textit{Java} e \textit{Python}. A implementação em MatLab não é de extrema significância ao se referir a detecção devido a ferramenta em si, não descartando sua utilização e benefícios para desenvolver procedimentos como o de detecção facial. Porém, é uma ferramenta paga e um projeto que demanda uma alta porcentagem de acertos e usabilidade, onde a interação de muitos indivíduos seriam colocados em pauta, viria deixar de ser uma solução para então tornar-se um problema se o usuário não obter a licença de uso, ou seja, dificultaria o processo e por delonga, devidamente descartado.  
 
 	Java é uma linguagem abundante no \textit{GitHub}, entretanto a maioria estava incompleta ou não possui os códigos necessários para o treinamento da rede, o que faz-se importante para o sucesso do algoritmo e para que tenham uma base de dados ampla gerando uma maior eficiência na detecção de imagens. Os códigos aparentemente completos deixam a desejar a documentação estando assim, incoerentes ou inexistentes o que por sua vez, dificultou a utilização do mesmo, sendo mais vantajoso optar por uma ampliação do que gastar tempo em códigos alheios. 
-
 
 	Deste modo, o método viável para implementação veio de \textit{Simon Hohberg} com o algoritmo em Python, que por conseguinte, encontra-se disponível no \textit{Github} pessoal do desenvolvedor:
 \url{https://github.com/Simon-Hohberg/Viola-Jones}. \textit{Python} é considerada uma linguagem simples, mas nem por isso menos robusta. Nota-se que é amplamente utilizada em processos de \textit{Machine Learning} (aprendizado de máquina, em português) e a implementação selecionada está com o algoritmo completo e documentação do código estruturada desde a detecção até o treinamento, havendo então, a possibilidade de utilização. 
