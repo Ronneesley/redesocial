@@ -18,7 +18,7 @@ import static org.junit.Assert.*;
 
 /**
  * Unidade de testes para o ArtigoBO
- * @author Andrey Silva Ribeiro, Lucas Azevedo, Macilon Arruda
+ * @author Andrey Silva Ribeiro, Lucas Azevedo, Macilon Arruda, Luciano Carvalho
  * @since 15/09/2017
 */
 public class ArtigoBOTest {
