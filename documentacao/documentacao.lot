@@ -1,9 +1,9 @@
 \select@language {brazil}
 \select@language {brazil}
 \contentsline {table}{\numberline {1}{\ignorespaces Requisito N\IeC {\~a}o Funcional: O sistema n\IeC {\~a}o deve permitir posts de usu\IeC {\'a}rios que configurem publica\IeC {\c c}\IeC {\~o}es ofensivas}}{12}{table.3.1}
-\contentsline {table}{\numberline {2}{\ignorespaces Requisito N\IeC {\~a}o Funcional: O tempo de conclus\IeC {\~a}o do software n\IeC {\~a}o poder\IeC {\'a} ultrapassar a data de 01/12/2017.}}{12}{table.3.2}
-\contentsline {table}{\numberline {3}{\ignorespaces Requisito N\IeC {\~a}o Funcional: O sistema deve ter suporte aos navegadores Google Chrome e Mozilla Firefox.}}{12}{table.3.3}
-\contentsline {table}{\numberline {4}{\ignorespaces Requisito N\IeC {\~a}o Funcional: O sistema deve ter uma boa usabilidade.}}{13}{table.3.4}
+\contentsline {table}{\numberline {2}{\ignorespaces Requisito N\IeC {\~a}o Funcional: O tempo de conclus\IeC {\~a}o do software n\IeC {\~a}o poder\IeC {\'a} ultrapassar a data de 01/12/2017}}{12}{table.3.2}
+\contentsline {table}{\numberline {3}{\ignorespaces Requisito N\IeC {\~a}o Funcional: O sistema deve ter suporte aos navegadores Google Chrome e Mozilla Firefox}}{12}{table.3.3}
+\contentsline {table}{\numberline {4}{\ignorespaces Requisito N\IeC {\~a}o Funcional: O sistema ter\IeC {\'a} uma boa usabilidade}}{13}{table.3.4}
 \contentsline {table}{\numberline {5}{\ignorespaces Requisito Funcional: O sistema deve oferecer um cadastro de usu\IeC {\'a}rios}}{13}{table.3.5}
 \contentsline {table}{\numberline {6}{\ignorespaces Requisito Funcional: O sistema deve oferecer a op\IeC {\c c}\IeC {\~a}o de login}}{13}{table.3.6}
 \contentsline {table}{\numberline {7}{\ignorespaces Requisito Funcional: O sistema dever\IeC {\'a} dar a op\IeC {\c c}\IeC {\~a}o de editar o perfil do usu\IeC {\'a}rio}}{13}{table.3.7}
