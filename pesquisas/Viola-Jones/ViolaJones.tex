@@ -6,6 +6,7 @@
 \usepackage[brazil]{babel}
 \usepackage{indentfirst}
 \usepackage{url}
+\usepackage{float}
 
 \usepackage{listings}
 \usepackage{color}
@@ -114,37 +115,60 @@ Outubro\\
 
 \section{Funcionamento do algoritmo} 
 
-\subsection{Integral Image}
-
+As implementações do código Viola-Jones em meios sociais deu-se pela necessidade que há em averiguar situações inesperadas no cotidiano e a partir disso, obter como contrapartida um resultado simples e imediato como a detecção facial. Para a detecção de objetos pode-se perceber que a imagem que está sendo utilizada como pressuposto é dividida em diversas escalas e posições, onde a janela que está em observação pode corriqueiramente tornar-se eficiente ou não em relação a uma \textit{Haar-like feature} (características de imagens digitais, em português) que por sua vez, para seu manuseio é executado sobre a técnica de imagem integral.
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=5cm]{recursos/imagens/Integral.png}
-\label{1}
+\label{Integral Image}
 \caption{Integral Image}
 \end{figure} 
 
-\subsection{Haar Feature}
+O desenvolvimento de métodos para a soma dos valores de todos os pixels utilizados no
+procedimento, encontram-se presentes acima e a esquerda de um pixel tendo como representação os
+pontos x e y da imagem. Para cada valor da soma realizada com os pixels obtêm-se um pixel
+retângulo formado no canto da imagem (esquerdo) e para exibir o valor médio de dada região podese
+dividir o valor conquistado pela área do retângulo. A uma pequena importância em calcular os
+valores médios da área que está deficiente de um determinado canto na imagem. O processo
+computacional realizado em torno do procedimento é considerado um trabalho simples,
+necessitando apenas acompanhar quatro etapas.
+
+
+
+
 
 
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=5cm]{recursos/imagens/Haar.png}
+\includegraphics[width=10cm]{recursos/imagens/Haar.png}
 \label{2}
 \caption{Haar}
 \end{figure} 
+
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=5cm]{recursos/imagens/sobreposicao.png}
+\label{4}
+\caption{Sobreposição da imagem.}
+\end{figure} 
+
+
+O método adotado torna os cálculos eficientes para classificar assiduidade de uma \textit{haar-like} feature em uma variada posição da imagem. Isso ocorre a partir da presença de determinada subtração da média dos pixels da região em contexto, quando a região é escura e quando ela é clara. Existe uma diferença perceptível pois se há uma região a qual é verdadeiramente escura e outra e clara, então a verificação será terminantemente positiva para feature. Sendo assim, é nítido o que seria uma \textit{haar-like feature} (Figura 2) e a sobreposição realizada por ela como forma de avaliação de uma determinada presença (Figura 3).
+
+
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=5cm]{recursos/imagens/cascata.png}
 \label{3}
-\caption{Classificadores em Cascata}
+\caption{Classificadores em Cascata.}
 \end{figure} 
 
 
 
-\subsection{AdaBoost}
 
 
 
