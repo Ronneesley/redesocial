@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.5.2)  17 OCT 2017 13:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.5.2)  18 OCT 2017 12:56
 entering extended mode
 **./documentacao.tex
 (documentacao.tex
@@ -1819,18 +1819,6 @@ LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 (Font)              for symbol `textbullet' on input line 51.
 
 
-LaTeX Warning: Reference `figura:2_sesso' on page 32 undefined on input line 51
-.
-
-
-LaTeX Warning: Reference `figura:Cadastro_2_Passo' on page 32 undefined on inpu
-t line 51.
-
-
-LaTeX Warning: Reference `figura:3_passo_cadastro_usuarios' on page 32 undefine
-d on input line 51.
-
-
 Overfull \hbox (12.79996pt too wide) in paragraph at lines 51--51
 [][] 
  []
@@ -1853,10 +1841,6 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Underfull \hbox (badness 4024) in paragraph at lines 144--144
 []|\OT1/cmss/m/n/12 (+20) Confirmar re-ce-bi-mento de
  []
-
-
-LaTeX Warning: Reference `figura:Cadastro_2_Passo' on page 32 undefined on inpu
-t line 144.
 
 
 Overfull \hbox (12.79996pt too wide) in paragraph at lines 144--144
@@ -1985,7 +1969,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ] [33] [34] [35] [36] [37] [38] [39]
 [40] [41] [42] [43] [44] [45] [46]
-<../banco_de_dados/redesocial.png, id=451, 1453.43pt x 1390.19376pt>
+<../banco_de_dados/redesocial.png, id=455, 1453.43pt x 1390.19376pt>
 File: ../banco_de_dados/redesocial.png Graphic file (type png)
 
 <use ../banco_de_dados/redesocial.png>
@@ -1996,7 +1980,7 @@ Package pdftex.def Info: ../banco_de_dados/redesocial.png used on input line 15
 
 ]
 <../documentacao/capitulos/projeto/diagramas/multimidia_album_classdiagram.png,
- id=457, 529.98pt x 294.34969pt>
+ id=461, 529.98pt x 294.34969pt>
 File: ../documentacao/capitulos/projeto/diagramas/multimidia_album_classdiagram
 .png Graphic file (type png)
 
@@ -2030,16 +2014,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 45.
  ) 
 Here is how much of TeX's memory you used:
- 14841 strings out of 493634
- 225657 string characters out of 3131976
- 488764 words of memory out of 3000000
- 17726 multiletter control sequences out of 15000+200000
+ 14838 strings out of 493634
+ 225582 string characters out of 3131976
+ 488791 words of memory out of 3000000
+ 17723 multiletter control sequences out of 15000+200000
  19285 words of font info for 94 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  45i,12n,45p,946b,544s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2050,9 +2031,9 @@ l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/Igo
 rRodrigues/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
 si12.pfb><C:/Users/IgorRodrigues/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
 public/amsfonts/cm/cmsy10.pfb>
-Output written on documentacao.pdf (50 pages, 2023745 bytes).
+Output written on documentacao.pdf (50 pages, 2023948 bytes).
 PDF statistics:
- 588 PDF objects out of 1000 (max. 8388607)
+ 592 PDF objects out of 1000 (max. 8388607)
  135 named destinations out of 1000 (max. 500000)
  12084 words of extra memory for PDF output out of 14400 (max. 10000000)
 
