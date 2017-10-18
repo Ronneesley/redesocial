@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.10.18)  18 OCT 2017 10:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.10.18)  18 OCT 2017 11:54
 entering extended mode
 **./documentacao.tex
 (documentacao.tex
@@ -1598,10 +1598,23 @@ Overfull \hbox (12.79996pt too wide) in paragraph at lines 387--387
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+
+Overfull \hbox (0.66896pt too wide) in paragraph at lines 404--404
+[]|\OT1/cmss/m/n/12 (-20) 10/10/2017| 
+ []
+
+
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 404--404
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 ) (capitulos/prototipos/prototipos.tex [12
 
 ] [13] [14] [15] [16] [17] [18]
-<../prototipos/resultados/login.png, id=260, 867.24pt x 480.79625pt>
+<../prototipos/resultados/login.png, id=261, 867.24pt x 480.79625pt>
 File: ../prototipos/resultados/login.png Graphic file (type png)
 
 <use ../prototipos/resultados/login.png>
@@ -1609,7 +1622,7 @@ Package pdftex.def Info: ../prototipos/resultados/login.png used on input line
 5.
 (pdftex.def)             Requested size: 426.79134pt x 236.61197pt.
 
-<../prototipos/resultados/cadastro_usuario_parte2.png, id=263, 789.70032pt x 61
+<../prototipos/resultados/cadastro_usuario_parte2.png, id=264, 789.70032pt x 61
 3.54219pt>
 File: ../prototipos/resultados/cadastro_usuario_parte2.png Graphic file (type p
 ng)
@@ -1618,7 +1631,7 @@ Package pdftex.def Info: ../prototipos/resultados/cadastro_usuario_parte2.png u
 sed on input line 9.
 (pdftex.def)             Requested size: 369.88582pt x 287.37251pt.
 
-<../prototipos/resultados/cadastro_usuario_parte3.png, id=265, 442.65375pt x 33
+<../prototipos/resultados/cadastro_usuario_parte3.png, id=266, 442.65375pt x 33
 1.99031pt>
 File: ../prototipos/resultados/cadastro_usuario_parte3.png Graphic file (type p
 ng)
@@ -1627,7 +1640,7 @@ Package pdftex.def Info: ../prototipos/resultados/cadastro_usuario_parte3.png u
 sed on input line 13.
 (pdftex.def)             Requested size: 455.24408pt x 341.45232pt.
 
-<../prototipos/resultados/cadastro_usuario_parte4.png, id=267, 571.38469pt x 31
+<../prototipos/resultados/cadastro_usuario_parte4.png, id=268, 571.38469pt x 31
 8.43968pt>
 File: ../prototipos/resultados/cadastro_usuario_parte4.png Graphic file (type p
 ng)
@@ -1636,7 +1649,7 @@ Package pdftex.def Info: ../prototipos/resultados/cadastro_usuario_parte4.png u
 sed on input line 17.
 (pdftex.def)             Requested size: 455.24408pt x 253.71227pt.
 
-<../prototipos/resultados/perfil.png, id=269, 1208.515pt x 1940.24875pt>
+<../prototipos/resultados/perfil.png, id=270, 1208.515pt x 1940.24875pt>
 File: ../prototipos/resultados/perfil.png Graphic file (type png)
 
 <use ../prototipos/resultados/perfil.png>
@@ -1647,7 +1660,7 @@ Package pdftex.def Info: ../prototipos/resultados/perfil.png used on input line
 
 LaTeX Warning: Float too large for page by 4.99626pt on input line 21.
 
-<../prototipos/resultados/postagem.png, id=271, 687.56876pt x 395.4775pt>
+<../prototipos/resultados/postagem.png, id=272, 687.56876pt x 395.4775pt>
 File: ../prototipos/resultados/postagem.png Graphic file (type png)
 
 <use ../prototipos/resultados/postagem.png>
@@ -1655,7 +1668,7 @@ Package pdftex.def Info: ../prototipos/resultados/postagem.png used on input li
 ne 25.
 (pdftex.def)             Requested size: 426.79134pt x 245.48317pt.
 
-<../prototipos/resultados/meus_posts.png, id=273, 753.41475pt x 339.06676pt>
+<../prototipos/resultados/meus_posts.png, id=274, 753.41475pt x 339.06676pt>
 File: ../prototipos/resultados/meus_posts.png Graphic file (type png)
 
 <use ../prototipos/resultados/meus_posts.png>
@@ -1668,7 +1681,7 @@ Overfull \hbox (85.35825pt too wide) in paragraph at lines 29--29
  []
 
 
-<../prototipos/resultados/chat_ativos_e_inativos.png, id=275, 277.035pt x 422.3
+<../prototipos/resultados/chat_ativos_e_inativos.png, id=276, 277.035pt x 422.3
 2782pt>
 File: ../prototipos/resultados/chat_ativos_e_inativos.png Graphic file (type pn
 g)
@@ -1679,7 +1692,7 @@ ed on input line 33.
  [19
 
  <../prototipos/resultados/login.png>]
-<../prototipos/resultados/mensagens.png, id=282, 302.12875pt x 347.2975pt>
+<../prototipos/resultados/mensagens.png, id=283, 302.12875pt x 347.2975pt>
 File: ../prototipos/resultados/mensagens.png Graphic file (type png)
 
 <use ../prototipos/resultados/mensagens.png>
@@ -1687,7 +1700,7 @@ Package pdftex.def Info: ../prototipos/resultados/mensagens.png used on input l
 ine 37.
 (pdftex.def)             Requested size: 284.52756pt x 327.06381pt.
 
-<../prototipos/resultados/prototipo_recuperacao_senha.png, id=284, 339.2675pt x
+<../prototipos/resultados/prototipo_recuperacao_senha.png, id=285, 339.2675pt x
  200.75pt>
 File: ../prototipos/resultados/prototipo_recuperacao_senha.png Graphic file (ty
 pe png)
@@ -1696,7 +1709,7 @@ Package pdftex.def Info: ../prototipos/resultados/prototipo_recuperacao_senha.p
 ng used on input line 41.
 (pdftex.def)             Requested size: 426.79134pt x 252.55116pt.
 
-<../prototipos/resultados/galeria_fotos.png, id=286, 1255.69125pt x 565.11125pt
+<../prototipos/resultados/galeria_fotos.png, id=287, 1255.69125pt x 565.11125pt
 >
 File: ../prototipos/resultados/galeria_fotos.png Graphic file (type png)
  <use ../prototipos/resultados/galeria_fotos.png>
@@ -1709,7 +1722,7 @@ Overfull \hbox (85.35825pt too wide) in paragraph at lines 45--45
  []
 
 
-<../prototipos/resultados/solicitacao_amizade.png, id=288, 229.85875pt x 41.153
+<../prototipos/resultados/solicitacao_amizade.png, id=289, 229.85875pt x 41.153
 75pt>
 File: ../prototipos/resultados/solicitacao_amizade.png Graphic file (type png)
  <use ../prototipos/resultados/solicitacao_amizade.png>
@@ -1717,7 +1730,7 @@ Package pdftex.def Info: ../prototipos/resultados/solicitacao_amizade.png used
 on input line 49.
 (pdftex.def)             Requested size: 284.52756pt x 50.9447pt.
 
-<../prototipos/resultados/entrar_grupo.png, id=290, 545.03625pt x 276.03125pt>
+<../prototipos/resultados/entrar_grupo.png, id=291, 545.03625pt x 276.03125pt>
 File: ../prototipos/resultados/entrar_grupo.png Graphic file (type png)
 
 <use ../prototipos/resultados/entrar_grupo.png>
@@ -1725,7 +1738,7 @@ Package pdftex.def Info: ../prototipos/resultados/entrar_grupo.png used on inpu
 t line 53.
 (pdftex.def)             Requested size: 426.79134pt x 216.14587pt.
 
-<../prototipos/resultados/criar_grupo.png, id=292, 725.71124pt x 395.4775pt>
+<../prototipos/resultados/criar_grupo.png, id=293, 725.71124pt x 395.4775pt>
 File: ../prototipos/resultados/criar_grupo.png Graphic file (type png)
 
 <use ../prototipos/resultados/criar_grupo.png>
@@ -1733,7 +1746,7 @@ Package pdftex.def Info: ../prototipos/resultados/criar_grupo.png used on input
  line 57.
 (pdftex.def)             Requested size: 426.79134pt x 232.58745pt.
 
-<../prototipos/resultados/denunciar_grupo.png, id=294, 546.04pt x 317.185pt>
+<../prototipos/resultados/denunciar_grupo.png, id=295, 546.04pt x 317.185pt>
 File: ../prototipos/resultados/denunciar_grupo.png Graphic file (type png)
 
 <use ../prototipos/resultados/denunciar_grupo.png>
@@ -1741,7 +1754,7 @@ Package pdftex.def Info: ../prototipos/resultados/denunciar_grupo.png used on i
 nput line 61.
 (pdftex.def)             Requested size: 426.79134pt x 247.9163pt.
 
-<../prototipos/resultados/opcoes_grupo.png, id=296, 545.03625pt x 301.125pt>
+<../prototipos/resultados/opcoes_grupo.png, id=297, 545.03625pt x 301.125pt>
 File: ../prototipos/resultados/opcoes_grupo.png Graphic file (type png)
 
 <use ../prototipos/resultados/opcoes_grupo.png>
@@ -1754,7 +1767,7 @@ LaTeX Warning: Text page 21 contains only floats.
 
 [21 <../prototipos/resultados/cadastro_usuario_parte3.png> <../prototipos/resul
 tados/cadastro_usuario_parte4.png>]
-<../prototipos/resultados/cadastro_artigos.png, id=309, 727.71875pt x 749.80125
+<../prototipos/resultados/cadastro_artigos.png, id=310, 727.71875pt x 749.80125
 pt>
 File: ../prototipos/resultados/cadastro_artigos.png Graphic file (type png)
  <use ../prototipos/resultados/cadastro_artigos.png>
@@ -1762,7 +1775,7 @@ Package pdftex.def Info: ../prototipos/resultados/cadastro_artigos.png used on
 input line 69.
 (pdftex.def)             Requested size: 426.79134pt x 439.75891pt.
 
-<../prototipos/resultados/sair_grupo.png, id=311, 545.03625pt x 162.6075pt>
+<../prototipos/resultados/sair_grupo.png, id=312, 545.03625pt x 162.6075pt>
 File: ../prototipos/resultados/sair_grupo.png Graphic file (type png)
 
 <use ../prototipos/resultados/sair_grupo.png>
@@ -1770,7 +1783,7 @@ Package pdftex.def Info: ../prototipos/resultados/sair_grupo.png used on input
 line 73.
 (pdftex.def)             Requested size: 426.79134pt x 127.32957pt.
 
-<../prototipos/resultados/painel_final.png, id=313, 1877.0125pt x 921.4425pt>
+<../prototipos/resultados/painel_final.png, id=314, 1877.0125pt x 921.4425pt>
 File: ../prototipos/resultados/painel_final.png Graphic file (type png)
 
 <use ../prototipos/resultados/painel_final.png>
@@ -1778,7 +1791,7 @@ Package pdftex.def Info: ../prototipos/resultados/painel_final.png used on inpu
 t line 77.
 (pdftex.def)             Requested size: 426.79134pt x 209.50899pt.
 
-<../prototipos/resultados/Seus_Albuns.png, id=315, 1255.69125pt x 565.11125pt>
+<../prototipos/resultados/Seus_Albuns.png, id=316, 1255.69125pt x 565.11125pt>
 File: ../prototipos/resultados/Seus_Albuns.png Graphic file (type png)
 
 <use ../prototipos/resultados/Seus_Albuns.png>
@@ -1786,7 +1799,7 @@ Package pdftex.def Info: ../prototipos/resultados/Seus_Albuns.png used on input
  line 81.
 (pdftex.def)             Requested size: 426.79134pt x 192.0663pt.
 
-<../prototipos/resultados/Suas_fotos.png, id=317, 1255.69125pt x 565.11125pt>
+<../prototipos/resultados/Suas_fotos.png, id=318, 1255.69125pt x 565.11125pt>
 File: ../prototipos/resultados/Suas_fotos.png Graphic file (type png)
 
 <use ../prototipos/resultados/Suas_fotos.png>
@@ -1981,7 +1994,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ] [33] [34] [35] [36] [37] [38] [39]
 [40] [41] [42] [43] [44] [45] [46]
-<../banco_de_dados/redesocial.png, id=451, 1453.43pt x 1390.19376pt>
+<../banco_de_dados/redesocial.png, id=453, 1453.43pt x 1390.19376pt>
 File: ../banco_de_dados/redesocial.png Graphic file (type png)
 
 <use ../banco_de_dados/redesocial.png>
@@ -1992,7 +2005,7 @@ Package pdftex.def Info: ../banco_de_dados/redesocial.png used on input line 15
 
 ]
 <../documentacao/capitulos/projeto/diagramas/multimidia_album_classdiagram.png,
- id=457, 529.98pt x 294.34969pt>
+ id=459, 529.98pt x 294.34969pt>
 File: ../documentacao/capitulos/projeto/diagramas/multimidia_album_classdiagram
 .png Graphic file (type png)
 
@@ -2026,24 +2039,30 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 45.
  ) 
 Here is how much of TeX's memory you used:
- 15058 strings out of 493333
- 222948 string characters out of 3139193
- 493107 words of memory out of 3000000
- 18077 multiletter control sequences out of 15000+200000
+ 15061 strings out of 493333
+ 222981 string characters out of 3139193
+ 494389 words of memory out of 3000000
+ 18078 multiletter control sequences out of 15000+200000
  19285 words of font info for 94 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,12n,45p,946b,546s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss9.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on documentacao.pdf (50 pages, 1980507 bytes).
+pdfTeX warning (dest): name{table.5.23} has been referenced but does not exis
+t, replaced by a fixed one
+
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss9.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on documentacao.pdf (50 pages, 1979865 bytes).
 PDF statistics:
- 588 PDF objects out of 1000 (max. 8388607)
- 135 named destinations out of 1000 (max. 500000)
+ 590 PDF objects out of 1000 (max. 8388607)
+ 137 named destinations out of 1000 (max. 500000)
  12084 words of extra memory for PDF output out of 14400 (max. 10000000)
 
