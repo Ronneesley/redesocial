@@ -324,7 +324,7 @@ public class ComentarioBOTest {
      * Método de teste responsável pela listagem dos commentários existentes no banco de dados
      * @author Lara Caroline
      */
-    //@Test
+    @Test
     public void testMetodoListar() {
         /*
         Para listar comentários é necessário a existência dos mesmos.
@@ -433,7 +433,7 @@ public class ComentarioBOTest {
      * Método responsável pelo teste da exclusão de um comentário no banco de dados
      * @author Luciano de Carvalho Borba
      */
-    //@Test
+    @Test
     public void testMetodoExcluir(){
        Pais pais = new Pais();
        pais.setNome("Brasil");

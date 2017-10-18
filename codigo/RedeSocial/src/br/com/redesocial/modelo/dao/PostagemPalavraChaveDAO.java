@@ -94,7 +94,12 @@ public class PostagemPalavraChaveDAO extends DAOBase {
         pstmt.executeQuery();
     }
         
-
+   /**
+     * Método que lista postagens por palavras chaves.
+     * @author Luciano de Carvalho Borba.
+     * @return lista.
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     public List listar() throws Exception {
         Connection conexao = getConexao();
         

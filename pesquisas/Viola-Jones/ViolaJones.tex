@@ -6,6 +6,7 @@
 \usepackage[brazil]{babel}
 \usepackage{indentfirst}
 \usepackage{url}
+\usepackage{float}
 
 \usepackage{listings}
 \usepackage{color}
@@ -99,52 +100,75 @@ Outubro\\
 \end{center}
 
 \section{Viola - Jones}
-O método \textit{Viola-Jones} proposto por \textit{Paul Viola} e \textit{Michael Jones} em 2001, é um algoritmo utilizado em diversas áreas da tecnologia, uma delas é a detecção de faces. Paul e Michael eram pesquisadores de Cambrigde onde optaram por explorar o lado radical da programação, sendo assim, publicaram um artigo intitulado: “\textit{Rapid Object Detection using a Boosted Cascade of Simple Features}” que demonstrou uma nova forma de detectar faces. O artigo bem como o conceito Viola-Jones faz uso de 3 abordagens diferenciadas, pautando pontos considerados de extrema importância, sendo eles: as características de \textit{Haar}, o algoritmo de aprendizado \textit{AdaBoost} e os classificadores em Cascata.
+	O método \textit{Viola-Jones} proposto por \textit{Paul Viola} e \textit{Michael Jones} em 2001, é um algoritmo utilizado em diversas áreas da tecnologia, uma delas é a detecção de faces. Paul e Michael eram pesquisadores de Cambrigde onde optaram por explorar o lado radical da programação, sendo assim, publicaram um artigo intitulado: “\textit{Rapid Object Detection using a Boosted Cascade of Simple Features}” que demonstrou uma nova forma de detectar faces. O artigo bem como o conceito Viola-Jones faz uso de 3 abordagens diferenciadas, pautando pontos considerados de extrema importância, sendo eles: as características de \textit{Haar}, o algoritmo de aprendizado \textit{AdaBoost} e os classificadores em Cascata.
 
-As características de Haar proposta pelo matemático húngaro Alfred Haar em 1909, foi a primeira maneira considerada nova de representar uma “\textit{imagem integral}” (\textit{Integral Image}, em inglês), que permitiu os detectores utilizados por eles, computarem as imagens de forma rápida e eficaz. \textit{Haar} é uma característica intitulada como transformada onde varia da matemática discreta que faz uso em diversos processos de análises de sinais, em meios de compressão de dados e amplas outras aplicações no ramo de engenharia e ciência da computação.
+	As características de Haar proposta pelo matemático húngaro Alfred Haar em 1909, foi a primeira maneira considerada nova de representar uma “\textit{imagem integral}” (\textit{Integral Image}, em inglês), que permitiu os detectores utilizados por eles, computarem as imagens de forma rápida e eficaz. \textit{Haar} é uma característica intitulada como transformada onde varia da matemática discreta que faz uso em diversos processos de análises de sinais, em meios de compressão de dados e amplas outras aplicações no ramo de engenharia e ciência da computação.
 
 
-A segunda abordagem essencial foi o algoritmo de aprendizado baseado em \textit{AdaBoost}. O algoritmo AdaBoost é caracterizado por algoritmo de\textit{ Machine Learning} (aprendizado de máquina, em português) inventado por Yoav Freund e Robert Schapire, o algoritmo meta-heurístico é usado para aumentar significativamente a performance dos algoritmos de aprendizagem. \textit{AdaBoost} é derivado do nome \textit{Adaptive Boosting} (impulso adaptativo, significado em português) algoritmo colocado como ajustável a diversas circunstâncias e adaptável para classificações subsequentes. O algoritmo seleciona um número pequeno de características visuais críticas de um conjunto maior e com seus classificadores torna-se extremamente eficiente.
+	A segunda abordagem essencial foi o algoritmo de aprendizado baseado em \textit{AdaBoost}. O algoritmo AdaBoost é caracterizado por algoritmo de\textit{ Machine Learning} (aprendizado de máquina, em português) inventado por Yoav Freund e Robert Schapire, o algoritmo meta-heurístico é usado para aumentar significativamente a performance dos algoritmos de aprendizagem. \textit{AdaBoost} é derivado do nome \textit{Adaptive Boosting} (impulso adaptativo, significado em português) algoritmo colocado como ajustável a diversas circunstâncias e adaptável para classificações subsequentes. O algoritmo seleciona um número pequeno de características visuais críticas de um conjunto maior e com seus classificadores torna-se extremamente eficiente.
 
-Tendo em vista tais ferramentas úteis para elaboração do algoritmo, Paul e Michael implementaram os classificadores em Cascata. Os classificadores são responsáveis por selecionar criteriosamente um determinado objeto, levando em consideração a concomitância de suas principais características. As características necessárias para utilização são encontradas a partir de amplos algoritmos de aprendizado como \textit{Support Vector Machine}, redes neurais, entre outros. Os classificadores em cascata possuem como principal função combinar e incrementar métodos que tendenciam melhorar a perspectiva do objeto, ou seja, permitiam com que diversas regiões do fundo da foto fossem rapidamente destacadas disponibilizando maior processamento computacional.
+	Tendo em vista tais ferramentas úteis para elaboração do algoritmo, Paul e Michael implementaram os classificadores em Cascata. Os classificadores são responsáveis por selecionar criteriosamente um determinado objeto, levando em consideração a concomitância de suas principais características. As características necessárias para utilização são encontradas a partir de amplos algoritmos de aprendizado como \textit{Support Vector Machine}, redes neurais, entre outros. Os classificadores em cascata possuem como principal função combinar e incrementar métodos que tendenciam melhorar a perspectiva do objeto, ou seja, permitiam com que diversas regiões do fundo da foto fossem rapidamente destacadas disponibilizando maior processamento computacional.
 
-Por conseguinte, rejeitavam um largo número de regiões que demostravam ter o aspecto escolhido tornando-o então, cada vez mais prudente para que não ocorresse casos de falsos objetos nas análises dos mesmos. Os autores aprofundaram seus métodos de acordo com a construção do algoritmo, deste modo, realizaram comparações em relação a diferentes algoritmos similares da época, bem como, \textit{Rowley-Baluja-Kanade}, \textit{Schneiderman-Kanade} e\textit{ Roth-Yang-Ahuja} para que pudessem encontrar meios de solucionar a forma como funcionavam as equações e obter assim, resultados satisfatórios. 
+	Por conseguinte, rejeitavam um largo número de regiões que demostravam ter o aspecto escolhido tornando-o então, cada vez mais prudente para que não ocorresse casos de falsos objetos nas análises dos mesmos. Os autores aprofundaram seus métodos de acordo com a construção do algoritmo, deste modo, realizaram comparações em relação a diferentes algoritmos similares da época, bem como, \textit{Rowley-Baluja-Kanade}, \textit{Schneiderman-Kanade} e\textit{ Roth-Yang-Ahuja} para que pudessem encontrar meios de solucionar a forma como funcionavam as equações e obter assim, resultados satisfatórios. 
 
-O algoritmo Viola-Jones é uma variação do \textit{AdaBoost}, algoritmo de aprendizado. Porém,por ser uma alternância, o algoritmo Viola-Jones é bastante utilizado. Devido sua implementação seguir uma abordagem diferente para construir um novo sistema de detecção, ele consegue alcançar aproximadamente 15 vezes mais rápido que os métodos anteriores. Viola-Jones é perfeitamente apto a detectar faces com maior precisão usando \textit{Haar} como uma das implementações, é notório a perspectiva que há em aplicar o algoritmo em diversas situações. O método Viola-Jones revolucionou o campo da computação tornando-se referência para os demais. 
+	O algoritmo Viola-Jones é uma variação do \textit{AdaBoost}, algoritmo de aprendizado. Porém,por ser uma alternância, o algoritmo Viola-Jones é bastante utilizado. Devido sua implementação seguir uma abordagem diferente para construir um novo sistema de detecção, ele consegue alcançar aproximadamente 15 vezes mais rápido que os métodos anteriores. Viola-Jones é perfeitamente apto a detectar faces com maior precisão usando \textit{Haar} como uma das implementações, é notório a perspectiva que há em aplicar o algoritmo em diversas situações. O método Viola-Jones revolucionou o campo da computação tornando-se referência para os demais. 
 
 \section{Funcionamento do algoritmo} 
 
-\subsection{Integral Image}
-
+As implementações do código Viola-Jones em meios sociais deu-se pela necessidade que há em averiguar situações inesperadas no cotidiano e a partir disso, obter como contrapartida um resultado simples e imediato como a detecção facial. Para a detecção de objetos pode-se perceber que a imagem que está sendo utilizada como pressuposto é dividida em diversas escalas e posições, onde a janela que está em observação pode corriqueiramente tornar-se eficiente ou não em relação a uma \textit{Haar-like feature} (características de imagens digitais, em português) que por sua vez, para seu manuseio é executado sobre a técnica de imagem integral.
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=5cm]{recursos/imagens/Integral.png}
-\label{1}
+\label{Integral Image}
 \caption{Integral Image}
 \end{figure} 
 
-\subsection{Haar Feature}
+O desenvolvimento de métodos para a soma dos valores de todos os pixels utilizados no
+procedimento, encontram-se presentes acima e a esquerda de um pixel tendo como representação os
+pontos x e y da imagem. Para cada valor da soma realizada com os pixels obtêm-se um pixel
+retângulo formado no canto da imagem (esquerdo) e para exibir o valor médio de dada região podese
+dividir o valor conquistado pela área do retângulo. A uma pequena importância em calcular os
+valores médios da área que está deficiente de um determinado canto na imagem. O processo
+computacional realizado em torno do procedimento é considerado um trabalho simples,
+necessitando apenas acompanhar quatro etapas.
+
+
+
+
 
 
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=5cm]{recursos/imagens/Haar.png}
+\includegraphics[width=10cm]{recursos/imagens/Haar.png}
 \label{2}
 \caption{Haar}
 \end{figure} 
+
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=5cm]{recursos/imagens/sobreposicao.png}
+\label{4}
+\caption{Sobreposição da imagem.}
+\end{figure} 
+
+
+O método adotado torna os cálculos eficientes para classificar assiduidade de uma \textit{haar-like} feature em uma variada posição da imagem. Isso ocorre a partir da presença de determinada subtração da média dos pixels da região em contexto, quando a região é escura e quando ela é clara. Existe uma diferença perceptível pois se há uma região a qual é verdadeiramente escura e outra e clara, então a verificação será terminantemente positiva para feature. Sendo assim, é nítido o que seria uma \textit{haar-like feature} (Figura 2) e a sobreposição realizada por ela como forma de avaliação de uma determinada presença (Figura 3).
+
+
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=5cm]{recursos/imagens/cascata.png}
 \label{3}
-\caption{Classificadores em Cascata}
+\caption{Classificadores em Cascata.}
 \end{figure} 
 
 
 
-\subsection{AdaBoost}
 
 
 
@@ -161,24 +185,21 @@ O algoritmo Viola-Jones é uma variação do \textit{AdaBoost}, algoritmo de apr
 
 \section{Desvantagem}
 \begin{itemize}
-	\item A detecção de faces só é possível se o rosto estiver na posição frontal.
-	\item A base de dados usada precisa de faces em diferentes condições, sendo elas: iluminação, brilho, escala, pose e variações de câmera.
+	\item A detecção de faces só é possível se o rosto estiver na posição frontal;
+	\item A base de dados usada precisa de faces em diferentes condições, sendo elas: iluminação, brilho, escala, pose e variações de câmera;
 	\item Nível de detecção na literatura - 80\% (FAUX,2012);
 	\item É um algoritmo de detecção de face não de reconhecimento facial.
 \end{itemize}
 
 \section{Implementação Viola-Jones em Python}
 
-\subsection{Por quê a implementação em Python?}
-Existem inúmeras implementações do algoritmo disponíveis em plataformas confiáveis para utilização. Diversas linguagens foram desenvolvidas sendo elas as mais comuns em \textit{MatLab}, \textit{Java} e \textit{Python}. A implementação em MatLab não é de extrema importância devido a ferramenta em si, não descartando sua utilização e benefícios para desenvolver procedimentos como o de detecção facial. Porém, é uma ferramenta paga e um projeto que demanda uma alta porcentagem de acertos e usabilidade, onde a interação de muitos indivíduos seriam colocados em pauta, viria deixar de ser uma solução para então tornar-se um problema se o usuário não obtiver a licença de uso, ou seja, dificultaria o processo e por delonga foi devidamente descartado.  
+\subsection{Por que a implementação em Python?}
+	Existem inúmeras implementações do algoritmo disponíveis em plataformas confiáveis para utilização. Diversas linguagens foram desenvolvidas sendo elas as mais comuns em \textit{MatLab}, \textit{Java} e \textit{Python}. A implementação em MatLab não é de extrema significância ao se referir a detecção devido a ferramenta em si, não descartando sua utilização e benefícios para desenvolver procedimentos como o de detecção facial. Porém, é uma ferramenta paga e um projeto que demanda uma alta porcentagem de acertos e usabilidade, onde a interação de muitos indivíduos seriam colocados em pauta, viria deixar de ser uma solução para então tornar-se um problema se o usuário não obter a licença de uso, ou seja, dificultaria o processo e por delonga, devidamente descartado.  
 
-Java era bastante abundante no \textit{GitHub}, entretanto a maioria estava incompleta ou não possuía os códigos necessários para o treinamento da rede, o que faz-se importante para o sucesso do algoritmo e para que tenham uma base de dados ampla gerando uma maior eficiência na detecção de imagens. Os códigos que estavam aparentemente completos deixava a desejar a documentação estando assim incoerente ou inexistente o que por sua vez, dificultou a utilização do mesmo, sendo mais vantajoso optar por uma ampliação do que gastar tempo em códigos alheios. 
+	Java é uma linguagem abundante no \textit{GitHub}, entretanto a maioria estava incompleta ou não possui os códigos necessários para o treinamento da rede, o que faz-se importante para o sucesso do algoritmo e para que tenham uma base de dados ampla gerando uma maior eficiência na detecção de imagens. Os códigos aparentemente completos deixam a desejar a documentação estando assim, incoerentes ou inexistentes o que por sua vez, dificultou a utilização do mesmo, sendo mais vantajoso optar por uma ampliação do que gastar tempo em códigos alheios. 
 
-
-Deste modo, escolhemos a implementação de \textit{Simon Hohberg} com o algoritmo em Python,
-que por conseguinte, estava disponível no \textit{Github} pessoal do desenvolvedor:
-\url{https://github.com/Simon-Hohberg/Viola-Jones}. \textit{Python} é considerada uma linguagem simples, mas nem por isso menos robusta. Nota-se que é amplamente utilizada em processos de \textit{Machine Learning} (aprendizado de máquina, em português) e a implementação encontrada está com todas as partes do algoritmo, desde a detecção até o treinamento, sendo assim, a documentação do código
-bem-feita e planejada, o que possibilitaria o uso. 
+	Deste modo, o método viável para implementação veio de \textit{Simon Hohberg} com o algoritmo em Python, que por conseguinte, encontra-se disponível no \textit{Github} pessoal do desenvolvedor:
+\url{https://github.com/Simon-Hohberg/Viola-Jones}. \textit{Python} é considerada uma linguagem simples, mas nem por isso menos robusta. Nota-se que é amplamente utilizada em processos de \textit{Machine Learning} (aprendizado de máquina, em português) e a implementação selecionada está com o algoritmo completo e documentação do código estruturada desde a detecção até o treinamento, havendo então, a possibilidade de utilização. 
 
 
 
