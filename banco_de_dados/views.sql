@@ -261,11 +261,10 @@ CREATE VIEW `usuarios_por_pais` AS
  */
 create view `usuariosQtdeRelacionamentos` as (
 
-	SELECT u.nome, t.nome as tipo, count(*) as Qtde 
+	SELECT u.nome, "Amizade" as tipo, count(*) as Qtde 
 	FROM redesocial.relacionamentos r 
     
-	inner join	usuarios u on r.usuario_1 = u.id 
-	inner join	tipos t on r.tipo = t.id
-	group by u.nome, t.nome 
+	inner join	usuarios u on r.usuario_1 = u.id 	
+	group by u.nome
 	order by u.nome asc
 );
