@@ -1,10 +1,13 @@
 package br.com.redesocial.modelo.dao;
 
 import br.com.redesocial.modelo.dto.Evento;
+import br.com.redesocial.modelo.dto.Pais;
+import br.com.redesocial.modelo.dto.Postagem;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -60,7 +63,7 @@ public class EventoDAO extends DAOCRUDBase<Evento> {
         if(rs.next()){
             Evento dto = new Evento();
             
-            dto.setNome(rs.getString("descricao"));
+            dto.setDescricao(rs.getString("descricao"));
             dto.setNome(rs.getString("nome"));
             dto.setId(rs.getInt("id"));
             
@@ -72,7 +75,27 @@ public class EventoDAO extends DAOCRUDBase<Evento> {
 
     @Override
     public List listar() throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Connection conexao = getConexao();
+
+       PreparedStatement pstmt;
+       pstmt = conexao.prepareStatement("select * from evento order by nome asc");
+
+       ResultSet rs;
+       rs = pstmt.executeQuery();
+
+       List lista;
+       lista = new ArrayList();
+
+       while (rs.next()){
+           Evento p = new Evento();
+           p.setNome(rs.getString("descricao"));
+           p.setNome(rs.getString("nome"));
+           p.setId(rs.getInt("id"));
+
+           lista.add(p);
+       }
+
+       return lista;
     }
     
     @Override
