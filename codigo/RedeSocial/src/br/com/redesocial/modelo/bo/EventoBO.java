@@ -35,6 +35,12 @@ public class EventoBO extends BOCRUDBase<Evento, EventoDAO> {
         
         if (dto.getNome() == null || dto.getNome().trim().equals("")) throw new Exception("Preencha o nome do evento");
         
-        if (dto.getDescricao().trim().equals("")) throw new Exception("Preencha a descricao do evento");     
+        if (dto.getDescricao() == null || dto.getDescricao().trim().equals("")) throw new Exception("Preencha a descricao do evento");
+        
+        if (dto.getCertificado() == null) throw new Exception("Preencha se existe certificado");
+        
+        if (dto.getInicio() == null) throw new Exception("Preencha a data de inicio do evento");
+        
+        if (dto.getFim() == null) throw new Exception("Preencha a data de finalização do evento");
     }
 }
