@@ -1,6 +1,3 @@
-/*Inserção de país*/
-INSERT INTO `paises`(nome) VALUES ('Brasil');
-/*Inserção de Estado*/
 INSERT INTO `estados`(nome,pais) VALUES ('Goiás',1);
 /*Inserção de Cidade*/
 INSERT INTO `cidades`(nome,estado) VALUES ('Itapuranga',1);
@@ -14,15 +11,12 @@ INSERT INTO `usuarios` (nome, email, senha, data_nascimento, sexo, data_cadastro
 							('Antonio','qualquer','batata','1999-01-06','M','2017-09-05 15:38:49',1,1);
 
 
-/*Inserção de tipos de relacionamento*/
-INSERT INTO `tipos`(nome) VALUES
-	('Amizade'),
-    ('Conhecido');
+
 
 /*Inserção de relacionamento*/
 INSERT INTO `relacionamentos`(usuario_1, usuario_2, tipo) VALUES 
-	(1,2,1),
-	(1,3,1),
-    (1,4,1),
-    (3,2,2),
-    (2,5,2);
+	(1,2,'Amizade'),
+	(1,3,'Amizade'),
+    (1,4,'Amizade'),
+    (3,2,'Amizade'),
+    (2,5,'Amizade');
