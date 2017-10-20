@@ -40,11 +40,14 @@ public class EventoDAO extends DAOCRUDBase<Evento> {
     public void alterar(Evento dto) throws Exception {
        Connection conexao = getConexao();
 
-        PreparedStatement pstmt = conexao.prepareStatement("update eventos set descricao  = ?, nome = ? where id = ?"); 
+        PreparedStatement pstmt = conexao.prepareStatement("update eventos set nome = ?, descricao  = ?, certificado = ?, inicio = ?, fim = ? where id = ?"); 
         
-        pstmt.setString(1, dto.getDescricao()); 
-        pstmt.setString(2, dto.getNome());        
-        pstmt.setInt(3, dto.getId());
+        pstmt.setString(1, dto.getNome()); 
+        pstmt.setString(2, dto.getDescricao());
+        pstmt.setBoolean(3, dto.getCertificado());
+        pstmt.setDate(4, new java.sql.Date(dto.getInicio().getTime()));
+        pstmt.setDate(5, new java.sql.Date(dto.getFim().getTime()));
+        pstmt.setInt(6, dto.getId());
 
         pstmt.executeUpdate();
     }
