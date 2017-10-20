@@ -30,14 +30,13 @@ public class EventoDAO extends DAOCRUDBase<Evento> {
         }
 
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("insert into eventos (descricao, nome, id, certificado, inicio, fim) values(?,?,?,?,?,?)", Statement.RETURN_GENERATED_KEYS);
+        pstmt = conexao.prepareStatement("insert into eventos (descricao, nome, certificado, inicio, fim) values(?,?,?,,?,?)", Statement.RETURN_GENERATED_KEYS);
 
         pstmt.setString(1, dto.getDescricao());
         pstmt.setString(2, dto.getNome());
-        pstmt.setInt(3, dto.getId());
-        pstmt.setBoolean(4, dto.getCertificado());
-        pstmt.setDate(5, new java.sql.Date(dto.getInicio().getTime()));
-        pstmt.setDate(6, new java.sql.Date(dto.getFim().getTime()));
+        pstmt.setBoolean(3, dto.getCertificado());
+        pstmt.setDate(4, new java.sql.Date(dto.getInicio().getTime()));
+        pstmt.setDate(5, new java.sql.Date(dto.getFim().getTime()));
         pstmt.executeUpdate();
 
         dto.setId(getId(pstmt));
@@ -52,7 +51,7 @@ public class EventoDAO extends DAOCRUDBase<Evento> {
     */
     @Override
     public void alterar(Evento dto) throws Exception {
-       Connection conexao = getConexao();
+        Connection conexao = getConexao();
 
         PreparedStatement pstmt = conexao.prepareStatement("update eventos set nome = ?, descricao  = ?, certificado = ?, inicio = ?, fim = ? where id = ?"); 
         
@@ -93,7 +92,7 @@ public class EventoDAO extends DAOCRUDBase<Evento> {
             dto.setId(rs.getInt("id"));
             dto.setCertificado(rs.getBoolean("certificado"));
             dto.setInicio(rs.getDate("inicio"));
-            dto.setFim(rs.getDate("Fim"));
+            dto.setFim(rs.getDate("fim"));
             
             return dto;
         } else {
@@ -113,7 +112,7 @@ public class EventoDAO extends DAOCRUDBase<Evento> {
         Connection conexao = getConexao();
 
        PreparedStatement pstmt;
-       pstmt = conexao.prepareStatement("select * from evento order by nome asc");
+       pstmt = conexao.prepareStatement("select * from eventos order by nome asc");
 
        ResultSet rs;
        rs = pstmt.executeQuery();
