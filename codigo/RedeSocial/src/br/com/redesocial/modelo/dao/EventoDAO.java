@@ -1,8 +1,6 @@
 package br.com.redesocial.modelo.dao;
 
 import br.com.redesocial.modelo.dto.Evento;
-import br.com.redesocial.modelo.dto.Pais;
-import br.com.redesocial.modelo.dto.Postagem;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -16,7 +14,13 @@ import java.util.List;
  * @since 13/10/2017
  */
 public class EventoDAO extends DAOCRUDBase<Evento> {
-     
+    /**
+    * Metodo que lista os eventos
+    * @author Jonathan Silvestre e Willian Wallace 
+    * @param dto 
+    * @throws java.lang.Exception 
+    * @since 13/10/2017
+    */
     @Override
     public void inserir(Evento dto) throws Exception {
         Connection conexao = getConexao();
@@ -26,16 +30,26 @@ public class EventoDAO extends DAOCRUDBase<Evento> {
         }
 
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("insert into eventos (descricao, nome, id) values(?,?,?)", Statement.RETURN_GENERATED_KEYS);
+        pstmt = conexao.prepareStatement("insert into eventos (descricao, nome, id, certificado, inicio, fim) values(?,?,?,?,?,?)", Statement.RETURN_GENERATED_KEYS);
 
         pstmt.setString(1, dto.getDescricao());
         pstmt.setString(2, dto.getNome());
         pstmt.setInt(3, dto.getId());
+        pstmt.setBoolean(4, dto.getCertificado());
+        pstmt.setDate(5, new java.sql.Date(dto.getInicio().getTime()));
+        pstmt.setDate(6, new java.sql.Date(dto.getFim().getTime()));
         pstmt.executeUpdate();
 
         dto.setId(getId(pstmt));
     }
-
+    
+    /**
+    * Metodo que altera o os valores do campo de evento
+    * @author Jonathan Silvestre e Salmi Nunes
+    * @param dto 
+    * @throws java.lang.Exception 
+    * @since 20/10/2017
+    */
     @Override
     public void alterar(Evento dto) throws Exception {
        Connection conexao = getConexao();
@@ -52,6 +66,14 @@ public class EventoDAO extends DAOCRUDBase<Evento> {
         pstmt.executeUpdate();
     }
 
+   /**
+    * Metodo que lista os eventos
+    * @author Jonathan Silvestre e Salmi Nunes
+    * @param id
+    * @return 
+    * @throws java.lang.Exception 
+    * @since 20/10/2017
+    */
     @Override
     public Evento selecionar(int id) throws Exception {
         Connection conexao = getConexao();
@@ -69,13 +91,23 @@ public class EventoDAO extends DAOCRUDBase<Evento> {
             dto.setDescricao(rs.getString("descricao"));
             dto.setNome(rs.getString("nome"));
             dto.setId(rs.getInt("id"));
+            dto.setCertificado(rs.getBoolean("certificado"));
+            dto.setInicio(rs.getDate("inicio"));
+            dto.setFim(rs.getDate("Fim"));
             
             return dto;
         } else {
             return null;
         }
     }
-
+    
+    /**
+    * Metodo que lista os eventos
+    * @author Jonathan Silvestre e Willian Wallace 
+    * @return  
+    * @throws java.lang.Exception 
+    * @since 20/10/2017
+    */
     @Override
     public List listar() throws Exception {
         Connection conexao = getConexao();
@@ -101,6 +133,13 @@ public class EventoDAO extends DAOCRUDBase<Evento> {
        return lista;
     }
     
+    /**
+    * Metodo que exclui um evento apartir do id   
+    * @author Willian Wallace
+    * @param id
+    * @throws java.lang.Exception
+    * @since 13/10/2017
+    */
     @Override
     public void excluir(int id) throws Exception {
         Connection conexao = getConexao();  
