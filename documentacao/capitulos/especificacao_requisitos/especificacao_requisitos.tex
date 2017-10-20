@@ -390,6 +390,23 @@
  %Identificação do Requisito
  {RF19}
  %Nome do Requisito
+ {O sistema deve fornecer um cadastro de eventos.}
+ %Fonte do Requisito
+ {Gusttavo Nunes Gomes}
+ %Local e/ou Reunião
+ {Laboratório 2 do IF Goiano Campus Ceres}
+ %Data
+ {05/10/2017}
+ %Responsável pelo Requisito
+ {Gusttavo Nunes Gomes}
+ %Especificação do Requisito
+ { O cadastro de eventos no sistema deve permitir a criação de várias atividades vinculadas, adicionando informações extras como descrição das atividades, local da atividade, horário, contato com o responsável pela atividade, como e-mail e perfil na rede social, se ele estiver cadastrado na plataforma. 
+ }
+ 
+  \requisitoFuncional
+ %Identificação do Requisito
+ {RF20}
+ %Nome do Requisito
  {O sistema deve cadastrar automaticamente o usuário nas atividades do evento.}
  %Fonte do Requisito
  {Gusttavo Nunes Gomes}
@@ -400,5 +417,22 @@
  %Responsável pelo Requisito
  {Gusttavo Nunes Gomes}
  %Especificação do Requisito
- { Ao realizar inscrição em um evento, o usuário é automticamente inscrito em suas atividades, desde que não possua restrição de horários, como múltiplas atividades no mesmo horário, sendo estas necessitando o preenchimento manual do usuário. A inscrição automática em todas as atividades pode ser alterada posteriormente pelo usuário.
+ { Ao realizar inscrição em um evento, o usuário é automaticamente inscrito em suas atividades. A inscrição automática em todas as atividades pode ser alterada posteriormente pelo usuário.
+ }
+ 
+  \requisitoFuncional
+ %Identificação do Requisito
+ {RF21}
+ %Nome do Requisito
+ {O sistema não deve cadastrar automaticamente o usuário nas atividades com horários conflitantes em evento.}
+ %Fonte do Requisito
+ {Gusttavo Nunes Gomes}
+ %Local e/ou Reunião
+ {Laboratório 2 do IF Goiano Campus Ceres}
+ %Data
+ {10/10/2017}
+ %Responsável pelo Requisito
+ {Gusttavo Nunes Gomes}
+ %Especificação do Requisito
+ { Ao realizar inscrição em um evento com atividades com horários conflitantes, o sistema não deve inscrever o usuário nas atividades conflitantes por padrão, sendo necessário exibir uma notificação o informando que existe tal conflito, para que essas atividades sejam inscritas manualmente pelo usuário.
  }
