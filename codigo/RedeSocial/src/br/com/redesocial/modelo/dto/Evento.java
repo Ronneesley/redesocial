@@ -1,5 +1,7 @@
 package br.com.redesocial.modelo.dto;
 
+import java.util.Date;
+
 /**
  * Classe que representa os eventos
  * @author Gusttavo Nunes
@@ -21,6 +23,25 @@ public class Evento {
      * Atributo que armazena a descrição do evento
      */
     private String descricao;
+    
+    /**
+     * Função que retorna a data de inicio de um evento
+     * @return data
+     */
+    private Date inicio;
+    
+    /**
+     * Função que retorna a data de final de um evento
+     * @return data
+     */
+    private Date fim;
+    
+    /**
+     * Função que retorna se possui certificado
+     * @return data
+     */
+    private Boolean certificado;
+    
     
     /**
      * Função que retorna o identificador de um evento
@@ -69,4 +90,54 @@ public class Evento {
     public void setDescricao(String descricao){
         this.descricao = descricao;
     }
+    
+    /**
+     * Função que retorna a data de inicio do evento
+     * @return data
+     */
+    public Date getInicio(){
+        return inicio;
+    }
+
+    /**
+     * Função que modifica a data de um evento
+     * @param inicio
+     */
+    public void setInicio(Date inicio){
+        this.inicio = inicio;
+    }
+    
+    /**
+     * Função que retorna a data de fim do evento
+     * @return data
+     */
+    public Date getFim(){
+        return fim;
+    }
+
+    /**
+     * Função que modifica a data de fim um evento
+     * @param fim
+     */
+    public void setFim(Date fim){
+        this.fim = fim;
+    }
+    
+    /**
+     * Função que retorna a data de fim do evento
+     * @return data
+     */
+    public Boolean getCertificado(){
+        return certificado;
+    }
+
+    /**
+     * Função que modifica a existencia de certificado do evento
+     * @param certificado
+     */
+    public void setCertificado(Boolean certificado){
+        this.certificado = certificado;
+    }
+    
+    
 }
