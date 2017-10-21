@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Canvas</title>
+    <meta charset="UTF-8" />
+    <style>
+      #square {
+        border: 1px solid black;
+                transform: scale(10) rotate(3deg) translateX(0px);
+                -moz-transform: scale(10) rotate(3deg) translateX(0px);
+      }
+
+            .box {              
+                transition-duration: 2s;
+                transition-property: transform;
+                transition-timing-function: linear;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="square" width="200" height="200"></canvas>
+    <script>
+            var canvas = document.createElement('canvas');
+            canvas.width = 200;
+            canvas.height = 200;
+
+            var image = new Image();
+            image.src = 'images/card.png';
+            image.width = 114;
+            image.height = 158;
+            image.onload = window.setInterval(function() {
+                rotation();
+            }, 1000/60);
+   </script>
+  </body>
+</html>
