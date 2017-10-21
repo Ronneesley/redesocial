@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>Canvas tutorial</title>
+  </head>
+  <body>
+
+    <!-- Senhoras e Senhores, Apresentandooo, o caaaannvaaasss!!! -->
+    <canvas id="icon"></canvas>
+
+  </body>
+</html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas tutorial</title>
+
+    <script type="text/javascript">
+      function draw(){
+        var canvas = document.getElementById('icon');
+        if (canvas.getContext){
+          var context = canvas.getContext('2d');
+
+          //circulo
+          context.fillStyle = "rgba(241, 178, 21, 0.3)";
+          context.strokeStyle = "blue";
+          context.beginPath();
+          context.arc(64, 64, 64, 0, Math.PI*2, true);
+          context.closePath();
+          context.stroke();
+          context.fill();
+
+
+          //texto
+          context.strokeStyle = "rgba(2, 93, 198, 1)";
+          context.fillStyle = "rgba(2, 93, 198, 0.9)";
+          context.font = 'italic bold 146px sans-serif';
+          context.fillText("✪", 3, 117);//aqui ñ encontrei uma fórmula para x,y e o tamanho da fonte
+
+        }
+      }
+    </script>
+  </head>
+  <body onload="draw();">
+    <canvas id="icon" width="128" height="128"></canvas>
+  </body>
+</html>
