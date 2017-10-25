@@ -106,7 +106,7 @@ public class UsuarioBO extends BOCRUDBase<Usuario, UsuarioDAO> {
 
                 Message message = new MimeMessage(session);
                 message.setFrom(new InternetAddress("testarjavamail@gmail.com"));
-                Address[] toUser = InternetAddress.parse("testarjavamail@gmail.com");  
+                Address[] toUser = InternetAddress.parse(usuarioSelecionado.getEmail());  
                 message.setRecipients(Message.RecipientType.TO, toUser);
                 message.setSubject("Recuperação de Senha - Rede Social");
                 message.setText("Sua nova senha para login no sistema: " + novaSenha);
@@ -119,8 +119,7 @@ public class UsuarioBO extends BOCRUDBase<Usuario, UsuarioDAO> {
             
             usuarioSelecionado.setSenha(novaSenha);
             usuarioDAO.alterarSenha(usuarioSelecionado);
-        }
-        else{
+        } else{
             throw new Exception ("Email não encontrado");
         }
     }
