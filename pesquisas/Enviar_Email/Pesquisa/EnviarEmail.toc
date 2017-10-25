@@ -1,0 +1,5 @@
+\select@language {brazil}
+\contentsline {section}{\numberline {1}Procecimento para recupera\IeC {\c c}\IeC {\~a}o}{2}
+\contentsline {section}{\numberline {2}C\IeC {\'o}digo de exemplo}{2}
+\contentsline {section}{\numberline {3}Explica\IeC {\c c}\IeC {\~a}o do c\IeC {\'o}digo.}{3}
+\contentsline {section}{\numberline {4}Refer\IeC {\^e}ncias}{3}
