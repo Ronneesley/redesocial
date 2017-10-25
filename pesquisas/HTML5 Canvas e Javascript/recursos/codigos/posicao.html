@@ -9,29 +9,29 @@
     </style>
   </head>
   <body>
-    <canvas id="myCanvas" width="578" height="200"></canvas>
+    <canvas id="canvasPosicao" width="578" height="200"></canvas> <!--limite de deteccao-->
     <script>
-      function writeMessage(canvas, message) {
+      function escreverMensagem(canvas, mensagem) {
         var context = canvas.getContext('2d');
         context.clearRect(0, 0, canvas.width, canvas.height);
         context.font = '18pt Calibri';
         context.fillStyle = 'black';
-        context.fillText(message, 10, 25);
+        context.fillText(mensagem, 10, 25);
       }
-      function getMousePos(canvas, evt) {
+      function getPosicao(canvas, evt) {
         var rect = canvas.getBoundingClientRect();
         return {
           x: evt.clientX - rect.left,
           y: evt.clientY - rect.top
         };
       }
-      var canvas = document.getElementById('myCanvas');
+      var canvas = document.getElementById('canvasPosicao');
       var context = canvas.getContext('2d');
 
       canvas.addEventListener('mousemove', function(evt) {
-        var mousePos = getMousePos(canvas, evt);
-        var message = 'Mouse position: ' + mousePos.x + ',' + mousePos.y;
-        writeMessage(canvas, message);
+        var mousePos = getPosicao(canvas, evt);
+        var mensagem = 'Posicao do Mouse : x = ' + mousePos.x + '; y = ' + mousePos.y;
+        escreverMensagem(canvas, mensagem);
       }, false);
     </script>
   </body>

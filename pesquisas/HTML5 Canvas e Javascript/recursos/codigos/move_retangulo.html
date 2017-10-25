@@ -9,7 +9,7 @@
     </style>
   </head>
   <body>
-    <canvas id="myCanvas" width="578" height="200"></canvas>
+    <canvas id="canvasMove" width="578" height="200"></canvas>
     <script>
       window.requestAnimFrame = (function(callback) {
         return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
@@ -18,41 +18,36 @@
         };
       })();
 
-      function drawRectangle(myRectangle, context) {
+      function desenhaRetangulo(retangulo, context) {
         context.beginPath();
-        context.rect(myRectangle.x, myRectangle.y, myRectangle.width, myRectangle.height);
+        context.rect(retangulo.x, retangulo.y, retangulo.width, retangulo.height);
         context.fillStyle = '#8ED6FF';
         context.fill();
-        context.lineWidth = myRectangle.borderWidth;
+        context.lineWidth = retangulo.borderWidth;
         context.strokeStyle = 'black';
         context.stroke();
       }
-      function animate(myRectangle, canvas, context, startTime) {
-        // update
+      function animate(retangulo, canvas, context, startTime) {
         var time = (new Date()).getTime() - startTime;
-
         var linearSpeed = 100;
-        // pixels / second
         var newX = linearSpeed * time / 1000;
 
-        if(newX < canvas.width - myRectangle.width - myRectangle.borderWidth / 2) {
-          myRectangle.x = newX;
+        if(newX < canvas.width - retangulo.width - retangulo.borderWidth / 2) {
+          retangulo.x = newX;
         }
 
-        // clear
         context.clearRect(0, 0, canvas.width, canvas.height);
 
-        drawRectangle(myRectangle, context);
+        desenhaRetangulo(retangulo, context);
 
-        // request new frame
         requestAnimFrame(function() {
-          animate(myRectangle, canvas, context, startTime);
+          animate(retangulo, canvas, context, startTime);
         });
       }
-      var canvas = document.getElementById('myCanvas');
+      var canvas = document.getElementById('canvasMove');
       var context = canvas.getContext('2d');
 
-      var myRectangle = {
+      var retangulo = {
         x: 0,
         y: 75,
         width: 100,
@@ -60,12 +55,11 @@
         borderWidth: 5
       };
 
-      drawRectangle(myRectangle, context);
-
-      // wait one second before starting animation
+      desenhaRetangulo(retangulo, context);
+	  
       setTimeout(function() {
         var startTime = (new Date()).getTime();
-        animate(myRectangle, canvas, context, startTime);
+        animate(retangulo, canvas, context, startTime);
       }, 1000);
     </script>
   </body>
