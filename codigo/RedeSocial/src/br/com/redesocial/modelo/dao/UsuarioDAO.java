@@ -261,4 +261,8 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
         }
         
     }
+
+    public Usuario alterar(String senha) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
