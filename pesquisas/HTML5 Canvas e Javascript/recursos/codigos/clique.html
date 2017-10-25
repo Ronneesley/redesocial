@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvaClique" width="578" height="200"></canvas>
+    <script>
+      window.requestAnimFrame = (function(callback) {
+        return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+        function(callback) {
+          window.setTimeout(callback, 1000 / 60);
+        };
+      })();
+
+      function desenhaRetangulo(retangulo, context) {
+        context.beginPath();
+        context.rect(retangulo.x, retangulo.y, retangulo.width, retangulo.height);
+        context.fillStyle = '#8ED6FF';
+        context.fill();
+        context.lineWidth = retangulo.borderWidth;
+        context.strokeStyle = 'black';
+        context.stroke();
+      }
+      function animate(lastTime, retangulo, runAnimation, canvas, context) {
+        if(runAnimation.value) {
+          var time = (new Date()).getTime();
+          var timeDiff = time - lastTime;
+          var linearSpeed = 100;
+          var linearDistEachFrame = linearSpeed * timeDiff / 1000;
+          var currentX = retangulo.x;
+
+          if(currentX < canvas.width - retangulo.width - retangulo.borderWidth / 2) {
+            var newX = currentX + linearDistEachFrame;
+            retangulo.x = newX;
+          }
+		  
+          context.clearRect(0, 0, canvas.width, canvas.height);          
+          desenhaRetangulo(retangulo, context);
+          requestAnimFrame(function() {
+            animate(time, retangulo, runAnimation, canvas, context);
+          });
+        }
+      }
+      var canvas = document.getElementById('canvaClique');
+      var context = canvas.getContext('2d');
+
+      var retangulo = {
+        x: 0,
+        y: 75,
+        width: 100,
+        height: 50,
+        borderWidth: 5
+      };
+
+     
+      var runAnimation = {
+        value: false
+      };
+      
+      document.getElementById('canvaClique').addEventListener('click', function() {
+        runAnimation.value = !runAnimation.value;
+
+        if(runAnimation.value) {
+          var date = new Date();
+          var time = date.getTime();
+          animate(time, retangulo, runAnimation, canvas, context);
+        }
+      });
+      desenhaRetangulo(retangulo, context);
+
+    </script>
+  </body>
+</html>      
