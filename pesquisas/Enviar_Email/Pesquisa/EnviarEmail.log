@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350) (preloaded format=pdflatex 2017.8.15)  25 OCT 2017 15:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350) (preloaded format=pdflatex 2017.8.15)  25 OCT 2017 16:49
 entering extended mode
 **./EnviarEmail.tex
 (EnviarEmail.tex
@@ -667,16 +667,16 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <9> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 87.
 
 [2]
-LaTeX Font Info:    Try loading font information for U+msa on input line 209.
+LaTeX Font Info:    Try loading font information for U+msa on input line 203.
  ("d:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 209.
+LaTeX Font Info:    Try loading font information for U+msb on input line 203.
 
 ("d:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (59.33195pt too wide) in paragraph at lines 209--210
+Overfull \hbox (59.33195pt too wide) in paragraph at lines 203--204
 []\OT1/cmr/m/n/10 ORACLE. \OT1/cmr/bx/n/10 Ja-va-Mail. \OT1/cmr/m/n/10 Dis-pon
 vel em: $\OML/cmm/m/it/10 <$\OT1/cmr/m/n/10 http://www.oracle.com/technetwork/
 java/javamail/index.html$\OML/cmm/m/it/10 >$\OT1/cmr/m/n/10 .
@@ -684,10 +684,10 @@ java/javamail/index.html$\OML/cmm/m/it/10 >$\OT1/cmr/m/n/10 .
 
 [3] (EnviarEmail.aux) ) 
 Here is how much of TeX's memory you used:
- 5943 strings out of 493323
- 75985 string characters out of 3139069
+ 5940 strings out of 493323
+ 75945 string characters out of 3139069
  269387 words of memory out of 3000000
- 9380 multiletter control sequences out of 15000+200000
+ 9377 multiletter control sequences out of 15000+200000
  7950 words of font info for 31 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,6n,40p,355b,1176s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -698,7 +698,7 @@ Here is how much of TeX's memory you used:
 gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><d:/Program Files/MiKTeX 2
 .9/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on EnviarEmail.pdf (4 pages, 123878 bytes).
+Output written on EnviarEmail.pdf (4 pages, 123237 bytes).
 PDF statistics:
  46 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
