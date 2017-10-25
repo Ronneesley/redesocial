@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.10.25)  25 OCT 2017 18:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.16)  25 OCT 2017 19:06
 entering extended mode
 **./html5_canvas_js.tex
 (html5_canvas_js.tex
@@ -463,7 +463,7 @@ Package: listings 2015/06/04 1.6 (Carsten Heinz)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg"
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
@@ -488,7 +488,7 @@ Package: graphics 2016/07/10 v1.0t Standard LaTeX Graphics (DPC,SPQR)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
@@ -536,7 +536,17 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks23
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-(html5_canvas_js.aux)
+(html5_canvas_js.aux
+
+LaTeX Warning: Label `figura:LogoIF' multiply defined.
+
+
+LaTeX Warning: Label `figura:LogoIF' multiply defined.
+
+
+LaTeX Warning: Label `figura:LogoIF' multiply defined.
+
+)
 \openout1 = `html5_canvas_js.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 133.
@@ -565,7 +575,8 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             Family '?' is the default used for unknown fonts.
 (textcomp)             See the documentation for details.
 Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.def"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.def"
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
@@ -806,7 +817,17 @@ Package pdftex.def Info: recursos/imagens/logo.png used on input line 143.
  [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./recursos/imagens/logo.p
-ng>] (html5_canvas_js.toc)
+ng>] (html5_canvas_js.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 6.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 6.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
 \tf@toc=\write3
 \openout3 = `html5_canvas_js.toc'.
 
@@ -827,43 +848,65 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 5.
  [3]
-LaTeX Font Info:    Try loading font information for U+msa on input line 12.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 12.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 15.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ))
-(recursos/codigos/move_retangulo.html [4]) [5] (recursos/codigos/clique.html
-[6]) [7] (html5_canvas_js.aux) ) 
+(recursos/codigos/move_retangulo.html [4])
+(recursos/codigos/move_retangulo.html) [5]
+<recursos/imagens/moedas.png, id=32, 441.65pt x 40.15pt>
+File: recursos/imagens/moedas.png Graphic file (type png)
+
+<use recursos/imagens/moedas.png>
+Package pdftex.def Info: recursos/imagens/moedas.png used on input line 215.
+(pdftex.def)             Requested size: 227.62204pt x 20.69308pt.
+
+<recursos/imagens/moedas2.png, id=33, 87.32625pt x 76.78688pt>
+File: recursos/imagens/moedas2.png Graphic file (type png)
+
+<use recursos/imagens/moedas2.png>
+Package pdftex.def Info: recursos/imagens/moedas2.png used on input line 221.
+(pdftex.def)             Requested size: 113.81102pt x 100.08069pt.
+
+<recursos/imagens/running.jpg, id=34, 1217.9904pt x 558.888pt>
+File: recursos/imagens/running.jpg Graphic file (type jpg)
+
+<use recursos/imagens/running.jpg>
+Package pdftex.def Info: recursos/imagens/running.jpg used on input line 225.
+(pdftex.def)             Requested size: 256.0748pt x 117.49785pt.
+ (recursos/codigos/clique.html [6 <./recursos/imagens/moedas.png> <./recursos/i
+magens/moedas2.png> <./recursos/imagens/running.jpg>] [7])
+Overfull \hbox (24.40396pt too wide) in paragraph at lines 241--242
+\OT1/cmr/m/n/12 http://www.linhadecodigo.com.br/artigo/3488/entendendo-a-tag-ca
+nvas-no-html-5.aspx 
+ []
+
+[8] (html5_canvas_js.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 6676 strings out of 493333
- 86946 string characters out of 3139193
- 402652 words of memory out of 3000000
- 10071 multiletter control sequences out of 15000+200000
- 8856 words of font info for 33 fonts, out of 3000000 for 9000
+ 6716 strings out of 493334
+ 87619 string characters out of 3139254
+ 444652 words of memory out of 3000000
+ 10099 multiletter control sequences out of 15000+200000
+ 12902 words of font info for 49 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,6n,58p,852b,2225s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Aluno\AppData\Local\MiKTeX\2.9\fonts
-\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pf
-b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on html5_canvas_js.pdf (8 pages, 164268 bytes).
+ <C:\Users\Anjo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\t
+crm1000.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmti12.pfb>
+Output written on html5_canvas_js.pdf (9 pages, 313167 bytes).
 PDF statistics:
- 70 PDF objects out of 1000 (max. 8388607)
+ 77 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
