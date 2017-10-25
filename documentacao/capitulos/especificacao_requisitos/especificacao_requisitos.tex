@@ -407,7 +407,7 @@
  %Identificação do Requisito
  {RF20}
  %Nome do Requisito
- {O sistema deve cadastrar automaticamente o usuário nas atividades do evento.}
+ {O sistema deve inscrever automaticamente o usuário nas atividades do evento.}
  %Fonte do Requisito
  {Gusttavo Nunes Gomes}
  %Local e/ou Reunião
@@ -417,22 +417,7 @@
  %Responsável pelo Requisito
  {Gusttavo Nunes Gomes}
  %Especificação do Requisito
- { Ao realizar inscrição em um evento, o usuário é automaticamente inscrito em suas atividades. A inscrição automática em todas as atividades pode ser alterada posteriormente pelo usuário.
+ { Ao realizar inscrição em um evento, o usuário é automaticamente marcado em todas as atividades, desde que não exista atividades conflitantes. Após as atividades desejadas terem sido marcadas, o usuário deve pressionar o botão de salvar e assim efetivar a inscrição no evento. Atividades conflitantes são quando duas ou mais atividades ocorrem simultaneamente em algum período do evento. Caso atividades conflitantes sejam detectadas, uma notificação deve ser exibida para o usuário informando-o que tal conflito aconteceu, então o usuário deve escolher uma dessas atividades, desmarcando as restantes para prosseguir com a inscrição. 
  }
  
-  \requisitoFuncional
- %Identificação do Requisito
- {RF21}
- %Nome do Requisito
- {O sistema não deve cadastrar automaticamente o usuário nas atividades com horários conflitantes em evento.}
- %Fonte do Requisito
- {Gusttavo Nunes Gomes}
- %Local e/ou Reunião
- {Laboratório 2 do IF Goiano Campus Ceres}
- %Data
- {10/10/2017}
- %Responsável pelo Requisito
- {Gusttavo Nunes Gomes}
- %Especificação do Requisito
- { Ao realizar inscrição em um evento com atividades com horários conflitantes, o sistema não deve inscrever o usuário nas atividades conflitantes por padrão, sendo necessário exibir uma notificação o informando que existe tal conflito, para que essas atividades sejam inscritas manualmente pelo usuário.
- }
+
