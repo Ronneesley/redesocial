@@ -259,6 +259,5 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
         }else{
             return null;
         }
-        
     }
 }

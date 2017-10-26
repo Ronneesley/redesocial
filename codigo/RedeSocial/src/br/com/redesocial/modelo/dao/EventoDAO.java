@@ -122,9 +122,12 @@ public class EventoDAO extends DAOCRUDBase<Evento> {
 
        while (rs.next()){
            Evento p = new Evento();
-           p.setNome(rs.getString("descricao"));
+           p.setDescricao(rs.getString("descricao"));
            p.setNome(rs.getString("nome"));
            p.setId(rs.getInt("id"));
+           p.setCertificado(rs.getBoolean("certificado"));
+           p.setInicio(rs.getDate("inicio"));
+           p.setFim(rs.getDate("fim"));
 
            lista.add(p);
        }

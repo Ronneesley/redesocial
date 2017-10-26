@@ -68,44 +68,59 @@ public class UsuarioBO extends BOCRUDBase<Usuario, UsuarioDAO> {
         UsuarioDAO dao = new UsuarioDAO();
         return dao.selecionarEmail(email);
     }    
-
-    public void gerarSenha(){
+    
+    public String gerarSenha(){
         
         UUID uuid = UUID.randomUUID();  
         String gerarSenha = uuid.toString();  
         String novaSenha = gerarSenha.substring(0,10);   
+        
+        return novaSenha;
     }
     
-    public void enviarSenha(){
+    public void recuperarSenha(String email)throws Exception {
         
-        gerarSenha();
+        Usuario usuarioSelecionado;
         
-        Properties props = new Properties();
-        props.put("mail.smtp.host", "smtp.gmail.com");
-        props.put("mail.smtp.socketFactory.port", "465");
-        props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
-        props.put("mail.smtp.auth", "true");
-        props.put("mail.smtp.port", "465");
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
+        usuarioSelecionado = usuarioDAO.selecionarEmail(email);
+        
+        if (usuarioSelecionado != null){
+        
+            String novaSenha = gerarSenha();
+            
+            Properties props = new Properties();
+            props.put("mail.smtp.host", "smtp.gmail.com");
+            props.put("mail.smtp.socketFactory.port", "465");
+            props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+            props.put("mail.smtp.auth", "true");
+            props.put("mail.smtp.port", "465");
 
-        Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
-            protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication("testarjavamail@gmail.com", "tjm123456");
+            Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
+                protected PasswordAuthentication getPasswordAuthentication() {
+                    return new PasswordAuthentication("testarjavamail@gmail.com", "tjm123456");
+                }
+            });
+            session.setDebug(true);
+            try {
+
+                Message message = new MimeMessage(session);
+                message.setFrom(new InternetAddress("testarjavamail@gmail.com"));
+                Address[] toUser = InternetAddress.parse(usuarioSelecionado.getEmail());  
+                message.setRecipients(Message.RecipientType.TO, toUser);
+                message.setSubject("Recuperação de Senha - Rede Social");
+                message.setText("Sua nova senha para login no sistema: " + novaSenha);
+                Transport.send(message);
+                System.out.println("Feito!!!");
+
+            } catch (MessagingException e) {
+                throw new RuntimeException(e);
             }
-        });
-        session.setDebug(true);
-        try {
-
-            Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress("testarjavamail@gmail.com"));
-            Address[] toUser = InternetAddress.parse("testarjavamail@gmail.com");  
-            message.setRecipients(Message.RecipientType.TO, toUser);
-            message.setSubject("Enviando email com JavaMail");
-            message.setText("Enviei este email utilizando JavaMail com minha conta GMail!");
-            Transport.send(message);
-            System.out.println("Feito!!!");
-                  
-        } catch (MessagingException e) {
-            throw new RuntimeException(e);
+            
+            usuarioSelecionado.setSenha(novaSenha);
+            usuarioDAO.alterarSenha(usuarioSelecionado);
+        } else{
+            throw new Exception ("Email não encontrado");
         }
     }
 }
