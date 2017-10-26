@@ -1,0 +1,210 @@
+\documentclass[14pt, a4paper]{article}
+\usepackage{xcolor}
+% Definindo novas cores
+\definecolor{verde}{rgb}{0.25,0.5,0.35}
+\definecolor{jpurple}{rgb}{0.5,0,0.35}
+% Configurando layout para mostrar codigos Java
+\usepackage{listings}
+\lstset{
+  language=Java,
+  basicstyle=\ttfamily\small, 
+  keywordstyle=\color{jpurple}\bfseries,
+  stringstyle=\color{red},
+  commentstyle=\color{verde},
+  morecomment=[s][\color{blue}]{/**}{*/},
+  extendedchars=true, 
+  showspaces=false, 
+  showstringspaces=false, 
+  numbers=left,
+  numberstyle=\tiny,
+  breaklines=true, 
+  backgroundcolor=\color{cyan!10}, 
+  breakautoindent=true, 
+  captionpos=b,
+  xleftmargin=0pt,
+  tabsize=4
+}
+\pagestyle{empty}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[brazil]{babel}
+\usepackage{indentfirst}
+\usepackage{url}
+
+\RequirePackage{graphicx}
+\title{Class Runtime}
+\author{Eduardo Oliveira Silva \and Jônatas de Souza Rezende \and Lucas Pereira de Azevedo \and Maciele Xavier Rodrigues}
+\usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
+
+\begin{document}
+
+\begin{titlepage}
+
+
+\begin{center}
+\begin{figure}[htb]
+		
+		\label{figura:LogoIF}
+	
+		\centering
+		\includegraphics[width=6cm]{logo.png} 
+\end{figure}
+
+
+Instituto Federal Goiano - Campus Ceres\\
+Bacharelado em Sistemas de Informação\\
+Prof. Me. Ronneesley Moura Teles\\\vspace{0.2cm}
+Eduardo Oliveira Silva \\
+Jônatas de Souza Rezende \\
+Maciele Savier Rodrigues \\
+Lucas Pereira de Azevedo \\\vspace{7.0cm}
+
+\textit{\textbf{\Large{Recuperação de Senha}}}\\\vspace{0.5cm}
+\textit{\textbf{\Large{Enviar e-mail pelo Java}}}\\\vspace{9.5cm}
+
+Outubro\\
+2017\\
+\end{center}
+\end{titlepage}
+
+\tableofcontents
+
+\newpage
+\begin{center}
+\textbf{\Large{Recuperação de Senha - Enviar e-mail pelo Java}}\\\vspace{0.5cm}
+\end{center}
+\section{Procecimento para recuperação}%GGN
+
+Para recuperar a senha geralmente é usado o envio de um e-mail solicitando ao usuário a criação de uma nova senha, nesse e-mail é apresentado um link onde se realmente o usuário solicitou a recuperação da senha deve clicar para que possa ser providenciado a criação e envio de um novo e-mail com a senha provisória.
+
+A forma de enviar e-mail usando o Java se encontra explicada nos capítulos seguintes.
+
+\section{Código de exemplo}%GGN
+
+\begin{lstlisting}
+import java.util.Properties;
+import javax.mail.Address;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+
+public class JavaMailApp
+{
+      public static void main(String[] args) {
+            Properties props = new Properties();
+            props.put("mail.smtp.host", "smtp.gmail.com");
+            props.put("mail.smtp.socketFactory.port", "465");
+            props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+            props.put("mail.smtp.auth", "true");
+            props.put("mail.smtp.port", "465");
+
+            Session session = Session.getDefaultInstance(props,
+                        new javax.mail.Authenticator() {
+                             protected PasswordAuthentication getPasswordAuthentication() 
+                             {
+                                   return new PasswordAuthentication("testarjavamail@gmail.com", "tjm123456");
+                             }
+                        });
+            session.setDebug(true);
+            try {
+
+                  Message message = new MimeMessage(session);
+                  message.setFrom(new InternetAddress("testarjavamail@gmail.com"));
+
+                  Address[] toUser = InternetAddress
+                             .parse("testarjavamail@gmail.com");  
+                  message.setRecipients(Message.RecipientType.TO, toUser);
+                  message.setSubject("Enviando email com JavaMail");
+                  message.setText("Enviei este email utilizando JavaMail com minha conta GMail!");
+                  Transport.send(message);
+                  System.out.println("Feito!!!");
+             } catch (MessagingException e) {
+                  throw new RuntimeException(e);
+            }
+      }
+}
+\end{lstlisting}
+
+\section{Explicação do código.}
+
+\begin{enumerate}
+\item Importações necessárias para a execução do código Java:
+
+\begin{lstlisting}
+import java.util.Properties;
+import javax.mail.Address;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+\end{lstlisting}
+
+\item O objeto \textbf{props} define os parâmetros da conexão com o servidor Gmail.
+
+\begin{lstlisting}
+Properties props = new Properties();
+props.put("mail.smtp.host", "smtp.gmail.com");
+props.put("mail.smtp.socketFactory.port", "465");
+props.put("mail.smtp.socketFactory.class","javax.net.ssl.SSLSocketFactory");
+props.put("mail.smtp.auth", "true");
+props.put("mail.smtp.port", "465");
+\end{lstlisting}
+
+\item O objeto \textbf{session} inicia a sessão para autenticação do usuário remetente do e-mail
+        
+\begin{lstlisting}
+Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
+	protected PasswordAuthentication getPasswordAuthentication()
+	{
+	return new PasswordAuthentication("testarjavamail@gmail.com", "tjm123456");
+    }
+});
+
+\end{lstlisting}
+
+\item Para facilitar o acompanhamento da execução do código é ativado o debug para a sessão.
+
+\begin{lstlisting}          
+session.setDebug(true);
+\end{lstlisting}                
+
+\item O objeto \textbf{message} define as informações do e-mail.
+
+\begin{lstlisting}
+Message message = new MimeMessage(session);
+message.setFrom(new InternetAddress("testarjavamail@gmail.com"));
+Address[] toUser = InternetAddress.parse("testarjavamail@gmail.com");  
+message.setRecipients(Message.RecipientType.TO, toUser);
+message.setSubject("Enviando email com JavaMail");
+message.setText("Enviei este email utilizando JavaMail com minha conta GMail!");
+
+\end{lstlisting}                    
+
+\item Método para enviar a mensagem criada.
+
+\begin{lstlisting}
+Transport.send(message);
+\end{lstlisting}                                        
+
+\end{enumerate}
+
+\section{Referências}
+\begin{enumerate}
+
+\item ORACLE. \textbf{JavaMail.} Disponível em: $<$http://www.oracle.com/technetwork/java/javamail/index.html$>$. Acesso em: 23 de outubro de 2017.
+
+\end{enumerate}
+
+\end{document}
+
+
+\end{document}

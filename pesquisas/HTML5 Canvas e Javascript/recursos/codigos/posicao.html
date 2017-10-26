@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvasPosicao" width="578" height="200"></canvas> <!--limite de deteccao-->
+    <script>
+      function escreverMensagem(canvas, mensagem) {
+        var context = canvas.getContext('2d');
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.font = '18pt Calibri';
+        context.fillStyle = 'black';
+        context.fillText(mensagem, 10, 25);
+      }
+      function getPosicao(canvas, evt) {
+        var rect = canvas.getBoundingClientRect();
+        return {
+          x: evt.clientX - rect.left,
+          y: evt.clientY - rect.top
+        };
+      }
+      var canvas = document.getElementById('canvasPosicao');
+      var context = canvas.getContext('2d');
+
+      canvas.addEventListener('mousemove', function(evt) {
+        var mousePos = getPosicao(canvas, evt);
+        var mensagem = 'Posicao do Mouse : x = ' + mousePos.x + '; y = ' + mousePos.y;
+        escreverMensagem(canvas, mensagem);
+      }, false);
+    </script>
+  </body>
+</html>
+      

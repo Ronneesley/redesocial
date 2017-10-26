@@ -227,4 +227,37 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
             return null;
         }
     } 
+    
+    public Usuario selecionarEmail(String email) throws Exception {
+        
+        Connection conexao = getConexao();
+
+        PreparedStatement  pstmt; 
+        pstmt = conexao.prepareStatement("select * from usuarios where email = ?");
+        pstmt.setString(1, email);
+
+        ResultSet rs;
+        rs = pstmt.executeQuery();
+	
+        MultimidiaDAO multimidiaDAO = new MultimidiaDAO();
+        CidadeDAO cidadeDAO = new CidadeDAO();        
+        
+        if (rs.next()){
+            Usuario u = new Usuario();
+            u.setId(rs.getInt("id"));
+            u.setNome(rs.getString("nome"));
+            u.setEmail(rs.getString("email"));
+            u.setTelefone(rs.getString("telefone"));
+            u.setSenha(rs.getString("senha"));
+            u.setDataNascimento(rs.getDate("data_nascimento"));            
+            u.setSexo(Sexo.getSexo(rs.getString("sexo").charAt(0)));
+            u.setDataCadastro(rs.getDate("data_cadastro"));
+            u.setStatus(rs.getBoolean("status"));
+            u.setFoto(multimidiaDAO.selecionar(rs.getInt("foto")));
+            u.setCidade(cidadeDAO.selecionar(rs.getInt("cidade")));
+            return u;
+        }else{
+            return null;
+        }
+    }
 }
