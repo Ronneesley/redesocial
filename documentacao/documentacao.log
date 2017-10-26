@@ -1,19 +1,20 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.20)  25 OCT 2017 19:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.8.12)  26 OCT 2017 12:57
 entering extended mode
 **./documentacao.tex
 (documentacao.tex
-LaTeX2e <2017-04-15>
-Babel <3.10> and hyphenation patterns for 75 language(s) loaded.
+LaTeX2e <2016/03/31> patch level 1
+Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
 (ifgoiano_ceres_tc_v2.cls
 Document Class: ifgoiano_ceres_tc_v2 24/07/2015
 
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\abntex2\abntex2.cl
-s"
+("C:\Users\gusttavo nunes\AppData\Roaming\MiKTeX\2.9\tex\latex\abntex2\abntex2.
+cls"
 Document Class: abntex2 2016/02/26 v-1.9.6 abnTeX2
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\memoir\memoir.cls"
+("C:\Users\gusttavo nunes\AppData\Roaming\MiKTeX\2.9\tex\latex\memoir\memoir.cl
+s"
 Document Class: memoir 2016/05/16 v3.7f configurable book, report, article docu
 ment class
 \onelineskip=\skip41
@@ -21,21 +22,19 @@ ment class
 \xlvchars=\skip43
 \@memcnta=\count79
 \c@@memmarkcntra=\count80
-
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.s
-ty"
-Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+\l@nohyphenation=\language75
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
 )
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ifetex\ifetex.sty"
+("C:\Users\gusttavo nunes\AppData\Roaming\MiKTeX\2.9\tex\latex\ifetex\ifetex.st
+y"
 Package: ifetex 2011/12/15 v1.2 ifetex
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\plain\ifetex\ifetex.tex"
-))
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.
-sty"
+
+("C:\Users\gusttavo nunes\AppData\Roaming\MiKTeX\2.9\tex\plain\ifetex\ifetex.te
+x")) ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifluate
-x.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -44,7 +43,8 @@ Package ifluatex Info: LuaTeX not detected.
 \trimtop=\skip46
 \trimedge=\skip47
 
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\memoir\mem12.clo"
+("C:\Users\gusttavo nunes\AppData\Roaming\MiKTeX\2.9\tex\latex\memoir\mem12.clo
+"
 File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 )
 \binding=\skip48
@@ -343,27 +343,23 @@ Package tocvsec2 [2008/07/23] emulated by memoir.
 Package verbatim [2008/07/23] emulated by memoir.
 Package verse [2008/07/23] emulated by memoir.
 
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\memoir\mempatch.st
-y"
+("C:\Users\gusttavo nunes\AppData\Roaming\MiKTeX\2.9\tex\latex\memoir\mempatch.
+sty"
 Package: mempatch 2009/07/24 v6.0f Patches for memoir class v1.6180339
 ))
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\textcase\textcase.
-sty"
+("C:\Users\gusttavo nunes\AppData\Roaming\MiKTeX\2.9\tex\latex\textcase\textcas
+e.sty"
 Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
 LaTeX Info: Redefining \MakeTextUppercase on input line 47.
 LaTeX Info: Redefining \MakeTextLowercase on input line 50.
-)
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hyperref.
-sty"
-Package: hyperref 2017/03/14 v6.85a Hypertext links for LaTeX
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+Package: hyperref 2016/05/21 v6.83p Hypertext links for LaTeX
 
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobsub-
-hyperref.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
 
 
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobsub-
-generic.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
 Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
@@ -380,7 +376,7 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -402,65 +398,61 @@ Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 )
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.st
-y"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks22
 )
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\auxhook.s
-ty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvoptions
-.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen147
 \Hy@linkcounter=\count137
 \Hy@pagecounter=\count138
 
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\pd1enc.de
-f"
-File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+File: pd1enc.def 2016/05/21 v6.83p Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count139
 
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\hyperref.
-cfg"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Hyper figures OFF on input line 4498.
-Package hyperref Info: Link nesting OFF on input line 4503.
-Package hyperref Info: Hyper index ON on input line 4506.
-Package hyperref Info: Plain pages OFF on input line 4513.
-Package hyperref Info: Backreferencing OFF on input line 4518.
+Package hyperref Info: Hyper figures OFF on input line 4486.
+Package hyperref Info: Link nesting OFF on input line 4491.
+Package hyperref Info: Hyper index ON on input line 4494.
+Package hyperref Info: Plain pages OFF on input line 4501.
+Package hyperref Info: Backreferencing OFF on input line 4506.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4751.
+Package hyperref Info: Bookmarks ON on input line 4735.
 \c@Hy@tempcnt=\count140
- ("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\url\url.sty"
+
+("C:\Users\gusttavo nunes\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5104.
+LaTeX Info: Redefining \url on input line 5088.
 \XeTeXLinkMargin=\dimen148
 \Fld@menulength=\count141
 \Field@Width=\dimen149
 \Fld@charsize=\dimen150
-Package hyperref Info: Hyper figures OFF on input line 6358.
-Package hyperref Info: Link nesting OFF on input line 6363.
-Package hyperref Info: Hyper index ON on input line 6366.
-Package hyperref Info: backreferencing OFF on input line 6373.
-Package hyperref Info: Link coloring OFF on input line 6378.
-Package hyperref Info: Link coloring with OCG OFF on input line 6383.
-Package hyperref Info: PDF/A mode OFF on input line 6388.
-LaTeX Info: Redefining \ref on input line 6428.
-LaTeX Info: Redefining \pageref on input line 6432.
+Package hyperref Info: Hyper figures OFF on input line 6342.
+Package hyperref Info: Link nesting OFF on input line 6347.
+Package hyperref Info: Hyper index ON on input line 6350.
+Package hyperref Info: backreferencing OFF on input line 6357.
+Package hyperref Info: Link coloring OFF on input line 6362.
+Package hyperref Info: Link coloring with OCG OFF on input line 6367.
+Package hyperref Info: PDF/A mode OFF on input line 6372.
+LaTeX Info: Redefining \ref on input line 6412.
+LaTeX Info: Redefining \pageref on input line 6416.
 \Hy@abspage=\count142
 \c@Item=\count143
 \c@Hfootnote=\count144
 )
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\memoir\memhfixc.st
-y"
+("C:\Users\gusttavo nunes\AppData\Roaming\MiKTeX\2.9\tex\latex\memoir\memhfixc.
+sty"
 Package: memhfixc 2013/05/30 v1.17 nameref/hyperref package fixes for memoir cl
 ass
 \c@memhycontfloat=\count145
@@ -469,61 +461,57 @@ ass
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hpdftex.d
-ef"
-File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+File: hpdftex.def 2016/05/21 v6.83p Hyperref driver for pdfTeX
 \Fld@listcount=\count147
 \c@bookmark@seq@number=\count148
 
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\rerunfile
-check.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip185
 )
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\bookmark.
-sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\bookmark.sty"
 Package: bookmark 2016/05/17 v1.26 PDF bookmarks (HO)
 
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\bkm-pdfte
-x.def"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\bkm-pdftex.def"
 File: bkm-pdftex.def 2016/05/17 v1.26 bookmark driver for pdfTeX (HO)
 \BKM@id=\count149
 ))
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.sty"
-Package: babel 2017/05/19 3.10 The Babel package
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2016/04/23 3.9r The Babel package
+
 *************************************
 * Local config file bblopts.cfg used
 *
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg"
+
+("C:\Users\gusttavo nunes\AppData\Roaming\MiKTeX\2.9\tex\latex\arabi\bblopts.cf
+g"
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-portuges\por
-tuges.ldf"
+("C:\Users\gusttavo nunes\AppData\Roaming\MiKTeX\2.9\tex\latex\babel-portuges\p
+ortuges.ldf"
 Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
-
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.def"
-File: babel.def 2017/05/19 3.10 Babel common definitions
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2016/04/23 3.9r Babel common definitions
 \babel@savecnt=\count150
 \U@D=\dimen151
 )
 \l@brazil = a dialect from \language\l@portuges 
 Package babel Info: Making " an active character on input line 145.
 ))
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\enumitem\enumitem.
-sty"
+("C:\Users\gusttavo nunes\AppData\Roaming\MiKTeX\2.9\tex\latex\enumitem\enumite
+m.sty"
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip186
 \enit@outerparindent=\dimen152
 \enit@toks=\toks23
 \enit@inbox=\box29
 \enitdp@description=\count151
-)
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\calc.sty"
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\calc.sty"
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count152
 \calc@Bcount=\count153
@@ -570,20 +558,20 @@ Sidefootvsep and sidefootheight: 14.5pt and 590.14995pt
 \ABNTEXsignwidth=\skip193
 \ABNTEXsignthickness=\skip194
 \ABNTEXsignskip=\skip256
-) ("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inputenc.st
-y"
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks24
 \inpenc@posthook=\toks25
- ("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
-File: t1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
+File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -795,8 +783,6 @@ File: t1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+0219 (decimal 537)
    defining Unicode char U+021A (decimal 538)
    defining Unicode char U+021B (decimal 539)
-   defining Unicode char U+0232 (decimal 562)
-   defining Unicode char U+0233 (decimal 563)
    defining Unicode char U+1E02 (decimal 7682)
    defining Unicode char U+1E03 (decimal 7683)
    defining Unicode char U+200C (decimal 8204)
@@ -817,14 +803,12 @@ File: t1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+2039 (decimal 8249)
    defining Unicode char U+203A (decimal 8250)
    defining Unicode char U+2423 (decimal 9251)
-   defining Unicode char U+1E20 (decimal 7712)
-   defining Unicode char U+1E21 (decimal 7713)
 )
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
-File: ot1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
+File: ot1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -864,8 +848,8 @@ File: ot1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
-File: omsenc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
+File: omsenc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -890,23 +874,20 @@ Now handling font encoding PD1 ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\backref.s
-ty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\backref.sty"
 Package: backref 2016/05/21 v1.39 Bibliographical back referencing
 )
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\abntex2\abntex2cit
-e.sty"
+("C:\Users\gusttavo nunes\AppData\Roaming\MiKTeX\2.9\tex\latex\abntex2\abntex2c
+ite.sty"
 Package: abntex2cite 2016/02/26 v-1.9.6 abnTeX2
 
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\abntex2\abntex2abr
-ev.sty")
+("C:\Users\gusttavo nunes\AppData\Roaming\MiKTeX\2.9\tex\latex\abntex2\abntex2a
+brev.sty")
 \minimumbiblabelwidth=\skip257
 \ABCIauxlen=\skip258
 \c@ABCIaux=\count163
 \c@ABCImax=\count164
-
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ltxmisc\relsize.st
-y"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\relsize.sty"
 Package: relsize 2003/07/04 ver 3.1
 )
 \biblabelsep=\skip259
@@ -914,34 +895,29 @@ LaTeX Info: Redefining \newblock on input line 591.
 LaTeX Info: Redefining \cite on input line 618.
 \ABCItoken=\toks26
 )
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\cancel\cancel.sty"
+("C:\Users\gusttavo nunes\AppData\Roaming\MiKTeX\2.9\tex\latex\cancel\cancel.st
+y"
 Package: cancel 2013/04/12 v2.2 Cancel math terms
-)
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\indentfirst.
-sty"
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\indentfirst.sty"
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lastpage\lastpage.
-sty"
+("C:\Users\gusttavo nunes\AppData\Roaming\MiKTeX\2.9\tex\latex\lastpage\lastpag
+e.sty"
 Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
-)
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\color.sty
-"
-Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2016/06/02 v1.1d Standard LaTeX Color (DPC)
 
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\color
-.cfg"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
 
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\pdfte
-x.def"
-File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2016/06/17 v0.06h Graphics/color for pdfTeX
 \Gread@gobject=\count165
 ))
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.
-sty"
+("C:\Users\gusttavo nunes\AppData\Roaming\MiKTeX\2.9\tex\latex\fancyhdr\fancyhd
+r.sty"
 Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
 s
 \f@nch@headwidth=\skip260
@@ -953,48 +929,41 @@ s
 \f@nch@O@erf=\skip266
 \f@nch@O@olf=\skip267
 \f@nch@O@orf=\skip268
-)
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.st
-y"
-Package: amsmath 2016/11/05 v2.16a AMS math features
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2016/03/10 v2.15b AMS math features
 \@mathmargin=\skip269
 
 For additional information on amsmath, use the `?' option.
-
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.st
-y"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01 AMS text
 
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
-"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks27
 \ex@=\dimen155
 ))
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
-"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen156
 )
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
-"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count166
-LaTeX Info: Redefining \frac on input line 213.
+LaTeX Info: Redefining \frac on input line 199.
 \uproot@=\count167
 \leftroot@=\count168
-LaTeX Info: Redefining \overline on input line 375.
+LaTeX Info: Redefining \overline on input line 297.
 \classnum@=\count169
 \DOTSCASE@=\count170
-LaTeX Info: Redefining \ldots on input line 472.
-LaTeX Info: Redefining \dots on input line 475.
-LaTeX Info: Redefining \cdots on input line 596.
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
 \Mathstrutbox@=\box30
 \strutbox@=\box31
 \big@size=\dimen157
-LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 \macc@depth=\count171
 \c@MaxMatrixCols=\count172
 \dotsspace@=\muskip11
@@ -1015,23 +984,20 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \multlinegap=\skip270
 \multlinetaggap=\skip271
 \mathdisplay@stack=\toks31
-LaTeX Info: Redefining \[ on input line 2817.
-LaTeX Info: Redefining \] on input line 2818.
+LaTeX Info: Redefining \[ on input line 2739.
+LaTeX Info: Redefining \] on input line 2740.
 )
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.
-sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amssymb.s
-ty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\mathptmx.st
-y"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\mathptmx.sty"
 Package: mathptmx 2005/04/12 PSNFSS-v9.2a Times w/ Math, improved (SPQR, WaS) 
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 28.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -1067,15 +1033,14 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 35.
 LaTeX Info: Redefining \hbar on input line 50.
 )
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\afterpage.st
-y"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\afterpage.sty"
 Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
 \AP@output=\toks32
 \AP@partial=\box32
 \AP@footins=\box33
 )
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\microtyp
-e.sty"
+("C:\Users\gusttavo nunes\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\microt
+ype.sty"
 Package: microtype 2017/07/07 v2.7 Micro-typographical refinements (RS)
 \MT@toks=\toks33
 \MT@count=\count178
@@ -1084,8 +1049,8 @@ LaTeX Info: Redefining \textls on input line 789.
 LaTeX Info: Redefining \textmicrotypecontext on input line 1334.
 \MT@listname@count=\count179
 
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\microtyp
-e-pdftex.def"
+("C:\Users\gusttavo nunes\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\microt
+ype-pdftex.def"
 File: microtype-pdftex.def 2017/07/07 v2.7 Definitions specific to pdftex (RS)
 LaTeX Info: Redefining \lsstyle on input line 912.
 LaTeX Info: Redefining \lslig on input line 912.
@@ -1093,31 +1058,27 @@ LaTeX Info: Redefining \lslig on input line 912.
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\microtyp
-e.cfg"
+("C:\Users\gusttavo nunes\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\microt
+ype.cfg"
 File: microtype.cfg 2017/07/07 v2.7 microtype main configuration file (RS)
 ))
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdfpages\pdfpages.
-sty"
-Package: pdfpages 2017/08/14 v0.5k Insert pages of external PDF documents (AM)
+("C:\Users\gusttavo nunes\AppData\Roaming\MiKTeX\2.9\tex\latex\pdfpages\pdfpage
+s.sty"
+Package: pdfpages 2017/07/14 v0.5j Insert pages of external PDF documents (AM)
 
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.st
-y"
-Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
-)
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.
+("C:\Users\gusttavo nunes\AppData\Roaming\MiKTeX\2.9\tex\latex\eso-pic\eso-pic.
 sty"
+Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.
-sty"
-Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2016/06/02 v1.0s Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\graph
-ics.cfg"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
@@ -1128,18 +1089,16 @@ Package graphics Info: Driver file: pdftex.def on input line 99.
 \AM@pagewidth=\dimen167
 \AM@pageheight=\dimen168
 
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdfpages\pppdftex.
-def"
-File: pppdftex.def 2017/08/14 v0.5k Pdfpages driver for pdfTeX (AM)
+("C:\Users\gusttavo nunes\AppData\Roaming\MiKTeX\2.9\tex\latex\pdfpages\pppdfte
+x.def"
+File: pppdftex.def 2017/07/14 v0.5j Pdfpages driver for pdfTeX (AM)
 )
 \AM@pagebox=\box34
 \AM@global@opts=\toks34
 \AM@toc@title=\toks35
 \c@AM@survey=\count180
 \AM@templatesizebox=\box35
-)
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.
-sty"
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@cnth=\count181
 \Gm@cntv=\count182
@@ -1154,16 +1113,15 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@layoutvoffset=\dimen176
 \Gm@dimlist=\toks36
 
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.
-cfg"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
 \documentacao@idxfile=\write4
 \openout4 = `documentacao.idx'.
 
 
 Writing index file documentacao.idx 
 )
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\colortbl\colortbl.
-sty"
+("C:\Users\gusttavo nunes\AppData\Roaming\MiKTeX\2.9\tex\latex\colortbl\colortb
+l.sty"
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 \everycr=\toks37
 \minrowclearance=\skip273
@@ -1194,12 +1152,10 @@ LaTeX Font Info:    ... okay on input line 29.
 \AtBeginShipoutBox=\box36
 Package hyperref Info: Link coloring ON on input line 29.
 
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.s
-ty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\gettitl
-estring.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count184
@@ -1216,8 +1172,8 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
 (lastpage)             ! on input line 29.
 
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mk
-ii"
+("C:\Users\gusttavo nunes\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.
+mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count185
 \scratchdimen=\dimen177
@@ -1230,13 +1186,10 @@ ii"
 \MPnumerator=\count189
 \makeMPintoPDFobject=\count190
 \everyMPtoPDFconversion=\toks39
-)
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-
-base.sty"
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.st
-y"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 )
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1261,12 +1214,10 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\pdflscape
-.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.sty"
 Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
 
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\lscape.st
-y"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\lscape.sty"
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
@@ -1308,9 +1259,7 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 (preambulo.tex
 LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 3.
 
-
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ot1ztmcm.fd
-"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ztmcm.fd"
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1319,43 +1268,38 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 3.
 
-
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\omlztmcm.fd
-"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omlztmcm.fd"
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 3.
 
 
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\omsztmcm.fd
-"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsztmcm.fd"
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 3.
 
 
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\omxztmcm.fd
-"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omxztmcm.fd"
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\mt-msa.c
-fg"
+("C:\Users\gusttavo nunes\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\mt-msa
+.cfg"
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\mt-msb.c
-fg"
+("C:\Users\gusttavo nunes\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\mt-msb
+.cfg"
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 3.
-
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
 
-("C:\Users\macil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\mt-ptm.c
-fg"
+("C:\Users\gusttavo nunes\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\mt-ptm
+.cfg"
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
@@ -1364,9 +1308,9 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
  [1
 
-{C:/Users/macil/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]pdfTeX warni
-ng (ext4): destination with the same identifier (name{page.1}) has been already
- used, duplicate ignored
+{C:/Users/gusttavo nunes/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]pdf
+TeX warning (ext4): destination with the same identifier (name{page.1}) has bee
+n already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.6 
@@ -1701,23 +1645,10 @@ Overfull \hbox (12.79996pt too wide) in paragraph at lines 421--421
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-Overfull \hbox (0.66896pt too wide) in paragraph at lines 438--438
-[]|\OT1/cmss/m/n/12 (-20) 10/10/2017| 
- []
-
-
-Overfull \hbox (12.79996pt too wide) in paragraph at lines 438--438
-[][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 ) (capitulos/prototipos/prototipos.tex [12
 
 ] [13] [14] [15] [16] [17] [18]
-[19] <../prototipos/resultados/login.png, id=270, 867.24pt x 480.79625pt>
+[19] <../prototipos/resultados/login.png, id=273, 867.24pt x 480.79625pt>
 File: ../prototipos/resultados/login.png Graphic file (type png)
 
 <use ../prototipos/resultados/login.png>
@@ -1725,7 +1656,7 @@ Package pdftex.def Info: ../prototipos/resultados/login.png used on input line
 5.
 (pdftex.def)             Requested size: 426.79134pt x 236.61197pt.
 
-<../prototipos/resultados/cadastro_usuario_parte2.png, id=273, 789.70032pt x 61
+<../prototipos/resultados/cadastro_usuario_parte2.png, id=276, 789.70032pt x 61
 3.54219pt>
 File: ../prototipos/resultados/cadastro_usuario_parte2.png Graphic file (type p
 ng)
@@ -1734,7 +1665,7 @@ Package pdftex.def Info: ../prototipos/resultados/cadastro_usuario_parte2.png u
 sed on input line 9.
 (pdftex.def)             Requested size: 369.88582pt x 287.37251pt.
 
-<../prototipos/resultados/cadastro_usuario_parte3.png, id=275, 442.65375pt x 33
+<../prototipos/resultados/cadastro_usuario_parte3.png, id=278, 442.65375pt x 33
 1.99031pt>
 File: ../prototipos/resultados/cadastro_usuario_parte3.png Graphic file (type p
 ng)
@@ -1743,7 +1674,7 @@ Package pdftex.def Info: ../prototipos/resultados/cadastro_usuario_parte3.png u
 sed on input line 13.
 (pdftex.def)             Requested size: 455.24408pt x 341.45232pt.
 
-<../prototipos/resultados/cadastro_usuario_parte4.png, id=277, 571.38469pt x 31
+<../prototipos/resultados/cadastro_usuario_parte4.png, id=280, 571.38469pt x 31
 8.43968pt>
 File: ../prototipos/resultados/cadastro_usuario_parte4.png Graphic file (type p
 ng)
@@ -1752,7 +1683,7 @@ Package pdftex.def Info: ../prototipos/resultados/cadastro_usuario_parte4.png u
 sed on input line 17.
 (pdftex.def)             Requested size: 455.24408pt x 253.71227pt.
 
-<../prototipos/resultados/perfil.png, id=279, 1208.515pt x 1940.24875pt>
+<../prototipos/resultados/perfil.png, id=282, 1208.515pt x 1940.24875pt>
 File: ../prototipos/resultados/perfil.png Graphic file (type png)
 
 <use ../prototipos/resultados/perfil.png>
@@ -1763,7 +1694,7 @@ Package pdftex.def Info: ../prototipos/resultados/perfil.png used on input line
 
 LaTeX Warning: Float too large for page by 4.99626pt on input line 21.
 
-<../prototipos/resultados/postagem.png, id=281, 687.56876pt x 395.4775pt>
+<../prototipos/resultados/postagem.png, id=284, 687.56876pt x 395.4775pt>
 File: ../prototipos/resultados/postagem.png Graphic file (type png)
 
 <use ../prototipos/resultados/postagem.png>
@@ -1771,7 +1702,7 @@ Package pdftex.def Info: ../prototipos/resultados/postagem.png used on input li
 ne 25.
 (pdftex.def)             Requested size: 426.79134pt x 245.48317pt.
 
-<../prototipos/resultados/meus_posts.png, id=283, 753.41475pt x 339.06676pt>
+<../prototipos/resultados/meus_posts.png, id=286, 753.41475pt x 339.06676pt>
 File: ../prototipos/resultados/meus_posts.png Graphic file (type png)
 
 <use ../prototipos/resultados/meus_posts.png>
@@ -1784,7 +1715,7 @@ Overfull \hbox (85.35825pt too wide) in paragraph at lines 29--29
  []
 
 
-<../prototipos/resultados/chat_ativos_e_inativos.png, id=285, 277.035pt x 422.3
+<../prototipos/resultados/chat_ativos_e_inativos.png, id=288, 277.035pt x 422.3
 2782pt>
 File: ../prototipos/resultados/chat_ativos_e_inativos.png Graphic file (type pn
 g)
@@ -1795,7 +1726,7 @@ ed on input line 33.
  [20
 
  <../prototipos/resultados/login.png>]
-<../prototipos/resultados/mensagens.png, id=292, 302.12875pt x 347.2975pt>
+<../prototipos/resultados/mensagens.png, id=295, 302.12875pt x 347.2975pt>
 File: ../prototipos/resultados/mensagens.png Graphic file (type png)
 
 <use ../prototipos/resultados/mensagens.png>
@@ -1803,7 +1734,7 @@ Package pdftex.def Info: ../prototipos/resultados/mensagens.png used on input l
 ine 37.
 (pdftex.def)             Requested size: 284.52756pt x 327.06381pt.
 
-<../prototipos/resultados/prototipo_recuperacao_senha.png, id=294, 339.2675pt x
+<../prototipos/resultados/prototipo_recuperacao_senha.png, id=297, 339.2675pt x
  200.75pt>
 File: ../prototipos/resultados/prototipo_recuperacao_senha.png Graphic file (ty
 pe png)
@@ -1812,7 +1743,7 @@ Package pdftex.def Info: ../prototipos/resultados/prototipo_recuperacao_senha.p
 ng used on input line 41.
 (pdftex.def)             Requested size: 426.79134pt x 252.55116pt.
 
-<../prototipos/resultados/galeria_fotos.png, id=296, 1255.69125pt x 565.11125pt
+<../prototipos/resultados/galeria_fotos.png, id=299, 1255.69125pt x 565.11125pt
 >
 File: ../prototipos/resultados/galeria_fotos.png Graphic file (type png)
  <use ../prototipos/resultados/galeria_fotos.png>
@@ -1825,7 +1756,7 @@ Overfull \hbox (85.35825pt too wide) in paragraph at lines 45--45
  []
 
 
-<../prototipos/resultados/solicitacao_amizade.png, id=298, 229.85875pt x 41.153
+<../prototipos/resultados/solicitacao_amizade.png, id=301, 229.85875pt x 41.153
 75pt>
 File: ../prototipos/resultados/solicitacao_amizade.png Graphic file (type png)
  <use ../prototipos/resultados/solicitacao_amizade.png>
@@ -1833,7 +1764,7 @@ Package pdftex.def Info: ../prototipos/resultados/solicitacao_amizade.png used
 on input line 49.
 (pdftex.def)             Requested size: 284.52756pt x 50.9447pt.
 
-<../prototipos/resultados/entrar_grupo.png, id=300, 545.03625pt x 276.03125pt>
+<../prototipos/resultados/entrar_grupo.png, id=303, 545.03625pt x 276.03125pt>
 File: ../prototipos/resultados/entrar_grupo.png Graphic file (type png)
 
 <use ../prototipos/resultados/entrar_grupo.png>
@@ -1841,7 +1772,7 @@ Package pdftex.def Info: ../prototipos/resultados/entrar_grupo.png used on inpu
 t line 53.
 (pdftex.def)             Requested size: 426.79134pt x 216.14587pt.
 
-<../prototipos/resultados/criar_grupo.png, id=302, 725.71124pt x 395.4775pt>
+<../prototipos/resultados/criar_grupo.png, id=305, 725.71124pt x 395.4775pt>
 File: ../prototipos/resultados/criar_grupo.png Graphic file (type png)
 
 <use ../prototipos/resultados/criar_grupo.png>
@@ -1849,7 +1780,7 @@ Package pdftex.def Info: ../prototipos/resultados/criar_grupo.png used on input
  line 57.
 (pdftex.def)             Requested size: 426.79134pt x 232.58745pt.
 
-<../prototipos/resultados/denunciar_grupo.png, id=304, 546.04pt x 317.185pt>
+<../prototipos/resultados/denunciar_grupo.png, id=307, 546.04pt x 317.185pt>
 File: ../prototipos/resultados/denunciar_grupo.png Graphic file (type png)
 
 <use ../prototipos/resultados/denunciar_grupo.png>
@@ -1857,7 +1788,7 @@ Package pdftex.def Info: ../prototipos/resultados/denunciar_grupo.png used on i
 nput line 61.
 (pdftex.def)             Requested size: 426.79134pt x 247.9163pt.
 
-<../prototipos/resultados/opcoes_grupo.png, id=306, 545.03625pt x 301.125pt>
+<../prototipos/resultados/opcoes_grupo.png, id=309, 545.03625pt x 301.125pt>
 File: ../prototipos/resultados/opcoes_grupo.png Graphic file (type png)
 
 <use ../prototipos/resultados/opcoes_grupo.png>
@@ -1870,7 +1801,7 @@ LaTeX Warning: Text page 22 contains only floats.
 
 [22 <../prototipos/resultados/cadastro_usuario_parte3.png> <../prototipos/resul
 tados/cadastro_usuario_parte4.png>]
-<../prototipos/resultados/cadastro_artigos.png, id=319, 727.71875pt x 749.80125
+<../prototipos/resultados/cadastro_artigos.png, id=322, 727.71875pt x 749.80125
 pt>
 File: ../prototipos/resultados/cadastro_artigos.png Graphic file (type png)
  <use ../prototipos/resultados/cadastro_artigos.png>
@@ -1878,7 +1809,7 @@ Package pdftex.def Info: ../prototipos/resultados/cadastro_artigos.png used on
 input line 69.
 (pdftex.def)             Requested size: 426.79134pt x 439.75891pt.
 
-<../prototipos/resultados/sair_grupo.png, id=321, 545.03625pt x 162.6075pt>
+<../prototipos/resultados/sair_grupo.png, id=324, 545.03625pt x 162.6075pt>
 File: ../prototipos/resultados/sair_grupo.png Graphic file (type png)
 
 <use ../prototipos/resultados/sair_grupo.png>
@@ -1886,7 +1817,7 @@ Package pdftex.def Info: ../prototipos/resultados/sair_grupo.png used on input
 line 73.
 (pdftex.def)             Requested size: 426.79134pt x 127.32957pt.
 
-<../prototipos/resultados/painel_final.png, id=323, 1877.0125pt x 921.4425pt>
+<../prototipos/resultados/painel_final.png, id=326, 1877.0125pt x 921.4425pt>
 File: ../prototipos/resultados/painel_final.png Graphic file (type png)
 
 <use ../prototipos/resultados/painel_final.png>
@@ -1894,7 +1825,7 @@ Package pdftex.def Info: ../prototipos/resultados/painel_final.png used on inpu
 t line 77.
 (pdftex.def)             Requested size: 426.79134pt x 209.50899pt.
 
-<../prototipos/resultados/Seus_Albuns.png, id=325, 1255.69125pt x 565.11125pt>
+<../prototipos/resultados/Seus_Albuns.png, id=328, 1255.69125pt x 565.11125pt>
 File: ../prototipos/resultados/Seus_Albuns.png Graphic file (type png)
 
 <use ../prototipos/resultados/Seus_Albuns.png>
@@ -1902,7 +1833,7 @@ Package pdftex.def Info: ../prototipos/resultados/Seus_Albuns.png used on input
  line 81.
 (pdftex.def)             Requested size: 426.79134pt x 192.0663pt.
 
-<../prototipos/resultados/Suas_fotos.png, id=327, 1255.69125pt x 565.11125pt>
+<../prototipos/resultados/Suas_fotos.png, id=330, 1255.69125pt x 565.11125pt>
 File: ../prototipos/resultados/Suas_fotos.png Graphic file (type png)
 
 <use ../prototipos/resultados/Suas_fotos.png>
@@ -2097,7 +2028,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ] [34] [35] [36] [37] [38] [39] [40]
 [41] [42] [43] [44] [45] [46] [47]
-<../banco_de_dados/redesocial.png, id=463, 1453.43pt x 1390.19376pt>
+<../banco_de_dados/redesocial.png, id=465, 1453.43pt x 1390.19376pt>
 File: ../banco_de_dados/redesocial.png Graphic file (type png)
 
 <use ../banco_de_dados/redesocial.png>
@@ -2108,7 +2039,7 @@ Package pdftex.def Info: ../banco_de_dados/redesocial.png used on input line 15
 
 ]
 <../documentacao/capitulos/projeto/diagramas/multimidia_album_classdiagram.png,
- id=470, 529.98pt x 294.34969pt>
+ id=472, 529.98pt x 294.34969pt>
 File: ../documentacao/capitulos/projeto/diagramas/multimidia_album_classdiagram
 .png Graphic file (type png)
 
@@ -2148,28 +2079,27 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 45.
  ) 
 Here is how much of TeX's memory you used:
- 15108 strings out of 493323
- 227817 string characters out of 3130014
- 500298 words of memory out of 3000000
- 18129 multiletter control sequences out of 15000+200000
- 19389 words of font info for 94 fonts, out of 3000000 for 9000
+ 15064 strings out of 493335
+ 225381 string characters out of 3136651
+ 497736 words of memory out of 3000000
+ 18076 multiletter control sequences out of 15000+200000
+ 19456 words of font info for 95 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,12n,45p,946b,546s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{table.5.25} has been referenced but does not exis
+ 45i,12n,45p,946b,546s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{table.5.39} has been referenced but does not exis
 t, replaced by a fixed one
 
-pdfTeX warning (dest): name{table.5.24} has been referenced but does not exist,
+pdfTeX warning (dest): name{table.3.25} has been referenced but does not exist,
  replaced by a fixed one
 
-<C:/Users/macil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmss12.pfb><C:/Users/macil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmss9.pfb><C:/Users/macil/AppData/Local/Programs/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/macil/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/Users/macil/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on documentacao.pdf (51 pages, 1932106 bytes).
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss9.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on documentacao.pdf (51 pages, 1974292 bytes).
 PDF statistics:
- 601 PDF objects out of 1000 (max. 8388607)
- 141 named destinations out of 1000 (max. 500000)
+ 603 PDF objects out of 1000 (max. 8388607)
+ 140 named destinations out of 1000 (max. 500000)
  12084 words of extra memory for PDF output out of 14400 (max. 10000000)
 
