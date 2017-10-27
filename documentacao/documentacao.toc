@@ -14,9 +14,9 @@
 \contentsline {section}{\numberline {3.1}Requisitos n\IeC {\~a}o funcionais}{12}{section.3.1}
 \contentsline {section}{\numberline {3.2}Requisitos funcionais}{12}{section.3.2}
 \contentsline {chapter}{\chapternumberline {4} \MakeTextUppercase {Prot\IeC {\'o}tipos} }{20}{chapter.4}
-\contentsline {chapter}{\chapternumberline {5} \MakeTextUppercase {Casos de Uso} }{34}{chapter.5}
-\contentsline {chapter}{\chapternumberline {6} \MakeTextUppercase {Projeto} }{49}{chapter.6}
-\contentsline {section}{\numberline {6.1}Diagrama Entidade e Relacionamento (DER)}{49}{section.6.1}
-\contentsline {section}{\numberline {6.2}Diagrama de Classes}{51}{section.6.2}
-\contentsline {section}{\numberline {6.3}Diagramas de Sequ\IeC {\^e}ncia}{55}{section.6.3}
-\contentsline {section}{\numberline {6.4}Diagrama de Implanta\IeC {\c c}\IeC {\~a}o}{55}{section.6.4}
+\contentsline {chapter}{\chapternumberline {5} \MakeTextUppercase {Casos de Uso} }{33}{chapter.5}
+\contentsline {chapter}{\chapternumberline {6} \MakeTextUppercase {Projeto} }{48}{chapter.6}
+\contentsline {section}{\numberline {6.1}Diagrama Entidade e Relacionamento (DER)}{48}{section.6.1}
+\contentsline {section}{\numberline {6.2}Diagrama de Classes}{49}{section.6.2}
+\contentsline {section}{\numberline {6.3}Diagramas de Sequ\IeC {\^e}ncia}{53}{section.6.3}
+\contentsline {section}{\numberline {6.4}Diagrama de Implanta\IeC {\c c}\IeC {\~a}o}{53}{section.6.4}

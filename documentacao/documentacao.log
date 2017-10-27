@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.8.12)  27 OCT 2017 14:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.8.12)  27 OCT 2017 15:03
 entering extended mode
 **./documentacao.tex
 (documentacao.tex
@@ -1125,7 +1125,7 @@ l.sty"
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 \everycr=\toks37
 \minrowclearance=\skip273
-) (requisitos.sty) (caso_de_uso.sty) (figura.sty)
+) (requisitos.sty) (caso_de_uso.sty) (figura.sty) (figuraH.sty)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count184
@@ -1134,33 +1134,39 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks39
 \@floatcapt=\box37
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 26.
+Package hyperref Info: Option `colorlinks' set `true' on input line 27.
 
 
 LaTeX Warning: Unused global option(s):
     [section=Title,subsection=Title,english,brazilian].
 
-(documentacao.aux)
+(documentacao.aux
+
+LaTeX Warning: Label `figura:_' multiply defined.
+
+
+LaTeX Warning: Label `figura:_' multiply defined.
+
+)
 \openout1 = `documentacao.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
 \AtBeginShipoutBox=\box38
-Package hyperref Info: Link coloring ON on input line 30.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+Package hyperref Info: Link coloring ON on input line 31.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
@@ -1170,15 +1176,15 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 30.
-LaTeX Info: Redefining \ref on input line 30.
-LaTeX Info: Redefining \pageref on input line 30.
-LaTeX Info: Redefining \nameref on input line 30.
+LaTeX Info: Redefining \nameref on input line 31.
+LaTeX Info: Redefining \ref on input line 31.
+LaTeX Info: Redefining \pageref on input line 31.
+LaTeX Info: Redefining \nameref on input line 31.
 \myptabbox=\box39
 \myptabboxwidth=\skip274
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 30.
+(lastpage)             ! on input line 31.
 
 ("C:\Users\gusttavo nunes\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.
 mkii"
@@ -1207,7 +1213,7 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-LaTeX Info: Redefining \microtypecontext on input line 30.
+LaTeX Info: Redefining \microtypecontext on input line 31.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1816,16 +1822,8 @@ ng)
 Package pdftex.def Info: ../prototipos/resultados/cadastro_usuario_parte2.png u
 sed on input line 9.
 (pdftex.def)             Requested size: 369.88582pt x 287.37251pt.
- [20
 
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) 
-has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.10 
-      <../prototipos/resultados/login.png>]
-<../prototipos/resultados/cadastro_usuario_parte3.png, id=288, 442.65375pt x 33
+<../prototipos/resultados/cadastro_usuario_parte3.png, id=283, 442.65375pt x 33
 1.99031pt>
 File: ../prototipos/resultados/cadastro_usuario_parte3.png Graphic file (type p
 ng)
@@ -1833,14 +1831,8 @@ ng)
 Package pdftex.def Info: ../prototipos/resultados/cadastro_usuario_parte3.png u
 sed on input line 13.
 (pdftex.def)             Requested size: 455.24408pt x 341.45232pt.
- [21pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
-2}) has been already used, duplicate ignored
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.14 
-      <../prototipos/resultados/cadastro_usuario_parte2.png>]
-<../prototipos/resultados/cadastro_usuario_parte4.png, id=295, 571.38469pt x 31
+<../prototipos/resultados/cadastro_usuario_parte4.png, id=285, 571.38469pt x 31
 8.43968pt>
 File: ../prototipos/resultados/cadastro_usuario_parte4.png Graphic file (type p
 ng)
@@ -1848,38 +1840,19 @@ ng)
 Package pdftex.def Info: ../prototipos/resultados/cadastro_usuario_parte4.png u
 sed on input line 17.
 (pdftex.def)             Requested size: 455.24408pt x 253.71227pt.
- [22pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
-3}) has been already used, duplicate ignored
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.18 
-      <../prototipos/resultados/cadastro_usuario_parte3.png>]
-<../prototipos/resultados/perfil.png, id=302, 1208.515pt x 1940.24875pt>
+<../prototipos/resultados/perfil.png, id=287, 1208.515pt x 1940.24875pt>
 File: ../prototipos/resultados/perfil.png Graphic file (type png)
 
 <use ../prototipos/resultados/perfil.png>
 Package pdftex.def Info: ../prototipos/resultados/perfil.png used on input line
  21.
 (pdftex.def)             Requested size: 426.79134pt x 685.19603pt.
- [23pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
-4}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.22 
-      <../prototipos/resultados/cadastro_usuario_parte4.png>]
-Overfull \vbox (4.99626pt too high) has occurred while \output is active []
 
 
-[24pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5
-}) has been already used, duplicate ignored
+LaTeX Warning: Float too large for page by 4.99626pt on input line 21.
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.22 
-      <../prototipos/resultados/perfil.png>]
-<../prototipos/resultados/postagem.png, id=315, 687.56876pt x 395.4775pt>
+<../prototipos/resultados/postagem.png, id=289, 687.56876pt x 395.4775pt>
 File: ../prototipos/resultados/postagem.png Graphic file (type png)
 
 <use ../prototipos/resultados/postagem.png>
@@ -1887,7 +1860,7 @@ Package pdftex.def Info: ../prototipos/resultados/postagem.png used on input li
 ne 25.
 (pdftex.def)             Requested size: 426.79134pt x 245.48317pt.
 
-<../prototipos/resultados/meus_posts.png, id=317, 753.41475pt x 339.06676pt>
+<../prototipos/resultados/meus_posts.png, id=291, 753.41475pt x 339.06676pt>
 File: ../prototipos/resultados/meus_posts.png Graphic file (type png)
 
 <use ../prototipos/resultados/meus_posts.png>
@@ -1900,7 +1873,7 @@ Overfull \hbox (85.35825pt too wide) in paragraph at lines 29--29
  []
 
 
-<../prototipos/resultados/chat_ativos_e_inativos.png, id=319, 277.035pt x 422.3
+<../prototipos/resultados/chat_ativos_e_inativos.png, id=293, 277.035pt x 422.3
 2782pt>
 File: ../prototipos/resultados/chat_ativos_e_inativos.png Graphic file (type pn
 g)
@@ -1908,35 +1881,25 @@ g)
 Package pdftex.def Info: ../prototipos/resultados/chat_ativos_e_inativos.png us
 ed on input line 33.
 (pdftex.def)             Requested size: 284.52756pt x 433.75233pt.
- [25pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
-6}) has been already used, duplicate ignored
+ [20
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) 
+has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.34 
-     pdfTeX warning (ext4): destination with the same identifier (name{figure.4
-.7}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.34 
-      <../prototipos/resultados/postagem.png> <../prototipos/resultados/meus_po
-sts.png>]
-<../prototipos/resultados/mensagens.png, id=327, 302.12875pt x 347.2975pt>
+l.33 ...tipo de chat de amigos ativos e inativos.}
+                                                   <../prototipos/resultados/lo
+gin.png>]
+<../prototipos/resultados/mensagens.png, id=300, 302.12875pt x 347.2975pt>
 File: ../prototipos/resultados/mensagens.png Graphic file (type png)
 
 <use ../prototipos/resultados/mensagens.png>
 Package pdftex.def Info: ../prototipos/resultados/mensagens.png used on input l
 ine 37.
 (pdftex.def)             Requested size: 284.52756pt x 327.06381pt.
- [26pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
-8}) has been already used, duplicate ignored
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.38 
-      <../prototipos/resultados/chat_ativos_e_inativos.png>]
-<../prototipos/resultados/prototipo_recuperacao_senha.png, id=334, 339.2675pt x
+<../prototipos/resultados/prototipo_recuperacao_senha.png, id=302, 339.2675pt x
  200.75pt>
 File: ../prototipos/resultados/prototipo_recuperacao_senha.png Graphic file (ty
 pe png)
@@ -1945,21 +1908,7 @@ Package pdftex.def Info: ../prototipos/resultados/prototipo_recuperacao_senha.p
 ng used on input line 41.
 (pdftex.def)             Requested size: 426.79134pt x 252.55116pt.
 
-[27pdfTeX warning (ext4): destination with the same identifier (name{figure.4.9
-}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.44 
-     pdfTeX warning (ext4): destination with the same identifier (name{figure.4
-.10}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.44 
-      <../prototipos/resultados/mensagens.png> <../prototipos/resultados/protot
-ipo_recuperacao_senha.png>]
-<../prototipos/resultados/galeria_fotos.png, id=342, 1255.69125pt x 565.11125pt
+<../prototipos/resultados/galeria_fotos.png, id=304, 1255.69125pt x 565.11125pt
 >
 File: ../prototipos/resultados/galeria_fotos.png Graphic file (type png)
  <use ../prototipos/resultados/galeria_fotos.png>
@@ -1972,7 +1921,7 @@ Overfull \hbox (85.35825pt too wide) in paragraph at lines 45--45
  []
 
 
-<../prototipos/resultados/solicitacao_amizade.png, id=344, 229.85875pt x 41.153
+<../prototipos/resultados/solicitacao_amizade.png, id=306, 229.85875pt x 41.153
 75pt>
 File: ../prototipos/resultados/solicitacao_amizade.png Graphic file (type png)
  <use ../prototipos/resultados/solicitacao_amizade.png>
@@ -1980,7 +1929,7 @@ Package pdftex.def Info: ../prototipos/resultados/solicitacao_amizade.png used
 on input line 49.
 (pdftex.def)             Requested size: 284.52756pt x 50.9447pt.
 
-<../prototipos/resultados/aceitar_amizade.png, id=346, 1811.76875pt x 878.28125
+<../prototipos/resultados/aceitar_amizade.png, id=308, 1811.76875pt x 878.28125
 pt>
 File: ../prototipos/resultados/aceitar_amizade.png Graphic file (type png)
  <use ../prototipos/resultados/aceitar_amizade.png>
@@ -1988,37 +1937,15 @@ Package pdftex.def Info: ../prototipos/resultados/aceitar_amizade.png used on i
 nput line 53.
 (pdftex.def)             Requested size: 284.52756pt x 137.92798pt.
 
-<../prototipos/resultados/entrar_grupo.png, id=348, 545.03625pt x 276.03125pt>
+<../prototipos/resultados/entrar_grupo.png, id=310, 545.03625pt x 276.03125pt>
 File: ../prototipos/resultados/entrar_grupo.png Graphic file (type png)
 
 <use ../prototipos/resultados/entrar_grupo.png>
 Package pdftex.def Info: ../prototipos/resultados/entrar_grupo.png used on inpu
 t line 57.
 (pdftex.def)             Requested size: 426.79134pt x 216.14587pt.
- [28pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
-11}) has been already used, duplicate ignored
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.57 ...upo.png}{Protótipo para entrar em grupo.}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{figure.4.12}) has been already used, dupli
-cate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.57 ...upo.png}{Protótipo para entrar em grupo.}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{figure.4.13}) has been already used, dupli
-cate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.57 ...upo.png}{Protótipo para entrar em grupo.}
-                                                   <../prototipos/resultados/ga
-leria_fotos.png> <../prototipos/resultados/solicitacao_amizade.png> <../prototi
-pos/resultados/aceitar_amizade.png>]
-<../prototipos/resultados/criar_grupo.png, id=357, 725.71124pt x 395.4775pt>
+<../prototipos/resultados/criar_grupo.png, id=312, 725.71124pt x 395.4775pt>
 File: ../prototipos/resultados/criar_grupo.png Graphic file (type png)
 
 <use ../prototipos/resultados/criar_grupo.png>
@@ -2026,28 +1953,38 @@ Package pdftex.def Info: ../prototipos/resultados/criar_grupo.png used on input
  line 61.
 (pdftex.def)             Requested size: 426.79134pt x 232.58745pt.
 
-<../prototipos/resultados/denunciar_grupo.png, id=359, 546.04pt x 317.185pt>
+<../prototipos/resultados/denunciar_grupo.png, id=314, 546.04pt x 317.185pt>
 File: ../prototipos/resultados/denunciar_grupo.png Graphic file (type png)
 
 <use ../prototipos/resultados/denunciar_grupo.png>
 Package pdftex.def Info: ../prototipos/resultados/denunciar_grupo.png used on i
 nput line 65.
 (pdftex.def)             Requested size: 426.79134pt x 247.9163pt.
- [29pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
-14}) has been already used, duplicate ignored
+ [21pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.66 
+l.68 
+      <../prototipos/resultados/cadastro_usuario_parte2.png>]
+
+LaTeX Warning: Text page 22 contains only floats.
+
+[22pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.68 
      pdfTeX warning (ext4): destination with the same identifier (name{figure.4
-.15}) has been already used, duplicate ignored
+.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.66 
-      <../prototipos/resultados/entrar_grupo.png> <../prototipos/resultados/cri
-ar_grupo.png>]
-<../prototipos/resultados/opcoes_grupo.png, id=367, 545.03625pt x 301.125pt>
+l.68 
+      <../prototipos/resultados/cadastro_usuario_parte3.png> <../prototipos/res
+ultados/cadastro_usuario_parte4.png>]
+<../prototipos/resultados/opcoes_grupo.png, id=327, 545.03625pt x 301.125pt>
 File: ../prototipos/resultados/opcoes_grupo.png Graphic file (type png)
 
 <use ../prototipos/resultados/opcoes_grupo.png>
@@ -2055,28 +1992,15 @@ Package pdftex.def Info: ../prototipos/resultados/opcoes_grupo.png used on inpu
 t line 69.
 (pdftex.def)             Requested size: 426.79134pt x 235.7955pt.
 
-<../prototipos/resultados/cadastro_artigos.png, id=369, 727.71875pt x 749.80125
+<../prototipos/resultados/cadastro_artigos.png, id=329, 727.71875pt x 749.80125
 pt>
 File: ../prototipos/resultados/cadastro_artigos.png Graphic file (type png)
  <use ../prototipos/resultados/cadastro_artigos.png>
 Package pdftex.def Info: ../prototipos/resultados/cadastro_artigos.png used on 
 input line 73.
 (pdftex.def)             Requested size: 426.79134pt x 439.75891pt.
- [30pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
-16}) has been already used, duplicate ignored
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.74 
-     pdfTeX warning (ext4): destination with the same identifier (name{figure.4
-.17}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.74 
-      <../prototipos/resultados/denunciar_grupo.png> <../prototipos/resultados/
-opcoes_grupo.png>]
-<../prototipos/resultados/sair_grupo.png, id=378, 545.03625pt x 162.6075pt>
+<../prototipos/resultados/sair_grupo.png, id=331, 545.03625pt x 162.6075pt>
 File: ../prototipos/resultados/sair_grupo.png Graphic file (type png)
 
 <use ../prototipos/resultados/sair_grupo.png>
@@ -2084,28 +2008,15 @@ Package pdftex.def Info: ../prototipos/resultados/sair_grupo.png used on input
 line 77.
 (pdftex.def)             Requested size: 426.79134pt x 127.32957pt.
 
-<../prototipos/resultados/painel_final.png, id=380, 1877.0125pt x 921.4425pt>
+<../prototipos/resultados/painel_final.png, id=333, 1877.0125pt x 921.4425pt>
 File: ../prototipos/resultados/painel_final.png Graphic file (type png)
 
 <use ../prototipos/resultados/painel_final.png>
 Package pdftex.def Info: ../prototipos/resultados/painel_final.png used on inpu
 t line 81.
 (pdftex.def)             Requested size: 426.79134pt x 209.50899pt.
- [31pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
-18}) has been already used, duplicate ignored
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.82 
-     pdfTeX warning (ext4): destination with the same identifier (name{figure.4
-.19}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.82 
-      <../prototipos/resultados/cadastro_artigos.png> <../prototipos/resultados
-/sair_grupo.png>]
-<../prototipos/resultados/Seus_Albuns.png, id=388, 1255.69125pt x 565.11125pt>
+<../prototipos/resultados/Seus_Albuns.png, id=335, 1255.69125pt x 565.11125pt>
 File: ../prototipos/resultados/Seus_Albuns.png Graphic file (type png)
 
 <use ../prototipos/resultados/Seus_Albuns.png>
@@ -2113,34 +2024,138 @@ Package pdftex.def Info: ../prototipos/resultados/Seus_Albuns.png used on input
  line 85.
 (pdftex.def)             Requested size: 426.79134pt x 192.0663pt.
 
-<../prototipos/resultados/Suas_fotos.png, id=390, 1255.69125pt x 565.11125pt>
+<../prototipos/resultados/Suas_fotos.png, id=337, 1255.69125pt x 565.11125pt>
 File: ../prototipos/resultados/Suas_fotos.png Graphic file (type png)
 
 <use ../prototipos/resultados/Suas_fotos.png>
 Package pdftex.def Info: ../prototipos/resultados/Suas_fotos.png used on input 
 line 89.
 (pdftex.def)             Requested size: 426.79134pt x 192.0663pt.
- [32pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
-20}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.90 
-     pdfTeX warning (ext4): destination with the same identifier (name{figure.4
-.21}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.90 
-      <../prototipos/resultados/painel_final.png> <../prototipos/resultados/Seu
-s_Albuns.png>]) (capitulos/casos_uso/casos_uso.tex [33pdfTeX warning (ext4): de
-stination with the same identifier (name{figure.4.22}) has been already used, d
-uplicate ignored
+)
+(capitulos/casos_uso/casos_uso.tex [23] [24pdfTeX warning (ext4): destination w
+ith the same identifier (name{figure.4.5}) has been already used, duplicate ign
+ored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
-            {Casos de Uso} <../prototipos/resultados/Suas_fotos.png>]
+            {Casos de Uso} <../prototipos/resultados/perfil.png>] [25pdfTeX war
+ning (ext4): destination with the same identifier (name{figure.4.6}) has been a
+lready used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {Casos de Uso}pdfTeX warning (ext4): destination with the same iden
+tifier (name{figure.4.7}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {Casos de Uso} <../prototipos/resultados/postagem.png> <../prototip
+os/resultados/meus_posts.png>] [26pdfTeX warning (ext4): destination with the s
+ame identifier (name{figure.4.8}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {Casos de Uso} <../prototipos/resultados/chat_ativos_e_inativos.png
+>] [27pdfTeX warning (ext4): destination with the same identifier (name{figure.
+4.9}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {Casos de Uso}pdfTeX warning (ext4): destination with the same iden
+tifier (name{figure.4.10}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {Casos de Uso} <../prototipos/resultados/mensagens.png> <../prototi
+pos/resultados/prototipo_recuperacao_senha.png>] [28pdfTeX warning (ext4): dest
+ination with the same identifier (name{figure.4.11}) has been already used, dup
+licate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {Casos de Uso}pdfTeX warning (ext4): destination with the same iden
+tifier (name{figure.4.12}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {Casos de Uso}pdfTeX warning (ext4): destination with the same iden
+tifier (name{figure.4.13}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {Casos de Uso} <../prototipos/resultados/galeria_fotos.png> <../pro
+totipos/resultados/solicitacao_amizade.png> <../prototipos/resultados/aceitar_a
+mizade.png>] [29pdfTeX warning (ext4): destination with the same identifier (na
+me{figure.4.14}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {Casos de Uso}pdfTeX warning (ext4): destination with the same iden
+tifier (name{figure.4.15}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {Casos de Uso} <../prototipos/resultados/entrar_grupo.png> <../prot
+otipos/resultados/criar_grupo.png>] [30pdfTeX warning (ext4): destination with 
+the same identifier (name{figure.4.16}) has been already used, duplicate ignore
+d
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {Casos de Uso}pdfTeX warning (ext4): destination with the same iden
+tifier (name{figure.4.17}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {Casos de Uso} <../prototipos/resultados/denunciar_grupo.png> <../p
+rototipos/resultados/opcoes_grupo.png>] [31pdfTeX warning (ext4): destination w
+ith the same identifier (name{figure.4.18}) has been already used, duplicate ig
+nored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {Casos de Uso}pdfTeX warning (ext4): destination with the same iden
+tifier (name{figure.4.19}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {Casos de Uso} <../prototipos/resultados/cadastro_artigos.png> <../
+prototipos/resultados/sair_grupo.png>] [32pdfTeX warning (ext4): destination wi
+th the same identifier (name{figure.4.20}) has been already used, duplicate ign
+ored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {Casos de Uso}pdfTeX warning (ext4): destination with the same iden
+tifier (name{figure.4.21}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {Casos de Uso}pdfTeX warning (ext4): destination with the same iden
+tifier (name{figure.4.22}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {Casos de Uso} <../prototipos/resultados/painel_final.png> <../prot
+otipos/resultados/Seus_Albuns.png> <../prototipos/resultados/Suas_fotos.png>]
 LaTeX Font Info:    Try loading font information for OMS+cmss on input line 51.
 
 LaTeX Font Info:    No file OMScmss.fd. on input line 51.
@@ -2273,111 +2288,105 @@ Overfull \hbox (12.79996pt too wide) in paragraph at lines 708--708
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (capitulos/projeto/projeto.tex [34
+) (capitulos/projeto/projeto.tex [33
 
-] [35pdfTeX warning (ext4): destination with the same identifier (name{table.5.
+] [34pdfTeX warning (ext4): destination with the same identifier (name{table.5.
 25}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
-            {Projeto}] [36pdfTeX warning (ext4): destination with the same iden
+            {Projeto}] [35pdfTeX warning (ext4): destination with the same iden
 tifier (name{table.5.26}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
-            {Projeto}] [37pdfTeX warning (ext4): destination with the same iden
+            {Projeto}] [36pdfTeX warning (ext4): destination with the same iden
 tifier (name{table.5.27}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
-            {Projeto}] [38pdfTeX warning (ext4): destination with the same iden
+            {Projeto}] [37pdfTeX warning (ext4): destination with the same iden
 tifier (name{table.5.28}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
-            {Projeto}] [39pdfTeX warning (ext4): destination with the same iden
+            {Projeto}] [38pdfTeX warning (ext4): destination with the same iden
 tifier (name{table.5.29}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
-            {Projeto}] [40pdfTeX warning (ext4): destination with the same iden
+            {Projeto}] [39pdfTeX warning (ext4): destination with the same iden
 tifier (name{table.5.30}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
-            {Projeto}] [41pdfTeX warning (ext4): destination with the same iden
+            {Projeto}] [40pdfTeX warning (ext4): destination with the same iden
 tifier (name{table.5.31}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
-            {Projeto}] [42pdfTeX warning (ext4): destination with the same iden
+            {Projeto}] [41pdfTeX warning (ext4): destination with the same iden
 tifier (name{table.5.32}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
-            {Projeto}] [43pdfTeX warning (ext4): destination with the same iden
+            {Projeto}] [42pdfTeX warning (ext4): destination with the same iden
 tifier (name{table.5.33}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
-            {Projeto}] [44pdfTeX warning (ext4): destination with the same iden
+            {Projeto}] [43pdfTeX warning (ext4): destination with the same iden
 tifier (name{table.5.34}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
-            {Projeto}] [45pdfTeX warning (ext4): destination with the same iden
+            {Projeto}] [44pdfTeX warning (ext4): destination with the same iden
 tifier (name{table.5.35}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
-            {Projeto}] [46pdfTeX warning (ext4): destination with the same iden
+            {Projeto}] [45pdfTeX warning (ext4): destination with the same iden
 tifier (name{table.5.36}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
-            {Projeto}] [47pdfTeX warning (ext4): destination with the same iden
+            {Projeto}] [46pdfTeX warning (ext4): destination with the same iden
 tifier (name{table.5.37}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
-            {Projeto}] [48pdfTeX warning (ext4): destination with the same iden
+            {Projeto}] [47pdfTeX warning (ext4): destination with the same iden
 tifier (name{table.5.38}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
             {Projeto}]
-<../banco_de_dados/redesocial.png, id=488, 1453.43pt x 1390.19376pt>
+<../banco_de_dados/redesocial.png, id=483, 1453.43pt x 1390.19376pt>
 File: ../banco_de_dados/redesocial.png Graphic file (type png)
 
 <use ../banco_de_dados/redesocial.png>
 Package pdftex.def Info: ../banco_de_dados/redesocial.png used on input line 15
 .
 (pdftex.def)             Requested size: 426.79134pt x 408.21568pt.
- [49
+ [48
 
-] [50pdfTeX warning (ext4): destination with the same identifier (name{figure.6
-.23}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.17 \newpage
-              <../banco_de_dados/redesocial.png>]
+]
 <../documentacao/capitulos/projeto/diagramas/multimidia_album_classdiagram.png,
- id=498, 529.98pt x 294.34969pt>
+ id=490, 529.98pt x 294.34969pt>
 File: ../documentacao/capitulos/projeto/diagramas/multimidia_album_classdiagram
 .png Graphic file (type png)
 
@@ -2387,49 +2396,55 @@ Package pdftex.def Info: ../documentacao/capitulos/projeto/diagramas/multimidia
 _album_classdiagram.png used on input line 27.
 (pdftex.def)             Requested size: 426.79134pt x 237.04306pt.
 
-<../projeto/Diagrama_de_Classes_DTO.png, id=499, 1735.98563pt x 1543.26563pt>
+<../projeto/Diagrama_de_Classes_DTO.png, id=491, 1735.98563pt x 1543.26563pt>
 File: ../projeto/Diagrama_de_Classes_DTO.png Graphic file (type png)
 
 <use ../projeto/Diagrama_de_Classes_DTO.png>
 Package pdftex.def Info: ../projeto/Diagrama_de_Classes_DTO.png used on input l
 ine 29.
 (pdftex.def)             Requested size: 426.79134pt x 379.41032pt.
- [51pdfTeX warning (ext4): destination with the same identifier (name{figure.6.
-24}) has been already used, duplicate ignored
+ [49pdfTeX warning (ext4): destination with the same identifier (name{figure.6.
+23}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.30 
-      <../documentacao/capitulos/projeto/diagramas/multimidia_album_classdiagra
-m.png>]
-<../projeto/Diagrama_de_Classes_DAO.png, id=504, 886.81313pt x 800.9925pt>
+      <../banco_de_dados/redesocial.png>]
+<../projeto/Diagrama_de_Classes_DAO.png, id=496, 886.81313pt x 800.9925pt>
 File: ../projeto/Diagrama_de_Classes_DAO.png Graphic file (type png)
 
 <use ../projeto/Diagrama_de_Classes_DAO.png>
 Package pdftex.def Info: ../projeto/Diagrama_de_Classes_DAO.png used on input l
 ine 31.
 (pdftex.def)             Requested size: 426.79134pt x 385.49869pt.
- [52pdfTeX warning (ext4): destination with the same identifier (name{figure.6.
-25}) has been already used, duplicate ignored
+ [50pdfTeX warning (ext4): destination with the same identifier (name{figure.6.
+24}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.32 
-      <../projeto/Diagrama_de_Classes_DTO.png>]
-<../projeto/Diagrama_de_Classes_BO.png, id=510, 1106.63437pt x 844.65562pt>
+     pdfTeX warning (ext4): destination with the same identifier (name{figure.6
+.25}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.32 
+      <../documentacao/capitulos/projeto/diagramas/multimidia_album_classdiagra
+m.png> <../projeto/Diagrama_de_Classes_DTO.png>]
+<../projeto/Diagrama_de_Classes_BO.png, id=502, 1106.63437pt x 844.65562pt>
 File: ../projeto/Diagrama_de_Classes_BO.png Graphic file (type png)
 
 <use ../projeto/Diagrama_de_Classes_BO.png>
 Package pdftex.def Info: ../projeto/Diagrama_de_Classes_BO.png used on input li
 ne 33.
 (pdftex.def)             Requested size: 426.79134pt x 325.75406pt.
- [53pdfTeX warning (ext4): destination with the same identifier (name{figure.6.
+ [51pdfTeX warning (ext4): destination with the same identifier (name{figure.6.
 26}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.34 
-      <../projeto/Diagrama_de_Classes_DAO.png>] [54pdfTeX warning (ext4): desti
+      <../projeto/Diagrama_de_Classes_DAO.png>] [52pdfTeX warning (ext4): desti
 nation with the same identifier (name{figure.6.27}) has been already used, dupl
 icate ignored
 
@@ -2439,7 +2454,7 @@ l.36 \newpage
               <../projeto/Diagrama_de_Classes_BO.png>])
 
 AED: lastpage setting LastPage
-[55]
+[53]
 \tf@lof=\write5
 \openout5 = `documentacao.lof'.
 
@@ -2449,25 +2464,25 @@ AED: lastpage setting LastPage
 \tf@toc=\write7
 \openout7 = `documentacao.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 46.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 46.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 47.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 47.
  (documentacao.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 46.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 46.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 47.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 47.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 46.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 47.
  ) 
 Here is how much of TeX's memory you used:
- 15148 strings out of 493335
- 227036 string characters out of 3136651
- 499350 words of memory out of 3000000
- 18144 multiletter control sequences out of 15000+200000
+ 15158 strings out of 493335
+ 227177 string characters out of 3136651
+ 499266 words of memory out of 3000000
+ 18153 multiletter control sequences out of 15000+200000
  19456 words of font info for 95 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,12n,45p,946b,555s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2476,9 +2491,9 @@ Here is how much of TeX's memory you used:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/
 Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on documentacao.pdf (56 pages, 2490814 bytes).
+Output written on documentacao.pdf (54 pages, 2530997 bytes).
 PDF statistics:
- 650 PDF objects out of 1000 (max. 8388607)
- 147 named destinations out of 1000 (max. 500000)
+ 641 PDF objects out of 1000 (max. 8388607)
+ 145 named destinations out of 1000 (max. 500000)
  12104 words of extra memory for PDF output out of 14400 (max. 10000000)
 
