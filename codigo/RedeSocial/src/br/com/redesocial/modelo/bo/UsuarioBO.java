@@ -69,10 +69,6 @@ public class UsuarioBO extends BOCRUDBase<Usuario, UsuarioDAO> {
         return dao.selecionarEmail(email);
     }    
     
-    public Usuario alterar (String senha) throws Exception {
-        UsuarioDAO dao = new UsuarioDAO();
-        return dao.alterar (senha);
-    }   
     public String gerarSenha(){
         
         UUID uuid = UUID.randomUUID();  
@@ -110,10 +106,10 @@ public class UsuarioBO extends BOCRUDBase<Usuario, UsuarioDAO> {
 
                 Message message = new MimeMessage(session);
                 message.setFrom(new InternetAddress("testarjavamail@gmail.com"));
-                Address[] toUser = InternetAddress.parse("testarjavamail@gmail.com");  
+                Address[] toUser = InternetAddress.parse(usuarioSelecionado.getEmail());  
                 message.setRecipients(Message.RecipientType.TO, toUser);
-                message.setSubject("Enviando email com JavaMail");
-                message.setText("Enviei este email utilizando JavaMail com minha conta GMail!");
+                message.setSubject("Recuperação de Senha - Rede Social");
+                message.setText("Sua nova senha para login no sistema: " + novaSenha);
                 Transport.send(message);
                 System.out.println("Feito!!!");
 
@@ -123,8 +119,7 @@ public class UsuarioBO extends BOCRUDBase<Usuario, UsuarioDAO> {
             
             usuarioSelecionado.setSenha(novaSenha);
             usuarioDAO.alterarSenha(usuarioSelecionado);
-        }
-        else{
+        } else{
             throw new Exception ("Email não encontrado");
         }
     }
