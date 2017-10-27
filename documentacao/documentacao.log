@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.8.12)  27 OCT 2017 15:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.8.12)  27 OCT 2017 16:08
 entering extended mode
 **./documentacao.tex
 (documentacao.tex
@@ -1140,14 +1140,7 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 27.
 LaTeX Warning: Unused global option(s):
     [section=Title,subsection=Title,english,brazilian].
 
-(documentacao.aux
-
-LaTeX Warning: Label `figura:_' multiply defined.
-
-
-LaTeX Warning: Label `figura:_' multiply defined.
-
-)
+(documentacao.aux)
 \openout1 = `documentacao.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
@@ -1166,7 +1159,8 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
 LaTeX Font Info:    ... okay on input line 31.
 \AtBeginShipoutBox=\box38
 Package hyperref Info: Link coloring ON on input line 31.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
@@ -2451,10 +2445,22 @@ icate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.36 \newpage
-              <../projeto/Diagrama_de_Classes_BO.png>])
+              <../projeto/Diagrama_de_Classes_BO.png>]
+<../projeto/UCD_Geral.png, id=513, 708.39656pt x 787.44188pt>
+File: ../projeto/UCD_Geral.png Graphic file (type png)
 
+<use ../projeto/UCD_Geral.png>
+Package pdftex.def Info: ../projeto/UCD_Geral.png used on input line 38.
+(pdftex.def)             Requested size: 426.79134pt x 474.42728pt.
+) 
 AED: lastpage setting LastPage
-[53]
+[53pdfTeX warning (ext4): destination with the same identifier (name{figure.6.2
+8}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.47 \end{document}
+                    <../projeto/UCD_Geral.png>]
 \tf@lof=\write5
 \openout5 = `documentacao.lof'.
 
@@ -2474,15 +2480,15 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 47.
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 47.
  ) 
 Here is how much of TeX's memory you used:
- 15158 strings out of 493335
- 227177 string characters out of 3136651
- 499266 words of memory out of 3000000
- 18153 multiletter control sequences out of 15000+200000
+ 15166 strings out of 493335
+ 227341 string characters out of 3136651
+ 499419 words of memory out of 3000000
+ 18158 multiletter control sequences out of 15000+200000
  19456 words of font info for 95 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,12n,45p,946b,555s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2491,9 +2497,9 @@ Here is how much of TeX's memory you used:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/
 Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on documentacao.pdf (54 pages, 2530997 bytes).
+Output written on documentacao.pdf (54 pages, 2604120 bytes).
 PDF statistics:
- 641 PDF objects out of 1000 (max. 8388607)
- 145 named destinations out of 1000 (max. 500000)
- 12104 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 648 PDF objects out of 1000 (max. 8388607)
+ 147 named destinations out of 1000 (max. 500000)
+ 12117 words of extra memory for PDF output out of 14400 (max. 10000000)
 
