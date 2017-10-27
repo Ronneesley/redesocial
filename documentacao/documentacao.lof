@@ -3,7 +3,7 @@
 \contentsline {figure}{\numberline {1}{\ignorespaces Prot\IeC {\'o}tipo de login.}}{20}{figure.4.1}
 \contentsline {figure}{\numberline {2}{\ignorespaces Prot\IeC {\'o}tipo da segunda etapa de cadastro, confirma\IeC {\c c}\IeC {\~a}o do e-mail.}}{21}{figure.4.2}
 \contentsline {figure}{\numberline {3}{\ignorespaces Prot\IeC {\'o}tipo da terceira etapa de cadastro, informa\IeC {\c c}\IeC {\~o}es pessoais.}}{22}{figure.4.3}
-\contentsline {figure}{\numberline {4}{\ignorespaces Prot\IeC {\'o}tipo da quarta etapa de cadastro e foto de perfil.}}{22}{figure.4.4}
+\contentsline {figure}{\numberline {4}{\ignorespaces Prot\IeC {\'o}tipo da quarta etapa de cadastro e foto de perfil.}}{23}{figure.4.4}
 \contentsline {figure}{\numberline {5}{\ignorespaces Prot\IeC {\'o}tipo de perfil.}}{24}{figure.4.5}
 \contentsline {figure}{\numberline {6}{\ignorespaces Prot\IeC {\'o}tipo de postagem.}}{25}{figure.4.6}
 \contentsline {figure}{\numberline {7}{\ignorespaces Prot\IeC {\'o}tipo de posts pessoais.}}{25}{figure.4.7}
@@ -21,9 +21,9 @@
 \contentsline {figure}{\numberline {19}{\ignorespaces Prot\IeC {\'o}tipo de sair do grupo.}}{31}{figure.4.19}
 \contentsline {figure}{\numberline {20}{\ignorespaces Prot\IeC {\'o}tipo de painel administrativo.}}{32}{figure.4.20}
 \contentsline {figure}{\numberline {21}{\ignorespaces Prot\IeC {\'o}tipo de seus \IeC {\'a}lbuns.}}{32}{figure.4.21}
-\contentsline {figure}{\numberline {22}{\ignorespaces Prot\IeC {\'o}tipo de suas fotos.}}{32}{figure.4.22}
-\contentsline {figure}{\numberline {23}{\ignorespaces Diagrama Entidade e Relacionamento (DER).}}{49}{figure.6.23}
-\contentsline {figure}{\numberline {24}{\ignorespaces Diagrama de Classes Entidade Multimidia e Album.}}{50}{figure.6.24}
-\contentsline {figure}{\numberline {25}{\ignorespaces Diagrama de Classe DTO}}{50}{figure.6.25}
-\contentsline {figure}{\numberline {26}{\ignorespaces Diagrama de Classe DAO}}{51}{figure.6.26}
-\contentsline {figure}{\numberline {27}{\ignorespaces Diagrama de Classe BO}}{52}{figure.6.27}
+\contentsline {figure}{\numberline {22}{\ignorespaces Prot\IeC {\'o}tipo de suas fotos.}}{33}{figure.4.22}
+\contentsline {figure}{\numberline {23}{\ignorespaces Diagrama Entidade e Relacionamento (DER).}}{50}{figure.6.23}
+\contentsline {figure}{\numberline {24}{\ignorespaces Diagrama de Classes Entidade Multimidia e Album.}}{51}{figure.6.24}
+\contentsline {figure}{\numberline {25}{\ignorespaces Diagrama de Classe DTO}}{52}{figure.6.25}
+\contentsline {figure}{\numberline {26}{\ignorespaces Diagrama de Classe DAO}}{53}{figure.6.26}
+\contentsline {figure}{\numberline {27}{\ignorespaces Diagrama de Classe BO}}{54}{figure.6.27}
