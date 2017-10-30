@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.8.12)  27 OCT 2017 16:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.8.12)  28 OCT 2017 10:23
 entering extended mode
 **./documentacao.tex
 (documentacao.tex
@@ -1653,6 +1653,19 @@ Overfull \hbox (12.79996pt too wide) in paragraph at lines 421--421
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+
+Overfull \hbox (0.66896pt too wide) in paragraph at lines 438--438
+[]|\OT1/cmss/m/n/12 (-20) 28/10/2017| 
+ []
+
+
+Overfull \hbox (12.79996pt too wide) in paragraph at lines 438--438
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 ) (capitulos/prototipos/prototipos.tex [12
 
 pdfTeX warning (ext4): destination with the same identifier (name{table.3.1}) h
@@ -1799,8 +1812,14 @@ identifier (name{table.3.24}) has been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
+            {Protótipos}pdfTeX warning (ext4): destination with the same ident
+ifier (name{table.3.25}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
             {Protótipos}]
-<../prototipos/resultados/login.png, id=278, 867.24pt x 480.79625pt>
+<../prototipos/resultados/login.png, id=285, 867.24pt x 480.79625pt>
 File: ../prototipos/resultados/login.png Graphic file (type png)
 
 <use ../prototipos/resultados/login.png>
@@ -1808,7 +1827,7 @@ Package pdftex.def Info: ../prototipos/resultados/login.png used on input line
 5.
 (pdftex.def)             Requested size: 426.79134pt x 236.61197pt.
 
-<../prototipos/resultados/cadastro_usuario_parte2.png, id=281, 789.70032pt x 61
+<../prototipos/resultados/cadastro_usuario_parte2.png, id=288, 789.70032pt x 61
 3.54219pt>
 File: ../prototipos/resultados/cadastro_usuario_parte2.png Graphic file (type p
 ng)
@@ -1817,7 +1836,7 @@ Package pdftex.def Info: ../prototipos/resultados/cadastro_usuario_parte2.png u
 sed on input line 9.
 (pdftex.def)             Requested size: 369.88582pt x 287.37251pt.
 
-<../prototipos/resultados/cadastro_usuario_parte3.png, id=283, 442.65375pt x 33
+<../prototipos/resultados/cadastro_usuario_parte3.png, id=290, 442.65375pt x 33
 1.99031pt>
 File: ../prototipos/resultados/cadastro_usuario_parte3.png Graphic file (type p
 ng)
@@ -1826,7 +1845,7 @@ Package pdftex.def Info: ../prototipos/resultados/cadastro_usuario_parte3.png u
 sed on input line 13.
 (pdftex.def)             Requested size: 455.24408pt x 341.45232pt.
 
-<../prototipos/resultados/cadastro_usuario_parte4.png, id=285, 571.38469pt x 31
+<../prototipos/resultados/cadastro_usuario_parte4.png, id=292, 571.38469pt x 31
 8.43968pt>
 File: ../prototipos/resultados/cadastro_usuario_parte4.png Graphic file (type p
 ng)
@@ -1835,7 +1854,7 @@ Package pdftex.def Info: ../prototipos/resultados/cadastro_usuario_parte4.png u
 sed on input line 17.
 (pdftex.def)             Requested size: 455.24408pt x 253.71227pt.
 
-<../prototipos/resultados/perfil.png, id=287, 1208.515pt x 1940.24875pt>
+<../prototipos/resultados/perfil.png, id=294, 1208.515pt x 1940.24875pt>
 File: ../prototipos/resultados/perfil.png Graphic file (type png)
 
 <use ../prototipos/resultados/perfil.png>
@@ -1846,7 +1865,7 @@ Package pdftex.def Info: ../prototipos/resultados/perfil.png used on input line
 
 LaTeX Warning: Float too large for page by 4.99626pt on input line 21.
 
-<../prototipos/resultados/postagem.png, id=289, 687.56876pt x 395.4775pt>
+<../prototipos/resultados/postagem.png, id=296, 687.56876pt x 395.4775pt>
 File: ../prototipos/resultados/postagem.png Graphic file (type png)
 
 <use ../prototipos/resultados/postagem.png>
@@ -1854,7 +1873,7 @@ Package pdftex.def Info: ../prototipos/resultados/postagem.png used on input li
 ne 25.
 (pdftex.def)             Requested size: 426.79134pt x 245.48317pt.
 
-<../prototipos/resultados/meus_posts.png, id=291, 753.41475pt x 339.06676pt>
+<../prototipos/resultados/meus_posts.png, id=298, 753.41475pt x 339.06676pt>
 File: ../prototipos/resultados/meus_posts.png Graphic file (type png)
 
 <use ../prototipos/resultados/meus_posts.png>
@@ -1867,7 +1886,7 @@ Overfull \hbox (85.35825pt too wide) in paragraph at lines 29--29
  []
 
 
-<../prototipos/resultados/chat_ativos_e_inativos.png, id=293, 277.035pt x 422.3
+<../prototipos/resultados/chat_ativos_e_inativos.png, id=300, 277.035pt x 422.3
 2782pt>
 File: ../prototipos/resultados/chat_ativos_e_inativos.png Graphic file (type pn
 g)
@@ -1885,7 +1904,7 @@ has been already used, duplicate ignored
 l.33 ...tipo de chat de amigos ativos e inativos.}
                                                    <../prototipos/resultados/lo
 gin.png>]
-<../prototipos/resultados/mensagens.png, id=300, 302.12875pt x 347.2975pt>
+<../prototipos/resultados/mensagens.png, id=307, 302.12875pt x 347.2975pt>
 File: ../prototipos/resultados/mensagens.png Graphic file (type png)
 
 <use ../prototipos/resultados/mensagens.png>
@@ -1893,7 +1912,7 @@ Package pdftex.def Info: ../prototipos/resultados/mensagens.png used on input l
 ine 37.
 (pdftex.def)             Requested size: 284.52756pt x 327.06381pt.
 
-<../prototipos/resultados/prototipo_recuperacao_senha.png, id=302, 339.2675pt x
+<../prototipos/resultados/prototipo_recuperacao_senha.png, id=309, 339.2675pt x
  200.75pt>
 File: ../prototipos/resultados/prototipo_recuperacao_senha.png Graphic file (ty
 pe png)
@@ -1902,7 +1921,7 @@ Package pdftex.def Info: ../prototipos/resultados/prototipo_recuperacao_senha.p
 ng used on input line 41.
 (pdftex.def)             Requested size: 426.79134pt x 252.55116pt.
 
-<../prototipos/resultados/galeria_fotos.png, id=304, 1255.69125pt x 565.11125pt
+<../prototipos/resultados/galeria_fotos.png, id=311, 1255.69125pt x 565.11125pt
 >
 File: ../prototipos/resultados/galeria_fotos.png Graphic file (type png)
  <use ../prototipos/resultados/galeria_fotos.png>
@@ -1915,7 +1934,7 @@ Overfull \hbox (85.35825pt too wide) in paragraph at lines 45--45
  []
 
 
-<../prototipos/resultados/solicitacao_amizade.png, id=306, 229.85875pt x 41.153
+<../prototipos/resultados/solicitacao_amizade.png, id=313, 229.85875pt x 41.153
 75pt>
 File: ../prototipos/resultados/solicitacao_amizade.png Graphic file (type png)
  <use ../prototipos/resultados/solicitacao_amizade.png>
@@ -1923,7 +1942,7 @@ Package pdftex.def Info: ../prototipos/resultados/solicitacao_amizade.png used
 on input line 49.
 (pdftex.def)             Requested size: 284.52756pt x 50.9447pt.
 
-<../prototipos/resultados/aceitar_amizade.png, id=308, 1811.76875pt x 878.28125
+<../prototipos/resultados/aceitar_amizade.png, id=315, 1811.76875pt x 878.28125
 pt>
 File: ../prototipos/resultados/aceitar_amizade.png Graphic file (type png)
  <use ../prototipos/resultados/aceitar_amizade.png>
@@ -1931,7 +1950,7 @@ Package pdftex.def Info: ../prototipos/resultados/aceitar_amizade.png used on i
 nput line 53.
 (pdftex.def)             Requested size: 284.52756pt x 137.92798pt.
 
-<../prototipos/resultados/entrar_grupo.png, id=310, 545.03625pt x 276.03125pt>
+<../prototipos/resultados/entrar_grupo.png, id=317, 545.03625pt x 276.03125pt>
 File: ../prototipos/resultados/entrar_grupo.png Graphic file (type png)
 
 <use ../prototipos/resultados/entrar_grupo.png>
@@ -1939,7 +1958,7 @@ Package pdftex.def Info: ../prototipos/resultados/entrar_grupo.png used on inpu
 t line 57.
 (pdftex.def)             Requested size: 426.79134pt x 216.14587pt.
 
-<../prototipos/resultados/criar_grupo.png, id=312, 725.71124pt x 395.4775pt>
+<../prototipos/resultados/criar_grupo.png, id=319, 725.71124pt x 395.4775pt>
 File: ../prototipos/resultados/criar_grupo.png Graphic file (type png)
 
 <use ../prototipos/resultados/criar_grupo.png>
@@ -1947,7 +1966,7 @@ Package pdftex.def Info: ../prototipos/resultados/criar_grupo.png used on input
  line 61.
 (pdftex.def)             Requested size: 426.79134pt x 232.58745pt.
 
-<../prototipos/resultados/denunciar_grupo.png, id=314, 546.04pt x 317.185pt>
+<../prototipos/resultados/denunciar_grupo.png, id=321, 546.04pt x 317.185pt>
 File: ../prototipos/resultados/denunciar_grupo.png Graphic file (type png)
 
 <use ../prototipos/resultados/denunciar_grupo.png>
@@ -1978,7 +1997,7 @@ l.68
 l.68 
       <../prototipos/resultados/cadastro_usuario_parte3.png> <../prototipos/res
 ultados/cadastro_usuario_parte4.png>]
-<../prototipos/resultados/opcoes_grupo.png, id=327, 545.03625pt x 301.125pt>
+<../prototipos/resultados/opcoes_grupo.png, id=334, 545.03625pt x 301.125pt>
 File: ../prototipos/resultados/opcoes_grupo.png Graphic file (type png)
 
 <use ../prototipos/resultados/opcoes_grupo.png>
@@ -1986,7 +2005,7 @@ Package pdftex.def Info: ../prototipos/resultados/opcoes_grupo.png used on inpu
 t line 69.
 (pdftex.def)             Requested size: 426.79134pt x 235.7955pt.
 
-<../prototipos/resultados/cadastro_artigos.png, id=329, 727.71875pt x 749.80125
+<../prototipos/resultados/cadastro_artigos.png, id=336, 727.71875pt x 749.80125
 pt>
 File: ../prototipos/resultados/cadastro_artigos.png Graphic file (type png)
  <use ../prototipos/resultados/cadastro_artigos.png>
@@ -1994,7 +2013,7 @@ Package pdftex.def Info: ../prototipos/resultados/cadastro_artigos.png used on
 input line 73.
 (pdftex.def)             Requested size: 426.79134pt x 439.75891pt.
 
-<../prototipos/resultados/sair_grupo.png, id=331, 545.03625pt x 162.6075pt>
+<../prototipos/resultados/sair_grupo.png, id=338, 545.03625pt x 162.6075pt>
 File: ../prototipos/resultados/sair_grupo.png Graphic file (type png)
 
 <use ../prototipos/resultados/sair_grupo.png>
@@ -2002,7 +2021,7 @@ Package pdftex.def Info: ../prototipos/resultados/sair_grupo.png used on input
 line 77.
 (pdftex.def)             Requested size: 426.79134pt x 127.32957pt.
 
-<../prototipos/resultados/painel_final.png, id=333, 1877.0125pt x 921.4425pt>
+<../prototipos/resultados/painel_final.png, id=340, 1877.0125pt x 921.4425pt>
 File: ../prototipos/resultados/painel_final.png Graphic file (type png)
 
 <use ../prototipos/resultados/painel_final.png>
@@ -2010,7 +2029,7 @@ Package pdftex.def Info: ../prototipos/resultados/painel_final.png used on inpu
 t line 81.
 (pdftex.def)             Requested size: 426.79134pt x 209.50899pt.
 
-<../prototipos/resultados/Seus_Albuns.png, id=335, 1255.69125pt x 565.11125pt>
+<../prototipos/resultados/Seus_Albuns.png, id=342, 1255.69125pt x 565.11125pt>
 File: ../prototipos/resultados/Seus_Albuns.png Graphic file (type png)
 
 <use ../prototipos/resultados/Seus_Albuns.png>
@@ -2018,7 +2037,7 @@ Package pdftex.def Info: ../prototipos/resultados/Seus_Albuns.png used on input
  line 85.
 (pdftex.def)             Requested size: 426.79134pt x 192.0663pt.
 
-<../prototipos/resultados/Suas_fotos.png, id=337, 1255.69125pt x 565.11125pt>
+<../prototipos/resultados/Suas_fotos.png, id=344, 1255.69125pt x 565.11125pt>
 File: ../prototipos/resultados/Suas_fotos.png Graphic file (type png)
 
 <use ../prototipos/resultados/Suas_fotos.png>
@@ -2285,102 +2304,102 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 ) (capitulos/projeto/projeto.tex [33
 
 ] [34pdfTeX warning (ext4): destination with the same identifier (name{table.5.
-25}) has been already used, duplicate ignored
+26}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
             {Projeto}] [35pdfTeX warning (ext4): destination with the same iden
-tifier (name{table.5.26}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1 \chapter
-            {Projeto}] [36pdfTeX warning (ext4): destination with the same iden
 tifier (name{table.5.27}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
-            {Projeto}] [37pdfTeX warning (ext4): destination with the same iden
+            {Projeto}] [36pdfTeX warning (ext4): destination with the same iden
 tifier (name{table.5.28}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
-            {Projeto}] [38pdfTeX warning (ext4): destination with the same iden
+            {Projeto}] [37pdfTeX warning (ext4): destination with the same iden
 tifier (name{table.5.29}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
-            {Projeto}] [39pdfTeX warning (ext4): destination with the same iden
+            {Projeto}] [38pdfTeX warning (ext4): destination with the same iden
 tifier (name{table.5.30}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
-            {Projeto}] [40pdfTeX warning (ext4): destination with the same iden
+            {Projeto}] [39pdfTeX warning (ext4): destination with the same iden
 tifier (name{table.5.31}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
-            {Projeto}] [41pdfTeX warning (ext4): destination with the same iden
+            {Projeto}] [40pdfTeX warning (ext4): destination with the same iden
 tifier (name{table.5.32}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
-            {Projeto}] [42pdfTeX warning (ext4): destination with the same iden
+            {Projeto}] [41pdfTeX warning (ext4): destination with the same iden
 tifier (name{table.5.33}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
-            {Projeto}] [43pdfTeX warning (ext4): destination with the same iden
+            {Projeto}] [42pdfTeX warning (ext4): destination with the same iden
 tifier (name{table.5.34}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
-            {Projeto}] [44pdfTeX warning (ext4): destination with the same iden
+            {Projeto}] [43pdfTeX warning (ext4): destination with the same iden
 tifier (name{table.5.35}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
-            {Projeto}] [45pdfTeX warning (ext4): destination with the same iden
+            {Projeto}] [44pdfTeX warning (ext4): destination with the same iden
 tifier (name{table.5.36}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
-            {Projeto}] [46pdfTeX warning (ext4): destination with the same iden
+            {Projeto}] [45pdfTeX warning (ext4): destination with the same iden
 tifier (name{table.5.37}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
-            {Projeto}] [47pdfTeX warning (ext4): destination with the same iden
+            {Projeto}] [46pdfTeX warning (ext4): destination with the same iden
 tifier (name{table.5.38}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter
+            {Projeto}] [47pdfTeX warning (ext4): destination with the same iden
+tifier (name{table.5.39}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
             {Projeto}]
-<../banco_de_dados/redesocial.png, id=483, 1453.43pt x 1390.19376pt>
+<../banco_de_dados/redesocial.png, id=490, 1633.10126pt x 1372.12625pt>
 File: ../banco_de_dados/redesocial.png Graphic file (type png)
 
 <use ../banco_de_dados/redesocial.png>
 Package pdftex.def Info: ../banco_de_dados/redesocial.png used on input line 15
 .
-(pdftex.def)             Requested size: 426.79134pt x 408.21568pt.
+(pdftex.def)             Requested size: 426.79134pt x 358.58687pt.
  [48
 
 ]
 <../documentacao/capitulos/projeto/diagramas/multimidia_album_classdiagram.png,
- id=490, 529.98pt x 294.34969pt>
+ id=497, 529.98pt x 294.34969pt>
 File: ../documentacao/capitulos/projeto/diagramas/multimidia_album_classdiagram
 .png Graphic file (type png)
 
@@ -2390,7 +2409,7 @@ Package pdftex.def Info: ../documentacao/capitulos/projeto/diagramas/multimidia
 _album_classdiagram.png used on input line 27.
 (pdftex.def)             Requested size: 426.79134pt x 237.04306pt.
 
-<../projeto/Diagrama_de_Classes_DTO.png, id=491, 1735.98563pt x 1543.26563pt>
+<../projeto/Diagrama_de_Classes_DTO.png, id=498, 1735.98563pt x 1543.26563pt>
 File: ../projeto/Diagrama_de_Classes_DTO.png Graphic file (type png)
 
 <use ../projeto/Diagrama_de_Classes_DTO.png>
@@ -2404,7 +2423,7 @@ ine 29.
                                                   \fi \fi 
 l.30 
       <../banco_de_dados/redesocial.png>]
-<../projeto/Diagrama_de_Classes_DAO.png, id=496, 886.81313pt x 800.9925pt>
+<../projeto/Diagrama_de_Classes_DAO.png, id=503, 886.81313pt x 800.9925pt>
 File: ../projeto/Diagrama_de_Classes_DAO.png Graphic file (type png)
 
 <use ../projeto/Diagrama_de_Classes_DAO.png>
@@ -2425,7 +2444,7 @@ l.32
 l.32 
       <../documentacao/capitulos/projeto/diagramas/multimidia_album_classdiagra
 m.png> <../projeto/Diagrama_de_Classes_DTO.png>]
-<../projeto/Diagrama_de_Classes_BO.png, id=502, 1106.63437pt x 844.65562pt>
+<../projeto/Diagrama_de_Classes_BO.png, id=509, 1106.63437pt x 844.65562pt>
 File: ../projeto/Diagrama_de_Classes_BO.png Graphic file (type png)
 
 <use ../projeto/Diagrama_de_Classes_BO.png>
@@ -2446,7 +2465,7 @@ icate ignored
                                                   \fi \fi 
 l.36 \newpage
               <../projeto/Diagrama_de_Classes_BO.png>]
-<../projeto/UCD_Geral.png, id=513, 708.39656pt x 787.44188pt>
+<../projeto/UCD_Geral.png, id=520, 708.39656pt x 787.44188pt>
 File: ../projeto/UCD_Geral.png Graphic file (type png)
 
 <use ../projeto/UCD_Geral.png>
@@ -2479,17 +2498,14 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 47.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 47.
  ) 
 Here is how much of TeX's memory you used:
- 15166 strings out of 493335
- 227341 string characters out of 3136651
- 499419 words of memory out of 3000000
- 18158 multiletter control sequences out of 15000+200000
- 19456 words of font info for 95 fonts, out of 3000000 for 9000
+ 15170 strings out of 493335
+ 227380 string characters out of 3136651
+ 501551 words of memory out of 3000000
+ 18159 multiletter control sequences out of 15000+200000
+ 19523 words of font info for 96 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,12n,45p,946b,555s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb>
@@ -2497,9 +2513,9 @@ Here is how much of TeX's memory you used:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/
 Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on documentacao.pdf (54 pages, 2604120 bytes).
+Output written on documentacao.pdf (54 pages, 2591108 bytes).
 PDF statistics:
- 648 PDF objects out of 1000 (max. 8388607)
- 147 named destinations out of 1000 (max. 500000)
+ 653 PDF objects out of 1000 (max. 8388607)
+ 148 named destinations out of 1000 (max. 500000)
  12117 words of extra memory for PDF output out of 14400 (max. 10000000)
 
