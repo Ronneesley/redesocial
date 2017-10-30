@@ -82,41 +82,41 @@ VALUES
 INSERT INTO postagens_multimidias
 (postagem, multimidia)
 VALUES
-('', ''),
-('', ''),
-('', ''),
-('', ''),
-('', '');
+('1', '5'),
+('5', '3'),
+('4', '1'),
+('3', '4'),
+('2', '2');
 
 /*Inserindo dados na tabela de postagens_albuns*/
 INSERT INTO postagens_albuns
 (postagem, album)
 VALUES
-('', ''),
-('', ''),
-('', ''),
-('', ''),
-('', '');
+('5', '5'),
+('3', '2'),
+('2', '1'),
+('4', '3'),
+('1', '4');
 
 /*Inserindo dados na tabela de palavras_chaves*/
 INSERT INTO palavras_chaves
 (descricao)
 VALUES
-(''),
-(''),
-(''),
-(''),
-('');
+('Família, União, Esperança, Laço, Amor'),
+('Vida, Reflexão, Liberdade, Genética, Respiração'),
+('Natureza, Fauna, Flora, Animais, Unicórnio'),
+('Virada, Fogos, Champagne, Branco, Trevo'),
+('Colação, Formatura, Beca, Diploma, Festa');
 
 /*Inserindo dados na tabela de categorias*/
 INSERT INTO categorias
 (descricao)
 VALUES
-(''),
-(''),
-(''),
-(''),
-('');
+('Biológicas'),
+('Exatas'),
+('Humanas'),
+('Tecnologia'),
+('Deboas');
 
 
 
