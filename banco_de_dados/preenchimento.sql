@@ -32,9 +32,9 @@ VALUES
 INSERT INTO usuarios
 (nome, email, telefone, senha, data_nascimento, sexo, data_cadastro, status, cidade)
 VALUES
-('Luciano Borba', 'ciano@gamil.com', '992934567', '123456789', '1998-12-01', 'M', '2017-09-05 15:38:37', '1', '6'),
+('Luciano Borba', 'ciano@gamil.com', '992934567', '123456789', '1998-12-01', 'M', '2017-09-05 15:38:37', '1', '3'),
 ('Lara Caroline', 'lara@gamil.com', '996912347', 'florzinha', '1993-09-03', 'F', '2017-10-09 12:02:39', '1', '2'),
-('Ianka', 'ianka@hotamil.com', '984596076', 'kdjfldjfjj', '1956-04-12', 'F', '2017-08-05 09:31:37', '1', '3'),
+('Ianka', 'ianka@hotmail.com', '984596076', 'unicórnio', '1956-04-12', 'F', '2017-08-05 09:31:37', '1', '3'),
 ('josé Maria', 'jm@gamil.com', '9749484848', '850380504', '1990-10-03', 'M', '2017-03-09 11:02:39', '1', '5'),
 ('Naira Azevedo', 'na@gamil.com', '965456789', 'naiaraazevedo', '1993-03-15', 'F', '2017-02-09 11:02:39', '1', '4');
 
@@ -79,3 +79,18 @@ VALUES
 ('Vamos sair?', '0', '4', '2011-01-06 15:38:56', '3', '1');
 
 /*Inserindo dados na tabela de postagens_multimidias*/
+INSERT INTO postagens_multimidias
+(midia, tipo_conteudo, descricao, ups, downs, data, album, visualizacoes, usuario)
+VALUES
+('Foto', 'Público', '', 'Aniversário', '0', '5', '2011-01-06 20:38:37', 'Família', '10', 'João Maria'),
+('Vídeo', 'Privado', 'Mundo de Sofia', '2', '1', '2011-01-06 20:38:37', 'Filosofia', '15', 'Ianka'),
+('Foto', 'Público', 'Machismo', '4', '10', '2011-01-06 11:38:37', 'Feminismo', '20', 'Ianka'),
+('Vídeo', 'Público', 'Unicórnio Voador', '20', '1', '2011-01-06 15:08:37', 'Discovery Channel', '100', 'Ianka'),
+('Texto', 'Privado', 'Como ser rico dormindo', '100', '0', '2011-01-06 11:38:37', 'Preguiçosos', '1000', 'Ianka');
+
+
+
+
+
+ 
+
