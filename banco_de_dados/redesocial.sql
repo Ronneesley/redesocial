@@ -138,7 +138,7 @@ CREATE TABLE IF NOT EXISTS `redesocial`.`postagens` (
   `downs` INT NOT NULL,
   `descricao` TEXT NOT NULL,
   `data` DATETIME NOT NULL,
-  `vizualizacoes` INT NOT NULL,
+  `visualizacoes` INT NOT NULL,
   `usuario` INT NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_postagens_usuarios1_idx` (`usuario` ASC),
@@ -302,7 +302,7 @@ ENGINE = InnoDB;
 -- Table `redesocial`.`aportes`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `redesocial`.`aportes` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `titulo` VARCHAR(80) NOT NULL,
   `categoria` INT NOT NULL,
   `postagem` INT NOT NULL,
