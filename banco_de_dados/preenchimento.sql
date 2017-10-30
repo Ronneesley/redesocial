@@ -42,40 +42,40 @@ VALUES
 INSERT INTO albuns 
 (nome, data, usuario) 
 VALUES 
-('Família', '2010-05-02', '2'),
-('Amigos', '2013-07-20', '4'),
-('Natal', '2017-12-25', '1'),
-('Formatura SI', '2019-12-15', '5'),
-('Virada de Ano', '2020-01-01', '2')
+('Família', '2010-05-02 05:38:37', '2'),
+('Amigos', '2013-07-20 15:38:37', '4'),
+('Natal', '2017-12-25 16:38:37', '1'),
+('Formatura SI', '2019-12-15 12:38:37', '5'),
+('Virada de Ano', '2020-01-01 19:38:37', '2');
 
 /*Inserindo dados na tabela de multimidias*/
 INSERT INTO multimidias
 (midia, tipo_conteudo, data, album)
 VALUES
-('Foto', 'Público', '2017-02-28','5'),
-('Vídeo', 'Privado', '2017-10-01','3'),
-('Vídeo', 'Privado', '2017-06-20','2'),
-('Foto', 'Público', '2017-12-22','1'),
-('Texto', 'Público', '2017-03-16','1')
+('Foto', 'Público', '2017-02-28 14:38:37','5'),
+('Vídeo', 'Privado', '2017-10-01 13:38:37','3'),
+('Vídeo', 'Privado', '2017-06-20 15:09:37','2'),
+('Foto', 'Público', '2017-12-22 09:38:37','1'),
+('Texto', 'Público', '2017-03-16 11:38:35','1');
 
 /*Inserindo dados na tabela de postagens*/
 INSERT INTO postagens
-(ups, downs, descricao, data, visualizacoes, usuario)
+(ups, downs, descricao, data, vizualizacoes, usuario)
 VALUES
-('0', '0', 'Primeira postagem', '2009-10-05', '3', '4'),
-('0', '0', 'Vida', '2010-10-30', '1', '2'),
-('0', '0', 'Natureza', '2012-11-28', '5', '1'),
-('0', '0', 'IA', '2015-08-01', '15', '2'),
-('0', '0', 'Segunda postagem', '2009-10-22', '5', '4')
+('12', '8', 'Primeira postagem', '2009-10-05 09:38:37', '3', '4'),
+('9', '0', 'Vida', '2010-10-30 12:38:37', '1', '2'),
+('3', '123', 'Natureza', '2012-11-28 05:38:37', '5', '1'),
+('78', '0', 'IA', '2015-08-01 15:34:37', '15', '2'),
+('0', '9', 'Segunda postagem', '2009-10-22 15:38:39', '5', '4');
 
 /*Inserindo dados na tabela de comentarios*/
 INSERT INTO comentarios
-(descricao, ups, downs, data, postagem, resposta, usuario)
+(descricao, ups, downs, data, postagem, usuario)
 VALUES
-('Que linda', '0', '1', '2011-01-06', '3', 'Obrigada!', '2'),
-('Linda', '0', '1', '2011-01-06', '3', 'Você', '4'),
-('Top', '0', '1', '2011-01-06', '3', 'Obg', '3'),
-('Maravilhosa', '0', '1', '2011-01-06', '3', 'Obrigadaa!', '4'),
-('Vamos sair?', '0', '1', '2011-01-06', '3', 'Hoje não Faro kkkk', '1')
+('Que linda', '0', '3', '2011-01-06 20:38:37', '3', '2'),
+('Linda', '2', '1', '2011-01-06 23:38:37', '3', '4'),
+('Top', '4', '1', '2011-01-06 15:08:37', '3', '3'),
+('Maravilhosa', '3', '1', '2011-01-06 11:38:37', '3', '4'),
+('Vamos sair?', '0', '4', '2011-01-06 15:38:56', '3', '1');
 
 /*Inserindo dados na tabela de postagens_multimidias*/
