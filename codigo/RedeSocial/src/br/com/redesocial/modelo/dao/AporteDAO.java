@@ -18,22 +18,19 @@ public class AporteDAO extends DAOCRUDBase<Aporte>  {
  */
   
     @Override
-    public void inserir(Aporte dto) throws Exception {
+    public void inserir(Aporte a) throws Exception {
         Connection conexao = getConexao();
         
-        /*if (dto.getAporte().equals("")){
-            throw new Exception("O arquivo do artigo não pode estar vazio!");
-        }*/
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("insert into aportes(titulo, categoria, postagem) values (?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
         
-        PreparedStatement pstmt = conexao.prepareStatement("insert into aporte(titulo) values (?)", Statement.RETURN_GENERATED_KEYS);
+        pstmt.setString(1, "titulo");
+        pstmt.setInt(2, a.getCategoria().getId());
+        pstmt.setInt(3, a.getPostagem().getId());
         
-        //pstmt.setString(1, dto.getTitulo());
-        pstmt.setInt(2, dto.getCategoria().getId());
-        pstmt.setInt(3, dto.getPostagem().getId());
+        pstmt.executeUpdate(); 
         
-        pstmt.executeUpdate();
-        
-        dto.setId(getId(pstmt));     
+        a.setId(getId(pstmt));
     }
   
   /**
@@ -132,7 +129,7 @@ public class AporteDAO extends DAOCRUDBase<Aporte>  {
         Connection conexao = getConexao();
         
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("delete from aporte where id = ?");
+        pstmt = conexao.prepareStatement("delete from aportes where id = ?");
         
         pstmt.setInt(1, id);
         pstmt.executeUpdate();
