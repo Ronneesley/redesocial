@@ -120,13 +120,11 @@ public class ComentarioBOTest {
     }
 
 
-    
-    @Test
-    
+   @Test
     public void testMetodoAlterar(){
        ComentarioBO bo = new ComentarioBO();
         
-        
+        try{
             Calendar calendario = Calendar.getInstance();
             calendario.set(2017, 7, 18, 10, 55, 13);
 
@@ -141,7 +139,7 @@ public class ComentarioBOTest {
             pais.setNome("Brasil");
 
             PaisBO paisBO = new PaisBO();
-           // paisBO.inserir(pais);
+            paisBO.inserir(pais);
 
             Estado estado = new Estado();
 
@@ -149,7 +147,7 @@ public class ComentarioBOTest {
             estado.setPais(pais);
 
             EstadoBO estadoBO = new EstadoBO();
-            //estadoBO.inserir(estado);
+            estadoBO.inserir(estado);
 
             Cidade cidade = new Cidade();
 
@@ -157,7 +155,7 @@ public class ComentarioBOTest {
             cidade.setEstado(estado);
 
             CidadeBO cidadeBO = new CidadeBO();
-           // cidadeBO.inserir(cidade);
+            cidadeBO.inserir(cidade);
 
             Usuario usuario = new Usuario();
 
@@ -172,37 +170,38 @@ public class ComentarioBOTest {
             usuario.setCidade(cidade);
 
             UsuarioBO usuarioBO = new UsuarioBO();
-           // usuarioBO.inserir(usuario);
+            usuarioBO.inserir(usuario);
 
             Postagem postagem = new Postagem();
 
-            //postagem.setCurtidas(6);
-            postagem.setDescricao("postagem");
+            postagem.setUps(0);
+            postagem.setDowns(0);
+            postagem.setDescricao("Postagem");
             postagem.setData(calendarioPost.getTime());
             postagem.setUsuario(usuario);
-
-            //insere post
+            postagem.setVisualizacoes(0);          
             PostagemBO postagemBO = new PostagemBO();
-           // postagemBO.inserir(postagem);
+            postagemBO.inserir(postagem);
             
-
-           
-            //instancia comentario e insere
             Comentario comentario = new Comentario();
-
-            comentario.setDescricao("Comentario escrito");
-            //comentario.setCurtidas(2);
+            
+            comentario.setDescricao("comentario! ");
+            comentario.setUps(5);
+            comentario.setDowns(2);
             comentario.setData(calendario.getTime());
             comentario.setPostagem(postagem);
-             ComentarioBO comentarioBO = new ComentarioBO();
-
-             try{
-                                
+            comentario.setResposta(comentario);
+            comentario.setUsuario(usuario);
+            comentario.setId(2);
+            
+            ComentarioBO comentarioBO = new ComentarioBO();
+             
+        try{                               
                 bo.inserir(comentario);
             } catch(Exception ex){
                 //Mensagem de erro caso falhe
-                 
-                fail("Falha ao inserir um comentário: " + ex.getMessage());
+             
+              fail("Falha ao inserir um comentário: " + ex.getMessage());
             }
             //alterando o comentario que foi inserido no banco de dados
             comentario.setDescricao("Ola");
@@ -217,9 +216,16 @@ public class ComentarioBOTest {
             //Mensagem de erro caso falhe
             fail("Falha ao alterar o comentario: " + ex.getMessage());
         }
-        }
-    
-    
+    }
+          catch(Exception ex){
+            //Mensagem de erro caso falhe
+            fail("Falha ao inserir um comentário: " + ex.getMessage());
+        
+       }
+    }
+} 
+   
+      
     @Test
     public void testMetodoSelecionar(){
         
