@@ -80,13 +80,43 @@ VALUES
 
 /*Inserindo dados na tabela de postagens_multimidias*/
 INSERT INTO postagens_multimidias
-(midia, tipo_conteudo, descricao, ups, downs, data, album, visualizacoes, usuario)
+(postagem, multimidia)
 VALUES
-('Foto', 'Público', '', 'Aniversário', '0', '5', '2011-01-06 20:38:37', 'Família', '10', 'João Maria'),
-('Vídeo', 'Privado', 'Mundo de Sofia', '2', '1', '2011-01-06 20:38:37', 'Filosofia', '15', 'Ianka'),
-('Foto', 'Público', 'Machismo', '4', '10', '2011-01-06 11:38:37', 'Feminismo', '20', 'Ianka'),
-('Vídeo', 'Público', 'Unicórnio Voador', '20', '1', '2011-01-06 15:08:37', 'Discovery Channel', '100', 'Ianka'),
-('Texto', 'Privado', 'Como ser rico dormindo', '100', '0', '2011-01-06 11:38:37', 'Preguiçosos', '1000', 'Ianka');
+('', ''),
+('', ''),
+('', ''),
+('', ''),
+('', '');
+
+/*Inserindo dados na tabela de postagens_albuns*/
+INSERT INTO postagens_albuns
+(postagem, album)
+VALUES
+('', ''),
+('', ''),
+('', ''),
+('', ''),
+('', '');
+
+/*Inserindo dados na tabela de palavras_chaves*/
+INSERT INTO palavras_chaves
+(descricao)
+VALUES
+(''),
+(''),
+(''),
+(''),
+('');
+
+/*Inserindo dados na tabela de categorias*/
+INSERT INTO categorias
+(descricao)
+VALUES
+(''),
+(''),
+(''),
+(''),
+('');
 
 
 
