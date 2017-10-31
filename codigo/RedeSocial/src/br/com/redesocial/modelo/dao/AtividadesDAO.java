@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 /**
  *
- * @author Aluno
+ * @author Jonathan Silvestre
  */
 public class AtividadesDAO extends DAOCRUDBase<Atividades> {
     
@@ -18,7 +18,7 @@ public class AtividadesDAO extends DAOCRUDBase<Atividades> {
         Connection conexao = getConexao();
 
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("insert into eventos (descricao, tipo, vagas, evento, inicio, fim) values(?,?,?,?,?,?)", Statement.RETURN_GENERATED_KEYS);
+        pstmt = conexao.prepareStatement("insert into atividades (descricao, tipo, vagas, evento, inicio, fim) values(?,?,?,?,?,?)", Statement.RETURN_GENERATED_KEYS);
 
         pstmt.setString(1, dto.getDescricao());
         pstmt.setInt(2, dto.getTipo());
@@ -35,7 +35,7 @@ public class AtividadesDAO extends DAOCRUDBase<Atividades> {
         Connection conexao = getConexao();
         
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("select * from eventos where id = ?");
+        pstmt = conexao.prepareStatement("select * from atividades where id = ?");
         
         pstmt.setInt(1, id);
         
@@ -63,7 +63,7 @@ public class AtividadesDAO extends DAOCRUDBase<Atividades> {
         Connection conexao = getConexao();
 
        PreparedStatement pstmt;
-       pstmt = conexao.prepareStatement("select * from eventos order by nome asc");
+       pstmt = conexao.prepareStatement("select * from atividades order by nome asc");
 
        ResultSet rs;
        rs = pstmt.executeQuery();
@@ -91,7 +91,7 @@ public class AtividadesDAO extends DAOCRUDBase<Atividades> {
     public void excluir(int id) throws Exception {
         Connection conexao = getConexao();  
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("delete from eventos where id = ?");
+        pstmt = conexao.prepareStatement("delete from atividades where id = ?");
         pstmt.setInt(1, id);
         pstmt.executeUpdate();
     }
@@ -101,7 +101,7 @@ public class AtividadesDAO extends DAOCRUDBase<Atividades> {
         Connection conexao = getConexao();
 
         if(dto.getDescricao().equals("")){
-            throw new Exception("O campo Tipo não pode estar vazio!");
+            throw new Exception("O campo Descrição não pode estar vazio!");
         } 
         if(dto.getInicio().equals("")){
             throw new Exception("O campo Inicio não pode estar vazio!");
@@ -111,7 +111,7 @@ public class AtividadesDAO extends DAOCRUDBase<Atividades> {
         } 
 
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("insert into eventos (descricao, tipo, vagas, evento, inicio, fim) values(?,?,?,?,?,?)", Statement.RETURN_GENERATED_KEYS);
+        pstmt = conexao.prepareStatement("insert into Atividades (descricao, tipo, vagas, evento, inicio, fim) values(?,?,?,?,?,?)", Statement.RETURN_GENERATED_KEYS);
 
         pstmt.setString(1, dto.getDescricao());
         pstmt.setInt(2, dto.getTipo());
