@@ -25,17 +25,18 @@
 \contentsline {table}{\numberline {23}{\ignorespaces Requisito Funcional: O sistema deve fornecer um cadastro de eventos.}}{18}{table.3.23}
 \contentsline {table}{\numberline {24}{\ignorespaces Requisito Funcional: O sistema deve inscrever automaticamente o usu\IeC {\'a}rio nas atividades do evento.}}{19}{table.3.24}
 \contentsline {table}{\numberline {25}{\ignorespaces Requisito Funcional: O sistema deve pr\IeC {\'e}-cadastrar o respons\IeC {\'a}vel pela atividade do evento, caso ele n\IeC {\~a}o esteja cadastrado no sistema.}}{19}{table.3.25}
-\contentsline {table}{\numberline {26}{\ignorespaces Caso de Uso: Realizar cadastro}}{34}{table.5.26}
-\contentsline {table}{\numberline {27}{\ignorespaces Caso de Uso: Enviar confirma\IeC {\c c}\IeC {\~a}o de cadastro}}{35}{table.5.27}
-\contentsline {table}{\numberline {28}{\ignorespaces Caso de Uso: Confirmar recebimento de confirma\IeC {\c c}\IeC {\~a}o e ativar conta.}}{36}{table.5.28}
-\contentsline {table}{\numberline {29}{\ignorespaces Caso de Uso: Enviar Post}}{37}{table.5.29}
-\contentsline {table}{\numberline {30}{\ignorespaces Caso de Uso: Realizar Login}}{38}{table.5.30}
-\contentsline {table}{\numberline {31}{\ignorespaces Caso de Uso: Realizar comentarios}}{39}{table.5.31}
-\contentsline {table}{\numberline {32}{\ignorespaces Caso de Uso: Sair da rede social}}{40}{table.5.32}
-\contentsline {table}{\numberline {33}{\ignorespaces Caso de Uso: Alterar dados de Perfil}}{41}{table.5.33}
-\contentsline {table}{\numberline {34}{\ignorespaces Caso de Uso: Pesquisar pessoas e grupos}}{42}{table.5.34}
-\contentsline {table}{\numberline {35}{\ignorespaces Caso de Uso: Enviar mensagem no chat}}{43}{table.5.35}
-\contentsline {table}{\numberline {36}{\ignorespaces Caso de Uso: Manter \IeC {\'a}lbum}}{44}{table.5.36}
-\contentsline {table}{\numberline {37}{\ignorespaces Caso de Uso: Apresentar Chat}}{45}{table.5.37}
-\contentsline {table}{\numberline {38}{\ignorespaces Caso de Uso: Solicita\IeC {\c c}\IeC {\~a}o de amizade}}{46}{table.5.38}
-\contentsline {table}{\numberline {39}{\ignorespaces Caso de Uso: Aceite Solicita\IeC {\c c}\IeC {\~a}o de amizade}}{47}{table.5.39}
+\contentsline {table}{\numberline {26}{\ignorespaces Requisito Funcional: O sistema deve oferecer uma p\IeC {\'a}gina para visualiza\IeC {\c c}\IeC {\~a}o e edi\IeC {\c c}\IeC {\~a}o de eventos j\IeC {\'a} inscritos pelo usu\IeC {\'a}rio.}}{19}{table.3.26}
+\contentsline {table}{\numberline {27}{\ignorespaces Caso de Uso: Realizar cadastro}}{34}{table.5.27}
+\contentsline {table}{\numberline {28}{\ignorespaces Caso de Uso: Enviar confirma\IeC {\c c}\IeC {\~a}o de cadastro}}{35}{table.5.28}
+\contentsline {table}{\numberline {29}{\ignorespaces Caso de Uso: Confirmar recebimento de confirma\IeC {\c c}\IeC {\~a}o e ativar conta.}}{36}{table.5.29}
+\contentsline {table}{\numberline {30}{\ignorespaces Caso de Uso: Enviar Post}}{37}{table.5.30}
+\contentsline {table}{\numberline {31}{\ignorespaces Caso de Uso: Realizar Login}}{38}{table.5.31}
+\contentsline {table}{\numberline {32}{\ignorespaces Caso de Uso: Realizar comentarios}}{39}{table.5.32}
+\contentsline {table}{\numberline {33}{\ignorespaces Caso de Uso: Sair da rede social}}{40}{table.5.33}
+\contentsline {table}{\numberline {34}{\ignorespaces Caso de Uso: Alterar dados de Perfil}}{41}{table.5.34}
+\contentsline {table}{\numberline {35}{\ignorespaces Caso de Uso: Pesquisar pessoas e grupos}}{42}{table.5.35}
+\contentsline {table}{\numberline {36}{\ignorespaces Caso de Uso: Enviar mensagem no chat}}{43}{table.5.36}
+\contentsline {table}{\numberline {37}{\ignorespaces Caso de Uso: Manter \IeC {\'a}lbum}}{44}{table.5.37}
+\contentsline {table}{\numberline {38}{\ignorespaces Caso de Uso: Apresentar Chat}}{45}{table.5.38}
+\contentsline {table}{\numberline {39}{\ignorespaces Caso de Uso: Solicita\IeC {\c c}\IeC {\~a}o de amizade}}{46}{table.5.39}
+\contentsline {table}{\numberline {40}{\ignorespaces Caso de Uso: Aceite Solicita\IeC {\c c}\IeC {\~a}o de amizade}}{47}{table.5.40}
