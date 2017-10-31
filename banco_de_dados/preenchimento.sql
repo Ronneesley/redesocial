@@ -152,3 +152,23 @@ INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario
 INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('1', '2', '2');
 INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('1', '3', '4');
 INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('0', '4', '5');
+
+/*Inserindo dados na tabela de tipos_atividades*/
+INSERT INTO tipos_atividades
+(nome, restricao)
+VALUES
+('Palestra','true'),
+('Reunião da Empresa','false'),
+('Evento','true'),
+('Evento Partidário','true'),
+('Palestra Sobre Negócios','false');
+
+/*Inserindo dados na tabela de atividades*/
+INSERT INTO atividades
+(descricao, inicio, fim, vagas, tipo, evento)
+VALUES
+('Marketing é Vida','2010-01-01 10:00:00','2010-01-01 12:00:00','100','1','2'),
+('O Valor da Existência','2011-02-02 09:00:00','2011-02-02 11:00:00','50','3','4'),
+('Como Investir?','2015-04-14 14:00:00','2015-04-14 16:00:00','65','5','6'),
+('Aprender a Programar é Bom?','2008-10-15 22:00:00','2008-10-15 23:00:00','70','7','8'),
+('O Quanto Vale A Verdade?','2016-05-16 17:00:00','2016-05-16 19:00:00','150','9','10');
