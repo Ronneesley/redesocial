@@ -131,3 +131,24 @@ INSERT INTO `redesocial`.`participantes` (`grupo`, `usuario`, `cargo`) VALUES ('
 INSERT INTO `redesocial`.`participantes` (`grupo`, `usuario`, `cargo`) VALUES ('2', '4', '3');
 INSERT INTO `redesocial`.`participantes` (`grupo`, `usuario`, `cargo`) VALUES ('3', '5', '4');
 INSERT INTO `redesocial`.`participantes` (`grupo`, `usuario`, `cargo`) VALUES ('5', '1', '5');
+
+/*Inserindo dados na tabela de organizadores_eventos*/ 
+INSERT INTO `redesocial`.`organizadores_eventos` (`evento`, `usuario`) VALUES ('1', '1');
+INSERT INTO `redesocial`.`organizadores_eventos` (`evento`, `usuario`) VALUES ('1', '2');
+INSERT INTO `redesocial`.`organizadores_eventos` (`evento`, `usuario`) VALUES ('1', '3');
+INSERT INTO `redesocial`.`organizadores_eventos` (`evento`, `usuario`) VALUES ('2', '4');
+INSERT INTO `redesocial`.`organizadores_eventos` (`evento`, `usuario`) VALUES ('3', '5');
+
+/*Inserindo dados na tabela de presenca_evento*/ 
+INSERT INTO `redesocial`.`presenca_evento` (`presenca`, `evento`, `usuario`) VALUES ('1', '1', '3');
+INSERT INTO `redesocial`.`presenca_evento` (`presenca`, `evento`, `usuario`) VALUES ('0', '2', '1');
+INSERT INTO `redesocial`.`presenca_evento` (`presenca`, `evento`, `usuario`) VALUES ('1', '3', '2');
+INSERT INTO `redesocial`.`presenca_evento` (`presenca`, `evento`, `usuario`) VALUES ('1', '2', '3');
+INSERT INTO `redesocial`.`presenca_evento` (`presenca`, `evento`, `usuario`) VALUES ('0', '2', '1');
+
+/*Inserindo dados na tabela de presenca_atividade*/ 
+INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('1', '2', '3');
+INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('0', '1', '1');
+INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('1', '2', '2');
+INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('1', '3', '4');
+INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('0', '4', '5');
