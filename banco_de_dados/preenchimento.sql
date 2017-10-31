@@ -172,3 +172,17 @@ VALUES
 ('Como Investir?','2015-04-14 14:00:00','2015-04-14 16:00:00','65','5','6'),
 ('Aprender a Programar é Bom?','2008-10-15 22:00:00','2008-10-15 23:00:00','70','7','8'),
 ('O Quanto Vale A Verdade?','2016-05-16 17:00:00','2016-05-16 19:00:00','150','9','10');
+
+/*Inserindo dados na tabela postagens_artigos*/
+INSERT INTO `redesocial`.`postagens_artigos` (`postagem`, `artigo`) VALUES ('1', '5');
+INSERT INTO `redesocial`.`postagens_artigos` (`postagem`, `artigo`) VALUES ('2', '4');
+INSERT INTO `redesocial`.`postagens_artigos` (`postagem`, `artigo`) VALUES ('3', '3');
+INSERT INTO `redesocial`.`postagens_artigos` (`postagem`, `artigo`) VALUES ('4', '2');
+INSERT INTO `redesocial`.`postagens_artigos` (`postagem`, `artigo`) VALUES ('5', '1');
+
+/*Inserindo dados na tabela postagens_palavras_chave*/
+INSERT INTO `redesocial`.`postagens_palavras_chave` (`postagem`, `palavra_chave`) VALUES ('1', '4');
+INSERT INTO `redesocial`.`postagens_palavras_chave` (`postagem`, `palavra_chave`) VALUES ('2', '3');
+INSERT INTO `redesocial`.`postagens_palavras_chave` (`postagem`, `palavra_chave`) VALUES ('3', '1');
+INSERT INTO `redesocial`.`postagens_palavras_chave` (`postagem`, `palavra_chave`) VALUES ('4', '5');
+INSERT INTO `redesocial`.`postagens_palavras_chave` (`postagem`, `palavra_chave`) VALUES ('5', '2');
