@@ -96,10 +96,10 @@ public class CategoriaDAO extends DAOCRUDBase<Categoria> {
      */
     @Override
     public List listar() throws Exception {
-    Connection conexao = getConexao();
+        Connection conexao = getConexao();
         
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("select * from categorias order by data desc");
+        pstmt = conexao.prepareStatement("select * from categorias order by descricao");
         
         ResultSet rs;
         rs = pstmt.executeQuery();
@@ -109,8 +109,8 @@ public class CategoriaDAO extends DAOCRUDBase<Categoria> {
         
         while (rs.next()){
             Categoria c = new Categoria();
-            pstmt.setString(1, c.getDescricao());
-            pstmt.setInt(2, c.getId());
+            c.setId(rs.getInt("id"));
+            c.setDescricao(rs.getString("descricao"));
         
             lista.add(c);
         }

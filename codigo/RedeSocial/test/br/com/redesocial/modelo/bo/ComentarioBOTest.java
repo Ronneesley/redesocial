@@ -6,14 +6,11 @@
 package br.com.redesocial.modelo.bo;
 
 import br.com.redesocial.modelo.dto.Postagem;
-import br.com.redesocial.modelo.dto.Album;
 import br.com.redesocial.modelo.dto.Cidade;
 import br.com.redesocial.modelo.dto.Estado;
 import br.com.redesocial.modelo.dto.Pais;
 import br.com.redesocial.modelo.dto.Usuario;
 import br.com.redesocial.modelo.dto.enumeracoes.Sexo;
-import br.com.redesocial.modelo.utilitarios.Utilitarios;
-import java.io.File;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -114,8 +111,8 @@ public class ComentarioBOTest {
             }
 
             } catch(Exception ex){
-                        //Mensagem de erro caso falhe
-                        fail("Falha ao inserir um comentário: " + ex.getMessage());
+                //Mensagem de erro caso falhe
+                fail("Falha ao inserir um comentário: " + ex.getMessage());
             }
     }
 
@@ -223,8 +220,6 @@ public class ComentarioBOTest {
         
        }
     }
-} 
-   
       
     @Test
     public void testMetodoSelecionar(){

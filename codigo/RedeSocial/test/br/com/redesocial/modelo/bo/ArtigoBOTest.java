@@ -40,6 +40,14 @@ public class ArtigoBOTest {
         artigo1.setURL("www.artigo.com.br");
         artigo1.setArtigo(Utilitarios.lerArquivo(new File("../../arquivos_teste/nome_arquivo.txt")));
         
+        CategoriaBO categoriaBO = new CategoriaBO();
+        Categoria categoria1 = new Categoria();
+        categoria1.setDescricao("Comentário!");
+        
+        categoriaBO.inserir(categoria1);
+        
+        artigo1.setCategoria(categoria1);
+        
         try {
             bo.inserir(artigo1);
         } catch (Exception ex) {
@@ -183,6 +191,14 @@ public class ArtigoBOTest {
         artigo.setURL("www.artigo.com.br");
         artigo.setArtigo(Utilitarios.lerArquivo(new File("../../arquivos_teste/nome_arquivo.txt")));
         
+        CategoriaBO categoriaBO = new CategoriaBO();
+        Categoria categoria1 = new Categoria();
+        categoria1.setDescricao("Comentário 2!");
+
+        categoriaBO.inserir(categoria1);
+
+        artigo.setCategoria(categoria1);
+
         try {
             bo.inserir(artigo);
         } catch (Exception ex) {
@@ -204,26 +220,20 @@ public class ArtigoBOTest {
         try {
             bo.alterar(artigo);
         } catch (Exception ex) {
-            fail("Falha ao inserir um artigo: " + ex.getMessage());
+            fail("Falha ao alterar um artigo: " + ex.getMessage());
         }
     }
     
     @Test
     public void testMetodoSelecionar() throws Exception{
-        
         ArtigoBO bo = new ArtigoBO();
 
         try{
-            
-            List existentes = bo.listar();
-            int qtdeExistentes = existentes.size();
-
             Artigo artigo2 = new Artigo();
 
             artigo2.setIdioma("Ingles");       
             artigo2.setRevista("SBIS");
             artigo2.setISSN("33333333");
-            //artigo2.setAutor("Ciencias da terra"); 
             Calendar calendario = Calendar.getInstance();
             calendario.set(1988, 2, 7, 0, 0, 0);            
             artigo2.setData(calendario.getTime());
@@ -232,16 +242,22 @@ public class ArtigoBOTest {
             artigo2.setResumo("Em design gráfico e editoração, Lorem ipsum é um texto utilizado para preencher o espaço de texto em publicações (jornais, revistas, e websites), com a finalidade de verificar o lay-out, tipografia e formatação antes de utilizar conteúdo real. Muitas vezes este texto também é utilizado em catálogos de tipografia para demonstrar textos e títulos escritos com as fontes.");
             artigo2.setURL("www.artigo.com.br");
             artigo2.setArtigo(Utilitarios.lerArquivo(new File("../../arquivos_teste/nome_arquivo.txt")));
+            
+            CategoriaBO categoriaBO = new CategoriaBO();
+            Categoria categoria1 = new Categoria();
+            categoria1.setDescricao("Comentário 2!");
 
+            categoriaBO.inserir(categoria1);
+
+            artigo2.setCategoria(categoria1);
         
-        try{
             bo.inserir(artigo2);
-                }catch(Exception ex){
-           
+            
+            int id = artigo2.getId();
+            Artigo artigoSelecionado = bo.selecionar(id);
+            assertNotNull("Artigo não encontrado", artigoSelecionado);
+        } catch(Exception ex){
             fail("Falha ao inserir um artigo: " + ex.getMessage());
-                }
-            }catch (Exception ex){
-                fail("Erro ao listar: " + ex.getMessage());
         }
     }
     /**
