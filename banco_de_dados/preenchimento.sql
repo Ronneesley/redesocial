@@ -199,13 +199,13 @@ VALUES
 
 /*Inserindo dados na tabela de atividades*/
 INSERT INTO atividades
-(descricao, inicio, fim, vagas, tipo, evento)
+(id, descricao, inicio, fim, vagas, tipo, evento)
 VALUES
-('Marketing é Vida','2010-01-01 10:00:00','2010-01-01 12:00:00','100','1','2'),
-('O Valor da Existência','2011-02-02 09:00:00','2011-02-02 11:00:00','50','3','4'),
-('Como Investir?','2015-04-14 14:00:00','2015-04-14 16:00:00','65','5','6'),
-('Aprender a Programar é Bom?','2008-10-15 22:00:00','2008-10-15 23:00:00','70','7','8'),
-('O Quanto Vale A Verdade?','2016-05-16 17:00:00','2016-05-16 19:00:00','150','9','10');
+(1, 'Marketing é Vida','2010-01-01 10:00:00','2010-01-01 12:00:00','100','1','2'),
+(2, 'O Valor da Existência','2011-02-02 09:00:00','2011-02-02 11:00:00','50','3','4'),
+(3, 'Como Investir?','2015-04-14 14:00:00','2015-04-14 16:00:00','65','5','6'),
+(4, 'Aprender a Programar é Bom?','2008-10-15 22:00:00','2008-10-15 23:00:00','70','7','8'),
+(5, 'O Quanto Vale A Verdade?','2016-05-16 17:00:00','2016-05-16 19:00:00','150','9','10');
 
 /*Inserindo dados na tabela de eventos*/ 
 INSERT INTO eventos

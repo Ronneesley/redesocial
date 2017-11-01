@@ -462,7 +462,7 @@ ENGINE = InnoDB;
 -- Table `redesocial`.`atividades`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `redesocial`.`atividades` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL auto_increment,
   `descricao` TEXT NOT NULL,
   `inicio` DATETIME NOT NULL,
   `fim` DATETIME NOT NULL,
@@ -577,3 +577,5 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+
