@@ -1,16 +1,16 @@
 \chapter{Projeto}
 
-Este capítulo tem como foco a apresentação ilustrativa do sistema por meio do Diagrama Entidade e Relacionamento(DER), uma representação estrutural e dos relacionamentos das classes pelo Diagrama de Classes, demonstrar as trocas de informação entre operações pelos Diagramas de Sequência e uma visão estática da estrutura física sobre a qual o software será implementado pelo Diagrama de Implantação.
+Este capítulo tem como foco a apresentação ilustrativa do sistema por meio do Diagrama Entidade e Relacionamento(DER), bem como uma representação estrutural e dos relacionamentos das classes pelo Diagrama de Classes. Além disso, busca demonstrar as trocas de informações entre operações pelos Diagramas de Sequência e uma visão estática da estrutura física sobre a qual o \textit{software} será implementado pelo Diagrama de Implantação.
 
 \section{Diagrama Entidade e Relacionamento (DER)}
 
 O Diagrama Entidade e Relacionamento (DER) apresenta de forma gráfica as tabelas do banco de dados, mostrando os tipos de dados que estarão armazenados, bem como os relacionamentos existentes entre as tabelas.
 
-A Figura \ref{figura:DER} mostra as tabelas do banco de dados, onde um usuário pode morar em uma cidade, que possui um estado, e este um país, um país pode ter vários estados, um estado pode ter várias cidades e uma cidade vários usuários.
+A Figura \ref{figura:DER} mostra as tabelas do banco de dados, onde um usuário pode morar em uma cidade, que possui um estado, e este um país, o qual pode ter vários estados, que conseguinte pode ter várias cidades e logo, uma cidade vários usuários.
 
 Um usuário pode ter vários álbuns, que pode ter várias multimídias. Bem como também pode ter várias postagens, que pode ter vários comentários e estes podem ter comentários também.
 
-Uma postagem pode ter várias multimídias e várias multimídias podem estar em várias postagens, bem como uma postagem pode ter vários álbuns e vários álbuns podem estar em várias postagens.
+Uma postagem pode ter várias multimídias e várias multimídias podem estar em várias postagens, como também uma postagem pode ter vários álbuns e vários álbuns podem estar em várias postagens.
 
 \figura{DER}{15}{../banco_de_dados/redesocial.png}{Diagrama Entidade e Relacionamento (DER).}
 
@@ -18,11 +18,8 @@ Uma postagem pode ter várias multimídias e várias multimídias podem estar em
 
 \section{Diagrama de Classes}
 
-Mostra um conjunto de Classes e seus relacionamentos. É o Diagrama central da
-modelagem orientada a objetos. Os elementos de um Diagrama de Classes são:
-Relacionamento; Associação; Agregação; Composição; Generalização; Dependência. Como
-na Figura\ref{figura:multimidia_album_classdiagram} as Classes são representadas por retângulos incluindo: nome, atributos e
-métodos.
+Mostra um conjunto de classes e seus relacionamentos. É o diagrama central da modelagem orientada a objetos. Os elementos de um Diagrama de Classes são:
+Relacionamento; Associação; Agregação; Composição; Generalização; Dependência. Como na Figura\ref{figura:multimidia_album_classdiagram} as classes são representadas por retângulos incluindo: nome, atributos e métodos.
 
 \figura{multimidia_album_classdiagram}{15}{../documentacao/capitulos/projeto/diagramas/multimidia_album_classdiagram.png}{Diagrama de Classes Entidade Multimidia e Album.}
 

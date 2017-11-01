@@ -2,16 +2,16 @@ package br.com.redesocial.modelo.bo;
 
 import br.com.redesocial.modelo.dao.UsuarioDAO;
 import br.com.redesocial.modelo.dto.Usuario;
-import java.util.Properties;
+//import java.util.Properties;
 import java.util.UUID;
-import javax.mail.Address;
+/*import javax.mail.Address;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMessage;*/
 
 /**
  * Define as regras de negócio para os usuários
@@ -78,7 +78,7 @@ public class UsuarioBO extends BOCRUDBase<Usuario, UsuarioDAO> {
         return novaSenha;
     }
     
-    public void recuperarSenha(String email)throws Exception {
+    /*public void recuperarSenha(String email)throws Exception {
         
         Usuario usuarioSelecionado;
         
@@ -123,4 +123,5 @@ public class UsuarioBO extends BOCRUDBase<Usuario, UsuarioDAO> {
             throw new Exception ("Email não encontrado");
         }
     }
+}*/
 }
