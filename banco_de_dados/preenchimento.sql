@@ -60,7 +60,7 @@ VALUES
 
 /*Inserindo dados na tabela de postagens*/
 INSERT INTO postagens
-(ups, downs, descricao, data, vizualizacoes, usuario)
+(ups, downs, descricao, data, visualizacoes, usuario)
 VALUES
 ('12', '8', 'Primeira postagem', '2009-10-05 09:38:37', '3', '4'),
 ('9', '0', 'Vida', '2010-10-30 12:38:37', '1', '2'),
@@ -127,12 +127,14 @@ INSERT INTO `aportes` VALUES
 (5, 'Mais um artigo aprovado!!!', 5, 2);
 
 /*Inserindo dados na tabela artigos*/
-INSERT INTO `artigos` VALUES
-(1,'PORTUGUES', 'ISTOE', '2530-1123', '2017-04-16', 'INFORMATICA', 'NANODEGREE', 'Proin vel turpis fringilla, congue mauris sit amet, interdum ante. ', 'www.istoe.com.br', LOAD_FILE("D:/git/redesocial/banco_de_dados/dados_ficticios_para_views/imagem.jpg"), 1, 1),
-(2,'PORTUGUES', 'VEJA', '2250-1003', '2017-07-10', 'INFORMATICA', 'APPS', 'Proin vel turpis fringilla, congue mauris sit amet, interdum ante.', 'www.veja.com.br', LOAD_FILE("D:/git/redesocial/banco_de_dados/dados_ficticios_para_views/imagem.jpg"), 2, 2),
-(3,'PORTUGUES', 'EXAME', '2125-0023', '2017-09-06', 'INFORMATICA', 'PHP', 'Proin vel turpis fringilla, congue mauris sit amet, interdum .', 'www.exame.com.br', LOAD_FILE("D:/git/redesocial/banco_de_dados/dados_ficticios_para_views/imagem.jpg"), 3, 3),
-(4,'PORTUGUES', 'REVISTA1', '8888-9999', '2017-09-15', 'INFORMATICA', 'JQUERY', 'Proin vel turpis fringilla', 'www.revista1.com.br', LOAD_FILE("D:/git/redesocial/banco_de_dados/dados_ficticios_para_views/imagem.jpg"), 1, 2),
-(5,'PORTUGUES', 'REVISTA2', '9999-9999', '2017-09-15', 'INFORMATICA', 'HTML', 'Proin vel turpis fringilla', 'www.revista2.com.br', LOAD_FILE("D:/git/redesocial/banco_de_dados/dados_ficticios_para_views/imagem.jpg"), 1, 1);
+INSERT INTO artigos
+(id, idioma, revista, issn, data, area_conhecimento, titulo, resumo, url, artigo, categoria) 
+VALUES
+(1,'PORTUGUES', 'ISTOE', '2530-1123', '2017-04-16', 'INFORMATICA', 'NANODEGREE', 'Proin vel turpis fringilla, congue mauris sit amet, interdum ante. ', 'www.istoe.com.br', 1, 1),
+(2,'PORTUGUES', 'VEJA', '2250-1003', '2017-07-10', 'INFORMATICA', 'APPS', 'Proin vel turpis fringilla, congue mauris sit amet, interdum ante.', 'www.veja.com.br', 2, 2),
+(3,'PORTUGUES', 'EXAME', '2125-0023', '2017-09-06', 'INFORMATICA', 'PHP', 'Proin vel turpis fringilla, congue mauris sit amet, interdum .', 'www.exame.com.br', 3, 3),
+(4,'PORTUGUES', 'REVISTA1', '8888-9999', '2017-09-15', 'INFORMATICA', 'JQUERY', 'Proin vel turpis fringilla', 'www.revista1.com.br', 1, 2),
+(5,'PORTUGUES', 'REVISTA2', '9999-9999', '2017-09-15', 'INFORMATICA', 'HTML', 'Proin vel turpis fringilla', 'www.revista2.com.br', 1, 1);
 
 /*Inserindo dados na tabela postagens_artigos*/
 INSERT INTO postagens_artigos 
