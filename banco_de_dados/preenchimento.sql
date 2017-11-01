@@ -60,7 +60,7 @@ VALUES
 
 /*Inserindo dados na tabela de postagens*/
 INSERT INTO postagens
-(ups, downs, descricao, data, vizualizacoes, usuario)
+(ups, downs, descricao, data, visualizacoes, usuario)
 VALUES
 ('12', '8', 'Primeira postagem', '2009-10-05 09:38:37', '3', '4'),
 ('9', '0', 'Vida', '2010-10-30 12:38:37', '1', '2'),
@@ -99,7 +99,7 @@ VALUES
 ('1', '4');
 
 /*Inserindo dados na tabela de palavras_chaves*/
-INSERT INTO palavras_chaves
+INSERT INTO palavras_chave
 (descricao)
 VALUES
 ('Família, União, Esperança, Laço, Amor'),
@@ -118,6 +118,57 @@ VALUES
 ('Tecnologia'),
 ('Deboas');
 
+/*Inserindo dados na tabela aportes*/
+INSERT INTO `aportes` VALUES 
+(1, 'Artigo aprovado!', 1, 4),
+(2, 'Mais uma publicação', 2, 3),
+(3, 'Viram isso?', 3, 2),
+(4, 'Novidade!!', 4, 1),
+(5, 'Mais um artigo aprovado!!!', 5, 2);
+
+/*Inserindo dados na tabela artigos*/
+INSERT INTO `artigos` VALUES
+(1,'PORTUGUES', 'ISTOE', '2530-1123', '2017-04-16', 'INFORMATICA', 'NANODEGREE', 'Proin vel turpis fringilla, congue mauris sit amet, interdum ante. ', 'www.istoe.com.br', LOAD_FILE("C:/tmp/redesocial/banco_de_dados/dados_ficticios_para_views/imagem.jpg"),2, 1),
+(2,'PORTUGUES', 'VEJA', '2250-1003', '2017-07-10', 'INFORMATICA', 'APPS', 'Proin vel turpis fringilla, congue mauris sit amet, interdum ante.', 'www.veja.com.br', LOAD_FILE("D:/git/redesocial/banco_de_dados/dados_ficticios_para_views/imagem.jpg"), 2, 2),
+(3,'PORTUGUES', 'EXAME', '2125-0023', '2017-09-06', 'INFORMATICA', 'PHP', 'Proin vel turpis fringilla, congue mauris sit amet, interdum .', 'www.exame.com.br', LOAD_FILE("D:/git/redesocial/banco_de_dados/dados_ficticios_para_views/imagem.jpg"), 3, 3),
+(4,'PORTUGUES', 'REVISTA1', '8888-9999', '2017-09-15', 'INFORMATICA', 'JQUERY', 'Proin vel turpis fringilla', 'www.revista1.com.br', LOAD_FILE("D:/git/redesocial/banco_de_dados/dados_ficticios_para_views/imagem.jpg"), 1, 2),
+(5,'PORTUGUES', 'REVISTA2', '9999-9999', '2017-09-15', 'INFORMATICA', 'HTML', 'Proin vel turpis fringilla', 'www.revista2.com.br', LOAD_FILE("D:/git/redesocial/banco_de_dados/dados_ficticios_para_views/imagem.jpg"), 1, 1);
+
+
+/*Inserindo dados na tabela postagens_artigos*/
+INSERT INTO `redesocial`.`postagens_artigos` (`postagem`, `artigo`) VALUES ('1', '5');
+INSERT INTO `redesocial`.`postagens_artigos` (`postagem`, `artigo`) VALUES ('2', '4');
+INSERT INTO `redesocial`.`postagens_artigos` (`postagem`, `artigo`) VALUES ('3', '3');
+INSERT INTO `redesocial`.`postagens_artigos` (`postagem`, `artigo`) VALUES ('4', '2');
+INSERT INTO `redesocial`.`postagens_artigos` (`postagem`, `artigo`) VALUES ('5', '1');
+
+/*Inserindo dados na tabela postagens_palavras_chave*/
+INSERT INTO `redesocial`.`postagens_palavras_chave` (`postagem`, `palavra_chave`) VALUES ('1', '4');
+INSERT INTO `redesocial`.`postagens_palavras_chave` (`postagem`, `palavra_chave`) VALUES ('2', '3');
+INSERT INTO `redesocial`.`postagens_palavras_chave` (`postagem`, `palavra_chave`) VALUES ('3', '1');
+INSERT INTO `redesocial`.`postagens_palavras_chave` (`postagem`, `palavra_chave`) VALUES ('4', '5');
+INSERT INTO `redesocial`.`postagens_palavras_chave` (`postagem`, `palavra_chave`) VALUES ('5', '2');
+
+/*Inserindo dados na tabela autores*/
+INSERT INTO autores 
+(usuario, artigo)
+VALUES
+('4', '5'),
+('3', '2'),
+('1', '1'),
+('2', '4'),
+('2', '1');
+
+/*Inserindo dados na tabela relacionamentos*/
+INSERT INTO relacionamentos
+(usuario_1, usuario_2, tipo)
+VALUES
+('1', '2', 'amigo'),
+('3', '1', 'namorado'),
+('1', '5', 'casado'),
+('3', '2', 'casado'),
+('4', '5', 'casado');
+
 /*Inserindo dados na tabela grupos*/
 INSERT INTO `redesocial`.`grupos` (`id`, `nome`, `data_criacao`, `descricao`, `privacidade`, `tipo`) VALUES ('1', 'Profissão Programador', '2017-09-03', 'Discutimos assuntos sobre desenvolvimento de software, mercado de trabalho, etc.', '0', 'Programação');
 INSERT INTO `redesocial`.`grupos` (`id`, `nome`, `data_criacao`, `descricao`, `privacidade`, `tipo`) VALUES ('2', 'BD Master', '2017-10-30', 'Discutimos assuntos sobre SGBDs, mercado de trabalho, etc.', '0', 'Banco de Dados');
@@ -131,6 +182,26 @@ INSERT INTO `redesocial`.`participantes` (`grupo`, `usuario`, `cargo`) VALUES ('
 INSERT INTO `redesocial`.`participantes` (`grupo`, `usuario`, `cargo`) VALUES ('2', '4', '3');
 INSERT INTO `redesocial`.`participantes` (`grupo`, `usuario`, `cargo`) VALUES ('3', '5', '4');
 INSERT INTO `redesocial`.`participantes` (`grupo`, `usuario`, `cargo`) VALUES ('5', '1', '5');
+
+/*Inserindo dados na tabela de tipos_atividades*/
+INSERT INTO tipos_atividades
+(nome, restricao)
+VALUES
+('Palestra','1'),
+('Reunião da Empresa','false'),
+('Evento','true'),
+('Evento Partidário','true'),
+('Palestra Sobre Negócios','false');
+
+/*Inserindo dados na tabela de atividades*/
+INSERT INTO atividades
+(descricao, inicio, fim, vagas, tipo, evento)
+VALUES
+('Marketing é Vida','2010-01-01 10:00:00','2010-01-01 12:00:00','100','1','2'),
+('O Valor da Existência','2011-02-02 09:00:00','2011-02-02 11:00:00','50','3','4'),
+('Como Investir?','2015-04-14 14:00:00','2015-04-14 16:00:00','65','5','6'),
+('Aprender a Programar é Bom?','2008-10-15 22:00:00','2008-10-15 23:00:00','70','7','8'),
+('O Quanto Vale A Verdade?','2016-05-16 17:00:00','2016-05-16 19:00:00','150','9','10');
 
 /*Inserindo dados na tabela de organizadores_eventos*/ 
 INSERT INTO `redesocial`.`organizadores_eventos` (`evento`, `usuario`) VALUES ('1', '1');
@@ -152,53 +223,3 @@ INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario
 INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('1', '2', '2');
 INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('1', '3', '4');
 INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('0', '4', '5');
-
-/*Inserindo dados na tabela de tipos_atividades*/
-INSERT INTO tipos_atividades
-(nome, restricao)
-VALUES
-('Palestra','true'),
-('Reunião da Empresa','false'),
-('Evento','true'),
-('Evento Partidário','true'),
-('Palestra Sobre Negócios','false');
-
-/*Inserindo dados na tabela de atividades*/
-INSERT INTO atividades
-(descricao, inicio, fim, vagas, tipo, evento)
-VALUES
-('Marketing é Vida','2010-01-01 10:00:00','2010-01-01 12:00:00','100','1','2'),
-('O Valor da Existência','2011-02-02 09:00:00','2011-02-02 11:00:00','50','3','4'),
-('Como Investir?','2015-04-14 14:00:00','2015-04-14 16:00:00','65','5','6'),
-('Aprender a Programar é Bom?','2008-10-15 22:00:00','2008-10-15 23:00:00','70','7','8'),
-('O Quanto Vale A Verdade?','2016-05-16 17:00:00','2016-05-16 19:00:00','150','9','10');
-
-/*Inserindo dados na tabela postagens_artigos*/
-INSERT INTO `redesocial`.`postagens_artigos` (`postagem`, `artigo`) VALUES ('1', '5');
-INSERT INTO `redesocial`.`postagens_artigos` (`postagem`, `artigo`) VALUES ('2', '4');
-INSERT INTO `redesocial`.`postagens_artigos` (`postagem`, `artigo`) VALUES ('3', '3');
-INSERT INTO `redesocial`.`postagens_artigos` (`postagem`, `artigo`) VALUES ('4', '2');
-INSERT INTO `redesocial`.`postagens_artigos` (`postagem`, `artigo`) VALUES ('5', '1');
-
-/*Inserindo dados na tabela postagens_palavras_chave*/
-INSERT INTO `redesocial`.`postagens_palavras_chave` (`postagem`, `palavra_chave`) VALUES ('1', '4');
-INSERT INTO `redesocial`.`postagens_palavras_chave` (`postagem`, `palavra_chave`) VALUES ('2', '3');
-INSERT INTO `redesocial`.`postagens_palavras_chave` (`postagem`, `palavra_chave`) VALUES ('3', '1');
-INSERT INTO `redesocial`.`postagens_palavras_chave` (`postagem`, `palavra_chave`) VALUES ('4', '5');
-INSERT INTO `redesocial`.`postagens_palavras_chave` (`postagem`, `palavra_chave`) VALUES ('5', '2');
-
-/*Inserindo dados na tabela aportes*/
-INSERT INTO `aportes` VALUES 
-(1, 'Artigo aprovado!', 1, 4),
-(2, 'Mais uma publicação', 2, 3),
-(3, 'Viram isso?', 3, 2),
-(4, 'Novidade!!', 4, 1),
-(5, 'Mais um artigo aprovado!!!', 5, 2);
-
-/*Inserindo dados na tabela artigos*/
-INSERT INTO `artigos` VALUES
-(1,'PORTUGUES', 'ISTOE', '2530-1123', '2017-04-16', 'INFORMATICA', 'NANODEGREE', 'Proin vel turpis fringilla, congue mauris sit amet, interdum ante. ', 'www.istoe.com.br', LOAD_FILE("D:/git/redesocial/banco_de_dados/dados_ficticios_para_views/imagem.jpg"), 1, 1),
-(2,'PORTUGUES', 'VEJA', '2250-1003', '2017-07-10', 'INFORMATICA', 'APPS', 'Proin vel turpis fringilla, congue mauris sit amet, interdum ante.', 'www.veja.com.br', LOAD_FILE("D:/git/redesocial/banco_de_dados/dados_ficticios_para_views/imagem.jpg"), 2, 2),
-(3,'PORTUGUES', 'EXAME', '2125-0023', '2017-09-06', 'INFORMATICA', 'PHP', 'Proin vel turpis fringilla, congue mauris sit amet, interdum .', 'www.exame.com.br', LOAD_FILE("D:/git/redesocial/banco_de_dados/dados_ficticios_para_views/imagem.jpg"), 3, 3),
-(4,'PORTUGUES', 'REVISTA1', '8888-9999', '2017-09-15', 'INFORMATICA', 'JQUERY', 'Proin vel turpis fringilla', 'www.revista1.com.br', LOAD_FILE("D:/git/redesocial/banco_de_dados/dados_ficticios_para_views/imagem.jpg"), 1, 2),
-(5,'PORTUGUES', 'REVISTA2', '9999-9999', '2017-09-15', 'INFORMATICA', 'HTML', 'Proin vel turpis fringilla', 'www.revista2.com.br', LOAD_FILE("D:/git/redesocial/banco_de_dados/dados_ficticios_para_views/imagem.jpg"), 1, 1);
