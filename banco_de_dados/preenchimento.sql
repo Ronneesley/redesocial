@@ -207,23 +207,23 @@ VALUES
 
 /*Inserindo dados na tabela de eventos*/ 
 INSERT INTO eventos
-()
+(nome, descricao, certificado, inicio, fim, responsavel, inicio_inscricao, encerramento_inscricao)
 VALUES
-(),
-(),
-(),
-(),
-();
+('LatinoWare', '', '', '', '', '', '', ''),
+('Fgsl', '', '', '', '', '', '', ''),
+('Flisol', '', '', '', '', '', '', ''),
+('CSBC', '', '', '', '', '', '', ''),
+('SIMTEC', '', '', '', '', '', '', '');
 
 /*Inserindo dados na responsaveis_atividades*/ 
 INSERT INTO responsaveis_atividades
-()
+(atividade, usuario)
 VALUES
-(),
-(),
-(),
-(),
-();
+('1', '5'),
+('4', '4'),
+('2', '1'),
+('5', '3'),
+('3', '2');
 
 /*Inserindo dados na tabela de organizadores_eventos*/ 
 INSERT INTO `redesocial`.`organizadores_eventos` (`evento`, `usuario`) VALUES ('1', '1');
