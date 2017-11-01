@@ -209,13 +209,13 @@ VALUES
 
 /*Inserindo dados na tabela de eventos*/ 
 INSERT INTO eventos
-(nome, descricao, certificado, inicio, fim, responsavel, inicio_inscricao, encerramento_inscricao)
+(id, nome, descricao, certificado, inicio, fim, responsavel, inicio_inscricao, encerramento_inscricao)
 VALUES
-('Latinoware', 'Evento Congresso Latino-Americano de Software Livre e Tecnologias Abertas', true, '18/10/2017 08:00', '20/10/2017 17:00', 'Parque Itaipu', '01/01/2017 15:00', '20/09/2017 15:00'),
-('Fgsl', 'Fórum Goiano de Software Livre', true, '18/09/2017 09:00', '20/11/2017 18:00', 'João da Beirinha', '01/01/2017 15:00', '20/09/2017 15:00'),
-('Flisol', 'Festival Latino-americano de Instalação de Software Livre', false, '12/09/2017 08:00', '05/11/2017 11:00', 'Unicórnio Colorido', '02/01/2017 12:00', '20/05/2017 13:00'),
-('CSBC', 'Congresso Nacional da Sociedade Brasileira de Computação', true, '11/09/2017 07:00', '20/12/2017 12:00', 'Povo Inteligente', '26/07/2017 15:00', '20/08/2017 16:00'),
-('SIMTEC', 'Simpósio de Tecnologia da Informação', false, '11/09/2017 07:00', '20/01/2017 18:00', 'Alunos de SI', '02/01/2017 12:00', '24/08/2017 12:00');
+(1, 'Latinoware', 'Evento Congresso Latino-Americano de Software Livre e Tecnologias Abertas', true, '18/10/2017 08:00', '20/10/2017 17:00', 'Parque Itaipu', '01/01/2017 15:00', '20/09/2017 15:00'),
+(2, 'Fgsl', 'Fórum Goiano de Software Livre', true, '18/09/2017 09:00', '20/11/2017 18:00', 'João da Beirinha', '01/01/2017 15:00', '20/09/2017 15:00'),
+(3, 'Flisol', 'Festival Latino-americano de Instalação de Software Livre', false, '12/09/2017 08:00', '05/11/2017 11:00', 'Unicórnio Colorido', '02/01/2017 12:00', '20/05/2017 13:00'),
+(4, 'CSBC', 'Congresso Nacional da Sociedade Brasileira de Computação', true, '11/09/2017 07:00', '20/12/2017 12:00', 'Povo Inteligente', '26/07/2017 15:00', '20/08/2017 16:00'),
+(5, 'SIMTEC', 'Simpósio de Tecnologia da Informação', false, '11/09/2017 07:00', '20/01/2017 18:00', 'Alunos de SI', '02/01/2017 12:00', '24/08/2017 12:00');
 
 /*Inserindo dados na responsaveis_atividades*/ 
 INSERT INTO responsaveis_atividades
