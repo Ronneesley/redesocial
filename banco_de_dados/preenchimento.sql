@@ -82,7 +82,7 @@ VALUES
 INSERT INTO postagens_multimidias
 (postagem, multimidia)
 VALUES
-('1', '5'),
+('1', '2'),
 ('5', '3'),
 ('4', '1'),
 ('3', '4'),
@@ -189,13 +189,13 @@ INSERT INTO `redesocial`.`participantes` (`grupo`, `usuario`, `cargo`) VALUES ('
 
 /*Inserindo dados na tabela de tipos_atividades*/ 
 INSERT INTO tipos_atividades
-(nome, restricao)
+(id, nome, restricao)
 VALUES
-('Palestra','true'),
-('Reunião da Empresa','false'),
-('Evento','true'),
-('Evento Partidário','true'),
-('Palestra Sobre Negócios','false');
+(1, 'Palestra', true),
+(2, 'Reunião da Empresa', false),
+(3, 'Evento', true),
+(4, 'Evento Partidário', true),
+(5, 'Palestra Sobre Negócios', false);
 
 /*Inserindo dados na tabela de atividades*/
 INSERT INTO atividades
@@ -211,11 +211,11 @@ VALUES
 INSERT INTO eventos
 (nome, descricao, certificado, inicio, fim, responsavel, inicio_inscricao, encerramento_inscricao)
 VALUES
-('Latinoware', 'Evento Congresso Latino-Americano de Software Livre e Tecnologias Abertas', '', '18/10/2017 08:00', '20/10/2017 17:00', 'Parque Itaipu', '01/01/2017 15:00', '20/09/2017 15:00'),
-('Fgsl', 'Fórum Goiano de Software Livre', '', '18/09/2017 09:00', '20/11/2017 18:00', 'João da Beirinha', '01/01/2017 15:00', '20/09/2017 15:00'),
-('Flisol', 'Festival Latino-americano de Instalação de Software Livre', '', '12/09/2017 08:00', '05/11/2017 11:00', 'Unicórnio Colorido', '02/01/2017 12:00', '20/05/2017 13:00'),
-('CSBC', 'Congresso Nacional da Sociedade Brasileira de Computação', '', '11/09/2017 07:00', '20/12/2017 12:00', 'Povo Inteligente', '26/07/2017 15:00', '20/08/2017 16:00'),
-('SIMTEC', 'Simpósio de Tecnologia da Informação', '', '11/09/2017 07:00', '20/01/2017 18:00', 'Alunos de SI', '02/01/2017 12:00', '24/08/2017 12:00');
+('Latinoware', 'Evento Congresso Latino-Americano de Software Livre e Tecnologias Abertas', true, '18/10/2017 08:00', '20/10/2017 17:00', 'Parque Itaipu', '01/01/2017 15:00', '20/09/2017 15:00'),
+('Fgsl', 'Fórum Goiano de Software Livre', true, '18/09/2017 09:00', '20/11/2017 18:00', 'João da Beirinha', '01/01/2017 15:00', '20/09/2017 15:00'),
+('Flisol', 'Festival Latino-americano de Instalação de Software Livre', false, '12/09/2017 08:00', '05/11/2017 11:00', 'Unicórnio Colorido', '02/01/2017 12:00', '20/05/2017 13:00'),
+('CSBC', 'Congresso Nacional da Sociedade Brasileira de Computação', true, '11/09/2017 07:00', '20/12/2017 12:00', 'Povo Inteligente', '26/07/2017 15:00', '20/08/2017 16:00'),
+('SIMTEC', 'Simpósio de Tecnologia da Informação', false, '11/09/2017 07:00', '20/01/2017 18:00', 'Alunos de SI', '02/01/2017 12:00', '24/08/2017 12:00');
 
 /*Inserindo dados na responsaveis_atividades*/ 
 INSERT INTO responsaveis_atividades
@@ -247,10 +247,6 @@ INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario
 INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('1', '2', '2');
 INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('1', '3', '4');
 INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('0', '4', '5');
-
-
-
-
 
 
 

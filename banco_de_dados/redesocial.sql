@@ -451,7 +451,7 @@ COMMENT = '	';
 -- Table `redesocial`.`tipos_atividades`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `redesocial`.`tipos_atividades` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL auto_increment,
   `nome` VARCHAR(100) NOT NULL,
   `restricao` TINYINT(1) NOT NULL,
   PRIMARY KEY (`id`))
