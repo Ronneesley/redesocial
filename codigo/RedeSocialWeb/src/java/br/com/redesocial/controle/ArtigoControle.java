@@ -1,15 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.redesocial.controle;
 
+import br.com.redesocial.modelo.bo.ArtigoBO;
 import br.com.redesocial.modelo.bo.CategoriaBO;
-import br.com.redesocial.modelo.bo.PaisBO;
+import br.com.redesocial.modelo.dto.Artigo;
 import br.com.redesocial.modelo.dto.Categoria;
-import br.com.redesocial.modelo.dto.Usuario;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -22,8 +19,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author aluno
  */
-@WebServlet(name = "CategoriaControle", urlPatterns = {"/CategoriaControle"})
-public class CategoriaControle extends ControleBase {
+@WebServlet(name = "ArtigoControle", urlPatterns = {"/ArtigoControle"})
+public class ArtigoControle extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -40,70 +37,89 @@ public class CategoriaControle extends ControleBase {
 
         String operacao = request.getParameter("operacao");
         
-        if (estaLogado(request)){
-            try {
-                switch (operacao){
-                    case "CriarNovo":
-                        this.criarNovo(request, response);
-                        break;
-                    case "Cadastrar":
-                        this.cadastrar(request, response);
-                        break;
-                    case "Listar":
-                        this.listar(request, response);
-                        break;
-                    case "Excluir":
-                        this.excluir(request, response);
-                        break;
-                    case "Editar":
-                        this.editar(request, response);
-                        break;
-                }
-            } catch (Exception ex){
-                ex.printStackTrace();
+        try {
+            switch (operacao){
+                case "CriarNovo":
+                    this.criarNovo(request, response);
+                    break;
+                case "Cadastrar":
+                    this.cadastrar(request, response);
+                    break;
+                case "Listar":
+                    this.listar(request, response);
+                    break;
+                case "Excluir":
+                    this.excluir(request, response);
+                    break;
+                case "Editar":
+                    this.editar(request, response);
+                    break;
             }
-        } else {
-            redirecionarNaoAutenticado(request, response);
+        } catch (Exception ex){
+            ex.printStackTrace();
         }
     }
 
     private void criarNovo(HttpServletRequest request, HttpServletResponse response) throws Exception{
         try {
-            Categoria categoria = new Categoria();
+            Artigo artigo = new Artigo();
 
-            request.setAttribute("categoria", categoria);
+            request.setAttribute("artigo", artigo);
+            
+            CategoriaBO categoriaBO = new CategoriaBO();
+            List categorias = categoriaBO.listar();            
+            request.setAttribute("categorias", categorias);
         } catch (Exception ex){
             request.setAttribute("erro", ex.getMessage());
         }
 
-        mostrar(request, response, "paginas/categorias/cadastro.jsp");
-    }
-
-    private void cadastrar(HttpServletRequest request, HttpServletResponse response) throws Exception{
-        Categoria categoria = new Categoria();
-
-        if (!"".equals(request.getParameter("id").trim())){
-            categoria.setId(Integer.parseInt(request.getParameter("id")));
-        }
-
-        categoria.setDescricao(request.getParameter("descricao"));
-
-        request.setAttribute("categoria", categoria);
-
-        if (categoria.getId() == null){
-            this.inserir(categoria, request, response);
-        } else {
-            this.alterar(categoria, request, response);
-        }
-
-        RequestDispatcher rd = request.getRequestDispatcher("paginas/categorias/cadastro.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("paginas/artigos/cadastro.jsp");
         rd.forward(request, response);
     }
 
-    private void inserir(Categoria categoria, HttpServletRequest request, HttpServletResponse response) throws Exception{
+    private void cadastrar(HttpServletRequest request, HttpServletResponse response) throws Exception{
+        Artigo artigo = new Artigo();
+
+        if (!"".equals(request.getParameter("id").trim())){
+            artigo.setId(Integer.parseInt(request.getParameter("id")));
+        }
+
+        artigo.setIdioma(request.getParameter("idioma"));
+        artigo.setRevista(request.getParameter("revista"));
+        artigo.setISSN(request.getParameter("issn"));
+        
+        artigo.setData(new Date());
+        
+        artigo.setAreaConhecimento(request.getParameter("area_conhecimento"));
+        artigo.setTitulo(request.getParameter("titulo"));
+        artigo.setResumo(request.getParameter("resumo"));
+        artigo.setURL(request.getParameter("url"));
+        artigo.setArtigo(new byte[]{});
+        
+        int idCategoria = Integer.parseInt( request.getParameter("categoria") );
+        CategoriaBO categoriaBO = new CategoriaBO();
+        Categoria categoria = categoriaBO.selecionar(idCategoria);
+        artigo.setCategoria(categoria);
+
+        request.setAttribute("artigo", artigo);
+        
+        List categorias = categoriaBO.listar();            
+        request.setAttribute("categorias", categorias);
+
+        if (artigo.getId() == null){
+            this.inserir(artigo, request, response);
+        } else {
+            this.alterar(artigo, request, response);
+        }
+
+        RequestDispatcher rd = request.getRequestDispatcher("paginas/artigos/cadastro.jsp");
+        rd.forward(request, response);
+    }
+
+    private void inserir(Artigo artigo, HttpServletRequest request, HttpServletResponse response) throws Exception{
         try {
-            CategoriaBO categoriaBO = new CategoriaBO();
-            categoriaBO.inserir(categoria);
+            ArtigoBO artigoBO = new ArtigoBO();
+            artigoBO.inserir(artigo);
 
             request.setAttribute("mensagem", "Cadastro realizado com sucesso");
         } catch (Exception ex){
@@ -111,10 +127,10 @@ public class CategoriaControle extends ControleBase {
         }
     }
 
-    private void alterar(Categoria categoria, HttpServletRequest request, HttpServletResponse response) throws Exception{
+    private void alterar(Artigo artigo, HttpServletRequest request, HttpServletResponse response) throws Exception{
         try {
-            CategoriaBO categoriaBO = new CategoriaBO();
-            categoriaBO.alterar(categoria);
+            ArtigoBO artigoBO = new ArtigoBO();
+            artigoBO.alterar(artigo);
 
             request.setAttribute("mensagem", "Alteração realizada com sucesso");
         } catch (Exception ex){
@@ -124,15 +140,15 @@ public class CategoriaControle extends ControleBase {
     
     private void listar(HttpServletRequest request, HttpServletResponse response) throws Exception {
         try {
-            CategoriaBO bo = new CategoriaBO();
-            List categorias = bo.listar();
+            ArtigoBO bo = new ArtigoBO();
+            List artigos = bo.listar();
 
-            request.setAttribute("lista", categorias);
+            request.setAttribute("lista", artigos);
         } catch (Exception ex){
             request.setAttribute("erro", ex.getMessage());
         }
 
-        RequestDispatcher rd = request.getRequestDispatcher("paginas/categorias/listagem.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("paginas/artigos/listagem.jsp");
         rd.forward(request, response);
     }
 
@@ -140,7 +156,7 @@ public class CategoriaControle extends ControleBase {
         try {
             Integer id = Integer.parseInt(request.getParameter("id"));
 
-            CategoriaBO bo = new CategoriaBO();
+            ArtigoBO bo = new ArtigoBO();
             bo.excluir(id);
 
             request.setAttribute("mensagem", "Excluído com sucesso");
@@ -155,17 +171,17 @@ public class CategoriaControle extends ControleBase {
         try {
             Integer id = Integer.parseInt(request.getParameter("id"));
 
-            CategoriaBO categoriaBO = new CategoriaBO();
-            Categoria categoria = categoriaBO.selecionar(id);
+            ArtigoBO artigoBO = new ArtigoBO();
+            Artigo artigo = artigoBO.selecionar(id);
 
-            request.setAttribute("categoria", categoria);
+            request.setAttribute("artigo", artigo);
 
             request.setAttribute("mensagem", "Registro selecionado com sucesso");
         } catch (Exception ex){
             request.setAttribute("erro", ex.getMessage());
         }
 
-        RequestDispatcher rd = request.getRequestDispatcher("paginas/categorias/cadastro.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("paginas/artigos/cadastro.jsp");
         rd.forward(request, response);
     }
 
@@ -205,6 +221,6 @@ public class CategoriaControle extends ControleBase {
      */
     @Override
     public String getServletInfo() {
-        return "Categoria Controle";
+        return "Artigo Controle";
     }// </editor-fold>
 }

@@ -32,7 +32,7 @@ public class ArtigoDAO extends DAOCRUDBase<Artigo>  {
         pstmt.setString(1, dto.getIdioma());
         pstmt.setString(2, dto.getRevista());
         pstmt.setString(3, dto.getISSN());
-        pstmt.setDate(4, new java.sql.Date(dto.getData().getTime()));
+        pstmt.setTimestamp(4, new java.sql.Timestamp(dto.getData().getTime()));
         pstmt.setString(5, dto.getAreaConhecimento());
         pstmt.setString(6, dto.getTitulo());
         pstmt.setString(7, dto.getResumo());

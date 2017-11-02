@@ -5,11 +5,11 @@
     <head>
         <meta charset="UTF-8">
         
-        <title>Listagem de Categorias</title>
+        <title>Listagem de Artigos</title>
     </head>
     <body>
         <div id="fundo">
-            <h1>Listagem de Categorias</h1>
+            <h1>Listagem de Artigos</h1>
             <hr/>
             <div id="mensagem">
                 ${mensagem}
@@ -22,16 +22,16 @@
             <c:if test="${lista != null}">
                 <table border="1">
                     <tr>
-                        <th style="width: 50%;">Descri&ccedil;&atilde;o</th>
+                        <th style="width: 50%;">T&iacute;tulo</th>
                         <th style="width: 50%;">Op&ccedil;&otilde;es</th>
                     </tr>
 
-                    <c:forEach items="${lista}" var="categoria">
+                    <c:forEach items="${lista}" var="artigo">
                         <tr>
-                            <td style="font-family: arial;">${categoria.descricao}</td>
+                            <td style="font-family: arial;">${artigo.titulo}</td>
                             <td style="text-align: center; font-family: arial;">
-                                <a class="botao editar" href="./CategoriaControle?operacao=Editar&amp;id=${categoria.id}">Editar</a>
-                                <a class="botao excluir" href="./CategoriaControle?operacao=Excluir&amp;id=${categoria.id}">Excluir</a>
+                                <a class="botao editar" href="./ArtigoControle?operacao=Editar&amp;id=${artigo.id}">Editar</a>
+                                <a class="botao excluir" href="./ArtigoControle?operacao=Excluir&amp;id=${artigo.id}">Excluir</a>
                             </td>
                         </tr>
                     </c:forEach> 
