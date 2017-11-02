@@ -60,7 +60,7 @@ VALUES
 
 /*Inserindo dados na tabela de postagens*/
 INSERT INTO postagens
-(ups, downs, descricao, data, vizualizacoes, usuario)
+(ups, downs, descricao, data, visualizacoes, usuario)
 VALUES
 ('12', '8', 'Primeira postagem', '2009-10-05 09:38:37', '3', '4'),
 ('9', '0', 'Vida', '2010-10-30 12:38:37', '1', '2'),
@@ -80,17 +80,181 @@ VALUES
 
 /*Inserindo dados na tabela de postagens_multimidias*/
 INSERT INTO postagens_multimidias
-(midia, tipo_conteudo, descricao, ups, downs, data, album, visualizacoes, usuario)
+(postagem, multimidia)
 VALUES
-('Foto', 'Público', '', 'Aniversário', '0', '5', '2011-01-06 20:38:37', 'Família', '10', 'João Maria'),
-('Vídeo', 'Privado', 'Mundo de Sofia', '2', '1', '2011-01-06 20:38:37', 'Filosofia', '15', 'Ianka'),
-('Foto', 'Público', 'Machismo', '4', '10', '2011-01-06 11:38:37', 'Feminismo', '20', 'Ianka'),
-('Vídeo', 'Público', 'Unicórnio Voador', '20', '1', '2011-01-06 15:08:37', 'Discovery Channel', '100', 'Ianka'),
-('Texto', 'Privado', 'Como ser rico dormindo', '100', '0', '2011-01-06 11:38:37', 'Preguiçosos', '1000', 'Ianka');
+('1', '2'),
+('5', '3'),
+('4', '1'),
+('3', '4'),
+('2', '2');
+
+/*Inserindo dados na tabela de postagens_albuns*/
+INSERT INTO postagens_albuns
+(postagem, album)
+VALUES
+('5', '5'),
+('3', '2'),
+('2', '1'),
+('4', '3'),
+('1', '4');
+
+/*Inserindo dados na tabela de palavras_chave*/
+INSERT INTO palavras_chave
+(descricao)
+VALUES
+('Família, União, Esperança, Laço, Amor'),
+('Vida, Reflexão, Liberdade, Genética, Respiração'),
+('Natureza, Fauna, Flora, Animais, Unicórnio'),
+('Virada, Fogos, Champagne, Branco, Trevo'),
+('Colação, Formatura, Beca, Diploma, Festa');
+
+/*Inserindo dados na tabela de categorias*/
+INSERT INTO categorias
+(descricao)
+VALUES
+('Biológicas'),
+('Exatas'),
+('Humanas'),
+('Tecnologia'),
+('Deboas');
+
+/*Inserindo dados na tabela aportes*/
+INSERT INTO `aportes` VALUES 
+(1, 'Artigo aprovado!', 1, 4),
+(2, 'Mais uma publicação', 2, 3),
+(3, 'Viram isso?', 3, 2),
+(4, 'Novidade!!', 4, 1),
+(5, 'Mais um artigo aprovado!!!', 5, 2);
+
+/*Inserindo dados na tabela artigos*/
+INSERT INTO artigos
+(id, idioma, revista, issn, data, area_conhecimento, titulo, resumo, url, artigo, categoria) 
+VALUES
+(1,'PORTUGUES', 'ISTOE', '2530-1123', '2017-04-16', 'INFORMATICA', 'NANODEGREE', 'Proin vel turpis fringilla, congue mauris sit amet, interdum ante. ', 'www.istoe.com.br', 1, 1),
+(2,'PORTUGUES', 'VEJA', '2250-1003', '2017-07-10', 'INFORMATICA', 'APPS', 'Proin vel turpis fringilla, congue mauris sit amet, interdum ante.', 'www.veja.com.br', 2, 2),
+(3,'PORTUGUES', 'EXAME', '2125-0023', '2017-09-06', 'INFORMATICA', 'PHP', 'Proin vel turpis fringilla, congue mauris sit amet, interdum .', 'www.exame.com.br', 3, 3),
+(4,'PORTUGUES', 'REVISTA1', '8888-9999', '2017-09-15', 'INFORMATICA', 'JQUERY', 'Proin vel turpis fringilla', 'www.revista1.com.br', 1, 2),
+(5,'PORTUGUES', 'REVISTA2', '9999-9999', '2017-09-15', 'INFORMATICA', 'HTML', 'Proin vel turpis fringilla', 'www.revista2.com.br', 1, 1);
+
+/*Inserindo dados na tabela postagens_artigos*/
+INSERT INTO postagens_artigos 
+(postagem, artigo)
+VALUES
+('1', '5'),
+('2', '4'),
+('3', '3'),
+('4', '2'),
+('5', '1');
+
+/*Inserindo dados na tabela postagens_palavras_chave*/
+INSERT INTO `redesocial`.`postagens_palavras_chave` (`postagem`, `palavra_chave`) VALUES ('1', '4');
+INSERT INTO `redesocial`.`postagens_palavras_chave` (`postagem`, `palavra_chave`) VALUES ('2', '3');
+INSERT INTO `redesocial`.`postagens_palavras_chave` (`postagem`, `palavra_chave`) VALUES ('3', '1');
+INSERT INTO `redesocial`.`postagens_palavras_chave` (`postagem`, `palavra_chave`) VALUES ('4', '5');
+INSERT INTO `redesocial`.`postagens_palavras_chave` (`postagem`, `palavra_chave`) VALUES ('5', '2');
+
+/*Inserindo dados na tabela autores*/
+INSERT INTO autores 
+(usuario, artigo)
+VALUES
+('2', '4'),
+('4', '5'),
+('3', '1'),
+('1', '2'),
+('5', '3');
+
+/*Inserindo dados na tabela relacionamentos*/
+INSERT INTO relacionamentos 
+(usuario_1, usuario_2, tipo)
+VALUES
+('1', '2', 'Casado'),
+('4', '5', 'Relacionamento Aberto'),
+('3', '1', 'Divorciado'),
+('4', '2', 'Divorciado'),
+('5', '3', 'Relacionamento Sério');
+
+/*Inserindo dados na tabela grupos*/
+INSERT INTO `redesocial`.`grupos` (`id`, `nome`, `data_criacao`, `descricao`, `privacidade`, `tipo`) VALUES ('1', 'Profissão Programador', '2017-09-03', 'Discutimos assuntos sobre desenvolvimento de software, mercado de trabalho, etc.', '0', 'Programação');
+INSERT INTO `redesocial`.`grupos` (`id`, `nome`, `data_criacao`, `descricao`, `privacidade`, `tipo`) VALUES ('2', 'BD Master', '2017-10-30', 'Discutimos assuntos sobre SGBDs, mercado de trabalho, etc.', '0', 'Banco de Dados');
+INSERT INTO `redesocial`.`grupos` (`id`, `nome`, `data_criacao`, `descricao`, `privacidade`, `tipo`) VALUES ('3', 'Artigos TI', '2016-06-15', 'Discutimos assuntos sobre Artigo na area de TI.', '1', 'Artigos Cientificos');
+INSERT INTO `redesocial`.`grupos` (`id`, `nome`, `data_criacao`, `descricao`, `privacidade`, `tipo`) VALUES ('4', 'Business Intelligence', '2017-01-21', 'Discutimos assuntos sobre processo de coleta, organização, análise, compartilhamento e monitoramento de informações que oferecem suporte a gestão de negócios.', '1', 'Inteligência de Negócios');
+INSERT INTO `redesocial`.`grupos` (`id`, `nome`, `data_criacao`, `descricao`, `privacidade`, `tipo`) VALUES ('5', 'Engenharia de software', '2017-04-18', 'Discutimos assuntos sobre especificação, desenvolvimento, manutenção e criação de software, visando organização, produtividade e qualidade.', '0', 'Engenharia');
+
+/*Inserindo dados na tabela participantes*/
+INSERT INTO `redesocial`.`participantes` (`grupo`, `usuario`, `cargo`) VALUES ('1', '2', '1');
+INSERT INTO `redesocial`.`participantes` (`grupo`, `usuario`, `cargo`) VALUES ('1', '3', '2');
+INSERT INTO `redesocial`.`participantes` (`grupo`, `usuario`, `cargo`) VALUES ('2', '4', '3');
+INSERT INTO `redesocial`.`participantes` (`grupo`, `usuario`, `cargo`) VALUES ('3', '5', '4');
+INSERT INTO `redesocial`.`participantes` (`grupo`, `usuario`, `cargo`) VALUES ('5', '1', '5');
+
+/*Inserindo dados na tabela de tipos_atividades*/ 
+INSERT INTO tipos_atividades
+(id, nome, restricao)
+VALUES
+(1, 'Palestra', true),
+(2, 'Reunião da Empresa', false),
+(3, 'Evento', true),
+(4, 'Evento Partidário', true),
+(5, 'Palestra Sobre Negócios', false);
+
+/*Inserindo dados na tabela de atividades*/
+INSERT INTO atividades
+(id, descricao, inicio, fim, vagas, tipo, evento)
+VALUES
+(1, 'Marketing é Vida','2010-01-01 10:00:00','2010-01-01 12:00:00','100','1','2'),
+(2, 'O Valor da Existência','2011-02-02 09:00:00','2011-02-02 11:00:00','50','3','4'),
+(3, 'Como Investir?','2015-04-14 14:00:00','2015-04-14 16:00:00','65','5','6'),
+(4, 'Aprender a Programar é Bom?','2008-10-15 22:00:00','2008-10-15 23:00:00','70','7','8'),
+(5, 'O Quanto Vale A Verdade?','2016-05-16 17:00:00','2016-05-16 19:00:00','150','9','10');
+
+/*Inserindo dados na tabela de eventos*/ 
+INSERT INTO eventos
+(id, nome, descricao, certificado, inicio, fim, responsavel, inicio_inscricao, encerramento_inscricao)
+VALUES
+(1, 'Latinoware', 'Evento Congresso Latino-Americano de Software Livre e Tecnologias Abertas', true, '18/10/2017 08:00', '20/10/2017 17:00', 'Parque Itaipu', '01/01/2017 15:00', '20/09/2017 15:00'),
+(2, 'Fgsl', 'Fórum Goiano de Software Livre', true, '18/09/2017 09:00', '20/11/2017 18:00', 'João da Beirinha', '01/01/2017 15:00', '20/09/2017 15:00'),
+(3, 'Flisol', 'Festival Latino-americano de Instalação de Software Livre', false, '12/09/2017 08:00', '05/11/2017 11:00', 'Unicórnio Colorido', '02/01/2017 12:00', '20/05/2017 13:00'),
+(4, 'CSBC', 'Congresso Nacional da Sociedade Brasileira de Computação', true, '11/09/2017 07:00', '20/12/2017 12:00', 'Povo Inteligente', '26/07/2017 15:00', '20/08/2017 16:00'),
+(5, 'SIMTEC', 'Simpósio de Tecnologia da Informação', false, '11/09/2017 07:00', '20/01/2017 18:00', 'Alunos de SI', '02/01/2017 12:00', '24/08/2017 12:00');
+
+/*Inserindo dados na responsaveis_atividades*/ 
+INSERT INTO responsaveis_atividades
+(atividade, usuario)
+VALUES
+('1', '5'),
+('4', '4'),
+('2', '1'),
+('5', '3'),
+('3', '2');
+
+/*Inserindo dados na tabela de organizadores_eventos*/ 
+INSERT INTO `redesocial`.`organizadores_eventos` (`evento`, `usuario`) VALUES ('1', '1');
+INSERT INTO `redesocial`.`organizadores_eventos` (`evento`, `usuario`) VALUES ('1', '2');
+INSERT INTO `redesocial`.`organizadores_eventos` (`evento`, `usuario`) VALUES ('1', '3');
+INSERT INTO `redesocial`.`organizadores_eventos` (`evento`, `usuario`) VALUES ('2', '4');
+INSERT INTO `redesocial`.`organizadores_eventos` (`evento`, `usuario`) VALUES ('3', '5');
+
+/*Inserindo dados na tabela de presenca_evento*/ 
+INSERT INTO `redesocial`.`presenca_evento` (`presenca`, `evento`, `usuario`) VALUES ('1', '1', '3');
+INSERT INTO `redesocial`.`presenca_evento` (`presenca`, `evento`, `usuario`) VALUES ('0', '2', '1');
+INSERT INTO `redesocial`.`presenca_evento` (`presenca`, `evento`, `usuario`) VALUES ('1', '3', '2');
+INSERT INTO `redesocial`.`presenca_evento` (`presenca`, `evento`, `usuario`) VALUES ('1', '2', '3');
+INSERT INTO `redesocial`.`presenca_evento` (`presenca`, `evento`, `usuario`) VALUES ('0', '2', '1');
+
+/*Inserindo dados na tabela de presenca_atividade*/ 
+INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('1', '2', '3');
+INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('0', '1', '1');
+INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('1', '2', '2');
+INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('1', '3', '4');
+INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('0', '4', '5');
 
 
 
 
 
- 
+
+
+
+
+
 
