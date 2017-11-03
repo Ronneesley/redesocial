@@ -1,13 +1,142 @@
 <!DOCTYPE html>
-
 <html>
-	<head>
-	
-	</head>
-	<body> 
-		<div id="topo">
-            <h1> Listar aportes</h1>                         
-        </div> 
-	
-	</body> 
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>Listagem de Aportes</title>
+        <style>
+            #fundo{
+                background-color: #eee;
+                width: 580px;
+                padding: 20px;
+                margin: auto;
+                border-radius: 10px;
+            }
+            
+            h1{
+                font-family: arial;
+                font-weight: bolder;
+                text-align: left;
+                font-size: 24px;
+                margin-left: 19px;
+            }
+            hr{
+                background-color: #002752;
+                height: 1px;
+                width: 93%;
+            }            
+            
+            th{
+                background-color: #cecece;
+            }
+            
+            table{
+                margin: auto;
+                border-collapse : collapse;
+            }
+            
+            .botao{
+                font-family: arial;
+                font-weight: bolder;
+                color: #fff;
+                border: none;
+                padding: 3px;
+                border-radius: 2px;
+            }
+            
+            .editar{
+                background-color: #65d85c;
+            }
+            
+            .excluir{
+                background-color: #ff4c4c;
+            }
+            
+            .voltar{
+                padding: 10px;
+                border-radius: 5px;
+                background-color: #3d83e8;
+                margin-left: 485px;
+            }
+            
+            a:link{
+                text-decoration: none;
+            }
+            
+            th{
+                font-family: arial;
+                font-weight: bolder;
+                text-align: left;
+                height: 20px;
+            }
+            
+            td{
+                height: 30px;
+                width: 150px;
+            }
+            
+            table{
+                width: 90%;
+            }
+            
+            #mensagem{
+                margin: auto;
+                font-family: arial;
+                font-weight: bolder;
+                width: 200px;
+                background-color: #00FF00;
+                text-align: center;
+                color: #fff;
+                border-radius: 5px;
+            }
+            
+            #erro{
+                margin: auto;
+                font-family: arial;
+                font-weight: bolder;
+                background-color: #FF0000;
+                width: 90%;
+                text-align: center;
+                color: #fff;
+                border-radius: 5px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="fundo">
+            <h1>Listagem de Aportes </h1>
+            <hr/>
+            <div id="mensagem">
+                ${mensagem}
+            </div>
+            <div id="erro">
+                ${erro}
+            </div>
+            <br/>            
+
+            <c:if test="${lista != null}">
+                <table border="1">
+                    <tr>
+                        <th style="width: 40%;">T&iacute;tulo</th>
+						<th style="width: 30%;">Categoria</th>
+                        <th style="width: 25%;"> Op&ccedil;&otilde;es</th>
+                    </tr>
+
+                    <c:forEach items="${lista}" var="aporte">
+                        <tr>
+                            <td style="font-family: arial;">${aporte.titulo}</td>
+							<td style="font-family: arial;">${aporte.categoria}</td>
+                            <td style="text-align: center; font-family: arial;">
+                                <a class="botao editar" href="./AporteControle?operacao=Editar&amp;id=${aporte.id}">Editar</a>
+                                <a class="botao excluir" href="./AporteControle?operacao=Excluir&amp;id=${aporte.id}">Excluir</a>
+                            </td>
+                        </tr>
+                    </c:forEach> 
+                </table>
+            </c:if>
+            <br/>
+            <a class="botao voltar" href="">Voltar<a/>
+        </div>
+    </body>
 </html>
