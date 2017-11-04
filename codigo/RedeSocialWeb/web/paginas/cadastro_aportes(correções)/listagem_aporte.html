@@ -12,9 +12,8 @@
                 margin: auto;
                 border-radius: 10px;
             }
-						
-			#menu_aporte{
-				
+			
+			#menu_aporte{				
 				background-color: #fff;
 				width: 225px;
 				height: 275px;
@@ -37,16 +36,7 @@
                 background-color: #002752;
                 height: 1px;
                 width: 93%;
-            }            
-            
-            th{
-                background-color: #cecece;
-            }
-            
-            table{
-                margin: auto;
-                border-collapse : collapse;
-            }
+            }                        
             
             .botao{
                 font-family: arial;
@@ -75,9 +65,7 @@
                 padding: 10px;
                 border-radius: 5px;
                 background-color: #666666;
-				
-				margin-right: 50px;
-                
+				margin-left: 50px;                
             }
             
             a:link{
@@ -87,22 +75,34 @@
 				color:#000;
 				text-decoration: none;
 			}
-            
+			
+			table{
+                margin: auto;
+				border-collapse: collapse;
+				border: 1px solid black;
+				width: 90%;
+            }
+			
             th{
                 font-family: arial;
                 font-weight: bolder;
                 text-align: left;
                 height: 20px;
+				border: 1px solid black;
+				background-color: #cecece;
             }
             
             td{
                 height: 30px;
                 width: 150px;
+				border: 1px solid black;
             }
+            <!--
+			
+			
             
-            table{
-                width: 90%;
-            }
+            
+			-->
             
             #mensagem{
                 margin: auto;
@@ -129,8 +129,7 @@
         </style>
     </head>
 	
-    <body>        
-		
+    <body>    	
 		<div id="fundo">
             <h1>Listagem de Aportes </h1>			
             <hr/>
@@ -143,15 +142,27 @@
             <br/>            
 
             <c:if test="${lista != null}">
-                <table border="1">
-                    <tr>
-                        <th style="width: 40%;">T&iacute;tulo</th>
-						<th style="width: 30%;">Categoria</th>
-                        <th style="width: 25%;"> Op&ccedil;&otilde;es</th>
-                    </tr>
-
-                    <c:forEach items="${lista}" var="aporte">
+                <c:forEach items="${lista}" var="aporte">
+					<table border="0">                    
                         <tr>
+							<th style="font-family: arial;">${aporte.titulo}</th>							
+						</tr>
+						
+						<tr>                        
+							<td style="font-family: arial;">${postagem.descricao}</td>
+						</tr>
+						
+						<tr>
+							<td style="font-family: arial;"> Por ${usuario.nome} </td>
+						</tr>
+						<tr>
+							<td style="font-family: arial;"> ${postagem.data} </td>
+						</tr>
+						<tr>
+							<td style="font-family: arial;"> ${postagem.visualizacoes} visualiza&ccedil;&otilde;es</td>
+						</tr>
+						<!-- 
+						<tr>
                             <td style="font-family: arial;">${aporte.titulo}</td>
 							<td style="font-family: arial;">${aporte.categoria}</td>
                             <td style="text-align: center; font-family: arial;">
@@ -159,16 +170,19 @@
                                 <a class="botao excluir" href="./AporteControle?operacao=Excluir&amp;id=${aporte.id}">Excluir</a>
                             </td>
                         </tr>
-                    </c:forEach> 
-                </table>
+						-->
+                    
+					</table>
+				</c:forEach> 
             </c:if>
             <br/>
-            <a class="botao voltar" href="">Voltar<a/>
-			<a class="botao novo_aporte" href="">Novo Aporte &plus;<a/>
-			
-			
+			<a class="botao voltar" href="">Voltar<a/>			
         </div>
+		
 		<div id = "menu_aporte">
+		
+            <a class="botao novo_aporte" href="">Novo Aporte &plus;<a/><!--Botao para cadastrar novo aporte-->
+			
 			<a class="link" href="#"><h3>Meus Aportes</h3></a>			
 			<a class="link" href="#"><h5>&mdash; Favoritos</h5></a>
 			<a class="link" href="#"><h5>&mdash; Recentes</h5></a>
@@ -183,5 +197,6 @@
 			<a class="link" href="#"><h5>&mdash; Sugest&otilde;es</h5></a>
 			
 		</div>
+		
     </body>
 </html>

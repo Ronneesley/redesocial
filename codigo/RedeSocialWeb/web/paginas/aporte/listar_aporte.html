@@ -12,7 +12,19 @@
                 margin: auto;
                 border-radius: 10px;
             }
-            
+			
+			#menu_aporte{				
+				background-color: #fff;
+				width: 225px;
+				height: 275px;
+				margin: auto;
+				padding: 20px;
+				font-family: arial;
+				margin-top: -200px;
+				margin-right: 77%;
+				display: table;
+				border: 1px solid;
+			}					            
             h1{
                 font-family: arial;
                 font-weight: bolder;
@@ -58,10 +70,20 @@
                 background-color: #666666;
                 margin-left: 485px;
             }
+			.novo_aporte{
+                padding: 10px;
+                border-radius: 5px;
+                background-color: #666666;
+				margin-left: 50px;                
+            }
             
             a:link{
                 text-decoration: none;
             }
+			.link{
+				color:#000;
+				text-decoration: none;
+			}
             
             th{
                 font-family: arial;
@@ -103,9 +125,10 @@
             
         </style>
     </head>
-    <body>
-        <div id="fundo">
-            <h1>Listagem de Aportes </h1>
+	
+    <body>    	
+		<div id="fundo">
+            <h1>Listagem de Aportes </h1>			
             <hr/>
             <div id="mensagem">
                 ${mensagem}
@@ -136,7 +159,27 @@
                 </table>
             </c:if>
             <br/>
-            <a class="botao voltar" href="">Voltar<a/>
+			<a class="botao voltar" href="">Voltar<a/>			
         </div>
+		
+		<div id = "menu_aporte">
+		
+            <a class="botao novo_aporte" href="">Novo Aporte &plus;<a/><!--Botao para cadastrar novo aporte-->
+			
+			<a class="link" href="#"><h3>Meus Aportes</h3></a>			
+			<a class="link" href="#"><h5>&mdash; Favoritos</h5></a>
+			<a class="link" href="#"><h5>&mdash; Recentes</h5></a>
+			<a class="link" href="#"><h5>&mdash; Salvos</h5></a>
+			<a class="link" href="#"><h5>&mdash; Lixeira</h5></a>			
+			
+			<a class="link" href="#"><h3>Categoria de Discuss&atilde;o</h3></a>			
+			<a class="link" href="#"><h5>&mdash; Perfil</h5></a>
+			<a class="link" href="#"><h5>&mdash; Amigos</h5></a>
+			<a class="link" href="#"><h5>&mdash; Comunidades</h5></a>
+			<a class="link" href="#"><h5>&mdash; Cole&ccedil;&otilde;es</h5></a>
+			<a class="link" href="#"><h5>&mdash; Sugest&otilde;es</h5></a>
+			
+		</div>
+		
     </body>
 </html>
