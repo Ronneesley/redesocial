@@ -211,11 +211,11 @@ VALUES
 INSERT INTO eventos
 (id, nome, descricao, certificado, inicio, fim, responsavel, inicio_inscricao, encerramento_inscricao)
 VALUES
-(1, 'Latinoware', 'Evento Congresso Latino-Americano de Software Livre e Tecnologias Abertas', true, '18/10/2017 08:00', '20/10/2017 17:00', 'Parque Itaipu', '01/01/2017 15:00', '20/09/2017 15:00'),
-(2, 'Fgsl', 'Fórum Goiano de Software Livre', true, '18/09/2017 09:00', '20/11/2017 18:00', 'João da Beirinha', '01/01/2017 15:00', '20/09/2017 15:00'),
-(3, 'Flisol', 'Festival Latino-americano de Instalação de Software Livre', false, '12/09/2017 08:00', '05/11/2017 11:00', 'Unicórnio Colorido', '02/01/2017 12:00', '20/05/2017 13:00'),
-(4, 'CSBC', 'Congresso Nacional da Sociedade Brasileira de Computação', true, '11/09/2017 07:00', '20/12/2017 12:00', 'Povo Inteligente', '26/07/2017 15:00', '20/08/2017 16:00'),
-(5, 'SIMTEC', 'Simpósio de Tecnologia da Informação', false, '11/09/2017 07:00', '20/01/2017 18:00', 'Alunos de SI', '02/01/2017 12:00', '24/08/2017 12:00');
+(1,'Latinoware', 'Evento Congresso Latino-Americano de Software Livre e Tecnologias Abertas', true ,'2017/10/18 08:00', '2017/10/20 17:00', 'Parque Itaipu', '2017/01/01 15:00', '2017/09/20 15:00'),
+(2, 'Fgsl', 'Fórum Goiano de Software Livre', true, '2017/09/18 19:00', '2017/11/20 18:00', 'João da Beirinha', '2017/01/01 15:00', '2017/09/20 15:00'),
+(3, 'Flisol', 'Festival Latino-americano de Instalação de Software Livre', false, '2017/09/12 08:00', '2017/11/05 11:00', 'Garotos de programa', '2017/01/02 12:00', '2017/05/20 13:00'),
+(4, 'CSBC', 'Congresso Nacional da Sociedade Brasileira de Computação', true, '2017/09/11 07:00', '2017/12/20 12:00', 'Povo Inteligente', '2017/07/26 15:00', '2017/08/20 16:00'),
+(5, 'SIMTEC', 'Simpósio de Tecnologia da Informação', false, '2017/09/11 07:00', '2017/01/20 18:00', 'Alunos de SI', '2017/01/02 12:00', '2017/08/24 12:00');
 
 /*Inserindo dados na responsaveis_atividades*/ 
 INSERT INTO responsaveis_atividades
