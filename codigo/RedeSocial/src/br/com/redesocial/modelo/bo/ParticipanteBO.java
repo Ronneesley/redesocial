@@ -1,40 +1,43 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.redesocial.modelo.bo;
 
 import br.com.redesocial.modelo.dao.ParticipanteDAO;
 import br.com.redesocial.modelo.dto.Participante;
 
-public class ParticipanteBO {
+/**
+ * Define as regras de negócio para os usuários
+ * @author Igor Justino Rodrigues
+ * @since 27/07/2017
+ */
+public class ParticipanteBO extends BOCRUDBase<Participante, ParticipanteDAO> {
     /**
      * Instancia um objeto de país DAO
      * @return instância de acesso aos dados do país
      */
+    @Override
     protected ParticipanteDAO instanciarDAO() {
         return new ParticipanteDAO();
+    }
+    
+    /**
+     * Validação da chave primária de um objeto país
+     * @param dto objeto em questão
+     * @throws Exception validação se a chave não foi preenchida
+     */
+    @Override
+    protected void validarChavePrimaria(Participante dto) throws Exception {
+        if (dto.getGrupo() == null) throw new Exception("Preencha o campo Grupo");
+        if (dto.getUsuario() == null) throw new Exception("Preencha o campo Usuario");
     }
 
     /**
      * Validação dos atributos de país
-     * @param p objeto em questão que será validado
+     * @param dto objeto em questão que será validado
      * @throws Exception validações encontradas
      */
-    protected void validar(Participante p) throws Exception {
+    @Override
+    protected void validar(Participante dto) throws Exception {
         //Validações
-        if (p.getCargo() == null) throw new Exception("Preencha o Cargo");
-    }
-
-    /**
-     * Validação da chave primária de um objeto país
-     * @param p objeto em questão
-     * @throws Exception validação se a chave não foi preenchida
-     */
-    protected void validarChavePrimaria(Participante p) throws Exception {
-        if(p.getGrupo() == null ) throw new Exception("Prencha a Grupo"); 
-        if (p.getUsuario() == null) throw new Exception("Prencha a Usuario");
-    }
+        if (dto.getCargo() == null) throw new Exception("Preencha o Cargo");
+        
+    }    
 }
-

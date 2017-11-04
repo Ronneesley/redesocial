@@ -17,6 +17,16 @@ public class GrupoBO extends BOCRUDBase <Grupo, GrupoDAO> {
     protected GrupoDAO instanciarDAO() {
         return new GrupoDAO();
     }
+    
+    /**
+     * Validação da chave primária de um objeto país
+     * @param dto objeto em questão
+     * @throws Exception validação se a chave não foi preenchida
+     */
+    @Override
+    protected void validarChavePrimaria(Grupo dto) throws Exception {
+        if (dto.getId() == null) throw new Exception("Preencha o campo Id");
+    }
 
     /**
      * Validação dos atributos de país
@@ -31,15 +41,5 @@ public class GrupoBO extends BOCRUDBase <Grupo, GrupoDAO> {
         if (dto.getDescricao() == null || dto.getDescricao().trim().equals("")) throw new Exception("Preencha o campo Descricao");
         if (dto.getPrivacidade() == null) throw new Exception("Preencha o campo Privacidade");
         if (dto.getTipo().trim().equals("")) throw new Exception("Preencha o Tipo");
-    }
-
-    /**
-     * Validação da chave primária de um objeto país
-     * @param dto objeto em questão
-     * @throws Exception validação se a chave não foi preenchida
-     */
-    @Override
-    protected void validarChavePrimaria(Grupo dto) throws Exception {
-        if (dto.getId() == null) throw new Exception("Preencha o campo Id");
-    }
+    }    
 }

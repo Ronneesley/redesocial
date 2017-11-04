@@ -13,12 +13,12 @@ public class Participante {
     /**
      * Construtor vazio para a classe
      */
-    public Participante() {
-    
+    public Participante(){
+        
     }
     
     /**
-     * Construtor da classe Pais com dois parâmetros
+     * Construtor vazio para a classe
      * @param grupo
      * @param usuario
      * @param cargo
@@ -27,7 +27,7 @@ public class Participante {
         this.grupo = grupo;
         this.usuario = usuario;
         this.cargo = cargo;
-    }
+    }   
 
     public Grupo getGrupo() {
         return grupo;
@@ -51,8 +51,5 @@ public class Participante {
 
     public void setCargo(Integer cargo) {
         this.cargo = cargo;
-    }
-    
-    
-    
+    }    
 }
