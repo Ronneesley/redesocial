@@ -1,0 +1,4 @@
+\select@language {brazil}
+\contentsline {section}{\numberline {1}O que \IeC {\'e} JDBC? }{2}
+\contentsline {section}{\numberline {2}O que \IeC {\'e} transa\IeC {\c c}\IeC {\~a}o? }{2}
+\contentsline {section}{\numberline {3}Refer\IeC {\^e}ncias Bibliogr\IeC {\'a}fica}{5}
