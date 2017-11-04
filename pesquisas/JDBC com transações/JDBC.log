@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.11.4)  4 NOV 2017 17:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.11.4)  4 NOV 2017 17:40
 entering extended mode
 **./JDBC.tex
 (JDBC.tex
@@ -440,37 +440,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks22
 \@floatcapt=\box29
 )
-("C:\Users\GUSTTAVO NUNES\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listing
-s.sty" ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks23
-)
-\lst@mode=\count101
-\lst@gtempboxa=\box30
-\lst@token=\toks24
-\lst@length=\count102
-\lst@currlwidth=\dimen113
-\lst@column=\count103
-\lst@pos=\count104
-\lst@lostspace=\dimen114
-\lst@width=\dimen115
-\lst@newlines=\count105
-\lst@lineno=\count106
-\lst@maxwidth=\dimen116
-
-("C:\Users\GUSTTAVO NUNES\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc
-.sty"
-File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count107
-\lst@skipnumbers=\count108
-\lst@framebox=\box31
-)
-("C:\Users\GUSTTAVO NUNES\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listing
-s.cfg"
-File: listings.cfg 2015/06/04 1.6 listings configuration
-))
-Package: listings 2015/06/04 1.6 (Carsten Heinz)
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
 Package: color 2016/06/02 v1.1d Standard LaTeX Color (DPC)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
@@ -487,8 +457,39 @@ Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count109
+\Gread@gobject=\count101
 ))
+("C:\Users\GUSTTAVO NUNES\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listing
+s.sty" ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks23
+)
+\lst@mode=\count102
+\lst@gtempboxa=\box30
+\lst@token=\toks24
+\lst@length=\count103
+\lst@currlwidth=\dimen113
+\lst@column=\count104
+\lst@pos=\count105
+\lst@lostspace=\dimen114
+\lst@width=\dimen115
+\lst@newlines=\count106
+\lst@lineno=\count107
+\lst@maxwidth=\dimen116
+
+("C:\Users\GUSTTAVO NUNES\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc
+.sty"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count108
+\lst@skipnumbers=\count109
+\lst@framebox=\box31
+)
+("C:\Users\GUSTTAVO NUNES\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listing
+s.cfg"
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
 ("C:\Users\GUSTTAVO NUNES\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang
 1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
@@ -543,33 +544,32 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 (JDBC.aux)
 \openout1 = `JDBC.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-\c@lstlisting=\count113
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
 
 ("C:\Users\GUSTTAVO NUNES\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.
 mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count114
+\scratchcounter=\count113
 \scratchdimen=\dimen127
 \scratchbox=\box32
-\nofMPsegments=\count115
-\nofMParguments=\count116
+\nofMPsegments=\count114
+\nofMParguments=\count115
 \everyMPshowfont=\toks26
-\MPscratchCnt=\count117
+\MPscratchCnt=\count116
 \MPscratchDim=\dimen128
-\MPnumerator=\count118
-\makeMPintoPDFobject=\count119
+\MPnumerator=\count117
+\makeMPintoPDFobject=\count118
 \everyMPtoPDFconversion=\toks27
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
@@ -613,6 +613,8 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
+\c@lstlisting=\count119
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -651,7 +653,7 @@ G,.JBIG2,.JB2,.eps]
 File: recursos/imagens/logo.png Graphic file (type png)
 
 <use recursos/imagens/logo.png>
-Package pdftex.def Info: recursos/imagens/logo.png used on input line 63.
+Package pdftex.def Info: recursos/imagens/logo.png used on input line 93.
 (pdftex.def)             Requested size: 170.71652pt x 39.01822pt.
  [1
 
@@ -662,11 +664,11 @@ recursos/imagens/logo.png>] (JDBC.toc)
 
 
 [1]
-LaTeX Font Info:    Try loading font information for U+msa on input line 112.
+LaTeX Font Info:    Try loading font information for U+msa on input line 142.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 112.
+LaTeX Font Info:    Try loading font information for U+msb on input line 142.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -677,7 +679,7 @@ File: recursos/imagens/commit_rollback.png Graphic file (type png)
 
 <use recursos/imagens/commit_rollback.png>
 Package pdftex.def Info: recursos/imagens/commit_rollback.png used on input lin
-e 134.
+e 164.
 (pdftex.def)             Requested size: 426.79134pt x 236.15169pt.
 
 
@@ -692,7 +694,7 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2.
 ) [3 <./recursos/imagens/commit_rollback.png>] [4]
-Overfull \hbox (131.32921pt too wide) in paragraph at lines 180--181
+Overfull \hbox (131.32921pt too wide) in paragraph at lines 210--211
 \OT1/cmr/m/n/12 no-lo-gia. Dis-ponvel em: $\OML/cmm/m/it/12 <$$\OT1/cmtt/m/n/
 12 http : / / www . revistabw . com . br / revistabw / transacoes-[]em-[]bancos
 -[]de-[]dados/$\OT1/cmr/m/n/12 .
@@ -700,10 +702,10 @@ Overfull \hbox (131.32921pt too wide) in paragraph at lines 180--181
 
 [5] (JDBC.aux) ) 
 Here is how much of TeX's memory you used:
- 6138 strings out of 493335
- 79718 string characters out of 3136651
- 209279 words of memory out of 3000000
- 9540 multiletter control sequences out of 15000+200000
+ 6143 strings out of 493335
+ 79771 string characters out of 3136651
+ 209956 words of memory out of 3000000
+ 9544 multiletter control sequences out of 15000+200000
  12131 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,6n,40p,444b,1643s stack positions out of 5000i,500n,10000p,200000b,50000s
