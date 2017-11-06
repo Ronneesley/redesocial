@@ -1,0 +1,122 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[brazil]{babel}
+\usepackage{indentfirst}
+\usepackage{url}
+\usepackage{float}
+\usepackage{color}
+%%%%%%%%%%Codigos para o JAVA%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+\usepackage{listings}
+\lstset{language=Java,
+  showspaces=false,
+  showtabs=false,
+  breaklines=true,
+  showstringspaces=false,
+  breakatwhitespace=true,
+  commentstyle=\color{pgreen},
+  keywordstyle=\color{pblue},
+  stringstyle=\color{pred},
+  basicstyle=\ttfamily,
+  moredelim=[il][\textcolor{pgrey}]{\$\$},
+  moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Fim codigo JAVA%%%%%%%%%%%%%%
+%%%%%%%%%%%Codigo geral%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,                    % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=Octave,                 % the language of the code
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,                       % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Fim codigo geral%%%%%%%%%%%%%
+\RequirePackage{graphicx}
+\title{JDBC com transações}
+\author{Daniel Moreira Cardoso \and Gusttavo Nunes Gomes\and Jeferson Rossini Ferreira Lourenço\and Paulo Henrique Rodrigues Araujo\and Warley Rodrigues de Andrade}
+ 
+\usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
+\begin{document}
+\begin{titlepage}
+\begin{center}
+\begin{figure}[htb]
+                
+                \label{figura:LogoIF}
+        
+                \centering
+                \includegraphics[width=6cm]{recursos/imagens/logo.png} 
+\end{figure}
+Instituto Federal Goiano - Campus Ceres\\
+Bacharelado em Sistemas de Informação\\
+Prof. Me. Ronneesley Moura Teles\\\vspace{0.5cm}
+Andrey Ribeiro \\
+Gleydson Alves\\
+Igor Justino\\
+Jeferson Rossini\\
+Warley Rodrigues\\
+\vspace{5.0cm}
+\textit{\textbf{\Large{AJAX com JQuery}}}\\\vspace{0.5cm}
+\vspace{9.5cm}
+\end{center}
+\end{titlepage}
+\tableofcontents
+\newpage
+\begin{center}
+\textbf{\Large{AJAX com JQuery}}\\\vspace{0.5cm}
+\end{center}
+\section{Introdução}
+Durante o desenvolvimento de sites e sistemas web em geral, é comum a necessidade de consumir recursos do servidor sem que a página precise ser carregada novamente. Para atender esse tipo de situação, podemos utilizar o conceito de Ajax, definido, em poucas palavras, como um conjunto de técnicas que utilizam JavaScript para carregar informações de forma assíncrona.
+
+Ao realizar chamadas assíncronas, o fluxo do código não é interrompido até que a resposta seja obtida. Ao invés disso, após realizar a requisição, a resposta é obtida em um momento posterior, de forma independente, e tratada por meio de uma função (chamada função de callback).
+
+Os frameworks javascript facilitaram o nosso trabalho disponibilizando funções que fazem a parte complicada e pedem apenas informações básicas. E de bônus podemos adicionar com tranqüilidade animações enquanto a informação é carregada.
+O jQuery oferece uma gama de funções para trabalhar as requisições AJAX.[1]
+
+\section{O que é AJAX?}
+
+É a função que mais oferece funcionalidades e devido a isso exige um pouco mais de estudo para ser compreendida. E todas as funções mais específicas que serão apresentadas adiante utilizam esta função para iniciar as requisições.
+Para haver a requisição, você precisa informar um seletor que vai dar início à execução, o endereço do arquivo que contém os dados que serão retornados, o tipo de dado retornado e o que será feito com ele.
+
+\section{Referências Bibliográfica}
+\noindent \textbf{[1]} \url {https://www.devmedia.com.br/ajax-com-jquery-trabalhando-com-requisicoes-assincronas/37141}
+\\\vspace{0.2cm}
+
+\noindent \textbf{[2]} \url {http://www.webmaster.pt/requisicoes-ajax-jquery-2216.html}
+
+\end{document}
+%Modelo de código para inserir figura
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=15cm]{logo.png}
+%\label{4}
+%\caption{Fonte:http://...; Acesso em 06/11/2017}
+%\end{figure}
