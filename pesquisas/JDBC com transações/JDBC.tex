@@ -156,6 +156,7 @@ id & nome & saldo \\
 Para a transação ocorrer os dois comandos devem ser válidos, se a transação for válida os dados são enviados ao banco de dados (\textit{commit}). Caso não seja válida, ou se algo der errado o procedimento deve ser abortado (rollback). 
 
 Quando se fala em \textit{commit} e \textit{rollback} é importante falar de autocommit, que permite que as operações sejam commitadas automaticamente. A maioria dos SGBDS usam por modo padrão o \textit{Autocommit}, ou seja, quando são executados comandos de UPDATE, INSERT ou DELETE sem iniciar uma transação explícita, essas operações são commitadas de forma automática.
+\newpage
 
 	
 
@@ -165,6 +166,7 @@ Quando se fala em \textit{commit} e \textit{rollback} é importante falar de aut
 \label{4}
 \caption{Fonte: https://www.ime.usp.br/~jef/TransacoesControleConcorrencia.pdf}
 \end{figure} 
+
 
 Porém as transações normalmente são feitas a nível de programação e não a nível de banco de dados (\textit{procedures}) para maior facilidade caso seja necessário migrar a base de dados para um outro SGBD. 
 
