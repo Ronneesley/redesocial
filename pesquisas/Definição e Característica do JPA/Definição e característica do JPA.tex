@@ -78,40 +78,32 @@
 Instituto Federal Goiano - Campus Ceres\\
 Bacharelado em Sistemas de Informação\\
 Prof. Me. Ronneesley Moura Teles\\\vspace{0.5cm}
-Daniel \\
 Davi\\
 Igor Justino\\
 Luciano\\
 Warley Rodrigues\\
+Wesley Felix\\
 \vspace{5.0cm}
-\textit{\textbf{\Large{Vantagens e Desvantagens do Uso de Triggers}}}\\\vspace{0.5cm}
+\textit{\textbf{\Large{Definição e Característica do JPA}}}\\\vspace{0.5cm}
 \vspace{9.5cm}
 \end{center}
 \end{titlepage}
 \tableofcontents
 \newpage
 \begin{center}
-\textbf{\Large{Vantagens e Desvantagens do Uso de Triggers}}\\\vspace{0.5cm}
+\textbf{\Large{Definição e Característica do JPA}}\\\vspace{0.5cm}
 \end{center}
-\section{Introdução}
-Um trigger é um tipo especial de procedimento armazenado, que é executado sempre que há uma tentativa de modificar os dados de uma tabela que é protegida por ele. Por isso temos:
+\section{O que é?}
+JPA é um framework leve, baseado em POJOS (Plain Old Java Objects) para persistir objetos Java. Java Persiste API é uma padrão do Java para persistência de dados que deve ser implementada por frameworks que queiram seguir este padrão, como o JPA é usado na camada de persistência com o objetivo de ter maior produtividade dos desenvolvedores, com ele controlarmos a persistência dentro do Java, com isso teremos um padrão para mapear nossos objetos para Banco de Dados, atualmente o JPA está na versão 2.0 como esta especificado na Documentação JPA.
 
- - Associados a uma tabela: os TRIGGERS são definidos em uma tabela específica, que é denominada tabela de TRIGGERS;
- 
- - Chamados Automaticamente: quando há uma tentativa de inserir, atualizar ou excluir os dados em uma tabela, e um TRIGGER tiver sido definido na tabela para essa ação específica, ele será executado automaticamente, não podendo nunca ser ignorado.
- 
- - Não podem ser chamados diretamente: ao contrário dos procedimentos armazenados do sistema, os disparadores não podem ser chamados diretamente e não passam nem aceitam parâmetros.
- 
- - É parte de uma transação: o TRIGGER e a instrução que o aciona são tratados como uma única transação, que poderá ser revertida em qualquer ponto do procedimento, caso você queria usar “ROLLBACK”, conceitos que veremos mais a frente.[1]
+A Java Persistence API, diferente do que muitos imaginam, não é apenas um framework para Mapeamento Objeto-Relacional (ORM – Object-Relational Mapping), ela também oferece diversas funcionalidades essenciais em qualquer aplicação corporativa.[1]
 
-\section{Para o que serve uma TRIGGER?}
-Uma Trigger dentro do seu banco será de uma utilidade enorme, imaginem que temos um banco de dados com 1.500,000 de registros, onde os funcionários da empresa ganham por hora, e você tem que atualizar o banco de horas de cada funcionário por dia, alguns comandos poderia fazer isso por nós, mas seria um pouco complicado e desgastante, então, por este motivo, criamos nossas Triggers, onde definimos o que deve ser mudado na tabela num único arquivo e depois acionamos um único comando DML (Update) para ele, assim, ele irá atualizar os 1.500,000 de registros de uma única só vez.[2]
+\section{O que é necessário para funcionar?}
+A Java Persistence Specification define o mapeamento entre o objeto Java e o banco de dados utilizando o ORM, de forma que os Bens de entidades são facilmente importados para outro banco de dados. Objeto/Relacional (ORM) é um mapeamento automatizado e transparente onde á persistência de objeto em aplicações Java para tabelas em banco de dados relacional, usando uma estrutura que descreve o mapeamento entre os objetos e o banco de dados.
 
 \section{Referências Bibliográfica}
-\noindent \textbf{[1]} \url {https://www.devmedia.com.br/introducao-a-triggers/1695}
+\noindent \textbf{[1]} \url {http://fabrica.ms.senac.br/2013/06/java-persistence-api-jpa/}
 \\\vspace{0.2cm}
-
-\noindent \textbf{[2]} \url {http://www.linhadecodigo.com.br/artigo/611/triggers.aspx}
 
 \end{document}
 %Modelo de código para inserir figura
