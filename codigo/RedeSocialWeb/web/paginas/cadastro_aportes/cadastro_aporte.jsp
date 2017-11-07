@@ -27,19 +27,34 @@
 		<br><br>
 
 		<div id="meio">
-                    <form>
-                        <h1 id="center"> Criação de novo aporte</h1>
+                    <form action="AporteControle?operacao=Cadastrar" method="post">
+                        ${mensagem}
 
+                        ${erro}
+                        <h1 id="center"> Criação de novo aporte</h1>
+                            <input type="hidden" name="id" value="${aporte.id}" />
+                            
                             <hr style="width: 95%" />
                             <br><br>
                             <b id="center">T&iacute;tulo</b> (Campo Obrigatório *)
+                           
                             <br/>
-                            <input id="center" class="campo" type="text" name="nome"/>
+                            <input id="center" class="campo" type="text" name="titulo" value="${aporte.titulo}"/>
                             <br/><br/>
+                           
                             <b id="center">Categoria</b> (Campo Obrigatório *)
                             <br/>
+                           
                             <select id="center" value="">Selecione a Categoria
-                                <option value=" ">Selecione a Categoria</option>
+                                <c:forEach items="${categorias}" var="c">
+                                    <c:if test="${artigo.categoria.id == c.id}">
+                                        <option value="${c.id}" selected>${c.descricao}</option>
+                                    </c:if>
+
+                                    <c:if test="${artigo.categoria.id != c.id}">
+                                        <option value="${c.id}">${c.descricao}</option>
+                                    </c:if>
+                                </c:forEach>
                             </select>
 
                             <br/><br/>
