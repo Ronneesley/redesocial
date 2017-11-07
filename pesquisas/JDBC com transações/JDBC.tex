@@ -77,16 +77,15 @@
 \end{figure}
 Instituto Federal Goiano - Campus Ceres\\
 Bacharelado em Sistemas de Informação\\
-Prof. Me. Ronneesley Moura Teles\\\vspace{0.5cm}
+Prof. Me. Ronneesley Moura Teles\\\vspace{1cm}
 Daniel Moreira Cardoso \\
 Gusttavo Nunes Gomes\\
 Jeferson Rossini Ferreira Lourenço\\
 Paulo Henrique Rodrigues Araujo\\
 Warley Rodrigues de Andrade\\
-\vspace{5.0cm}
-\textit{\textbf{\Large{JDBC com transações}}}\\\vspace{0.5cm}
-\vspace{9.5cm}
-Outubro\\
+\vspace{6.0cm}
+\textit{\textbf{\Large{JDBC com transações}}}\\\vspace{11cm}
+Novembro\\
 2017\\
 \end{center}
 \end{titlepage}
@@ -97,23 +96,26 @@ Outubro\\
 \end{center}
 \section{Introdução}
 A linguagem de programação Java, diferente de linguagens como PHP, não suporta o acesso a banco de dados diretamente, para isso ele usa uma API (conjunto de classes e interfaces) para fazer o serviço. A JDBC (Java Database Connectivity), faz o envio de instruções para qualquer banco de dados relacional, desde que haja um driver que corresponda ao mesmo presente. 
-Muitos podem encontrar uma certa semelhança entre JDBC e ODBC; estão absolutamente corretos, podemos dizer a "grosso modo" que as duas seguem a mesma ideia. Ambas funcionam como meio de comunicação Banco X Aplicação, porém, ODBC é uma aplicação Windows restrito apenas a ele, enquanto a JDBC, por ser escrita em java, é multiplataforma.[1]
+Muitos podem encontrar uma certa semelhança entre JDBC e ODBC; estão absolutamente corretos, podemos dizer a “grosso modo” que as duas seguem a mesma ideia. Ambas funcionam como meio de comunicação Banco X Aplicação, porém, ODBC é uma aplicação Windows restrito apenas a ele, enquanto a JDBC, por ser escrita em java, é multiplataforma.[1]
 \section{O que é JDBC? }
 \textit{Java Database Connectivy} (JDBC) é um API (Conjunto de classes e interfaces) que permite a comunicação da linguagem JAVA com qualquer banco de dados relacional. Porém é necessário um driver específico para cada SGBD.  [2]
 \section{Tipos de JDBC}
-\hspace{-0.7 cm}
 Existem quatro tipos de drivers JDBC:
-\\
-\\
-1° - Tipo restrito a plataforma Windows. Esse tipo utiliza uma ODBC para se conectar com um banco de dados. Todas as chamadas ao JDBC s”ao traduzidas para chamadas IDBC (Open DataBase Connectivity);
-\\
-2° - O driver JDBC faz chamadas a algum outro código normalmente escrito em C.  Tanto o primeiro quando o segundo necessita de um software extra junto a sua aplicação Java;
-\\
-3° - Converte a chamada JDBC para uma chamada de rede. Nesta tecnologia, temos um servidor provendo a conexão com o banco de dados. Todo o código é escrito em Java;
-\\
-4° - Natividade 100\%, ou seja, todas as chamadas JDBC são convertidas diretamente para o protocolo de comunicação do banco de dados, ou seja, acontece um acesso direto ao DBMS.[3]
+
+\begin{enumerate}
+\item Tipo restrito a plataforma Windows. Esse tipo utiliza uma ODBC para se conectar com um banco de dados. Todas as chamadas ao JDBC s”ao traduzidas para chamadas ODBC (Open DataBase Connectivity);
+
+\item O driver JDBC faz chamadas a algum outro código normalmente escrito em C.  Tanto o primeiro quando o segundo necessita de um software extra junto a sua aplicação Java;
+
+\item Converte a chamada JDBC para uma chamada de rede. Nesta tecnologia, temos um servidor provendo a conexão com o banco de dados. Todo o código é escrito em Java;
+
+\item Natividade 100\%, ou seja, todas as chamadas JDBC são convertidas diretamente para o protocolo de comunicação do banco de dados, ou seja, acontece um acesso direto ao DBMS.[3]
+
+\end{enumerate}
+
 \section{O que é transação? }
 Transação é o nome que é dado à unidade de trabalho (dentro de um procedimento ou função) única, lógica e indivisível dentro de um SGBD. O código da transação é criado e disponibilizado dentro de um procedimento ou uma função: se o processamento não for realizado de forma completa ele será totalmente cancelado. Isto é feito para manter a consistência dos dados e das operações dentro do banco. [4]
+
 Um bom exemplo de transação é a transferência bancária entre contas. Onde o valor é debitado da conta de um cliente e depois adicionado na conta de outro. 
 Para fazer esta transação é muito simples, conforme o código abaixo:
 \begin{center}
@@ -131,47 +133,69 @@ id & nome & saldo \\
  
  
 Para a transação ocorrer os dois comandos devem ser válidos, se a transação for válida os dados são enviados ao banco de dados (\textit{commit}). Caso não seja válida, ou se algo der errado o procedimento deve ser abortado (rollback). 
+
 Quando se fala em \textit{commit} e \textit{rollback} é importante falar de autocommit, que permite que as operações sejam commitadas automaticamente. A maioria dos SGBDS usam por modo padrão o \textit{Autocommit}, ou seja, quando são executados comandos de UPDATE, INSERT ou DELETE sem iniciar uma transação explícita, essas operações são commitadas de forma automática.
-\newpage
+%\newpage
         
 \begin{figure}[h!]
-\centering
-\includegraphics[width=15cm]{recursos/imagens/commit_rollback.png}
-\label{4}
-\caption{Fonte: https://www.ime.usp.br/~jef/TransacoesControleConcorrencia.pdf}
+	\centering
+	\includegraphics[width=15cm]{recursos/imagens/commit_rollback.png}
+	\label{4}
+	\caption{Fonte: https://www.ime.usp.br/~jef/TransacoesControleConcorrencia.pdf}
 \end{figure} 
+
 Porém as transações normalmente são feitas a nível de programação e não a nível de banco de dados (\textit{procedures}) para maior facilidade caso seja necessário migrar a base de dados para um outro SGBD. 
 Agora que já vimos o que é o JDBC e transações, vamos entender como fazer transações com JDBC.
 Para fazer commit com java basta chamar o método commit() da interface connection.
+
 \begin{lstlisting}
-connection.commit();
+	connection.commit();
 \end{lstlisting}
 O método rollback também está na interface connection
 \begin{lstlisting}
-connection.rollback();
+	connection.rollback();
 \end{lstlisting}
+
 O auto commit também pode ser feito em java e permite gerenciar automaticamente se será feito o commit, basta no início do método chamar o método passando como argumento um valor lógico (true ou false);
+
 \begin{lstlisting}
 connection.SetAutoCommit(true);
 \end{lstlisting}
+
 Então vejamos um exemplo bastante genérico de uma transação em JAVA:
 \lstinputlisting[language=JAVA]{recursos/codigo/02.java}
  
 Implementando um exemplo com uma estrutura de controle.
 \lstinputlisting[language=JAVA]{recursos/codigo/03.java}
 %\lstinputlisting[language=Python, firstline=37, lastline=45]{source_filename.py}
+
+\section{Driver do JDBC}
+O processamento de transações é um requisito obrigatório de todos os aplicativos que desejam garantir consistência de seus dados persistentes e o uso de drivers tal como o Microsoft JDBC Driver para SQL Server que possibilita o processamento de transações pode ser realizado localmente ou distribuído. [7]
+
+O \textit{Microsoft JDBC Driver} para SQL Server é um driver compatível com o Java Database Connectivity (JDBC) 4.2 que fornece acesso eficiente a dados para o SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 e banco de dados do SQL Azure. [8]
+
+O driver foi testado com os principais servidores de aplicativos, como \textit{IBM WebSphere} e \textit{SAP NetWeaver}. O driver está disponível sem custo adicional para o Windows, Mac, Red Hat e Ubuntu no GitHub da Microsoft (\url{https://github.com/microsoft/mssql-jdbc}) ou em seu próprio site. [9]
+
+
 \newpage
 \section{Referências Bibliográfica}
-\noindent \textbf{[1]} \url {http://www.linhadecodigo.com.br/artigo/1711/java-acesso-a-dados-usando-jdbc.aspx}
-\\\vspace{0.2cm}
-\noindent \textbf{[2] }\url{https://pt.wikipedia.org/wiki/JDBC}
-\\\vspace{0.2cm}
-\noindent \textbf{[3]} \url {https://jmmwrite.wordpress.com/2009/08/12/diferencas-entre-as-versoes-do-jdbc/}
-\\\vspace{0.2cm}
+\noindent \textbf{[1]} \url {http://www.linhadecodigo.com.br/artigo/1711/java-acesso-a-dados-usando-jdbc.aspx}\\\vspace{0.2cm}
+
+\noindent \textbf{[2] }\url{https://pt.wikipedia.org/wiki/JDBC}\\\vspace{0.2cm}
+
+\noindent \textbf{[3]} \url {https://jmmwrite.wordpress.com/2009/08/12/diferencas-entre-as-versoes-do-jdbc/}\\\vspace{0.2cm}
+
 \noindent\textbf{[4]} REVISTABW. Transações em Bancos de Dados.Revista Brasileira de Web: Tecnologia. Disponível em: $<$\url{http://www.revistabw.com.br/revistabw/transacoes-em-bancos-de-dados/}. Criado em: 03/01/2013. Última atualização: 24/07/2015. Visitado em: 31/10/2017 \\\vspace{0.2cm}
-\noindent\textbf{[5]} \url{https://www.devmedia.com.br/aprendendo-java-com-jdbc/29116}
-\\\vspace{0.2cm}
-\noindent\textbf{[6]} \url{http://www.guj.com.br/t/transacoes-em-java/29674}
+
+\noindent\textbf{[5]} \url{https://www.devmedia.com.br/aprendendo-java-com-jdbc/29116}\\\vspace{0.2cm}
+
+\noindent\textbf{[6]} \url{http://www.guj.com.br/t/transacoes-em-java/29674} \\\vspace{0.2cm}
+
+\noindent\textbf{[7]} \url{https://docs.microsoft.com/pt-br/sql/connect/jdbc/performing-transactions-with-the-jdbc-driver} \\\vspace{0.2cm}
+
+\noindent\textbf{[8]} \url{https://docs.microsoft.com/pt-br/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server}\\\vspace{0.2cm}
+
+\noindent\textbf{[9]} \url{https://github.com/microsoft/mssql-jdbc}
 \end{document}
 %Modelo de código para inserir figura
 %\begin{figure}[h]
