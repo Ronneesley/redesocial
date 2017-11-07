@@ -19,7 +19,7 @@
                     <input type="reset" name="sair" class="botao" value="Sair"/>
                         <form>
                             <div id="info">
-                                <input class="campoInfo" type="text" name="" placeholder="Mais Informa&cedil;&otilde;es"><input class="botaoInfo" type="button" name="" value="">
+                                <input class="campoInfo" type="text" name="" placeholder="Mais Informações"><input class="botaoInfo" type="button" name="" value="">
                             </div>
                         </form>
 		</div>
@@ -28,29 +28,29 @@
 
 		<div id="meio">
                     <form>
-                        <h1 id="center"> Cria&cedil;&&abreve;o de novo aporte</h1>
+                        <h1 id="center"> Criação de novo aporte</h1>
 
                             <hr style="width: 95%" />
                             <br><br>
-                            <b id="center">T&iacute;tulo</b> (Campo Obrigat&&oacute;rio *)
+                            <b id="center">T&iacute;tulo</b> (Campo Obrigatório *)
                             <br/>
                             <input id="center" class="campo" type="text" name="nome"/>
                             <br/><br/>
-                            <b id="center">Categoria</b> (Campo Obrigat&&oacute;rio *)
+                            <b id="center">Categoria</b> (Campo Obrigatório *)
                             <br/>
                             <select id="center" value="">Selecione a Categoria
                                 <option value=" ">Selecione a Categoria</option>
                             </select>
 
                             <br/><br/>
-                            <b id="center">Arquivos de m&iacute;dia</b> (Opcional)
+                            <b id="center">Arquivos de mídia</b> (Opcional)
                             <br/>
-                            <input id="center" class="campoMidia" type="text" name="midia" placeholder="Descri&cedil;&atilde;o do Arquivo" />
+                            <input id="center" class="campoMidia" type="text" name="midia" placeholder="Descrição do Arquivo" />
 
                             <input id="center" class="botaoUpload" type="button" name="upload" value="Upload">
                             <br/><br/>
 
-                            <b id="center">Descri&cedil;&atilde;o</b> (Opcional)
+                            <b id="center">Descrição</b> (Opcional)
                             <br/>
                             <textarea id="center" class="campoDescricao" type="text" name="descricao"/> </textarea>
                             <br/><br/>
@@ -85,9 +85,9 @@
 			<br/><br/>
 			<a class="link" href="#">Perfil</a>
 			<br/><br/>
-                        <a class="link" href="#">P&&aacute;ginas</a>
+                        <a class="link" href="#">Páginas</a>
 			<br/><br/>
-                        <a class="link" href="#">V&&iacute;deos</a>
+                        <a class="link" href="#">Vídeos</a>
 
 		</div>
 	</body>
