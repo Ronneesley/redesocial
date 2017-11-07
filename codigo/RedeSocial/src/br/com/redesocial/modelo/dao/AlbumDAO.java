@@ -4,6 +4,7 @@ import br.com.redesocial.modelo.dto.Album;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +37,7 @@ public class AlbumDAO extends DAOCRUDBase<Album> {
             Album a = new Album();
             a.setId(rs.getInt("id"));
             a.setNome(rs.getString("nome"));
-            a.setData(rs.getDate("data"));
+            a.setData(rs.getTimestamp("data"));
             a.setUsuario(usuarioDAO.selecionar(rs.getInt("usuario")));
 
             return a;
@@ -69,7 +70,7 @@ public class AlbumDAO extends DAOCRUDBase<Album> {
             Album a = new Album();
             a.setId(rs.getInt("id"));
             a.setNome(rs.getString("nome"));
-            a.setData(rs.getDate("data"));
+            a.setData(rs.getTimestamp("data"));
             a.setUsuario(usuarioDAO.selecionar(rs.getInt("usuario")));
 
             lista.add(a);
@@ -86,7 +87,7 @@ public class AlbumDAO extends DAOCRUDBase<Album> {
         PreparedStatement pstmt = conexao.prepareStatement("insert into albuns  (nome, data, usuario) values (?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
         
         pstmt.setString(1, dto.getNome());
-        pstmt.setDate(2, new java.sql.Date(dto.getData().getTime()));
+        pstmt.setTimestamp(2, new java.sql.Timestamp(dto.getData().getTime()));
         pstmt.setInt(3, dto.getUsuario().getId());
         
         pstmt.executeUpdate();
@@ -110,7 +111,7 @@ public class AlbumDAO extends DAOCRUDBase<Album> {
         pstmt = conexao.prepareStatement("update albuns set nome = ?, data=?, usuario=? where id =? ");
        
         pstmt.setString(1, dto.getNome());
-        pstmt.setDate(2, new java.sql.Date(dto.getData().getTime()));
+        pstmt.setTimestamp(2, new java.sql.Timestamp(dto.getData().getTime()));
         pstmt.setInt(3, dto.getUsuario().getId()); 
         pstmt.setInt(4, dto.getId());
        
@@ -126,6 +127,33 @@ public class AlbumDAO extends DAOCRUDBase<Album> {
 
         pstmt.setInt(1, id);
         pstmt.executeUpdate();
+    }
+    
+    public List listarAlbunsPessoais(int id) throws SQLException, ClassNotFoundException, Exception{
+        Connection conexao = getConexao();
+        
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("select * from albuns where usuario = ?");
+        
+        pstmt.setInt(1, id);
+        
+        ResultSet rs;
+        rs = pstmt.executeQuery();
 
+        List lista;
+        lista = new ArrayList();
+
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
+        while (rs.next()){
+            Album a = new Album();
+            a.setId(rs.getInt("id"));
+            a.setNome(rs.getString("nome"));
+            a.setData(rs.getTimestamp("data"));
+            a.setUsuario(usuarioDAO.selecionar(rs.getInt("usuario")));
+
+            lista.add(a);
+        }
+
+        return lista;
     }
 }

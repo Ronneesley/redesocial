@@ -2,6 +2,7 @@ package br.com.redesocial.modelo.bo;
 
 import br.com.redesocial.modelo.dao.MultimidiaDAO;
 import br.com.redesocial.modelo.dto.Multimidia;
+import java.util.List;
 
 
 /**
@@ -42,5 +43,10 @@ public class MultimidiaBO extends BOCRUDBase<Multimidia, MultimidiaDAO> {
     @Override
     protected void validarChavePrimaria(Multimidia dto) throws Exception {
         if (dto.getId() == null) throw new Exception("Preencha o campo id");
+    }
+    
+    public List listarFotosAlbum(int id) throws Exception{
+        MultimidiaDAO dao = this.instanciarDAO();
+        return dao.listarMultimidiasAlbum(id);
     }
 }

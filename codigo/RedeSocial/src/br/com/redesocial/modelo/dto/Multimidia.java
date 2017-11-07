@@ -40,8 +40,8 @@ public class Multimidia {
     }
     /**
     * Construtor da classe multimidia com 2 parâmetros
-    * @byte[] vetor para uma nova midia
-    * @tipoConteudo para um novo tipo de conteudo
+     * @param midia caminho para uma nova midia
+     * @param tipoConteudo para um novo tipo de conteudo
     */
     public Multimidia(byte[] midia, String tipoConteudo) {
         this.midia = midia;
@@ -70,6 +70,7 @@ public class Multimidia {
     }
     /**
     * Função que modificia o tipo da midia da multimidia
+     * @param midia identificador de mídia
     */
     public void setMidia(byte[] midia) {
         this.midia = midia;
