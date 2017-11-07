@@ -8,6 +8,8 @@ import br.com.redesocial.modelo.dto.Participante;
  * @author Igor Justino Rodrigues
  * @since 27/07/2017
  */
+
+
 public class ParticipanteBO extends BOCRUDBase<Participante, ParticipanteDAO> {
     /**
      * Instancia um objeto de país DAO
@@ -26,8 +28,8 @@ public class ParticipanteBO extends BOCRUDBase<Participante, ParticipanteDAO> {
     @Override
     protected void validarChavePrimaria(Participante dto) throws Exception {
         if (dto.getGrupo() == null) throw new Exception("Preencha o campo Grupo");
-        if (dto.getUsuario() == null) throw new Exception("Preencha o campo Usuario");
-    }
+         if (dto.getUsuario() == null) throw new Exception("Preencha o campo Usuario");
+   }
 
     /**
      * Validação dos atributos de país
@@ -36,8 +38,8 @@ public class ParticipanteBO extends BOCRUDBase<Participante, ParticipanteDAO> {
      */
     @Override
     protected void validar(Participante dto) throws Exception {
-        //Validações
+       // Validações
         if (dto.getCargo() == null) throw new Exception("Preencha o Cargo");
         
-    }    
+    } 
 }

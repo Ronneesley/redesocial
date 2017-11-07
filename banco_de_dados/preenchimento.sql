@@ -197,25 +197,25 @@ VALUES
 (4, 'Evento Partidário', true),
 (5, 'Palestra Sobre Negócios', false);
 
+/*Inserindo dados na tabela de eventos*/ 
+INSERT INTO eventos
+(id, nome, descricao, certificado, inicio, fim, responsavel, inicio_inscricao, encerramento_inscricao)
+VALUES
+(1,'Latinoware', 'Evento Congresso Latino-Americano de Software Livre e Tecnologias Abertas', true ,'2017/10/18 08:00', '2017/10/20 17:00', '1', '2017/01/01 15:00', '2017/09/20 15:00'),
+(2, 'Fgsl', 'Fórum Goiano de Software Livre', true, '2017/09/18 19:00', '2017/11/20 18:00', '2', '2017/01/01 15:00', '2017/09/20 15:00'),
+(3, 'Flisol', 'Festival Latino-americano de Instalação de Software Livre', false, '2017/09/12 08:00', '2017/11/05 11:00', '3', '2017/01/02 12:00', '2017/05/20 13:00'),
+(4, 'CSBC', 'Congresso Nacional da Sociedade Brasileira de Computação', true, '2017/09/11 07:00', '2017/12/20 12:00', '4', '2017/07/26 15:00', '2017/08/20 16:00'),
+(5, 'SIMTEC', 'Simpósio de Tecnologia da Informação', false, '2017/09/11 07:00', '2017/01/20 18:00', '5', '2017/01/02 12:00', '2017/08/24 12:00');
+
 /*Inserindo dados na tabela de atividades*/
 INSERT INTO atividades
 (id, descricao, inicio, fim, vagas, tipo, evento)
 VALUES
 (1, 'Marketing é Vida','2010-01-01 10:00:00','2010-01-01 12:00:00','100','1','2'),
 (2, 'O Valor da Existência','2011-02-02 09:00:00','2011-02-02 11:00:00','50','3','4'),
-(3, 'Como Investir?','2015-04-14 14:00:00','2015-04-14 16:00:00','65','5','6'),
-(4, 'Aprender a Programar é Bom?','2008-10-15 22:00:00','2008-10-15 23:00:00','70','7','8'),
-(5, 'O Quanto Vale A Verdade?','2016-05-16 17:00:00','2016-05-16 19:00:00','150','9','10');
-
-/*Inserindo dados na tabela de eventos*/ 
-INSERT INTO eventos
-(id, nome, descricao, certificado, inicio, fim, responsavel, inicio_inscricao, encerramento_inscricao)
-VALUES
-(1,'Latinoware', 'Evento Congresso Latino-Americano de Software Livre e Tecnologias Abertas', true ,'2017/10/18 08:00', '2017/10/20 17:00', 'Parque Itaipu', '2017/01/01 15:00', '2017/09/20 15:00'),
-(2, 'Fgsl', 'Fórum Goiano de Software Livre', true, '2017/09/18 19:00', '2017/11/20 18:00', 'João da Beirinha', '2017/01/01 15:00', '2017/09/20 15:00'),
-(3, 'Flisol', 'Festival Latino-americano de Instalação de Software Livre', false, '2017/09/12 08:00', '2017/11/05 11:00', 'Garotos de programa', '2017/01/02 12:00', '2017/05/20 13:00'),
-(4, 'CSBC', 'Congresso Nacional da Sociedade Brasileira de Computação', true, '2017/09/11 07:00', '2017/12/20 12:00', 'Povo Inteligente', '2017/07/26 15:00', '2017/08/20 16:00'),
-(5, 'SIMTEC', 'Simpósio de Tecnologia da Informação', false, '2017/09/11 07:00', '2017/01/20 18:00', 'Alunos de SI', '2017/01/02 12:00', '2017/08/24 12:00');
+(3, 'Como Investir?','2015-04-14 14:00:00','2015-04-14 16:00:00','65','5','3'),
+(4, 'Aprender a Programar é Bom?','2008-10-15 22:00:00','2008-10-15 23:00:00','70','4','3'),
+(5, 'O Quanto Vale A Verdade?','2016-05-16 17:00:00','2016-05-16 19:00:00','150','3','1');
 
 /*Inserindo dados na responsaveis_atividades*/ 
 INSERT INTO responsaveis_atividades
@@ -239,14 +239,14 @@ INSERT INTO `redesocial`.`presenca_evento` (`presenca`, `evento`, `usuario`) VAL
 INSERT INTO `redesocial`.`presenca_evento` (`presenca`, `evento`, `usuario`) VALUES ('0', '2', '1');
 INSERT INTO `redesocial`.`presenca_evento` (`presenca`, `evento`, `usuario`) VALUES ('1', '3', '2');
 INSERT INTO `redesocial`.`presenca_evento` (`presenca`, `evento`, `usuario`) VALUES ('1', '2', '3');
-INSERT INTO `redesocial`.`presenca_evento` (`presenca`, `evento`, `usuario`) VALUES ('0', '2', '1');
+INSERT INTO `redesocial`.`presenca_evento` (`presenca`, `evento`, `usuario`) VALUES ('1', '1', '1');
 
 /*Inserindo dados na tabela de presenca_atividade*/ 
 INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('1', '2', '3');
 INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('0', '1', '1');
 INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('1', '2', '2');
 INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('1', '3', '4');
-INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('0', '4', '5');
+INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('0', '5', '5');
 
 
 

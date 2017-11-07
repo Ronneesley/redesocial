@@ -1,0 +1,115 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[brazil]{babel}
+\usepackage{indentfirst}
+\usepackage{url}
+\usepackage{float}
+\usepackage{color}
+%%%%%%%%%%Codigos para o JAVA%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+\usepackage{listings}
+\lstset{language=Java,
+  showspaces=false,
+  showtabs=false,
+  breaklines=true,
+  showstringspaces=false,
+  breakatwhitespace=true,
+  commentstyle=\color{pgreen},
+  keywordstyle=\color{pblue},
+  stringstyle=\color{pred},
+  basicstyle=\ttfamily,
+  moredelim=[il][\textcolor{pgrey}]{\$\$},
+  moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Fim codigo JAVA%%%%%%%%%%%%%%
+%%%%%%%%%%%Codigo geral%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,                    % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=Octave,                 % the language of the code
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,                       % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Fim codigo geral%%%%%%%%%%%%%
+\RequirePackage{graphicx}
+\title{JDBC com transações}
+\author{Daniel Moreira Cardoso \and Gusttavo Nunes Gomes\and Jeferson Rossini Ferreira Lourenço\and Paulo Henrique Rodrigues Araujo\and Warley Rodrigues de Andrade}
+ 
+\usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
+\begin{document}
+\begin{titlepage}
+\begin{center}
+\begin{figure}[htb]
+                
+                \label{figura:LogoIF}
+        
+                \centering
+                \includegraphics[width=6cm]{recursos/imagens/logo.png} 
+\end{figure}
+Instituto Federal Goiano - Campus Ceres\\
+Bacharelado em Sistemas de Informação\\
+Prof. Me. Ronneesley Moura Teles\\\vspace{0.5cm}
+Davi\\
+Igor Justino\\
+Luciano\\
+Warley Rodrigues\\
+Wesley Felix\\
+\vspace{5.0cm}
+\textit{\textbf{\Large{Definição e Característica do JPA}}}\\\vspace{0.5cm}
+\vspace{9.5cm}
+\end{center}
+\end{titlepage}
+\tableofcontents
+\newpage
+\begin{center}
+\textbf{\Large{Definição e Característica do JPA}}\\\vspace{0.5cm}
+\end{center}
+\section{O que é?}
+JPA é um framework leve, baseado em POJOS (Plain Old Java Objects) para persistir objetos Java. Java Persiste API é uma padrão do Java para persistência de dados que deve ser implementada por frameworks que queiram seguir este padrão, como o JPA é usado na camada de persistência com o objetivo de ter maior produtividade dos desenvolvedores, com ele controlarmos a persistência dentro do Java, com isso teremos um padrão para mapear nossos objetos para Banco de Dados, atualmente o JPA está na versão 2.0 como esta especificado na Documentação JPA.
+
+A Java Persistence API, diferente do que muitos imaginam, não é apenas um framework para Mapeamento Objeto-Relacional (ORM – Object-Relational Mapping), ela também oferece diversas funcionalidades essenciais em qualquer aplicação corporativa.[1]
+
+\section{O que é necessário para funcionar?}
+A Java Persistence Specification define o mapeamento entre o objeto Java e o banco de dados utilizando o ORM, de forma que os Bens de entidades são facilmente importados para outro banco de dados. Objeto/Relacional (ORM) é um mapeamento automatizado e transparente onde á persistência de objeto em aplicações Java para tabelas em banco de dados relacional, usando uma estrutura que descreve o mapeamento entre os objetos e o banco de dados.
+
+\section{Referências Bibliográfica}
+\noindent \textbf{[1]} \url {http://fabrica.ms.senac.br/2013/06/java-persistence-api-jpa/}
+\\\vspace{0.2cm}
+
+\end{document}
+%Modelo de código para inserir figura
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=15cm]{logo.png}
+%\label{4}
+%\caption{Fonte:http://...; Acesso em 06/11/2017}
+%\end{figure}
