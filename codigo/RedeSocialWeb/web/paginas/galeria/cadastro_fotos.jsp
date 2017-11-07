@@ -1,4 +1,3 @@
-<!--<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>-->
 <!DOCTYPE html>
 <html>
     <head>
@@ -45,12 +44,8 @@
             }
             
             .cabeca{
-                width: 100%;
-                margin: auto;
+                margin: 10px;
                 border: 45px;
-                display: flex;
-                align-items: center;
-                align-content: flex-start;
             }
             
             h1{
@@ -72,11 +67,12 @@
                 width: 30%;
                 text-decoration: none;
                 color: black;
-                margin: 5px;
+                padding: 5px;
+                border: 1px solid #cecece;
+                margin: auto;
                 margin-bottom: 2px;
                 display: inline-block;
             }
-            
             
             select{
                 background:#eee;
@@ -87,7 +83,7 @@
             }
             
             .albuns{
-                width:100%;
+                width:90%;
                 align-items: center;
                 text-align: center;
                 margin: auto;
@@ -101,7 +97,6 @@
             .navi{
                 width: 20%;
             }
-            
         </style>
     </head>
     
@@ -109,46 +104,32 @@
         ${mensagem}
         ${erro}
         <div id="timeline">
+            <input type="hidden" name="album" value="${album.id}"/>
             
             <div class="galeria">
                 <div class="cabeca">
-                    <h1>${album.nome}</h1>
+                    <h1>Fotos</h1>
                     <a  class="btn navi" href="#">Suas fotos</a>
-                    <a  class="btn navi" href="../RedeSocialWeb/AlbumControle?operacao=Listar">Seus √Ålbuns</a>
-                    <a  class="btn navi" href="../RedeSocialWeb/AlbumControle?operacao=CriarNovo">Criar √Ålbum</a>
+                    <a  class="btn navi" href="../RedeSocialWeb/AlbumControle?operacao=Listar">Seus ¡lbuns</a>
+                    <a  class="btn navi" href="../RedeSocialWeb/AlbumControle?operacao=CriarNovo">Criar ¡lbum</a>
                     <select>
                         <option value="#">...</option>
                         <option value="#">Editar</option>
                         <option value="#">Deletar</option>
-                        <option value="#">√Ålbuns Selecionados</option>
+                        <option value="#">¡lbuns Selecionados</option>
                     </select>
                 </div>
+
                 
                 <hr/> <br/>
                 <div class="albuns">
-                    <a href="#">
-                        <img src="../../imagens/adicionar-botao.jpg" alt="Adicionar m√≠dias..." class="imagem" />
-                    </a>
-                    
-                    <a href="../../imagens/usuario.jpg" target="_blank">
-                        <img src="../../imagens/usuario.jpg" alt="imagem" class="imagem" />
-                    </a>
-                    <a href="../../imagens/usuario.jpg" target="_blank">
-                        <img src="../../imagens/usuario.jpg" alt="imagem" class="imagem" />
-                    </a>
-                    <a href="../../imagens/usuario.jpg" target="_blank">
-                        <img src="../../imagens/usuario.jpg" alt="imagem" class="imagem" />
-                    </a>
-                    <a href="../../imagens/usuario.jpg" target="_blank">
-                        <img src="../../imagens/usuario.jpg" alt="imagem" class="imagem" />
-                    </a>
-                    <a href="../../imagens/usuario.jpg" target="_blank">
-                        <img src="../../imagens/usuario.jpg" alt="imagem" class="imagem" />
-                    </a>
-                    
-                    
-                    
-                </div>
+                    <form action="MultimidiaControle?operacao=Cadastrar" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="id" value="${multimidias.id}" />
+                        <label for="midiaupload">MÌdias:</label>
+                        <input type=file multiple id="midiaupload" name="midiaupload"/>
+                        <input type="submit" value="Enviar"/>
+                    </form>
+                </div>  
             </div>
         </div>
     </body>

@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet para controle de álbuns
+ * Servlet para controle de Ã¡lbuns
  * @author Daniel Moreira Cardoso
  */
 @WebServlet(name = "AlbumControle", urlPatterns = {"/AlbumControle"})
@@ -95,7 +95,7 @@ public class AlbumControle extends HttpServlet {
      */
     @Override
     public String getServletInfo() {
-        return "Controle de Álbuns";
+        return "Controle de Ã�lbuns";
     }// </editor-fold>
 
     private void criarNovo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -120,7 +120,6 @@ public class AlbumControle extends HttpServlet {
         
         album.setNome(request.getParameter("album"));
         
-        
         album.setData(new Date());
         
         Usuario usuario = new Usuario();
@@ -140,6 +139,8 @@ public class AlbumControle extends HttpServlet {
         try{
             AlbumBO bo = new AlbumBO();
             List album = bo.listarAlbunsPessoais(1);
+            
+            
             
             request.setAttribute("album", album);
         }catch (Exception ex){
@@ -205,6 +206,8 @@ public class AlbumControle extends HttpServlet {
             MultimidiaBO bo = new MultimidiaBO();
             
             List fotosAlbum = bo.listarFotosAlbum(album.getId());
+            
+            request.setAttribute("album", album);
             
             request.setAttribute("fotos", fotosAlbum);
         }catch(Exception ex){

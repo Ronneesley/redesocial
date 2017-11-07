@@ -5,14 +5,18 @@
  */
 package br.com.redesocial.controle;
 
+import br.com.redesocial.modelo.bo.AlbumBO;
 import br.com.redesocial.modelo.bo.MultimidiaBO;
 import br.com.redesocial.modelo.dto.Album;
 import br.com.redesocial.modelo.dto.Multimidia;
 import br.com.redesocial.modelo.utilitarios.Utilitarios;
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -31,11 +35,13 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 public class MultimidiaControle extends HttpServlet {
     // Configurações de upload
     // Limite de memória
-    private static final int MEMORY_THRESHOLD = 1024 * 1024 * 3; 	// 3MB
+    private static final int MEMORY_THRESHOLD = 1024 * 1024 * 300; 	// 3MB
     // Tamanho máximo do arquivo
-    private static final int MAX_FILE_SIZE = 1024 * 1024 * 40; // 40MB
+    private static final int MAX_FILE_SIZE = 1024 * 1024 * 400; // 40MB
     // Tamanho máximo do request (arquivos + formulário)
-    private static final int MAX_REQUEST_SIZE = 1024 * 1024 * 50; // 50MB
+    private static final int MAX_REQUEST_SIZE = 1024 * 1024 * 500; // 50MB
+    // Diretório para upload da imagem
+    private static final String UPLOAD_DIRECTORY = "tmp";
 
     
     
@@ -49,7 +55,7 @@ public class MultimidiaControle extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, Exception {
         response.setContentType("text/html;charset=UTF-8");
         
         String operacao = request.getParameter("operacao");
@@ -86,7 +92,11 @@ public class MultimidiaControle extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (Exception ex) {
+            request.setAttribute("erro", ex.getMessage());
+        }
     }
 
     /**
@@ -100,7 +110,10 @@ public class MultimidiaControle extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (Exception ex) {
+        }
     }
 
     /**
@@ -129,6 +142,12 @@ public class MultimidiaControle extends HttpServlet {
         try {
             Multimidia multimidia = new Multimidia();
             request.setAttribute("multimidia", multimidia);
+            
+            Integer id = Integer.parseInt(request.getParameter("id"));
+            AlbumBO albumBO = new AlbumBO();
+            Album album = albumBO.selecionar(id);
+            
+            request.setAttribute("album", album);
         } catch (Exception e) {
             request.setAttribute("errro", e.getMessage());
         }
@@ -136,9 +155,8 @@ public class MultimidiaControle extends HttpServlet {
         rd.forward(request, response);
     }
 
-    private void cadastrar(HttpServletRequest request, HttpServletResponse response) {
+    private void cadastrar(HttpServletRequest request, HttpServletResponse response) throws Exception {
         Multimidia multimidia = new Multimidia();
-        Utilitarios utilitarios = new Utilitarios();
         
         if (request.getParameter("id") != null){
             multimidia.setId(Integer.parseInt(request.getParameter("id")));
@@ -146,7 +164,7 @@ public class MultimidiaControle extends HttpServlet {
         
         // configura as opções de upload
         DiskFileItemFactory factory = new DiskFileItemFactory();
-        // define o limite de memória - além do qual os arquivos são armazenados no disco 
+        // define o limite de memória além do qual os arquivos são armazenados no disco 
         factory.setSizeThreshold(MEMORY_THRESHOLD);
         // define localização temporária para armazenar arquivos
         factory.setRepository(new File(System.getProperty("java.io.tmpdir")));
@@ -159,34 +177,51 @@ public class MultimidiaControle extends HttpServlet {
         // define o tamanho máximo da solicitação (arquivo + dados do formulário)
         upload.setSizeMax(MAX_REQUEST_SIZE);
         
+        // constrói o caminho do diretório para armazenar o arquivo de upload
+        // esse caminho é relativo ao diretório do aplicativo
+        String uploadPath = getServletContext().getRealPath("") + File.separator + UPLOAD_DIRECTORY;
+
+        // cria o diretório se não existir
+        File uploadDir = new File(uploadPath);
+        if (!uploadDir.exists()) {
+            uploadDir.mkdir();
+        }
+      
+        AlbumBO albumBO = new AlbumBO();
+        Integer id = Integer.parseInt(request.getParameter("album"));
+        Album album = albumBO.selecionar(id);
+        
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy HH;mm;ss");
+        
         try {
-            // analisa o conteúdo do pedido para extrair dados do arquivo
+            // analisa o conteÃºdo do pedido para extrair dados do arquivo
             @SuppressWarnings("unchecked")
             List<FileItem> formItems = upload.parseRequest(request);
 
             if (formItems != null && formItems.size() > 0) {
-                // itera sobre campos do formulário
+                // itera sobre campos do formulÃ¡rio
                 for (FileItem item : formItems) {
-                    // processa apenas campos que não são campos de formulário
+                    // processa apenas campos que nÃ£o sÃ£o campos de formulÃ¡rio
                     if (!item.isFormField()) {
-                        String fileName = new File(item.getName()).getName();
-                        String arquivo = File.separator + fileName;
+                        String fileName = sdf.format(new Date()) + " " + new File(item.getName()).getName();
+                        String filePath = uploadPath + File.separator + fileName;
 
                         if(!fileName.equals("")){
-                            File storeFile = new File(arquivo);
+                            File storeFile = new File(filePath);
+                            
+                            item.write(storeFile);
 
-                            
-                            multimidia.setMidia(utilitarios.lerArquivo(storeFile));
+                            multimidia.setMidia(Utilitarios.lerArquivo(storeFile));
                             multimidia.setData(new Date());
-                            
-                            Album album = new Album();
-                            
                             multimidia.setAlbum(album);
-                            request.setAttribute("mensagem","Upload realizado com sucesso!");
-                        
-                            String nome = item.getFieldName();
-                        
-                            
+                            multimidia.setTipoConteudo("ainda não sei");
+
+                            try {
+                                this.inserir(multimidia, request, response);
+                                request.setAttribute("mensagem","Upload realizado com sucesso!");
+                            } catch (Exception e) {
+                                request.setAttribute("erro", e.getMessage());
+                            }
                         }
                     }
                     /*if(item.isFormField()){
@@ -199,7 +234,13 @@ public class MultimidiaControle extends HttpServlet {
             request.setAttribute("erro", ex.getMessage());
         }
         
-        
+        if(uploadDir.isDirectory()){
+            File[] tmps = uploadDir.listFiles();
+            
+            for(File deletarArquivos : tmps){
+                deletarArquivos.delete();
+            }
+        }
     }
 
     private void inserir(Multimidia multimidia, HttpServletRequest request, HttpServletResponse response) {

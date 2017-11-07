@@ -1,3 +1,4 @@
+<!--<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>-->
 <!DOCTYPE html>
 <html>
     <head>
@@ -44,8 +45,12 @@
             }
             
             .cabeca{
-                margin: 10px;
+                width: 100%;
+                margin: auto;
                 border: 45px;
+                display: flex;
+                align-items: center;
+                align-content: flex-start;
             }
             
             h1{
@@ -67,12 +72,11 @@
                 width: 30%;
                 text-decoration: none;
                 color: black;
-                padding: 5px;
-                border: 1px solid #cecece;
-                margin: auto;
+                margin: 5px;
                 margin-bottom: 2px;
                 display: inline-block;
             }
+            
             
             select{
                 background:#eee;
@@ -83,7 +87,7 @@
             }
             
             .albuns{
-                width:90%;
+                width:100%;
                 align-items: center;
                 text-align: center;
                 margin: auto;
@@ -97,6 +101,7 @@
             .navi{
                 width: 20%;
             }
+            
         </style>
     </head>
     
@@ -104,10 +109,10 @@
         ${mensagem}
         ${erro}
         <div id="timeline">
-            
+            <input type="hidden" value="${album.id}" name="album"/>
             <div class="galeria">
                 <div class="cabeca">
-                    <h1>Fotos</h1>
+                    <h1>${album.nome}</h1>
                     <a  class="btn navi" href="#">Suas fotos</a>
                     <a  class="btn navi" href="../RedeSocialWeb/AlbumControle?operacao=Listar">Seus Álbuns</a>
                     <a  class="btn navi" href="../RedeSocialWeb/AlbumControle?operacao=CriarNovo">Criar Álbum</a>
@@ -118,16 +123,33 @@
                         <option value="#">Álbuns Selecionados</option>
                     </select>
                 </div>
-
                 
                 <hr/> <br/>
                 <div class="albuns">
-                    <form action="MultimidiaControle?operacao=Cadastrar" method="post" enctype="multipart/form-data">
-                        <input type="hidden" name="id" value="${multimidias.id}" />
-                        <label for="midiaupload">Mídias:</label>
-                        <input type=file multiple id="midiaupload" name="midiaupload"/>
-                    </form>
-                </div>  
+                    
+                    <a href="./MultimidiaControle?operacao=CriarNovo&amp;idalbum=${album.id}" id="${album.id}">
+                        <img url="../../imagens/adicionar-botao.jpg" alt="Adicionar mídias..." class="imagem" />
+                    </a>
+                    
+                    <a href="../../imagens/usuario.jpg" target="_blank">
+                        <img src="../../imagens/usuario.jpg" alt="imagem" class="imagem" />
+                    </a>
+                    <a href="../../imagens/usuario.jpg" target="_blank">
+                        <img src="../../imagens/usuario.jpg" alt="imagem" class="imagem" />
+                    </a>
+                    <a href="../../imagens/usuario.jpg" target="_blank">
+                        <img src="../../imagens/usuario.jpg" alt="imagem" class="imagem" />
+                    </a>
+                    <a href="../../imagens/usuario.jpg" target="_blank">
+                        <img src="../../imagens/usuario.jpg" alt="imagem" class="imagem" />
+                    </a>
+                    <a href="../../imagens/usuario.jpg" target="_blank">
+                        <img src="../../imagens/usuario.jpg" alt="imagem" class="imagem" />
+                    </a>
+                    
+                    
+                    
+                </div>
             </div>
         </div>
     </body>
