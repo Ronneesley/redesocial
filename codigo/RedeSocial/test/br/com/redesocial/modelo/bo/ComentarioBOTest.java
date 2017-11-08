@@ -194,21 +194,23 @@ public class ComentarioBOTest {
             ComentarioBO comentarioBO = new ComentarioBO();
              
         try{                               
-                bo.inserir(comentario);
+                comentarioBO.inserir(comentario);
             } catch(Exception ex){
                 //Mensagem de erro caso falhe
              
               fail("Falha ao inserir um comentário: " + ex.getMessage());
             }
-            //alterando o comentario que foi inserido no banco de dados
-            comentario.setDescricao("Ola");
-            //comentario.setCurtidas(2);
+            comentario.setDescricao("comentario! ");
+            comentario.setUps(5);
+            comentario.setDowns(2);
             comentario.setData(calendario.getTime());
             comentario.setPostagem(postagem);
+            comentario.setResposta(comentario);
+            comentario.setUsuario(usuario);
+            comentario.setId(2);
 
         try {
-           
-            bo.alterar(comentario);
+            comentarioBO.alterar(comentario);
         } catch (Exception ex) {
             //Mensagem de erro caso falhe
             fail("Falha ao alterar o comentario: " + ex.getMessage());
@@ -325,7 +327,7 @@ public class ComentarioBOTest {
      * Método de teste responsável pela listagem dos commentários existentes no banco de dados
      * @author Lara Caroline
      */
-    @Test
+    //@Test
     public void testMetodoListar() {
         /*
         Para listar comentários é necessário a existência dos mesmos.
@@ -434,7 +436,7 @@ public class ComentarioBOTest {
      * Método responsável pelo teste da exclusão de um comentário no banco de dados
      * @author Luciano de Carvalho Borba
      */
-    @Test
+    //@Test
     public void testMetodoExcluir(){
        Pais pais = new Pais();
        pais.setNome("Brasil");
