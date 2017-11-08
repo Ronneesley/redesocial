@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.12)  8 NOV 2017 16:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.12)  8 NOV 2017 15:45
 entering extended mode
-**"./Definição e característica do JPA.tex"
-("Definição e característica do JPA.tex"
+**"./Introdução a JSF.tex"
+("Introdução a JSF.tex"
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 75 language(s) loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
@@ -541,8 +541,8 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks25
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-("Definição e característica do JPA.aux")
-\openout1 = `"Definição e característica do JPA.aux"'.
+("Introdução a JSF.aux")
+\openout1 = `"Introdução a JSF.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
 LaTeX Font Info:    ... okay on input line 68.
@@ -657,38 +657,41 @@ Package pdftex.def Info: recursos/imagens/logo.png used on input line 76.
  [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./recursos/imagens/logo.p
-ng>]
-("Definição e característica do JPA.toc")
+ng>] ("Introdução a JSF.toc")
 \tf@toc=\write3
-\openout3 = `"Definição e característica do JPA.toc"'.
+\openout3 = `"Introdução a JSF.toc"'.
 
  [1]
-LaTeX Font Info:    Try loading font information for U+msa on input line 108.
+LaTeX Font Info:    Try loading font information for U+msa on input line 98.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 108.
+LaTeX Font Info:    Try loading font information for U+msb on input line 98.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [2]
-("Definição e característica do JPA.aux") ) 
+)
+Overfull \hbox (87.56998pt too wide) in paragraph at lines 98--100
+\OT1/cmr/bx/n/12 [1] $\OT1/cmtt/m/n/12 https : / / www . caelum . com . br / ap
+ostila-[]java-[]testes-[]jsf-[]web-[]services-[]design-[]patterns /
+ []
+
+[2] ("Introdução a JSF.aux") ) 
 Here is how much of TeX's memory you used:
- 5231 strings out of 493323
- 69662 string characters out of 3139066
- 161105 words of memory out of 3000000
- 8659 multiletter control sequences out of 15000+200000
+ 5230 strings out of 493323
+ 69437 string characters out of 3139066
+ 159105 words of memory out of 3000000
+ 8658 multiletter control sequences out of 15000+200000
  10432 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,6n,40p,512b,294s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmtt12.pfb>
-Output written on "Definição e característica do JPA.pdf" (3 pages, 72039 by
-tes).
+ 39i,6n,40p,433b,294s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmbxti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb
+>
+Output written on "Introdução a JSF.pdf" (3 pages, 67295 bytes).
 PDF statistics:
  31 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
