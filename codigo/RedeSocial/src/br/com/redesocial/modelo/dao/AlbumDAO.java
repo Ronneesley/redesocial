@@ -14,6 +14,7 @@ import java.util.List;
  * @author Daniel, Andrey Ribeiro
  */
 public class AlbumDAO extends DAOCRUDBase<Album> {
+    
     /**
     * Método que seleciona os álbuns no banco de dados
     * @author Daniel Moreira Cardoso
@@ -47,11 +48,11 @@ public class AlbumDAO extends DAOCRUDBase<Album> {
     }
    
     /**
-     * Método que lista todos os albuns em ordem alfabética do banco de dados
-     * @author Andrey Ribeiro
-     * @return lista de albuns ordenados alfabeticamente
-     * @throws Exception possíveis exceções que podem acontecer
-     */
+    * Método que lista todos os albuns em ordem alfabética do banco de dados
+    * @author Andrey Ribeiro
+    * @return lista de albuns ordenados alfabeticamente
+    * @throws Exception possíveis exceções que podem acontecer
+    */
     @Override
     public List listar() throws Exception {
         Connection conexao = getConexao();
@@ -79,6 +80,11 @@ public class AlbumDAO extends DAOCRUDBase<Album> {
         return lista;
     }
 
+    /**
+    * Método responsável pela inserção de um álbum no banco de dados
+    * @param dto álbum a ser inserido
+    * @throws Exception possíveis exceções que podem acontecer
+    */
     @Override
     public void inserir(Album dto) throws Exception {
         
@@ -96,12 +102,12 @@ public class AlbumDAO extends DAOCRUDBase<Album> {
         
     }
     
-     /**
-     * Método responsável pela alteração de um album no banco de dados
-     * @author gleyson-alves
-     * @param dto novos dados do Album, com o ID do album a ser alterado preenchido
-     * @throws Exception possíveis exceções que podem acontecer
-     */
+    /**
+    * Método responsável pela alteração de um album no banco de dados
+    * @author gleyson-alves
+    * @param dto novos dados do Album, com o ID do album a ser alterado preenchido
+    * @throws Exception possíveis exceções que podem acontecer
+    */
     @Override
     public void alterar(Album dto) throws Exception {
         
@@ -118,6 +124,11 @@ public class AlbumDAO extends DAOCRUDBase<Album> {
         pstmt.executeUpdate();
     }
 
+    /**
+    * Método responsável pela exclusão de um álbum no banco de dados
+    * @param id identificador do álbum a ser excluído
+    * @throws Exception possíveis exceções que podem acontecer
+    */
     @Override
     public void excluir(int id) throws Exception {
         Connection conexao = getConexao();
@@ -128,7 +139,15 @@ public class AlbumDAO extends DAOCRUDBase<Album> {
         pstmt.setInt(1, id);
         pstmt.executeUpdate();
     }
-    
+
+    /**
+    * Método que lista todos os albuns relacionados a um usuário
+    * @param id identificador do usuario a ser pesquisado
+    * @return lista de albuns ordenados alfabeticamente
+    * @throws Exception possíveis exceções que podem acontecer
+    * @throws SQLException possíveis exceções que podem acontecer
+    * @throws ClassNotFoundException possíveis exceções que podem acontecer
+    */
     public List listarAlbunsPessoais(int id) throws SQLException, ClassNotFoundException, Exception{
         Connection conexao = getConexao();
         
