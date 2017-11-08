@@ -22,16 +22,13 @@ import javax.servlet.http.HttpServletResponse;
 public class AlbumControle extends HttpServlet {
 
     /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    * Processa todas as requisições sejam elas do tipo GET ou POST
+    * @param request servlet request
+    * @param response servlet response
+    * @throws ServletException se ocorre um erro no Servlet
+    * @throws IOException se ocorre um erro de entrada e saída
+    */
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
         String operacao = request.getParameter("operacao");
@@ -59,45 +56,46 @@ public class AlbumControle extends HttpServlet {
         
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+    * Requisições do tipo GET
+    * @param request requisição
+    * @param response resposta
+    * @throws ServletException se ocorre um erro no Servlet
+    * @throws IOException se ocorre um erro de entrada e saída
+    */
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         processRequest(request, response);
     }
 
     /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+    * Tratamento dos envios pelo método POST
+    * @param request requisição
+    * @param response resposta
+    * @throws ServletException se ocorre um erro no Servlet
+    * @throws IOException se ocorre um erro de entrada e saída
+    */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         processRequest(request, response);
     }
 
     /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
+    * Descrição do Servlet
+    * @return descrição
+    */
     @Override
     public String getServletInfo() {
-        return "Controle de Ã�lbuns";
-    }// </editor-fold>
+        return "Controle de Álbuns";
+    }
 
+    /**
+    * Cria um novo álbum
+    * @param request requisição
+    * @param response resposta
+    * @throws ServletException se ocorre um erro no Servlet
+    * @throws IOException se ocorre um erro de entrada e saída
+    */
     private void criarNovo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             Album album = new Album();
@@ -111,6 +109,13 @@ public class AlbumControle extends HttpServlet {
         rd.forward(request, response);
     }
 
+    /**
+    * Cadastra um álbum no banco de dados
+    * @param request
+    * @param response
+    * @throws ServletException se ocorre um erro no Servlet
+    * @throws IOException se ocorre um erro de entrada e saída
+    */
     private void cadastrar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Album album = new Album();
         
@@ -135,12 +140,17 @@ public class AlbumControle extends HttpServlet {
            
     }
 
+    /**
+    * Lista todos os álbuns existentes no banco de dados
+    * @param request
+    * @param response
+    * @throws ServletException se ocorre um erro no Servlet
+    * @throws IOException se ocorre um erro de entrada e saída
+    */
     private void listar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try{
             AlbumBO bo = new AlbumBO();
             List album = bo.listarAlbunsPessoais(1);
-            
-            
             
             request.setAttribute("album", album);
         }catch (Exception ex){
@@ -151,10 +161,24 @@ public class AlbumControle extends HttpServlet {
         rd.forward(request, response);
     }
 
+    /**
+    * Exclui um álbum no banco de dados
+    * @param request
+    * @param response
+    * @throws ServletException se ocorre um erro no Servlet
+    * @throws IOException se ocorre um erro de entrada e saída
+    */
     private void excluir(HttpServletRequest request, HttpServletResponse response) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    /**
+    * Edita um álbum no banco de dados
+    * @param request
+    * @param response
+    * @throws ServletException se ocorre um erro no Servlet
+    * @throws IOException se ocorre um erro de entrada e saída
+    */
     private void editar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             Integer id = Integer.parseInt(request.getParameter("id"));
@@ -172,6 +196,14 @@ public class AlbumControle extends HttpServlet {
         rd.forward(request, response);
     }
 
+    /**
+    * Insere um álbum no banco de dados
+    * @param album identificador do álbum a ser inserido
+    * @param request
+    * @param response
+    * @throws ServletException se ocorre um erro no Servlet
+    * @throws IOException se ocorre um erro de entrada e saída
+    */
     private void inserir(Album album, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             AlbumBO bo = new AlbumBO();
@@ -185,7 +217,15 @@ public class AlbumControle extends HttpServlet {
         this.listar(request, response);
     }
 
-    private void alterar(Album album, HttpServletRequest request, HttpServletResponse response) {
+    /**
+    * Altera um álbum no banco de dados
+    * @param album identificador do álbum a ser alterado
+    * @param request
+    * @param response
+    * @throws ServletException se ocorre um erro no Servlet
+    * @throws IOException se ocorre um erro de entrada e saída
+    */    
+    private void alterar(Album album, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             AlbumBO bo = new AlbumBO();
             bo.alterar(album);
@@ -196,6 +236,13 @@ public class AlbumControle extends HttpServlet {
         }
     }
 
+    /**
+    * Seleciona um álbum no banco de dados
+    * @param request
+    * @param response
+    * @throws ServletException se ocorre um erro no Servlet
+    * @throws IOException se ocorre um erro de entrada e saída
+    */
     private void selecionar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try{
             Integer id = Integer.parseInt(request.getParameter("id"));
