@@ -23,8 +23,8 @@ public class AlbumControle extends HttpServlet {
 
     /**
     * Processa todas as requisições sejam elas do tipo GET ou POST
-    * @param request servlet request
-    * @param response servlet response
+    * @param request requisição
+    * @param response resposta
     * @throws ServletException se ocorre um erro no Servlet
     * @throws IOException se ocorre um erro de entrada e saída
     */
@@ -111,8 +111,8 @@ public class AlbumControle extends HttpServlet {
 
     /**
     * Cadastra um álbum no banco de dados
-    * @param request
-    * @param response
+    * @param request requisição
+    * @param response resposta
     * @throws ServletException se ocorre um erro no Servlet
     * @throws IOException se ocorre um erro de entrada e saída
     */
@@ -142,8 +142,8 @@ public class AlbumControle extends HttpServlet {
 
     /**
     * Lista todos os álbuns existentes no banco de dados
-    * @param request
-    * @param response
+    * @param request requisição
+    * @param response resposta
     * @throws ServletException se ocorre um erro no Servlet
     * @throws IOException se ocorre um erro de entrada e saída
     */
@@ -163,8 +163,8 @@ public class AlbumControle extends HttpServlet {
 
     /**
     * Exclui um álbum no banco de dados
-    * @param request
-    * @param response
+    * @param request requisição
+    * @param response resposta
     * @throws ServletException se ocorre um erro no Servlet
     * @throws IOException se ocorre um erro de entrada e saída
     */
@@ -174,8 +174,8 @@ public class AlbumControle extends HttpServlet {
 
     /**
     * Edita um álbum no banco de dados
-    * @param request
-    * @param response
+    * @param request requisição
+    * @param response resposta
     * @throws ServletException se ocorre um erro no Servlet
     * @throws IOException se ocorre um erro de entrada e saída
     */
@@ -199,8 +199,8 @@ public class AlbumControle extends HttpServlet {
     /**
     * Insere um álbum no banco de dados
     * @param album identificador do álbum a ser inserido
-    * @param request
-    * @param response
+    * @param request requisição
+    * @param response resposta
     * @throws ServletException se ocorre um erro no Servlet
     * @throws IOException se ocorre um erro de entrada e saída
     */
@@ -220,8 +220,8 @@ public class AlbumControle extends HttpServlet {
     /**
     * Altera um álbum no banco de dados
     * @param album identificador do álbum a ser alterado
-    * @param request
-    * @param response
+    * @param request requisição
+    * @param response resposta
     * @throws ServletException se ocorre um erro no Servlet
     * @throws IOException se ocorre um erro de entrada e saída
     */    
@@ -238,8 +238,8 @@ public class AlbumControle extends HttpServlet {
 
     /**
     * Seleciona um álbum no banco de dados
-    * @param request
-    * @param response
+    * @param request requisição
+    * @param response resposta
     * @throws ServletException se ocorre um erro no Servlet
     * @throws IOException se ocorre um erro de entrada e saída
     */
