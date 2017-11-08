@@ -27,7 +27,7 @@ public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
 
         pstmt.setBytes (1, m.getMidia());
         pstmt.setString (2, m.getTipoConteudo());
-        pstmt.setDate(3, new java.sql.Date(m.getData().getTime()));
+        pstmt.setTimestamp(3, new java.sql.Timestamp(m.getData().getTime()));
         pstmt.setInt (4, m.getAlbum().getId());
         
         pstmt.executeUpdate();
@@ -59,7 +59,7 @@ public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
             m.setId(rs.getInt("id"));
             m.setMidia(rs.getBytes("midia"));
             m.setTipoConteudo(rs.getString("tipo_conteudo"));
-            m.setData(rs.getDate("data"));
+            m.setData(rs.getTimestamp("data"));
 
             return m;
         } else {
@@ -102,7 +102,7 @@ public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
             m.setId(rs.getInt("id"));
             m.setMidia(rs.getBytes("midia"));
             m.setTipoConteudo(rs.getString("tipo_conteudo"));
-            m.setData(rs.getDate("data"));
+            m.setData(rs.getTimestamp("data"));
             lista.add(m);
         }
         
@@ -126,11 +126,37 @@ public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
         
         pstmt.setBytes(1, m.getMidia());
         pstmt.setString(2, m.getTipoConteudo());
-        pstmt.setDate(3, new java.sql.Date(m.getData().getTime()));
+        pstmt.setTimestamp(3, new java.sql.Timestamp(m.getData().getTime()));
         pstmt.setInt(4, m.getAlbum().getId());
         
         
         //executa uma atualização/alteração
         pstmt.executeUpdate();
+    }
+    
+    public List listarMultimidiasAlbum(int id) throws Exception{
+        Connection conexao = getConexao();
+        
+        PreparedStatement pstmt;
+        pstmt = conexao.prepareStatement("select * from multimidias where album = ? ");
+        
+        pstmt.setInt(1, id);
+        
+        ResultSet rs;
+        rs = pstmt.executeQuery();
+        
+        List lista;
+        lista = new ArrayList();
+        
+        while (rs.next()){
+            Multimidia m = new Multimidia();
+            m.setId(rs.getInt("id"));
+            m.setMidia(rs.getBytes("midia"));
+            m.setTipoConteudo(rs.getString("tipo_conteudo"));
+            m.setData(rs.getTimestamp("data"));
+            lista.add(m);
+        }
+        
+        return lista;
     }
 }

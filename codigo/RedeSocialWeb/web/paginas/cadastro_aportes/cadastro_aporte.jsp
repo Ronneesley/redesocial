@@ -31,18 +31,18 @@
                         ${mensagem}
 
                         ${erro}
-                        <h1 id="center"> Criação de novo aporte</h1>
+                        <h1 id="center"> Cria&ccedil;&abreve;o de novo aporte</h1>
                             <input type="hidden" name="id" value="${aporte.id}" />
                             
                             <hr style="width: 95%" />
                             <br><br>
-                            <b id="center">T&iacute;tulo</b> (Campo Obrigatório *)
+                            <b id="center">T&iacute;tulo</b> (Campo Obrigat&oacute;rio *)
                            
                             <br/>
                             <input id="center" class="campo" type="text" name="titulo" value="${aporte.titulo}"/>
                             <br/><br/>
                            
-                            <b id="center">Categoria</b> (Campo Obrigatório *)
+                            <b id="center">Categoria</b> (Campo Obrigat&oacute;rio *)
                             <br/>
                            
                             <select id="center" value="">Selecione a Categoria
@@ -58,14 +58,14 @@
                             </select>
 
                             <br/><br/>
-                            <b id="center">Arquivos de mídia</b> (Opcional)
+                            <b id="center">Arquivos de m&iacute;dia</b> (Opcional)
                             <br/>
-                            <input id="center" class="campoMidia" type="text" name="midia" placeholder="Descrição do Arquivo" />
+                            <input id="center" class="campoMidia" type="text" name="midia" placeholder="Descri&ccedil;&abreve;o do Arquivo" />
 
                             <input id="center" class="botaoUpload" type="button" name="upload" value="Upload">
                             <br/><br/>
 
-                            <b id="center">Descrição</b> (Opcional)
+                            <b id="center">Descri&ccedil;&abreve;o</b> (Opcional)
                             <br/>
                             <textarea id="center" class="campoDescricao" type="text" name="descricao"/> </textarea>
                             <br/><br/>
@@ -100,9 +100,9 @@
 			<br/><br/>
 			<a class="link" href="#">Perfil</a>
 			<br/><br/>
-                        <a class="link" href="#">Páginas</a>
+                        <a class="link" href="#">P&aacute;ginas</a>
 			<br/><br/>
-                        <a class="link" href="#">Vídeos</a>
+                        <a class="link" href="#">V&iacute;deos</a>
 
 		</div>
 	</body>

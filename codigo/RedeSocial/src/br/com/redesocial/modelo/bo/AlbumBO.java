@@ -2,6 +2,7 @@ package br.com.redesocial.modelo.bo;
 
 import br.com.redesocial.modelo.dao.AlbumDAO;
 import br.com.redesocial.modelo.dto.Album;
+import java.util.List;
 
 /**
  * @author Andrey Silva Ribeiro
@@ -43,4 +44,10 @@ public class AlbumBO extends BOCRUDBase<Album, AlbumDAO> {
     protected void validarChavePrimaria(Album dto) throws Exception {
         if (dto.getId() == null) throw new Exception("Preencha o campo id");
     }
+    
+    public List listarAlbunsPessoais(int id) throws ClassNotFoundException, Exception{
+        AlbumDAO dao = this.instanciarDAO();
+        return dao.listarAlbunsPessoais(id);
+    }
+    
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Galeria</title>
+        <title>Cadastrar ¡lbum</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style type="text/css">
@@ -64,36 +64,41 @@
                 font-family: arial;
                 font-size: 15px;
             }
+            
+            .btn{
+                background: rgba(0,0,0,0); 
+                border: 2px solid #cecece;
+                padding: 5px;
+                margin-right: 5px;
+            }
         </style>
     </head>
     <body>
+        ${mensagem}
+        ${erro}
         <div id="timeline">
             
             <div class="galeria">
                 <div class="cabeca">
-                    <h1>Fotos com voc√™</h1>
+                    <h1>Cadastrar ¡lbum</h1>
                     <a href="#"><h2>Suas fotos</h2></a>
-                    <a href="../RedeSocialWeb/AlbumControle?operacao=Listar"><h2>Seus √Ålbuns</h2></a>
-                    <a href="#"><h2>Criar √Ålbum</h2></a>
+                    <a href="../../RedeSocialWeb/AlbumControle?operacao=Listar"><h2>Seus ¡lbuns</h2></a>
+                    <a href="../../AlbumControle?operacao=CriarNovo"><h2>Criar ¡lbum</h2></a>
                     <select>
                         <option value="#">...</option>
                         <option value="#">Editar</option>
                         <option value="#">Deletar</option>
-                        <option value="#">√Ålbuns Selecionados</option>
+                        <option value="#">¡lbuns Selecionados</option>
                     </select>
-                </div>
-                <a href="imagens/usuario.jpg" target="_blank">
-                    <img src="imagens/usuario.jpg" alt="imagem" class="imagem" />
-                </a>
-                <a href="imagens/usuario.jpg" target="_blank">
-                    <img src="imagens/usuario.jpg" alt="imagem" class="imagem" />
-                </a>
-                <a href="imagens/usuario.jpg" target="_blank">
-                    <img src="imagens/usuario.jpg" alt="imagem" class="imagem" />
-                </a>
-                <a href="imagens/usuario.jpg" target="_blank">
-                    <img src="imagens/usuario.jpg" alt="imagem" class="imagem" />
-                </a>
+                </div>	
+                    <form action="AlbumControle?operacao=Cadastrar" method="post">
+                        <input type="hidden" name="id" value="${album.id}" />
+                        <label for="nomeAlbum">Digite o nome do ¡lbum: </label>
+                        <input type="text" id="album" name="album" value="${album.nome}"/>
+
+
+                        <input type="submit" class="btn" data-dismiss="modal" value="Criar"/>
+                    </form>	
             </div>
         </div>
     </body>

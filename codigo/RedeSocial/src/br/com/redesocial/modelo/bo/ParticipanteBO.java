@@ -10,12 +10,12 @@ import br.com.redesocial.modelo.dto.Participante;
  */
 
 
-public class ParticipanteBO extends BOCRUDBase<Participante, ParticipanteDAO> {
+public class ParticipanteBO{
     /**
      * Instancia um objeto de país DAO
      * @return instância de acesso aos dados do país
      */
-    @Override
+    //@Override
     protected ParticipanteDAO instanciarDAO() {
         return new ParticipanteDAO();
     }
@@ -25,7 +25,7 @@ public class ParticipanteBO extends BOCRUDBase<Participante, ParticipanteDAO> {
      * @param dto objeto em questão
      * @throws Exception validação se a chave não foi preenchida
      */
-    @Override
+    //@Override
     protected void validarChavePrimaria(Participante dto) throws Exception {
         if (dto.getGrupo() == null) throw new Exception("Preencha o campo Grupo");
          if (dto.getUsuario() == null) throw new Exception("Preencha o campo Usuario");
@@ -36,7 +36,7 @@ public class ParticipanteBO extends BOCRUDBase<Participante, ParticipanteDAO> {
      * @param dto objeto em questão que será validado
      * @throws Exception validações encontradas
      */
-    @Override
+    //@Override
     protected void validar(Participante dto) throws Exception {
        // Validações
         if (dto.getCargo() == null) throw new Exception("Preencha o Cargo");

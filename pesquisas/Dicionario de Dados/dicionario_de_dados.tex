@@ -1,0 +1,116 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[brazil]{babel}
+\usepackage{indentfirst}
+\usepackage{url}
+\usepackage{float}
+\usepackage{color}
+\usepackage{tabela_de_dados}
+\usepackage{colortbl}
+
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+\definecolor{cinzaClaro}{rgb}{0.9,0.9,0.9}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\RequirePackage{graphicx}
+\title{Dicionário de Dados}
+\author{Gusttavo Nunes Gomes\and Jonathan Silvestre Sousa \and Salmi Nunes de Paula Junior\and Willian Wallace de Matteus Silva}
+ 
+\usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
+\begin{document}
+\begin{titlepage}
+\begin{center}
+\begin{figure}[htb]
+                
+                \label{figura:LogoIF}
+        
+                \centering
+                \includegraphics[width=6cm]{recursos/imagens/logo.png} 
+\end{figure}
+Instituto Federal Goiano - Campus Ceres\\
+Bacharelado em Sistemas de Informação\\
+Prof. Me. Ronneesley Moura Teles\\\vspace{1cm}
+
+Gusttavo Nunes Gomes\\
+Jonathan Silvestre Sousa \\
+Salmi Nunes de Paula Junior\\
+Willian Wallace de Matteus Silva\\
+\vspace{6.0cm}
+\textit{\textbf{\Large{Dicionário de Dados}}}\\\vspace{11cm}
+Novembro\\
+2017\\
+\end{center}
+\end{titlepage}
+\tableofcontents
+\newpage
+\begin{center}
+\textbf{\Large{JDBC com transações}}\\\vspace{0.5cm}
+\end{center}
+\section{Introdução}
+
+\begin{tabbing}
+\hspace{1.0cm}\=\hspace{2cm}\=\hspace{0.5cm}\=\hspace{2cm}\=\hspace{2cm}\=\hspace{2cm}\=\kill
+ • \>  • \>  • \>  • \>  • \>  • \> • \\ 
+ • \>  • \>  • \>  • \>  • \>  • \> • \\ 
+ • \>  • \>  • \>  • \>  • \>  • \> •
+\end{tabbing} 
+
+\begin{center}
+
+\begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+\hline 
+Chaves & Campo Lógico & Campo Físico & Tipo & Tamaho & Nulo & Descrição\\
+\hline 
+PK & Campo Lógico & Campo Físico & Tipo & Tamaho & Nulo & Descrição\\
+\hline 
+
+\end{tabular} 
+\end{center}
+
+\begin{center}
+
+
+\begin{table}[h!]
+		\caption{Caso de Uso: 2}
+		\label{tabela:1}
+		\begin{tabular}{|p{1cm}|p{2cm}|p{2cm}|p{1cm}|p{1.5cm}|p{2cm}|p{3cm}|}
+		\hline
+		
+				
+			\multicolumn{7}{|p{16cm}|}{\cellcolor{cinzaClaro} Tabela: } \\ 
+			\hline
+		{\small Chaves} & {\small Campo Lógico} & {\small Campo Físico} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\
+\hline 
+		
+		{\small ID} & {\small ID} & {\small ID} & {\small VARCHAR} & {\small 1000} & {\small Not Null} & {\small dASDASDASFAS ASDASD ASD ASD ASDSA} \\\hline 		
+		
+		{\small ID} & {\small ID} & {\small ID} & {\small ID} & {\small ID} & {\small ID} & {\small ID} \\\hline 
+		ID & {\small ID} & {\footnotesize ID} & {\scriptsize ID} & {\tiny ID} & ID &
+			
+		\end{tabular}
+	\end{table}
+	
+	\end{center}
+
+\newpage
+\section{Referências Bibliográfica}
+\noindent \textbf{[1]} \url {http:/}\\\vspace{0.2cm}
+
+\noindent \textbf{[2] }\url{https://pt.wikipedia.org/wiki/JDBC}\\\vspace{0.2cm}
+\end{document}
+%Modelo de código para inserir figura
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=15cm]{logo.png}
+%\label{4}
+%\caption{Fonte:http://...; Acesso em 06/11/2017}
+%\end{figure}
