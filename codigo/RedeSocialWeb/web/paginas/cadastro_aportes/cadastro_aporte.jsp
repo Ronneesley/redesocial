@@ -36,7 +36,7 @@
                             
                             <hr style="width: 95%" />
                             <br><br>
-                            <b id="center">T&iacute;tulo</b> (Campo Obrigatório *)
+                            <b id="center">T&iacute;tulo</b> (Campo Obrigat&oacute;rio *)
                            
                             <br/>
                             <input id="center" class="campo" type="text" name="titulo" value="${aporte.titulo}"/>
