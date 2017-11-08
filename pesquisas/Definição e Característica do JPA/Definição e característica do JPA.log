@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.12)  6 NOV 2017 18:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.12)  8 NOV 2017 15:38
 entering extended mode
 **"./Definição e característica do JPA.tex"
 ("Definição e característica do JPA.tex"
@@ -663,12 +663,12 @@ ng>]
 \openout3 = `"Definição e característica do JPA.toc"'.
 
  [1]
-LaTeX Font Info:    Try loading font information for U+msa on input line 105.
+LaTeX Font Info:    Try loading font information for U+msa on input line 104.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 105.
+LaTeX Font Info:    Try loading font information for U+msb on input line 104.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -681,13 +681,13 @@ Here is how much of TeX's memory you used:
  8659 multiletter control sequences out of 15000+200000
  10432 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,6n,40p,618b,294s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,6n,40p,512b,294s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 /amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmtt12.pfb>
-Output written on "Definição e característica do JPA.pdf" (3 pages, 71774 by
+Output written on "Definição e característica do JPA.pdf" (3 pages, 71638 by
 tes).
 PDF statistics:
  31 PDF objects out of 1000 (max. 8388607)
