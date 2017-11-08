@@ -34,7 +34,7 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
     public void alterar(Comentario p) throws Exception {
         Connection conexao = getConexao();
 
-        PreparedStatement pstmt = conexao.prepareStatement("update comentarios set descricao = ?, ups = ?, downs = ? data = ?, postagem = ? ,resposta = ?, usuario = ? where id = ?"); 
+        PreparedStatement pstmt = conexao.prepareStatement("update comentarios set descricao = ?, ups = ?, downs = ?, data = ?, postagem = ?, resposta = ?, usuario = ? where id = ?"); 
         
         pstmt.setString(1, p.getDescricao());
         pstmt.setInt(2, p.getUps());
