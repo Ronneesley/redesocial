@@ -17,11 +17,12 @@ import java.util.List;
  * @since 27/07/2017
  */
 public class UsuarioDAO extends DAOCRUDBase<Usuario> {
+    
     /**
-     * Inseri um objeto no banco de dados na tabela usuários
-     * @param dto objeto com os dados de usuário já preenchido
-     * @throws Exception
-     */
+    * Método responsável pela inserção de um objeto no banco de dados na tabela usuários
+    * @param dto objeto com os dados de usuário já preenchido
+    * @throws Exception
+    */
     @Override
     public void inserir(Usuario dto) throws Exception {
         Connection conexao = getConexao();
@@ -53,7 +54,13 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
         
         dto.setId(getId(pstmt));
     }
-    
+
+    /**
+    * Método que seleciona um usuário já cadastrado no banco de dados
+    * @param id identificador do usuário
+    * @return u usuário selecionado no banco de dados
+    * @throws Exception possíveis exceções que podem acontecer
+    */
     @Override
     public Usuario selecionar(int id) throws Exception {
         Connection conexao = getConexao();
@@ -85,13 +92,14 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
         }else{
             return null;
         }
-    }    
-     /**
-     * Método responsável pela alteração de dados de um usuário no banco de dados
-     * @author Lucas Azevedo
-     * @param u novos dados alterado do usuário, com o ID do usuário a ser alterado preenchido
-     * @throws Exception possíveis exceções que podem acontecer
-     */
+    }  
+    
+    /**
+    * Método responsável pela alteração de dados de um usuário no banco de dados
+    * @author Lucas Azevedo
+    * @param u novos dados alterado do usuário, com o ID do usuário a ser alterado preenchido
+    * @throws Exception possíveis exceções que podem acontecer
+    */
     @Override
     public void alterar (Usuario  u) throws Exception {
         Connection conexao = getConexao();
@@ -129,8 +137,7 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
      * @author Lara Caroline
      * @param u nova senha do usuário, com o ID do usuário, a ser alterado, preenchido
      * @throws Exception possíveis exceções que podem acontecer
-     */
-    
+     */    
     public void alterarSenha (Usuario  u) throws Exception {
         Connection conexao = getConexao();
 
@@ -184,6 +191,11 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
         return lista;
     }
 
+    /**
+    * Método responsável pela exclusão de um usuário no banco de dados
+    * @param id identificador do usuário a ser excluído
+    * @throws Exception possíveis exceções que podem acontecer
+    */
     @Override
     public void excluir(int id) throws Exception {
         Connection conexao = getConexao();  
@@ -194,6 +206,13 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
 
     }
 
+    /**
+    * Método responsável pelo login do usuário
+    * @param email identificador do email a ser usado no login
+    * @param senha identificador da senha a ser usada no login
+    * @return u com os dados do usuário que coindidir com os parâmetros
+    * @throws Exception possíveis exceções que podem acontecer
+    */
     public Usuario logar(String email, String senha) throws Exception {
         Connection conexao = getConexao();
         
@@ -227,7 +246,13 @@ public class UsuarioDAO extends DAOCRUDBase<Usuario> {
             return null;
         }
     } 
-    
+
+    /**
+    * Método responsável pela seleção do email do usuário para usar no envio de email
+    * @param email identificador do email a ser usado
+    * @return u com os dados do usuário que coindidir com o email
+    * @throws Exception possíveis exceções que podem acontecer
+    */
     public Usuario selecionarEmail(String email) throws Exception {
         
         Connection conexao = getConexao();

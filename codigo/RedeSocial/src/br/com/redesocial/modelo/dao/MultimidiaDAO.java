@@ -13,6 +13,12 @@ import java.util.List;
  * @author Lara, Jeferson, Luciano, Jonathan
  */
 public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
+    
+    /**
+     * Método responsável pela inserção de uma multimídia no banco de dados
+     * @param m da multimídia a ser inserida
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Override
     public void inserir(Multimidia m) throws Exception {
         Connection conexao = getConexao();
@@ -42,7 +48,6 @@ public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
      * @return Multimídia selecionada no banco de dados
      * @throws Exception possíveis exceções que podem acontecer
      */
-   
     @Override
     public Multimidia selecionar(int id) throws Exception{
         Connection conexao = getConexao();
@@ -67,6 +72,11 @@ public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
         }
     }
 
+    /**
+     * Método responsável pela exclusão da multimídia no banco de dados
+     * @param id identificador da multimídia a ser excluída
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     @Override
     public void excluir(int id) throws Exception {
         Connection conexao = getConexao();
@@ -109,14 +119,13 @@ public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
         return lista;
     }
     
-    
-     /**
-     * Método que Altera todas as multimídias  no banco de dados
-     * @author Jose Gilvan Jacinto Junior
-     * @param m as multimídias a serem alteradas
-     * @throws Exception possíveis exceções que podem acontecer
-     */
-  @Override
+    /**
+    * Método que Altera todas as multimídias  no banco de dados
+    * @author Jose Gilvan Jacinto Junior
+    * @param m as multimídias a serem alteradas
+    * @throws Exception possíveis exceções que podem acontecer
+    */
+    @Override
     public void alterar(Multimidia m) throws Exception { 
         Connection conexao = getConexao();
         
@@ -133,7 +142,13 @@ public class MultimidiaDAO extends DAOCRUDBase<Multimidia> {
         //executa uma atualização/alteração
         pstmt.executeUpdate();
     }
-    
+
+    /**
+     * Método que lista todas as multimídias existentes no banco pesquisado
+     * @return lista as multimídias existentes no álbum pesquisado
+     * @param id o álbum a ser pesquisado
+     * @throws Exception possíveis exceções que podem acontecer
+     */
     public List listarMultimidiasAlbum(int id) throws Exception{
         Connection conexao = getConexao();
         
