@@ -5,6 +5,6 @@
 \contentsline {subsection}{\numberline {2.2}Artefatos do usu\IeC {\'a}rios}{3}
 \contentsline {subsection}{\numberline {2.3}Postagens}{5}
 \contentsline {subsection}{\numberline {2.4}Localidades}{7}
-\contentsline {subsection}{\numberline {2.5}Grupos}{8}
+\contentsline {subsection}{\numberline {2.5}Grupos}{7}
 \contentsline {subsection}{\numberline {2.6}Objetos}{8}
 \contentsline {section}{\numberline {3}Refer\IeC {\^e}ncias Bibliogr\IeC {\'a}fica}{8}
