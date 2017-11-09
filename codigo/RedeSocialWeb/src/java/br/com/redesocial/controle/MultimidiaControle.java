@@ -244,7 +244,7 @@ public class MultimidiaControle extends HttpServlet {
                             multimidia.setMidia(Utilitarios.lerArquivo(storeFile));
                             multimidia.setData(new Date());
                             multimidia.setAlbum(album);
-                            multimidia.setTipoConteudo("ainda não sei");
+                            multimidia.setTipoConteudo(item.getContentType());
 
                             
                             try {
