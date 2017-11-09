@@ -110,7 +110,7 @@ public class AporteControle extends ControleBase {
             request.setAttribute("erro", ex.getMessage());
         }
 
-        RequestDispatcher rd = request.getRequestDispatcher("paginas/cadastro_aportes/cadastro_aporte.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("paginas/aportes/cadastro.jsp");
         rd.forward(request, response);
     }
 
@@ -144,7 +144,7 @@ public class AporteControle extends ControleBase {
             this.alterar(aporte, request, response);
         }
 
-        RequestDispatcher rd = request.getRequestDispatcher("paginas/cadastro_aportes/cadastro_aporte.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("paginas/aportes/cadastro.jsp");
         rd.forward(request, response);
     }
     
@@ -180,7 +180,7 @@ public class AporteControle extends ControleBase {
             request.setAttribute("erro", ex.getMessage());
         }
 
-        RequestDispatcher rd = request.getRequestDispatcher("paginas/cadastro_aportes/cadastro_aporte.jsp"); //Mudar para a pagina de listagem
+        RequestDispatcher rd = request.getRequestDispatcher("paginas/aportes/listagem.jsp");
         rd.forward(request, response);
     }
 
@@ -213,7 +213,7 @@ public class AporteControle extends ControleBase {
             request.setAttribute("erro", ex.getMessage());
         }
 
-        RequestDispatcher rd = request.getRequestDispatcher("paginas/cadastro_aportes/cadastro_aporte.jsp"); //Mudar para a página de listagem
+        RequestDispatcher rd = request.getRequestDispatcher("paginas/aportes/cadastro.jsp");
         rd.forward(request, response);
     }
 
