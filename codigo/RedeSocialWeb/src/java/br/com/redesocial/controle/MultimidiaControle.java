@@ -155,7 +155,7 @@ public class MultimidiaControle extends HttpServlet {
             Multimidia multimidia = new Multimidia();
             request.setAttribute("multimidia", multimidia);
             
-            Integer id = Integer.parseInt(request.getParameter("id"));
+            Integer id = Integer.parseInt(request.getParameter("idalbum"));
             AlbumBO albumBO = new AlbumBO();
             Album album = albumBO.selecionar(id);
             
@@ -206,11 +206,12 @@ public class MultimidiaControle extends HttpServlet {
             uploadDir.mkdir();
         }
       
-        AlbumBO albumBO = new AlbumBO();
-        Integer id = Integer.parseInt(request.getParameter("album"));
-        Album album = albumBO.selecionar(id);
+        
         
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy HH;mm;ss");
+        
+        AlbumBO albumBO = new AlbumBO();
+        Album album = new Album();
         
         try {
             // analisa o conteÃºdo do pedido para extrair dados do arquivo
@@ -221,6 +222,16 @@ public class MultimidiaControle extends HttpServlet {
                 // itera sobre campos do formulÃ¡rio
                 for (FileItem item : formItems) {
                     // processa apenas campos que nÃ£o sÃ£o campos de formulÃ¡rio
+                    if(item.isFormField()){
+                        String name = item.getFieldName();
+                        
+                        if(name.equals("idalbum")){
+                            Integer id = Integer.parseInt(item.getString());
+                            album = albumBO.selecionar(id);
+                        }
+                        
+                    }
+
                     if (!item.isFormField()) {
                         String fileName = sdf.format(new Date()) + " " + new File(item.getName()).getName();
                         String filePath = uploadPath + File.separator + fileName;
@@ -235,31 +246,30 @@ public class MultimidiaControle extends HttpServlet {
                             multimidia.setAlbum(album);
                             multimidia.setTipoConteudo("ainda não sei");
 
+                            
                             try {
                                 this.inserir(multimidia, request, response);
                                 request.setAttribute("mensagem","Upload realizado com sucesso!");
+                                storeFile.delete();
                             } catch (Exception e) {
                                 request.setAttribute("erro", e.getMessage());
+                                storeFile.delete();
                             }
                         }
                     }
-                    /*if(item.isFormField()){
-                        
-                    }
-                    */
                 }
             }
         }catch (Exception ex){
             request.setAttribute("erro", ex.getMessage());
         }
         
-        if(uploadDir.isDirectory()){
+        /*if(uploadDir.isDirectory()){
             File[] tmps = uploadDir.listFiles();
             
             for(File deletarArquivos : tmps){
                 deletarArquivos.delete();
             }
-        }
+        }*/
     }
 
     /**
