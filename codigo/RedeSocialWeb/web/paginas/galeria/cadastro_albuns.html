@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Cadastrar Álbum</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="design.css"/>
+	</head>
+
+
+	<body id="cantos">
+        ${mensagem}
+        ${erro}
+        
+		<div id="cabecalho">
+			<img src="logo_rede.png" class="logo"/>
+			<img src="foto.png" class="fotoUsuario"/>
+
+			<input id="topobotao" type="reset" name="voltar" class="botaoVoltar" value="Voltar" />
+			&ensp;&ensp;
+			<input type="reset" name="sair" class="botao" value="Sair"/>
+				<form>
+					<div id="info">
+						<input class="campoInfo" type="text" name="" placeholder="Mais Informações"><input class="botaoInfo" type="button" name="" value="">
+					</div>
+				</form>
+		</div>
+
+		<br><br>
+
+		<div id="galeria">            
+            
+            <div class="topo_galeria">
+                                     
+                <h1>Cadastrar Álbum</h1>
+                <a href="#"><h2>Suas fotos</h2></a>
+                <a href="../../RedeSocialWeb/AlbumControle?operacao=Listar"><h2>Seus Álbuns</h2></a>
+                <a href="../../AlbumControle?operacao=CriarNovo"><h2>Criar Álbum</h2></a>                
+                    <select>                        
+                        <option value="#">...</option>
+                        <option value="#">Editar</option>
+                        <option value="#">Deletar</option>
+                        <option value="#">Álbuns Selecionados</option>
+                    </select>
+                </div>
+            
+            <div class="conteudogaleria">
+                
+                <form action="AlbumControle?operacao=Cadastrar" method="post"> 
+                    
+                    <input type="hidden" name="id" value="${album.id}" />
+                    <label for="nomeAlbum">Digite o nome do Álbum: </label>
+                    <input type="text" id="album" name="album" value="${album.nome}"/>
+
+                    <input type="submit" class="btn" data-dismiss="modal" value="Criar"/>
+                </form>
+            </div>
+			
+		</div>
+
+		<div id="opcoes">
+
+			<a class="link" href="#">Amigos</a>
+			<br/><br/>
+			<a class="link" href="#">Aportes</a>
+			<br/><br/>
+			<a class="link" href="#">Artigos</a>
+			<br/><br/>
+			<a class="link" href="#">Eventos</a>
+			<br/><br/>
+			<a class="link" href="#">Grupos</a>
+			<br/><br/>
+			<a class="link" href="#">Lattes</a>
+			<br/><br/>
+			<a class="link" href="#">Mensagens</a>
+			<br/><br/>
+			<a class="link" href="#"><B>Minhas Fotos</B></a>
+			<br/><br/>
+			<a class="link" href="#">Perfil</a>
+			<br/><br/>
+			<a class="link" href="#">Páginas</a>
+			<br/><br/>
+			<a class="link" href="#">Vídeos</a>
+
+
+		</div>
+	</body>
+</html> 
