@@ -193,13 +193,12 @@ public class ComentarioBOTest {
             
             ComentarioBO comentarioBO = new ComentarioBO();
              
-        try{                               
+            try{                               
                 comentarioBO.inserir(comentario);
             } catch(Exception ex){
-                //Mensagem de erro caso falhe
-             
               fail("Falha ao inserir um comentário: " + ex.getMessage());
             }
+            
             comentario.setDescricao("comentario! ");
             comentario.setUps(5);
             comentario.setDowns(2);
@@ -225,102 +224,99 @@ public class ComentarioBOTest {
       
     @Test
     public void testMetodoSelecionar(){
-        
+        /*
+        Para selecionar comentários é necessário a existência dos mesmos.
+        Para inserir comentários, deve-se inserir postagem, usuário, cidade
+        estado e país.
+        */
         ComentarioBO bo = new ComentarioBO();
-
+        
         try{
-            List existentes = bo.listar();
-            int qtdeExistentes = existentes.size();
-
+            
             Calendar calendario = Calendar.getInstance();
             calendario.set(2017, 7, 18, 10, 55, 13);
-
+            
             Calendar calendarioPost = Calendar.getInstance();
             calendarioPost.set(2017, 7, 18, 9, 30, 45);
-
+            
             Calendar calendarioNascimento = Calendar.getInstance();
             calendarioNascimento.set(2017, 7, 18, 9, 30, 45);
-
+            
             Pais pais = new Pais();
-
+            
             pais.setNome("Brasil");
-
+            
             PaisBO paisBO = new PaisBO();
             paisBO.inserir(pais);
-
+            
             Estado estado = new Estado();
-
-            estado.setNome("Paraná");
+            
+            estado.setNome("Goiás");
             estado.setPais(pais);
-
+            
             EstadoBO estadoBO = new EstadoBO();
             estadoBO.inserir(estado);
-
+            
             Cidade cidade = new Cidade();
-
-            cidade.setNome("Ceres");
+            
+            cidade.setNome("Goiânia");
             cidade.setEstado(estado);
-
+            
             CidadeBO cidadeBO = new CidadeBO();
             cidadeBO.inserir(cidade);
-
+            
             Usuario usuario = new Usuario();
-
-            usuario.setNome("Jeferson Rossini");
+            
+            usuario.setNome("Joana");
             usuario.setDataCadastro(new Date());
-            usuario.setEmail("contatinho@contato.com");     
+            usuario.setEmail("joaninha@contato.com");     
             usuario.setDataNascimento(calendarioNascimento.getTime());
-            usuario.setSenha("202030");
-            usuario.setSexo(Sexo.MASCULINO);
+            usuario.setSenha("192837");
+            usuario.setSexo(Sexo.FEMININO);
             usuario.setStatus(true);
-            usuario.setTelefone("(62) 8432-98632");
+            usuario.setTelefone("(62) 91234-4567");
             usuario.setCidade(cidade);
-
+            
             UsuarioBO usuarioBO = new UsuarioBO();
             usuarioBO.inserir(usuario);
-
+            
             Postagem postagem = new Postagem();
-
+            
             postagem.setUps(0);
             postagem.setDowns(0);
-            postagem.setDescricao("Texto do Post");
+            postagem.setDescricao("Post de texto");
             postagem.setData(calendarioPost.getTime());
             postagem.setUsuario(usuario);
-
-            //insere post
+            
             PostagemBO postagemBO = new PostagemBO();
             postagemBO.inserir(postagem);
-
             
-            //instancia comentario e insere
+            //Definindo a quantidade de comentários a serem inseridos  
             Comentario comentario = new Comentario();
 
-            comentario.setDescricao("Comentário escrito aqui!!!");
-            comentario.setUps(0);
-            comentario.setDowns(0);
+            comentario.setDescricao("comentario! ");
+            comentario.setUps(5);
+            comentario.setDowns(2);
             comentario.setData(calendario.getTime());
             comentario.setPostagem(postagem);
-
+            comentario.setResposta(comentario);
+            comentario.setUsuario(usuario);
+            
             try{
-                /**
-                 * Inserindo comentário no banco de dados
-                 */
-               bo.inserir(comentario);
-            }catch(Exception ex){
-                /**
-                 * Mensagem de erro caso falhe
-                 */
+                //Inserindo comentário no banco de dados
+                bo.inserir(comentario);
+                
+                int id = comentario.getId();
+                Comentario ComentarioSelecionado = bo.selecionar(id);
+                assertNotNull("Comentario não encontrado", ComentarioSelecionado);
+                
+            } catch (Exception ex) {
                 fail("Falha ao inserir um comentário: " + ex.getMessage());
             }
-
         }catch (Exception ex){
-            /**
-             * Erro caso a listagem falhe
-             */
-            fail("Erro ao listar: " + ex.getMessage());
+            //Erro caso a listagem falhe
+            fail("Erro ao selecionar: " + ex.getMessage());
         }
-        
-
     }
     
     /**
