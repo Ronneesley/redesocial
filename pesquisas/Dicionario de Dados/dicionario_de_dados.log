@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.11.4)  9 NOV 2017 14:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.11.4)  9 NOV 2017 14:20
 entering extended mode
 **./dicionario_de_dados.tex
 (dicionario_de_dados.tex
@@ -923,16 +923,211 @@ Overfull \hbox (41.25272pt too wide) in paragraph at lines 322--336
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[4] [5] (dicionario_de_dados.aux)
+
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 350--350
+[]|\OT1/cmr/m/n/10.95 Chaves| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 350--350
+[]|\OT1/cmr/m/n/10.95 Campo
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 350--350
+[]|\OT1/cmr/m/n/10.95 Campo
+ []
+
+
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 348--359
+[][] 
+ []
+
+[4]
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 369--369
+[]|\OT1/cmr/m/n/10.95 Chaves| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
+[]|\OT1/cmr/m/n/10.95 Campo
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
+[]|\OT1/cmr/m/n/10.95 Campo
+ []
+
+
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 367--380
+[][] 
+ []
+
+
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 390--390
+[]|\OT1/cmr/m/n/10.95 Chaves| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 390--390
+[]|\OT1/cmr/m/n/10.95 Campo
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 390--390
+[]|\OT1/cmr/m/n/10.95 Campo
+ []
+
+
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 388--404
+[][] 
+ []
+
+
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 414--414
+[]|\OT1/cmr/m/n/10.95 Chaves| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 414--414
+[]|\OT1/cmr/m/n/10.95 Campo
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 414--414
+[]|\OT1/cmr/m/n/10.95 Campo
+ []
+
+
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 412--429
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 439--439
+[]|\OT1/cmr/m/n/10.95 Chaves| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 439--439
+[]|\OT1/cmr/m/n/10.95 Campo
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 439--439
+[]|\OT1/cmr/m/n/10.95 Campo
+ []
+
+
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 437--448
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 458--458
+[]|\OT1/cmr/m/n/10.95 Chaves| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 458--458
+[]|\OT1/cmr/m/n/10.95 Campo
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 458--458
+[]|\OT1/cmr/m/n/10.95 Campo
+ []
+
+
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 456--467
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5]
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 477--477
+[]|\OT1/cmr/m/n/10.95 Chaves| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 477--477
+[]|\OT1/cmr/m/n/10.95 Campo
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 477--477
+[]|\OT1/cmr/m/n/10.95 Campo
+ []
+
+
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 475--486
+[][] 
+ []
+
+
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 496--496
+[]|\OT1/cmr/m/n/10.95 Chaves| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 496--496
+[]|\OT1/cmr/m/n/10.95 Campo
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 496--496
+[]|\OT1/cmr/m/n/10.95 Campo
+ []
+
+
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 494--505
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 516--516
+[]|\OT1/cmr/m/n/10.95 Chaves| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 516--516
+[]|\OT1/cmr/m/n/10.95 Campo
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 516--516
+[]|\OT1/cmr/m/n/10.95 Campo
+ []
+
+
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 514--525
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[6] [7] (dicionario_de_dados.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 3948 strings out of 493335
- 51929 string characters out of 3136651
- 161797 words of memory out of 3000000
- 7373 multiletter control sequences out of 15000+200000
+ 3957 strings out of 493335
+ 52133 string characters out of 3136651
+ 161887 words of memory out of 3000000
+ 7382 multiletter control sequences out of 15000+200000
  11337 words of font info for 42 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,12n,25p,1070b,319s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -942,9 +1137,9 @@ Here is how much of TeX's memory you used:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Pr
 ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on dicionario_de_dados.pdf (6 pages, 108439 bytes).
+Output written on dicionario_de_dados.pdf (8 pages, 113137 bytes).
 PDF statistics:
- 48 PDF objects out of 1000 (max. 8388607)
+ 56 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
