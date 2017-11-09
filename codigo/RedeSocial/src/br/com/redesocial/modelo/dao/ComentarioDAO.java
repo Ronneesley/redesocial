@@ -15,6 +15,7 @@ import java.util.List;
  * @since 27/07/2017
  */
 public class ComentarioDAO extends DAOCRUDBase<Comentario> {
+    
     @Override
     public void excluir(int id) throws Exception {
         Connection conexao = getConexao();
@@ -34,7 +35,7 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
     public void alterar(Comentario p) throws Exception {
         Connection conexao = getConexao();
 
-        PreparedStatement pstmt = conexao.prepareStatement("update comentarios set descricao = ?, ups = ?, downs = ? data = ?, postagem = ? ,resposta = ?, usuario = ? where id = ?"); 
+        PreparedStatement pstmt = conexao.prepareStatement("update comentarios set descricao = ?, ups = ?, downs = ?, data = ?, postagem = ?, resposta = ?, usuario = ? where id = ?"); 
         
         pstmt.setString(1, p.getDescricao());
         pstmt.setInt(2, p.getUps());
@@ -60,7 +61,7 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
         Connection conexao = getConexao();
 
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("Select * from comentarios where id = ?");
+        pstmt = conexao.prepareStatement("select * from comentarios where id = ?");
         pstmt.setInt(1, id);
 
         ResultSet rs;
@@ -81,6 +82,8 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
             int idResposta = rs.getInt("resposta");            
             if (!rs.wasNull()){
                 c.setResposta(this.selecionar(idResposta));
+            }else{
+                c.setResposta(null);
             }
 
             return c;
@@ -88,13 +91,47 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
             return null;
         }
     }
+    
+    /**
+     * Método responsável pela inserção de um comentario no banco de dados
+     * @author Fernando Maciel da Silva
+     * @param c comentario a ser inserido     
+     * @throws Exception possíveis exceções que podem acontecer
+     */
+    @Override
+    public void inserir(Comentario c) throws Exception {
+       Connection conexao = getConexao();
+         
+        if (c.getDescricao().equals("")){
+            throw new Exception("O comentário não pode estar vazio!");
+        }
+        
+        PreparedStatement pstmt = conexao.prepareStatement("insert into comentarios(descricao, ups, downs, data, postagem, resposta, usuario) values(?, ?, ?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
 
+        pstmt.setString(1, c.getDescricao());
+        pstmt.setInt(2, c.getUps());
+        pstmt.setInt(3, c.getDowns());
+        pstmt.setDate(4, new java.sql.Date(c.getData().getTime()));
+        pstmt.setInt(5, c.getPostagem().getId());
+              
+        if(c.getResposta() != null){
+            pstmt.setInt(6, c.getResposta().getId());
+        } else {
+            pstmt.setNull(6, Types.INTEGER);
+        }
+        
+        pstmt.setInt(7, c.getUsuario().getId());   
+
+        pstmt.executeUpdate();        
+        c.setId(getId(pstmt));  
+    }
       /**
      * Método que lista todos os comentarios ordenado pela data do comentário do banco de dados
      * @author Igor Justino Rodrigues
      * @return lista de comentarios ordenados pela data do comentário
      * @throws Exception possíveis exceções que podem acontecer
      */
+
     @Override
     public List listar() throws Exception {
         Connection conexao = getConexao();
@@ -119,52 +156,19 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
             c.setDowns(rs.getInt("Downs"));;
             c.setData(rs.getDate("data"));
             c.setPostagem(postagemDAO.selecionar(rs.getInt("postagem")));
+            
             c.setUsuario(usuarioDAO.selecionar(rs.getInt("usuario")));
 
             int idResposta = rs.getInt("resposta");
             if (!rs.wasNull()){
                 c.setResposta(this.selecionar(idResposta));
+            }else{
+                c.setResposta(null);
             }
 
             lista.add(c);
         }
 
         return lista;
-    }
-    
-    /**
-     * Método responsável pela inserção de um comentario no banco de dados
-     * @author Fernando Maciel da Silva
-     * @param c comentario a ser inserido     
-     * @throws Exception possíveis exceções que podem acontecer
-     */
-    @Override
-    public void inserir(Comentario c) throws Exception {
-        
-        Connection conexao = getConexao();
-         
-        if (c.getDescricao().equals("")){
-            throw new Exception("O comentário não pode estar vazio!");
-        }
-        
-        PreparedStatement pstmt = conexao.prepareStatement("insert into comentarios(descricao, ups, downs, data, postagem, resposta, usuario) values(?, ?, ?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
-
-        pstmt.setString(1, c.getDescricao());
-        pstmt.setInt(2, c.getUps());
-        pstmt.setInt(3, c.getDowns());
-        pstmt.setDate(4, new java.sql.Date(c.getData().getTime()));
-        pstmt.setInt(5, c.getPostagem().getId());
-        pstmt.setInt(6, c.getResposta().getId());
-        pstmt.setInt(7, c.getUsuario().getId());
-        
-        if(c.getResposta() != null){
-            pstmt.setInt(5, c.getResposta().getId());
-        } else {
-            pstmt.setNull(5, Types.INTEGER);
-        }
-        pstmt.executeUpdate();
-        
-        c.setId(getId(pstmt));
-        
     }
 }

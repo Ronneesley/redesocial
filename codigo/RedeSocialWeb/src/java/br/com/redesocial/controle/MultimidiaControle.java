@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.redesocial.controle;
 
 import br.com.redesocial.modelo.bo.AlbumBO;
@@ -29,7 +24,7 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 /**
  *
- * @author qualq
+ * @author Daniel
  */
 @WebServlet(name = "MultimidiaControle", urlPatterns = {"/MultimidiaControle"})
 public class MultimidiaControle extends HttpServlet {
@@ -42,20 +37,15 @@ public class MultimidiaControle extends HttpServlet {
     private static final int MAX_REQUEST_SIZE = 1024 * 1024 * 500; // 50MB
     // Diretório para upload da imagem
     private static final String UPLOAD_DIRECTORY = "tmp";
-
-    
     
     /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException, Exception {
+    * Processa todas as requisições sejam elas do tipo GET ou POST
+    * @param request requisição
+    * @param response resposta
+    * @throws ServletException se ocorre um erro no Servlet
+    * @throws IOException se ocorre um erro de entrada e saída
+    */
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, Exception {
         response.setContentType("text/html;charset=UTF-8");
         
         String operacao = request.getParameter("operacao");
@@ -80,18 +70,15 @@ public class MultimidiaControle extends HttpServlet {
  
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+    * Requisições do tipo GET
+    * @param request requisição
+    * @param response resposta
+    * @throws ServletException se ocorre um erro no Servlet
+    * @throws IOException se ocorre um erro de entrada e saída
+    */
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             processRequest(request, response);
         } catch (Exception ex) {
@@ -100,16 +87,14 @@ public class MultimidiaControle extends HttpServlet {
     }
 
     /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+    * Tratamento dos envios pelo método POST
+    * @param request requisição
+    * @param response resposta
+    * @throws ServletException se ocorre um erro no Servlet
+    * @throws IOException se ocorre um erro de entrada e saída
+    */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             processRequest(request, response);
         } catch (Exception ex) {
@@ -117,33 +102,60 @@ public class MultimidiaControle extends HttpServlet {
     }
 
     /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
+    * Descrição do Servlet
+    * @return descrição
+    */
     @Override
     public String getServletInfo() {
         return "Servlet de multimídias.";
-    }// </editor-fold>
+    }
 
+    /**
+    * Edita uma multimídia no banco de dados
+    * @param request requisição
+    * @param response resposta
+    * @throws ServletException se ocorre um erro no Servlet
+    * @throws IOException se ocorre um erro de entrada e saída
+    */
     private void editar(HttpServletRequest request, HttpServletResponse response) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    /**
+    * Exclui uma multimídia no banco de dados
+    * @param request requisição
+    * @param response resposta
+    * @throws ServletException se ocorre um erro no Servlet
+    * @throws IOException se ocorre um erro de entrada e saída
+    */
     private void excluir(HttpServletRequest request, HttpServletResponse response) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    /**
+    * Lista todas as multimídias existentes no banco de dados
+    * @param request requisição
+    * @param response resposta
+    * @throws ServletException se ocorre um erro no Servlet
+    * @throws IOException se ocorre um erro de entrada e saída
+    */
     private void listar(HttpServletRequest request, HttpServletResponse response) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    /**
+    * Cria uma nova multimídia
+    * @param request requisição
+    * @param response resposta
+    * @throws ServletException se ocorre um erro no Servlet
+    * @throws IOException se ocorre um erro de entrada e saída
+    */
     private void criarNovo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             Multimidia multimidia = new Multimidia();
             request.setAttribute("multimidia", multimidia);
             
-            Integer id = Integer.parseInt(request.getParameter("id"));
+            Integer id = Integer.parseInt(request.getParameter("idalbum"));
             AlbumBO albumBO = new AlbumBO();
             Album album = albumBO.selecionar(id);
             
@@ -155,6 +167,13 @@ public class MultimidiaControle extends HttpServlet {
         rd.forward(request, response);
     }
 
+    /**
+    * Cadastra uma multimídia no banco de dados
+    * @param request requisição
+    * @param response resposta
+    * @throws ServletException se ocorre um erro no Servlet
+    * @throws IOException se ocorre um erro de entrada e saída
+    */
     private void cadastrar(HttpServletRequest request, HttpServletResponse response) throws Exception {
         Multimidia multimidia = new Multimidia();
         
@@ -187,11 +206,12 @@ public class MultimidiaControle extends HttpServlet {
             uploadDir.mkdir();
         }
       
-        AlbumBO albumBO = new AlbumBO();
-        Integer id = Integer.parseInt(request.getParameter("album"));
-        Album album = albumBO.selecionar(id);
+        
         
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy HH;mm;ss");
+        
+        AlbumBO albumBO = new AlbumBO();
+        Album album = new Album();
         
         try {
             // analisa o conteÃºdo do pedido para extrair dados do arquivo
@@ -202,6 +222,16 @@ public class MultimidiaControle extends HttpServlet {
                 // itera sobre campos do formulÃ¡rio
                 for (FileItem item : formItems) {
                     // processa apenas campos que nÃ£o sÃ£o campos de formulÃ¡rio
+                    if(item.isFormField()){
+                        String name = item.getFieldName();
+                        
+                        if(name.equals("idalbum")){
+                            Integer id = Integer.parseInt(item.getString());
+                            album = albumBO.selecionar(id);
+                        }
+                        
+                    }
+
                     if (!item.isFormField()) {
                         String fileName = sdf.format(new Date()) + " " + new File(item.getName()).getName();
                         String filePath = uploadPath + File.separator + fileName;
@@ -214,35 +244,42 @@ public class MultimidiaControle extends HttpServlet {
                             multimidia.setMidia(Utilitarios.lerArquivo(storeFile));
                             multimidia.setData(new Date());
                             multimidia.setAlbum(album);
-                            multimidia.setTipoConteudo("ainda não sei");
+                            multimidia.setTipoConteudo(item.getContentType());
 
+                            
                             try {
                                 this.inserir(multimidia, request, response);
                                 request.setAttribute("mensagem","Upload realizado com sucesso!");
+                                storeFile.delete();
                             } catch (Exception e) {
                                 request.setAttribute("erro", e.getMessage());
+                                storeFile.delete();
                             }
                         }
                     }
-                    /*if(item.isFormField()){
-                        
-                    }
-                    */
                 }
             }
         }catch (Exception ex){
             request.setAttribute("erro", ex.getMessage());
         }
         
-        if(uploadDir.isDirectory()){
+        /*if(uploadDir.isDirectory()){
             File[] tmps = uploadDir.listFiles();
             
             for(File deletarArquivos : tmps){
                 deletarArquivos.delete();
             }
-        }
+        }*/
     }
 
+    /**
+    * Insere uma multimídia no banco de dados
+    * @param multimidia identificador da multimídia a ser inserida
+    * @param request requisição
+    * @param response resposta
+    * @throws ServletException se ocorre um erro no Servlet
+    * @throws IOException se ocorre um erro de entrada e saída
+    */
     private void inserir(Multimidia multimidia, HttpServletRequest request, HttpServletResponse response) {
         try {
             MultimidiaBO bo = new MultimidiaBO();

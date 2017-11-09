@@ -61,8 +61,8 @@
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Fim codigo geral%%%%%%%%%%%%%
 \RequirePackage{graphicx}
-\title{JDBC com transações}
-\author{Daniel Moreira Cardoso \and Gusttavo Nunes Gomes\and Jeferson Rossini Ferreira Lourenço\and Paulo Henrique Rodrigues Araujo\and Warley Rodrigues de Andrade}
+\title{Vantagens e Desvantagens do Uso de Triggers}
+\author{Daniel Moreira Cardoso \and Davi Ildeu de Faria \and Igor Justino Rodrigues \and Luciano de Carvalho Borba \and Warley Rodrigues de Andrade}
  
 \usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
 \begin{document}
@@ -78,11 +78,11 @@
 Instituto Federal Goiano - Campus Ceres\\
 Bacharelado em Sistemas de Informação\\
 Prof. Me. Ronneesley Moura Teles\\\vspace{0.5cm}
-Daniel \\
-Davi\\
-Igor Justino\\
-Luciano\\
-Warley Rodrigues\\
+Daniel Moreira Cardoso \\
+Davi Ildeu de Faria \\
+Igor Justino Rodrigues \\
+Luciano de Carvalho Borba \\
+Warley Rodrigues de Andrade \\
 \vspace{5.0cm}
 \textit{\textbf{\Large{Vantagens e Desvantagens do Uso de Triggers}}}\\\vspace{0.5cm}
 \vspace{9.5cm}
@@ -94,24 +94,84 @@ Warley Rodrigues\\
 \textbf{\Large{Vantagens e Desvantagens do Uso de Triggers}}\\\vspace{0.5cm}
 \end{center}
 \section{Introdução}
-Um trigger é um tipo especial de procedimento armazenado, que é executado sempre que há uma tentativa de modificar os dados de uma tabela que é protegida por ele. Por isso temos:
+\subsection{O que é trigger?}
 
- - Associados a uma tabela: os TRIGGERS são definidos em uma tabela específica, que é denominada tabela de TRIGGERS;
+Trigger também conhecida como “Gatilho”  é um objeto de base que é associado com uma tabela e é ativado quando um evento especial acontece, auxiliando uma tabela sempre que é necessário.
+A Trigger não é chamada nem é executada, ela é disparada automaticamente como consequência de alterações em tabelas no banco de dados: INSERT, DELETE e UPDATE. Normalmente esse mecanismo é utilizado para manter a integridade dos dados realizando alterações de dados de uma forma sistemática. Um bom exemplo disso é na inserção de dados em uma determinada tabela, usando a forma convencional seria necessário a inserção dos dados de tabela em tabela tornando esse ato um pouco repetitivo e demorado. Já com o uso das triggers a inserção pode ser realizada em várias tabelas ao mesmo tempo agilizando o processo.  Além das Triggers, alguns SGBD possuem outros mecanismos de integridade, como Constraint e Assertion.
+
+
+\section{Para que serve uma trigger?}
+Uma Trigger é dividida em três partes:
+
+\begin{enumerate}
+
+
+\item Evento: tipo de evento que será executado.
+\item Condição: necessidade de executar ou não a ação.
+\item Ação: sequência de comandos que serão executadas.
+\end{enumerate}
+
+Outra utilização das Triggers está no processo de replicação (cópia) de dados, armazenando os dados de forma redundante para evitar associações frequentes de tabela e a implantação de regras de negócios complexas.
+
+\section{Portabilidade de Sistema Gerenciador de Banco de Dados (SGBD)}
+”Ao adotar Trigger resultará na quase impossibilidade de migração de banco de dados.” 
+Frase destacada no \url{forumrm.com}
  
- - Chamados Automaticamente: quando há uma tentativa de inserir, atualizar ou excluir os dados em uma tabela, e um TRIGGER tiver sido definido na tabela para essa ação específica, ele será executado automaticamente, não podendo nunca ser ignorado.
- 
- - Não podem ser chamados diretamente: ao contrário dos procedimentos armazenados do sistema, os disparadores não podem ser chamados diretamente e não passam nem aceitam parâmetros.
- 
- - É parte de uma transação: o TRIGGER e a instrução que o aciona são tratados como uma única transação, que poderá ser revertida em qualquer ponto do procedimento, caso você queria usar “ROLLBACK”, conceitos que veremos mais a frente.[1]
+Um dos principais e maiores problemas do uso das triggers é realmente a portabilidade, em diversos fóruns de TI existe quase uma unanimidade nas opiniões em relação a esse assunto.
+As triggers são criadas exclusivamente para o banco de dados utilizado, caso posteriormente seja necessário a troca do SGBD as triggers terão que ser recriadas adaptando-as para o  SGBD escolhido, causando assim uma pequena dor de cabeça.
+Diversos programadores que utilizam trigger por real necessidade apontam esse problema como principal motivo de descontentamento em relação ao uso das triggers. 
 
-\section{Para o que serve uma TRIGGER?}
-Uma Trigger dentro do seu banco será de uma utilidade enorme, imaginem que temos um banco de dados com 1.500,000 de registros, onde os funcionários da empresa ganham por hora, e você tem que atualizar o banco de horas de cada funcionário por dia, alguns comandos poderia fazer isso por nós, mas seria um pouco complicado e desgastante, então, por este motivo, criamos nossas Triggers, onde definimos o que deve ser mudado na tabela num único arquivo e depois acionamos um único comando DML (Update) para ele, assim, ele irá atualizar os 1.500,000 de registros de uma única só vez.[2]
+\section{Exemplos}
+\subsection{O que utilizamos?}
+Para realizar comparações fizemos uso do PostgreSQL, um excelente SGBD que além de opensource, possui uma interface bastante amigável com o pgAdmin 4.
+\begin{figure}[h]
+\centering
+\includegraphics[width=15cm]{recursos/imagens/postgre.png}
+\label{1}
+\caption{Postgre e pgAdmin 4. Fonte:https://i.stack.imgur.com/JLp68.png; Acesso em 08/11/2017}
+\end{figure}
 
-\section{Referências Bibliográfica}
-\noindent \textbf{[1]} \url {https://www.devmedia.com.br/introducao-a-triggers/1695}
-\\\vspace{0.2cm}
+E também utilizamos o Mysql, com o Mysq Workbench, que acreditamos que todos conheçam.
+\begin{figure}[h]
+\centering
+\includegraphics[width=15cm]{recursos/imagens/mysql.jpg}
+\label{2}
+\caption{Mysql e Mysql Workbench. Fonte:https://i.ytimg.com/vi/-GnKwwc4KSA/maxresdefault.jpg; Acesso em 08/11/2017}
+\end{figure}
 
-\noindent \textbf{[2]} \url {http://www.linhadecodigo.com.br/artigo/611/triggers.aspx}
+\subsection{PostgreSQL}
+
+\lstinputlisting{recursos/sql/POSTGRE.sql}
+
+\subsection{Mysql}
+
+\lstinputlisting{recursos/sql/MYSQL.sql}
+
+\section{Vantagens e Desvantagens}
+\subsection{Vantagens}
+\begin{itemize}
+\item Uma forma a mais para garantir a integridade dos dados.
+\item São capazes de detectar erros na lógica de negócios na camada do banco de dados.
+\item Uma forma para executar tarefas no banco.
+\item Muito utilizado para auditar modificações(deletes ou updates) no banco.
+\end{itemize}
+
+\subsection{Desvantagens}
+\begin{itemize}
+\item Validador de apenas uma parte das informações.
+\item Por ele ser executado na camada do banco de dados, fica complicado ao usuário saber o que está
+ocorrendo no BD.
+\item Pode causar uma demora a mais no processamento no servidor do banco.
+\item As triggers são feitas especialmente para determinado SGBD, por isso uma mudança deste para outro SGBD obrigaria a adaptar todas as triggers.
+\end{itemize}
+
+\section{Conclusão}
+
+Pela observação dos aspectos analisados concluímos que para utilização das trigger somente se existir real necessidade de uso, caso contrário é dispensável.
+Já que mesmo apresentando muitas vantagens deixa a desejar em relação a portabilidade, a portabilidade tem como subcaracterísticas: adaptabilidade, capacidade de instalação, conformidade e capacidade de substituição.  
+
+
+
 
 \end{document}
 %Modelo de código para inserir figura

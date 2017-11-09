@@ -153,7 +153,7 @@ CREATE TABLE IF NOT EXISTS `redesocial`.`postagens` (
   `downs` INT NOT NULL,
   `descricao` TEXT NOT NULL,
   `data` DATETIME NOT NULL,
-  `vizualizacoes` INT NOT NULL,
+  `visualizacoes` INT NOT NULL,
   `usuario` INT NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_postagens_usuarios1_idx` (`usuario` ASC),

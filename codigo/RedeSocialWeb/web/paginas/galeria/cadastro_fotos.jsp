@@ -104,7 +104,6 @@
         ${mensagem}
         ${erro}
         <div id="timeline">
-            <input type="hidden" name="album" value="${album.id}"/>
             
             <div class="galeria">
                 <div class="cabeca">
@@ -124,6 +123,7 @@
                 <hr/> <br/>
                 <div class="albuns">
                     <form action="MultimidiaControle?operacao=Cadastrar" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="idalbum" value="${album.id}"/>
                         <input type="hidden" name="id" value="${multimidias.id}" />
                         <label for="midiaupload">Mídias:</label>
                         <input type=file multiple id="midiaupload" name="midiaupload"/>
