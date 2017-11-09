@@ -1,4 +1,3 @@
-
 package br.com.redesocial.modelo.dao;
 
 import br.com.redesocial.modelo.dto.Participante;
@@ -10,31 +9,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
- * @author Love
+ * Classe que realiza as operações de acesso ao banco de dados da entidade participantes
+ * @author Fernando Maciel da Silva, Warley Rodrigues de Andrade, Wesley Morais Félix
+ * @since 09/11/2017
  */
-public class ParticipanteDAO extends DAOBase {
+public class ParticipanteDAO extends DAOCRUDBase<Participante> {
 
-        /**
-     * Método responsável pela inserção de um país no banco de dados
-     * @author Ciclano
-     * @param dto
+     /**
+     * Método responsável pela inserção de um participante no banco de dados     
+     * @param dto objeto com os dados de participante já preenchido
      * @throws Exception possíveis exceções que podem acontecer
      */
+    @Override
     public void inserir(Participante dto) throws Exception {
-        Connection conexao = getConexao();
-
-        if(dto.getGrupo() == null){
-            throw new Exception("O campo Grupo não pode estar vazio!");
-        }
-        
-        if(dto.getUsuario() == null){
-            throw new Exception("O campo Usuario não pode estar vazio!");
-        }
-        
-        if(dto.getCargo() == null){
-            throw new Exception("O campo Cargo não pode estar vazio!");        
-        }
+        Connection conexao = getConexao();        
         
         PreparedStatement pstmt;
         pstmt = conexao.prepareStatement("insert into participantes (grupo, usuario, cargo) values(?,?,?)", Statement.RETURN_GENERATED_KEYS);
@@ -43,84 +31,60 @@ public class ParticipanteDAO extends DAOBase {
         pstmt.setInt(2, dto.getUsuario().getId());
         pstmt.setInt(3, dto.getCargo());
         
-        pstmt.executeUpdate();        
+        pstmt.executeUpdate();
+        
     }
 
     /**
-     * Método responsável pela alteração de um país no banco de dados
-     * @author Macilon Arruda
-     * @param dto
-     * @param dtoNovo
-     * @throws Exception possíveis exceções que podem acontecer
-     */
-    public void alterar(Participante dto, Participante dtoNovo) throws Exception {
-        Connection conexao = getConexao();
-
-        if(dto.getGrupo() == null){
-            throw new Exception("O campo Grupo não pode estar vazio!");
-        }
-        
-        if(dto.getUsuario() == null){
-            throw new Exception("O campo Usuario não pode estar vazio!");
-        }
-        
-        if(dto.getCargo() == null){
-            throw new Exception("O campo Cargo não pode estar vazio!");        
-        }
+    * Método responsável pela alteração de dados de um participante no banco de dados
+    * @param dto novos dados alterados do participante, com o CARGO do participante a ser alterado
+    * @throws Exception possíveis exceções que podem acontecer
+    */
+    @Override
+    public void alterar(Participante dto) throws Exception {
+        Connection conexao = getConexao();        
 
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("update participantes set grupo = ?, usuario = ?, cargo where grupo = ? and usuario = ? and cargo = ?");
-
-        pstmt.setInt(1, dtoNovo.getGrupo().getId());
-        pstmt.setInt(2, dtoNovo.getUsuario().getId());
-        pstmt.setInt(3, dtoNovo.getCargo());
+        pstmt = conexao.prepareStatement("update participantes set cargo = ? where grupo = ? and usuario = ?");
         
-        pstmt.setInt(4, dto.getGrupo().getId());
-        pstmt.setInt(5, dto.getUsuario().getId());
-        pstmt.setInt(6, dto.getCargo());
-
+        pstmt.setInt(1, dto.getCargo());
+        pstmt.setInt(2, dto.getGrupo().getId());
+        pstmt.setInt(3, dto.getUsuario().getId());
+           
         pstmt.executeUpdate();
     }
 
     /**
-     * Método responsável pela exclusão de um país no banco de dados
-     * @author Ciclano
-     * @param grupo
-     * @param usuario
-     * @param cargo
+     * Método responsável pela exclusão de um participante no banco de dados     
+     * @param cargo identificador do participante a ser excluído
      * @throws Exception possíveis exceções que podem acontecer
      */
-    public void excluir(int grupo, int usuario, int cargo) throws Exception {
+    @Override
+    public void excluir(int cargo) throws Exception {
         Connection conexao = getConexao();
 
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("delete from participantes where grupo = ? and usuario = ? and cargo = ?");
+        pstmt = conexao.prepareStatement("delete from participantes where cargo = ?");
 
-        pstmt.setInt(1, grupo);
-        pstmt.setInt(2, usuario);
-        pstmt.setInt(3, cargo);
+        pstmt.setInt(1, cargo);        
+        
         pstmt.executeUpdate();
     }
 
     /**
-     * Método que seleciona um país já cadastrado no banco de dados
-     * @author Ciclano
-     * @param grupo
-     * @param usuario
-     * @param cargo
-     * @return país selecionado no banco de dados
+     * Método que seleciona um participante já cadastrado no banco de dados     
+     * @param cargo identificador do participante
+     * @return participante selecionado no banco de dados
      * @throws Exception possíveis exceções que podem acontecer
      */
-    public Participante selecionar(int grupo, int usuario, int cargo) throws Exception {
-        
+    @Override
+    public Participante selecionar(int cargo) throws Exception {        
         Connection conexao = getConexao();
         
         PreparedStatement pstmt;
         
-        pstmt = conexao.prepareStatement("select * from participantes where grupo = ? and usuario = ? and cargo = ?");
-        pstmt.setInt(1, grupo);
-        pstmt.setInt(2, usuario);
-        pstmt.setInt(3, cargo);
+        pstmt = conexao.prepareStatement("select * from participantes where cargo = ?");
+        pstmt.setInt(1, cargo);        
 
         ResultSet rs;
         rs = pstmt.executeQuery();
@@ -133,7 +97,7 @@ public class ParticipanteDAO extends DAOBase {
             
             dto.setGrupo(grupoDAO.selecionar(rs.getInt("grupo")));
             dto.setUsuario(usuarioDAO.selecionar(rs.getInt("usuario")));
-            dto.setCargo(cargo);
+            dto.setCargo(rs.getInt("cargo"));
             
             return dto;
         }else{
@@ -142,24 +106,23 @@ public class ParticipanteDAO extends DAOBase {
     }
 
     /**
-     * Método que lista todos os países em ordem alfabética do banco de dados
-     * @author Thalia Santos de Santana
-     * @param cargo
-     * @return lista de países ordenados alfabeticamente
+     * Método que lista todos os participantes em ordem alfabética do banco de dados     
+     * @return lista de participantes ordenados por cargo decrescente
      * @throws Exception possíveis exceções que podem acontecer
      */
-    public List listar(int cargo) throws Exception {
-        
+    @Override
+    public List listar() throws Exception {        
        Connection conexao = getConexao();
 
        PreparedStatement pstmt;
-       pstmt = conexao.prepareStatement("select * from participantes order by nome desc");
+       pstmt = conexao.prepareStatement("select * from participantes order by cargo desc");
 
        ResultSet rs;
        rs = pstmt.executeQuery();
        
        GrupoDAO grupoDAO = new GrupoDAO();
        UsuarioDAO usuarioDAO = new UsuarioDAO();
+       
        List lista;
        lista = new ArrayList();
 
@@ -168,14 +131,10 @@ public class ParticipanteDAO extends DAOBase {
            
             dto.setGrupo(grupoDAO.selecionar(rs.getInt("grupo")));
             dto.setUsuario(usuarioDAO.selecionar(rs.getInt("usuario")));
-            dto.setCargo(cargo);
-           
+            dto.setCargo(rs.getInt("cargo"));           
 
             lista.add(dto);
        }
-
        return lista;
-    }
-
-    
+    }    
 }
