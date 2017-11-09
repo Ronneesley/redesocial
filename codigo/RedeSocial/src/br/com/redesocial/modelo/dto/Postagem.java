@@ -71,8 +71,8 @@ public class Postagem {
     }
 
     /**
-     * Função que modifica o identificador de uma postagem
-     * @param id novo identificador
+     * Função que modifica a descricao de uma postagem
+     * @param descricao novo identificador
      */
     public void setDescricao(String descricao){
         this.descricao = descricao;

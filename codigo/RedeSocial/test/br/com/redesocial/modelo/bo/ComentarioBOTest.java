@@ -221,7 +221,12 @@ public class ComentarioBOTest {
         
        }
     }
-      
+    
+    
+    /**
+     * Método de teste responsável por selecionar commentários existentes no banco de dados
+     * @author Jeferson Rossini
+     */
     @Test
     public void testMetodoSelecionar(){
         
@@ -293,7 +298,7 @@ public class ComentarioBOTest {
             PostagemBO postagemBO = new PostagemBO();
             postagemBO.inserir(postagem);
             
-            //Definindo a quantidade de comentários a serem inseridos  
+            //Definindo o comentario a ser inserido  
             Comentario comentario = new Comentario();
 
             comentario.setDescricao("comentario! ");
@@ -324,17 +329,16 @@ public class ComentarioBOTest {
      * Método de teste responsável pela listagem dos commentários existentes no banco de dados
      * @author Lara Caroline
      */
-    //@Test
+    @Test
     public void testMetodoListar() {
         /*
         Para listar comentários é necessário a existência dos mesmos.
         Para inserir comentários, deve-se inserir postagem, usuário, cidade
         estado e país.
         */
-        ComentarioBO bo = new ComentarioBO();
-        
+        ComentarioBO comentarioBo = new ComentarioBO();
         try{
-            List existentes = bo.listar();
+            List existentes = comentarioBo.listar();
             int qtdeExistentes = existentes.size();
             
             Calendar calendario = Calendar.getInstance();
@@ -391,42 +395,44 @@ public class ComentarioBOTest {
             postagem.setDescricao("Post de texto");
             postagem.setData(calendarioPost.getTime());
             postagem.setUsuario(usuario);
+            postagem.setVisualizacoes(50);
             
             PostagemBO postagemBO = new PostagemBO();
             postagemBO.inserir(postagem);
             
-            //Definindo a quantidade de comentários a serem inseridos
-            
-            final int qtde = 3;
-            for (int i = 0; i < 3; i++){
-                
+                    
+            final int qtde = 10;
+            for (int i = 0; i < 10; i++){
+                //Definindo o comentario a ser inserido  
                 Comentario comentario = new Comentario();
-                
-                comentario.setDescricao("Que legal!");
-                comentario.setUps(0);
-                comentario.setDowns(0);
+
+                comentario.setDescricao("comentario! " + i);
+                comentario.setUps(5);
+                comentario.setDowns(2);
                 comentario.setData(calendario.getTime());
                 comentario.setPostagem(postagem);
-                
-                try{
-                    //Inserindo comentário no banco de dados
-                    bo.inserir(comentario);
-                }catch(Exception ex){
-                    //Mensagem de erro caso falhe
+                comentario.setResposta(null);
+                comentario.setUsuario(usuario);
+
+                try {
+                    comentarioBo.inserir(comentario);
+                } catch (Exception ex) {
                     fail("Falha ao inserir um comentário: " + ex.getMessage());
                 }
             }
-            //Verifica a quantidade de comentários após inserção
-            List existentesFinal = bo.listar();
-            int qtdeExistentesFinal = existentesFinal.size();
-            //Verifica quantos comentários foram inseridos
-            int diferenca = qtdeExistentesFinal - qtdeExistentes;
-            assertEquals(qtde, diferenca);
             
-        }catch (Exception ex){
-            //Erro caso a listagem falhe
-            fail("Erro ao listar: " + ex.getMessage());
+
+            List existentesFinal = comentarioBo.listar();
+            int qtdeExistentesFinal = existentesFinal.size();
+
+            int diferenca = qtdeExistentesFinal - qtdeExistentes;
+
+            assertEquals(qtde, diferenca);   
+           
+        } catch (Exception ex) {
+                fail("Falha ao executar o teste de listar comentario: " + ex.getMessage());
         }
+
     }
     
     /**
@@ -502,8 +508,7 @@ public class ComentarioBOTest {
             
             bo.inserir(comentario);
             
-            //Verifica se o comentário está cadastrada no banco de dados
-              
+            //Verifica se o comentário está cadastrada no banco de dados              
             int id = comentario.getId();
             
             //Seleciona um cometário inserido atráves do id 

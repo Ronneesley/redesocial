@@ -81,6 +81,8 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
             int idResposta = rs.getInt("resposta");            
             if (!rs.wasNull()){
                 c.setResposta(this.selecionar(idResposta));
+            }else{
+                c.setResposta(null);
             }
 
             return c;
@@ -155,11 +157,14 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
             c.setDowns(rs.getInt("Downs"));;
             c.setData(rs.getDate("data"));
             c.setPostagem(postagemDAO.selecionar(rs.getInt("postagem")));
+            
             c.setUsuario(usuarioDAO.selecionar(rs.getInt("usuario")));
 
             int idResposta = rs.getInt("resposta");
             if (!rs.wasNull()){
                 c.setResposta(this.selecionar(idResposta));
+            }else{
+                c.setResposta(null);
             }
 
             lista.add(c);

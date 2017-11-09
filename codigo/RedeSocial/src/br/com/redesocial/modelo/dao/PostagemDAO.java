@@ -91,7 +91,6 @@ public class PostagemDAO extends DAOCRUDBase<Postagem> {
         pstmt = conexao.prepareStatement("select * from postagens where id = ?");
         
         pstmt.setInt(1, id);
-        
         ResultSet rs = pstmt.executeQuery();
         
         if(rs.next()){
@@ -103,6 +102,7 @@ public class PostagemDAO extends DAOCRUDBase<Postagem> {
             p.setUps(rs.getInt("ups"));
             p.setDowns(rs.getInt("downs"));
             p.setDescricao(rs.getString("descricao"));
+            p.setVisualizacoes(rs.getInt("visualizacoes"));
             p.setData(rs.getDate("data"));
             
             //PEGA O USUÁRIO
