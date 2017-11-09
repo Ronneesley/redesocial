@@ -8,6 +8,7 @@
 \usepackage{url}
 \usepackage{float}
 \usepackage{color}
+\usepackage{setspace}
 %%%%%%%%%%Codigos para o JAVA%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \definecolor{pblue}{rgb}{0.13,0.13,1}
 \definecolor{pgreen}{rgb}{0,0.5,0}
@@ -91,35 +92,54 @@ Warley Rodrigues\\
 \begin{center}
 \textbf{\Large{Introdução a JSF}}\\\vspace{0.5cm}
 \end{center}
+
 \section{Introdução}
 JavaServer Faces ou apenas JSF, é um framework que permite a criação de interfaces de usuário web colocando componentes visuais pré-prontos, de forma que o desenvolvedor não se preocupe com Javascript e HTML. Basta adicionarmos os componentes (calendários, tabelas, formulários) e eles serão renderizados e exibidos em formato html. Seu ponto forte é um grande número de componentes e um design muito flexível o que fez com que esse Framework crescesse muito abordando novas tecnologias.
+
 Desenvolvido pela comunidade JCP (Java Community Process), atualmente o JSF é o framework preferido para o desenvolvimento de aplicações Web possuindo um excelente conjunto de funcionalidades para o cenário de desenvolvimento em que é inserido, possibilitando ao programador preocupar-se somente com a lógica de negócio deixando as tarefas básicas e trabalhosas por conta do framework.
 
-O JavaSecer Faces possui as seguintes partes:
--Conjunto de componentes pré-fabricados de Interface de Usuário (IU).
--Modelo de programação orientado a eventos.
--Modelo de componentes que permite a desenvolvedores independentes fornecerem componentes adicionais.
+\subsection{O JavaSecer Faces possui as seguintes partes}
+\begin{itemize}
+\item Conjunto de componentes pré-fabricados de Interface de Usuário (IU);
 
-Outra característica marcante na arquitetura do JSF é a separação que fazemos entre as camadas de apresentação e de aplicação. Pensando no modelo MVC (Model, View, Controller ), o JSF possui uma camada de visualização bem separada do conjunto de classes de modelo.
-Modelo:
-- entidades e regras de negócio
-- Objetos gerais da aplicação (dados, etc.)
-Visão:
--Componentes UI em páginas JSP/XHTML
-- Kits renderizadores (HTML, WML, XML, etc.)
-Controlador:
-- Faces Servlet (Front Controller)
-- Backing Bean (Page Controller ou Modelo)
+\item Modelo de programação orientado a eventos;
 
-Principais motivos que levaram JFS ao sucesso.
--	Ser uma especificação EE (Enterprise Edition)  desde da 5ª Versão
--	Ser um framework cuja a API foi pensada no trabalho dos desenvolvedores de IDEs
--	Possuir comunidades ativas em fóruns, assim facilitando a procura sobre duvidas e sugestões.
--	Exigir baixo conhecimento inicial para criação de interfaces de usuários tradicionais
--	Possuir ótimas bibliotecas de componentes livres e pagas desenvolvidas por terceiros
--	Possuir Ajax nativo em sua versão 2.0
+\item Modelo de componentes que permite a desenvolvedores independentes fornecerem componentes adicionais.
+\end{itemize}
 
- A aplicação Desktop é um tipo de aplicação que é instalada no computador local e acessa o banco de dados ou gerenciador de arquivos, para o uso de sua aplicação é utilizado Delphi, VB (Visual Basic) ou, no mundo Java, Swing. Ela possui componentes para cada tipo de sistema um desenvolvimento rico possuindo calendários, menus diversos ou componentes drag and drop (arrastar e soltar).
+\subsection{Característica marcante}
+\begin{itemize}
+\item Entidades e regras de negócio;
+
+\item Objetos gerais da aplicação (dados, etc.)
+Visão;
+
+\item Componentes UI em páginas JSP/XHTML;
+
+\item Kits renderizadores (HTML, WML, XML, etc.)
+Controlador;
+
+\item Faces Servlet (Front Controller);
+
+\item Backing Bean (Page Controller ou Modelo).
+\end{itemize}
+
+\subsection{Principais motivos que levaram JFS ao sucesso}
+\begin{itemize}
+\item Ser uma especificação EE (Enterprise Edition)  desde da 5ª Versão;
+
+\item Ser um framework cuja a API foi pensada no trabalho dos desenvolvedores de IDEs;
+
+\item Possuir comunidades ativas em fóruns, assim facilitando a procura sobre duvidas e sugestões;
+
+\item Exigir baixo conhecimento inicial para criação de interfaces de usuários tradicionais;
+
+\item Possuir ótimas bibliotecas de componentes livres e pagas desenvolvidas por terceiros;
+
+\item Possuir Ajax nativo em sua versão 2.0.
+\end{itemize}
+
+A aplicação Desktop é um tipo de aplicação que é instalada no computador local e acessa o banco de dados ou gerenciador de arquivos, para o uso de sua aplicação é utilizado Delphi, VB (Visual Basic) ou, no mundo Java, Swing. Ela possui componentes para cada tipo de sistema um desenvolvimento rico possuindo calendários, menus diversos ou componentes drag and drop (arrastar e soltar).
 
 \section{Principais provedores do projeto JSF}
 \subsection{Mojorra}
@@ -127,27 +147,29 @@ A tecnologia JavaServer Faces simplifica a criação de interfaces de usuário p
 
 \subsection{MyFaces}
 O Apache MyFaces é um projeto da Apache Software Foundation e hospeda vários subprojetos relacionados à tecnologia JavaServer fornecendo tecnologias como:
+\begin{itemize}
+\item Implementação JavaServer (MyFaces Core, providing api/impl and bundle modules);
 
-- Implementação JavaServer (MyFaces Core, providing api/impl and bundle modules);
+\item Várias bibliotecas de componentes que contêm widgets UI para construir web-applications com JSF (MyFaces Tomahawk, MyFaces Trinidad, MyFaces Tobago);
 
-- Várias bibliotecas de componentes que contêm widgets UI para construir web-applications com JSF (MyFaces Tomahawk, MyFaces Trinidad, MyFaces Tobago);
+\item Patoces de extensão para JavaServer (MyFaces Orchestra, MyFaces Extensions Validator, MyFaces Extensions CDI);
 
-- Patoces de extensão para JavaServer (MyFaces Orchestra, MyFaces Extensions Validator, MyFaces Extensions CDI);
-
-- Módulos de integração para outras tecnologias e padrões (MyFaces Portlet Bridge for integration with the portlet-standard).
+\item Módulos de integração para outras tecnologias e padrões (MyFaces Portlet Bridge for integration with the portlet-standard).
+\end{itemize}
 
 \subsection{ADF}
 O Oracle ADF é uma estrutura de Java EE de ponta a ponta que simplifica o desenvolvimento de aplicativos, fornecendo serviços de infraestrutura prontos e uma experiência de desenvolvimento visual e declarativa.
 
 ADF Model: permite uma abordagem unificada para vincular qualquer interface de usuário a qualquer serviço de negócio, sem a necessidade de escrever código. É o principal módulo do framework.
 
-Ele oferece:
+\textbf{Ele oferece:}
+\begin{itemize}
+\item ADF Business Components: simplifica a construção de serviços de negócio;
 
-- ADF Business Components: simplifica a construção de serviços de negócio;
+\item ADF Faces rich client: possui uma grande variedade de componentes de interface AJAX para aplicações JSF;
 
-- ADF Faces rich client: possui uma grande variedade de componentes de interface AJAX para aplicações JSF;
-
-- ADF Controller: integra o JSF com o ADF Model. É uma extensão do JSF Controller com várias funcionalidades adicionais, como as Task Flows.
+\item ADF Controller: integra o JSF com o ADF Model. É uma extensão do JSF Controller com várias funcionalidades adicionais, como as Task Flows.
+\end{itemize}
 
 \section{Componentes do projeto JSF}
 \subsection{RichFaces}
@@ -155,24 +177,25 @@ O projeto RichFaces é uma estrutura avançada de componentes de interface do us
 
 Além de ampliar esses recursos do ajax, o RichFaces também melhora outras áreas do JSF 2, incluindo usabilidade, ajuste de desempenho, recursos dinâmicos, esfoliante e componente desenvolvimento. Isso permite aos usuários tirar o máximo proveito de todos os aprimoramentos de produtividade do JSF 2. 
 
-Ele oferece:
+\textbf{Disponibilizando:}
+\begin{itemize}
+\item Um conjunto completo de componentes habilitados para o AJAX em duas bibliotecas a a4j que tem seus controles centralizados da AJAX e a Rico que componentes autônomos e prontos para usar;
 
-- Um conjunto completo de componentes habilitados para o AJAX em duas bibliotecas a a4j que tem seus controles centralizados da AJAX e a Rico que componentes autônomos e prontos para usar;
+\item Validação do lado do cliente, expandindo a validação de feixe JSR 303 até o navegador;
+\item Encaminhamento avançado para combinar os requisitos de alto desempenho das aplicações empresariais do mundo real;
 
-- Validação do lado do cliente, expandindo a validação de feixe JSR 303 até o navegador;
-- Encaminhamento avançado para combinar os requisitos de alto desempenho das aplicações empresariais do mundo real;
+\item Atualizações de componentes de envio, incluindo integrações do Serviço JavaMessaging (JMS) e vários mecanismos de transporte baseados no suporte do navegador;
 
-- Atualizações de componentes de envio, incluindo integrações do Serviço JavaMessaging (JMS) e vários mecanismos de transporte baseados no suporte do navegador;
+\item Possui o próprio kit de desenvolvimento de componentes (CDK);
 
-- Possui o próprio kit de desenvolvimento de componentes (CDK);
+\item Documentação abrangente que aloca as melhores práticas de desenvolvimento e os detalhes dos componentes;
 
-- Documentação abrangente que aloca as melhores práticas de desenvolvimento e os detalhes dos componentes;
+\item Detalhadas e automatizados testes instalações de componentes, ações, ouvintes e páginas;
 
-- Detalhadas e automatizados testes instalações de componentes, ações, ouvintes e páginas;
+\item Suporte abrangente para o navegador cruzado;
 
-- Suporte abrangente para o navegador cruzado;
-
-- Comunidade grande e ativa em sua fundação.
+\item Comunidade grande e ativa em sua fundação.
+\end{itemize}
 
 \subsection{PrimeFaces}
 A Prime Technology não é um fornecedor de software, mas uma casa de desenvolvimento de software junto com as atividades de consultoria e treinamento. Uma estrutura que nem sequer é usada por seus próprios criadores pode facilmente perder pontos vitais em termos de usabilidade e simplicidade, uma diferença importante em comparação com os produtos do fornecedor é que em todos os projetos de seus clientes o PrimeFaces é usado como o framework de front-end. Isso ajuda a visualizar o projeto do ponto de vista do desenvolvedor de aplicativos para que possa facilmente perceber os recursos perdidos e corrigir rapidamente os erros diferindo significativamente o PrimeFaces de outras bibliotecas.
@@ -180,21 +203,22 @@ A Prime Technology não é um fornecedor de software, mas uma casa de desenvolvi
 \subsection{OpenFaces}
 O OpenFace é uma implementação Python e Torch do reconhecimento facial com redes neurais profundas e é baseado no documento CVPR 2015 FaceNet, consiste em uma Incorporação Unificada para Reconhecimento de Rosto e Clustering por Florian Schroff, Dmitry Kalenichenko e James Philbin no Google. A tocha permite que a rede seja executada em uma CPU ou com CUDA. 
 
-Ele oferece:
+\textbf{Concedendo:}
+\begin{itemize}
+\item Detecção rostos com modelos pré-treinados de dlib ou OpenCV;
 
-- Detectar rostos com modelos pré-treinados de dlib ou OpenCV;
+\item Transforma o rosto em códigos mandando para a rede neural;
 
-- Transforma o rosto em códigos mandando para a rede neural;
+\item Usando uma rede neural profunda para representar (ou incorporar) o rosto em uma hiperesfera de unidade de 128 unidades. A incorporação é uma representação genérica para o rosto de qualquer pessoa. Ao contrário de outras representações do rosto, essa incorporação tem a propriedade agradável de que uma distância maior entre dois embutidos de rosto significa que os rostos provavelmente não são da mesma pessoa. Esta propriedade torna as tarefas de agrupamento, similaridade de detecção e classificação mais fáceis do que outras técnicas de reconhecimento facial, onde a distância euclidiana entre recursos não é significativa;
 
-- Usando uma rede neural profunda para representar (ou incorporar) o rosto em uma hiperesfera de unidade de 128 unidades. A incorporação é uma representação genérica para o rosto de qualquer pessoa. Ao contrário de outras representações do rosto, essa incorporação tem a propriedade agradável de que uma distância maior entre dois embutidos de rosto significa que os rostos provavelmente não são da mesma pessoa. Esta propriedade torna as tarefas de agrupamento, similaridade de detecção e classificação mais fáceis do que outras técnicas de reconhecimento facial, onde a distância euclidiana entre recursos não é significativa;
-
-- Aplica várias técnicas de classificação ou agrupamento preferenciais para os recursos para completar sua tarefa de reconhecimento;
+\item Aplica várias técnicas de classificação ou agrupamento preferenciais para os recursos para completar sua tarefa de reconhecimento;
+\end{itemize}
 
 \subsection{IceFaces}
-O ICEfaces é um framework de desenvolvimento de aplicativos Rich Internet (RIA) de código aberto para Java EE. O ICEfaces funciona em plataformas que vão desde desktops a telefones inteligentes e Apple para Android. Ele melhora a eficiência do desenvolvedor, enquanto reduz o tempo ao mercado e os custos operacionais. São recursos e recursos ricos que permitem aos desenvolvedores fazer mais dentro dos limites de uma infraestrutura herdada do que pode ser imaginada. 
-\\
-
-Ela oferece escopos com várias formas de se trabalhar em um projeto como:
+O ICEfaces é um framework de desenvolvimento de aplicativos Rich Internet (RIA) de código aberto para Java EE. O ICEfaces funciona em plataformas que vão desde desktops a telefones inteligentes e Apple para Android. Ele melhora a eficiência do desenvolvedor, enquanto reduz o tempo ao mercado e os custos operacionais. São recursos e recursos ricos que permitem aos desenvolvedores fazer mais dentro dos limites de uma infraestrutura herdada do que pode ser imaginada.
+ 
+\vspace{0.5cm}
+\textbf{Ela oferece escopos com várias formas de se trabalhar em um projeto como:}
 
 \subsubsection{Automatic Ajax}
 O ICEfaces inclui vários recursos inovadores, como envio único, renderização direta para DOM e atualizações parciais de página que resultam cumulativamente no Ajax automático, eliminando completamente a necessidade de os desenvolvedores transmitirem as atualizações de página usando as tags padrão JSF <f: ajax>;
@@ -229,27 +253,29 @@ O PrettyFaces é uma biblioteca open source de reescrita de URLs que facilita cr
 \subsection{OmniFaces}
 É uma biblioteca de utilitários que busca facilitar o desenvolvimento JSF para aplicações corporativas. Foi criada por Bauke Scholtz (BalusC) e Arjan Tijms, colaboradores regulares no popular site Stack Overflow de perguntas e respostas. Ele complementa as bibliotecas JSF existentes com várias classes auxiliares e soluções para problemas específicos. A amostra de componentes no site de demonstração do OmniFaces (live showcase), por exemplo, é baseada no PrimeFaces. 
 
-Ela oferece:
+\textbf{Ele cede:}
+\begin{itemize}
+\item Destaca os campos que falharam na validação;
 
-- Destaca os campos que falharam na validação;
+\item Importação de valores de constantes para dentro do escopo da EL (Expression Language);
 
-- Importação de valores de constantes para dentro do escopo da EL (Expression Language);
+\item Conversão automática de objetos do modelo em drop-downs e outros componentes de seleção;
 
-- Conversão automática de objetos do modelo em drop-downs e outros componentes de seleção;
+\item Valida todos os campos para valores como “todos ou nenhum”, “todos iguais”, “um ou mais” e “em ordem”, além de validações de “valor único”;
 
-- Valida todos os campos para valores como “todos ou nenhum”, “todos iguais”, “um ou mais” e “em ordem”, além de validações de “valor único”;
+\item RenderKit HTML5, que adiciona suporte a diversos atributos específicos do HTML5 para componentes UIForm e UIInput;
 
-- RenderKit HTML5, que adiciona suporte a diversos atributos específicos do HTML5 para componentes UIForm e UIInput;
+\item Manipuladores de exceção Ajax: uma página de erro será exibida quando uma exceção ocorrer durante uma solicitação Ajax do JSF;
 
-- Manipuladores de exceção Ajax: uma página de erro será exibida quando uma exceção ocorrer durante uma solicitação Ajax do JSF;
+\item Árvore com código de marcação personalizado por nível (utilizável para vários casos de uso recursivos);
 
-- Árvore com código de marcação personalizado por nível (utilizável para vários casos de uso recursivos);
+\item Coleções de funções da EL para lidar com arrays, conversões, datas e strings;
 
-- Coleções de funções da EL para lidar com arrays, conversões, datas e strings;
+\item Filtro de compressão GZIP para respostas HTTP;
 
-- Filtro de compressão GZIP para respostas HTTP;
+\item Funcionalidades para inclusão de Servlets e páginas JSP no Facelets.
 
-- Funcionalidades para inclusão de Servlets e páginas JSP no Facelets.
+\end{itemize}
 
 \section{Referências Bibliográfica}
 \noindent 
