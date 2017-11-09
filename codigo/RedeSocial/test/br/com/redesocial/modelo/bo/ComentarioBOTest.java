@@ -224,12 +224,13 @@ public class ComentarioBOTest {
       
     @Test
     public void testMetodoSelecionar(){
-        /*
+        
+      /*
         Para selecionar comentários é necessário a existência dos mesmos.
         Para inserir comentários, deve-se inserir postagem, usuário, cidade
         estado e país.
         */
-        ComentarioBO bo = new ComentarioBO();
+        ComentarioBO comentarioBo = new ComentarioBO();
         
         try{
             
@@ -287,6 +288,7 @@ public class ComentarioBOTest {
             postagem.setDescricao("Post de texto");
             postagem.setData(calendarioPost.getTime());
             postagem.setUsuario(usuario);
+            postagem.setVisualizacoes(50);
             
             PostagemBO postagemBO = new PostagemBO();
             postagemBO.inserir(postagem);
@@ -299,20 +301,19 @@ public class ComentarioBOTest {
             comentario.setDowns(2);
             comentario.setData(calendario.getTime());
             comentario.setPostagem(postagem);
-            comentario.setResposta(comentario);
+            comentario.setResposta(null);
             comentario.setUsuario(usuario);
             
             try{
                 //Inserindo comentário no banco de dados
-                bo.inserir(comentario);
-                
-                int id = comentario.getId();
-                Comentario ComentarioSelecionado = bo.selecionar(id);
-                assertNotNull("Comentario não encontrado", ComentarioSelecionado);
+                comentarioBo.inserir(comentario);
+                Comentario comentarioSelecionado = comentarioBo.selecionar(comentario.getId());
+                assertNotNull("Comentario não encontrado", comentarioSelecionado);
                 
             } catch (Exception ex) {
                 fail("Falha ao inserir um comentário: " + ex.getMessage());
             }
+            
         }catch (Exception ex){
             //Erro caso a listagem falhe
             fail("Erro ao selecionar: " + ex.getMessage());

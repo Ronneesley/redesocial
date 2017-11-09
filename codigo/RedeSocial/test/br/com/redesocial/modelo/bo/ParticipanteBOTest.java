@@ -80,7 +80,7 @@ public class ParticipanteBOTest {
             participante.setUsuario(usuario);
             participante.setCargo(1);
             
-            participanteBO.inserir(participante);
+            //participanteBO.inserir(participante);
             
         } catch (Exception ex) {
             fail("Falha ao inserir participante: " + ex.getMessage());

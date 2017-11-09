@@ -110,14 +110,16 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
         pstmt.setInt(3, c.getDowns());
         pstmt.setDate(4, new java.sql.Date(c.getData().getTime()));
         pstmt.setInt(5, c.getPostagem().getId());
-        pstmt.setInt(6, c.getResposta().getId());
+              
+        if(c.getResposta() != null){
+            pstmt.setInt(6, c.getResposta().getId());
+        } else {
+            pstmt.setNull(6, Types.INTEGER);
+        }
+        
         pstmt.setInt(7, c.getUsuario().getId());
         
-        if(c.getResposta() != null){
-            pstmt.setInt(5, c.getResposta().getId());
-        } else {
-            pstmt.setNull(5, Types.INTEGER);
-        }
+
         pstmt.executeUpdate();
         
         c.setId(getId(pstmt));
