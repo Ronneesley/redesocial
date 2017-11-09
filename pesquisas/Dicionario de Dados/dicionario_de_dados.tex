@@ -9,6 +9,7 @@
 \usepackage{float}
 \usepackage{color}
 \usepackage{tabela_de_dados}
+\usepackage{tabela_de_dados_teste}
 \usepackage{colortbl}
 
 \definecolor{pblue}{rgb}{0.13,0.13,1}
@@ -53,55 +54,140 @@ Novembro\\
 \tableofcontents
 \newpage
 \begin{center}
-\textbf{\Large{JDBC com transações}}\\\vspace{0.5cm}
+\textbf{\Large{Dicionário de Dados}}\\\vspace{0.5cm}
 \end{center}
 \section{Introdução}
 
-\begin{tabbing}
-\hspace{1.0cm}\=\hspace{2cm}\=\hspace{0.5cm}\=\hspace{2cm}\=\hspace{2cm}\=\hspace{2cm}\=\kill
- • \>  • \>  • \>  • \>  • \>  • \> • \\ 
- • \>  • \>  • \>  • \>  • \>  • \> • \\ 
- • \>  • \>  • \>  • \>  • \>  • \> •
-\end{tabbing} 
+\section{Dicionário de Dados - Rede Social}
+\subsection{Eventos}
 
 \begin{center}
-
-\begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
-\hline 
-Chaves & Campo Lógico & Campo Físico & Tipo & Tamaho & Nulo & Descrição\\
-\hline 
-PK & Campo Lógico & Campo Físico & Tipo & Tamaho & Nulo & Descrição\\
-\hline 
-
-\end{tabular} 
+\begin{table}[h!]
+	\caption{\texttt{tipos\_atividades}}
+	\label{tabela:tiposAtividades}
+	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
+	\begin{tabular}{|p{1cm}|p{1.5cm}|p{1.25cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{4.5cm}|}\hline	
+		\multicolumn{7}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{tipos\_atividades}} \\ \hline %Parte superior da Tabela
+		{\small Chaves} & {\small Campo Lógico} & {\small Campo Físico} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
+	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
+		
+		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		
+		%{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline %Modelo de novas linhas
+			
+	\end{tabular}
+\end{table}	
 \end{center}
 
+
 \begin{center}
-
-
 \begin{table}[h!]
-		\caption{Caso de Uso: 2}
-		\label{tabela:1}
-		\begin{tabular}{|p{1cm}|p{2cm}|p{2cm}|p{1cm}|p{1.5cm}|p{2cm}|p{3cm}|}
-		\hline
+	\caption{\texttt{atividades}}
+	\label{tabela:atividades}
+	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
+	\begin{tabular}{|p{1cm}|p{1.5cm}|p{1.25cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{4.5cm}|}\hline	
+		\multicolumn{7}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{atividades}} \\ \hline %Parte superior da Tabela
+		{\small Chaves} & {\small Campo Lógico} & {\small Campo Físico} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
+	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-				
-			\multicolumn{7}{|p{16cm}|}{\cellcolor{cinzaClaro} Tabela: } \\ 
-			\hline
-		{\small Chaves} & {\small Campo Lógico} & {\small Campo Físico} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\
-\hline 
+		{\tiny PK} & {\tiny Código} & {\tiny id} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Código da atividade.}\\\hline
+		{\tiny } & {\tiny Nome} & {\tiny nome} & {\tiny VARCHAR} & {\tiny 100} & {\tiny Not Null} &{\tiny Nome da atividade.}\\\hline
+		{\tiny } & {\tiny Descrição} & {\tiny descricao} & {\tiny TEXT} & {\tiny } & {\tiny Not Null} &{\tiny Descrição da atividade.}\\\hline
+		{\tiny } & {\tiny Inicio} & {\tiny inicio} & {\tiny DATETIME} & {\tiny } & {\tiny Not Null} &{\tiny Data e hora de quando começará a atividade.}\\\hline
+		{\tiny } & {\tiny Vagas} & {\tiny vagas} & {\tiny INT} & {\tiny } & {\tiny Null} &{\tiny Quantidade de vagas para essa atividade.}\\\hline
+		{\tiny FK} & {\tiny Evento} & {\tiny evento} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Código do evento vinculado.}\\\hline
+		{\tiny FK} & {\tiny Tipo de atividade} & {\tiny tipo} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Código do tipo de atividade vinculado.}\\\hline
 		
-		{\small ID} & {\small ID} & {\small ID} & {\small VARCHAR} & {\small 1000} & {\small Not Null} & {\small dASDASDASFAS ASDASD ASD ASD ASDSA} \\\hline 		
-		
-		{\small ID} & {\small ID} & {\small ID} & {\small ID} & {\small ID} & {\small ID} & {\small ID} \\\hline 
-		ID & {\small ID} & {\footnotesize ID} & {\scriptsize ID} & {\tiny ID} & ID &
+		%{\tiny ID} & {\tiny ID} & {\tiny ID} & {\tiny ID} & {\tiny ID} & {\tiny ID} &{\tiny ID}\\\hline %Modelo de novas linhas
 			
-		\end{tabular}
-	\end{table}
-	
-	\end{center}
+	\end{tabular}
+\end{table}	
+\end{center}
 
-\newpage
+
+\begin{center}
+\begin{table}[h!]
+	\caption{\texttt{presenca\_atividades}}
+	\label{tabela:presencaAtividades}
+	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
+	\begin{tabular}{|p{1cm}|p{1.5cm}|p{1.25cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{4.5cm}|}\hline	
+		\multicolumn{7}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{presenca\_atividades}} \\ \hline %Parte superior da Tabela
+		{\small Chaves} & {\small Campo Lógico} & {\small Campo Físico} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
+	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
+		
+		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		
+		%{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline %Modelo de novas linhas
+			
+	\end{tabular}
+\end{table}	
+\end{center}
+
+
+\begin{center}
+\begin{table}[h!]
+	\caption{\texttt{organizadores\_eventos}}
+	\label{tabela:organizadoresEventos}
+	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
+	\begin{tabular}{|p{1cm}|p{1.5cm}|p{1.25cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{4.5cm}|}\hline	
+		\multicolumn{7}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{organizadores\_eventos}} \\ \hline %Parte superior da Tabela
+		{\small Chaves} & {\small Campo Lógico} & {\small Campo Físico} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
+	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
+		
+		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		
+		%{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline %Modelo de novas linhas
+			
+	\end{tabular}
+\end{table}	
+\end{center}
+
+
+\begin{center}
+\begin{table}[h!]
+	\caption{\texttt{presenca\_evento}}
+	\label{tabela:presencaEvento}
+	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
+	\begin{tabular}{|p{1cm}|p{1.5cm}|p{1.25cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{4.5cm}|}\hline	
+		\multicolumn{7}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{presenca\_evento}} \\ \hline %Parte superior da Tabela
+		{\small Chaves} & {\small Campo Lógico} & {\small Campo Físico} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
+	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
+		
+		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		
+		%{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline %Modelo de novas linhas
+			
+	\end{tabular}
+\end{table}	
+\end{center}
+
+
+\begin{center}
+\begin{table}[h!]
+	\caption{\texttt{responsaveis\_atividades}}
+	\label{tabela:responsaveisAtividades}
+	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
+	\begin{tabular}{|p{1cm}|p{1.5cm}|p{1.25cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{4.5cm}|}\hline	
+		\multicolumn{7}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{responsaveis\_atividades}} \\ \hline %Parte superior da Tabela
+		{\small Chaves} & {\small Campo Lógico} & {\small Campo Físico} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
+	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
+		
+		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		
+		%{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline %Modelo de novas linhas
+			
+	\end{tabular}
+\end{table}	
+\end{center}
+
 \section{Referências Bibliográfica}
 \noindent \textbf{[1]} \url {http:/}\\\vspace{0.2cm}
 

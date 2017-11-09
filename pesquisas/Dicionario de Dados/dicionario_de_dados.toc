@@ -1,0 +1,5 @@
+\select@language {brazil}
+\contentsline {section}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{2}
+\contentsline {section}{\numberline {2}Dicion\IeC {\'a}rio de Dados - Rede Social}{2}
+\contentsline {subsection}{\numberline {2.1}Eventos}{2}
+\contentsline {section}{\numberline {3}Refer\IeC {\^e}ncias Bibliogr\IeC {\'a}fica}{3}
