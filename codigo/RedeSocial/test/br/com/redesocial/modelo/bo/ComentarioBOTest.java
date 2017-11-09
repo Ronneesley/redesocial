@@ -170,18 +170,21 @@ public class ComentarioBOTest {
             usuarioBO.inserir(usuario);
 
             Postagem postagem = new Postagem();
-
+            postagem.setDescricao("Comentário");
             postagem.setUps(0);
             postagem.setDowns(0);
-            postagem.setDescricao("Postagem");
-            postagem.setData(calendarioPost.getTime());
             postagem.setUsuario(usuario);
-            postagem.setVisualizacoes(0);          
-            PostagemBO postagemBO = new PostagemBO();
-            postagemBO.inserir(postagem);
+            postagem.setVisualizacoes(0);
             
-            Comentario comentario = new Comentario();
+            calendario.set(1998, 0, 8, 0, 0, 0);            
+            postagem.setData(calendario.getTime());
             
+            PostagemBO postagembo = new PostagemBO();
+            postagembo.inserir(postagem);
+            
+            
+            
+            Comentario comentario = new Comentario();            
             comentario.setDescricao("comentario! ");
             comentario.setUps(5);
             comentario.setDowns(2);
@@ -331,15 +334,108 @@ public class ComentarioBOTest {
      */
     @Test
     public void testMetodoListar() {
-        /*
-        Para listar comentários é necessário a existência dos mesmos.
-        Para inserir comentários, deve-se inserir postagem, usuário, cidade
-        estado e país.
-        */
-        ComentarioBO comentarioBo = new ComentarioBO();
-        try{
-            List existentes = comentarioBo.listar();
+        
+       ComentarioBO bo = new ComentarioBO();
+
+        try {
+            List existentes = bo.listar();
             int qtdeExistentes = existentes.size();
+
+            final int qtde = 2;
+            
+            for (int i = 0; i < 2; i++){
+                Pais pais = new Pais();
+                pais.setNome("Brasil");
+
+
+                PaisBO paisBO = new PaisBO();
+                paisBO.inserir(pais);
+
+                Estado estado = new Estado();
+                estado.setNome("Goiás");
+                estado.setPais(pais);
+
+                EstadoBO estadoBO = new EstadoBO();
+                estadoBO.inserir(estado);
+
+                Cidade cidade = new Cidade();
+                cidade.setNome("Ceres");
+                cidade.setEstado(estado);
+
+                CidadeBO cidadeBO = new CidadeBO();
+                cidadeBO.inserir(cidade);
+
+                Usuario usuario = new Usuario();
+                usuario.setNome("Roni");
+                usuario.setDataCadastro(new Date());
+                usuario.setEmail("ronneesley@gmail.com");
+                //usuario.setFoto();
+
+                Calendar calendario = Calendar.getInstance();
+                calendario.set(1988, 2, 7, 0, 0, 0);            
+                usuario.setDataNascimento(calendario.getTime());
+                usuario.setSenha("123");
+                usuario.setSexo(Sexo.MASCULINO);
+                usuario.setStatus(true);
+                usuario.setTelefone("(62) 91234-4567");
+                usuario.setCidade(cidade);
+
+                UsuarioBO usuarioBO = new UsuarioBO();
+                usuarioBO.inserir(usuario);
+
+
+                PostagemBO postagemBO = new PostagemBO();
+                Postagem postagem = new Postagem();
+                postagem.setDescricao("Comentário");
+                postagem.setUps(1);
+                postagem.setDowns(2);
+                postagem.setUsuario(usuario);
+                postagem.setVisualizacoes(98);
+
+                calendario.set(2017, 7, 16, 21, 58, 0);
+                postagem.setData(calendario.getTime());
+
+                postagemBO.inserir(postagem);
+                
+                
+                 //instancia comentario
+                Comentario comentario = new Comentario();
+
+                comentario.setDescricao("Teste Inserir comentario! ");
+                comentario.setUps(5);
+                comentario.setDowns(2);
+                comentario.setData(calendario.getTime());
+                comentario.setPostagem(postagem);
+                comentario.setResposta(null);
+                comentario.setUsuario(usuario);
+
+                //insere o comentario no db
+                bo.inserir(comentario);
+                
+            }
+            
+            List existentesFinal = bo.listar(); //insere os dados perfeitamente quando chega aqui dá erro e n consigo arrumar
+            int qtdeExistentesFinal = existentesFinal.size();
+
+            int diferenca = qtdeExistentesFinal - qtdeExistentes;
+
+            assertEquals(qtde, diferenca);
+
+        } catch (Exception ex) {
+            fail("Falha ao inserir um comentário: " + ex.getMessage());            
+        }
+    }
+
+    
+    /**
+     * Método responsável pelo teste da exclusão de um comentário no banco de dados
+     * @author Luciano de Carvalho Borba
+     */
+    @Test
+    public void testMetodoExcluir(){
+        ComentarioBO bo = new ComentarioBO();
+        
+        try{
             
             Calendar calendario = Calendar.getInstance();
             calendario.set(2017, 7, 18, 10, 55, 13);
@@ -395,146 +491,48 @@ public class ComentarioBOTest {
             postagem.setDescricao("Post de texto");
             postagem.setData(calendarioPost.getTime());
             postagem.setUsuario(usuario);
-            postagem.setVisualizacoes(50);
+            postagem.setVisualizacoes(0);
             
             PostagemBO postagemBO = new PostagemBO();
             postagemBO.inserir(postagem);
-            
-                    
-            final int qtde = 10;
-            for (int i = 0; i < 10; i++){
-                //Definindo o comentario a ser inserido  
-                Comentario comentario = new Comentario();
-
-                comentario.setDescricao("comentario! " + i);
-                comentario.setUps(5);
-                comentario.setDowns(2);
-                comentario.setData(calendario.getTime());
-                comentario.setPostagem(postagem);
-                comentario.setResposta(null);
-                comentario.setUsuario(usuario);
-
-                try {
-                    comentarioBo.inserir(comentario);
-                } catch (Exception ex) {
-                    fail("Falha ao inserir um comentário: " + ex.getMessage());
-                }
-            }
-            
-
-            List existentesFinal = comentarioBo.listar();
-            int qtdeExistentesFinal = existentesFinal.size();
-
-            int diferenca = qtdeExistentesFinal - qtdeExistentes;
-
-            assertEquals(qtde, diferenca);   
            
-        } catch (Exception ex) {
-                fail("Falha ao executar o teste de listar comentario: " + ex.getMessage());
-        }
-
-    }
-    
-    /**
-     * Método responsável pelo teste da exclusão de um comentário no banco de dados
-     * @author Luciano de Carvalho Borba
-     */
-    //@Test
-    public void testMetodoExcluir(){
-       Pais pais = new Pais();
-       pais.setNome("Brasil");
-       
-        
-       //Criação e inserção de dados de: país, estado, cidade, usuário, postagem e comentário.
-        
-       try{
-           
-            PaisBO paisBO = new PaisBO();
-            paisBO.inserir(pais);
-
-            Estado estado = new Estado();
-            estado.setNome("Acre");
-            estado.setPais(pais);
-            
-            EstadoBO estadoBO = new EstadoBO();
-            estadoBO.inserir(estado);
-            
-            Cidade cidade = new Cidade();
-            cidade.setNome("Los Angel");
-            cidade.setEstado(estado);
-            
-            CidadeBO cidadeBO = new CidadeBO();
-            cidadeBO.inserir(cidade);
-            
-            Usuario usuario = new Usuario();
-            usuario.setNome("Raul");
-            usuario.setDataCadastro(new Date());
-            usuario.setEmail("raul@gmail.com");
-            Calendar calendario = Calendar.getInstance();
-            calendario.set(1986, 2, 8, 0, 0, 0);            
-            usuario.setDataNascimento(calendario.getTime());
-            usuario.setSenha("123789");
-            usuario.setSexo(Sexo.MASCULINO);
-            usuario.setStatus(true);
-            usuario.setTelefone("(62) 91432-9867");
-            usuario.setCidade(cidade);
-            
-            UsuarioBO usuarioBO = new UsuarioBO();
-            usuarioBO.inserir(usuario);
-           
-
-            Postagem postagem = new Postagem();
-            postagem.setDescricao("Comentário");
-            postagem.setUps(0);
-            postagem.setDowns(0);
-            postagem.setUsuario(usuario);
-
-            calendario.set(2017, 7, 16, 21, 58, 0);
-            postagem.setData(calendario.getTime());
-            
-            PostagemBO postagemBO  = new PostagemBO();
-            postagemBO.inserir(postagem);
-            
-            ComentarioBO bo = new ComentarioBO();
-            
+           //instancia comentario
             Comentario comentario = new Comentario();
-            comentario.setDescricao("bommm");
-            comentario.setUps(0);
-            comentario.setDowns(0);
-            
-            calendario.set(1986, 4, 8, 0, 0, 0);            
+
+            comentario.setDescricao("Teste Inserir comentario! ");
+            comentario.setUps(5);
+            comentario.setDowns(2);
             comentario.setData(calendario.getTime());
             comentario.setPostagem(postagem);
+            comentario.setResposta(null);
+            comentario.setUsuario(usuario);
             
+            
+            //insere o comentario no db
             bo.inserir(comentario);
             
-            //Verifica se o comentário está cadastrada no banco de dados              
+            //recupera o id do comentario              
             int id = comentario.getId();
             
+                
             //Seleciona um cometário inserido atráves do id 
-             
             Comentario comentarioSelecionado = bo.selecionar(id);
-            
-            //Se não houver comentério exibirá uma mensagem de erro
-            
-            assertNotNull("Comentario não encontrado", comentarioSelecionado);
-            
-            //Exclui comentário selecionado pelo id
-            
-            bo.excluir(id);
-           
-            //Seleciona coméntario excluido para saber se ele foi realmente deletado
-            
-           Comentario comentarioSelecionadoPosExclusao = bo.selecionar(id);
-           
-           //Caso o coméntario possa ser encontrado no banco de dados mesmo após a exclusão, será exibida uma mensagem de erro ao excluir
-           
-           assertNull("comentario encontrado, mesmo apos exclui-la", comentarioSelecionadoPosExclusao);
-        }catch (Exception ex){
-            
-            //Caso houver algum erro ao inserir um comentário no banco de dados
 
-           fail ("Falha ao inserir um comentario" + ex.getMessage());
+            //Se não houver comentério exibirá uma mensagem de erro
+            assertNotNull("Comentario não encontrado", comentarioSelecionado);
+
+            //Exclui comentário selecionado pelo id
+            bo.excluir(id);
+
+            //Seleciona coméntario excluido para saber se ele foi realmente deletado
+           Comentario comentarioSelecionadoPosExclusao = bo.selecionar(id);
+
+           //Caso o coméntario possa ser encontrado no banco de dados mesmo após a exclusão, será exibida uma mensagem de erro ao excluir
+           assertNull("comentario encontrado, mesmo apos exclui-la", comentarioSelecionadoPosExclusao);
+          
+        }catch (Exception ex){
+            //Caso houver algum erro ao inserir um comentário no banco de dados
+           fail ("Falha ao apagar um comentario" + ex.getMessage());
         }   
     }
 }

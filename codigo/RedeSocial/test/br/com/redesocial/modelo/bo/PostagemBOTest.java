@@ -255,59 +255,60 @@ public class PostagemBOTest {
             final int qtde = 2;
             
             for (int i = 0; i < 2; i++){
-            Pais pais = new Pais();
-            pais.setNome("Brasil");
-        
-       
-            PaisBO paisBO = new PaisBO();
-            paisBO.inserir(pais);
+                Pais pais = new Pais();
+                pais.setNome("Brasil");
 
-            Estado estado = new Estado();
-            estado.setNome("Goiás");
-            estado.setPais(pais);
-            
-            EstadoBO estadoBO = new EstadoBO();
-            estadoBO.inserir(estado);
-            
-            Cidade cidade = new Cidade();
-            cidade.setNome("Ceres");
-            cidade.setEstado(estado);
-            
-            CidadeBO cidadeBO = new CidadeBO();
-            cidadeBO.inserir(cidade);
-            
-            Usuario usuario = new Usuario();
-            usuario.setNome("Roni");
-            usuario.setDataCadastro(new Date());
-            usuario.setEmail("ronneesley@gmail.com");
-            //usuario.setFoto();
-           
-            Calendar calendario = Calendar.getInstance();
-            calendario.set(1988, 2, 7, 0, 0, 0);            
-            usuario.setDataNascimento(calendario.getTime());
-            usuario.setSenha("123");
-            usuario.setSexo(Sexo.MASCULINO);
-            usuario.setStatus(true);
-            usuario.setTelefone("(62) 91234-4567");
-            usuario.setCidade(cidade);
-            
-            UsuarioBO usuarioBO = new UsuarioBO();
-            usuarioBO.inserir(usuario);
 
-            
-            Postagem postagem1 = new Postagem();
-            postagem1.setDescricao("Comentário");
-            postagem1.setUps(0);
-            postagem1.setDowns(0);
-            postagem1.setUsuario(usuario);
-            postagem1.setVisualizacoes(0);
+                PaisBO paisBO = new PaisBO();
+                paisBO.inserir(pais);
 
-            calendario.set(2017, 7, 16, 21, 58, 0);
-            postagem1.setData(calendario.getTime());
-        
-            bo.inserir(postagem1);
+                Estado estado = new Estado();
+                estado.setNome("Goiás");
+                estado.setPais(pais);
+
+                EstadoBO estadoBO = new EstadoBO();
+                estadoBO.inserir(estado);
+
+                Cidade cidade = new Cidade();
+                cidade.setNome("Ceres");
+                cidade.setEstado(estado);
+
+                CidadeBO cidadeBO = new CidadeBO();
+                cidadeBO.inserir(cidade);
+
+                Usuario usuario = new Usuario();
+                usuario.setNome("Roni");
+                usuario.setDataCadastro(new Date());
+                usuario.setEmail("ronneesley@gmail.com");
+                //usuario.setFoto();
+
+                Calendar calendario = Calendar.getInstance();
+                calendario.set(1988, 2, 7, 0, 0, 0);            
+                usuario.setDataNascimento(calendario.getTime());
+                usuario.setSenha("123");
+                usuario.setSexo(Sexo.MASCULINO);
+                usuario.setStatus(true);
+                usuario.setTelefone("(62) 91234-4567");
+                usuario.setCidade(cidade);
+
+                UsuarioBO usuarioBO = new UsuarioBO();
+                usuarioBO.inserir(usuario);
+
+
+                Postagem postagem1 = new Postagem();
+                postagem1.setDescricao("Comentário");
+                postagem1.setUps(0);
+                postagem1.setDowns(0);
+                postagem1.setUsuario(usuario);
+                postagem1.setVisualizacoes(0);
+
+                calendario.set(2017, 7, 16, 21, 58, 0);
+                postagem1.setData(calendario.getTime());
+
+                bo.inserir(postagem1);
             }
-           List existentesFinal = bo.listar(); //insere os dados perfeitamente quando chega aqui dá erro e n consigo arrumar
+            
+            List existentesFinal = bo.listar(); //insere os dados perfeitamente quando chega aqui dá erro e n consigo arrumar
             int qtdeExistentesFinal = existentesFinal.size();
 
             int diferenca = qtdeExistentesFinal - qtdeExistentes;

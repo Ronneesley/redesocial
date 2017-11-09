@@ -15,6 +15,7 @@ import java.util.List;
  * @since 27/07/2017
  */
 public class ComentarioDAO extends DAOCRUDBase<Comentario> {
+    
     @Override
     public void excluir(int id) throws Exception {
         Connection conexao = getConexao();
@@ -119,12 +120,10 @@ public class ComentarioDAO extends DAOCRUDBase<Comentario> {
             pstmt.setNull(6, Types.INTEGER);
         }
         
-        pstmt.setInt(7, c.getUsuario().getId());
-        
+        pstmt.setInt(7, c.getUsuario().getId());   
 
-        pstmt.executeUpdate();
-        
-        c.setId(getId(pstmt));
+        pstmt.executeUpdate();        
+        c.setId(getId(pstmt));  
     }
       /**
      * Método que lista todos os comentarios ordenado pela data do comentário do banco de dados
