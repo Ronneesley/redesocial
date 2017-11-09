@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.12)  8 NOV 2017 15:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.12)  9 NOV 2017 19:32
 entering extended mode
 **"./Introdução a JSF.tex"
 ("Introdução a JSF.tex"
@@ -657,43 +657,60 @@ Package pdftex.def Info: recursos/imagens/logo.png used on input line 76.
  [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./recursos/imagens/logo.p
-ng>] ("Introdução a JSF.toc")
-\tf@toc=\write3
-\openout3 = `"Introdução a JSF.toc"'.
-
- [1]
-LaTeX Font Info:    Try loading font information for U+msa on input line 98.
+ng>] ("Introdução a JSF.toc"
+LaTeX Font Info:    Try loading font information for U+msa on input line 4.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 98.
+LaTeX Font Info:    Try loading font information for U+msb on input line 4.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Overfull \hbox (87.56998pt too wide) in paragraph at lines 98--100
-\OT1/cmr/bx/n/12 [1] $\OT1/cmtt/m/n/12 https : / / www . caelum . com . br / ap
-ostila-[]java-[]testes-[]jsf-[]web-[]services-[]design-[]patterns /
+))
+\tf@toc=\write3
+\openout3 = `"Introdução a JSF.toc"'.
+
+ [1]
+Overfull \hbox (0.282pt too wide) in paragraph at lines 102--103
+\OT1/cmr/m/n/12 varios sub-pro-je-tos re-la-ci-o-na-dos a tec-no-lo-gia Ja-va
+-Ser-ver for-ne-cendo tec-no-lo-gias como: 
  []
 
-[2] ("Introdução a JSF.aux") ) 
+[2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 167--169
+
+ []
+
+
+Overfull \hbox (85.26733pt too wide) in paragraph at lines 182--183
+[]\OT1/cmr/m/n/12 O Re-sour-ce-Re-gis-try per-mite que um apli-ca-tivo re-gis-t
+re inst^ancias ja-vax.faces.application.Resource
+ []
+
+[4] [5]
+Overfull \hbox (37.83388pt too wide) in paragraph at lines 228--231
+$\OT1/cmtt/m/n/12 https : / / imasters . com . br / linguagens / java / listage
+m-[]de-[]frameworks-[]java / ?trace =
+ []
+
+[6] ("Introdução a JSF.aux") ) 
 Here is how much of TeX's memory you used:
- 5230 strings out of 493323
- 69437 string characters out of 3139066
- 159105 words of memory out of 3000000
- 8658 multiletter control sequences out of 15000+200000
- 10432 words of font info for 39 fonts, out of 3000000 for 9000
+ 5240 strings out of 493323
+ 69535 string characters out of 3139066
+ 163105 words of memory out of 3000000
+ 8668 multiletter control sequences out of 15000+200000
+ 11037 words of font info for 41 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,6n,40p,433b,294s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,6n,40p,741b,294s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public
 /amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmbxti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 mr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb
 >
-Output written on "Introdução a JSF.pdf" (3 pages, 67295 bytes).
+Output written on "Introdução a JSF.pdf" (7 pages, 90865 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
+ 45 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

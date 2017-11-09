@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.redesocial.modelo.dao;
 
 import br.com.redesocial.modelo.dto.Grupo;
@@ -14,40 +9,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
- * @author Love
+ * Classe que realiza as operações de acesso ao banco de dados da entidade grupos
+ * @author Fernando Maciel da Silva, Warley Rodrigues de Andrade, Wesley Morais Félix
+ * @since 09/11/2017
  */
 public class GrupoDAO extends DAOCRUDBase<Grupo>{
 
-        /**
-     * Método responsável pela inserção de um país no banco de dados
-     * @author Ciclano
-     * @param g país a ser inserido
-     * @throws Exception possíveis exceções que podem acontecer
-     */
+    /**
+    * Método responsável pela inserção de um objeto no banco de dados na tabela grupos
+    * @param g objeto com os dados de grupo já preenchido
+    * @throws Exception
+    */
     @Override
     public void inserir(Grupo g) throws Exception {
-        Connection conexao = getConexao();
-
-        if(g.getNome().trim().equals("")){
-            throw new Exception("O campo Nome não pode estar vazio!");
-        }
-        
-        if(g.getDataCriacao() == null){
-            throw new Exception("O campo Data da Criação não pode estar vazio!");
-        }
-        
-        if(g.getDescricao().trim().equals("")){
-            throw new Exception("O campo Descrição não pode estar vazio!");
-        }
-        
-        if(g.getPrivacidade() == null){
-            throw new Exception("O campo Privacidade não pode estar vazio!");
-        }
-        
-        if(g.getTipo().trim().equals("")){
-            throw new Exception("O campo Tipo não pode estar vazio!");
-        }
+        Connection conexao = getConexao();        
 
         PreparedStatement pstmt;
         pstmt = conexao.prepareStatement("insert into grupos (nome, data_criacao, descricao, privacidade, tipo) values(?,?,?,?,?)", Statement.RETURN_GENERATED_KEYS);
@@ -64,34 +39,13 @@ public class GrupoDAO extends DAOCRUDBase<Grupo>{
     }
 
     /**
-     * Método responsável pela alteração de um país no banco de dados
-     * @author Macilon Arruda
-     * @param g novos dados do país, com o ID do país a ser alterado preenchido
-     * @throws Exception possíveis exceções que podem acontecer
-     */
+    * Método responsável pela alteração de dados de um grupo no banco de dados
+    * @param g novos dados alterados do grupo, com o ID do grupo a ser alterado
+    * @throws Exception possíveis exceções que podem acontecer
+    */
     @Override
     public void alterar(Grupo g) throws Exception {
-        Connection conexao = getConexao();
-
-        if(g.getNome().trim().equals("")){
-            throw new Exception("O campo Nome não pode estar vazio!");
-        }
-        
-        if(g.getDataCriacao() == null){
-            throw new Exception("O campo Data da Criação não pode estar vazio!");
-        }
-        
-        if(g.getDescricao().trim().equals("")){
-            throw new Exception("O campo Descrição não pode estar vazio!");
-        }
-        
-        if(g.getPrivacidade() == null){
-            throw new Exception("O campo Privacidade não pode estar vazio!");
-        }
-        
-        if(g.getTipo().trim().equals("")){
-            throw new Exception("O campo Tipo não pode estar vazio!");
-        }
+        Connection conexao = getConexao();        
 
         PreparedStatement pstmt;
         pstmt = conexao.prepareStatement("update grupos set nome = ?, data_criacao = ?, descricao = ?, privacidade = ?, tipo = ? where id = ?");
@@ -108,9 +62,8 @@ public class GrupoDAO extends DAOCRUDBase<Grupo>{
     }
 
     /**
-     * Método responsável pela exclusão de um país no banco de dados
-     * @author Ciclano
-     * @param id identificador do país a ser excluído
+     * Método responsável pela exclusão de um grupo no banco de dados     
+     * @param id identificador do grupo a ser excluído
      * @throws Exception possíveis exceções que podem acontecer
      */
     @Override
@@ -126,15 +79,13 @@ public class GrupoDAO extends DAOCRUDBase<Grupo>{
     }
 
     /**
-     * Método que seleciona um país já cadastrado no banco de dados
-     * @author Ciclano
-     * @param id identificador do país
-     * @return país selecionado no banco de dados
+     * Método que seleciona um grupo já cadastrado no banco de dados     
+     * @param id identificador do grupo
+     * @return grupo selecionado no banco de dados
      * @throws Exception possíveis exceções que podem acontecer
      */
     @Override
-    public Grupo selecionar(int id) throws Exception {
-        
+    public Grupo selecionar(int id) throws Exception {        
         Connection conexao = getConexao();
         
         PreparedStatement pstmt;
@@ -157,14 +108,12 @@ public class GrupoDAO extends DAOCRUDBase<Grupo>{
     }
 
     /**
-     * Método que lista todos os países em ordem alfabética do banco de dados
-     * @author Thalia Santos de Santana
-     * @return lista de países ordenados alfabeticamente
+     * Método que lista todos os grupos em ordem alfabética do banco de dados     
+     * @return lista de grupos ordenados alfabeticamente
      * @throws Exception possíveis exceções que podem acontecer
      */
     @Override
-    public List listar() throws Exception {
-        
+    public List listar() throws Exception {        
        Connection conexao = getConexao();
 
        PreparedStatement pstmt;
@@ -183,9 +132,6 @@ public class GrupoDAO extends DAOCRUDBase<Grupo>{
 
            lista.add(g);
        }
-
        return lista;
-    }
-
-    
+    }    
 }
