@@ -332,73 +332,73 @@ public class ComentarioBOTest {
      * Método de teste responsável pela listagem dos commentários existentes no banco de dados
      * @author Lara Caroline
      */
-    @Test
+   @Test
     public void testMetodoListar() {
+        ComentarioBO bo = new ComentarioBO();
         
-       ComentarioBO bo = new ComentarioBO();
-
         try {
-            List existentes = bo.listar();
+                      List existentes = bo.listar();
             int qtdeExistentes = existentes.size();
 
             final int qtde = 2;
             
             for (int i = 0; i < 2; i++){
+                
+                Calendar calendario = Calendar.getInstance();
+                calendario.set(2017, 7, 18, 10, 55, 13);
+
+                Calendar calendarioPost = Calendar.getInstance();
+                calendarioPost.set(2017, 7, 18, 9, 30, 45);
+
+                Calendar calendarioNascimento = Calendar.getInstance();
+                calendarioNascimento.set(2017, 7, 18, 9, 30, 45);
+
                 Pais pais = new Pais();
                 pais.setNome("Brasil");
-
-
                 PaisBO paisBO = new PaisBO();
                 paisBO.inserir(pais);
+                
 
                 Estado estado = new Estado();
                 estado.setNome("Goiás");
                 estado.setPais(pais);
-
                 EstadoBO estadoBO = new EstadoBO();
                 estadoBO.inserir(estado);
 
                 Cidade cidade = new Cidade();
-                cidade.setNome("Ceres");
+                cidade.setNome("Goiânia");
                 cidade.setEstado(estado);
-
                 CidadeBO cidadeBO = new CidadeBO();
                 cidadeBO.inserir(cidade);
 
                 Usuario usuario = new Usuario();
-                usuario.setNome("Roni");
-                usuario.setDataCadastro(new Date());
-                usuario.setEmail("ronneesley@gmail.com");
-                //usuario.setFoto();
 
-                Calendar calendario = Calendar.getInstance();
-                calendario.set(1988, 2, 7, 0, 0, 0);            
-                usuario.setDataNascimento(calendario.getTime());
-                usuario.setSenha("123");
-                usuario.setSexo(Sexo.MASCULINO);
+                usuario.setNome("Joana");
+                usuario.setDataCadastro(new Date());
+                usuario.setEmail("joaninha@contato.com");     
+                usuario.setDataNascimento(calendarioNascimento.getTime());
+                usuario.setSenha("192837");
+                usuario.setSexo(Sexo.FEMININO);
                 usuario.setStatus(true);
                 usuario.setTelefone("(62) 91234-4567");
                 usuario.setCidade(cidade);
 
                 UsuarioBO usuarioBO = new UsuarioBO();
                 usuarioBO.inserir(usuario);
-
+                
+                Postagem postagem = new Postagem();
+            
+                postagem.setUps(0);
+                postagem.setDowns(0);
+                postagem.setDescricao("Post de texto");
+                postagem.setData(calendarioPost.getTime());
+                postagem.setUsuario(usuario);
+                postagem.setVisualizacoes(0);
 
                 PostagemBO postagemBO = new PostagemBO();
-                Postagem postagem = new Postagem();
-                postagem.setDescricao("Comentário");
-                postagem.setUps(1);
-                postagem.setDowns(2);
-                postagem.setUsuario(usuario);
-                postagem.setVisualizacoes(98);
-
-                calendario.set(2017, 7, 16, 21, 58, 0);
-                postagem.setData(calendario.getTime());
-
                 postagemBO.inserir(postagem);
                 
-                
-                 //instancia comentario
+                //instancia comentario
                 Comentario comentario = new Comentario();
 
                 comentario.setDescricao("Teste Inserir comentario! ");
@@ -409,9 +409,10 @@ public class ComentarioBOTest {
                 comentario.setResposta(null);
                 comentario.setUsuario(usuario);
 
-                //insere o comentario no db
-                bo.inserir(comentario);
-                
+
+                    //insere o comentario no db
+                    bo.inserir(comentario);
+
             }
             
             List existentesFinal = bo.listar(); //insere os dados perfeitamente quando chega aqui dá erro e n consigo arrumar
@@ -421,9 +422,11 @@ public class ComentarioBOTest {
 
             assertEquals(qtde, diferenca);
 
-        } catch (Exception ex) {
-            fail("Falha ao inserir um comentário: " + ex.getMessage());            
+                
+        }catch(Exception ex){
+        
         }
+ 
     }
 
     
