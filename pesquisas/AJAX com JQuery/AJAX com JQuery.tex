@@ -14,7 +14,7 @@
 \definecolor{pred}{rgb}{0.9,0,0}
 \definecolor{pgrey}{rgb}{0.46,0.45,0.48}
 \usepackage{listings}
-\lstset{language=Java,
+\lstset{language=PHP,
   showspaces=false,
   showtabs=false,
   breaklines=true,
@@ -26,6 +26,24 @@
   basicstyle=\ttfamily,
   moredelim=[il][\textcolor{pgrey}]{\$\$},
   moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+}
+\lstdefinestyle{LaTeX}{
+  language={[LaTeX]TeX},
+  basicstyle=\ttfamily\small, 
+  identifierstyle=\color{black}, 
+  keywordstyle=\color{blue}, 
+  commentstyle=\color{red}, 
+  extendedchars=true, 
+  showspaces=false, 
+  showstringspaces=false, 
+  numbers=none,
+  breaklines=true,
+  backgroundcolor=\color{yellow!20}, 
+  breakautoindent=true, 
+  captionpos=b,
+  xleftmargin=0pt,
+  frame=none,
+  rframe={},
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Fim codigo JAVA%%%%%%%%%%%%%%
 %%%%%%%%%%%Codigo geral%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -61,8 +79,8 @@
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Fim codigo geral%%%%%%%%%%%%%
 \RequirePackage{graphicx}
-\title{JDBC com transações}
-\author{Daniel Moreira Cardoso \and Gusttavo Nunes Gomes\and Jeferson Rossini Ferreira Lourenço\and Paulo Henrique Rodrigues Araujo\and Warley Rodrigues de Andrade}
+\title{AJAX com Jquery}
+\author{Andrey Ribeiro \and Gleydson Alvess\and Igor Justino\and Jeferson Rossini\and Warley Rodrigues de Andrade}
  
 \usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
 \begin{document}
@@ -101,6 +119,24 @@ Os frameworks agilizam a vida do programador disponibilizando funções que faze
 \section{O que é AJAX?}
 O Ajax (Asynchronous JavaScript and XML) é uma tecnologia que se utiliza do JavaScript, XML e HTML que é bastante evidênciada tornando aplicativos muito mais dinâmicos e agregando maiores valores na sua capacidade de resposta.
 No Javascript o AJAX requer solicitações ao servidor retornando apenas os dados que a página precisa sem qualquer marcação ou apresentação. Para aqueles usuários que acessam a página que se utiliza desta tecnologia é que grande parte da página não será alterada apenas aquelas partes que serão atualizadas, com uma gigantesca diferença de antes que ao atualizar qualquer coisa a página inteira necessitaria ser carregada novamente.
+
+\subsection{Configuracoes.class}
+Configurações é o arquivo responsável por conectar com o banco de dados.
+\lstinputlisting{recursos/Configuracoes.class.php}
+
+\subsection{Funções.js}
+Este é o arquivo onde está o Ajax.
+\lstinputlisting{recursos/Funcoes.js}
+
+\subsection{Pesquisa.php}
+Arquivo onde recebe os dados que o ajax envia.
+\lstinputlisting{recursos/pesquisa.php}
+
+
+
+\subsection{Leis.class}
+Leis.class é o arquivo responsável pelas leis: select, insert, update, etc.
+\lstinputlisting{recursos/Leis.class.php}
 
 \section{Referências Bibliográfica}
 \noindent \textbf{[1]} \url {https://www.devmedia.com.br/ajax-com-jquery-trabalhando-com-requisicoes-assincronas/37141}
