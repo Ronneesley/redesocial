@@ -1,0 +1,187 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[brazil]{babel}
+\usepackage{indentfirst}
+\usepackage{url}
+\usepackage{float}
+\usepackage{color}
+\usepackage{colortbl}
+
+\usepackage{color}
+\usepackage{colortbl}
+
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\usepackage{listings}
+\lstset{language=SQL,
+  showspaces=false,
+  showtabs=false,
+  breaklines=true,
+  showstringspaces=false,
+  breakatwhitespace=true,
+  commentstyle=\color{pgreen},
+  keywordstyle=\color{pblue},
+  stringstyle=\color{pred},
+  basicstyle=\ttfamily,
+  moredelim=[il][\textcolor{pgrey}]{\$\$},
+  moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,                    % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=Octave,                 % the language of the code
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,                       % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+
+
+\RequirePackage{graphicx}
+\title{Dicionário de Dados}
+\author{Anny Karoliny Moraes Ribeiro \and Eduardo Oliveira Silva \and Gleyson Israel Alves \and José Gilvan Jacinto Junior \and Lara Caroline Damaceno Faria}
+\usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
+\begin{document}
+\begin{titlepage}
+\begin{center}
+\begin{figure}[htb]
+	\label{figura:LogoIF}
+	\centering
+	\includegraphics[width=6cm]{recursos/imagens/logo.png} 
+\end{figure}
+Instituto Federal Goiano - Campus Ceres\\
+Bacharelado em Sistemas de Informação\\
+Prof. Me. Ronneesley Moura Teles\\\vspace{1cm}
+
+Anny Karoliny Moraes Ribeiro\\Eduardo Oliveira Silva\\Gleyson Israel Alves\\José Gilvan Jacinto Junior\\Lara Caroline Damaceno Faria\\\vspace{6.0cm}
+\textit{\textbf{\Large{Estudo da diferença de performance com índices em tabelas}}}\\\vspace{10cm}
+Novembro\\
+2017\\
+\end{center}
+\end{titlepage}
+\tableofcontents
+\newpage
+\begin{center}
+\textbf{\Large{Estudo da diferença de performance com índices em tabelas}}\\\vspace{0.5cm}
+\end{center}
+\section{Introdução}
+
+Ao trabalhar com um banco de dados é imprescindível realizar consultas em uma grande quantidade de registros que demora um certo período de tempo para retornar um resultado, o desempenho é crucial nesse processo. Por esse motivo as pessoas envolvidas com o banco de dados se preocupam muito com o tempo de resposta das consultas feitas no banco de dados.
+
+Existem muitos métodos para assegurar um melhor tempo de resposta sobretudo em tabelas com grandes quantidades de dados registrados. Como por exemplo selecionar só as colunas essenciais, assim diminuindo os dados devolvidos, outra possibilidade é o uso de índices.
+
+Empregar o uso de índices especialmente nos campos numéricos das tabelas auxilia o gerenciador do banco de dados a encontrar com mais facilidade o dado procurado.
+
+\section{Entendendo o conceito de Índices}
+
+Índices são considerados como a organização de temas em listagem, assuntos, palavras e tópicos, e também um indicador de sintoma, um fator de referência que serve para comparar e explicar a situação ou condição.
+
+O uso do índice em banco de dados vai promover uma melhoria em seu desempenho. Os principais sinônimos de índice são: lista, tabela, rol, relação, padrão e índex.
+
+Um tipo comum de índice é uma lista ordenada, de determinados valores de uma coluna e tabela com ponteiros, que associam as linhas a cada valor. O índice vai permitir que as informações nas linhas de uma tabela tenham um desempenho rápido na sua localização, utilizado para encontrar registros com um determinado valor da coluna de forma rápida.
+
+Sem uso de índice o MySQL terá de fazer leitura em toda tabela até que encontre os registros essenciais que se busca. Em relação a tabela ser grande será o seu custo também será maior
+
+Se a tabela possuir índice para determinadas colunas, o MySQL terá rapidez em conseguir uma posição para busca entre os arquivos de dados, e se necessário fazer a varredura de todos os registros.
+
+Em uma tabela que apresenta 1000 registros, teremos uma velocidade 100 vezes maior do que teríamos caso fosse feito uma leitura em todos os registros em sequência.
+
+Pode-se entender as chaves-primárias como índices, que permitem buscas de forma rápida e com eficiência baseada em um valor que não tem repetição. Pode-se também usar o mesmo conceito nas colunas que não sejam chaves tendo assim melhora no desempenho de busca usando aquela coluna.
+
+Antes do uso de índice é preciso pensar na possibilidade de usá-lo ou não, quando em uma tabela temos muitos índices e a mesma sofre muitas alterações, remoções e inserções todos os índices deverão ser atualizados de acordo com a nova situação. Esse processo acaba ficando crítico principalmente em tabelas com grandes quantidades de registros.
+
+\section{Código}
+
+%%Exemplo de codigo completo
+\lstinputlisting[language=SQL]{recursos/codigo/01.sql}
+
+%%Exemplo de uma parte do codigo 
+\lstinputlisting[language=SQL, firstline=2, lastline=3]{recursos/codigo/01.sql}
+
+\section{Vantagens e Desvantagens do uso de índices no banco de dados}
+
+\subsection{Vantagens}
+
+\begin{itemize}
+	\item Melhoria de performance na consulta e acesso: a velocidade de acesso aos registros reduz. Os índices são ligados em forma de árvore binária (existem outros tipos) conserva os registros ordenados, conseguindo assim realizar uma consulta binária de tal modo que encontrar as informações disponíveis em índice dentro de uma escala maior. Aproximadamente 14\% mais rápido, o que significa diante da quantidade imensa de dados que temos hoje.
+	
+	\item Busca de dados específicos de forma mais rápida: trabalhando com índice é possível que em apenas uma consulta já baste para obter as informações desejadas não necessitando consultar a tabela de dados.
+	
+	\item Possibilita o acesso aos registros ordenados sem necessidade de realizar a ordenação: em uma busca os dados naturalmente são ordenados, uma vez que sabe-se que vai se usar um acesso aos dados sequencialmente o índice tem muita serventia.
+	
+	\item Facilita na prevenção de informações chaves duplicadas: de maneira que a procura é veloz e fácil localizar chaves duplicadas se torna uma tarefa quase que banal (quase não gasta tempo).	
+	
+\end{itemize}
+
+\subsection{Desvantagens}
+
+\begin{itemize}
+	\item Diminui o desempenho da escrita no banco de dados: sempre que houver necessidade de modificar (inserir, alterar, deletar) uma chave forçará a escrever o índice. Se o registro modificado tem várias chaves (índices) a troca do índice afeta a todos, todavia terão que ser mudados.
+	
+	\item Eleva o gasto de armazenamento do banco de dados: uma tabela extra de índices ocupará mais memória e disco.
+	
+	\item Amplifica a inevitabilidade de manutenção interna do banco de dados: dependendo da implantação é corriqueiro o fato de que chaves sejam deixadas de lado a medida que são alteradas. Adiante também de outros elementos que o DBA deverá se preocupar.
+	
+	\item	Arrisca-se a queda na eficiência das consultas: não tem-se uma garantia de que toda e qualquer consulta será mais veloz com a utilização dos índices diante da operação extra de acesso ao índice anteriormente ao acesso aos registros principais, sendo assim há a possibilidade dessa operação anterior ao acesso aos dados somada ao acesso ser maior que o acesso direto.
+	
+\end{itemize}
+
+\section{Conclusão}
+
+Numa sociedade moderna onde a quantidade de dados aumenta significativamente a cada dia, é de mera importância o rápido acesso e consulta a eles.
+
+A utilização de índices e técnicas de otimização promete uma boa performance no acesso e nas consultas ao banco de dados. Seria um devaneio achar que os índices são a solução para todos os dilemas, sendo assim deve-se utilizá-los quando realmente houver necessidade.
+
+Cabe frisar que há outros tipos de índices (além da árvore binária que é o mais comum) adequados para cada circunstância, assim como o hash no qual a chave é definida por um índice posicional (comum em memória) ou índices invertidos que usam indexação.
+
+\section{Referências Bibliográficas}
+\noindent \textbf{Índices MySQL: Otimização de consultas}. Disponível em: \url {www.linhadecodigo.com.br/artigo/3620/indices-mysql-otimizacao-de-consultas.aspx}. (\textit{Acesso em 11/2017})\\\vspace{0.2cm}
+
+\noindent \textbf{Entendendo e usando índices - Parte 1}. Disponível em: \url {www.devmedia.com.br/entendendo-e-usando-indices-parte-1/6567}. (\textit{Acesso em 11/2017})\\\vspace{0.2cm}
+
+\noindent \textbf{Uso de índice em bando de dados}. Disponível em: \url {https://www.portaleducacao.com.br/conteudo/artigos/idiomas/uso-de-indices-em-banco-de-dados/46287}. (\textit{Acesso em 11/2017})\\\vspace{0.2cm}
+
+\noindent \textbf{Significado de Índice}. Disponível em: \url {https://www.significados.com.br/indice/}. (\textit{Acesso em 11/2017})\\\vspace{0.2cm}
+
+\noindent \textbf{Quais as vantagens e desvantagens do uso de índices em base de dados?}. Disponível em: \url {pt.stackoverflow.com/questions/35088/quais-as-vantagens-e-desvantagens-do-uso-de-\%c3\%adndices-em-base-de-dados}. (\textit{Acesso em 11/2017})
+\end{document}
+
+%\lstinputlisting[language=SQL]{recursos/codigo/01.sql}
+
+%\lstinputlisting[language=SQL, firstline=3, lastline=5]{recursos/codigo/01.sql}
+
+%%Modelo de código para inserir figura
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=15cm]{logo.png}
+%\label{4}
+%\caption{Fonte:http://...; Acesso em 06/11/2017}
+%\end{figure}

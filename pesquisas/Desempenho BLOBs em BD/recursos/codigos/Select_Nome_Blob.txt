@@ -1,0 +1,14 @@
+1000 select count(*) from redesocial_teste.arquivo where nome like 'Igor';
+
+1 - Tempo Gasto: 0.53173 seg
+2 - Tempo Gasto: 0.03177 seg
+3 - Tempo Gasto: 0.03301 seg
+/*[...]1000 Testes*/ 
+998 - Tempo Gasto: 0.03144 seg
+999 - Tempo Gasto: 0.03114 seg
+1000 - Tempo Gasto: 0.03088 seg
+
+
+/*Resultados:*/ 
+Tempo Total: 35.49721 seg
+Media de Tempo: 0.03549721 seg
