@@ -96,11 +96,28 @@ Novembro\\
 \textbf{\Large{Diferenças de desempenho do uso de BLOBs no banco de dados}}\\\vspace{0.5cm}
 \end{center}
 \section{Introdução}
+O BLOB \textit{(Binary Large Object)}, ou em português, Grande Objeto Binário, refere-se a campos criados para armazenar qualquer tipo de informação em formato binário, dentro de um banco de dados [1]. Geralmente, são arquivos multimídia, como imagens, áudios, vídeos, etc. Normalmente, grande parte dos bancos de dados (BDs) dão suporte aos tipos básicos, como datas, \textit{strings}, números e assim, para aqueles que não fazem parte dessa linha, utiliza-se BLOBs [2].
 
-%%%%%%%%%%%%%%%%Apenas Teste, excluir dps%%%%%%%%%%%%
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In placerat faucibus justo, et varius dui. Etiam ut nibh molestie, finibus libero non, euismod arcu. Nam varius ornare leo nec maximus. Nulla semper eros ipsum, in maximus lacus consequat quis. Integer nec nisl eros. Donec a dui dui. Aliquam erat volutpat. Curabitur vitae massa orci. Integer pharetra odio arcu, ut venenatis leo porta a. Nulla quis odio varius, rutrum sapien nec, egestas tortor. Etiam ultricies feugiat risus vitae elementum. Integer elementum, enim sed posuere lacinia, enim nisl aliquam orci, sit amet gravida dolor erat in libero. Nulla ut fermentum ex. Nullam elit felis, aliquet nec viverra nec, laoreet nec augue. Vestibulum erat nibh, sollicitudin a molestie pretium, suscipit in dui.
+O MySQL também faz uso de BLOBs e são divididos em quatro tipos [1]:
+\begin{itemize}
+	\item TINYBLOB: campo BLOB de armazenamento máximo igual a 255 caracteres (8 bits) mais 1 de controle;
+	\item BLOB: o mesmo que o Tinyblob, porém armazenando até 16535 caracteres (16 bits) mais 2 de controle;
+	\item MEDIUMBLOB: o mesmo que o Tinyblob, porém armazenando até 16777216 caracteres (24 bits) mais 3 de controle;
+	\item LONGBLOB: o mesmo que o Tinyblob, porém armazenando até 4294967295 caracteres (32 bits) mais 4 de controle.
+\end{itemize}
 
-\lstinputlisting[language=SQL]{recursos/codigos/01.sql}
+Em busca de avaliar o desempenho do uso de BLOBs, criou-se a mesma tabela em dois bancos separados (Figura 1), uma contendo o BLOB e outra com a URL do arquivo.
+
+\begin{figure}[htb]
+	\label{figura:tabelas}
+	\centering
+	\includegraphics[width=8cm]{recursos/imagens/tabelas.png} 
+	
+	Figura 1. Tabela com inserção por BLOB e tabela com URL.
+\end{figure}
+
+
+%\lstinputlisting[language=SQL]{recursos/codigos/01.sql}
 
 %%%%%%%%%%%%%%%%Apenas Teste, excluir dps%%%%%%%%%%%%
 
@@ -111,9 +128,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. In placerat faucibus ju
 
 
 \section{Referências Bibliográfica}
-\noindent \textbf{[1]} \url {http:/}\\\vspace{0.2cm}
+\noindent \textbf{[1]} \url {https://pt.stackoverflow.com/questions/100802/como-funciona-o-campo-blob}\\\vspace{0.2cm}
 
-\noindent \textbf{[2] }\url{https://pt.wikipedia.org/...}\\\vspace{0.2cm}
+\noindent \textbf{[2] }\url{https://pt.wikipedia.org/wiki/BLOB}\\\vspace{0.2cm}
 \end{document}
 
 %\lstinputlisting[language=SQL]{recursos/codigo/01.sql}
