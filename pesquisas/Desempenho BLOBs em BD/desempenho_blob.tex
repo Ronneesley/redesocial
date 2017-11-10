@@ -119,7 +119,7 @@ Segundo ainda o Blog \textit{SQL Authority}, a autor faz a sugestão em prol do 
 
 
 \section{Aplicação}
-Em busca de avaliar o desempenho do uso de BLOBs, criou-se a mesma tabela em dois bancos separados (Figura 1), uma contendo o BLOB e outra com a URL do arquivo.
+Em busca de avaliar o desempenho do uso de BLOBs, criou-se a mesma tabela (Figura 1), uma contendo o BLOB e outra com a URL do arquivo.
 
 \begin{figure}[htb]
 	\label{figura:tabelas}
@@ -129,11 +129,13 @@ Em busca de avaliar o desempenho do uso de BLOBs, criou-se a mesma tabela em doi
 	Figura 1. Tabela com uso de BLOB e tabela com URL.
 \end{figure}
 
-Em cada uma das tabelas foram inseridos 49000 registros, igualmente. A partir destes, avaliou-se a diferença de tempo de 1000 consultas.
+Em cada uma das tabelas foram inseridos 49000 registros, igualmente. A partir destes, avaliou-se a diferença de tempo de 1000 consultas. Abaixo, tem-se o arquivo \textit{.sql} referente a criação das tabelas no SGBD (Sistema Gerenciador de Banco de Dados) \textit{MySQL Workbench}. \\\vspace{0.1cm}
 
 \lstinputlisting[language=SQL]{recursos/codigos/banco.sql}
 
 \section{Resultados}
+
+Avaliando-se o desempenho, algumas consultas foram realizadas com 1000 repetições, selecionando por data, nome e por todos os campos, a qual essa última, informa se há ou não real diferença em relação ao uso de BLOBs. Todos os tempos de cada consulta foram salvos, gerando uma média final referente a cada \textit{select}. \\\vspace{0.1cm}
 
 \lstinputlisting[language=SQL]{recursos/codigos/Select_Data_Blob.txt}
 
@@ -147,7 +149,8 @@ Em cada uma das tabelas foram inseridos 49000 registros, igualmente. A partir de
 
 \lstinputlisting[language=SQL]{recursos/codigos/Select_Todos_URL.txt}
 
-\section{Conclusão}
+\section{Considerações finais}
+Levando em conta o objetivo deste, ao realizar a comparação de desempenho nas consultas, fica claro que ao fazer uso de URLs, há maior rapidez nas consultas do que usando BLOBs (0.1783877 seg $<$ 1.35309537 seg).
 
 
 
@@ -156,13 +159,17 @@ Em cada uma das tabelas foram inseridos 49000 registros, igualmente. A partir de
 
 \noindent \textbf{[2] }\url{https://pt.wikipedia.org/wiki/BLOB}\\\vspace{0.2cm}
 
-\noindent \textbf{[3] }\url{http://www.itprotoday.com/cloud-data-center/storing-blobs-database-or-file-system}\\\vspace{0.2cm}
+\noindent \textbf{[3] }\url{http://www.itprotoday.com/cloud-data-center/storing-blobs-database-or-fi
+le-system}\\\vspace{0.2cm}
 
-\noindent \textbf{[4] }\url{http://www.yiiframework.com/forum/index.php/topic/33244-best-practice-to-store-images-in-database-blob-or-url-based/}\\\vspace{0.2cm}
+\noindent \textbf{[4] }\url{http://www.yiiframework.com/forum/index.php/topic/33244-best-practice-to
+-store-images-in-database-blob-or-url-based/}\\\vspace{0.2cm}
 
-\noindent \textbf{[5] }\url{https://dba.stackexchange.com/questions/736/is-it-better-to-store-images-in-a-blob-or-just-the-url}\\\vspace{0.2cm}
+\noindent \textbf{[5] }\url{https://dba.stackexchange.com/questions/736/is-it-better-to-store-images
+-in-a-blob-or-just-the-url}\\\vspace{0.2cm}
 
-\noindent \textbf{[6] }\url{https://blog.sqlauthority.com/2007/12/13/sql-server-do-not-store-images-in-database-store-location-of-images-url/}\\\vspace{0.2cm}
+\noindent \textbf{[6] }\url{https://blog.sqlauthority.com/2007/12/13/sql-server-do-not-store-images-
+in-database-store-location-of-images-url/}\\\vspace{0.2cm}
 
 \end{document}
 

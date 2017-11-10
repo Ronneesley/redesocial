@@ -2,5 +2,5 @@
 \contentsline {section}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{2}
 \contentsline {section}{\numberline {2}Aplica\IeC {\c c}\IeC {\~a}o}{3}
 \contentsline {section}{\numberline {3}Resultados}{3}
-\contentsline {section}{\numberline {4}Conclus\IeC {\~a}o}{5}
+\contentsline {section}{\numberline {4}Considera\IeC {\c c}\IeC {\~o}es finais}{5}
 \contentsline {section}{\numberline {5}Refer\IeC {\^e}ncias Bibliogr\IeC {\'a}ficas}{5}
