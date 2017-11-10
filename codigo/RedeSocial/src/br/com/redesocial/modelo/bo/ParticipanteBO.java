@@ -4,42 +4,45 @@ import br.com.redesocial.modelo.dao.ParticipanteDAO;
 import br.com.redesocial.modelo.dto.Participante;
 
 /**
- * Define as regras de negócio para os usuários
- * @author Igor Justino Rodrigues
- * @since 27/07/2017
+ * Define as regras de negócio para os participantes
+ * @author Fernando Maciel da Silva, Warley Rodrigues de Andrade, Wesley Morais Félix
+ * @since 09/11/2017
  */
 
 
-public class ParticipanteBO{
+public class ParticipanteBO extends BOCRUDBase <Participante, ParticipanteDAO>{
     /**
-     * Instancia um objeto de país DAO
-     * @return instância de acesso aos dados do país
+     * Instancia um objeto de participante DAO
+     * @return instância de acesso aos dados do participante
      */
-    //@Override
+    
+    @Override
     protected ParticipanteDAO instanciarDAO() {
         return new ParticipanteDAO();
     }
     
     /**
-     * Validação da chave primária de um objeto país
+     * Validação da chave primária de um objeto participante
      * @param dto objeto em questão
      * @throws Exception validação se a chave não foi preenchida
      */
-    //@Override
+    
+    @Override
     protected void validarChavePrimaria(Participante dto) throws Exception {
-        if (dto.getGrupo() == null) throw new Exception("Preencha o campo Grupo");
-         if (dto.getUsuario() == null) throw new Exception("Preencha o campo Usuario");
+        // Validações    
+        if (dto.getGrupo() == null) throw new Exception("Você precisa ter criado um Grupo!");
+        if (dto.getUsuario() == null) throw new Exception("Você precisa ter criado um Usuario!");
    }
 
     /**
-     * Validação dos atributos de país
+     * Validação dos atributos de participante
      * @param dto objeto em questão que será validado
      * @throws Exception validações encontradas
      */
-    //@Override
+    
+    @Override
     protected void validar(Participante dto) throws Exception {
-       // Validações
-        if (dto.getCargo() == null) throw new Exception("Preencha o Cargo");
-        
+        // Validações         
+        if(dto.getCargo() == null) throw new Exception("O campo Cargo não pode estar vazio!");              
     } 
 }

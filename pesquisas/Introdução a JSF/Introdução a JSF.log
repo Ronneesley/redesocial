@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.12)  8 NOV 2017 15:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.12)  10 NOV 2017 01:28
 entering extended mode
 **"./Introdução a JSF.tex"
 ("Introdução a JSF.tex"
@@ -462,6 +462,9 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count101
 ))
+("C:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
@@ -544,18 +547,18 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 ("Introdução a JSF.aux")
 \openout1 = `"Introdução a JSF.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
 
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -652,48 +655,74 @@ G,.JBIG2,.JB2,.eps]
 File: recursos/imagens/logo.png Graphic file (type png)
 
 <use recursos/imagens/logo.png>
-Package pdftex.def Info: recursos/imagens/logo.png used on input line 76.
+Package pdftex.def Info: recursos/imagens/logo.png used on input line 77.
 (pdftex.def)             Requested size: 170.71652pt x 39.01822pt.
  [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./recursos/imagens/logo.p
-ng>] ("Introdução a JSF.toc")
-\tf@toc=\write3
-\openout3 = `"Introdução a JSF.toc"'.
-
- [1]
-LaTeX Font Info:    Try loading font information for U+msa on input line 98.
+ng>] ("Introdução a JSF.toc"
+LaTeX Font Info:    Try loading font information for U+msa on input line 3.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 98.
+LaTeX Font Info:    Try loading font information for U+msb on input line 3.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
+\tf@toc=\write3
+\openout3 = `"Introdução a JSF.toc"'.
+
+ [1]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 103.
+
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (87.56998pt too wide) in paragraph at lines 98--100
-\OT1/cmr/bx/n/12 [1] $\OT1/cmtt/m/n/12 https : / / www . caelum . com . br / ap
-ostila-[]java-[]testes-[]jsf-[]web-[]services-[]design-[]patterns /
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 103.
+ [2]
+Overfull \hbox (0.282pt too wide) in paragraph at lines 149--150
+\OT1/cmr/m/n/12 varios sub-pro-je-tos re-la-ci-o-na-dos a tec-no-lo-gia Ja-va
+-Ser-ver for-ne-cendo tec-no-lo-gias como: 
  []
 
-[2] ("Introdução a JSF.aux") ) 
+[3] [4] [5]
+Overfull \hbox (85.26733pt too wide) in paragraph at lines 233--234
+[]\OT1/cmr/m/n/12 O Re-sour-ce-Re-gis-try per-mite que um apli-ca-tivo re-gis-t
+re inst^ancias ja-vax.faces.application.Resource
+ []
+
+[6]
+Overfull \hbox (37.83388pt too wide) in paragraph at lines 281--286
+\OT1/cmtt/m/n/12 https : / / imasters . com . br / linguagens / java / listagem
+-[]de-[]frameworks-[]java / ?trace =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--286
+
+ []
+
+[7] [8] ("Introdução a JSF.aux") ) 
 Here is how much of TeX's memory you used:
- 5230 strings out of 493323
- 69437 string characters out of 3139066
- 159105 words of memory out of 3000000
- 8658 multiletter control sequences out of 15000+200000
- 10432 words of font info for 39 fonts, out of 3000000 for 9000
+ 5291 strings out of 493323
+ 70426 string characters out of 3139066
+ 164384 words of memory out of 3000000
+ 8712 multiletter control sequences out of 15000+200000
+ 11037 words of font info for 41 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,6n,40p,433b,294s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmbxti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb
->
-Output written on "Introdução a JSF.pdf" (3 pages, 67295 bytes).
+ 39i,6n,40p,741b,294s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on "Introdução a JSF.pdf" (9 pages, 111138 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
+ 59 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
-

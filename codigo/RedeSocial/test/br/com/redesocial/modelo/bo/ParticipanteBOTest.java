@@ -14,174 +14,428 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * Unidade de testes para o PaisBO
- * @author Ronneesley Moura Teles
- * @since 09/08/2017
+ * Unidade de testes para o ParticipanteBO
+ * @author Fernando Maciel da Silva, Warley Rodrigues de Andrade, Wesley Morais Félix
+ * @since 09/11/2017
  */
 public class ParticipanteBOTest {
     
     @Test
     public void testMetodoInserir() {
         ParticipanteBO participanteBO = new ParticipanteBO();
+        //inserção de dados
+        Grupo grupo = new Grupo();        
+        grupo.setNome("Watchmen");
+        grupo.setDataCriacao(new Date());
+        grupo.setDescricao("O mundo desgovernado não é moldado por forças metafísicas. Não é Deus que mata as crianças, não é o acaso que as trucida, nem é o destino que as dá de comer aos cães. Somos nós. Só nós. -Rorschach");
+        grupo.setPrivacidade(2);
+        grupo.setTipo("Fechado");
+            
+        Pais pais = new Pais();
+        pais.setNome("Brasil");
+
+        Estado estado = new Estado();
+        estado.setNome("Goiás");
+        estado.setPais(pais);
+
+        Cidade cidade = new Cidade();
+        cidade.setNome("Ceres");
+        cidade.setEstado(estado);
         
+        Usuario usuario = new Usuario();
+        usuario.setNome("Usuario de Teste");
+        usuario.setDataCadastro(new Date());
+        usuario.setEmail("usuario@teste.com");
+        Calendar calendario = Calendar.getInstance();
+        calendario.set(1999, 5, 16, 0, 0, 0);            
+        usuario.setDataNascimento(calendario.getTime());
+        usuario.setSenha("456");
+        usuario.setSexo(Sexo.FEMININO);
+        usuario.setStatus(true);
+        usuario.setTelefone("(62) 91234-4567");
+        usuario.setCidade(cidade);       
+        
+        GrupoBO grupoBO = new GrupoBO();
+        PaisBO paisBO = new PaisBO();
+        EstadoBO estadoBO = new EstadoBO();
+        CidadeBO cidadeBO = new CidadeBO();
+        UsuarioBO usuarioBO = new UsuarioBO();
+        
+        Participante participante = new Participante();
+        participante.setGrupo(grupo);
+        participante.setUsuario(usuario);
+        participante.setCargo(1);
+        
+        //validação de inserção
         try {
             
-            Grupo grupo = new Grupo();        
-            grupo.setNome("Watchmen");
-            grupo.setDataCriacao(new Date());
-            grupo.setDescricao("O mundo desgovernado não é moldado por forças metafísicas. Não é Deus que mata as crianças, não é o acaso que as trucida, nem é o destino que as dá de comer aos cães. Somos nós. Só nós. -Rorschach");
-            grupo.setPrivacidade(2);
-            grupo.setTipo("Fechado");
-            
-            Pais pais = new Pais();
-            pais.setNome("Brasil");
-
-            Estado estado = new Estado();
-            estado.setNome("Goiás");
-            estado.setPais(pais);
-
-            Cidade cidade = new Cidade();
-            cidade.setNome("Ceres");
-            cidade.setEstado(estado);
-
-            Usuario usuario = new Usuario();
-            usuario.setNome("Usuario de Teste");
-            usuario.setDataCadastro(new Date());
-            usuario.setEmail("usuario@teste.com");
-            Calendar calendario = Calendar.getInstance();
-            calendario.set(1999, 5, 16, 0, 0, 0);            
-            usuario.setDataNascimento(calendario.getTime());
-            usuario.setSenha("456");
-            usuario.setSexo(Sexo.FEMININO);
-            usuario.setStatus(true);
-            usuario.setTelefone("(62) 91234-4567");
-            usuario.setCidade(cidade);      
-        
-            Participante participante = new Participante(); 
-        
-        
-            
-            GrupoBO grupoBO = new GrupoBO();
             grupoBO.inserir(grupo);
             
-            PaisBO paisBO = new PaisBO();
             paisBO.inserir(pais);
             
-            EstadoBO estadoBO = new EstadoBO();
             estadoBO.inserir(estado);
             
-            CidadeBO cidadeBO = new CidadeBO();
             cidadeBO.inserir(cidade);
             
-            UsuarioBO usuarioBO = new UsuarioBO();
-            usuarioBO.inserir(usuario);                      
-            
-            participante.setGrupo(grupo);
-            participante.setUsuario(usuario);
-            participante.setCargo(1);
-            
-            //participanteBO.inserir(participante);
-            
+            usuarioBO.inserir(usuario);          
+
+            participanteBO.inserir(participante);
+
         } catch (Exception ex) {
             fail("Falha ao inserir participante: " + ex.getMessage());
         }        
     }
 
-    /*@Test
+    @Test
     public void testMetodoAlterar() {
-        PaisBO bo = new PaisBO();
-
+        ParticipanteBO participanteBO = new ParticipanteBO();
+        //inserção de dados
+        Grupo grupo = new Grupo();        
+        grupo.setNome("Watchmen");
+        grupo.setDataCriacao(new Date());
+        grupo.setDescricao("O mundo desgovernado não é moldado por forças metafísicas. Não é Deus que mata as crianças, não é o acaso que as trucida, nem é o destino que as dá de comer aos cães. Somos nós. Só nós. -Rorschach");
+        grupo.setPrivacidade(2);
+        grupo.setTipo("Fechado");
+            
         Pais pais = new Pais();
-        pais.setNome("Argentinaaaaa");
+        pais.setNome("Brasil");
 
+        Estado estado = new Estado();
+        estado.setNome("Goiás");
+        estado.setPais(pais);
+
+        Cidade cidade = new Cidade();
+        cidade.setNome("Ceres");
+        cidade.setEstado(estado);
+        
+        Usuario usuario = new Usuario();
+        usuario.setNome("Usuario de Teste");
+        usuario.setDataCadastro(new Date());
+        usuario.setEmail("usuario@teste.com");
+        Calendar calendario = Calendar.getInstance();
+        calendario.set(1999, 5, 16, 0, 0, 0);            
+        usuario.setDataNascimento(calendario.getTime());
+        usuario.setSenha("456");
+        usuario.setSexo(Sexo.FEMININO);
+        usuario.setStatus(true);
+        usuario.setTelefone("(62) 91234-4567");
+        usuario.setCidade(cidade);       
+        
+        GrupoBO grupoBO = new GrupoBO();
+        PaisBO paisBO = new PaisBO();
+        EstadoBO estadoBO = new EstadoBO();
+        CidadeBO cidadeBO = new CidadeBO();
+        UsuarioBO usuarioBO = new UsuarioBO();
+        
+        Participante participante = new Participante();
+        participante.setGrupo(grupo);
+        participante.setUsuario(usuario);
+        participante.setCargo(1);
+        
+        //validação de inserção
         try {
-            bo.inserir(pais);
+            
+            grupoBO.inserir(grupo);
+            
+            paisBO.inserir(pais);
+            
+            estadoBO.inserir(estado);
+            
+            cidadeBO.inserir(cidade);
+            
+            usuarioBO.inserir(usuario);          
+
+            participanteBO.inserir(participante);
+
         } catch (Exception ex) {
-            fail("Falha ao inserir um país: " + ex.getMessage());
+            fail("Falha ao inserir participante: " + ex.getMessage());
         }
-
+        
         //Mudança dos dados
-        pais.setNome("Argentina");
-
+        grupo.setNome("Watchmen");
+        grupo.setDataCriacao(new Date());
+        grupo.setDescricao("Quanto a mim, de nada me arrependo. Vivi a vida sem concessões... e agora avanço rumo as sombras sem me queixar. -Rorschach");
+        grupo.setPrivacidade(2);
+        grupo.setTipo("Fechado");
         try {
-            bo.alterar(pais);
+            grupoBO.alterar(grupo);
+        } catch (Exception ex) {
+            fail("Falha ao alterar grupo: " + ex.getMessage());
+        }        
+        
+        pais.setNome("Argentina");
+        try {
+            paisBO.alterar(pais);
         } catch (Exception ex) {
             fail("Falha ao inserir um país: " + ex.getMessage());
+        }        
+        
+        estado.setNome("Tocantins");
+        try {            
+            estadoBO.alterar(estado);
+        } catch (Exception ex) {            
+            fail("Falha ao alterar estado: " + ex.getMessage());
+        }       
+        
+        cidade.setNome("Rialma");
+        try {            
+            cidadeBO.alterar(cidade);
+        } catch (Exception ex) {
+            fail("Falha ao inserir a cidade: " + ex.getMessage());
+        }
+        
+        usuario.setNome("Comentario(Referências)"); 
+        
+        try {
+            usuarioBO.alterar(usuario);
+        } catch (Exception ex) {                              
+            fail("Falha ao alterar usuario: " + ex.getMessage());
+        }
+        
+        participante.setGrupo(grupo);
+        participante.setUsuario(usuario);
+        participante.setCargo(2);
+        
+        //validação de mudança
+        try{
+            participanteBO.alterar(participante);
+        }catch(Exception ex){
+            fail("Falha ao alterar participante:" + ex.getMessage());
         }
     }
 
     @Test
     public void testMetodoSelecionar() {
-        PaisBO bo = new PaisBO();
-
+        ParticipanteBO participanteBO = new ParticipanteBO();
+        //inserção de dados
+        Grupo grupo = new Grupo();        
+        grupo.setNome("Watchmen");
+        grupo.setDataCriacao(new Date());
+        grupo.setDescricao("O mundo desgovernado não é moldado por forças metafísicas. Não é Deus que mata as crianças, não é o acaso que as trucida, nem é o destino que as dá de comer aos cães. Somos nós. Só nós. -Rorschach");
+        grupo.setPrivacidade(2);
+        grupo.setTipo("Fechado");
+            
         Pais pais = new Pais();
-        pais.setNome("Canadá");
+        pais.setNome("Brasil");
 
+        Estado estado = new Estado();
+        estado.setNome("Goiás");
+        estado.setPais(pais);
+
+        Cidade cidade = new Cidade();
+        cidade.setNome("Ceres");
+        cidade.setEstado(estado);
+        
+        Usuario usuario = new Usuario();
+        usuario.setNome("Usuario de Teste");
+        usuario.setDataCadastro(new Date());
+        usuario.setEmail("usuario@teste.com");
+        Calendar calendario = Calendar.getInstance();
+        calendario.set(1999, 5, 16, 0, 0, 0);            
+        usuario.setDataNascimento(calendario.getTime());
+        usuario.setSenha("456");
+        usuario.setSexo(Sexo.FEMININO);
+        usuario.setStatus(true);
+        usuario.setTelefone("(62) 91234-4567");
+        usuario.setCidade(cidade);       
+        
+        GrupoBO grupoBO = new GrupoBO();
+        PaisBO paisBO = new PaisBO();
+        EstadoBO estadoBO = new EstadoBO();
+        CidadeBO cidadeBO = new CidadeBO();
+        UsuarioBO usuarioBO = new UsuarioBO();
+        
+        Participante participante = new Participante();
+        participante.setGrupo(grupo);
+        participante.setUsuario(usuario);
+        participante.setCargo(1);
+        
+        //validação de seleção
         try {
-            bo.inserir(pais);
+            
+            grupoBO.inserir(grupo);
+            
+            paisBO.inserir(pais);
+            
+            estadoBO.inserir(estado);
+            
+            cidadeBO.inserir(cidade);
+            
+            usuarioBO.inserir(usuario);          
 
-            int id = pais.getId();
+            participanteBO.inserir(participante);
 
-            Pais paisSelecionado = bo.selecionar(id);
+            int cargo = participante.getCargo();
 
-            assertNotNull("Pais não encontrado", paisSelecionado);
+            Participante participanteSelecionado = participanteBO.selecionar(cargo);
+
+            assertNotNull("Participante não encontrado", participanteSelecionado);
         } catch (Exception ex) {
-            fail("Falha ao inserir um país: " + ex.getMessage());
+            fail("Falha ao inserir um participante: " + ex.getMessage());
         }
-    }*/
-
-    /*@Test
+    }
+    
+    @Test
     public void testMetodoListar() {
-        ParticipanteBO bo = new ParticipanteBO();
-
+        ParticipanteBO participanteBO = new ParticipanteBO();
+        
+        //inserção de dados
         try {
-            List existentes = bo.listar();
+            List existentes = participanteBO.listar();
             int qtdeExistentes = existentes.size();
 
-            final int qtde = 10;
-            for (int i = 0; i < 10; i++){
-                Participante participante = new Participante();
-                
-                participante.setCargo(1);
+            final int qtde = 2;
+            for (int i = 0; i < 2; i++){
+                //inserção de dados
+                Grupo grupo = new Grupo();        
+                grupo.setNome("Watchmen");
+                grupo.setDataCriacao(new Date());
+                grupo.setDescricao("O mundo desgovernado não é moldado por forças metafísicas. Não é Deus que mata as crianças, não é o acaso que as trucida, nem é o destino que as dá de comer aos cães. Somos nós. Só nós. -Rorschach");
+                grupo.setPrivacidade(2);
+                grupo.setTipo("Fechado");
+            
+                Pais pais = new Pais();
+                pais.setNome("Brasil");
 
+                Estado estado = new Estado();
+                estado.setNome("Goiás");
+                estado.setPais(pais);
+
+                Cidade cidade = new Cidade();
+                cidade.setNome("Ceres");
+                cidade.setEstado(estado);
+        
+                Usuario usuario = new Usuario();
+                usuario.setNome("Usuario de Teste");
+                usuario.setDataCadastro(new Date());
+                usuario.setEmail("usuario@teste.com");
+                Calendar calendario = Calendar.getInstance();
+                calendario.set(1999, 5, 16, 0, 0, 0);            
+                usuario.setDataNascimento(calendario.getTime());
+                usuario.setSenha("456");
+                usuario.setSexo(Sexo.FEMININO);
+                usuario.setStatus(true);
+                usuario.setTelefone("(62) 91234-4567");
+                usuario.setCidade(cidade);       
+        
+                GrupoBO grupoBO = new GrupoBO();
+                PaisBO paisBO = new PaisBO();
+                EstadoBO estadoBO = new EstadoBO();
+                CidadeBO cidadeBO = new CidadeBO();
+                UsuarioBO usuarioBO = new UsuarioBO();
+        
+                Participante participante = new Participante();
+                participante.setGrupo(grupo);
+                participante.setUsuario(usuario);
+                participante.setCargo(1);
+        
                 try {
-                    bo.inserir(participante);
+            
+                    grupoBO.inserir(grupo);
+            
+                    paisBO.inserir(pais);
+            
+                    estadoBO.inserir(estado);
+            
+                    cidadeBO.inserir(cidade);
+            
+                    usuarioBO.inserir(usuario);          
+
+                    participanteBO.inserir(participante);
+
                 } catch (Exception ex) {
-                    fail("Falha ao inserir um país: " + ex.getMessage());
+                    fail("Falha ao inserir participante: " + ex.getMessage());
                 }
             }
-
-            List existentesFinal = bo.listar();
+            
+            //validação de listagem
+            List existentesFinal = participanteBO.listar();
             int qtdeExistentesFinal = existentesFinal.size();
 
             int diferenca = qtdeExistentesFinal - qtdeExistentes;
 
             assertEquals(qtde, diferenca);
+            
+        //erro ao listar    
         } catch (Exception ex){
-            fail("Erro ao listar: " + ex.getMessage());
+            fail("Erro ao listar participantes: " + ex.getMessage());
         }
     }
 
-    /*@Test
+    @Test
     public void testMetodoExcluir() {
-        PaisBO bo = new PaisBO();
-
+        ParticipanteBO participanteBO = new ParticipanteBO();
+        
+        //inserção de dados
+        Grupo grupo = new Grupo();        
+        grupo.setNome("Watchmen");
+        grupo.setDataCriacao(new Date());
+        grupo.setDescricao("O mundo desgovernado não é moldado por forças metafísicas. Não é Deus que mata as crianças, não é o acaso que as trucida, nem é o destino que as dá de comer aos cães. Somos nós. Só nós. -Rorschach");
+        grupo.setPrivacidade(2);
+        grupo.setTipo("Fechado");
+            
         Pais pais = new Pais();
-        pais.setNome("Japão");
+        pais.setNome("Brasil");
 
+        Estado estado = new Estado();
+        estado.setNome("Goiás");
+        estado.setPais(pais);
+
+        Cidade cidade = new Cidade();
+        cidade.setNome("Ceres");
+        cidade.setEstado(estado);
+        
+        Usuario usuario = new Usuario();
+        usuario.setNome("Usuario de Teste");
+        usuario.setDataCadastro(new Date());
+        usuario.setEmail("usuario@teste.com");
+        Calendar calendario = Calendar.getInstance();
+        calendario.set(1999, 5, 16, 0, 0, 0);            
+        usuario.setDataNascimento(calendario.getTime());
+        usuario.setSenha("456");
+        usuario.setSexo(Sexo.FEMININO);
+        usuario.setStatus(true);
+        usuario.setTelefone("(62) 91234-4567");
+        usuario.setCidade(cidade);       
+        
+        GrupoBO grupoBO = new GrupoBO();
+        PaisBO paisBO = new PaisBO();
+        EstadoBO estadoBO = new EstadoBO();
+        CidadeBO cidadeBO = new CidadeBO();
+        UsuarioBO usuarioBO = new UsuarioBO();
+        
+        Participante participante = new Participante();
+        participante.setGrupo(grupo);
+        participante.setUsuario(usuario);
+        participante.setCargo(1);
+        
+        //validação de exclusão
         try {
-            bo.inserir(pais);
+            
+            grupoBO.inserir(grupo);
+            
+            paisBO.inserir(pais);
+            
+            estadoBO.inserir(estado);
+            
+            cidadeBO.inserir(cidade);
+            
+            usuarioBO.inserir(usuario);          
 
-            int id = pais.getId();
-            Pais paisSelecionado = bo.selecionar(id);
-            assertNotNull("Pais não encontrado", paisSelecionado);
+            participanteBO.inserir(participante);
 
-            bo.excluir(id);
-            Pais paisSelecionadoPosExclusao = bo.selecionar(id);
+            int cargo = participante.getCargo();
 
-            assertNull("Pais encontrado, mesmo após excluí-lo", paisSelecionadoPosExclusao);
+            Participante participanteSelecionado = participanteBO.selecionar(cargo);
+
+            assertNotNull("Participante não encontrado", participanteSelecionado);
+
+            participanteBO.excluir(cargo);
+            Participante participanteSelecionadoPosExclusao = participanteBO.selecionar(cargo);
+
+            assertNull("Participante encontrado, mesmo após excluí-lo", participanteSelecionadoPosExclusao);
         } catch (Exception ex) {
-            fail("Falha ao inserir um país: " + ex.getMessage());
+            fail("Falha ao inserir um participante: " + ex.getMessage());
         }
-    }*/
+    }
 }

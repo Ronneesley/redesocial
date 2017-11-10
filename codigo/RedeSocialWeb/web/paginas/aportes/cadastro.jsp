@@ -19,7 +19,7 @@
                     <input type="reset" name="sair" class="botao" value="Sair"/>
                         <form>
                             <div id="info">
-                                <input class="campoInfo" type="text" name="" placeholder="Mais Informações"><input class="botaoInfo" type="button" name="" value="">
+                                <input class="campoInfo" type="text" name="" placeholder="Mais Informa&ccedil;&otilde;es"><input class="botaoInfo" type="button" name="" value="">
                             </div>
                         </form>
 		</div>
@@ -45,13 +45,13 @@
                             <b id="center">Categoria</b> (Campo Obrigat&oacute;rio *)
                             <br/>
                            
-                            <select id="center" value="">Selecione a Categoria
+                            <select id="center" name="categoria">Selecione a Categoria
                                 <c:forEach items="${categorias}" var="c">
-                                    <c:if test="${artigo.categoria.id == c.id}">
+                                    <c:if test="${aporte.categoria.id == c.id}">
                                         <option value="${c.id}" selected>${c.descricao}</option>
                                     </c:if>
 
-                                    <c:if test="${artigo.categoria.id != c.id}">
+                                    <c:if test="${aporte.categoria.id != c.id}">
                                         <option value="${c.id}">${c.descricao}</option>
                                     </c:if>
                                 </c:forEach>
@@ -67,7 +67,7 @@
 
                             <b id="center">Descri&ccedil;&abreve;o</b> (Opcional)
                             <br/>
-                            <textarea id="center" class="campoDescricao" type="text" name="descricao"/> </textarea>
+                            <textarea id="center" class="campoDescricao" type="text" name="descricao" value${postagem.descricao}/> </textarea>
                             <br/><br/>
                             <b id="center">Palavras Chaves</b> (Opcional)
                             <br/>
