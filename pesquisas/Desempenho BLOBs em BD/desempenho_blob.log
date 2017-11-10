@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.16)  10 NOV 2017 16:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.16)  10 NOV 2017 16:21
 entering extended mode
 **./desempenho_blob.tex
 (desempenho_blob.tex
@@ -685,7 +685,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 File: recursos/imagens/tabelas.png Graphic file (type png)
 
 <use recursos/imagens/tabelas.png>
-Package pdftex.def Info: recursos/imagens/tabelas.png used on input line 133.
+Package pdftex.def Info: recursos/imagens/tabelas.png used on input line 131.
 (pdftex.def)             Requested size: 227.62204pt x 107.74846pt.
  (recursos/codigos/banco.sql) [3 <./recursos/imagens/tabelas.png>] (recursos/co
 digos/Select_Data_Blob.txt
@@ -712,19 +712,19 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [4]) (recursos/codigos/Select_Nome_URL.txt)
 (recursos/codigos/Select_Todos_Blob.txt) (recursos/codigos/Select_Todos_URL.txt
 ) [5]
-Overfull \hbox (20.89859pt too wide) in paragraph at lines 168--169
+Overfull \hbox (20.89859pt too wide) in paragraph at lines 167--168
 \OT1/cmr/bx/n/12 [3] \OT1/cmr/m/n/12 http://www.itprotoday.com/cloud-data-cente
 r/storing-blobs-database-or-file-system 
  []
 
 
-Overfull \hbox (22.33469pt too wide) in paragraph at lines 170--171
+Overfull \hbox (22.33469pt too wide) in paragraph at lines 169--170
 \OT1/cmr/bx/n/12 [4] \OT1/cmr/m/n/12 http://www.yiiframework.com/forum/index.ph
 p/topic/33244-best-practice-to-store-
  []
 
 
-Overfull \hbox (31.1471pt too wide) in paragraph at lines 174--175
+Overfull \hbox (31.1471pt too wide) in paragraph at lines 173--174
 \OT1/cmr/bx/n/12 [6] \OT1/cmr/m/n/12 https://blog.sqlauthority.com/2007/12/13/s
 ql-server-do-not-store-images-in-database-
  []
@@ -733,7 +733,7 @@ ql-server-do-not-store-images-in-database-
 Here is how much of TeX's memory you used:
  5860 strings out of 493334
  76103 string characters out of 3139254
- 306116 words of memory out of 3000000
+ 319116 words of memory out of 3000000
  9242 multiletter control sequences out of 15000+200000
  11962 words of font info for 46 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -747,7 +747,7 @@ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmti12.pfb>
-Output written on desempenho_blob.pdf (7 pages, 162503 bytes).
+Output written on desempenho_blob.pdf (7 pages, 163162 bytes).
 PDF statistics:
  66 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -121,8 +121,6 @@ grande número de objetos pequenos, enquanto sistemas de arquivos são mais efic
 
 Além disso, os mesmos afirmam que o desempenho muda ao longo do tempo conforme o armazenamento torna-se fragmentado, sendo este tema, parte importante das contextações do estudo, concentrando-se em problemas de fragmentação de armazenamento. Verifica-se que, em síntese, os sistemas de arquivos parecem ter uma melhor fragmentação e manipulação do que BDs e isso impulsiona o ponto de equilíbrio de cerca de 1 MB para aproximadamente 256KB.
 
- 
-
 
 \section{Aplicação}
 Em busca de avaliar o desempenho do uso de BLOBs, criou-se a mesma tabela (Figura 1), uma contendo o BLOB e outra com a URL do arquivo.
@@ -141,7 +139,8 @@ Em cada uma das tabelas foram inseridos 49000 registros, igualmente. A partir de
 
 \section{Resultados}
 
-Avaliando-se o desempenho, algumas consultas foram realizadas com 1000 repetições, selecionando por data, nome e por todos os campos, a qual essa última, informa se há ou não real diferença em relação ao uso de BLOBs. Todos os tempos de cada consulta foram salvos, gerando uma média final referente a cada \textit{select}. \\\vspace{0.1cm}
+Avaliando-se o desempenho, algumas consultas foram realizadas com 1000 repetições, selecionando por data, nome e por todos os campos, a qual essa última, informa se há ou não real diferença em relação ao uso de BLOBs. Todos os tempos de cada consulta foram salvos, gerando uma média final referente a cada \textit{select}. No caso do BLOB, o \textit{sql} retrata o uso de \textit{limit 100}, visto que o BD não conseguiu com lidar com os dados, e o máximo alcançado justamente trata-se de 100 registros por vez.
+\\\vspace{0.1cm}
 
 \lstinputlisting[language=SQL]{recursos/codigos/Select_Data_Blob.txt}
 
