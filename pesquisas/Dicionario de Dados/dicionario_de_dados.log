@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.11.4)  10 NOV 2017 15:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.11.4)  10 NOV 2017 16:45
 entering extended mode
 **./dicionario_de_dados.tex
 (dicionario_de_dados.tex
@@ -657,16 +657,6 @@ Overfull \hbox (5.3706pt too wide) in paragraph at lines 69--69
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--69
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 69--69
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
 Overfull \hbox (0.79477pt too wide) in paragraph at lines 73--73
 []|\OT1/cmr/m/n/6 VARCHAR| 
  []
@@ -687,16 +677,6 @@ Overfull \hbox (5.3706pt too wide) in paragraph at lines 90--90
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--90
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 90--90
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
 Overfull \hbox (0.79477pt too wide) in paragraph at lines 94--94
 []|\OT1/cmr/m/n/6 VARCHAR| 
  []
@@ -707,47 +687,32 @@ Overfull \hbox (3.99467pt too wide) in paragraph at lines 96--96
  []
 
 
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 88--104
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 88--103
 [][] 
  []
 
 
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 115--115
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 114--114
 []|\OT1/cmr/m/n/10.95 Chaves| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--115
-[]|\OT1/cmr/m/n/10.95 Campo
+Overfull \hbox (0.95032pt too wide) in paragraph at lines 117--117
+[]|\OT1/cmr/m/n/6 BOOLEAN| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--115
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 113--125
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 112--122
 [][] 
  []
 
 
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 136--136
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 133--133
 []|\OT1/cmr/m/n/10.95 Chaves| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--136
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 136--136
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 134--146
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 131--140
 [][] 
  []
 
@@ -755,85 +720,65 @@ Overfull \hbox (41.25272pt too wide) in paragraph at lines 134--146
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 157--157
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 151--151
 []|\OT1/cmr/m/n/10.95 Chaves| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--157
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 157--157
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 155--166
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 149--158
 [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 169--169
+[]|\OT1/cmr/m/n/10.95 Chaves| 
+ []
+
+
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 167--176
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 187--187
+[]|\OT1/cmr/m/n/10.95 Chaves| 
+ []
+
+
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 185--203
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 217--217
+[]|\OT1/cmr/m/n/10.95 Chaves| 
+ []
+
+
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 215--234
+[][] 
+ []
 
 [2]
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 177--177
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 246--246
 []|\OT1/cmr/m/n/10.95 Chaves| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 175--186
-[][] 
- []
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 197--197
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 197--197
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 197--197
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 195--213
-[][] 
- []
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 227--227
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 227--227
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 227--227
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 225--245
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 244--256
 [][] 
  []
 
@@ -841,22 +786,12 @@ Overfull \hbox (41.25272pt too wide) in paragraph at lines 225--245
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 257--257
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 266--266
 []|\OT1/cmr/m/n/10.95 Chaves| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 257--257
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 257--257
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 255--267
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 264--273
 [][] 
  []
 
@@ -864,22 +799,90 @@ Overfull \hbox (41.25272pt too wide) in paragraph at lines 255--267
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 277--277
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 287--287
 []|\OT1/cmr/m/n/10.95 Chaves| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 277--277
-[]|\OT1/cmr/m/n/10.95 Campo
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 285--296
+[][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 277--277
-[]|\OT1/cmr/m/n/10.95 Campo
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 307--307
+[]|\OT1/cmr/m/n/10.95 Chaves| 
  []
 
 
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 275--286
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 305--317
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 331--331
+[]|\OT1/cmr/m/n/10.95 Chaves| 
+ []
+
+
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 329--339
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 349--349
+[]|\OT1/cmr/m/n/10.95 Chaves| 
+ []
+
+
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 347--358
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 368--368
+[]|\OT1/cmr/m/n/10.95 Chaves| 
+ []
+
+
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 366--381
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 391--391
+[]|\OT1/cmr/m/n/10.95 Chaves| 
+ []
+
+
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 389--405
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 415--415
+[]|\OT1/cmr/m/n/10.95 Chaves| 
+ []
+
+
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 413--422
 [][] 
  []
 
@@ -887,125 +890,25 @@ Overfull \hbox (41.25272pt too wide) in paragraph at lines 275--286
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [3]
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 300--300
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 432--432
 []|\OT1/cmr/m/n/10.95 Chaves| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--300
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 300--300
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 298--311
-[][] 
- []
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 322--322
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 322--322
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 322--322
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 320--334
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 430--440
 [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 348--348
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 348--348
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 348--348
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 346--357
-[][] 
- []
 
 [4]
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 367--367
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 450--450
 []|\OT1/cmr/m/n/10.95 Chaves| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 367--367
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 367--367
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 365--378
-[][] 
- []
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 388--388
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 388--388
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 388--388
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 386--402
-[][] 
- []
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 412--412
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 412--412
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 412--412
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 410--427
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 448--457
 [][] 
  []
 
@@ -1013,22 +916,12 @@ Overfull \hbox (41.25272pt too wide) in paragraph at lines 410--427
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 437--437
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 467--467
 []|\OT1/cmr/m/n/10.95 Chaves| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 437--437
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 437--437
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 435--446
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 465--475
 [][] 
  []
 
@@ -1036,22 +929,12 @@ Overfull \hbox (41.25272pt too wide) in paragraph at lines 435--446
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 456--456
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 486--486
 []|\OT1/cmr/m/n/10.95 Chaves| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 456--456
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 456--456
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 454--465
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 484--493
 [][] 
  []
 
@@ -1059,61 +942,8 @@ Overfull \hbox (41.25272pt too wide) in paragraph at lines 454--465
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [5]
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 475--475
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 475--475
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 475--475
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 473--484
-[][] 
- []
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 494--494
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 494--494
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 494--494
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 492--503
-[][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
 Overfull \hbox (5.3706pt too wide) in paragraph at lines 514--514
 []|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 514--514
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 514--514
-[]|\OT1/cmr/m/n/10.95 Campo
  []
 
 
@@ -1122,25 +952,22 @@ Overfull \hbox (41.25272pt too wide) in paragraph at lines 512--523
  []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 544--544
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 533--533
 []|\OT1/cmr/m/n/10.95 Chaves| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 544--544
-[]|\OT1/cmr/m/n/10.95 Campo
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 531--541
+[][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 544--544
-[]|\OT1/cmr/m/n/10.95 Campo
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 551--551
+[]|\OT1/cmr/m/n/10.95 Chaves| 
  []
 
 
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 542--554
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 549--559
 [][] 
  []
 
@@ -1148,122 +975,43 @@ Overfull \hbox (41.25272pt too wide) in paragraph at lines 542--554
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 564--564
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 573--573
 []|\OT1/cmr/m/n/10.95 Chaves| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 564--564
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 564--564
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 562--574
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 571--581
 [][] 
  []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 584--584
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 584--584
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 584--584
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 582--593
-[][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [6]
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 607--607
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 591--591
 []|\OT1/cmr/m/n/10.95 Chaves| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 607--607
-[]|\OT1/cmr/m/n/10.95 Campo
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 589--602
+[][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 607--607
-[]|\OT1/cmr/m/n/10.95 Campo
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 619--619
+[]|\OT1/cmr/m/n/10.95 Chaves| 
  []
 
 
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 605--617
+Overfull \hbox (41.25272pt too wide) in paragraph at lines 617--635
 [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 627--627
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 627--627
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 627--627
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 625--640
-[][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 657--657
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 657--657
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 657--657
-[]|\OT1/cmr/m/n/10.95 Campo
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 655--675
-[][] 
- []
 
 [7] [8] (dicionario_de_dados.aux) ) 
 Here is how much of TeX's memory you used:
  3938 strings out of 493335
  51869 string characters out of 3136651
- 162443 words of memory out of 3000000
+ 185443 words of memory out of 3000000
  7369 multiletter control sequences out of 15000+200000
  11337 words of font info for 42 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1275,7 +1023,7 @@ e1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 blic/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
 sfonts/cm/cmtt12.pfb>
-Output written on dicionario_de_dados.pdf (9 pages, 116702 bytes).
+Output written on dicionario_de_dados.pdf (9 pages, 115063 bytes).
 PDF statistics:
  59 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
