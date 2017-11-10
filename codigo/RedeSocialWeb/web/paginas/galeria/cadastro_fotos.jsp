@@ -1,14 +1,14 @@
 <%-- 
-    Document   : cadastro_albuns
-    Created on : 09/11/2017, 19:40:56
-    Author     : Adallberto
+    Document   : cadastro_fotos
+    Created on : 09/11/2017, 16:57:56
+    Author     : Fernando Maciel da Silva
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>        
-        <title>Cadastrar Álbum</title>
+        <title>Cadastrar Foto</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style type="text/css">           
