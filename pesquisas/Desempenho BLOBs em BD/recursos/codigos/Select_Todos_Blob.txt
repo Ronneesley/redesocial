@@ -1,0 +1,14 @@
+1000 select * from redesocial_teste.arquivo limit 100;
+
+1 - Tempo Gasto: 1.40533 seg
+2 - Tempo Gasto: 1.25419 seg
+3 - Tempo Gasto: 1.26168 seg
+/*[...]1000 Testes*/ 
+998 - Tempo Gasto: 1.44957 seg
+999 - Tempo Gasto: 1.43912 seg
+1000 - Tempo Gasto: 1.42797 seg
+
+
+/*Resultados:*/ 
+Tempo Total: 1353.09537 seg
+Media de Tempo: 1.35309537 seg

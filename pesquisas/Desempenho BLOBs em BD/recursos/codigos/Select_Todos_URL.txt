@@ -1,0 +1,14 @@
+1000 select * from redesocial_teste.url;
+
+1 - Tempo Gasto: 0.2262 seg
+2 - Tempo Gasto: 0.18478 seg
+3 - Tempo Gasto: 0.1828 seg
+/*[...]1000 Testes*/ 
+997 - Tempo Gasto: 0.20113 seg
+998 - Tempo Gasto: 0.18631 seg
+999 - Tempo Gasto: 0.20277 seg
+1000 - Tempo Gasto: 0.17124 seg
+
+/*Resultados:*/ 
+Tempo Total: 178.3877 seg
+Media de Tempo: 0.1783877 seg
