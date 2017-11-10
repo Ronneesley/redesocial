@@ -115,7 +115,11 @@ Em alguns fóruns, como \textit{yiiframework}, alguns participantes sugerem BLOB
 Já no \textit{Stack Exchange}, há concordância que depende do caso específico. Para um dos usuários, BLOBs traz gerenciabilidade, ajudando em situações que envolvam restauração do BD e \textit{backups} [5]. 
 
 Segundo ainda o Blog \textit{SQL Authority}, a autor faz a sugestão em prol do armazenamento da localização das imagens (por exemplo), no banco de dados usando o tipo de dados VARCHAR em vez de qualquer BLOB ou outro tipo de dados binário. Sua explicação está ligada ao fato de que armazenar a localização ao invés do BLOB reduz muito o tamanho do BD, bem como atualizar ou substituir a imagem são métodos mais simples, visto que refere-se apenas a uma operação de arquivo em vez de uma atualização efetiva de \textit{inserts} e \textit{delets} no BD [6].
- 
+
+Ademais, há um artigo intitulado \textit{``To BLOB or Not To BLOB: Large Object Storage in a Database or a Filesystem?''} [7], que descreve que ao realizar a decisão por se armazenar em um sistema de arquivos ou em uma base de dados, é feita através de atributos como simplicidade de aplicação ou capacidade de gerenciamento, sabendo que o desempenho do sistema acaba afetando esses fatores. Os autores recordam que é de conhecimento que BDs lidam eficientemente com
+grande número de objetos pequenos, enquanto sistemas de arquivos são mais eficiente para objetos grandes. O estudo traz a informação que BLOBs menores do que 256KB são mais eficientemente gerenciados por um BD, enquanto um sistema de arquivos é mais eficiente para aqueles maiores do que 1 MB, com variações decorrentes de diferentes BDs e sistemas de arquivos.
+
+Além disso, os mesmos afirmam que o desempenho muda ao longo do tempo conforme o armazenamento torna-se fragmentado, sendo este tema, parte importante das contextações do estudo, concentrando-se em problemas de fragmentação de armazenamento. Verifica-se que, em síntese, os sistemas de arquivos parecem ter uma melhor fragmentação e manipulação do que BDs e isso impulsiona o ponto de equilíbrio de cerca de 1 MB para aproximadamente 256KB.
 
 
 \section{Aplicação}
@@ -135,7 +139,8 @@ Em cada uma das tabelas foram inseridos 49000 registros, igualmente. A partir de
 
 \section{Resultados}
 
-Avaliando-se o desempenho, algumas consultas foram realizadas com 1000 repetições, selecionando por data, nome e por todos os campos, a qual essa última, informa se há ou não real diferença em relação ao uso de BLOBs. Todos os tempos de cada consulta foram salvos, gerando uma média final referente a cada \textit{select}. \\\vspace{0.1cm}
+Avaliando-se o desempenho, algumas consultas foram realizadas com 1000 repetições, selecionando por data, nome e por todos os campos, a qual essa última, informa se há ou não real diferença em relação ao uso de BLOBs. Todos os tempos de cada consulta foram salvos, gerando uma média final referente a cada \textit{select}. No caso do BLOB, o \textit{sql} retrata o uso de \textit{limit 100}, visto que o BD não conseguiu com lidar com os dados, e o máximo alcançado justamente trata-se de 100 registros por vez.
+\\\vspace{0.1cm}
 
 \lstinputlisting[language=SQL]{recursos/codigos/Select_Data_Blob.txt}
 
@@ -155,21 +160,19 @@ Levando em conta o objetivo deste, ao realizar a comparação de desempenho nas 
 
 
 \section{Referências Bibliográficas}
-\noindent \textbf{[1]} \url {https://pt.stackoverflow.com/questions/100802/como-funciona-o-campo-blob}\\\vspace{0.2cm}
+\noindent \textbf{[1]} {https://pt.stackoverflow.com/questions/100802/como-funciona-o-campo-blob}\\\vspace{0.2cm}
 
-\noindent \textbf{[2] }\url{https://pt.wikipedia.org/wiki/BLOB}\\\vspace{0.2cm}
+\noindent \textbf{[2]} {https://pt.wikipedia.org/wiki/BLOB}\\\vspace{0.2cm}
 
-\noindent \textbf{[3] }\url{http://www.itprotoday.com/cloud-data-center/storing-blobs-database-or-fi
-le-system}\\\vspace{0.2cm}
+\noindent \textbf{[3]} {http://www.itprotoday.com/cloud-data-center/storing-blobs-database-or-file-system}\\\vspace{0.2cm}
 
-\noindent \textbf{[4] }\url{http://www.yiiframework.com/forum/index.php/topic/33244-best-practice-to
--store-images-in-database-blob-or-url-based/}\\\vspace{0.2cm}
+\noindent \textbf{[4]} {http://www.yiiframework.com/forum/index.php/topic/33244-best-practice-to-store-images-in-database-blob-or-url-based/}\\\vspace{0.2cm}
 
-\noindent \textbf{[5] }\url{https://dba.stackexchange.com/questions/736/is-it-better-to-store-images
--in-a-blob-or-just-the-url}\\\vspace{0.2cm}
+\noindent \textbf{[5]} {https://dba.stackexchange.com/questions/736/is-it-better-to-store-images-in-a-blob-or-just-the-url}\\\vspace{0.2cm}
 
-\noindent \textbf{[6] }\url{https://blog.sqlauthority.com/2007/12/13/sql-server-do-not-store-images-
-in-database-store-location-of-images-url/}\\\vspace{0.2cm}
+\noindent \textbf{[6]} {https://blog.sqlauthority.com/2007/12/13/sql-server-do-not-store-images-in-database-store-location-of-images-url/}\\\vspace{0.2cm}
+
+\noindent \textbf{[7]} SEARS, Russell; VAN INGEN, Catharine; GRAY, Jim. \textbf{To blob or not to blob: Large object storage in a database or a filesystem?.} arXiv preprint cs/0701168, 2007.
 
 \end{document}
 
