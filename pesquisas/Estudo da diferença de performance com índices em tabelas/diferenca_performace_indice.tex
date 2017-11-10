@@ -120,11 +120,17 @@ Antes do uso de índice é preciso pensar na possibilidade de usá-lo ou não, q
 
 \section{Código}
 
+\begin{itemize}
 %%Exemplo de codigo completo
-\lstinputlisting[language=SQL]{recursos/codigo/01.sql}
-
-%%Exemplo de uma parte do codigo 
-\lstinputlisting[language=SQL, firstline=2, lastline=3]{recursos/codigo/01.sql}
+	\item Criando o usuário de teste:
+		\lstinputlisting[language=SQL]{recursos/codigo/criacao_usuario.sql}
+	\item Criando o banco de dados 1 com a tabela usuários:	
+		\lstinputlisting[language=SQL]{recursos/codigo/criacao_bd1.sql}
+	\item Criando os índices para os campos “id” e “nome” do banco de dados 1:	
+		\lstinputlisting[language=SQL]{recursos/codigo/criacao_index.sql}
+	\item Criando o banco de dados 2:	
+		\lstinputlisting[language=SQL]{recursos/codigo/criacao_bd2.sql}
+\end{itemize}
 
 \section{Vantagens e Desvantagens do uso de índices no banco de dados}
 

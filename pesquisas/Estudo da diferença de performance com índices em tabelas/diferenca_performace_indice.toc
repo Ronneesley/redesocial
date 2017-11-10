@@ -1,0 +1,9 @@
+\select@language {brazil}
+\contentsline {section}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{2}
+\contentsline {section}{\numberline {2}Entendendo o conceito de \IeC {\'I}ndices}{2}
+\contentsline {section}{\numberline {3}C\IeC {\'o}digo}{3}
+\contentsline {section}{\numberline {4}Vantagens e Desvantagens do uso de \IeC {\'\i }ndices no banco de dados}{3}
+\contentsline {subsection}{\numberline {4.1}Vantagens}{3}
+\contentsline {subsection}{\numberline {4.2}Desvantagens}{4}
+\contentsline {section}{\numberline {5}Conclus\IeC {\~a}o}{4}
+\contentsline {section}{\numberline {6}Refer\IeC {\^e}ncias Bibliogr\IeC {\'a}ficas}{5}
