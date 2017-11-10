@@ -1,4 +1,0 @@
-\select@language {brazil}
-\contentsline {section}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{2}
-\contentsline {section}{\numberline {2}Aplica\IeC {\c c}\IeC {\~a}o}{2}
-\contentsline {section}{\numberline {3}Refer\IeC {\^e}ncias Bibliogr\IeC {\'a}ficas}{2}
