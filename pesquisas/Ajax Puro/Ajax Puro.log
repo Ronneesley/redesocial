@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.7.28)  10 NOV 2017 17:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.7.28)  10 NOV 2017 17:54
 entering extended mode
 **"./Ajax Puro.tex"
 ("Ajax Puro.tex"
@@ -653,12 +653,12 @@ Package pdftex.def Info: recursos/imagens/logo.png used on input line 76.
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./recursos/imagens/logo.p
 ng>] ("Ajax Puro.toc"
-LaTeX Font Info:    Try loading font information for U+msa on input line 6.
+LaTeX Font Info:    Try loading font information for U+msa on input line 7.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 6.
+LaTeX Font Info:    Try loading font information for U+msb on input line 7.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -699,26 +699,28 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
 (recursos/codigo/requisicao_banco_dados.html [3] [4])
 (recursos/codigo/requisicao_dados.html [5]) (recursos/codigo/dados.PHP)
+(recursos/codigo/funcao.html) (recursos/codigo/funcao2.html)
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 126.
-
-Overfull \hbox (2.20558pt too wide) in paragraph at lines 144--145
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 134.
+ [6]
+(recursos/codigo/funcao3.html) [7]
+Overfull \hbox (2.20558pt too wide) in paragraph at lines 196--197
 []\OT1/cmr/m/n/12 Com o de-sen-vol-vi-mento da pes-quisa e im-ple-mentac~ao do
 s codigos Ajax foi possvel
  []
 
-[6]
-Overfull \hbox (4.70987pt too wide) in paragraph at lines 150--151
+
+Overfull \hbox (4.70987pt too wide) in paragraph at lines 202--203
 \OT1/cmr/bx/n/12 [1] \OT1/cmr/m/n/12 https://imasters.com.br/artigo/10224/ajax/
 vantagens-e-desvantagens-do-uso-de-
  []
 
-[7] ("Ajax Puro.aux") ) 
+[8] ("Ajax Puro.aux") ) 
 Here is how much of TeX's memory you used:
- 7862 strings out of 493329
- 110625 string characters out of 3139063
- 686555 words of memory out of 3000000
- 11244 multiletter control sequences out of 15000+200000
+ 7883 strings out of 493329
+ 110994 string characters out of 3139063
+ 686584 words of memory out of 3000000
+ 11256 multiletter control sequences out of 15000+200000
  12567 words of font info for 48 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,6n,52p,575b,3493s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -729,9 +731,9 @@ ti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.
 9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "Ajax Puro.pdf" (8 pages, 146080 bytes).
+Output written on "Ajax Puro.pdf" (9 pages, 152030 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
+ 63 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

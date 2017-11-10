@@ -2,8 +2,9 @@
 \contentsline {section}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{2}
 \contentsline {section}{\numberline {2}Como o AJAX trabalha?}{2}
 \contentsline {section}{\numberline {3}Aplica\IeC {\c c}\IeC {\~a}o}{2}
-\contentsline {section}{\numberline {4}Vantagens e Desvantagens}{6}
-\contentsline {subsection}{\numberline {4.1}Vantagens}{6}
-\contentsline {subsection}{\numberline {4.2}Desvantagens}{6}
-\contentsline {section}{\numberline {5}Conclus\IeC {\~a}o}{6}
-\contentsline {section}{\numberline {6}Refer\IeC {\^e}ncias Bibliogr\IeC {\'a}ficas}{7}
+\contentsline {section}{\numberline {4}Manipulando a resposta do servidor}{6}
+\contentsline {section}{\numberline {5}Vantagens e Desvantagens}{7}
+\contentsline {subsection}{\numberline {5.1}Vantagens}{7}
+\contentsline {subsection}{\numberline {5.2}Desvantagens}{8}
+\contentsline {section}{\numberline {6}Conclus\IeC {\~a}o}{8}
+\contentsline {section}{\numberline {7}Refer\IeC {\^e}ncias Bibliogr\IeC {\'a}ficas}{8}
