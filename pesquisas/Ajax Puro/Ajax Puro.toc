@@ -1,9 +1,9 @@
 \select@language {brazil}
 \contentsline {section}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{2}
-\contentsline {subsection}{\numberline {1.1}Como o AJAX trabalha?}{2}
-\contentsline {section}{\numberline {2}Aplica\IeC {\c c}\IeC {\~a}o}{2}
-\contentsline {section}{\numberline {3}Vantagens e Desvantagens}{6}
-\contentsline {subsection}{\numberline {3.1}Vantagens}{6}
-\contentsline {subsection}{\numberline {3.2}Desvantagens}{6}
-\contentsline {section}{\numberline {4}Conclus\IeC {\~a}o}{6}
-\contentsline {section}{\numberline {5}Refer\IeC {\^e}ncias Bibliogr\IeC {\'a}ficas}{7}
+\contentsline {section}{\numberline {2}Como o AJAX trabalha?}{2}
+\contentsline {section}{\numberline {3}Aplica\IeC {\c c}\IeC {\~a}o}{2}
+\contentsline {section}{\numberline {4}Vantagens e Desvantagens}{6}
+\contentsline {subsection}{\numberline {4.1}Vantagens}{6}
+\contentsline {subsection}{\numberline {4.2}Desvantagens}{6}
+\contentsline {section}{\numberline {5}Conclus\IeC {\~a}o}{6}
+\contentsline {section}{\numberline {6}Refer\IeC {\^e}ncias Bibliogr\IeC {\'a}ficas}{7}
