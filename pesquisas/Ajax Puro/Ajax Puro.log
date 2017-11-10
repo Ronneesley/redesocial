@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2017.11.4)  10 NOV 2017 17:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.7.28)  10 NOV 2017 17:25
 entering extended mode
-**./dicionario_de_dados.tex
-(dicionario_de_dados.tex
-LaTeX2e <2016/03/31> patch level 1
-Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
+**"./Ajax Puro.tex"
+("Ajax Puro.tex"
+LaTeX2e <2017/01/01> patch level 1
+Babel <3.9r> and hyphenation patterns for 76 language(s) loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size12.clo"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo"
 File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -21,19 +21,19 @@ File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
 File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
@@ -270,7 +270,7 @@ File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
 File: ot1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
@@ -311,7 +311,7 @@ File: ot1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
 File: omsenc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -335,41 +335,41 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
-Package: amsmath 2016/03/10 v2.15b AMS math features
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2016/11/05 v2.16a AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01 AMS text
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks16
 \ex@=\dimen103
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen104
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count87
-LaTeX Info: Redefining \frac on input line 199.
+LaTeX Info: Redefining \frac on input line 213.
 \uproot@=\count88
 \leftroot@=\count89
-LaTeX Info: Redefining \overline on input line 297.
+LaTeX Info: Redefining \overline on input line 375.
 \classnum@=\count90
 \DOTSCASE@=\count91
-LaTeX Info: Redefining \ldots on input line 394.
-LaTeX Info: Redefining \dots on input line 397.
-LaTeX Info: Redefining \cdots on input line 518.
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
 \big@size=\dimen105
-LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \macc@depth=\count92
 \c@MaxMatrixCols=\count93
 \dotsspace@=\muskip10
@@ -390,49 +390,48 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 \multlinegap=\skip44
 \multlinetaggap=\skip45
 \mathdisplay@stack=\toks20
-LaTeX Info: Redefining \[ on input line 2739.
-LaTeX Info: Redefining \] on input line 2740.
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
 Package: babel 2016/04/23 3.9r The Babel package
 
 *************************************
 * Local config file bblopts.cfg used
 *
-
-("C:\Users\GUSTTAVO NUNES\AppData\Roaming\MiKTeX\2.9\tex\latex\arabi\bblopts.cf
-g"
+("C:\Program Files\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg"
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
-("C:\Users\GUSTTAVO NUNES\AppData\Roaming\MiKTeX\2.9\tex\latex\babel-portuges\p
-ortuges.ldf"
+("C:\Program Files\MiKTeX 2.9\tex\latex\babel-portuges\portuges.ldf"
 Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2016/04/23 3.9r Babel common definitions
 \babel@savecnt=\count99
 \U@D=\dimen112
 )
 \l@brazil = a dialect from \language\l@portuges 
 Package babel Info: Making " an active character on input line 145.
-)) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\indentfirst.sty"
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\indentfirst.sty"
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
-("C:\Users\GUSTTAVO NUNES\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count100
 \float@exts=\toks21
@@ -440,122 +439,137 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks22
 \@floatcapt=\box29
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
-Package: color 2016/06/02 v1.1d Standard LaTeX Color (DPC)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
-File: pdftex.def 2016/06/17 v0.06h Graphics/color for pdfTeX
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count101
 ))
-("C:\Users\GUSTTAVO NUNES\AppData\Roaming\MiKTeX\2.9\tex\latex\colortbl\colortb
-l.sty"
-Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty"
-Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen113
-\extrarowheight=\dimen114
-\NC@list=\toks23
-\extratabsurround=\skip46
-\backup@length=\skip47
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks23
 )
-\everycr=\toks24
-\minrowclearance=\skip48
+\lst@mode=\count102
+\lst@gtempboxa=\box30
+\lst@token=\toks24
+\lst@length=\count103
+\lst@currlwidth=\dimen113
+\lst@column=\count104
+\lst@pos=\count105
+\lst@lostspace=\dimen114
+\lst@width=\dimen115
+\lst@newlines=\count106
+\lst@lineno=\count107
+\lst@maxwidth=\dimen116
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count108
+\lst@skipnumbers=\count109
+\lst@framebox=\box31
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks25
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2016/06/02 v1.0s Standard LaTeX Graphics (DPC,SPQR)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2016/10/09 v1.0u Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 )
-\Gin@req@height=\dimen115
-\Gin@req@width=\dimen116
+\Gin@req@height=\dimen117
+\Gin@req@width=\dimen118
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count102
-\Gm@cntv=\count103
-\c@Gm@tempcnt=\count104
-\Gm@bindingoffset=\dimen117
-\Gm@wd@mp=\dimen118
-\Gm@odd@mp=\dimen119
-\Gm@even@mp=\dimen120
-\Gm@layoutwidth=\dimen121
-\Gm@layoutheight=\dimen122
-\Gm@layouthoffset=\dimen123
-\Gm@layoutvoffset=\dimen124
-\Gm@dimlist=\toks26
+\Gm@cnth=\count110
+\Gm@cntv=\count111
+\c@Gm@tempcnt=\count112
+\Gm@bindingoffset=\dimen119
+\Gm@wd@mp=\dimen120
+\Gm@odd@mp=\dimen121
+\Gm@even@mp=\dimen122
+\Gm@layoutwidth=\dimen123
+\Gm@layoutheight=\dimen124
+\Gm@layouthoffset=\dimen125
+\Gm@layoutvoffset=\dimen126
+\Gm@dimlist=\toks25
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-(dicionario_de_dados.aux)
-\openout1 = `dicionario_de_dados.aux'.
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg")) ("Ajax Puro.au
+x")
+\openout1 = `"Ajax Puro.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-
-("C:\Users\GUSTTAVO NUNES\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.
-mkii"
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+ ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count105
-\scratchdimen=\dimen125
-\scratchbox=\box30
-\nofMPsegments=\count106
-\nofMParguments=\count107
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count108
-\MPscratchDim=\dimen126
-\MPnumerator=\count109
-\makeMPintoPDFobject=\count110
-\everyMPtoPDFconversion=\toks28
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+\scratchcounter=\count113
+\scratchdimen=\dimen127
+\scratchbox=\box32
+\nofMPsegments=\count114
+\nofMParguments=\count115
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count116
+\MPscratchDim=\dimen128
+\MPnumerator=\count117
+\makeMPintoPDFobject=\count118
+\everyMPtoPDFconversion=\toks27
+) ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -564,22 +578,22 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
@@ -593,6 +607,8 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
+\c@lstlisting=\count119
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -631,408 +647,91 @@ G,.JBIG2,.JB2,.eps]
 File: recursos/imagens/logo.png Graphic file (type png)
 
 <use recursos/imagens/logo.png>
-Package pdftex.def Info: recursos/imagens/logo.png used on input line 36.
+Package pdftex.def Info: recursos/imagens/logo.png used on input line 76.
 (pdftex.def)             Requested size: 170.71652pt x 39.01822pt.
  [1
 
-{C:/Users/GUSTTAVO NUNES/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./
-recursos/imagens/logo.png>]
-(dicionario_de_dados.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 4.
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./recursos/imagens/logo.p
+ng>] ("Ajax Puro.toc"
+LaTeX Font Info:    Try loading font information for U+msa on input line 3.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 4.
+LaTeX Font Info:    Try loading font information for U+msb on input line 3.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 \tf@toc=\write3
-\openout3 = `dicionario_de_dados.toc'.
+\openout3 = `"Ajax Puro.toc"'.
 
  [1]
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 69--69
-[]|\OT1/cmr/m/n/10.95 Chaves| 
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(recursos/codigo/banco.sql)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang2.sty"
+File: lstlang2.sty 2015/06/04 1.6 listings language file
+)
+(recursos/codigo/CRUD.php
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 1.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omlcmr.fd"
+File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 2.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2.
+ [2])
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+)
+(recursos/codigo/requisicao_banco_dados.html [3]) [4]
+(recursos/codigo/requisicao_dados.html [5]) (recursos/codigo/dados.PHP)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 126.
+
+Overfull \hbox (2.20558pt too wide) in paragraph at lines 144--145
+[]\OT1/cmr/m/n/12 Com o de-sen-vol-vi-mento da pes-quisa e im-ple-mentac~ao do
+s codigos Ajax foi possvel
  []
 
 
-Overfull \hbox (0.79477pt too wide) in paragraph at lines 73--73
-[]|\OT1/cmr/m/n/6 VARCHAR| 
+Overfull \hbox (4.70987pt too wide) in paragraph at lines 150--151
+\OT1/cmr/bx/n/12 [1] \OT1/cmr/m/n/12 https://imasters.com.br/artigo/10224/ajax/
+vantagens-e-desvantagens-do-uso-de-
  []
 
-
-Overfull \hbox (0.95032pt too wide) in paragraph at lines 74--74
-[]|\OT1/cmr/m/n/6 BOOLEAN| 
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 67--79
-[][] 
- []
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 90--90
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Overfull \hbox (0.79477pt too wide) in paragraph at lines 94--94
-[]|\OT1/cmr/m/n/6 VARCHAR| 
- []
-
-
-Overfull \hbox (3.99467pt too wide) in paragraph at lines 96--96
-[]|\OT1/cmr/m/n/6 DATETIME| 
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 88--103
-[][] 
- []
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 114--114
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Overfull \hbox (0.95032pt too wide) in paragraph at lines 117--117
-[]|\OT1/cmr/m/n/6 BOOLEAN| 
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 112--122
-[][] 
- []
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 133--133
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 131--140
-[][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 151--151
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 149--158
-[][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 169--169
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 167--176
-[][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 187--187
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 185--203
-[][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 217--217
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 215--234
-[][] 
- []
-
-[2]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 246--246
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 244--256
-[][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 266--266
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 264--273
-[][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 287--287
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 285--296
-[][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 307--307
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 305--317
-[][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 331--331
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 329--339
-[][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 349--349
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 347--358
-[][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 368--368
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 366--381
-[][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 391--391
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 389--405
-[][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 415--415
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 413--422
-[][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[3]
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 432--432
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 430--440
-[][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[4]
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 450--450
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 448--457
-[][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 467--467
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 465--475
-[][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 486--486
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 484--493
-[][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[5]
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 514--514
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 512--523
-[][] 
- []
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 533--533
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 531--541
-[][] 
- []
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 551--551
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 549--559
-[][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 573--573
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 571--581
-[][] 
- []
-
-[6]
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 591--591
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 589--602
-[][] 
- []
-
-
-Overfull \hbox (5.3706pt too wide) in paragraph at lines 619--619
-[]|\OT1/cmr/m/n/10.95 Chaves| 
- []
-
-
-Overfull \hbox (41.25272pt too wide) in paragraph at lines 617--635
-[][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[7]
-Overfull \hbox (3.92104pt too wide) in paragraph at lines 640--641
-\OT1/cmr/m/n/12 ponvel em: $\OT1/cmtt/m/n/12 https : / / pt . slideshare . ne
-t / janynnegomes / aula-[]5-[]41778197$\OT1/cmr/m/it/12 Acesso
- []
-
-[8] (dicionario_de_dados.aux) ) 
+[6] [7] ("Ajax Puro.aux") ) 
 Here is how much of TeX's memory you used:
- 3938 strings out of 493335
- 51869 string characters out of 3136651
- 185443 words of memory out of 3000000
- 7369 multiletter control sequences out of 15000+200000
- 11337 words of font info for 42 fonts, out of 3000000 for 9000
+ 7862 strings out of 493329
+ 110625 string characters out of 3139063
+ 676562 words of memory out of 3000000
+ 11244 multiletter control sequences out of 15000+200000
+ 12567 words of font info for 48 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,12n,25p,261b,319s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmbxti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmti12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmtt12.pfb>
-Output written on dicionario_de_dados.pdf (9 pages, 127312 bytes).
+ 39i,6n,52p,575b,3493s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmbxti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on "Ajax Puro.pdf" (8 pages, 146326 bytes).
 PDF statistics:
- 63 PDF objects out of 1000 (max. 8388607)
+ 60 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

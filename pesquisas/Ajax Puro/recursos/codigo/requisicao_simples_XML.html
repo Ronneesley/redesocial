@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>AJAX | HTTPRequest</title>
+	</head>
+	<body>
+		<span id="ajaxButton" style="cursor: pointer; text-decoration: underline">
+			Fazer Pedido
+		</span>
+				<script type="text/javascript">
+			(function() {
+				var httpRequest;
+				document.getElementById("ajaxButton").onclick = function() { makeRequest('texto.xml'); };
+
+				function makeRequest(url) {
+					if (window.XMLHttpRequest) { // Mozilla, Safari, ...
+						httpRequest = new XMLHttpRequest();
+					} else if (window.ActiveXObject) { // IE
+						try {
+							httpRequest = new ActiveXObject("Msxml2.XMLHTTP");
+						} catch (e) {
+							try {
+								httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+							} catch (e) {}
+						}
+					}
+
+					if (!httpRequest) {
+						alert('Desistindo :( Não é possível criar uma instância XMLHTTP');
+						return false;
+					}
+					
+					httpRequest.onreadystatechange = alertContents;
+					httpRequest.open('POST', url);
+					httpRequest.send();
+				}
+
+				function alertContents() {
+					if (httpRequest.readyState === 4) {
+						if (httpRequest.status === 200) {
+							var xmldoc = httpRequest.responseXML;
+							var root_node = xmldoc.getElementsByTagName('root').item(0);
+							alert(root_node.firstChild.data);
+						} else {
+							alert('Houve um problema com o pedido.');
+						}
+					}
+				}
+			})();
+		</script>
+	</body>
+</html>
