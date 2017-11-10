@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.16)  10 NOV 2017 15:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.16)  10 NOV 2017 16:13
 entering extended mode
 **./desempenho_blob.tex
 (desempenho_blob.tex
@@ -680,15 +680,15 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 101.
-
-<recursos/imagens/tabelas.png, id=14, 339.2675pt x 160.6pt>
+ [2]
+<recursos/imagens/tabelas.png, id=19, 339.2675pt x 160.6pt>
 File: recursos/imagens/tabelas.png Graphic file (type png)
 
 <use recursos/imagens/tabelas.png>
-Package pdftex.def Info: recursos/imagens/tabelas.png used on input line 127.
+Package pdftex.def Info: recursos/imagens/tabelas.png used on input line 133.
 (pdftex.def)             Requested size: 227.62204pt x 107.74846pt.
- [2] (recursos/codigos/banco.sql)
-(recursos/codigos/Select_Data_Blob.txt
+ (recursos/codigos/banco.sql) [3 <./recursos/imagens/tabelas.png>] (recursos/co
+digos/Select_Data_Blob.txt
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1.
 LaTeX Font Info:    Try loading font information for OML+cmr on input line 1.
@@ -707,64 +707,49 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 1.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [3 <./recursos/imagens/tabelas.png>]) (recursos/codigos/Select_Data_URL.txt)
-(recursos/codigos/Select_Nome_Blob.txt) (recursos/codigos/Select_Nome_URL.txt)
-(recursos/codigos/Select_Todos_Blob.txt [4])
-(recursos/codigos/Select_Todos_URL.txt)
-Overfull \hbox (36.66995pt too wide) in paragraph at lines 158--159
-\OT1/cmr/bx/n/12 [1] $\OT1/cmtt/m/n/12 https : / / pt . stackoverflow . com / q
-uestions / 100802 / como-[]funciona-[]o-[]campo-[]blob$ 
+))
+(recursos/codigos/Select_Data_URL.txt) (recursos/codigos/Select_Nome_Blob.txt
+[4]) (recursos/codigos/Select_Nome_URL.txt)
+(recursos/codigos/Select_Todos_Blob.txt) (recursos/codigos/Select_Todos_URL.txt
+) [5]
+Overfull \hbox (20.89859pt too wide) in paragraph at lines 168--169
+\OT1/cmr/bx/n/12 [3] \OT1/cmr/m/n/12 http://www.itprotoday.com/cloud-data-cente
+r/storing-blobs-database-or-file-system 
  []
 
 
-Overfull \hbox (94.1339pt too wide) in paragraph at lines 162--164
-\OT1/cmr/bx/n/12 [3] $\OT1/cmtt/m/n/12 http : / / www . itprotoday . com / clou
-d-[]data-[]center / storing-[]blobs-[]database-[]or-[]file-[]system$ 
+Overfull \hbox (22.33469pt too wide) in paragraph at lines 170--171
+\OT1/cmr/bx/n/12 [4] \OT1/cmr/m/n/12 http://www.yiiframework.com/forum/index.ph
+p/topic/33244-best-practice-to-store-
  []
 
 
-Overfull \hbox (312.259pt too wide) in paragraph at lines 165--167
-\OT1/cmr/bx/n/12 [4] $\OT1/cmtt/m/n/12 http : / / www . yiiframework . com / fo
-rum / index . php / topic / 33244-[]best-[]practice-[]to-[]store-[]images-[]in-
-[]database-[]blob-[]or-[]url-[]based/$ 
+Overfull \hbox (31.1471pt too wide) in paragraph at lines 174--175
+\OT1/cmr/bx/n/12 [6] \OT1/cmr/m/n/12 https://blog.sqlauthority.com/2007/12/13/s
+ql-server-do-not-store-images-in-database-
  []
 
-
-Overfull \hbox (201.60895pt too wide) in paragraph at lines 168--170
-\OT1/cmr/bx/n/12 [5] $\OT1/cmtt/m/n/12 https : / / dba . stackexchange . com / 
-questions / 736 / is-[]it-[]better-[]to-[]store-[]images-[]in-[]a-[]blob-[]or-[
-]just-[]the-[]url$ 
- []
-
-
-Overfull \hbox (294.234pt too wide) in paragraph at lines 171--173
-\OT1/cmr/bx/n/12 [6] $\OT1/cmtt/m/n/12 https : / / blog . sqlauthority . com / 
-2007 / 12 / 13 / sql-[]server-[]do-[]not-[]store-[]images-[]in-[]database-[]sto
-re-[]location-[]of-[]images-[]url/$ 
- []
-
-[5] [6] (desempenho_blob.aux) ) 
+[6] (desempenho_blob.aux) ) 
 Here is how much of TeX's memory you used:
- 5862 strings out of 493334
- 76124 string characters out of 3139254
- 323116 words of memory out of 3000000
- 9243 multiletter control sequences out of 15000+200000
- 12131 words of font info for 47 fonts, out of 3000000 for 9000
+ 5860 strings out of 493334
+ 76103 string characters out of 3139254
+ 306116 words of memory out of 3000000
+ 9242 multiletter control sequences out of 15000+200000
+ 11962 words of font info for 46 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,6n,40p,611b,1666s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmbxti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-mi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmtt12.pfb>
-Output written on desempenho_blob.pdf (7 pages, 166814 bytes).
+ 40i,6n,40p,611b,1664s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmbxti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmti12.pfb>
+Output written on desempenho_blob.pdf (7 pages, 162503 bytes).
 PDF statistics:
- 70 PDF objects out of 1000 (max. 8388607)
+ 66 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
