@@ -106,6 +106,7 @@ O MySQL também faz uso de BLOBs e são divididos em quatro tipos [1]:
 	\item LONGBLOB: o mesmo que o Tinyblob, porém armazenando até 4294967295 caracteres (32 bits) mais 4 de controle.
 \end{itemize}
 
+\section{Aplicação}
 Em busca de avaliar o desempenho do uso de BLOBs, criou-se a mesma tabela em dois bancos separados (Figura 1), uma contendo o BLOB e outra com a URL do arquivo.
 
 \begin{figure}[htb]
@@ -115,6 +116,8 @@ Em busca de avaliar o desempenho do uso de BLOBs, criou-se a mesma tabela em doi
 	
 	Figura 1. Tabela com inserção por BLOB e tabela com URL.
 \end{figure}
+
+Em cada uma das tabelas foram inseridos X registros, igualmente. 
 
 
 %\lstinputlisting[language=SQL]{recursos/codigos/01.sql}
@@ -127,7 +130,7 @@ Em busca de avaliar o desempenho do uso de BLOBs, criou-se a mesma tabela em doi
 %\lstinputlisting[language=SQL, firstline=3, lastline=5]{recursos/codigos/01.sql}
 
 
-\section{Referências Bibliográfica}
+\section{Referências Bibliográficas}
 \noindent \textbf{[1]} \url {https://pt.stackoverflow.com/questions/100802/como-funciona-o-campo-blob}\\\vspace{0.2cm}
 
 \noindent \textbf{[2] }\url{https://pt.wikipedia.org/wiki/BLOB}\\\vspace{0.2cm}
