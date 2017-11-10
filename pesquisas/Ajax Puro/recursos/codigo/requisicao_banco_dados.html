@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>AJAX | Dados</title>
+	</head>
+	<body>
+		<form>
+			<label>Digite seu nome: </label>
+			<input type="text" id="nome" />
+			<label>Digite seu sexo: </label>	
+			<input type="text" id="sexo" />
+			<input id="Inserir" type="button" style="cursor: pointer; text-decoration: underline" value="Inserir" />
+			<label id="status"><label>
+		</form>
+		<script type="text/javascript">
+			(function() {
+				var httpRequest;
+				document.getElementById("Inserir").onclick = function() { 
+					var nome = document.getElementById("nome").value;
+					var sexo = document.getElementById("sexo").value;
+					makeRequest('CRUD.php?opcao=inserir', [nome, sexo]); 
+				};
+				
+				function makeRequest(url, data) {
+					if (window.XMLHttpRequest) { // Mozilla, Safari, ...
+						httpRequest = new XMLHttpRequest();
+					} else if (window.ActiveXObject) { // IE
+						try {
+							httpRequest = new ActiveXObject("Msxml2.XMLHTTP");
+						} catch (e) {
+							try {
+								httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+							} catch (e) {}
+						}
+					}
+
+					if (!httpRequest) {
+						alert('Desistindo :( Nao e possivel criar uma instancia XMLHTTP');
+						return false;
+					}
+					
+					httpRequest.onreadystatechange = alertContents;
+					httpRequest.open('POST', url);
+					httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+					
+
+					httpRequest.send('nome=' + encodeURIComponent(data[0]) +'&sexo=' + encodeURIComponent(data[1]));
+				}
+
+				function alertContents() {
+					if (httpRequest.readyState === 4) {
+						if (httpRequest.status === 200) {
+							document.getElementById("status").innerHTML = "Registro Inserido com sucesso!";
+						} else {
+								alert('Houve um problema com o pedido.');
+						}
+					} else {
+						document.getElementById("status").innerHTML = "Carregando...";					}
+				}
+			})();
+		</script>
+	</body>
+</html>
