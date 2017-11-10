@@ -225,7 +225,7 @@
                     </select>
             </div>
 
-        <div class="albuns">
+        <div class="conteudogaleria">
             
             
             <form action="MultimidiaControle?operacao=Cadastrar" method="post" enctype="multipart/form-data">
