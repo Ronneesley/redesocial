@@ -104,22 +104,38 @@ O MySQL também faz uso de BLOBs e são divididos em quatro tipos [1]:
 	\item LONGBLOB: o mesmo que o Tinyblob, porém armazenando até 4294967295 caracteres (32 bits) mais 4 de controle.
 \end{itemize}
 
+De acordo com o site \textit{ITPro}, trabalhar com armazenamento de dados usando BLOB faz com que todas as informações se mantenham em uma entidade de maneira conjunta, o que acarreta em facilidades de busca e de recuperação de dados. Mas infelizmente, isso acaba gerando um banco de dados com tamanho elevado [3]. 
+
+Quando trata-se de armazenar separadamente, com uso de URLs (Localizador Uniforme de Recursos), os bancos são menores comparativamente, além de trazer rapidez, pois o processo de leitura de dados sobrecarrega muito menos do que ler no próprio BD. Mas é necessário sempre realizar mantenimento manual do \textit{link}, ao qual, liga o BD e o arquivo externo [3].
+
+O autor ainda afirma que é possível guardar arquivos binários fora do BD e incluí-los como URL para o objeto, unindo as técnicas apresentadas.
+
+Em alguns fóruns, como \textit{yiiframework}, alguns participantes sugerem BLOBs devido ao quesito segurança. Porém, no quesito desempenho, os mesmos concordam que URL é a melhor forma de trabalho. Outro correspondente afirma, inclusive, que essa escolha deve depender de como aplicação é estruturada, mas ele prefere fazer uso de caminhos do arquivo [4].
+
+Já no \textit{Stack Exchange}, há concordância que depende do caso específico. Para um dos usuários, BLOBs traz gerenciabilidade, ajudando em situações que envolvam restauração do BD e \textit{backups} [5]. 
+
+Segundo ainda o Blog \textit{SQL Authority}, a autor faz a sugestão em prol do armazenamento da localização das imagens (por exemplo), no banco de dados usando o tipo de dados VARCHAR em vez de qualquer BLOB ou outro tipo de dados binário. Sua explicação está ligada ao fato de que armazenar a localização ao invés do BLOB reduz muito o tamanho do BD, bem como atualizar ou substituir a imagem são métodos mais simples, visto que refere-se apenas a uma operação de arquivo em vez de uma atualização efetiva de \textit{inserts} e \textit{delets} no BD [6].
+ 
+
+
 \section{Aplicação}
-Em busca de avaliar o desempenho do uso de BLOBs, criou-se a mesma tabela em dois bancos separados (Figura 1), uma contendo o BLOB e outra com a URL do arquivo.
+Em busca de avaliar o desempenho do uso de BLOBs, criou-se a mesma tabela (Figura 1), uma contendo o BLOB e outra com a URL do arquivo.
 
 \begin{figure}[htb]
 	\label{figura:tabelas}
 	\centering
 	\includegraphics[width=8cm]{recursos/imagens/tabelas.png} 
 	
-	Figura 1. Tabela com inserção por BLOB e tabela com URL.
+	Figura 1. Tabela com uso de BLOB e tabela com URL.
 \end{figure}
 
-Em cada uma das tabelas foram inseridos X registros, igualmente. 
+Em cada uma das tabelas foram inseridos 49000 registros, igualmente. A partir destes, avaliou-se a diferença de tempo de 1000 consultas. Abaixo, tem-se o arquivo \textit{.sql} referente a criação das tabelas no SGBD (Sistema Gerenciador de Banco de Dados) \textit{MySQL Workbench}. \\\vspace{0.1cm}
 
 \lstinputlisting[language=SQL]{recursos/codigos/banco.sql}
 
 \section{Resultados}
+
+Avaliando-se o desempenho, algumas consultas foram realizadas com 1000 repetições, selecionando por data, nome e por todos os campos, a qual essa última, informa se há ou não real diferença em relação ao uso de BLOBs. Todos os tempos de cada consulta foram salvos, gerando uma média final referente a cada \textit{select}. \\\vspace{0.1cm}
 
 \lstinputlisting[language=SQL]{recursos/codigos/Select_Data_Blob.txt}
 
@@ -133,7 +149,8 @@ Em cada uma das tabelas foram inseridos X registros, igualmente.
 
 \lstinputlisting[language=SQL]{recursos/codigos/Select_Todos_URL.txt}
 
-\section{Conclusão}
+\section{Considerações finais}
+Levando em conta o objetivo deste, ao realizar a comparação de desempenho nas consultas, fica claro que ao fazer uso de URLs, há maior rapidez nas consultas do que usando BLOBs (0.1783877 seg $<$ 1.35309537 seg).
 
 
 
@@ -141,6 +158,19 @@ Em cada uma das tabelas foram inseridos X registros, igualmente.
 \noindent \textbf{[1]} \url {https://pt.stackoverflow.com/questions/100802/como-funciona-o-campo-blob}\\\vspace{0.2cm}
 
 \noindent \textbf{[2] }\url{https://pt.wikipedia.org/wiki/BLOB}\\\vspace{0.2cm}
+
+\noindent \textbf{[3] }\url{http://www.itprotoday.com/cloud-data-center/storing-blobs-database-or-fi
+le-system}\\\vspace{0.2cm}
+
+\noindent \textbf{[4] }\url{http://www.yiiframework.com/forum/index.php/topic/33244-best-practice-to
+-store-images-in-database-blob-or-url-based/}\\\vspace{0.2cm}
+
+\noindent \textbf{[5] }\url{https://dba.stackexchange.com/questions/736/is-it-better-to-store-images
+-in-a-blob-or-just-the-url}\\\vspace{0.2cm}
+
+\noindent \textbf{[6] }\url{https://blog.sqlauthority.com/2007/12/13/sql-server-do-not-store-images-
+in-database-store-location-of-images-url/}\\\vspace{0.2cm}
+
 \end{document}
 
 %\lstinputlisting[language=SQL]{recursos/codigo/01.sql}
