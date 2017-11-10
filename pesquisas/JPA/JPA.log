@@ -1,0 +1,411 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.5.2)  10 NOV 2017 19:14
+entering extended mode
+**./JPA.tex
+(JPA.tex
+LaTeX2e <2015/10/01> patch level 2
+Babel <3.9n> and hyphenation patterns for 69 languages loaded.
+
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\artic
+le.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size1
+2.clo"
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\input
+enc.sty"
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\latin
+1.def"
+File: latin1.def 2015/03/17 v1.2c Input encoding file
+))
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\am
+smath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\am
+stext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\am
+sgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen103
+))
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\am
+sbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen104
+)
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\am
+sopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count87
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count88
+\leftroot@=\count89
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count90
+\DOTSCASE@=\count91
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count92
+\c@MaxMatrixCols=\count93
+\dotsspace@=\muskip10
+\c@parentequation=\count94
+\dspbrk@lvl=\count95
+\tag@help=\toks17
+\row@=\count96
+\column@=\count97
+\maxfields@=\count98
+\andhelp@=\toks18
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks19
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\a
+msfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\a
+mssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\ba
+bel.sty"
+Package: babel 2016/01/08 3.9n The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\b
+blopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-port
+uges\portuges.ldf"
+Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
+
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\ba
+bel.def"
+File: babel.def 2016/01/08 3.9n Babel common definitions
+\babel@savecnt=\count99
+\U@D=\dimen112
+)
+\l@brazil = a dialect from \language\l@portuges 
+Package babel Info: Making " an active character on input line 145.
+))
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\inde
+ntfirst.sty"
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\l
+istings.sty"
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\k
+eyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+\lst@mode=\count100
+\lst@gtempboxa=\box28
+\lst@token=\toks22
+\lst@length=\count101
+\lst@currlwidth=\dimen113
+\lst@column=\count102
+\lst@pos=\count103
+\lst@lostspace=\dimen114
+\lst@width=\dimen115
+\lst@newlines=\count104
+\lst@lineno=\count105
+\lst@maxwidth=\dimen116
+
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\l
+stmisc.sty"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count106
+\lst@skipnumbers=\count107
+\lst@framebox=\box29
+)
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\l
+istings.cfg"
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\latex\url\url.st
+y"
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\g
+raphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\g
+raphics.sty"
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\t
+rig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\g
+raphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdftex-def
+\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek
+\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek
+\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count108
+))
+\Gin@req@height=\dimen117
+\Gin@req@width=\dimen118
+)
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\g
+eometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek
+\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek
+\ifvtex.sty"
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ifxetex\
+ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count109
+\Gm@cntv=\count110
+\c@Gm@tempcnt=\count111
+\Gm@bindingoffset=\dimen119
+\Gm@wd@mp=\dimen120
+\Gm@odd@mp=\dimen121
+\Gm@even@mp=\dimen122
+\Gm@layoutwidth=\dimen123
+\Gm@layoutheight=\dimen124
+\Gm@layouthoffset=\dimen125
+\Gm@layoutvoffset=\dimen126
+\Gm@dimlist=\toks23
+
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\g
+eometry.cfg"))
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\c
+olor.sty"
+Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
+
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\c
+olor.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 142.
+)
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\l
+stlang1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+) (JPA.aux)
+\openout1 = `JPA.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+\c@lstlisting=\count112
+
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\sup
+p-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count113
+\scratchdimen=\dimen127
+\scratchbox=\box30
+\nofMPsegments=\count114
+\nofMParguments=\count115
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count116
+\MPscratchDim=\dimen128
+\MPnumerator=\count117
+\makeMPintoPDFobject=\count118
+\everyMPtoPDFconversion=\toks25
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
+* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=731.23584pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-52.36449pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+<logo.png, id=1, 1333.98375pt x 304.88907pt>
+File: logo.png Graphic file (type png)
+ <use logo.png>
+Package pdftex.def Info: logo.png used on input line 59.
+(pdftex.def)             Requested size: 170.71652pt x 39.01822pt.
+ [1
+
+{C:/Users/IgorRodrigues/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./l
+ogo.png>]
+(JPA.toc)
+\tf@toc=\write3
+\openout3 = `JPA.toc'.
+
+ [1] <imagem/img.jpg, id=15, 401.5pt x 329.23pt>
+File: imagem/img.jpg Graphic file (type jpg)
+ <use imagem/img.jpg>
+Package pdftex.def Info: imagem/img.jpg used on input line 104.
+(pdftex.def)             Requested size: 341.43306pt x 279.9925pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 124--132
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 135.
+
+
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscm
+r.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 135.
+ [3 <./imagem/img.jpg>]
+LaTeX Font Info:    Try loading font information for U+msa on input line 161.
+
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\u
+msa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 161.
+
+("C:\Users\IgorRodrigues\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\u
+msb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Overfull \hbox (10.10828pt too wide) in paragraph at lines 161--162
+\OT1/cmr/m/n/12 ponvel em: $\OML/cmm/m/it/12 <$\OT1/cmr/m/n/12 https://www.de
+vmedia.com.br/introducao-a-jpa-java-persistence-
+ []
+
+
+Overfull \hbox (4.16806pt too wide) in paragraph at lines 163--164
+\OT1/cmr/m/n/12 em: $\OML/cmm/m/it/12 <$\OT1/cmr/m/n/12 https://www.caelum.com.
+br/apostila-java-web/uma-introducao-pratica-
+ []
+
+[4] (JPA.aux) ) 
+Here is how much of TeX's memory you used:
+ 4541 strings out of 493634
+ 62841 string characters out of 3131976
+ 170677 words of memory out of 3000000
+ 7856 multiletter control sequences out of 15000+200000
+ 10610 words of font info for 39 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 27i,6n,36p,471b,292s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/IgorRodrigues/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/IgorRodrigues/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/IgorRodrig
+ues/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+><C:/Users/IgorRodrigues/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr12.pfb><C:/Users/IgorRodrigues/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/IgorRodrigues/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on JPA.pdf (5 pages, 107609 bytes).
+PDF statistics:
+ 46 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+
