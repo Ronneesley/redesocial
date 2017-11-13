@@ -13,7 +13,7 @@
 \contentsline {subsection}{\numberline {3.3}OpenFaces}{5}
 \contentsline {subsection}{\numberline {3.4}IceFaces}{5}
 \contentsline {subsubsection}{\numberline {3.4.1}Automatic Ajax}{5}
-\contentsline {subsubsection}{\numberline {3.4.2}Ajax Push}{6}
+\contentsline {subsubsection}{\numberline {3.4.2}Ajax Push}{5}
 \contentsline {subsubsection}{\numberline {3.4.3}Resource Management}{6}
 \contentsline {subsubsection}{\numberline {3.4.4}Scoped Resource Registry}{6}
 \contentsline {subsubsection}{\numberline {3.4.5}Streamlined Configuration}{6}
@@ -23,4 +23,5 @@
 \contentsline {section}{\numberline {4}Extens\IeC {\~o}es JSF}{7}
 \contentsline {subsection}{\numberline {4.1}PrettyFaces}{7}
 \contentsline {subsection}{\numberline {4.2}OmniFaces}{7}
-\contentsline {section}{\numberline {5}Refer\IeC {\^e}ncias Bibliogr\IeC {\'a}fica}{8}
+\contentsline {section}{\numberline {5}Exemplos}{8}
+\contentsline {section}{\numberline {6}Refer\IeC {\^e}ncias Bibliogr\IeC {\'a}fica}{10}
