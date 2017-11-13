@@ -5,14 +5,14 @@
             <title>Cadastro Aporte</title>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" type="text/css" href="style.css"/>
+            <link rel="stylesheet" type="text/css"href="/RedeSocialWeb/paginas/aportes/style.css"/>
 	</head>
 
 
 	<body id="cantos">
 		<div id="cabecalho">
-                    <img src="logo_rede.png" class="logo"/>
-                    <img src="foto.png" class="fotoUsuario"/>
+                    <img src="/RedeSocialWeb/paginas/aportes/logo_rede.png" class="logo"/>
+                    <img src="/RedeSocialWeb/paginas/aportes/foto.png" class="fotoUsuario"/>
 
                     <input id="direitaCabecalho" type="reset" name="voltar" class="botaoVoltar" value="Voltar" />
                     &ensp;&ensp;
@@ -45,7 +45,7 @@
                             <b id="center">Categoria</b> (Campo Obrigat&oacute;rio *)
                             <br/>
                            
-                            <select id="center" name="categoria">Selecione a Categoria
+                            <select id="center" name="categorias">Selecione a Categoria
                                 <c:forEach items="${categorias}" var="c">
                                     <c:if test="${aporte.categoria.id == c.id}">
                                         <option value="${c.id}" selected>${c.descricao}</option>

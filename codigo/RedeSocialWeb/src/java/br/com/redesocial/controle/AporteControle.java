@@ -105,7 +105,7 @@ public class AporteControle extends ControleBase {
             
             CategoriaBO categoriaBO = new CategoriaBO();
             List categorias = categoriaBO.listar();            
-            request.setAttribute("categorias", categorias);
+            request.setAttribute("categoria", categorias);
         } catch (Exception ex){
             request.setAttribute("erro", ex.getMessage());
         }
