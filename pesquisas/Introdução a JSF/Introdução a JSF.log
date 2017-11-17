@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.11.10)  10 NOV 2017 20:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.11.17)  17 NOV 2017 20:47
 entering extended mode
 **"./Introdução a JSF.tex"
 ("Introdução a JSF.tex"
@@ -461,7 +461,7 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-(C:\Users\Aluno\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks23
@@ -479,21 +479,21 @@ Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \lst@lineno=\count107
 \lst@maxwidth=\dimen116
 
-(C:\Users\Aluno\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 \c@lstnumber=\count108
 \lst@skipnumbers=\count109
 \lst@framebox=\box31
 )
-(C:\Users\Aluno\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
-(C:\Users\Aluno\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-(C:\Users\Aluno\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
@@ -664,8 +664,8 @@ Package pdftex.def Info: recursos/imagens/logo.png used on input line 77.
 (pdftex.def)             Requested size: 170.71652pt x 39.01822pt.
  [1
 
-{C:/Users/Aluno/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./recursos/
-imagens/logo.png>] ("Introdução a JSF.toc"
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./recursos/imagens/logo.p
+ng>] ("Introdução a JSF.toc"
 LaTeX Font Info:    Try loading font information for U+msa on input line 3.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
@@ -778,7 +778,7 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  5278 strings out of 493333
- 70740 string characters out of 3139193
+ 70588 string characters out of 3139193
  162264 words of memory out of 3000000
  8685 multiletter control sequences out of 15000+200000
  11037 words of font info for 41 fonts, out of 3000000 for 9000
@@ -790,7 +790,7 @@ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "Introdução a JSF.pdf" (11 pages, 371528 bytes).
+Output written on "Introdução a JSF.pdf" (11 pages, 371520 bytes).
 PDF statistics:
  70 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
