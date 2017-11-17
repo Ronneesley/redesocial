@@ -1,6 +1,6 @@
 package br.com.redesocial.modelo.dao;
 
-import br.com.redesocial.modelo.dto.Atividades;
+import br.com.redesocial.modelo.dto.Atividade;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -11,10 +11,10 @@ import java.util.List;
  *
  * @author Jonathan Silvestre
  */
-public class AtividadesDAO extends DAOCRUDBase<Atividades> {
+public class AtividadeDAO extends DAOCRUDBase<Atividade> {
     
     @Override
-    public void alterar(Atividades dto) throws Exception {
+    public void alterar(Atividade dto) throws Exception {
         Connection conexao = getConexao();
 
         PreparedStatement pstmt;
@@ -31,7 +31,7 @@ public class AtividadesDAO extends DAOCRUDBase<Atividades> {
     }
 
     @Override
-    public Atividades selecionar(int id) throws Exception {
+    public Atividade selecionar(int id) throws Exception {
         Connection conexao = getConexao();
         
         PreparedStatement pstmt;
@@ -42,7 +42,7 @@ public class AtividadesDAO extends DAOCRUDBase<Atividades> {
         ResultSet rs = pstmt.executeQuery();
         
         if(rs.next()){
-            Atividades dto = new Atividades();
+            Atividade dto = new Atividade();
             
            dto.setDescricao(rs.getString("descricao"));
            dto.setTipo(rs.getInt("Tipo"));
@@ -72,13 +72,13 @@ public class AtividadesDAO extends DAOCRUDBase<Atividades> {
        lista = new ArrayList();
 
        while (rs.next()){
-           Atividades p = new Atividades();
+           Atividade p = new Atividade();
            p.setDescricao(rs.getString("descricao"));
-           p.setTipo(rs.getInt("Tipo"));
-           p.setVagas(rs.getInt("Vagas"));
-           p.setEvento(rs.getInt("Evento"));
-           p.setInicio(rs.getDate("Inicio"));
-           p.setFim(rs.getDate("Fim"));
+           p.setTipo(rs.getInt("tipo"));
+           p.setVagas(rs.getInt("vagas"));
+           p.setEvento(rs.getInt("evento"));
+           p.setInicio(rs.getDate("inicio"));
+           p.setFim(rs.getDate("fim"));
            p.setId(rs.getInt("id"));
 
            lista.add(p);
@@ -97,7 +97,7 @@ public class AtividadesDAO extends DAOCRUDBase<Atividades> {
     }
 
     @Override
-    public void inserir(Atividades dto) throws Exception {
+    public void inserir(Atividade dto) throws Exception {
         Connection conexao = getConexao();
 
         if(dto.getDescricao().equals("")){
