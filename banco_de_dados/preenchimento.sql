@@ -167,18 +167,18 @@ VALUES
 INSERT INTO relacionamentos 
 (usuario_1, usuario_2, tipo)
 VALUES
-('1', '2', 'Casado'),
-('4', '5', 'Relacionamento Aberto'),
-('3', '1', 'Divorciado'),
-('4', '2', 'Divorciado'),
-('5', '3', 'Relacionamento Sério');
+('1', '2', 1),
+('4', '5', 2),
+('3', '1', 3),
+('4', '2', 3),
+('5', '3', 4);
 
 /*Inserindo dados na tabela grupos*/
-INSERT INTO `redesocial`.`grupos` (`id`, `nome`, `data_criacao`, `descricao`, `privacidade`, `tipo`) VALUES ('1', 'Profissão Programador', '2017-09-03', 'Discutimos assuntos sobre desenvolvimento de software, mercado de trabalho, etc.', '0', 'Programação');
-INSERT INTO `redesocial`.`grupos` (`id`, `nome`, `data_criacao`, `descricao`, `privacidade`, `tipo`) VALUES ('2', 'BD Master', '2017-10-30', 'Discutimos assuntos sobre SGBDs, mercado de trabalho, etc.', '0', 'Banco de Dados');
-INSERT INTO `redesocial`.`grupos` (`id`, `nome`, `data_criacao`, `descricao`, `privacidade`, `tipo`) VALUES ('3', 'Artigos TI', '2016-06-15', 'Discutimos assuntos sobre Artigo na area de TI.', '1', 'Artigos Cientificos');
-INSERT INTO `redesocial`.`grupos` (`id`, `nome`, `data_criacao`, `descricao`, `privacidade`, `tipo`) VALUES ('4', 'Business Intelligence', '2017-01-21', 'Discutimos assuntos sobre processo de coleta, organização, análise, compartilhamento e monitoramento de informações que oferecem suporte a gestão de negócios.', '1', 'Inteligência de Negócios');
-INSERT INTO `redesocial`.`grupos` (`id`, `nome`, `data_criacao`, `descricao`, `privacidade`, `tipo`) VALUES ('5', 'Engenharia de software', '2017-04-18', 'Discutimos assuntos sobre especificação, desenvolvimento, manutenção e criação de software, visando organização, produtividade e qualidade.', '0', 'Engenharia');
+INSERT INTO `redesocial`.`grupos` (`id`, `nome`, `data_criacao`, `descricao`, `privacidade`, `tipo`) VALUES ('1', 'Profissão Programador', '2017-09-03', 'Discutimos assuntos sobre desenvolvimento de software, mercado de trabalho, etc.', '0', 1);
+INSERT INTO `redesocial`.`grupos` (`id`, `nome`, `data_criacao`, `descricao`, `privacidade`, `tipo`) VALUES ('2', 'BD Master', '2017-10-30', 'Discutimos assuntos sobre SGBDs, mercado de trabalho, etc.', '0', 2);
+INSERT INTO `redesocial`.`grupos` (`id`, `nome`, `data_criacao`, `descricao`, `privacidade`, `tipo`) VALUES ('3', 'Artigos TI', '2016-06-15', 'Discutimos assuntos sobre Artigo na area de TI.', '1', 3);
+INSERT INTO `redesocial`.`grupos` (`id`, `nome`, `data_criacao`, `descricao`, `privacidade`, `tipo`) VALUES ('4', 'Business Intelligence', '2017-01-21', 'Discutimos assuntos sobre processo de coleta, organização, análise, compartilhamento e monitoramento de informações que oferecem suporte a gestão de negócios.', '1', 4);
+INSERT INTO `redesocial`.`grupos` (`id`, `nome`, `data_criacao`, `descricao`, `privacidade`, `tipo`) VALUES ('5', 'Engenharia de software', '2017-04-18', 'Discutimos assuntos sobre especificação, desenvolvimento, manutenção e criação de software, visando organização, produtividade e qualidade.', '0', 5);
 
 /*Inserindo dados na tabela participantes*/
 INSERT INTO `redesocial`.`participantes` (`grupo`, `usuario`, `cargo`) VALUES ('1', '2', '1');
@@ -199,23 +199,23 @@ VALUES
 
 /*Inserindo dados na tabela de eventos*/ 
 INSERT INTO eventos
-(id, nome, descricao, certificado, inicio, fim, responsavel, inicio_inscricao, encerramento_inscricao)
+(id, nome, descricao, certificado, inicio, fim, responsavel, inicio_inscricao, encerramento_inscricao, endereco)
 VALUES
-(1,'Latinoware', 'Evento Congresso Latino-Americano de Software Livre e Tecnologias Abertas', true ,'2017/10/18 08:00', '2017/10/20 17:00', '1', '2017/01/01 15:00', '2017/09/20 15:00'),
-(2, 'Fgsl', 'Fórum Goiano de Software Livre', true, '2017/09/18 19:00', '2017/11/20 18:00', '2', '2017/01/01 15:00', '2017/09/20 15:00'),
-(3, 'Flisol', 'Festival Latino-americano de Instalação de Software Livre', false, '2017/09/12 08:00', '2017/11/05 11:00', '3', '2017/01/02 12:00', '2017/05/20 13:00'),
-(4, 'CSBC', 'Congresso Nacional da Sociedade Brasileira de Computação', true, '2017/09/11 07:00', '2017/12/20 12:00', '4', '2017/07/26 15:00', '2017/08/20 16:00'),
-(5, 'SIMTEC', 'Simpósio de Tecnologia da Informação', false, '2017/09/11 07:00', '2017/01/20 18:00', '5', '2017/01/02 12:00', '2017/08/24 12:00');
+(1,'Latinoware', 'Evento Congresso Latino-Americano de Software Livre e Tecnologias Abertas', true ,'2017/10/18 08:00', '2017/10/20 17:00', '1', '2017/01/01 15:00', '2017/09/20 15:00', 'a'),
+(2, 'Fgsl', 'Fórum Goiano de Software Livre', true, '2017/09/18 19:00', '2017/11/20 18:00', '2', '2017/01/01 15:00', '2017/09/20 15:00', 'a'),
+(3, 'Flisol', 'Festival Latino-americano de Instalação de Software Livre', false, '2017/09/12 08:00', '2017/11/05 11:00', '3', '2017/01/02 12:00', '2017/05/20 13:00', 'a'),
+(4, 'CSBC', 'Congresso Nacional da Sociedade Brasileira de Computação', true, '2017/09/11 07:00', '2017/12/20 12:00', '4', '2017/07/26 15:00', '2017/08/20 16:00', 'a'),
+(5, 'SIMTEC', 'Simpósio de Tecnologia da Informação', false, '2017/09/11 07:00', '2017/01/20 18:00', '5', '2017/01/02 12:00', '2017/08/24 12:00', 'a');
 
 /*Inserindo dados na tabela de atividades*/
 INSERT INTO atividades
-(id, descricao, inicio, fim, vagas, tipo, evento)
+(id, descricao, inicio, fim, vagas, tipo, evento, local)
 VALUES
-(1, 'Marketing é Vida','2010-01-01 10:00:00','2010-01-01 12:00:00','100','1','2'),
-(2, 'O Valor da Existência','2011-02-02 09:00:00','2011-02-02 11:00:00','50','3','4'),
-(3, 'Como Investir?','2015-04-14 14:00:00','2015-04-14 16:00:00','65','5','3'),
-(4, 'Aprender a Programar é Bom?','2008-10-15 22:00:00','2008-10-15 23:00:00','70','4','3'),
-(5, 'O Quanto Vale A Verdade?','2016-05-16 17:00:00','2016-05-16 19:00:00','150','3','1');
+(1, 'Marketing é Vida','2010-01-01 10:00:00','2010-01-01 12:00:00','100','1','2', 'a'),
+(2, 'O Valor da Existência','2011-02-02 09:00:00','2011-02-02 11:00:00','50','3','4', 'a'),
+(3, 'Como Investir?','2015-04-14 14:00:00','2015-04-14 16:00:00','65','5','3', 'a'),
+(4, 'Aprender a Programar é Bom?','2008-10-15 22:00:00','2008-10-15 23:00:00','70','4','3', 'a'),
+(5, 'O Quanto Vale A Verdade?','2016-05-16 17:00:00','2016-05-16 19:00:00','150','3','1', 'a');
 
 /*Inserindo dados na responsaveis_atividades*/ 
 INSERT INTO responsaveis_atividades
