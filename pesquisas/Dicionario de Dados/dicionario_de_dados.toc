@@ -1,0 +1,13 @@
+\select@language {brazil}
+\contentsline {section}{\numberline {1}Dicion\IeC {\'a}rio de Dados (DD)}{2}
+\contentsline {subsection}{\numberline {1.1}Dados elementares}{2}
+\contentsline {subsection}{\numberline {1.2}Nota\IeC {\c c}\IeC {\~a}o utilizada no DD}{2}
+\contentsline {subsection}{\numberline {1.3}Exemplos de Dicion\IeC {\'a}rios de Dados}{3}
+\contentsline {section}{\numberline {2}Dicion\IeC {\'a}rio de Dados - Rede Social}{5}
+\contentsline {subsection}{\numberline {2.1}Eventos}{5}
+\contentsline {subsection}{\numberline {2.2}Artefatos do usu\IeC {\'a}rios}{6}
+\contentsline {subsection}{\numberline {2.3}Postagens}{7}
+\contentsline {subsection}{\numberline {2.4}Localidades}{9}
+\contentsline {subsection}{\numberline {2.5}Grupos}{9}
+\contentsline {subsection}{\numberline {2.6}Objetos}{10}
+\contentsline {section}{\numberline {3}Refer\IeC {\^e}ncias Bibliogr\IeC {\'a}fica}{11}

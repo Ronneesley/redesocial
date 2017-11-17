@@ -203,7 +203,7 @@ Analisando a tabela acima teremos:
 
 \item \textbf{Chave}: campo utilizado para o armazenamento do tipo de chave.
 
-\item \textbf{Tipo}: Descreve o tipo do campo podendo ser ele numérico, textual, data ou boleano.
+\item \textbf{Tipo}: descreve o tipo do campo podendo ser ele numérico, textual, data ou boleano.
 
 \item \textbf{Nulo}: utilizado para descrever se o campo pode ou não ser nulo.
 
@@ -221,7 +221,7 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{tipos\_atividades}}
 	\label{tabela:tiposAtividades}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{6cm}|}\hline	
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{tipos\_atividades}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
@@ -266,14 +266,14 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{presenca\_atividades}}
 	\label{tabela:presencaAtividades}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{6cm}|}\hline	
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{presenca\_atividades}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny presenca} & {\tiny } & {\tiny BOOLEAN} & {\tiny } & {\tiny Not Null} &{\tiny }\\\hline
-		{\tiny atividade}  & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny }\\\hline
-		{\tiny usuario}  & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny }\\\hline
+		{\tiny presenca} & {\tiny } & {\tiny BOOLEAN} & {\tiny } & {\tiny Not Null} &{\tiny Se o usuário esteve ou não presente no evento.}\\\hline
+		{\tiny atividade}  & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Evento vinculado ao usuário.}\\\hline
+		{\tiny usuario}  & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Usuário vinculado à atividade.}\\\hline
 			
 	\end{tabular}
 \end{table}	
@@ -285,13 +285,13 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{responsaveis\_atividades}}
 	\label{tabela:responsaveisAtividades}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{6cm}|}\hline	
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{responsaveis\_atividades}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny atividade}  & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny }\\\hline
-		{\tiny usuario} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny }\\\hline
+		{\tiny atividade}  & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Atividade vinculada ao usuario responsável.}\\\hline
+		{\tiny usuario} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Usuário vinculado a atividade.}\\\hline
 			
 	\end{tabular}
 \end{table}	
@@ -308,8 +308,8 @@ Analisando a tabela acima teremos:
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny evento} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Evento vinculado ao usuário.}\\\hline
+		{\tiny usuario} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Usuário vinculado ao evento.}\\\hline
 			
 	\end{tabular}
 \end{table}	
@@ -321,13 +321,14 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{presenca\_evento}}
 	\label{tabela:presencaEvento}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{6cm}|}\hline	
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{presenca\_evento}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny }  & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny }  & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny presencao}  & {\tiny } & {\tiny BOOLEAN } & {\tiny } & {\tiny Not Null} &{\tiny Se o usuário esteve ou não presente no evento.}\\\hline
+		{\tiny evento}  & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null } &{\tiny Evento vinculado ao usuário.}\\\hline
+		{\tiny usuario}  & {\tiny FK} & {\tiny } & {\tiny } & {\tiny Not Null} &{\tiny Usuário vinculado ao evento.}\\\hline
 			
 	\end{tabular}
 \end{table}	
@@ -344,15 +345,15 @@ Analisando a tabela acima teremos:
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny id} & {\tiny PK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id do evento.}\\\hline
+		{\tiny nome} & {\tiny } & {\tiny VARCHAR} & {\tiny 100} & {\tiny Not Null} &{\tiny Nome do tipo do evento.}\\\hline
+		{\tiny descricao} & {\tiny } & {\tiny TEXT} & {\tiny } & {\tiny Not Null} &{\tiny Descreve mais detalhadamente o evento.}\\\hline
+		{\tiny certificado} & {\tiny } & {\tiny BOOLEAN} & {\tiny } & {\tiny Not Null} &{\tiny Diz se o evento fornece certificado.}\\\hline
+		{\tiny inicio} & {\tiny } & {\tiny DATETIME} & {\tiny } & {\tiny Not Null} &{\tiny Data e hora que o evento começa.}\\\hline
+		{\tiny fim} & {\tiny } & {\tiny DATETIME} & {\tiny } & {\tiny Not Null} &{\tiny Data e hora que o evento termina.}\\\hline
+		{\tiny responsavel} & {\tiny } & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id do usuário que cadastrou o evento, vinculado automaticamente pelo login.}\\\hline
+		{\tiny inicio\_inscricao} & {\tiny } & {\tiny DATETIME} & {\tiny } & {\tiny Not Null} &{\tiny Data e hora que abrem as inscrições para o evento.}\\\hline
+		{\tiny encerramento\_inscricao} & {\tiny } & {\tiny DATETIME} & {\tiny } & {\tiny Not Null} &{\tiny Data e hora que fecham as inscrições para o evento.}\\\hline
 		
 		%{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline %Modelo de novas linhas
 			
@@ -398,14 +399,14 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{relacionamentos}}
 	\label{tabela:relacionamentos}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{6cm}|}\hline	
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{relacionamentos}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny usuario\_1} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id dos usuários vinculados.}\\\hline
+		{\tiny usuario\_2} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id dos usuários vinculados.}\\\hline
+		{\tiny tipo} & {\tiny } & {\tiny } & {\tiny INT} & {\tiny Not Null} &{\tiny Tipo de vinculo, se eles são amigos ou bloqueados.}\\\hline
 		
 		%{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline %Modelo de novas linhas
 			
@@ -423,8 +424,8 @@ Analisando a tabela acima teremos:
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny usuario} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny ID do usuário que fez o artigo.}\\\hline
+		{\tiny artigo} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Artigo feito pelo usuário.}\\\hline
 			
 	\end{tabular}
 \end{table}	
@@ -444,10 +445,10 @@ Analisando a tabela acima teremos:
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny id} & {\tiny PK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id do album.}\\\hline
+		{\tiny nome} & {\tiny } & {\tiny VARCHAR} & {\tiny 45} & {\tiny Not Null} &{\tiny Nome do album.}\\\hline
+		{\tiny data} & {\tiny } & {\tiny DATETIME} & {\tiny } & {\tiny Not Null} &{\tiny Data e hora de criação do album.}\\\hline
+		{\tiny usuario} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id do usuário ao qual pertence o album.}\\\hline
 			
 	\end{tabular}
 \end{table}	
@@ -671,9 +672,9 @@ Analisando a tabela acima teremos:
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny id} & {\tiny PK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id da cidade.}\\\hline
+		{\tiny nome} & {\tiny } & {\tiny VARCHAR} & {\tiny 30} & {\tiny Not Null} &{\tiny Nome da cidade.}\\\hline
+		{\tiny estado} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id do estado a qual a cidade é vinculada na tabela "estados".}\\\hline
 		
 			
 	\end{tabular}
@@ -685,14 +686,14 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{estados}}
 	\label{tabela:estados}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{6cm}|}\hline	
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{estados}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny id} & {\tiny PK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id do estado.}\\\hline
+		{\tiny nome} & {\tiny } & {\tiny VARCHAR} & {\tiny 90} & {\tiny Not Null} &{\tiny Nome do estado.}\\\hline
+		{\tiny pais} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id do pais a qual o estado é vinculado na tabela "paises".}\\\hline
 			
 	\end{tabular}
 \end{table}	
@@ -708,8 +709,8 @@ Analisando a tabela acima teremos:
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny id} & {\tiny PK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id do país}\\\hline
+		{\tiny nome} & {\tiny } & {\tiny VARCHAR} & {\tiny 90} & {\tiny Not Null} &{\tiny Nome do país.}\\\hline
 	
 			
 	\end{tabular}
@@ -725,14 +726,14 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{participantes}}
 	\label{tabela:participantes}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{6cm}|}\hline	
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{participantes}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny grupo} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id do grupo vinculado ao usuário.}\\\hline
+		{\tiny usuario} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id do usuário vinculado ao grupo.}\\\hline
+		{\tiny cargo} & {\tiny } & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Cargo que o usuário ocupa, ex: Administrador, dono, criador de conteúdo ou apenas integrante}\\\hline
 			
 	\end{tabular}
 \end{table}	
@@ -743,17 +744,18 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{grupos}}
 	\label{tabela:grupos}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{6cm}|}\hline	
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{grupos}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny id} & {\tiny PK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id do grupo.}\\\hline
+		{\tiny nome} & {\tiny } & {\tiny VARCHAR} & {\tiny } & {\tiny Not Null} &{\tiny Nome do grupo.}\\\hline
+		{\tiny data\_criacao} & {\tiny } & {\tiny DATETIME} & {\tiny } & {\tiny Not Null} &{\tiny Data e hora de criação do grupo.}\\\hline
+		{\tiny descricao} & {\tiny } & {\tiny TEXT} & {\tiny } & {\tiny Not Null} &{\tiny Descrição mais detalhada do grupo.}\\\hline
+		{\tiny privacidade} & {\tiny } & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Se é um grupo público ou privado.
+}\\\hline
+		{\tiny tipo} & {\tiny } & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Se é um grupo pra discução, conteúdo, venda etc.}\\\hline
 			
 	\end{tabular}
 \end{table}	
