@@ -82,7 +82,7 @@ Bacharelado em Sistemas de Informação\\
 Prof. Me. Ronneesley Moura Teles\\\vspace{1cm}
 
 Anny Karoliny Moraes Ribeiro\\Eduardo Oliveira Silva\\Gleyson Israel Alves\\José Gilvan Jacinto Junior\\Lara Caroline Damaceno Faria\\\vspace{6.0cm}
-\textit{\textbf{\Large{Estudo da diferença de performance com índices em tabelas}}}\\\vspace{10cm}
+\textit{\textbf{\Large{Estudo da Diferença de Performance com Índices em Tabelas}}}\\\vspace{10cm}
 Novembro\\
 2017\\
 \end{center}
@@ -118,20 +118,6 @@ Pode-se entender as chaves-primárias como índices, que permitem buscas de form
 
 Antes do uso de índice é preciso pensar na possibilidade de usá-lo ou não, quando em uma tabela temos muitos índices e a mesma sofre muitas alterações, remoções e inserções todos os índices deverão ser atualizados de acordo com a nova situação. Esse processo acaba ficando crítico principalmente em tabelas com grandes quantidades de registros.
 
-\section{Código}
-
-\begin{itemize}
-%%Exemplo de codigo completo
-	\item Criando o usuário de teste:
-		\lstinputlisting[language=SQL]{recursos/codigo/criacao_usuario.sql}
-	\item Criando o banco de dados 1 com a tabela usuários:	
-		\lstinputlisting[language=SQL]{recursos/codigo/criacao_bd1.sql}
-	\item Criando os índices para os campos “id” e “nome” do banco de dados 1:	
-		\lstinputlisting[language=SQL]{recursos/codigo/criacao_index.sql}
-	\item Criando o banco de dados 2:	
-		\lstinputlisting[language=SQL]{recursos/codigo/criacao_bd2.sql}
-\end{itemize}
-
 \section{Vantagens e Desvantagens do uso de índices no banco de dados}
 
 \subsection{Vantagens}
@@ -157,6 +143,56 @@ Antes do uso de índice é preciso pensar na possibilidade de usá-lo ou não, q
 	\item Amplifica a inevitabilidade de manutenção interna do banco de dados: dependendo da implantação é corriqueiro o fato de que chaves sejam deixadas de lado a medida que são alteradas. Adiante também de outros elementos que o DBA deverá se preocupar.
 	
 	\item	Arrisca-se a queda na eficiência das consultas: não tem-se uma garantia de que toda e qualquer consulta será mais veloz com a utilização dos índices diante da operação extra de acesso ao índice anteriormente ao acesso aos registros principais, sendo assim há a possibilidade dessa operação anterior ao acesso aos dados somada ao acesso ser maior que o acesso direto.
+	
+\end{itemize}
+
+\section{Teste Proposto}
+	A partir de toda a teoria estudada sobre índices, foi proposto um teste de desempenho de dois banco de dados, um com índices e outro sem índices.
+	
+	Características dos bancos de dados:
+	\begin{itemize}
+		\item Cada banco é composto por uma tabela chamada: “usuarios”.
+		\item Cada uma das tabelas possui dois campos: “id” e “nome”.
+		\item O banco de dados 1 possui os campos “id” e “nome” com índices.
+		\item Em ambas as tabelas, 10400000 dados foram inseridos.
+		\item Os dados dos dois bancos são indênticos.
+	\end{itemize}
+	Método utilizado para o teste:
+	\begin{itemize}
+		\item Foram utilizados 100000 “selects” executados 30 vezes em cada banco de dados.
+		\item Foi medido o tempo de cada uma das execuções desses “selects”.
+		\item A partir do tempo foi tirado a média para a comparação do desempenho do banco de daados com índice e do banco de dados sem índice.
+	\end{itemize}
+
+\section{Códigos Utilizados}
+
+\begin{itemize}
+%%Exemplo de codigo completo
+	\item Criando o usuário de teste:
+		\lstinputlisting[language=SQL]{recursos/codigo/criacao_usuario.sql}
+	\item Criando o banco de dados 1 com a tabela usuários:	
+		\lstinputlisting[language=SQL]{recursos/codigo/criacao_bd1.sql}
+	\item Criando os índices para os campos “id” e “nome” do banco de dados 1:	
+		\lstinputlisting[language=SQL]{recursos/codigo/criacao_index.sql}
+	\item Criando o banco de dados 2:	
+		\lstinputlisting[language=SQL]{recursos/codigo/criacao_bd2.sql}
+	\item Inserindo os dados no banco com java:	
+		\lstinputlisting[language=SQL]{recursos/codigo/inserir_banco.java}
+	(É um script que leva muito tempo para ser executado.)
+	\item Código que executa os selects no banco de dados 1, que possui índices:	
+		\lstinputlisting[language=SQL]{recursos/codigo/analise_tempo1.java}
+	\item Código que executa os selects no banco de dados 2:	
+		\lstinputlisting[language=SQL]{recursos/codigo/analise_tempo2.java}
+		
+\end{itemize}
+
+\section{Resultados}
+
+\begin{itemize}
+
+	\item Média de tempo de consulta sem índices:
+	
+	\item Média de tempo de consulta com índices:	
 	
 \end{itemize}
 

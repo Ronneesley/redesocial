@@ -11,7 +11,7 @@
     <body>
         ${mensagem}
 		<!-- CSS -->
-			<style rel="stylesheet" type="text/css">
+			<!-- <style rel="stylesheet" type="text/css"> 
 			.pag{
 				width:100%;
 				height:100%;
@@ -36,7 +36,7 @@
 			.pag .box #cadastro{ width:300px;text-align:left; font-family:arial; font-size; 10px !important; margin:2px;background-color:#BA55D3;}
 			.pag .box #cadastro input[type="text"]{padding:3px;font-size; 10px !important; margin:8px; width:95%; font-size:10px;}
 			
-			</style>
+			</style> -->
 		<!--------->
 		
         <div class="pag">
