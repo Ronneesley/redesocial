@@ -105,12 +105,12 @@ public class AporteControle extends ControleBase {
             
             CategoriaBO categoriaBO = new CategoriaBO();
             List categorias = categoriaBO.listar();            
-            request.setAttribute("categoria", categorias);
+            request.setAttribute("categorias", categorias);
         } catch (Exception ex){
             request.setAttribute("erro", ex.getMessage());
         }
 
-        RequestDispatcher rd = request.getRequestDispatcher("/RedeSocialWeb/paginas/aportes/cadastro.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("paginas/aportes/cadastro.jsp");
         rd.forward(request, response);
     }
 

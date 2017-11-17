@@ -40,7 +40,7 @@ public class CategoriaControle extends ControleBase {
 
         String operacao = request.getParameter("operacao");
         
-        if (estaLogado(request)){
+       
             try {
                 switch (operacao){
                     case "CriarNovo":
@@ -62,9 +62,7 @@ public class CategoriaControle extends ControleBase {
             } catch (Exception ex){
                 ex.printStackTrace();
             }
-        } else {
-            redirecionarNaoAutenticado(request, response);
-        }
+        
     }
 
     private void criarNovo(HttpServletRequest request, HttpServletResponse response) throws Exception{

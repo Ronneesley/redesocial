@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 
@@ -45,15 +46,10 @@
                             <b id="center">Categoria</b> (Campo Obrigat&oacute;rio *)
                             <br/>
                            
-                            <select id="center" name="categorias">Selecione a Categoria
-                                <c:forEach items="${categorias}" var="c">
-                                    <c:if test="${aporte.categoria.id == c.id}">
-                                        <option value="${c.id}" selected>${c.descricao}</option>
-                                    </c:if>
-
-                                    <c:if test="${aporte.categoria.id != c.id}">
-                                        <option value="${c.id}">${c.descricao}</option>
-                                    </c:if>
+                            <select id="center" name="cu">
+                                <option value="Selecione a categoria">Selecione a categoria</option>
+                                <c:forEach items="${categorias}" var="categoria">
+                                    <option value="${categoria.id}">${categoria.descricao}</option>
                                 </c:forEach>
                             </select>
 
