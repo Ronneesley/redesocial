@@ -507,10 +507,10 @@ Analisando a tabela acima teremos:
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny id } & {\tiny PK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny ID do compo de aporte}\\\hline
+		{\tiny titulo} & {\tiny } & {\tiny VARCHAR} & {\tiny 80} & {\tiny Not Null} &{\tiny Titulo do aporte}\\\hline
+		{\tiny categoria} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny ID da categoria do aporte}\\\hline
+		{\tiny postagem} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny ID da postagem do aporte}\\\hline
 			
 	\end{tabular}
 \end{table}	
