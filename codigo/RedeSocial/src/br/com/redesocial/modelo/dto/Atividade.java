@@ -7,7 +7,7 @@ import java.util.Date;
  * @since 25/10/2017
  */
 
-public class Atividades {
+public class Atividade {
     
      /**
      * Atributo que identifica Atividades
