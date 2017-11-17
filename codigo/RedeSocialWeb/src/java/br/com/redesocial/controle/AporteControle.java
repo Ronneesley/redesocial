@@ -123,12 +123,12 @@ public class AporteControle extends ControleBase {
         
         aporte.setTitulo(request.getParameter("titulo"));
 
-        int idCategoria = Integer.parseInt( request.getParameter("categoria") );
+        Integer idCategoria = Integer.parseInt(request.getParameter("categorias"));
         CategoriaBO categoriaBO = new CategoriaBO();
         Categoria categoria = categoriaBO.selecionar(idCategoria);
         aporte.setCategoria(categoria);
         
-        int idPostagem = Integer.parseInt( request.getParameter("postagem") );
+        Integer idPostagem = Integer.parseInt(request.getParameter("postagem") );
         PostagemBO postagemBO = new PostagemBO();
         Postagem postagem = postagemBO.selecionar(idPostagem);
         aporte.setPostagem(postagem);
