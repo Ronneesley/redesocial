@@ -7,7 +7,7 @@
 \contentsline {subsection}{\numberline {2.1}Eventos}{5}
 \contentsline {subsection}{\numberline {2.2}Artefatos do usu\IeC {\'a}rios}{6}
 \contentsline {subsection}{\numberline {2.3}Postagens}{7}
-\contentsline {subsection}{\numberline {2.4}Localidades}{9}
+\contentsline {subsection}{\numberline {2.4}Localidades}{10}
 \contentsline {subsection}{\numberline {2.5}Grupos}{10}
 \contentsline {subsection}{\numberline {2.6}Objetos}{10}
 \contentsline {section}{\numberline {3}Refer\IeC {\^e}ncias Bibliogr\IeC {\'a}fica}{11}

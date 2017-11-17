@@ -526,13 +526,13 @@ Analisando a tabela acima teremos:
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny id} & {\tiny PK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id da Postagem }\\\hline
+		{\tiny ups} & {\tiny } & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Ups na postagem}\\\hline
+		{\tiny downs} & {\tiny } & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Dows na postagem}\\\hline
+		{\tiny descricao} & {\tiny } & {\tiny TEXT} & {\tiny } & {\tiny Not Null} &{\tiny Descrição da postagem}\\\hline
+		{\tiny data} & {\tiny } & {\tiny DATETIME} & {\tiny } & {\tiny Not Null} &{\tiny Data da postagem}\\\hline
+		{\tiny visualizacoes} & {\tiny } & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Quantidade de Visualizações da postagem}\\\hline
+		{\tiny usuario} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Usuário que publicou a postagem}\\\hline
 		
 			
 	\end{tabular}
@@ -549,14 +549,14 @@ Analisando a tabela acima teremos:
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny id} & {\tiny PK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id do comentário  }\\\hline
+		{\tiny descricao} & {\tiny } & {\tiny TEXT} & {\tiny } & {\tiny Not Null} &{\tiny Descrição do comentário }\\\hline		
+		{\tiny ups} & {\tiny } & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Ups do comentário }\\\hline
+		{\tiny downs} & {\tiny } & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Dows do comentário }\\\hline		
+		{\tiny data} & {\tiny } & {\tiny DATETIME} & {\tiny } & {\tiny Not Null} &{\tiny Data em que o comentário foi publicado }\\\hline
+		{\tiny postagem} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Postagem do comentário}\\\hline
+		{\tiny resposta} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Resposta do comentário}\\\hline
+		{\tiny usuario} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id do usuário na qual pertence o comentário}\\\hline
 		
 			
 	\end{tabular}
@@ -573,8 +573,8 @@ Analisando a tabela acima teremos:
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny id} & {\tiny PK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny ID da palavra-chave}\\\hline
+		{\tiny descricao} & {\tiny } & {\tiny VARCHAR} & {\tiny 80} & {\tiny Not Null} &{\tiny Descrição da palavra-chave}\\\hline
 			
 	\end{tabular}
 \end{table}	
@@ -590,8 +590,8 @@ Analisando a tabela acima teremos:
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny postagem} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny ID da postagem vinculada a multimídia}\\\hline
+		{\tiny multimidia} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny ID da multimidia vinculada a postagem}\\\hline
 	
 			
 	\end{tabular}
@@ -608,8 +608,8 @@ Analisando a tabela acima teremos:
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny postagem} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny ID da postagem vinculada ao álbum}\\\hline
+		{\tiny albuns} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny ID da álbum vinculada a postagem}\\\hline
 			
 	\end{tabular}
 \end{table}	
@@ -625,8 +625,8 @@ Analisando a tabela acima teremos:
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny postagem} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny ID da postagem vinculada ao artigo}\\\hline
+		{\tiny artigo} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny ID da artigo vinculada a postagem}\\\hline
 		
 			
 	\end{tabular}
@@ -644,8 +644,8 @@ Analisando a tabela acima teremos:
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny postagem} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny ID da postagem vinculada a palavra-chave}\\\hline
+		{\tiny palavra\_chave} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny ID da palavra-chave vinculada a postagem}\\\hline
 			
 	\end{tabular}
 \end{table}	
@@ -657,7 +657,7 @@ Analisando a tabela acima teremos:
 
 
 
-
+\newpage
 \subsection{Localidades}
 
 %Inserir as tabelas de Localidades
