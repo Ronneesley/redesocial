@@ -119,8 +119,8 @@ public class AlbumControle extends HttpServlet {
     private void cadastrar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Album album = new Album();
         
-        if(!"".equals(request.getParameter("id").trim())){
-            album.setId(Integer.parseInt(request.getParameter("id")));
+        if(!"".equals(request.getParameter("idalbum").trim())){
+            album.setId(Integer.parseInt(request.getParameter("idalbum")));
         }
         
         album.setNome(request.getParameter("album"));
@@ -181,7 +181,7 @@ public class AlbumControle extends HttpServlet {
     */
     private void editar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-            Integer id = Integer.parseInt(request.getParameter("id"));
+            Integer id = Integer.parseInt(request.getParameter("idalbum"));
             
             AlbumBO bo = new AlbumBO();
             Album album = bo.selecionar(id);
@@ -192,7 +192,7 @@ public class AlbumControle extends HttpServlet {
             request.setAttribute("erro", ex.getMessage());
         }
         
-        RequestDispatcher rd = request.getRequestDispatcher("galeria.html");
+        RequestDispatcher rd = request.getRequestDispatcher("paginas/galeria/cadastro_albuns.jsp");
         rd.forward(request, response);
     }
 
@@ -234,6 +234,9 @@ public class AlbumControle extends HttpServlet {
         } catch (Exception ex) {
             request.setAttribute("erro", ex.getMessage());
         }
+        
+        RequestDispatcher rd = request.getRequestDispatcher("./AlbumControle?operacao=Listar");
+        rd.forward(request, response);
     }
 
     /**
@@ -257,6 +260,7 @@ public class AlbumControle extends HttpServlet {
             request.setAttribute("album", album);
             
             request.setAttribute("fotos", fotosAlbum);
+            
         }catch(Exception ex){
             
             request.setAttribute("erro", ex.getMessage());
