@@ -169,7 +169,7 @@
                     <p><a href="./mensagem.html" >Mensagens</a></p>
                     <p><a href="teste_link.html" target="_blank">Amigos</a></p>
                     <p><a href="./teste_link.html">Aportes</a></p>
-                    <p><a href="./galeria.html" >Minhas Fotos</a></p>
+                    <p><a href="./AlbumControle?operacao=Listar" >Minhas Fotos</a></p>
                     <p><a href="teste_link.html" target="_blank">Vídeos</a></p>
                     <p><a href="teste_link.html" target="_blank">Páginas</a></p>
                     <p><a href="teste_link.html" target="_blank">Artigos Salvos</a></p>    		

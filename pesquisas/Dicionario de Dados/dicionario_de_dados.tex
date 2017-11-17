@@ -172,7 +172,7 @@ O exemplo mostrado abaixo e o metodo escolhido para ser utilizado na construçã
 \begin{table}[h!]
 	\label{tabela:exemplo}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.3cm}|p{1.2cm}|p{1.8cm}|p{1.5cm}|p{1cm}|p{6cm}|}\hline	
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{usuarios}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
@@ -203,7 +203,7 @@ Analisando a tabela acima teremos:
 
 \item \textbf{Chave}: campo utilizado para o armazenamento do tipo de chave.
 
-\item \textbf{Tipo}: Descreve o tipo do campo podendo ser ele numérico, textual, data ou boleano.
+\item \textbf{Tipo}: descreve o tipo do campo podendo ser ele numérico, textual, data ou boleano.
 
 \item \textbf{Nulo}: utilizado para descrever se o campo pode ou não ser nulo.
 
@@ -221,7 +221,7 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{tipos\_atividades}}
 	\label{tabela:tiposAtividades}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.3cm}|p{1.2cm}|p{1.8cm}|p{1.5cm}|p{1cm}|p{6cm}|}\hline	
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{tipos\_atividades}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
@@ -242,7 +242,7 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{atividades}}
 	\label{tabela:atividades}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.3cm}|p{1.2cm}|p{1.8cm}|p{1.5cm}|p{1cm}|p{6cm}|}\hline		
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{atividades}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
@@ -266,14 +266,14 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{presenca\_atividades}}
 	\label{tabela:presencaAtividades}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.3cm}|p{1.2cm}|p{1.8cm}|p{1.5cm}|p{1cm}|p{6cm}|}\hline	
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{presenca\_atividades}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny presenca} & {\tiny } & {\tiny BOOLEAN} & {\tiny } & {\tiny Not Null} &{\tiny }\\\hline
-		{\tiny atividade}  & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny }\\\hline
-		{\tiny usuario}  & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny }\\\hline
+		{\tiny presenca} & {\tiny } & {\tiny BOOLEAN} & {\tiny } & {\tiny Not Null} &{\tiny Se o usuário esteve ou não presente no evento.}\\\hline
+		{\tiny atividade}  & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Evento vinculado ao usuário.}\\\hline
+		{\tiny usuario}  & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Usuário vinculado à atividade.}\\\hline
 			
 	\end{tabular}
 \end{table}	
@@ -285,13 +285,13 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{responsaveis\_atividades}}
 	\label{tabela:responsaveisAtividades}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.3cm}|p{1.2cm}|p{1.8cm}|p{1.5cm}|p{1cm}|p{6cm}|}\hline	
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{responsaveis\_atividades}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny atividade}  & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny }\\\hline
-		{\tiny usuario} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny }\\\hline
+		{\tiny atividade}  & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Atividade vinculada ao usuario responsável.}\\\hline
+		{\tiny usuario} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Usuário vinculado a atividade.}\\\hline
 			
 	\end{tabular}
 \end{table}	
@@ -303,13 +303,13 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{organizadores\_eventos}}
 	\label{tabela:organizadoresEventos}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.3cm}|p{1.2cm}|p{1.8cm}|p{1.5cm}|p{1cm}|p{6cm}|}\hline	
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{organizadores\_eventos}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny evento} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Evento vinculado ao usuário.}\\\hline
+		{\tiny usuario} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Usuário vinculado ao evento.}\\\hline
 			
 	\end{tabular}
 \end{table}	
@@ -321,13 +321,14 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{presenca\_evento}}
 	\label{tabela:presencaEvento}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.3cm}|p{1.2cm}|p{1.8cm}|p{1.5cm}|p{1cm}|p{6cm}|}\hline		
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{presenca\_evento}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny }  & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny }  & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny presencao}  & {\tiny } & {\tiny BOOLEAN } & {\tiny } & {\tiny Not Null} &{\tiny Se o usuário esteve ou não presente no evento.}\\\hline
+		{\tiny evento}  & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null } &{\tiny Evento vinculado ao usuário.}\\\hline
+		{\tiny usuario}  & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Usuário vinculado ao evento.}\\\hline
 			
 	\end{tabular}
 \end{table}	
@@ -339,20 +340,20 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{eventos}}
 	\label{tabela:eventos}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.3cm}|p{1.2cm}|p{1.8cm}|p{1.5cm}|p{1cm}|p{6cm}|}\hline		
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{eventos}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny id} & {\tiny PK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id do evento.}\\\hline
+		{\tiny nome} & {\tiny } & {\tiny VARCHAR} & {\tiny 100} & {\tiny Not Null} &{\tiny Nome do tipo do evento.}\\\hline
+		{\tiny descricao} & {\tiny } & {\tiny TEXT} & {\tiny } & {\tiny Not Null} &{\tiny Descreve mais detalhadamente o evento.}\\\hline
+		{\tiny certificado} & {\tiny } & {\tiny BOOLEAN} & {\tiny } & {\tiny Not Null} &{\tiny Diz se o evento fornece certificado.}\\\hline
+		{\tiny inicio} & {\tiny } & {\tiny DATETIME} & {\tiny } & {\tiny Not Null} &{\tiny Data e hora que o evento começa.}\\\hline
+		{\tiny fim} & {\tiny } & {\tiny DATETIME} & {\tiny } & {\tiny Not Null} &{\tiny Data e hora que o evento termina.}\\\hline
+		{\tiny responsavel} & {\tiny } & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id do usuário que cadastrou o evento, vinculado automaticamente pelo login.}\\\hline
+		{\tiny inicio\_inscricao} & {\tiny } & {\tiny DATETIME} & {\tiny } & {\tiny Not Null} &{\tiny Data e hora que abrem as inscrições para o evento.}\\\hline
+		{\tiny encerramento\_inscricao} & {\tiny } & {\tiny DATETIME} & {\tiny } & {\tiny Not Null} &{\tiny Data e hora que fecham as inscrições para o evento.}\\\hline
 		
 		%{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline %Modelo de novas linhas
 			
@@ -369,7 +370,7 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{usuarios}}
 	\label{tabela:usuarios}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.3cm}|p{1.2cm}|p{1.8cm}|p{1.5cm}|p{1cm}|p{6cm}|}\hline	
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{usuarios}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
@@ -398,14 +399,14 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{relacionamentos}}
 	\label{tabela:relacionamentos}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.3cm}|p{1.2cm}|p{1.8cm}|p{1.5cm}|p{1cm}|p{6cm}|}\hline	
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{relacionamentos}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny usuario\_1} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id dos usuários vinculados.}\\\hline
+		{\tiny usuario\_2} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id dos usuários vinculados.}\\\hline
+		{\tiny tipo} & {\tiny } & {\tiny } & {\tiny INT} & {\tiny Not Null} &{\tiny Tipo de vinculo, se eles são amigos ou bloqueados.}\\\hline
 		
 		%{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline %Modelo de novas linhas
 			
@@ -418,13 +419,13 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{autores}}
 	\label{tabela:autores}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.3cm}|p{1.2cm}|p{1.8cm}|p{1.5cm}|p{1cm}|p{6cm}|}\hline	
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{autores}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny usuario} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny ID do usuário que fez o artigo.}\\\hline
+		{\tiny artigo} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Artigo feito pelo usuário.}\\\hline
 			
 	\end{tabular}
 \end{table}	
@@ -439,15 +440,15 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{albuns}}
 	\label{tabela:albuns}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.3cm}|p{1.2cm}|p{1.8cm}|p{1.5cm}|p{1cm}|p{6cm}|}\hline	
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{albuns}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny id} & {\tiny PK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id do album.}\\\hline
+		{\tiny nome} & {\tiny } & {\tiny VARCHAR} & {\tiny 45} & {\tiny Not Null} &{\tiny Nome do album.}\\\hline
+		{\tiny data} & {\tiny } & {\tiny DATETIME} & {\tiny } & {\tiny Not Null} &{\tiny Data e hora de criação do album.}\\\hline
+		{\tiny usuario} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id do usuário ao qual pertence o album.}\\\hline
 			
 	\end{tabular}
 \end{table}	
@@ -459,16 +460,16 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{multimidias}}
 	\label{tabela:multimidias}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.3cm}|p{1.2cm}|p{1.8cm}|p{1.5cm}|p{1cm}|p{6cm}|}\hline		
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{multimidias}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny id} & {\tiny PK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id da multimidia.}\\\hline
+		{\tiny midia} & {\tiny } & {\tiny LONGBLOB} & {\tiny } & {\tiny Not Null} &{\tiny Multimidia. }\\\hline
+		{\tiny tipo\_conteudo} & {\tiny } & {\tiny VARCHAR} & {\tiny 20} & {\tiny Not Null} &{\tiny Tipo de conteúdo da multimidia.}\\\hline
+		{\tiny data} & {\tiny } & {\tiny DATETIME} & {\tiny } & {\tiny Not Null} &{\tiny Data e hora de postagem.}\\\hline
+		{\tiny album} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Album vinculado a multimídia. }\\\hline
 			
 	\end{tabular}
 \end{table}	
@@ -483,13 +484,13 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{categorias}}
 	\label{tabela:categorias}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.3cm}|p{1.2cm}|p{1.8cm}|p{1.5cm}|p{1cm}|p{6cm}|}\hline	
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{categorias}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny id} & {\tiny PK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Mostra a postagem sobre multimidia}\\\hline
+		{\tiny descricao} & {\tiny } & {\tiny VARCHAR} & {\tiny 80} & {\tiny Not Null} &{\tiny Descrição mais detalhada do comentario}\\\hline
 		
 			
 	\end{tabular}
@@ -501,15 +502,15 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{aportes}}
 	\label{tabela:aportes}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.3cm}|p{1.2cm}|p{1.8cm}|p{1.5cm}|p{1cm}|p{6cm}|}\hline	
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{aportes}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny id } & {\tiny PK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny ID do compo de aporte}\\\hline
+		{\tiny titulo} & {\tiny } & {\tiny VARCHAR} & {\tiny 80} & {\tiny Not Null} &{\tiny Titulo do aporte}\\\hline
+		{\tiny categoria} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny ID da categoria do aporte}\\\hline
+		{\tiny postagem} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny ID da postagem do aporte}\\\hline
 			
 	\end{tabular}
 \end{table}	
@@ -520,18 +521,18 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{postagens}}
 	\label{tabela:postagens}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.3cm}|p{1.2cm}|p{1.8cm}|p{1.5cm}|p{1cm}|p{6cm}|}\hline		
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{postagens}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny id} & {\tiny PK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id da Postagem }\\\hline
+		{\tiny ups} & {\tiny } & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Ups na postagem}\\\hline
+		{\tiny downs} & {\tiny } & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Dows na postagem}\\\hline
+		{\tiny descricao} & {\tiny } & {\tiny TEXT} & {\tiny } & {\tiny Not Null} &{\tiny Descrição da postagem}\\\hline
+		{\tiny data} & {\tiny } & {\tiny DATETIME} & {\tiny } & {\tiny Not Null} &{\tiny Data da postagem}\\\hline
+		{\tiny visualizacoes} & {\tiny } & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Quantidade de Visualizações da postagem}\\\hline
+		{\tiny usuario} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Usuário que publicou a postagem}\\\hline
 		
 			
 	\end{tabular}
@@ -543,19 +544,19 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{comentarios}}
 	\label{tabela:comentarios}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.3cm}|p{1.2cm}|p{1.8cm}|p{1.5cm}|p{1cm}|p{6cm}|}\hline	
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{comentarios}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny id} & {\tiny PK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id do comentário  }\\\hline
+		{\tiny descricao} & {\tiny } & {\tiny TEXT} & {\tiny } & {\tiny Not Null} &{\tiny Descrição do comentário }\\\hline		
+		{\tiny ups} & {\tiny } & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Ups do comentário }\\\hline
+		{\tiny downs} & {\tiny } & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Dows do comentário }\\\hline		
+		{\tiny data} & {\tiny } & {\tiny DATETIME} & {\tiny } & {\tiny Not Null} &{\tiny Data em que o comentário foi publicado }\\\hline
+		{\tiny postagem} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Postagem do comentário}\\\hline
+		{\tiny resposta} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Resposta do comentário}\\\hline
+		{\tiny usuario} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id do usuário na qual pertence o comentário}\\\hline
 		
 			
 	\end{tabular}
@@ -567,13 +568,13 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{palavras\_chave}}
 	\label{tabela:palavrasChave}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.3cm}|p{1.2cm}|p{1.8cm}|p{1.5cm}|p{1cm}|p{6cm}|}\hline		
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{palavras\_chave}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny id} & {\tiny PK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny ID da palavra-chave}\\\hline
+		{\tiny descricao} & {\tiny } & {\tiny VARCHAR} & {\tiny 80} & {\tiny Not Null} &{\tiny Descrição da palavra-chave}\\\hline
 			
 	\end{tabular}
 \end{table}	
@@ -584,13 +585,13 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{postagens\_multimidias}}
 	\label{tabela:postagensMultimidias}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.3cm}|p{1.2cm}|p{1.8cm}|p{1.5cm}|p{1cm}|p{6cm}|}\hline		
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{postagens\_multimidias}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny postagem} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny ID da postagem vinculada a multimídia}\\\hline
+		{\tiny multimidia} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny ID da multimidia vinculada a postagem}\\\hline
 	
 			
 	\end{tabular}
@@ -602,13 +603,13 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{postagens\_albuns}}
 	\label{tabela:postagensAlbuns}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.3cm}|p{1.2cm}|p{1.8cm}|p{1.5cm}|p{1cm}|p{6cm}|}\hline	
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{postagens\_albuns}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny postagem} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny ID da postagem vinculada ao álbum}\\\hline
+		{\tiny albuns} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny ID da álbum vinculada a postagem}\\\hline
 			
 	\end{tabular}
 \end{table}	
@@ -619,13 +620,13 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{postagens\_artigos}}
 	\label{tabela:postagensArtigos}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.3cm}|p{1.2cm}|p{1.8cm}|p{1.5cm}|p{1cm}|p{6cm}|}\hline	
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{postagens\_artigos}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny postagem} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny ID da postagem vinculada ao artigo}\\\hline
+		{\tiny artigo} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny ID da artigo vinculada a postagem}\\\hline
 		
 			
 	\end{tabular}
@@ -638,13 +639,13 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{postagens\_palavras\_chave}}
 	\label{tabela:postagensPalavrasChave}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.3cm}|p{1.2cm}|p{1.8cm}|p{1.5cm}|p{1cm}|p{6cm}|}\hline	
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{postagens\_palavras\_chave}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny postagem} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny ID da postagem vinculada a palavra-chave}\\\hline
+		{\tiny palavra\_chave} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny ID da palavra-chave vinculada a postagem}\\\hline
 			
 	\end{tabular}
 \end{table}	
@@ -656,7 +657,7 @@ Analisando a tabela acima teremos:
 
 
 
-
+\newpage
 \subsection{Localidades}
 
 %Inserir as tabelas de Localidades
@@ -666,14 +667,14 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{cidades}}
 	\label{tabela:cidades}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.3cm}|p{1.2cm}|p{1.8cm}|p{1.5cm}|p{1cm}|p{6cm}|}\hline		
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{cidades}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny id} & {\tiny PK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id da cidade.}\\\hline
+		{\tiny nome} & {\tiny } & {\tiny VARCHAR} & {\tiny 30} & {\tiny Not Null} &{\tiny Nome da cidade.}\\\hline
+		{\tiny estado} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id do estado a qual a cidade é vinculada na tabela "estados".}\\\hline
 		
 			
 	\end{tabular}
@@ -685,14 +686,14 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{estados}}
 	\label{tabela:estados}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.3cm}|p{1.2cm}|p{1.8cm}|p{1.5cm}|p{1cm}|p{6cm}|}\hline		
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{estados}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny id} & {\tiny PK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id do estado.}\\\hline
+		{\tiny nome} & {\tiny } & {\tiny VARCHAR} & {\tiny 90} & {\tiny Not Null} &{\tiny Nome do estado.}\\\hline
+		{\tiny pais} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id do pais a qual o estado é vinculado na tabela "paises".}\\\hline
 			
 	\end{tabular}
 \end{table}	
@@ -703,13 +704,13 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{paises}}
 	\label{tabela:paises}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.3cm}|p{1.2cm}|p{1.8cm}|p{1.5cm}|p{1cm}|p{6cm}|}\hline	
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{paises}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny id} & {\tiny PK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id do país}\\\hline
+		{\tiny nome} & {\tiny } & {\tiny VARCHAR} & {\tiny 90} & {\tiny Not Null} &{\tiny Nome do país.}\\\hline
 	
 			
 	\end{tabular}
@@ -725,14 +726,14 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{participantes}}
 	\label{tabela:participantes}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.3cm}|p{1.2cm}|p{1.8cm}|p{1.5cm}|p{1cm}|p{6cm}|}\hline	
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{participantes}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny grupo} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id do grupo vinculado ao usuário.}\\\hline
+		{\tiny usuario} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id do usuário vinculado ao grupo.}\\\hline
+		{\tiny cargo} & {\tiny } & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Cargo que o usuário ocupa, ex: Administrador, dono, criador de conteúdo ou apenas integrante}\\\hline
 			
 	\end{tabular}
 \end{table}	
@@ -743,17 +744,18 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{grupos}}
 	\label{tabela:grupos}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.3cm}|p{1.2cm}|p{1.8cm}|p{1.5cm}|p{1cm}|p{6cm}|}\hline	
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{grupos}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny id} & {\tiny PK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Id do grupo.}\\\hline
+		{\tiny nome} & {\tiny } & {\tiny VARCHAR} & {\tiny } & {\tiny Not Null} &{\tiny Nome do grupo.}\\\hline
+		{\tiny data\_criacao} & {\tiny } & {\tiny DATETIME} & {\tiny } & {\tiny Not Null} &{\tiny Data e hora de criação do grupo.}\\\hline
+		{\tiny descricao} & {\tiny } & {\tiny TEXT} & {\tiny } & {\tiny Not Null} &{\tiny Descrição mais detalhada do grupo.}\\\hline
+		{\tiny privacidade} & {\tiny } & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Se é um grupo público ou privado.
+}\\\hline
+		{\tiny tipo} & {\tiny } & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Se é um grupo pra discução, conteúdo, venda etc.}\\\hline
 			
 	\end{tabular}
 \end{table}	
@@ -771,22 +773,22 @@ Analisando a tabela acima teremos:
 	\caption{\texttt{artigos}}
 	\label{tabela:artigos}
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
-	\begin{tabular}{|p{2.5cm}|p{1cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{5cm}|}\hline	
+	\begin{tabular}{|p{2.3cm}|p{1.2cm}|p{1.8cm}|p{1.5cm}|p{1cm}|p{6cm}|}\hline	
 		\multicolumn{6}{|p{16cm}|}{\cellcolor{cinzaClaro}  \centering Tabela: \texttt{artigos}} \\ \hline %Parte superior da Tabela
 		{\small Campo Físico}   & {\small Chaves} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\\hline %Parte com os nomes de cada Coluna
 	%%%%%%%%%%%%%%%%%%%%Estrutura Tabela%%%%%%%%%%%%%%
 		
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
-		{\tiny } & {\tiny } & {\tiny } & {\tiny } & {\tiny } &{\tiny }\\\hline
+		{\tiny id} & {\tiny PK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Código do Artigo}\\\hline
+		{\tiny idioma} & {\tiny } & {\tiny VARCHAR} & {\tiny 100} & {\tiny Not Null} &{\tiny Idioma do Artigo}\\\hline
+		{\tiny revista} & {\tiny } & {\tiny VARCHAR} & {\tiny 100} & {\tiny Not Null} &{\tiny Revista do Artigo}\\\hline
+		{\tiny issn} & {\tiny } & {\tiny VARCHAR} & {\tiny 200} & {\tiny Not Null} &{\tiny ISSN do Artigo}\\\hline
+		{\tiny area\_conhecimento} & {\tiny VARCHAR} & {\tiny 200} & {\tiny } & {\tiny Not Null} &{\tiny Qual a area de conhecimento do Artigo}\\\hline
+		{\tiny titulo} & {\tiny } & {\tiny VARCHAR} & {\tiny 200} & {\tiny Not Null} &{\tiny Título do Artigo}\\\hline
+		{\tiny resumo} & {\tiny } & {\tiny TEXT} & {\tiny } & {\tiny Not Null} &{\tiny Resumo do Artigo}\\\hline
+		{\tiny url} & {\tiny } & {\tiny VARCHAR} & {\tiny 200} & {\tiny Not Null} &{\tiny URL do Artigo}\\\hline
+		{\tiny artigo} & {\tiny } & {\tiny MEDIUMBLOB} & {\tiny } & {\tiny Not Null} &{\tiny Arquivo do artigo (PDF)}\\\hline
+		{\tiny categoria} & {\tiny FK} & {\tiny INT} & {\tiny } & {\tiny Not Null} &{\tiny Categoria do Artigo
+}\\\hline
 			
 	\end{tabular}
 \end{table}	

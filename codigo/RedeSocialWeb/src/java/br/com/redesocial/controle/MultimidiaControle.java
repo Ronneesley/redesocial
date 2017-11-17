@@ -10,8 +10,6 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -245,7 +243,6 @@ public class MultimidiaControle extends HttpServlet {
                             multimidia.setData(new Date());
                             multimidia.setAlbum(album);
                             multimidia.setTipoConteudo(item.getContentType());
-
                             
                             try {
                                 this.inserir(multimidia, request, response);
@@ -259,6 +256,9 @@ public class MultimidiaControle extends HttpServlet {
                     }
                 }
             }
+            
+            RequestDispatcher rd = request.getRequestDispatcher("./AlbumControle?operacao=Selecionar&id=" + album.getId());
+            rd.forward(request, response);
         }catch (Exception ex){
             request.setAttribute("erro", ex.getMessage());
         }
