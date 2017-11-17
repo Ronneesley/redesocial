@@ -114,12 +114,11 @@ public class AlbumDAO extends DAOCRUDBase<Album> {
         Connection conexao = getConexao();
 
         PreparedStatement  pstmt; 
-        pstmt = conexao.prepareStatement("update albuns set nome = ?, data=?, usuario=? where id =? ");
+        pstmt = conexao.prepareStatement("update albuns set nome = ?, usuario=? where id =? ");
        
         pstmt.setString(1, dto.getNome());
-        pstmt.setTimestamp(2, new java.sql.Timestamp(dto.getData().getTime()));
-        pstmt.setInt(3, dto.getUsuario().getId()); 
-        pstmt.setInt(4, dto.getId());
+        pstmt.setInt(2, dto.getUsuario().getId()); 
+        pstmt.setInt(3, dto.getId());
        
         pstmt.executeUpdate();
     }
@@ -152,7 +151,7 @@ public class AlbumDAO extends DAOCRUDBase<Album> {
         Connection conexao = getConexao();
         
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("select * from albuns where usuario = ?");
+        pstmt = conexao.prepareStatement("select * from albuns where usuario = ? order by data");
         
         pstmt.setInt(1, id);
         

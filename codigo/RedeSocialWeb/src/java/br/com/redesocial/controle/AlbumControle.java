@@ -31,28 +31,33 @@ public class AlbumControle extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
-        String operacao = request.getParameter("operacao");
         
-        switch(operacao){
-            case "CriarNovo":
-                this.criarNovo(request, response);
-                break;
-            case "Cadastrar":
-                this.cadastrar(request, response);
-                break;
-            case "Listar": 
-                this.listar(request, response);
-                break;
-            case "Excluir":
-                this.excluir(request, response);
-                break;
-            case "Editar":
-                this.editar(request, response);
-                break;
-            case "Selecionar":
-                this.selecionar(request, response);
-                break;
+        String operacao = request.getParameter("operacao");
+        try {
+            switch(operacao){
+                case "CriarNovo":
+                    this.criarNovo(request, response);
+                    break;
+                case "Cadastrar":
+                    this.cadastrar(request, response);
+                    break;
+                case "Listar": 
+                    this.listar(request, response);
+                    break;
+                case "Excluir":
+                    this.excluir(request, response);
+                    break;
+                case "Editar":
+                    this.editar(request, response);
+                    break;
+                case "Selecionar":
+                    this.selecionar(request, response);
+                    break;
+            }
+        }catch (Exception e) {
+            e.printStackTrace();
         }
+        
         
     }
 

@@ -183,17 +183,29 @@
 		text-align: center;
 		margin: auto;
             }
+            
+            .aImg{
+                width: 30%;
+                padding: 5px;
+                border: 1px solid #cecece;
+                margin: auto;
+                margin-bottom: 2px;
+                display: inline-block;
+            }
+
+            
         </style>
     </head>
     
     <body id="cantos">
         ${mensagem}
         ${erro}
+        
+        <input type="hidden" name="usuario" value="${usuario.id}"/>
 
 	<div id="cabecalho">
-            <img src="logo_rede.png" class="logo"/>
-            <img src="foto.png" class="fotoUsuario"/>
-
+            <img src="../../RedeSocialWeb/paginas/galeria/logo_rede.png" class="logo"/>
+            <img src="../../RedeSocialWeb/paginas/galeria/foto.png" class="fotoUsuario"/>
             <input id="topobotao" type="reset" name="voltar" class="botaoVoltar" value="Voltar" />
             &ensp;&ensp;
             <input type="reset" name="sair" class="botao" value="Sair"/>
@@ -224,7 +236,7 @@
             <div class="albuns">
                 <c:if test="${album != null}">
                     <c:forEach items="${album}" var="album">
-                        <a href="./AlbumControle?operacao=Selecionar&amp;id=${album.id}" id="${album.id}">${album.nome}</a>
+                        <a href="./AlbumControle?operacao=Selecionar&amp;id=${album.id}" id="${album.id}" class="aImg">${album.nome}</a>
                     </c:forEach>
                 </c:if>
             </div>

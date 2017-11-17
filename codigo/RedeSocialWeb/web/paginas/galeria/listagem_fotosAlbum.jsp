@@ -191,9 +191,18 @@
                 margin: auto;
             }
             .imagem{
-                max-width: 169px;
+                width: 180px;
                 padding: 1px;
             }
+            .bordaImg{
+                width: 30%;
+                padding: 5px;
+                border: 1px solid #cecece;
+                margin: auto;
+                margin-bottom: 2px;
+                display: inline-block;
+            }
+
         </style>
     </head>
     
@@ -224,6 +233,7 @@
                 <a  href="#"><h2>Suas fotos</h2></a>
                 <a  href="../RedeSocialWeb/AlbumControle?operacao=Listar"><h2>Seus Álbuns</h2></a>
                 <a  href="../RedeSocialWeb/AlbumControle?operacao=CriarNovo"><h2>Criar Álbum</h2></a>
+                <a  href="../RedeSocialWeb/AlbumControle?operacao=Editar&amp;idalbum=${album.id}"><h2>Editar</h2></a>
                 <select>
                     <option value="#">...</option>
                     <option value="#">Editar</option>
@@ -236,23 +246,13 @@
         
             <div class="albuns">
                 <a href="./MultimidiaControle?operacao=CriarNovo&amp;idalbum=${album.id}" id="${album.id}">
-                    <img url="../../imagens/adicionar-botao.jpg" alt="Adicionar mídias..." class="imagem" />
+                    <img src="../../RedeSocialWeb/paginas/galeria/adicionar-botao.jpg" alt="Adicionar mídias..." class="imagem"/>
                 </a>
-                <a href="../../imagens/usuario.jpg" target="_blank">
-                    <img src="../../imagens/usuario.jpg" alt="imagem" class="imagem" />
-                </a>
-                <a href="../../imagens/usuario.jpg" target="_blank">
-                    <img src="../../imagens/usuario.jpg" alt="imagem" class="imagem" />
-                </a>
-                <a href="../../imagens/usuario.jpg" target="_blank">
-                    <img src="../../imagens/usuario.jpg" alt="imagem" class="imagem" />
-                </a>
-                <a href="../../imagens/usuario.jpg" target="_blank">
-                    <img src="../../imagens/usuario.jpg" alt="imagem" class="imagem" />
-                </a>
-                <a href="../../imagens/usuario.jpg" target="_blank">
-                    <img src="../../imagens/usuario.jpg" alt="imagem" class="imagem" />
-                </a>
+                <c:if test="${fotos != null}">
+                    <c:forEach items="${fotos}" var="foto">
+                        <a href="#" id="${foto.id}" class="aImg bordaImg">${foto.tipoConteudo}</a>
+                    </c:forEach>
+                </c:if>
             </div>
         </div>
         

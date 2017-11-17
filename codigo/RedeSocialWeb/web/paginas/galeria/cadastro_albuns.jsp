@@ -224,10 +224,10 @@
 
             <div class="conteudogaleria">
                 <form action="AlbumControle?operacao=Cadastrar" method="post"> 
-                    <input type="hidden" name="id" value="${album.id}" />
+                    <input type="hidden" name="idalbum" value="${album.id}" id="${album.id}" />
                     <label for="nomeAlbum">Digite o nome do Álbum: </label>
                     <input type="text" id="album" name="album" value="${album.nome}"/>
-                    <input type="submit" data-dismiss="modal" value="Criar"/>
+                    <input type="submit" class="btn" data-dismiss="modal" value="Salvar"/>
                 </form>
             </div>
 

@@ -230,7 +230,7 @@
                     <input type="hidden" name="id" value="${multimidias.id}" />
                     <label for="midiaupload">Mídias:</label>
                     <input type=file multiple id="midiaupload" name="midiaupload"/>
-                    <input type="submit" value="Enviar"/>
+                    <input type="submit" class="btn" value="Enviar"/>
                 </form>
             </div>
         </div>
