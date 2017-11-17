@@ -13,31 +13,24 @@ import java.util.Date;
 * @since 25/08/2017
 */
 public class Multimidia {
-    /**
-    * Atributo de idenficação da Multimidia
-    */
+
+    //Atributo de idenficação da Multimidia
     private Integer id;
-    /**
-    * Atributo que armazena no Album na qual a multimidia pertence
-    */
+    //Atributo que armazena no Album na qual a multimidia pertence
     private Album album;
-    /**
-    * Atributo do tipo byte apropriado para armazenar a midia
-    */
+    //Atributo do tipo byte apropriado para armazenar a midia
     private byte[] midia;
-    /**
-    * Atributo para armazenar o tipo do conteudo da midia
-    */
+    //Atributo para armazenar o tipo do conteudo da midia
     private String tipoConteudo;
-    /**
-    * Atributo do tipo Date para armazenar a data da midia
-    */
+    //Atributo do tipo Date para armazenar a data da midia
     private Date data;
+    
     /**
     * Construtor para a classe
     */
     public Multimidia() {
     }
+    
     /**
     * Construtor da classe multimidia com 2 parâmetros
      * @param midia caminho para uma nova midia
@@ -47,6 +40,7 @@ public class Multimidia {
         this.midia = midia;
         this.tipoConteudo = tipoConteudo;
     }
+    
     /**
     * Função que retorna um identificador da multimidia
     * @return identificador da multimidia
@@ -54,6 +48,7 @@ public class Multimidia {
     public Integer getId() {
         return id;
     }
+    
     /**
     * Função de modificia o identificador da multimidia
     * @param id novo identificador de multimidia
@@ -61,6 +56,7 @@ public class Multimidia {
     public void setId(Integer id) {
         this.id = id;
     }
+    
     /**
     * Função que retorna um atributo do tipo byte que armazena uma midia
     * @return a nova midia da multimidia
@@ -68,6 +64,7 @@ public class Multimidia {
     public byte[] getMidia() {
         return midia;
     }
+    
     /**
     * Função que modificia o tipo da midia da multimidia
      * @param midia identificador de mídia
@@ -75,6 +72,7 @@ public class Multimidia {
     public void setMidia(byte[] midia) {
         this.midia = midia;
     }
+    
     /**
     * Função que retorna o nome do tipo de conteudo da multimidia
     * @return o novo tipo de conteudo
@@ -82,12 +80,14 @@ public class Multimidia {
     public String getTipoConteudo() {
         return tipoConteudo;
     }
+    
     /**
     * Função que modifica o tipo de conteudo da multimidia
     */
     public void setTipoConteudo(String tipoConteudo) {
         this.tipoConteudo = tipoConteudo;
     }
+    
     /**
     * Função que retonar uma data em que foi inserida ou alterada a multimidia
     * @return a data da multimidia
@@ -95,12 +95,14 @@ public class Multimidia {
     public Date getData() {
         return data;
     }
+    
     /**
     * Função que modifica a data da multimidia 
     */
     public void setData(Date data) {
         this.data = data;
     }
+    
     /**
     * Função que retorna um Album ao qual a multimidia pertence
     * @return um Album para a midia
@@ -108,6 +110,7 @@ public class Multimidia {
     public Album getAlbum(){
         return album;
     }
+    
     /**
     * Função que modifica o Album ao qual a midia pertence
     */
