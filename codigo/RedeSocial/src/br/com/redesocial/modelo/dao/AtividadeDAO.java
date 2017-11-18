@@ -18,7 +18,7 @@ public class AtividadeDAO extends DAOCRUDBase<Atividade> {
         Connection conexao = getConexao();
 
         PreparedStatement pstmt;
-        pstmt = conexao.prepareStatement("insert into atividades (descricao, tipo, vagas, evento, inicio, fim) values(?,?,?,?,?,?)", Statement.RETURN_GENERATED_KEYS);
+        pstmt = conexao.prepareStatement("update atividades set descricao = ?, tipo = ?, vagas = ?, evento = ?, inicio = ?, fim = ?, where id = ?");
 
         pstmt.setString(1, dto.getDescricao());
         pstmt.setInt(2, dto.getTipo());
