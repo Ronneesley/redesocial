@@ -29,7 +29,7 @@ public class PostagemBO extends BOCRUDBase<Postagem, PostagemDAO> {
         if (dto.getId() == null) throw new Exception("Preencha o campo id");
     }
 
-    public void publicar(Usuario usuario, String mensagem) throws Exception {        
+    public Postagem publicar(Usuario usuario, String mensagem) throws Exception {        
         Postagem postagem = new Postagem();
         postagem.setUps(0);
         postagem.setDowns(0);
@@ -40,6 +40,8 @@ public class PostagemBO extends BOCRUDBase<Postagem, PostagemDAO> {
                 
         PostagemDAO dao = new PostagemDAO();
         dao.inserir(postagem);
+        
+        return postagem;
     }
 }
 

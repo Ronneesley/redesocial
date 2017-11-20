@@ -6,6 +6,7 @@ import br.com.redesocial.modelo.bo.PostagemBO;
 import br.com.redesocial.modelo.dto.Aporte;
 import br.com.redesocial.modelo.dto.Categoria;
 import br.com.redesocial.modelo.dto.Postagem;
+import br.com.redesocial.modelo.dto.Usuario;
 import java.io.IOException;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
@@ -128,10 +129,12 @@ public class AporteControle extends ControleBase {
         Categoria categoria = categoriaBO.selecionar(idCategoria);
         aporte.setCategoria(categoria);
         
+        Usuario usuario = new Usuario();
+        usuario.setId(1);
         
-        Integer idPostagem = Integer.parseInt(request.getParameter("postagem") );
         PostagemBO postagemBO = new PostagemBO();
-        Postagem postagem = postagemBO.selecionar(idPostagem);
+        Postagem postagem = postagemBO.publicar(usuario, request.getParameter("descricao"));
+        
         aporte.setPostagem(postagem);
         
         

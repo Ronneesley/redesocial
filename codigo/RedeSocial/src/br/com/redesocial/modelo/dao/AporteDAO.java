@@ -24,7 +24,7 @@ public class AporteDAO extends DAOCRUDBase<Aporte>  {
         PreparedStatement pstmt;
         pstmt = conexao.prepareStatement("insert into aportes(titulo, categoria, postagem) values (?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
         
-        pstmt.setString(1, "titulo");
+        pstmt.setString(1, a.getTitulo());
         pstmt.setInt(2, a.getCategoria().getId());
         pstmt.setInt(3, a.getPostagem().getId());
         

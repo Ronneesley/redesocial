@@ -14,6 +14,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- -----------------------------------------------------
 -- Schema redesocial
 -- -----------------------------------------------------
+DROP DATABASE IF EXISTS redesocial;
 CREATE SCHEMA IF NOT EXISTS `redesocial` DEFAULT CHARACTER SET utf8 ;
 USE `redesocial` ;
 
@@ -302,7 +303,7 @@ ENGINE = InnoDB;
 -- Table `redesocial`.`aportes`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `redesocial`.`aportes` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `titulo` VARCHAR(80) NOT NULL,
   `categoria` INT NOT NULL,
   `postagem` INT NOT NULL,
