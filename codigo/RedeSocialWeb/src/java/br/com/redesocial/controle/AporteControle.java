@@ -128,10 +128,15 @@ public class AporteControle extends ControleBase {
         Categoria categoria = categoriaBO.selecionar(idCategoria);
         aporte.setCategoria(categoria);
         
+        
         Integer idPostagem = Integer.parseInt(request.getParameter("postagem") );
         PostagemBO postagemBO = new PostagemBO();
         Postagem postagem = postagemBO.selecionar(idPostagem);
         aporte.setPostagem(postagem);
+        
+        
+
+        
         
         request.setAttribute("aporte", aporte);
         
