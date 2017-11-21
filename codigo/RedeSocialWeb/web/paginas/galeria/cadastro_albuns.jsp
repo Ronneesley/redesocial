@@ -190,6 +190,7 @@
     <body id="cantos">
         ${mensagem}
         ${erro}      
+        <input type="hidden" name="usuario" value="${usuario.id}"/>
  
         <div id="cabecalho">                       
             <img src="../../RedeSocialWeb/paginas/galeria/logo_rede.png" class="logo"/>
