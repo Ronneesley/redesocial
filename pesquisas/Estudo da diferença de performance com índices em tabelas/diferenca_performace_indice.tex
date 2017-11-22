@@ -11,8 +11,10 @@
 \usepackage{colortbl}
 
 \usepackage{color}
-\usepackage{colortbl}
-
+\usepackage{float}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{multirow}
+\usepackage{longtable}
 \definecolor{pblue}{rgb}{0.13,0.13,1}
 \definecolor{pgreen}{rgb}{0,0.5,0}
 \definecolor{pred}{rgb}{0.9,0,0}
@@ -34,6 +36,7 @@
   moredelim=[il][\textcolor{pgrey}]{\$\$},
   moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
 }
+
 
 \lstset{ %
   backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
@@ -181,20 +184,38 @@ Antes do uso de índice é preciso pensar na possibilidade de usá-lo ou não, q
 	(É um script que leva muito tempo para ser executado.)
 	\item Código que executa os selects no banco de dados 1, que possui índices:	
 		\lstinputlisting[language=SQL]{recursos/codigo/analise_tempo1.java}
+	\newpage
 	\item Código que executa os selects no banco de dados 2:	
 		\lstinputlisting[language=SQL]{recursos/codigo/analise_tempo2.java}
 		
 \end{itemize}
 
+\newpage
 \section{Resultados}
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[ht]
+\centering
+\caption{Resumo dos Resultados}
+\label{my-label}
+\begin{tabular}{|l|l|l|}
+\hline
+\rowcolor[HTML]{00009B} 
+{\color[HTML]{000000} \textbf{Quant. select}} & {\color[HTML]{000000} \textbf{Com index}} & {\color[HTML]{000000} \textbf{Sem index}} \\ \hline
+10                                            & 75                                        & 23693                                     \\ \hline
+20                                            & 134                                       & 47341                                     \\ \hline
+30                                            & 176                                       & 71003                                     \\ \hline
+40                                            & 248                                       & 94593                                     \\ \hline
+50                                            & 295                                       & 118401                                    \\ \hline
+\end{tabular}
+\end{table}
 
-\begin{itemize}
-
-	\item Média de tempo de consulta sem índices:
-	
-	\item Média de tempo de consulta com índices:	
-	
-\end{itemize}
+\begin{figure}[ht]
+	\label{figura:grafico}
+	\centering
+	\includegraphics[width=15cm]{recursos/imagens/grafico.png} 
+\end{figure}
 
 \section{Conclusão}
 

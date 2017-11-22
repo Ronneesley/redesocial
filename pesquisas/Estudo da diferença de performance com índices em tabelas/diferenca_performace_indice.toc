@@ -6,6 +6,6 @@
 \contentsline {subsection}{\numberline {3.2}Desvantagens}{3}
 \contentsline {section}{\numberline {4}Teste Proposto}{4}
 \contentsline {section}{\numberline {5}C\IeC {\'o}digos Utilizados}{4}
-\contentsline {section}{\numberline {6}Resultados}{8}
-\contentsline {section}{\numberline {7}Conclus\IeC {\~a}o}{8}
-\contentsline {section}{\numberline {8}Refer\IeC {\^e}ncias Bibliogr\IeC {\'a}ficas}{9}
+\contentsline {section}{\numberline {6}Resultados}{9}
+\contentsline {section}{\numberline {7}Conclus\IeC {\~a}o}{9}
+\contentsline {section}{\numberline {8}Refer\IeC {\^e}ncias Bibliogr\IeC {\'a}ficas}{10}
