@@ -163,7 +163,7 @@ public class MultimidiaControle extends ControleBase {
             
             request.setAttribute("album", album);
         } catch (Exception e) {
-            request.setAttribute("errro", e.getMessage());
+            request.setAttribute("erro", e.getMessage());
         }
         RequestDispatcher rd = request.getRequestDispatcher("paginas/galeria/cadastro_fotos.jsp");
         rd.forward(request, response);
