@@ -8,6 +8,7 @@ import br.com.redesocial.modelo.dto.Usuario;
 import br.com.redesocial.modelo.utilitarios.Utilitarios;
 import java.io.File;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -162,7 +163,7 @@ public class MultimidiaControle extends ControleBase {
             
             request.setAttribute("album", album);
         } catch (Exception e) {
-            request.setAttribute("errro", e.getMessage());
+            request.setAttribute("erro", e.getMessage());
         }
         RequestDispatcher rd = request.getRequestDispatcher("paginas/galeria/cadastro_fotos.jsp");
         rd.forward(request, response);
