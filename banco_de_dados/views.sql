@@ -310,3 +310,13 @@ CREATE OR REPLACE VIEW `intervalo_idades_com_percentual` AS
 	 union
 	 select '65+' as intervalo, sum(quantidade) as qtde, (select sum(quantidade))*100/(select sum(quantidade) 
 	 from publico_alvo)as  percentual from publico_alvo where idade > 65;
+/**
+ * View da quantidade de presença por evento
+ * @author Willian Wallace de Matteus Silva e Salmi Nunes
+ */
+ 
+ SELECT count(presenca_evento.presenca) as total, 
+(select count(presenca_evento.presenca) from presenca_evento where presenca_evento.presenca=1 ) as presentes,
+(presentes * 100 / total) as porcentos
+ from presenca_evento
+ 
