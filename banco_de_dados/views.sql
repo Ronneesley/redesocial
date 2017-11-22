@@ -268,3 +268,20 @@ create view `usuariosQtdeRelacionamentos` as (
 	group by u.nome
 	order by u.nome asc
 );
+
+/**
+ * View da quantidade de postagens de um usuário
+ * @author Adallberto Lucena Moura
+ */
+ 
+ CREATE OR REPLACE VIEW postagens_por_usuario AS
+
+SELECT 
+	usuarios.id AS id_usuario, 
+	usuarios.nome AS usuario, 
+    COUNT(postagens.id) AS qtde_postagens
+FROM usuarios
+	LEFT JOIN postagens ON postagens.usuario = usuarios.id
+   	GROUP BY usuarios.id;
+
+
