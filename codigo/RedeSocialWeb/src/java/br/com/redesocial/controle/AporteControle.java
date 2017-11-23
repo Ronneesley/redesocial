@@ -136,11 +136,7 @@ public class AporteControle extends ControleBase {
         Postagem postagem = postagemBO.publicar(usuario, request.getParameter("descricao"));
         
         aporte.setPostagem(postagem);
-        
-        
-
-        
-        
+      
         request.setAttribute("aporte", aporte);
         
         List categorias = categoriaBO.listar();            
@@ -188,7 +184,7 @@ public class AporteControle extends ControleBase {
             request.setAttribute("erro", ex.getMessage());
         }
 
-        RequestDispatcher rd = request.getRequestDispatcher("/RedeSocialWeb/paginas/aportes/listagem.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("/paginas/aportes/listagem.jsp");
         rd.forward(request, response);
     }
 
@@ -221,7 +217,7 @@ public class AporteControle extends ControleBase {
             request.setAttribute("erro", ex.getMessage());
         }
 
-        RequestDispatcher rd = request.getRequestDispatcher("/RedeSocialWeb/paginas/aportes/cadastro.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("/paginas/aportes/cadastro.jsp");
         rd.forward(request, response);
     }
 

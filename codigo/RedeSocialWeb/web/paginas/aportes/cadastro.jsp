@@ -30,6 +30,7 @@
 		<div id="meio">
                     <form action="AporteControle?operacao=Cadastrar" method="post">
                         ${mensagem}
+                        ${erro}
 
                         ${erro}
                         <h1 id="center"> Cria&ccedil;&abreve;o de novo aporte</h1>
