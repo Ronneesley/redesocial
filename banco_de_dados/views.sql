@@ -268,3 +268,55 @@ create view `usuariosQtdeRelacionamentos` as (
 	group by u.nome
 	order by u.nome asc
 );
+
+/**
+ * View da quantidade de postagens de um usuário
+ * @author Adallberto Lucena Moura
+ */
+ 
+ CREATE OR REPLACE VIEW postagens_por_usuario AS
+
+SELECT 
+	usuarios.id AS id_usuario, 
+	usuarios.nome AS usuario, 
+    COUNT(postagens.id) AS qtde_postagens
+FROM usuarios
+	LEFT JOIN postagens ON postagens.usuario = usuarios.id
+   	GROUP BY usuarios.id;
+
+/**
+ * View do intervalo de idades segundo o painel final (administrativo)
+ * @author Salmi Nunes e Willian
+ */
+
+CREATE OR REPLACE VIEW `intervalo_idades_com_percentual` AS 
+	 select '-18' as intervalo, sum(quantidade) as qtde, (select sum(quantidade))*100/(select sum(quantidade) 
+	 from publico_alvo)as  percentual from publico_alvo where idade < 18
+	 union
+	 select '18 - 24' as intervalo, sum(quantidade) as qtde, (select sum(quantidade))*100/(select sum(quantidade) 
+	 from publico_alvo)as  percentual from publico_alvo where idade >= 18 and idade <= 24
+	 union
+	 select '25 - 34' as intervalo, sum(quantidade) as qtde, (select sum(quantidade))*100/(select sum(quantidade) 
+	 from publico_alvo)as  percentual from publico_alvo where idade >= 25 and idade <= 34
+	 union
+	 select '35 - 44' as intervalo, sum(quantidade) as qtde, (select sum(quantidade))*100/(select sum(quantidade) 
+	 from publico_alvo)as  percentual from publico_alvo where idade >= 35 and idade <= 44
+	 union
+	 select '45 - 54' as intervalo, sum(quantidade) as qtde, (select sum(quantidade))*100/(select sum(quantidade) 
+	 from publico_alvo)as  percentual from publico_alvo where idade >= 45 and idade <= 54
+	 union
+	 select '55 - 64' as intervalo, sum(quantidade) as qtde, (select sum(quantidade))*100/(select sum(quantidade) 
+	 from publico_alvo)as  percentual from publico_alvo where idade >= 55 and idade <= 64
+	 union
+	 select '65+' as intervalo, sum(quantidade) as qtde, (select sum(quantidade))*100/(select sum(quantidade) 
+	 from publico_alvo)as  percentual from publico_alvo where idade > 65;
+/**
+ * View da quantidade de presença por evento
+ * @author Willian Wallace de Matteus Silva e Salmi Nunes
+ */
+ 
+ SELECT count(presenca_evento.presenca) as total, 
+(select count(presenca_evento.presenca) from presenca_evento where presenca_evento.presenca=1 ) as presentes,
+(presentes * 100 / total) as porcentos
+ from presenca_evento
+ 

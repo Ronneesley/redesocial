@@ -4,16 +4,17 @@ import br.com.redesocial.modelo.bo.AlbumBO;
 import br.com.redesocial.modelo.bo.MultimidiaBO;
 import br.com.redesocial.modelo.dto.Album;
 import br.com.redesocial.modelo.dto.Multimidia;
+import br.com.redesocial.modelo.dto.Usuario;
 import br.com.redesocial.modelo.utilitarios.Utilitarios;
 import java.io.File;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.fileupload.FileItem;
@@ -25,7 +26,7 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
  * @author Daniel
  */
 @WebServlet(name = "MultimidiaControle", urlPatterns = {"/MultimidiaControle"})
-public class MultimidiaControle extends HttpServlet {
+public class MultimidiaControle extends ControleBase {
     // Configurações de upload
     // Limite de memória
     private static final int MEMORY_THRESHOLD = 1024 * 1024 * 300; 	// 3MB
@@ -157,9 +158,12 @@ public class MultimidiaControle extends HttpServlet {
             AlbumBO albumBO = new AlbumBO();
             Album album = albumBO.selecionar(id);
             
+            Usuario usuario = getUsuario(request);
+            request.setAttribute("usuario", usuario);
+            
             request.setAttribute("album", album);
         } catch (Exception e) {
-            request.setAttribute("errro", e.getMessage());
+            request.setAttribute("erro", e.getMessage());
         }
         RequestDispatcher rd = request.getRequestDispatcher("paginas/galeria/cadastro_fotos.jsp");
         rd.forward(request, response);
@@ -210,6 +214,9 @@ public class MultimidiaControle extends HttpServlet {
         
         AlbumBO albumBO = new AlbumBO();
         Album album = new Album();
+        
+        Usuario usuario = getUsuario(request);
+        request.setAttribute("usuario", usuario);
         
         try {
             // analisa o conteÃºdo do pedido para extrair dados do arquivo

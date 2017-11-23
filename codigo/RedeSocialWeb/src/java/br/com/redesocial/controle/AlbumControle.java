@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author Daniel Moreira Cardoso
  */
 @WebServlet(name = "AlbumControle", urlPatterns = {"/AlbumControle"})
-public class AlbumControle extends HttpServlet {
+public class AlbumControle extends ControleBase {
 
     /**
     * Processa todas as requisições sejam elas do tipo GET ou POST
@@ -105,6 +105,8 @@ public class AlbumControle extends HttpServlet {
         try {
             Album album = new Album();
             
+            Usuario usuario = getUsuario(request);
+            request.setAttribute("usuario", usuario);
             request.setAttribute("album", album);
         } catch (Exception e) {
             request.setAttribute("erro", e.getMessage());
@@ -132,8 +134,7 @@ public class AlbumControle extends HttpServlet {
         
         album.setData(new Date());
         
-        Usuario usuario = new Usuario();
-        usuario.setId(1);
+        Usuario usuario = getUsuario(request);
         album.setUsuario(usuario);
         
         if(album.getId()==null){
@@ -153,9 +154,13 @@ public class AlbumControle extends HttpServlet {
     * @throws IOException se ocorre um erro de entrada e saída
     */
     private void listar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Usuario usuario = getUsuario(request);
+        
         try{
             AlbumBO bo = new AlbumBO();
-            List album = bo.listarAlbunsPessoais(1);
+            List album = bo.listarAlbunsPessoais(usuario.getId());
+
+            request.setAttribute("usuario", usuario);
             
             request.setAttribute("album", album);
         }catch (Exception ex){
@@ -190,6 +195,9 @@ public class AlbumControle extends HttpServlet {
             
             AlbumBO bo = new AlbumBO();
             Album album = bo.selecionar(id);
+            
+            Usuario usuario = getUsuario(request);
+            request.setAttribute("usuario", usuario);
             
             request.setAttribute("album", album);
             request.setAttribute("mensagem", "Registro Selecionado com sucesso!");

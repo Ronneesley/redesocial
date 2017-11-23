@@ -190,6 +190,8 @@
     <body id="cantos">
         ${mensagem}
         ${erro}      
+        
+        <input type="hidden" name="usuario" value="${usuario.id}"/>
  
         <div id="cabecalho">                       
             

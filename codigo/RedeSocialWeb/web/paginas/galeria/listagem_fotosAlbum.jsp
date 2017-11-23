@@ -210,6 +210,8 @@
         ${mensagem}
         ${erro}
         
+        <input type="hidden" name="usuario" value="${usuario.id}"/>
+        
         <div id="cabecalho">
             <input type="hidden" value="${album.id}" name="album"/>
             <img src="../../RedeSocialWeb/paginas/galeria/logo_rede.png" class="logo"/>
