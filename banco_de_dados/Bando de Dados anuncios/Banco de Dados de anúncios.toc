@@ -1,0 +1,7 @@
+\select@language {brazil}
+\contentsline {section}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{2}
+\contentsline {section}{\numberline {2}DER}{2}
+\contentsline {section}{\numberline {3}Como funciona?}{2}
+\contentsline {subsection}{\numberline {3.1}anuncio.sql}{3}
+\contentsline {subsection}{\numberline {3.2}inserts.sql}{3}
+\contentsline {subsection}{\numberline {3.3}view.sql}{4}

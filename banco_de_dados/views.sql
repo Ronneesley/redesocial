@@ -315,8 +315,8 @@ CREATE OR REPLACE VIEW `intervalo_idades_com_percentual` AS
  * @author Willian Wallace de Matteus Silva e Salmi Nunes
  */
  
- SELECT count(presenca_evento.presenca) as total, 
+CREATE OR REPLACE VIEW `percentual_presenca_evento` AS 
+(SELECT count(presenca_evento.presenca) as total, 
 (select count(presenca_evento.presenca) from presenca_evento where presenca_evento.presenca=1 ) as presentes,
-(presentes * 100 / total) as porcentos
- from presenca_evento
- 
+((select count(presenca_evento.presenca) from presenca_evento where presenca_evento.presenca=1 ) / (select count(presenca_evento.presenca)) *100)as percentual
+ from presenca_evento);
