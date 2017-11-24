@@ -197,7 +197,7 @@ public class ComentarioBOTest {
             ComentarioBO comentarioBO = new ComentarioBO();
              
             try{                               
-                comentarioBO.inserir(comentario);
+                bo.inserir(comentario);
             } catch(Exception ex){
               fail("Falha ao inserir um comentário: " + ex.getMessage());
             }
