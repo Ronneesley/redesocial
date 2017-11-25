@@ -64,5 +64,9 @@ public class TiposAtividades {
    public void getRestricao(Boolean restricao){
        this.restricao = restricao;
    }
+
+    public boolean getRescricao() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
 
