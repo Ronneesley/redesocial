@@ -7,8 +7,8 @@ package br.com.redesocial.modelo.dao;
 
 
 
-import br.com.redesocial.modelo.dto.Grupo;
 import br.com.redesocial.modelo.dto.TipoAtividade;
+import br.com.redesocial.modelo.dto.TiposAtividades;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -35,8 +35,7 @@ public class TipoAtividadeDAO extends DAOCRUDBase <TipoAtividade> {
 
         t.setId(getId(pstmt));
     }
-    @Override
-    public void alterar(TipoAtividade t) throws Exception {
+    public void alterar(TiposAtividades t) throws Exception {
         Connection conexao = getConexao();        
 
         PreparedStatement pstmt;
@@ -97,7 +96,7 @@ public class TipoAtividadeDAO extends DAOCRUDBase <TipoAtividade> {
        lista = new ArrayList();
 
        while (rs.next()){
-           Grupo t = new Grupo();
+           TiposAtividades t = new TiposAtividades();
            t.setId(rs.getInt("id"));
            t.setNome(rs.getString("nome"));
 
@@ -105,5 +104,10 @@ public class TipoAtividadeDAO extends DAOCRUDBase <TipoAtividade> {
        }
        return lista;
     }    
+
+    @Override
+    public void alterar(TipoAtividade dto) throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
