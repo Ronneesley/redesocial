@@ -320,3 +320,67 @@ CREATE OR REPLACE VIEW `percentual_presenca_evento` AS
 (select count(presenca_evento.presenca) from presenca_evento where presenca_evento.presenca=1 ) as presentes,
 ((select count(presenca_evento.presenca) from presenca_evento where presenca_evento.presenca=1 ) / (select count(presenca_evento.presenca)) *100)as percentual
  from presenca_evento);
+ 
+ 
+/**
+ * 3 Views para mostrar a porcentagem de presentes em cada atividade de determinado evento em relacao inscritos/presentes
+ * @author Willian Wallace de Matteus Silva e Salmi Nunes
+ */ 
+ /* ------------------------------------------------------------------------------------------------------------- */
+ CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `root`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `redesocial`.`contar_inscricao_atividade` AS
+    (SELECT 
+        `redesocial`.`atividades`.`id` AS `id`,
+        `redesocial`.`atividades`.`descricao` AS `descricao`,
+        COUNT(0) AS `inscricoes`
+    FROM
+        (`redesocial`.`presenca_atividade`
+        JOIN `redesocial`.`atividades`)
+    WHERE
+        ((`redesocial`.`presenca_atividade`.`atividade` = `redesocial`.`atividades`.`id`)
+            AND (`redesocial`.`atividades`.`evento` = 1))
+    GROUP BY `redesocial`.`atividades`.`id`);
+	
+	
+	CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `root`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `redesocial`.`contar_presenca_atividade` AS
+    (SELECT 
+        `redesocial`.`atividades`.`id` AS `id`,
+        `redesocial`.`atividades`.`descricao` AS `descricao`,
+        COUNT(0) AS `presencas`
+    FROM
+        (`redesocial`.`presenca_atividade`
+        JOIN `redesocial`.`atividades`)
+    WHERE
+        ((`redesocial`.`presenca_atividade`.`atividade` = `redesocial`.`atividades`.`id`)
+            AND (`redesocial`.`presenca_atividade`.`presenca` = 1)
+            AND (`redesocial`.`atividades`.`evento` = 1))
+    GROUP BY `redesocial`.`atividades`.`id`)
+	
+	
+	CREATE 
+    ALGORITHM = UNDEFINED 
+    DEFINER = `root`@`localhost` 
+    SQL SECURITY DEFINER
+VIEW `redesocial`.`percentual_presenca_atividades` AS
+    (SELECT 
+        `contar_inscricao_atividade`.`id` AS `id`,
+        `contar_inscricao_atividade`.`descricao` AS `descricao`,
+        `contar_inscricao_atividade`.`inscricoes` AS `inscricoes`,
+        `contar_presenca_atividade`.`presencas` AS `presencas`,
+        ((`contar_presenca_atividade`.`presencas` / `contar_inscricao_atividade`.`inscricoes`) * 100) AS `porcentagem_presente`
+    FROM
+        (`redesocial`.`contar_inscricao_atividade`
+        JOIN `redesocial`.`contar_presenca_atividade`)
+    WHERE
+        (`contar_inscricao_atividade`.`id` = `contar_presenca_atividade`.`id`))
+		
+/* ------------------------------------------------------------------------------------------------------ */
+ 
+ 
