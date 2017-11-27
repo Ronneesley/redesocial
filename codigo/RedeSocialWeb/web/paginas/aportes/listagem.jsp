@@ -142,25 +142,25 @@
             <br/>            
 
             <c:if test="${lista != null}">
-                <c:forEach items="${lista}" var="aporte">
+                <c:forEach items="${lista}" var="aportes">
 					<table border="0">                    
                         <tr>
-							<th style="font-family: arial;">${aporte.titulo}</th>							
-						</tr>
-						
-						<tr>                        
-							<td style="font-family: arial;">${postagem.descricao}</td>
-						</tr>
-						
-						<tr>
-							<td style="font-family: arial;"> Por ${usuario.nome} </td>
-						</tr>
-						<tr>
-							<td style="font-family: arial;"> ${postagem.data} </td>
-						</tr>
-						<tr>
-							<td style="font-family: arial;"> ${postagem.visualizacoes} visualiza&ccedil;&otilde;es</td>
-						</tr>
+                                <th style="font-family: arial;">${aporte.titulo}</th>							
+                        </tr>
+
+                        <tr>                        
+                                <td style="font-family: arial;">${postagem.descricao}</td>
+                        </tr>
+
+                        <tr>
+                                <td style="font-family: arial;"> Por ${usuario.nome} </td>
+                        </tr>
+                        <tr>
+                                <td style="font-family: arial;"> ${postagem.data} </td>
+                        </tr>
+                        <tr>
+                                <td style="font-family: arial;"> ${postagem.visualizacoes} visualiza&ccedil;&otilde;es</td>
+                        </tr>
 						<!-- 
 						<tr>
                             <td style="font-family: arial;">${aporte.titulo}</td>

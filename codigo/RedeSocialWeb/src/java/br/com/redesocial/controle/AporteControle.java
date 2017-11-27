@@ -177,9 +177,9 @@ public class AporteControle extends ControleBase {
     private void listar(HttpServletRequest request, HttpServletResponse response) throws Exception {
         try {
             AporteBO bo = new AporteBO();
-            List artigos = bo.listar();
+            List aportes = bo.listar();
 
-            request.setAttribute("lista", artigos);
+            request.setAttribute("lista", aportes);
         } catch (Exception ex){
             request.setAttribute("erro", ex.getMessage());
         }
