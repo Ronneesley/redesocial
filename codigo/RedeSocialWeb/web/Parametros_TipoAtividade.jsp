@@ -4,8 +4,8 @@
     Author     : Jose Gilvan
 --%>
 
-<% String Tipo_De_Atividade = request.getParameter("Tipo De Atividade"); %> <!-- a variavel nome recebe um parametro do request(requisiçao do cliente) informara um nome como parametro da pagina-->
-<% String Restricao = request.getParameter("Restrição"); %>
+<% String Tipo_De_Atividade = request.getParameter("Tipo De Atividade"); %> 
+<% String Restricao = request.getParameter("RestriÃ§Ã£o"); %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,6 +15,6 @@
     </head>
     <body>
         <h1> Tipo De Atividade:<%= Tipo_De_Atividade %></h1>
-        <h1> Restriçao:<%= Restricao %></h1>
+        <h1> RestriÃ§ao:<%= Restricao %></h1>
     </body>
 </html>
