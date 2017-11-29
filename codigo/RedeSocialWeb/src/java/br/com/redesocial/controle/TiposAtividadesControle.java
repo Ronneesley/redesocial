@@ -5,13 +5,14 @@
  */
 package br.com.redesocial.controle;
 
+import br.com.redesocial.modelo.bo.TiposAtividadesBO;
+import br.com.redesocial.modelo.dto.TiposAtividades;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -20,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author Inimigo
  */
 @WebServlet(name = "TiposAtividadesControle", urlPatterns = {"/TiposAtividadesControle"})
-public class TiposAtividadesControle extends HttpServlet {
+public class TiposAtividadesControle extends ControleBase {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -59,9 +60,10 @@ public class TiposAtividadesControle extends HttpServlet {
                 ex.printStackTrace();
             }
         }
-    }
+
+
     
-private void criarNovo(HttpServletRequest request, HttpServletResponse response) throws Exception{
+    private void criarNovo(HttpServletRequest request, HttpServletResponse response) throws Exception{
         try {
            TiposAtividades tiposatividades = new TiposAtividades();
 
@@ -72,7 +74,7 @@ private void criarNovo(HttpServletRequest request, HttpServletResponse response)
 
         mostrar(request, response, "paginas/tiposatividades/cadastro.jsp");
     }
-private void cadastrar(HttpServletRequest request, HttpServletResponse response) throws Exception{
+    private void cadastrar(HttpServletRequest request, HttpServletResponse response) throws Exception{
         TiposAtividades tiposatividades = new TiposAtividades();
 
         if (!"".equals(request.getParameter("id").trim())){
@@ -92,7 +94,7 @@ private void cadastrar(HttpServletRequest request, HttpServletResponse response)
         RequestDispatcher rd = request.getRequestDispatcher("paginas/tiposatividades/cadastro.jsp");
         rd.forward(request, response);
     }
-private void inserir(TiposAtividades tiposatividades, HttpServletRequest request, HttpServletResponse response) throws Exception{
+    private void inserir(TiposAtividades tiposatividades, HttpServletRequest request, HttpServletResponse response) throws Exception{
         try {
             TiposAtividadesBO tiposatividadesBO = new TiposAtividadesBO();
             tiposatividadesBO.inserir(tiposatividades);
@@ -102,7 +104,7 @@ private void inserir(TiposAtividades tiposatividades, HttpServletRequest request
             request.setAttribute("erro", ex.getMessage());
         }
     }
-private void alterar(TiposAtividades tiposatividades, HttpServletRequest request, HttpServletResponse response) throws Exception{
+    private void alterar(TiposAtividades tiposatividades, HttpServletRequest request, HttpServletResponse response) throws Exception{
         try {
             TiposAtividadesBO tiposatividadesBO = new TiposAtividadesBO();
             tiposatividadesBO.alterar(tiposatividades);
@@ -112,7 +114,7 @@ private void alterar(TiposAtividades tiposatividades, HttpServletRequest request
             request.setAttribute("erro", ex.getMessage());
         }
     }
-private void editar(HttpServletRequest request, HttpServletResponse response) throws Exception{
+    private void editar(HttpServletRequest request, HttpServletResponse response) throws Exception{
         try {
             Integer id = Integer.parseInt(request.getParameter("id"));
 
@@ -129,7 +131,7 @@ private void editar(HttpServletRequest request, HttpServletResponse response) th
         RequestDispatcher rd = request.getRequestDispatcher("paginas/tiposatividades/cadastro_tiposatividades.jsp");
         rd.forward(request, response);
     }
-private void listar(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    private void listar(HttpServletRequest request, HttpServletResponse response) throws Exception {
         try {
             TiposAtividadesBO bo = new TiposAtividadesBO();
             List tiposatividades = bo.listar();
@@ -142,7 +144,7 @@ private void listar(HttpServletRequest request, HttpServletResponse response) th
         RequestDispatcher rd = request.getRequestDispatcher("paginas/paises/listagem_paises.jsp");
         rd.forward(request, response);
     }
-private void excluir(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    private void excluir(HttpServletRequest request, HttpServletResponse response) throws Exception {
         try {
             Integer id = Integer.parseInt(request.getParameter("id"));
 
@@ -156,7 +158,7 @@ private void excluir(HttpServletRequest request, HttpServletResponse response) t
 
         this.listar(request, response);
     }
-} /**
+ /**
      * Requisições do tipo GET
      * @param request requisição
      * @param response resposta
@@ -164,7 +166,7 @@ private void excluir(HttpServletRequest request, HttpServletResponse response) t
      * @throws java.io.IOException se ocorre um erro de entrada e saída
      */
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
         processRequest(request, response);
     }
@@ -191,3 +193,4 @@ private void excluir(HttpServletRequest request, HttpServletResponse response) t
         return "Servlet para TiposAtividades";
     }
 }
+
