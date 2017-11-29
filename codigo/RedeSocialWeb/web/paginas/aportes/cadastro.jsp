@@ -48,7 +48,7 @@
                             <br/>
                            
                             <select id="center" name="categorias">
-                                <option value="Selecione a categoria">Selecione a categoria</option>
+                                <option value="">Selecione a categoria</option>
                                 <c:forEach items="${categorias}" var="categoria">
                                     <option value="${categoria.id}">${categoria.descricao}</option>
                                 </c:forEach>
