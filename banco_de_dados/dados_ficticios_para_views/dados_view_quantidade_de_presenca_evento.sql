@@ -53,3 +53,27 @@ INSERT INTO `redesocial`.`presenca_evento` (`presenca`, `evento`, `usuario`) VAL
 INSERT INTO `redesocial`.`presenca_evento` (`presenca`, `evento`, `usuario`) VALUES ('0', '1', '8');
 INSERT INTO `redesocial`.`presenca_evento` (`presenca`, `evento`, `usuario`) VALUES ('0', '1', '9');
 INSERT INTO `redesocial`.`presenca_evento` (`presenca`, `evento`, `usuario`) VALUES ('0', '1', '10');
+
+
+
+
+--presenca_atividades
+INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('0', '1', '10');
+INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('1', '2', '10');
+INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('1', '3', '10');
+INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('0', '1', '11');
+INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('1', '1', '9');
+INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('1', '1', '7');
+INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('1', '1', '6');
+INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('1', '1', '5');
+INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('1', '1', '4');
+INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('1', '2', '4');
+INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('1', '2', '8');
+INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('0', '2', '7');
+INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('0', '2', '6');
+INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('0', '2', '9');
+INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('0', '2', '13');
+INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('1', '2', '12');
+INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('0', '2', '11');
+INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('1', '2', '3');
+INSERT INTO `redesocial`.`presenca_atividade` (`presenca`, `atividade`, `usuario`) VALUES ('1', '2', '5');
