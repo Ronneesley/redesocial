@@ -1,8 +1,8 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE><!DOCTYPE html>
 <html lang="pt-BR">
 	<head>
 		<meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Tipo de Atividade</title>
 
 		<style>
@@ -84,27 +84,30 @@ select{
 </style>
 	</head>
 		<body>
-			<form action="#" method="post">
+			<form action="TiposAtividadesControle?operacao=Cadastrar" method="post">
+                            <input type="hidden" name="id" value="${tiposAtividades.id}" />
 				<fieldset>
 					<h3>Tipo de Atividade</h3>
 					<!--Campos-->
 					<div class="campo">
-						<label for="atividade">Atividade:</label>
-						<input type="text" name="atividade" id="atividade">
+						<label for="tiposAtividades">Atividade:</label>
+                                                <input type="text" name="nome" id="tiposAtividades" value="${tipos.Atividades.nome}">
 					</div>
 						<div class="campo">
 							<label for="restricao">Restri&ccedil&atildeo:</label>
-							<select name="restricao" id="restricao">
+							<select name="restricao" id="restricao" value="${tiposAtividades.restricao}">
 								<option value="sim">Sim</option>
 								<option value="nao">N&atildeo</option>
 							</select>
 						</div>
 							<div class="cancelar">
-								<button type="submit" name="submit" id="cancelar">Cancelar</button>
+								<button type="reset" name="submit" id="cancelar">Cancelar</button>
 							</div>
 							<div class="salvar">
 								<button type="submit" name="submit2" id="salvar">Salvar</button>
 							</div>
+                                        <br> ${mensagem}
+                                             ${erro}
 				</fieldset>
 			</form>
 		</body>
