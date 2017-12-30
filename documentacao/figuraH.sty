@@ -1,0 +1,24 @@
+%%
+% Macros necessários ao projeto
+% Autor: Gusttavo Nunes Gomes
+% Data: 27/10/2017
+%%
+
+
+
+%\figura{Identificação da figura}{Tamanho da Largura da Figura em centimetros}{Local onde a Figura está armazenada}{Legenda da Figura}
+%
+%
+
+
+\newcommand{\figuraH}[4]{
+	\begin{figure}[H] 
+		\caption{#4}
+		\label{figura:#1}
+		\centering
+		\includegraphics[width=#2cm]{#3}
+	\end{figure}
+}
+
+
+

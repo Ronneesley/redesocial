@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Rede Social</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+        
+        		#geral{
+        			margin:0 auto;
+        			width: 1170px;
+        		}
+				
+				#barra_ferramentas{
+					width: 1032px;
+					background-color: #eee;
+					padding: 10px;
+					border-radius: 3px;
+					float: top;
+					margin-top: 5px;
+					margin-bottom: 5px;
+				}				
+				
+				#buscar_timeline{
+					margin-left:15px;									
+				}
+				
+				#icones_timeline{
+					float: center;
+					margin-left: 15px;
+					border-radius: 3px;
+				}
+				
+				#icones_perfil{
+					float: right;
+					margin-right: 15px;
+					border-radius: 3px;
+				}
+				
+        		#bloco_esquerda{
+        			background-color: #eee;			
+        			padding: 10px;	
+        			border: 1px solid #666;
+					border-radius: 3px;
+					margin-bottom: 10px;
+					float: left;
+					width: 200px;	
+					margin-right: 15px;
+        		}
+        		
+        		#bloco_direita{
+					background-color: #eee;			
+					padding: 10px;	
+					border: 1px solid #666;
+					border-radius: 3px;
+					margin-bottom: 10px;
+					float: left;
+					width: 200px;	
+					margin-left: 15px;
+        		}
+              
+        
+            #timeline {
+				width: 580px;
+				float: left;
+							
+            }
+            .post {
+				background-color: #eee;
+				padding: 10px;
+				border: 1px solid #666;
+				border-radius: 50px;
+				margin-bottom: 10px;
+				float: left;
+            }
+            #container-post{
+                width: 100%;
+                height: auto;
+                float: left;
+                text-align: justify;
+            }
+            #container-post #avatar{
+                width: 20%;
+                height: 100px;
+                float: left;
+            }
+            #container-post #info{
+                width: 70%;
+                height: auto;
+                float: left;
+                margin-top: 35px;
+				font-family: verdana;
+				font-size: 12px;
+            }
+			
+			#sugestao{
+				width: 60%;
+                height: auto;
+                float: right;
+				font-family: verdana;
+				font-size: 12px;
+			}
+			
+			#reacao{
+				height: 8px;
+				background-color: #eee;
+				padding-bottom: 10px;
+				border: 1px solid #666;
+				border-radius: 3px;
+				
+			}
+			
+			#comentario{ 
+				margin-top: 5px;
+                float: left;              
+			}
+			
+			#comentario_info{
+				margin-top: 5px;
+                height: auto;
+                float: left;
+				font-family: verdana;
+				font-size: 12px;                
+			}
+			
+			#comentario_tempo{
+				margin-left: 3px;
+				margin-top: 7px;
+				width: 60%;
+                height: auto;
+                float: left;
+				font-family: verdana;
+				font-size: 10px;                
+			}
+			
+			#caixa_comentario{
+				width: 87%;
+				background-color: #eee;
+				padding: 5px;
+				border: 1px solid #666;
+				border-radius: 3px;
+				margin-top: 5px;
+				float: left;
+			}
+			
+			#procastinando{
+				width: 560px;
+				height: 80px;
+				float: left;
+				background-color: #eee;
+				padding: 10px;
+				border: 1px solid #666;
+				border-radius: 30px;
+				margin-bottom: 10px;
+				float: left;
+			}
+			
+			.procas{
+				margin-top: 5px;
+				margin-left:25px;
+                height: auto;
+                float: left;
+				font-family: verdana;
+				font-size: 19px;
+			}
+			
+			#caixa_status{
+				width: 90%;
+				height: 70%;
+				background-color: #eee;
+				padding: 5px;
+				border: 1px solid #666;
+				border-radius: 3px;
+				margin-top: 5px;
+				margin-bottom: 5px;
+				float: left;
+			}
+			
+	</style>
+    </head>
+    <body>
+    <div id="geral">
+			
+    	<div id="barra_ferramentas">
+			<img src="imagens/logo2.png" alt="imagem da logo" width="124px" height="24px;" />			
+			<input id="buscar_timeline" type="text" name="buscar" size="40" value="Buscar">	
+			<a href="teste_link.html" target="_blank"><img id="icones_timeline" src="imagens/icones1.jpg" alt="imagens dos icones" width="30px" height="30px;"/></a>
+			<a href="./solicitacaoAmizade.html" ><img id="icones_timeline" src="imagens/icones2.jpg" alt="imagens dos icones" width="30px" height="30px;"/></a>
+			<a href="./mensagem.html"><img id="icones_timeline" src="imagens/icones3.jpg" alt="imagens dos icones" width="30px" height="30px;"/></a>
+			<a href="./perfil.html"><img id="icones_perfil" src="imagens/icones4.jpg" alt="imagens dos icones" width="50px" height="40px;"/></a>
+		</div>
+    	
+    	<div id="bloco_esquerda">
+    		<p><a href="./perfil.html">Perfil</a></p>
+    		<p><a href="teste_link.html" target="_blank">Notícias</a></p>
+    		<p><a href="./mensagem.html" >Mensagens</a></p>
+    		<p><a href="teste_link.html" target="_blank">Amigos</a></p>
+    		<p><a href="./CriarGrupo.html">Grupos</a></p>
+    		<p><a href="./CriarGrupo.html">Grupos</a></p>
+    		<p><a href="./galeria.html" >Minhas Fotos</a></p>
+    		<p><a href="teste_link.html" target="_blank">Páginas</a></p>
+			<p><a href="teste_link.html" target="_blank">Links Salvos</a></p>
+    		
+    	</div>
+    	
+    		
+        <div id="timeline">
+								
+			<div id="procastinando">
+	
+				<input class="procas" id="caixa_status" type="text" value="Poque você está procastinando?">
+			
+			</div>
+			
+            <div class="post">
+                <div id="container-post">    
+                    <div id="avatar">
+                        <img src="imagens/usuario.jpg" width="100px" height="100px;" alt="foto do usuario" style="border-radius: 50%;" />
+                    </div>
+                    <div id="info">
+                        Felipe Noronha<br />
+                        50 min <br />
+                        Patrocinado
+                    </div>
+                </div>
+                <div id="container-post">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacus purus, finibus a arcu sit amet, maximus vulputate dui. Maecenas iaculis quam metus, ac congue quam fermentum non. Sed vitae ante et lorem tempor laoreet. Nullam dignissim egestas egestas. Cras rutrum elementum tempus. Aliquam blandit mattis velit nec mollis. Fusce posuere tortor sed nisl sollicitudin pellentesque at sed purus. Suspendisse potenti. Morbi lacinia rutrum nisl a dignissim. Sed consectetur dictum libero, vel pulvinar lorem venenatis non. Proin euismod, leo id cursus dictum, ipsum arcu malesuada nisi, vitae cursus ligula enim nec magna. Pellentesque bibendum semper dictum. Etiam porttitor, odio faucibus porta sodales, quam elit venenatis urna, sed volutpat lectus felis ac mi.</p>
+                    
+                    <img src="imagens/nazare.gif" alt="imagem da timeline" width="555px"/>
+					
+					<div id="reacao">
+						
+						<img src="imagens/up.png" width="15px" height="15px;" alt="icone up" /> Maria e outras 20 pessoas deram UP
+						
+					</div>
+					
+					<div id="comentario">
+					
+						<a href="teste_link.html" target="_blank"><img  src="imagens/amigos_susgetao.jpg" width="60px" height="60x;" style="border-radius: 3%;" /></a>
+						
+					</div>
+						<div id="comentario_info">
+							Maria Carolina 
+						</div>
+						
+						<div id="comentario_tempo">
+							20min
+						</div>	
+						
+							<input id="caixa_comentario" type="text"  value="Agora eu entendi, agora eu saquei!">
+                </div>
+                
+            </div>
+            
+        </div>
+		
+		
+        	<div id="bloco_direita">
+    			<p>Sugestão</p>
+				<a href="teste_link.html" target="_blank"><img src="imagens/sugestao.jpg" alt="Imagem sugestão" width="200px" height="150x;" style="border-radius: 3%;" /></a>
+    			<p>Atualização de Amigos</p>
+    			<img  src="imagens/amigos_susgetao.jpg" width="70" height="60" style="border-radius: 3%;" />
+				<div id="sugestao">
+					Atualizou a foto do perfil
+				<div>
+    		
+    		</div>
+    		
+    </div>    
+    </body>
+</html>

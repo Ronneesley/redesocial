@@ -1,0 +1,46 @@
+%--------------------------------------EM DESENVOLVIMENTO------------------------------------------------------------------
+
+%%
+% Macros necessários ao projeto
+% Autor: Gusttavo Nunes Gomes
+% Data: 07/11/2017
+%%
+
+%--------------------------------------EM DESENVOLVIMENTO------------------------------------------------------------------
+
+%\dicionarioDeDados{Identificador}{Nome Tabela}{Chave 1}{Campo Lógico 1}{Campo Físico 1}{Tipo 1}{Tamanho 1}{Nulo 1}{Descrição 1} {Chave 2}{Campo Lógico 2}{Campo Físico 2}{Tipo 2}{Tamanho 2}{Nulo 2}{Descrição 2} {Chave 3}{Campo Lógico 3}{Campo Físico 3}{Tipo 3}{Tamanho 3}{Nulo 3}{Descrição 3} {Chave 4}{Campo Lógico 4}{Campo Físico 4}{Tipo 4}{Tamanho 4}{Nulo 4}{Descrição 4} {Chave 5}{Campo Lógico 5}{Campo Físico 5}{Tipo 5}{Tamanho 5}{Nulo 5}{Descrição 5} {Chave 6}{Campo Lógico 6}{Campo Físico 6}{Tipo 6}{Tamanho 6}{Nulo 6}{Descrição 6} {Chave 7}{Campo Lógico 7}{Campo Físico 7}{Tipo 7}{Tamanho 7}{Nulo 7}{Descrição 7} {Chave 8}{Campo Lógico 8}{Campo Físico 8}{Tipo 8}{Tamanho 8}{Nulo 8}{Descrição 8} {Chave 9}{Campo Lógico 9}{Campo Físico 9}{Tipo 9}{Tamanho 9}{Nulo 9}{Descrição 9} {Chave 10}{Campo Lógico 10}{Campo Físico 10}{Tipo 10}{Tamanho 10}{Nulo 10}{Descrição 10} {Chave 11}{Campo Lógico 11}{Campo Físico 11}{Tipo 11}{Tamanho 11}{Nulo 11}{Descrição 11}
+
+
+%--------------------------------------EM DESENVOLVIMENTO------------------------------------------------------------------
+\newcommand{\dicionarioDeDados}[9]{
+	\begin{table}[h!]				
+		\caption{Dicionário de Dados: #2}
+		\label{tabela:#1}
+		\begin{tabular}{|p{1cm}|p{1.5cm}|p{1.25cm}|p{1.25cm}|p{1.75cm}|p{1.25cm}|p{4.5cm}|}\hline	
+			\multicolumn{7}{|p{16cm}|}{\cellcolor{cinzaClaro} Tabela: } \\ \hline
+			{\small Chaves} & {\small Campo Lógico} & {\small Campo Físico} & {\small Tipo} & {\small Tamanho} & {\small Nulo} & {\small Descrição}\\ \hline 
+		
+			{\tiny #3} & {\tiny #4} & {\tiny #5} & {\tiny #6} & {\tiny #7} & {\tiny #8} &{\tiny #9}\\\hline %Linha 1
+			{\tiny #10} & {\tiny #11} & {\tiny #12} & {\tiny #13} & {\tiny #14} & {\tiny #15} &{\tiny #16}\\\hline %Linha 1
+			{\tiny #17} & {\tiny #18} & {\tiny #19} & {\tiny #20} & {\tiny #21} & {\tiny 22} &{\tiny #23}\\\hline %Linha 1
+			{\tiny #24} & {\tiny #25} & {\tiny #26} & {\tiny #27} & {\tiny #28} & {\tiny #29} &{\tiny #30}\\\hline %Linha 1
+			{\tiny #31} & {\tiny #32} & {\tiny #33} & {\tiny #34} & {\tiny #35} & {\tiny #36} &{\tiny #37}\\\hline %Linha 1
+			{\tiny #38} & {\tiny #39} & {\tiny #40} & {\tiny #41} & {\tiny #42} & {\tiny #43} &{\tiny #44}\\\hline %Linha 1
+			{\tiny #45} & {\tiny #46} & {\tiny #47} & {\tiny #48} & {\tiny #49} & {\tiny #50} &{\tiny #51}\\\hline %Linha 1
+			{\tiny #52} & {\tiny #53} & {\tiny #54} & {\tiny #55} & {\tiny #56} & {\tiny #57} &{\tiny #58}\\\hline %Linha 1
+			{\tiny #59} & {\tiny #60} & {\tiny #62} & {\tiny #63} & {\tiny #64} & {\tiny #65} &{\tiny #66}\\\hline %Linha 1
+			{\tiny #67} & {\tiny #68} & {\tiny #69} & {\tiny #70} & {\tiny #71} & {\tiny #72} &{\tiny #73}\\\hline %Linha 1
+			{\tiny #74} & {\tiny #75} & {\tiny #76} & {\tiny #77} & {\tiny #78} & {\tiny #79} &{\tiny #80}\\\hline %Linha 1
+
+
+
+			
+	
+
+
+		\end{tabular}
+	\end{table}
+}
+
+%--------------------------------------EM DESENVOLVIMENTO------------------------------------------------------------------
+

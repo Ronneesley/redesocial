@@ -1,0 +1,10 @@
+\select@language {brazil}
+\contentsline {section}{\numberline {1}Introdu\c c\~ao}{2}
+\contentsline {section}{\numberline {2}O que \'e?}{2}
+\contentsline {section}{\numberline {3}O que \'e necess\'ario para funcionar?}{2}
+\contentsline {section}{\numberline {4}Como utilizar?}{3}
+\contentsline {section}{\numberline {5}Diferen\c cas do JDBC}{3}
+\contentsline {section}{\numberline {6}Vantagens}{4}
+\contentsline {section}{\numberline {7}Desvantagens}{4}
+\contentsline {section}{\numberline {8}Conclus\~ao}{4}
+\contentsline {section}{\numberline {9}Refer\^encias}{4}

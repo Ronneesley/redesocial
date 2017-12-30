@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Criar Grupo</title>
+        <meta charset="UTF-8">
+        <meta author="Wesley M Felix"
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <style>
+           
+            #geral {	
+                width: 501px;	
+                height: 400px;	
+                padding: 10px;	
+                margin: 0 auto;
+                border-width: 2px;
+                border-style: grove;
+            }
+            #topo {	
+                width: 501px;	
+                height: 65px;	
+                background-color: #ccc; /*  */	
+                
+                
+            }
+            #coluna_esquerda {	
+                float: left;	
+                width: 250px;	
+                height: 230px;	
+                background-color: #ccc; /* Cinza */
+            }
+            #coluna_direita {	
+                float: right;	
+                width: 250px;	
+                height: 230px;
+                background-color: #ccc; /*  */
+            }
+            #rodape {	
+                width: 501px;	
+                height: 49px;	
+                background-color: #090; /* Verde */	
+                border-top: 1px solid #f00;
+            }
+            
+            #imggrupo {
+                position: absolute;
+                left: 820px;
+                top: 130px;
+                width: 162px;
+                height: 182px;
+                aligner: center;
+                border-radius: 10px;
+                
+            }
+            
+            label, h1 {
+                padding: 10px 2px 8px 10px;
+            }
+            
+            input, select {
+                padding: 0px 10px 0px 0px;
+                margin: 2px 4px 6px 8px;    
+                
+            }
+            #botao {
+                float: right;
+                padding: 0px 10px 0px 0px;
+                margin: 2px 4px 6px 8px;
+            }
+            
+            select {
+                width: 220px;
+            }
+            
+            h3 {
+               padding: 0px 10px 0px 50px;
+                margin: 2px 4px 6px 8px;  
+            }
+            
+            h5 {
+               float: none;
+               padding: 0px 10px 0px 0px;
+               margin: 2px 4px 6px 8px; 
+            }
+        
+        </style>
+    </head>
+    
+    <body>
+        <form>
+            <div>
+                
+                <div id="geral">	
+                     <div id="topo"> 
+                         <h1> Criar Grupo</h1>
+                     </div>	
+                     
+                     <div id="coluna_esquerda"> 
+                        <form action="#">
+                            <label>Dê um nome ao grupo:</label>
+                            <input size="28" type="text" name="NomeGrupo" value="Carros tunados"><br>
+                            <label>Convide Pessoas:</label>
+                            <input size="28" type="text" name="ConvitePessoas" value="Wesley M Félix"><br>
+                            <label>Tipo de grupo</label><br>
+                                <select name="TipoGrupo">
+                                    <option value="publico">Público</option>
+                                    <option value="privado">Privado</option>
+                                </select><br>
+                                <input type="checkbox" name="Termos" value="Aceito"> Aceito os termos de uso
+                                <div id="botao">
+                                    <input type="submit" value="Criar Grupo">
+                                </div>
+                        </form>
+                     </div>	
+                     
+                     <div id="coluna_direita">
+                         <h3> Foto do Grupo</h3>
+                         <img id="imggrupo" src="./imagens/grupo.jpg" alt="Imagem do Grupo">
+                     </div>	
+                     
+                     
+            </div>
+        </form>    
+    </body>
+</html>

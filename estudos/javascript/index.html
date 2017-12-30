@@ -1,0 +1,74 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<title>Teste</title>
+
+		<style type="text/css">
+			.campo {
+				border: 1px dashed #000;
+				background-color: #eeeeff;
+			}
+			
+			.campo:hover {
+				background-color: yellow;
+			}
+			
+			.campo:focus {
+				background-color: lightgreen;
+			}
+			
+			#validacao {
+				padding: 10px;
+				border: 1px solid red;
+				margin-bottom: 10px;
+			}
+		</style>
+		
+<script type="text/javascript">
+function exibirMensagem(){
+	var nome = document.getElementById("nome").value;
+	var cep = document.getElementById("cep").value;
+	var endereco = document.getElementById("endereco").value;
+	
+	document.getElementById("validacao").innerHTML = "";
+	
+	if (nome.trim() == ""){
+		document.getElementById("validacao").innerHTML = 
+		document.getElementById("validacao").innerHTML +
+			"Preencha o campo Nome";
+	}
+	
+	if (cep.trim() == ""){
+		document.getElementById("validacao").innerHTML =
+		document.getElementById("validacao").innerHTML + 
+			"<br />Preencha o campo CEP";
+	}
+	
+	if (endereco.trim() == ""){
+		document.getElementById("validacao").innerHTML = 
+		document.getElementById("validacao").innerHTML +
+			"<br />Preencha o campo Endere&ccedil;o";
+	}
+}
+</script>
+	</head>
+
+	<body>
+		Nome:
+		<input type="text" class="campo" id="nome" />
+		<br /><br />
+		
+		CEP:
+		<input type="text" class="campo" id="cep" />
+		<br /><br />
+		
+		Endere&ccedil;o:
+		<input type="text" class="campo" id="endereco" />
+		<br /><br />
+		
+		<div id="validacao"></div>
+		
+		<input type="button" value="Enviar" 
+			onclick="exibirMensagem()" />
+	</body>
+</html>

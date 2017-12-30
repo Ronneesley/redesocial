@@ -1,0 +1,4 @@
+#ccc cor da div de cima
+#666 cor do botão upload, cancelar, enviar e sair
+#999 cor do botao voltar
+#e5e5e5 cor do input de mais informações

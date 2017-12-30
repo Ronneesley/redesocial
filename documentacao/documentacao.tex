@@ -2,6 +2,10 @@
 
 \usepackage{colortbl}
 \usepackage{requisitos}
+\usepackage{caso_de_uso}
+\usepackage{figura}%Figura estilo !htb
+\usepackage{figuraH}% Figura estilo H
+\usepackage{float}
 
 \curso{Sistemas de Informação}
 \ano{2017}
@@ -23,27 +27,21 @@
 \configurarInformacoesPDF
 
 \definecolor{cinzaClaro}{rgb}{0.9,0.9,0.9}
-
+	
 \begin{document}
 
 	\input{preambulo.tex}
 	
-	\chapter{Introdução}
+	\input{capitulos/introducao/introducao.tex}
 	
-	Este documento descreve a documentação de requisitos do sistema rede social.
+	\input{capitulos/descricao_geral/descricao_geral.tex}
 	
-	\section{Especificação de requisitos}
+	\input{capitulos/especificacao_requisitos/especificacao_requisitos.tex}
+
+	\input{capitulos/prototipos/prototipos.tex}
+
+	\input{capitulos/casos_uso/casos_uso.tex}
 	
-	\subsection{Requisitos não funcionais}
-	
-	\subsection{Requisitos funcionais}
-	
-	%\requisitoFuncional{RF01}{Descrição}{Fonte do requisito}{Local}{Data}{Responsável}{
-	%	Especificação completa
-	%}
-	
-	\requisitoFuncional{RF01}{Cadastro de usuários}{Anny Karoliny,Thalia Santana}{Laboratório 2 do IF Goiano Ceres}{26/07/2017}{Anny Karoliny Moraes Ribeiro}{
-		O sistema deverá conter um cadastro de usuários que deverá ser preenchido com os seguintes campos: nome, sobrenome, celular ou/e e-mail e senha.
-	}
+	\input{capitulos/projeto/projeto.tex}
 
 \end{document}

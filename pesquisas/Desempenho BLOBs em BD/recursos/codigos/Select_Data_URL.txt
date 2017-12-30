@@ -1,0 +1,14 @@
+1000 select count(*) from url where data < '2017-01-01 00:00:00';
+
+1 - Tempo Gasto: 0.01939 seg
+2 - Tempo Gasto: 0.01818 seg
+3 - Tempo Gasto: 0.01832 seg
+/*[...]1000 Testes*/ 
+998 - Tempo Gasto: 0.01715 seg
+999 - Tempo Gasto: 0.01737 seg
+1000 - Tempo Gasto: 0.01719 seg
+
+
+/*Resultados:*/ 
+Tempo Total: 17.53472 seg
+Media de Tempo: 0.01753472 seg

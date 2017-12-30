@@ -15,7 +15,29 @@
 		\begin{tabular}{|l|p{8cm}|c|p{2cm}|}
 			\hline
 			\cellcolor{cinzaClaro} Identificação & \multicolumn{3}{l|}{#1} \\ \hline
-			\cellcolor{cinzaClaro} Descrição & \multicolumn{3}{l|}{#2} \\ \hline
+			\cellcolor{cinzaClaro} Descrição & \multicolumn{3}{p{12cm}|}{#2} \\ \hline
+			\cellcolor{cinzaClaro} Fonte do Requisito & \multicolumn{3}{l|}{#3} \\ \hline
+			\cellcolor{cinzaClaro} Local & #4 & \cellcolor{cinzaClaro} Data & #5 \\ \hline
+			\cellcolor{cinzaClaro} Responsável & \multicolumn{3}{l|}{#6} \\ \hline
+			\multicolumn{4}{|c|}{\cellcolor{cinzaClaro} Especificação} \\ \hline
+			\multicolumn{4}{|p{16cm}|}{#7} \\ \hline
+		\end{tabular}
+	\end{table}
+}
+
+
+%\requisitoNaoFuncional{RNF01}{Descrição}{Fonte do requisito}{Local}{Data}{Responsável}{
+%	Especificação completa
+%}
+\newcommand{\requisitoNaoFuncional}[7]{
+	\begin{table}[h!]
+		\caption{Requisito Não Funcional: #2}
+		\label{tabela:#1}
+	
+		\begin{tabular}{|l|p{8cm}|c|p{2cm}|}
+			\hline
+			\cellcolor{cinzaClaro} Identificação & \multicolumn{3}{l|}{#1} \\ \hline
+			\cellcolor{cinzaClaro} Descrição & \multicolumn{3}{p{12cm}|}{#2} \\ \hline
 			\cellcolor{cinzaClaro} Fonte do Requisito & \multicolumn{3}{l|}{#3} \\ \hline
 			\cellcolor{cinzaClaro} Local & #4 & \cellcolor{cinzaClaro} Data & #5 \\ \hline
 			\cellcolor{cinzaClaro} Responsável & \multicolumn{3}{l|}{#6} \\ \hline

@@ -1,0 +1,768 @@
+\chapter{Casos de Uso}
+
+\casoDeUso
+%Identificador
+{UC1}
+%Nome
+{Realizar cadastro}
+%Ator Principal
+{Usuário}
+%Interessados
+{
+\begin{itemize}
+	\item Usuário: deseja cadastrar-se na rede social.	
+\end{itemize}
+
+}
+%Pré-Condições
+{Ter um e-mail válido.}
+%Pós-condições
+{Dados são enviados para o servidor.}
+%Fluxo Básico
+{
+\begin{itemize}
+	\item Usuário preenche os campos de nome, sobrenome, e-mail e data de nascimento como mostra a Figura  \ref{figura:login}; %login	
+	\item Usuário aceita os termos de uso da rede social;		
+	\item Usuário clica no botão \textit{“Criar conta”};	
+	\item O sistema envia e-mail para o usuário para confirmação como mostra a Figura \ref{figura:cadastro_usuario_parte2};
+	\item Após confirmar o e-mail, o usuário é redirecionado para a segunda etapa do cadastro;		
+	\item O usuário preenche sua senha;
+	\item O usuário preenche informações sobre local de trabalho, instituição de ensino, cidade natal, cidade atual, relacionamento e outras redes sociais como mostra a Figura \ref{figura:cadastro_usuario_parte3};
+	\item Ao clicar no botão \textit{“Salvar e continuar”}, o usuário finaliza a segunda etapa de cadastro;	
+	\item Usuário tem a opção de anexar uma foto para seu perfil usando sua \textit{webcam} ou faz \textit{upload} de uma foto para o sistema como mostra a Figura \ref{figura:cadastro_usuario_parte3}; %falta a foto do protótipo da 3a etapa
+	\item Ao clicar no botão \textit{“Salvar e continuar”}, o usuário finaliza a terceira etapa de cadastro;
+	\item O usuário tem acesso a seu perfil.	
+	
+			
+\end{itemize}
+}
+%Fluxo Alternativo
+{
+\begin{itemize}
+	\item Usuário não preenche o campos de nome, sobrenome, celular e/ou e-mail, e precisa ser notificado;
+	\item Usuário não aceita os termos de uso da rede social;
+	\item Eventuais problemas no servidor podem impedir o envio de dados, sendo preciso notificar o usuário sobre;
+	\item Usuário pode pedir o reenvio do e-mail de confirmação;
+	\item Usuário pode não escolher uma foto para seu perfil.
+	
+\end{itemize}
+}
+%Frequência de Ocorrencia
+{Aproximadamente 3 vezes por minuto.}
+%Problemas em Aberto
+{
+
+}
+
+%-----------------------------------------------------------
+
+\casoDeUso
+%Identificador
+{UC2}
+%Nome
+{Enviar confirmação de cadastro}
+%Ator Principal
+{Usuário}
+%Interessados
+{
+\begin{itemize}
+	\item Usuário: deseja receber o e-mail de confirmação.
+\end{itemize}
+
+}
+%Pré-Condições
+{Ter recebido todos os dados de forma válida}
+%Pós-condições
+{E-mail de confirmação é enviado}
+%Fluxo Básico
+{
+\begin{itemize}
+	\item E-mail é enviado com sucesso pelo servidor;
+	\item E-mail é recebido com sucesso pelo usuário.	
+\end{itemize}
+}
+%Fluxo Alternativo
+{
+\begin{itemize}
+\item E-mail é enviado para a caixa de \textit{spam} do usuário.
+\end{itemize}
+}
+%Frequência de Ocorrencia
+{Aproximadamente 3 vezes por  minuto.}
+%Problemas em Aberto
+{
+ 
+}
+
+%-----------------------------------------------------------
+
+\casoDeUso
+%Identificador
+{UC3}
+%Nome
+{Confirmar recebimento de confirmação e ativar conta.}
+%Ator Principal
+{Usuário}
+%Interessados
+{
+\begin{itemize}
+	\item Usuário: deseja confirmar e-mail e ganhar acesso a seu perfil na rede social.
+\end{itemize}
+
+}
+%Pré-Condições
+{E-mail de confirmação precisa ter sido enviado para o usuário}
+%Pós-condições
+{A conta do usuário é ativa}
+%Fluxo Básico
+{
+\begin{itemize}
+	\item Usuário clica no link de confirmação;
+	\item Usuário é redirecionado para continuação do cadastro prosseguindo para a segunda etapa do cadastro;	
+	\item O usuário preenche sua senha;
+	\item O usuário anexa informações sobre local de trabalho, instituição de ensino, cidade natal, cidade atual, relacionamento e outras redes sociais como mostra a Figura \ref{figura:cadastro_usuario_parte2};
+	\item Ao clicar no botão \textit{“Salvar e continuar”}, o usuário finaliza a segunda etapa de cadastro;
+	\item Usuário tem a opção de anexar uma foto para seu perfil usando sua \textit{webcam} ou upando uma foto para o sistema;
+	\item Ao clicar no botão \textit{“Salvar e continuar”}, o usuário finaliza a terceira etapa de cadastro; 		
+	\item Conta é liberada para o uso do usuário.		 
+\end{itemize}
+}
+%Fluxo Alternativo
+{
+\begin{itemize}
+	\item A confirmação não está funcionando corretamente ou expirou;
+	\item Usuário solicita o reenvio da confirmação;
+	
+	\item Usuário deixa em branco itens opcionais de cadastro;
+	\item Usuário pode clicar no botão \textit{“Pular”} ao invés de \textit{“Salvar e continuar”};
+	
+	\item Sistema informa que usuário não preencheu tais itens opcionais e que eles podem ser posteriormente editados.
+	
+\end{itemize}
+}
+%Frequência de Ocorrencia
+{Aproximadamente 3 vezes por minuto.}
+%Problemas em Aberto
+{
+
+}
+
+\casoDeUso
+%Identificador
+{UC4}
+%Nome
+{Enviar Post}
+%Ator Principal
+{Usuário}
+%Interessados
+{
+\begin{itemize}
+	\item Usuário: deseja realizar publicações em sua rede social.
+\end{itemize}
+
+}
+%Pré-Condições
+{Ter uma conta válida e ativa}
+%Pós-condições
+{Públicação é postada}
+%Fluxo Básico
+{
+\begin{itemize}
+\item Usuário acessa a sua \textit{timeline};
+\item Usuário poderá postar foto, vídeo, \textit{link} ou texto;
+\item Apos inserir todas as informações o usuário aciona a opção de publicar \textit{post}.
+\end{itemize}
+}
+%Fluxo Alternativo
+{
+\begin{itemize}
+\item Ocorreu algum erro ao publicar \textit{post}.
+\item É mostrado uma mensagem de erro ao inserir.
+\item Usuário aciona a opção “Tentar Novamente”.
+\end{itemize}
+}
+%Frequência de Ocorrencia
+{Aproximadamente 50 vezes ao dia}
+%Problemas em Aberto
+{
+
+}
+
+%-----------------------------------------------------------
+\casoDeUso
+%Identificador
+{UC5}
+%Nome
+{Realizar Login}
+%Ator Principal
+{Usuário}
+%Interessados
+{
+\begin{itemize}
+	\item Usuário: deseja realizar login em sua conta;
+	\item Servidor: deseja receber os dados do usuário para validar e realizar o login.
+\end{itemize}
+
+}
+%Pré-Condições
+{Possuir uma conta válida.}
+%Pós-condições
+{Login é realizado com sucesso.}
+%Fluxo Básico
+{
+\begin{itemize}
+\item Usuário acessa o site da rede social;
+\item O sistema exibe a página de login (Figura \ref{figura:login});
+\item Usuário digita seu usuário e senha, em seus respectivos campos;
+\item Após inserir as informações, o usuário aciona a opção de realizar login;
+\item Servidor valida as informações digitadas pelo usuário e abre uma sessão para o mesmo.
+\end{itemize}
+}
+%Fluxo Alternativo
+{
+\begin{itemize}
+\item Ocorreu algum erro ao realizar login;
+\begin{itemize}
+\item É mostrado uma mensagem de erro ao tentar realizar login.
+\end{itemize}
+\item Usuário não preenche os campos necessários;
+\begin{itemize}
+\item Usuário não preencheu o campo de e-mail;
+\item Usuário não preencheu o campo de senha.
+\end{itemize}
+\item Usuário digita e-mail ou senha incorretamente.
+\begin{itemize}
+\item Sistema informa usuário sobre o erro.
+\end{itemize}
+\item Problemas com o servidor que precisam ser notificados ao usuário;
+\begin{itemize}
+\item Problemas com a conexão com o banco de dados;
+\item Problemas com a conexão com o servidor.
+\end{itemize}
+\item Problemas com sua conexão com a Internet.
+\begin{itemize}
+\item É notificado ao usuário falha com a conexão com a Internet.
+\end{itemize}
+\end{itemize}
+}
+%Frequência de Ocorrencia
+{Aproximadamente 20 vezes ao dia.}
+%Problemas em Aberto
+{
+
+}
+
+
+%-----------------------------------------------------------
+\casoDeUso
+%Identificador
+{UC6}
+%Nome
+{Realizar comentarios}
+%Ator Principal
+{Usuário}
+%Interessados
+{
+\begin{itemize}
+	\item Usuário: Deseja comentar uma postagem;
+	\item Autor da Postagem: Deseja ler os comentários publicados.
+\end{itemize}
+
+}
+%Pré-Condições
+{Estar validado no sistema}
+%Pós-condições
+{Cometário Publicado}
+%Fluxo Básico
+{
+\begin{itemize}
+	\item Usuário identifica uma postagem do seu interesse;
+	\item Usuário digita o comentário conforme a Figura \ref{figura:meus_posts};
+	\item O usuário clica em ``enviar" conforme a Figura \ref{figura:meus_posts};
+	\item Comentário é publicado.
+\end{itemize}
+}
+%Fluxo Alternativo
+{
+\begin{itemize}
+	\item Postagem foi deletada;
+	\begin{itemize}
+		\item Exibe uma mensagem informando que a postagem foi deletada;
+		\item Volta para a tela anterior.
+	\end{itemize}
+	
+	\item Falha na conexão com o servidor;
+	
+	\begin{itemize}
+		\item Exibe uma mensagem informando que não foi possível conectar ao servidor;
+		\item Volta para a tela anterior.
+	\end{itemize}
+	
+	\item Conexão com a Internet falhou.
+	\begin{itemize}
+		\item Exibe uma mensagem para verificar a conexão com a Internet;
+		\item Volta para a tela anterior.
+	\end{itemize}
+
+	
+	
+\end{itemize}
+}
+%Frequência de Ocorrencia
+{Aproximadamente 10 vezes ao dia.}
+%Problemas em Aberto
+{
+
+}
+
+%-----------------------------------------------------------
+\casoDeUso
+%Identificador
+{UC7}
+%Nome
+{Sair da rede social}
+%Ator Principal
+{Usuário}
+%Interessados
+{
+\begin{itemize}
+	\item Usuário: Deseja sair e apagar todas os cachês e \textit{cookies} da rede social.
+\end{itemize}
+}
+%Pré-Condições
+{Possuir uma conta válida e estar conectado (logado no sistema)}
+%Pós-condições
+{Usuário Deslogado}
+%Fluxo Básico
+{
+\begin{itemize}
+	\item Clicando no botão  \textit{pop-up} no canto superior direito da tela próximo a foto. Em seguida, basta escolher a opção “Sair”.  como mostra a Figura  \ref{figura:meus_posts}.
+\end{itemize}
+}
+%Fluxo Alternativo
+{
+\begin{itemize}
+	\item Usuário desconectado;
+		\begin{itemize}
+		\item Exibir mensagem  ao usuário falando que ele está deslogado.
+		\end{itemize}
+	\item Problemas de resposta do servidor;
+		\begin{itemize}
+		\item Exibir mensagem  ao usuário relatando problemas com resposta do servidor.
+		\end{itemize}
+	\item Exibe uma mensagem informando que o usuário foi desconectado;
+	\item Volta para a tela inicial do sistema de fazer login.
+		\begin{itemize}
+		\item Problemas com sua conexão com a internet.
+			\begin{itemize}
+			\item Exibe uma mensagem informando que o usuário não está conectado a Internet.
+			\end{itemize}
+		\end{itemize}
+	
+\end{itemize}
+}
+%Frequência de Ocorrencia
+{Toda vez que o usuário deseja sair da rede social.}
+%Problemas em Aberto
+{
+
+}
+%-------------------------------------------------------------------------
+\casoDeUso
+%Identificador
+{UC8}
+%Nome
+{Alterar dados de Perfil}
+%Ator Principal
+{Usuário}
+%Interessados
+{
+\begin{itemize}
+	\item Usuário: Deseja alterar seus dados de perfil.	
+\end{itemize}
+}
+%Pré-Condições
+{Estar conectado ao sistema e estar na página Perfil.}
+%Pós-Condições
+{Após alterações realizadas com sucesso, estes dados ser enviados ao servidor.}
+%Fluxo Básico
+{
+\begin{itemize}
+	\item Usuário acessa o perfil como mostra a Figura \ref{figura:perfil};
+	\item Sistema demonstra o seu perfil;
+	\item Usuário clica no menu \textit{``Sobre"};
+ 	\item Sistema exibe os dados detalhados do perfil do usuário;
+	\item Usuário seleciona os campos que deseja alterar clicando nos ícones como mostra a Figura \ref{figura:cadastro_usuario_parte3};
+	\item Usuário preenche os campos;
+	\item Usuário confirma os campos ao clicar no botão \textit{``Confirmar"};
+	\item Sistema armazena os dados inseridos, alterados ou excluídos do usuário;
+	\item Sistema detectar algum erro durante o processo, deve demonstrar ao usuário o local.
+\end{itemize}
+}
+%Fluxo Alternativo
+{
+\begin{itemize}
+	\item Sistema \textit{Offline};
+	   \begin{itemize}	
+	   	\item Exibe uma mensagem informando que não foi possível conectar ao servidor ao usuário;
+		\item Volta para a tela inicial do sistema;
+		\item Usuário desconectado;
+		\item Sistema exibe mensagem  ao usuário falando que ele está deslogado;
+		\item Problemas com resposta do servidor ao alterar o campo especificado;
+		\item Exibe a mensagem de erro ao usuário;
+		\item Usuário modifica os dados, porém, no momento que realizou as alterações, estava sem conexão a internet;
+		\item Perda das alterações realizadas, tendo que refazer ao restabelecer a conexão com a Internet, caso tenha efetuado alguma alteração mantêm como estava anteriormente;
+		\item Sistema informa ao usuário sobre o devido erro de conexão a Internet.
+     	    \end{itemize}
+	\item Preenchimento dos campos;    
+	    \begin{itemize}
+		\item Usuário preenche o campo incorretamente ex:(Caracteres especiais, letras em campos de números, etc).
+		\item Exibe mensagem de erro ao usuário sobre o preenchimento do campo;
+		\item Exibe a forma correta de preencher;
+		\item Usuário insere redes sociais inválidas;
+		\item Sistema informa sobre os devidos erros de inserção;
+		\item Usuário insere telefone inválido;
+		\item Sistema informa ao usuário sobre o telefone inválido;
+		\item Sistema demonstra forma correta de inserir o telefone.
+	     \end{itemize}
+	\item Alteração e confirmação dos campos;     
+		\item Usuário não confirma a alteração;
+		\item Sistema informa o usuário se deseja salvar as alterações realizadas, se sim guarda os dados, senão mantêm os dados anteriores;
+		\item Usuário encerra a sessão sem salvar as alterações;
+		\item Sistema não guarda os dados alterados;
+		\item Usuário fecha o navegador.
+\end{itemize}
+}
+%Frequência de Ocorrência
+{Aproximadamente 3 vezes ao dia}
+%Problemas em aberto
+{
+
+}
+%--------------------------------------------------------------------------------------------------------
+\casoDeUso
+%Identificador
+{UC9}
+%Nome
+{Pesquisar pessoas e grupos}
+%Ator Principal
+{Usuário}
+%Interessados
+{
+\begin{itemize}
+	\item Usuário: Deseja pesquisar uma pessoa ou grupo.	
+\end{itemize}
+}
+%Pré-Condições
+{Estar conectado ao sistema e estar na página Perfil.}
+%Pós-Condições
+{Após a pesquisa realizada com sucesso, as pessoas/grupos com o nome relacionado ao que foi pesquisado aparecem para que o usúario escolha.}
+%Fluxo Básico
+{
+\begin{itemize}
+	\item Usuário: Acessa o seu perfil como mostra a figura 4;
+	\item Usuário: Clica no campo de pesquisa;
+	\item Usuário: Escrever o nome da pessoa/grupo que deseja pesquisar;
+	\item Usuário: Selecionar a pessoa/grupo que aparecem com o nome relacionado ao nome que foi pesquisado;
+	\item Usuário: O usúario e redirecionado para a página de perfil da pessoa ou para a página do grupo que foi selecionado.
+\end{itemize}
+}
+%Fluxo Alternativo
+{
+\begin{itemize}
+	\item Usuário desconectado;
+	\item Problemas com resposta do servidor ao pesquisar uma pessoa/grupo;
+	\item Exibir a mensagem de erro ao usuário;
+	\item Usuário pesquisa um nome que não existe na rede social;
+	\item Exibir mensagem de pessoa/grupo não encontrado;
+	\item Usuário não estar conectado a Internet.
+\end{itemize}
+}
+%Frequência de Ocorrência
+{Toda vez que o usuário requirir uma pesquisa de pessoa/grupo.}
+%Problemas em aberto
+{
+
+}
+%--------------------------------------------------------------------------------------------------------
+\casoDeUso
+%Identificador
+{UC10}
+%Nome
+{Enviar mensagem no chat}
+%Ator Principal
+{Usuário}
+%Interessados
+{
+\begin{itemize}
+	\item Usuário: Enviar mensagem no \textit{chat} para outros usuários.
+	
+\end{itemize}
+
+}
+%Pré-Condições
+ {Possuir uma conta válida e estar conectado (logado no sistema).}
+%Pós-condições
+{}
+%Fluxo Básico
+{
+\begin{itemize}
+	\item Usuário acessa o \textit{link} mensagens;
+	\item O sistema mostra amigos \textit{online} ou \textit{offline} (Figura \ref{figura:chat_ativos_e_inativos});
+	\item Usuário seleciona um amigo \textit{online};
+	\item Usuário digita uma mensagem e clica no botão ``Enviar" (Figura \ref{figura:mensagens}).
+\end{itemize}
+}
+%Fluxo Alternativo
+{
+\begin{itemize}
+	\item Ocorreu falha na conexão com a Internet.
+	\begin{itemize}
+	\item O sistema apresenta uma mensagem para o usuário verificar os problemas com a conexão da Internet.
+	\end{itemize}
+\end{itemize}
+}
+%Frequência de Ocorrencia
+{Diariamente.}
+%Problemas em Aberto
+{
+}
+%--------------------------------------------------------------------------------------------------------
+\casoDeUso
+%Identificador
+{UC11}
+%Nome
+{Manter álbum}
+%Ator Principal
+{Usuário}
+%Interessados
+{
+\begin{itemize}
+	\item Usuário: seleciona a opção ``Fotos".
+	
+\end{itemize}
+
+}
+%Pré-Condições
+ {Possuir uma conta válida e estar conectado (logado no sistema).}
+%Pós-condições
+{}
+%Fluxo Básico
+{
+\begin{itemize}
+	\item Usuário acessa o menu "Minhas fotos" (Figura \ref{figura:suas_fotos});
+	\item O sistema redireciona para seus álbuns (Figura \ref{figura:seus_albuns});
+	\item Usuário seleciona a opção que deseja: Criar álbum, Suas fotos, Seus álbuns ou as Fotos com você.
+	
+\end{itemize}
+}
+%Fluxo Alternativo
+{
+\begin{itemize}
+	\item Ao selecionar a opção de "Suas fotos" conforme a (Figura \ref{figura:suas_fotos}). O usuário visualizará todas as fotos e ele pode: editar e deletar;
+	\item Ao selecionar a opção "Seus álbuns" conforme a (Figura \ref{figura:seus_albuns}). O sistema mostra todos seus álbuns da rede social e o usuário pode: visualizar, editar e deletar as fotos do álbum;
+	\item Ao seleciona a opção "Criar álbum", cria-se um novo álbum.
+	
+\end{itemize}
+}
+%Frequência de Ocorrencia
+{Duas vezes por semana.}
+%Problemas em Aberto
+{
+
+}
+%--------------------------------------------------------------------------------------------------------
+\casoDeUso
+%Identificador
+{UC12}
+%Nome
+{Apresentar Chat}
+%Ator Principal
+{Usuário}
+%Interessados
+{
+\begin{itemize}
+	\item Usuário: Deseja acessar o opção chat.	
+\end{itemize}
+
+}
+%Pré-Condições
+{Estar logado na rede social em sua conta.}
+%Pós-condições
+{}
+%Fluxo Básico
+{
+\begin{itemize}
+	\item Usuário seleciona a opção ``Mensagens", que pode ser observado através da (Figura \ref{figura:meus_posts});	
+	\item O sistema abre o \textit{chat}, mostrando ao usuário seus amigos que estão \textit{online}  e \textit{offline}, igual a (Figura \ref{figura:chat_ativos_e_inativos});	
+	\item O usuário seleciona qual contato deseja enviar mensagem;
+	\item O sistema abre a janela para realizar o envio de mensagem como demonstrado no Caso de Uso: Enviar mensagem no chat (UC10).  
+					
+\end{itemize}
+}
+%Fluxo Alternativo
+{
+\begin{itemize}
+	\item Ocorreu falha na conexão com a Internet ou servidor:
+	\begin{itemize}
+	\item O sistema apresenta uma mensagem de alerta pedindo para que o usuário verifique sua conexão com a Internet e aperte F5 para recarregar a página. 	
+	\end{itemize}
+	\item Usuário minimiza o \textit{chat}. 
+\end{itemize}
+}
+%Frequência de Ocorrencia
+{Aproximadamente 2 vezes por minuto.}
+%Problemas em Aberto
+{
+
+}
+%-----------------------------------------------------------
+\casoDeUso
+%Identificador
+{UC13}
+%Nome
+{Solicitação de amizade}
+%Ator Principal
+{Usuário}
+%Interessados
+{
+\begin{itemize}
+	\item Usuário: Deseja solicitar amizade.
+\end{itemize}
+
+}
+%Pré-Condições
+{Ter uma conta válida e estar logado no perfil.}
+%Pós-condições
+{Amigo adicionado aceitar a solicitação.}
+%Fluxo Básico
+{
+\begin{itemize}
+		\item Usuário entra no perfil do amigo selecionado;
+		\item Usuário clica no botão "Adicionar aos amigos" (Figura \ref{figura:solicitacao_amizade}).	
+\end{itemize}
+}
+%Fluxo Alternativo
+{
+\begin{itemize}
+	\item Ocorreu uma falha na conexão com a Internet:
+	\begin{itemize}
+		\item O sistema apresenta uma mensagem para o usuário verificar os problemas com a conexão da Internet.
+	\end{itemize}
+	
+	\item Problemas com resposta do servidor ao adicionar o amigo:
+	\begin{itemize}
+	\item O sistema exibe uma mensagem informando que houve um problema com resposta do servidor.
+	\end{itemize}
+
+\end{itemize}
+}
+%Frequência de Ocorrencia
+{Toda vez que o usuário requerir uma solicitação de amizade}
+%Problemas em Aberto
+{
+ 
+}
+%-----------------------------------------------------------
+\casoDeUso
+%Identificador
+{UC14}
+%Nome
+{Aceite Solicitação de amizade}
+%Ator Principal
+{Usuário}
+%Interessados
+{
+\begin{itemize}
+	\item Usuário: Recebe uma Solicitação de amizade.
+\end{itemize}
+
+}
+%Pré-Condições
+{Amigo ter enviado uma solicitação de amizade.}
+%Pós-condições
+{Usuário aceitar a solicitação.}
+%Fluxo Básico
+{
+\begin{itemize}
+		\item Usuário irá receber uma notificação de amizade (Figura \ref{figura:notificacao_amizade});
+		\item Usuário clica no botão "Aceitar", para aceitar o amigo.
+\end{itemize}
+}
+%Fluxo Alternativo
+{
+\begin{itemize}
+	\item Ocorreu uma falha na conexão com a Internet:
+	\begin{itemize}
+		\item O sistema apresenta uma mensagem para o usuário verificar os problemas com a conexão da Internet.
+	\end{itemize}
+	
+	\item Problemas com resposta do servidor ao adicionar o amigo:
+	\begin{itemize}
+	\item O sistema exibe uma mensagem informando que houve um problema com resposta do servidor.
+	\end{itemize}
+
+\end{itemize}
+}
+%Frequência de Ocorrencia
+{Toda vez que o usuário aceitar ou recusar uma solitação de amizade.}
+%Problemas em Aberto
+{
+ 
+}
+%-----------------------------------------------------------
+
+\casoDeUso
+%Identificador
+{UC15}
+%Nome
+{Criar Tipos de Atividades}
+%Ator Principal
+{Usuário}
+%Interessados
+{
+\begin{itemize}
+	\item Usuário: Escolhe o tipo de atividade.
+	\item Usuário: Seleciona sim ou não para restrição da atividade.
+\end{itemize}
+
+}
+%Pré-Condições
+{Atividade estar cadastrada.}
+%Pós-condições
+{Usuário escolher atividade.}
+%Fluxo Básico
+{
+\begin{itemize}
+		\item Usuário irá preencher os campos e selecionar entre sim ou não em restrição (Figura \ref{figura:tipos_atividades.png});
+		\item Usuário clica no botão "Salvar", para criar a atividade.
+\end{itemize}
+}
+%Fluxo Alternativo
+{
+\begin{itemize}
+	\item Ocorreu uma falha na conexão com a Internet:
+	\begin{itemize}
+		\item O sistema apresenta uma mensagem para o usuário verificar os problemas com a conexão da Internet.
+	\end{itemize}
+	
+	\item Problemas com resposta do servidor ao criar o tipo de atividade:
+	\begin{itemize}
+	\item O sistema exibe uma mensagem informando que houve um problema com resposta do servidor.
+	\end{itemize}
+	
+	\item Usuário não preencher o nome da atividade:
+	\begin{itemsize}
+		\item O sistema apresenta uma mensagem em vermelho no campo especificado que deve ser preenchido.
+	\end{itemsize}
+
+\end{itemize}
+}
+%Frequência de Ocorrencia
+{Toda vez que o usuário criar um tipo de atividade.}
+%Problemas em Aberto
+{
+ 
+}
+%-----------------------------------------------------------
+

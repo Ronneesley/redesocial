@@ -1,0 +1,154 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[brazil]{babel}
+\usepackage{indentfirst}
+\usepackage{url}
+\usepackage{float}
+\usepackage{color}
+%%%%%%%%%%Codigos para o JAVA%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+\usepackage{listings}
+\lstset{language=PHP,
+  showspaces=false,
+  showtabs=false,
+  breaklines=true,
+  showstringspaces=false,
+  breakatwhitespace=true,
+  commentstyle=\color{pgreen},
+  keywordstyle=\color{pblue},
+  stringstyle=\color{pred},
+  basicstyle=\ttfamily,
+  moredelim=[il][\textcolor{pgrey}]{\$\$},
+  moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+}
+\lstdefinestyle{LaTeX}{
+  language={[LaTeX]TeX},
+  basicstyle=\ttfamily\small, 
+  identifierstyle=\color{black}, 
+  keywordstyle=\color{blue}, 
+  commentstyle=\color{red}, 
+  extendedchars=true, 
+  showspaces=false, 
+  showstringspaces=false, 
+  numbers=none,
+  breaklines=true,
+  backgroundcolor=\color{yellow!20}, 
+  breakautoindent=true, 
+  captionpos=b,
+  xleftmargin=0pt,
+  frame=none,
+  rframe={},
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Fim codigo JAVA%%%%%%%%%%%%%%
+%%%%%%%%%%%Codigo geral%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,                    % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=Octave,                 % the language of the code
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,                       % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Fim codigo geral%%%%%%%%%%%%%
+\RequirePackage{graphicx}
+\title{AJAX com Jquery}
+\author{Andrey Ribeiro \and Gleydson Alvess\and Igor Justino\and Jeferson Rossini\and Warley Rodrigues de Andrade}
+ 
+\usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
+\begin{document}
+\begin{titlepage}
+\begin{center}
+\begin{figure}[htb]
+                
+                \label{figura:LogoIF}
+        
+                \centering
+                \includegraphics[width=6cm]{recursos/imagens/logo.png} 
+\end{figure}
+Instituto Federal Goiano - Campus Ceres\\
+Bacharelado em Sistemas de Informação\\
+Prof. Me. Ronneesley Moura Teles\\\vspace{0.5cm}
+Andrey Ribeiro \\
+Gleydson Alves\\
+Igor Justino\\
+Jeferson Rossini\\
+Warley Rodrigues\\
+\vspace{5.0cm}
+\textit{\textbf{\Large{AJAX com JQuery}}}\\\vspace{0.5cm}
+\vspace{9.5cm}
+\end{center}
+\end{titlepage}
+\tableofcontents
+\newpage
+\begin{center}
+\textbf{\Large{AJAX com JQuery}}\\\vspace{0.5cm}
+\end{center}
+\section{Introdução}
+Durante o desenvolvimento de sites e sistemas web em geral, é comum a necessidade de ultilizar mecanismos do servidor sem que a página precise ser carregada novamente e para atender esse tipo de situação utilizaremos o conceito de Ajax, definido, em poucas palavras, como um conjunto de técnicas que utilizam JavaScript para carregar informações de forma assíncrona.
+Ao realizar chamadas assíncronas, o fluxo do código não é interrompido até que a resposta seja obtida. Demandando sua requisição a resposta é obtida independente e tratada na função callback. Callback é um argumento de outra função, ou seja, apenas é chamada quando um evento é realizado ou quando parte do código receber uma resposta.
+Os frameworks agilizam a vida do programador disponibilizando funções que fazem toda a parte complicada pedindo apenas informações básicas podendo adicionar com tranquilidade as animações enquanto a informação é carregada. O AJAX se utiliza de uma gigantesca gama de funções que o JQuery já oferece.[1]
+
+\section{O que é AJAX?}
+O Ajax (Asynchronous JavaScript and XML) é uma tecnologia que se utiliza do JavaScript, XML e HTML que é bastante evidênciada tornando aplicativos muito mais dinâmicos e agregando maiores valores na sua capacidade de resposta.
+No Javascript o AJAX requer solicitações ao servidor retornando apenas os dados que a página precisa sem qualquer marcação ou apresentação. Para aqueles usuários que acessam a página que se utiliza desta tecnologia é que grande parte da página não será alterada apenas aquelas partes que serão atualizadas, com uma gigantesca diferença de antes que ao atualizar qualquer coisa a página inteira necessitaria ser carregada novamente.
+
+\subsection{Configuracoes.class}
+Configurações é o arquivo responsável por conectar com o banco de dados.
+\lstinputlisting{recursos/Configuracoes.class.php}
+
+\subsection{Funções.js}
+Este é o arquivo onde está o Ajax.
+\lstinputlisting{recursos/Funcoes.js}
+
+\subsection{Pesquisa.php}
+Arquivo onde recebe os dados que o ajax envia.
+\lstinputlisting{recursos/pesquisa.php}
+
+
+
+\subsection{Leis.class}
+Leis.class é o arquivo responsável pelas leis: select, insert, update, etc.
+\lstinputlisting{recursos/Leis.class.php}
+
+\section{Referências Bibliográfica}
+\noindent \textbf{[1]} \url {https://www.devmedia.com.br/ajax-com-jquery-trabalhando-com-requisicoes-assincronas/37141}
+\\\vspace{0.2cm}
+
+\noindent \textbf{[2]} \url {http://www.webmaster.pt/requisicoes-ajax-jquery-2216.html}
+
+\end{document}
+%Modelo de código para inserir figura
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=15cm]{logo.png}
+%\label{4}
+%\caption{Fonte:http://...; Acesso em 06/11/2017}
+%\end{figure}

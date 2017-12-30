@@ -1,0 +1,25 @@
+%%
+% Macros necessários ao projeto
+% Autor: Gusttavo Nunes Gomes
+% Data: 12/08/2017
+%%
+
+
+
+%\figura{Identificação da figura}{Tamanho da Largura da Figura em centimetros}{Local onde a Figura está armazenada}{Legenda da Figura}
+%
+%
+
+
+% o comando "\begin{figure}[H]"  tambem funciona, mas precisa do comando \usepackage{float}%
+\newcommand{\figura}[4]{
+	\begin{figure}[!htb] %Here (aqui), top (topo da proxima pagina) or botton (base da proxima pagina)
+		\caption{#4}
+		\label{figura:#1}
+		\centering
+		\includegraphics[width=#2cm]{#3}
+	\end{figure}
+}
+
+
+

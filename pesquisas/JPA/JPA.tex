@@ -1,0 +1,168 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[brazil]{babel}
+\usepackage{indentfirst}
+\usepackage{listings}
+\usepackage{url}
+\lstset{numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt}
+\RequirePackage{graphicx}
+\title{jQuery}
+\usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
+
+\usepackage{color}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=Octave,                 % the language of the code
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,	                   % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+\begin{document}
+\begin{titlepage}
+
+
+\begin{center}
+\begin{figure}[htb]
+		
+		\label{figura:LogoIF}
+	
+		\centering
+		\includegraphics[width=6cm]{logo.png} 
+\end{figure}
+
+
+Instituto Federal Goiano - Campus Ceres\\
+Bacharelado em Sistemas de Informação\\
+Prof. Me. Ronneesley Moura Teles\\\vspace{2.0cm}
+Davi Ildeu de Faria \\
+Igor Justino Rodrigues \\
+Luciano de Carvalho Borba \\
+Warley Rodrigues de Andrade \\
+Wesley Morais Felix\\\vspace{5.0cm}
+
+\textit{\textbf{\Large{JPA}}}\\\vspace{0.5cm}
+\textit{\Large{Java Persistence API}}\\\vspace{9.5cm}
+
+Novembro\\
+2017\\
+\end{center}
+\end{titlepage}
+
+\tableofcontents
+
+\newpage
+\begin{center}
+\textbf{\Large{JPA}}\\\vspace{0.5cm}
+\end{center}
+
+\section{Introdução}%GGN
+Com o Java tornando-se cada vem mais populares em ambientes corporativos, observou-se que grande parte do tempo era gasto na codificação de consultas SQL ao banco de dados e no código JDBC que utiliza estas, além das diferenças SQL entre os SGBDs, e a mudança de paradigma, com isso surgiram ferramentas para  auxiliar nesta tarefa, entre elas está a JPA.
+
+\section{O que é?}%GGN
+A Java Persistence API (JPA) é um framework  que foi criada por um grupo de conhecedores de software EJB 3.0 para fazer parte do JSR 220, foi apoiada em POJOS (Plain Old Java Objects). A JPA não é apenas um framework para Object-Relational Mapping - ORM (método usado para reduzir a disparidade da Programação Orientada a Objetos utilizando banco de dados relacionais), ele também tem diversas funções essenciais em qualquer aplicação organizacional.
+
+Atualmente, praticamente a maioria das grandes aplicações usam JPA para persistir objetos java. A versão 2.0 adicionou muitas características que não haviam na primeira versão, principalmente as mais pedidas pelos usuários, dentre estas está a capacidade adicional de mapeamento e crescimento para a (JPQL) Java Persistence Query Language.
+
+A JPA cuida aproximadamente oitenta por cento dos problemas quando necessita integrar com bancos de dados diferentes, ele assegura a portabilidade da aplicação. A JPA define um modo para mapear Plain Old Java Objects(POJOs), este é utilizado para dizer que é um objeto Java comum, a Java Pesistence API define o esquema entre o objeto java e o BD usando ORM.
+
+A última versão é a 2.1.
+
+
+\section{O que é necessário para funcionar?}
+
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[width=12cm]{imagem/img.jpg}
+	\label{4}
+	\caption{https://www.tutorialspoint.com/jdbc/images/jdbc-architecture.jpg}
+\end{figure}
+
+Os drivers tem como base a tecnologia JDBC e são divididos em 4 categorias: Os drivers do tipo 1, podem ser utilizados sempre que não houver um driver específico para um determinado banco de dados:\\
+
+\begin{enumerate}
+\item \textbf {JDBC-ODBC + ODBC driver;}\\
+Java acessa o banco através de drivers ODBC. O driver deve ser carregado em cada cliente que realiza acesso ao banco.
+\item \textbf {Driver Java com API-Nativa;}\\
+Neste caso as chamadas JDBC são convertidas diretamente em chamadas para a API dos banco de dados. Neste caso também é necessário que um código binário específico esteja presente no cliente.
+\item \textbf {Driver Java Puro, JDBC-Net;}\\
+Este driver traduz chamadas JDBC em chamadas para um protocolo de  Rede/DBMS independente que em seguida é traduzido para o DBMS por um servidor. Este Middleware permite que cliente java puros se conectem com diferentes BD.
+\item \textbf {Protocolo Nativo - Driver Java Puro;}\\
+Neste caso as chamadas JDBC são convertidas diretamente para o protocolo utilizado pelo DBMS, permitindo uma chamada direta do cliente para o servidor. A maioria destes drivers é proprietário.
+\end{enumerate}
+
+\section{Como utilizar?}%GGN
+
+Os seguintes passos são necessários se conectar uma aplicação Java com um banco de dados.\\
+1. Criar a conexão ODBC com o BD (apenas no caso JDBC-ODBC);\\
+2  Carregar o Driver;\\
+3. Criar a Conexão com o BD;\\
+4. Criar os comandos SQL;\\
+5. Processar os comandos;\\
+6. Finalizar a conexão com o banco de dados;\\
+Os passos de 2 a 6, são executados diretamente no código java.\\
+ 
+\section{Diferenças do JDBC}%GGN
+\begin{itemize}
+\item  Java Procedure Query Language (JPQL) é uma linguagem de consulta ORM que trabalha em cima de classes e objetos, ja o SQL que funciona sobre tabelas.
+\item É uma liguagem bem semelhante a SQL.
+
+\end{itemize}
+
+\section{Vantagens}%GGN
+
+\begin{itemize}
+\item independência.
+\item Não há necessidade de ficar preso a detalhe específicos do SGBD.
+\item Reduz a necessidade de conhecer SQL.
+\item Otimização automática, uma consulta otimizada é um ponto essencial.
+\end{itemize}
+
+\section{Desvantagens}%GGN
+\begin{itemize}
+ \item Grande quantidade de código para comandos sql em chaves compostas.
+ \item A independência facilmente quebrada.
+ \end{itemize}
+ 
+\section{Conclusão}
+Visto que hoje em dia o tempo é essencial quando se está desenvolvendo um software, então a JPA é uma forma para poder ganhar tempo, além de poder dispensar um certo conhecimento com a linguagem SQL.
+
+\section{Referências}
+\begin{enumerate}
+
+\item MEDEIROS, Higor. \textbf{Introdução à JPA - Java Persistence API.} Disponível em: $<$https://www.devmedia.com.br/introducao-a-jpa-java-persistence-api/28173$>$. Acesso em: 08 de novembro de 2017.
+
+\item CAELUM. \textbf{Uma introdução prática ao JPA com Hibernate.} Disponível em: $<$https://www.caelum.com.br/apostila-java-web/uma-introducao-pratica-ao-jpa-com-hibernate/$>$. Acesso em: 08 de novembro de 2017.
+
+
+\end{enumerate}
+
+\end{document}

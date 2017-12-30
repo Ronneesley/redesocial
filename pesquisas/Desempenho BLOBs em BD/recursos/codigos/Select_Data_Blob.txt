@@ -1,0 +1,14 @@
+1000 select count(*) from arquivo where data < '2017-01-01 00:00:00';
+
+1 - Tempo Gasto: 0.01757 seg
+2 - Tempo Gasto: 0.01746 seg
+3 - Tempo Gasto: 0.0171 seg
+/*[...]1000 Testes*/ 
+998 - Tempo Gasto: 0.01709 seg
+999 - Tempo Gasto: 0.01711 seg
+1000 - Tempo Gasto: 0.01712 seg
+
+
+/*Resultados:*/ 
+Tempo Total: 17.65624 seg
+Media de Tempo: 0.01765624 seg

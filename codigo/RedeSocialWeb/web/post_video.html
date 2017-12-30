@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            #timeline {
+		width: 580px;
+            }
+            .post {
+		background-color: #eee;
+		padding: 10px;
+		border: 1px solid #666;
+		border-radius: 3px;
+		margin-bottom: 10px;
+                float: left;
+            }
+            #container-post{
+                width: 100%;
+                height: auto;
+                float: left;
+            }
+            #container-post #avatar{
+                width: 20%;
+                height: 100px;
+                float: left;
+            }
+            #container-post #info{
+                width: 70%;
+                height: auto;
+                float: left;
+                margin-top: 35px;
+            }
+            #reacao {
+                width: 100%;
+                height: 25px;
+                float: left;
+                border: 1px solid black;
+                border-radius: 10px;
+                margin-bottom: 10px;
+                margin-top: 5px;				
+            }
+            #botao {
+		float: left;
+		padding : 5px;
+            }
+            #comentario {				
+		float: left;				
+		margin-top: 5px;
+            }
+            #comentario_info{
+		margin-top: 5px;
+                height: auto;
+                float: left;
+		font-family: verdana;
+		font-size: 12px;                
+            }
+            #comentario_tempo{
+		margin-left: 3px;
+		margin-top: 7px;
+		width: 60%;
+                height: auto;
+                float: left;
+		font-family: verdana;
+		font-size: 10px;                
+            }
+            #caixa_comentario{
+		width: 85%;
+                height: auto;
+                background-color: #eee;
+		padding: 5px;
+		border: 1px solid #666;
+		border-radius: 3px;
+		margin-top: 5px;
+		float: left;
+            }
+            #comentario_do_comentario {				
+		float: left;				
+		margin-top: 10px;
+            }		
+            #comentario_do_comentario_info{
+		margin-top: 5px;
+                height: auto;
+                float: left;
+		font-family: verdana;
+		font-size: 12px;                
+            }		
+            #comentario_do_comentario_tempo{
+		margin-left: 3px;
+		margin-top: 7px;
+		width: 50%;
+                height: auto;
+                float: left;
+		font-family: verdana;
+		font-size: 10px;                
+            }		
+            #caixa_comentario_do_comentario{
+		width: 74.25%;
+		background-color: #eee;
+		padding: 5px;
+		border: 1px solid #666;
+		border-radius: 3px;
+		margin-top: 5px;
+		float: left;
+            }
+            #compartilhar{
+                width: 100%;
+                height: auto;
+                float: left;
+                border: 1px black;
+                border-radius: 10px;
+                margin-bottom: 10px;
+                margin-top: 5px;
+                text-align: center;
+            }
+            #comentar{
+                width: 80%;
+		padding: 5px;
+		border: 1px solid #666;
+		border-radius: 3px;
+		margin-top: 5px;
+		float: left;
+                color: #666;
+            }
+            #botao-comentar{
+                width: 10%;
+		padding: 5px;
+		border: 1px #666;
+		border-radius: 3px;
+		margin-top: 5px;
+		float: left;
+            }
+	</style>
+    </head>
+    <body>
+        <div id="timeline">
+            <div class="post">
+                <div id="container-post">    
+                    <div id="avatar">
+                        <img src="imagens/usuario.jpg" width="100px" height="100px;" style="border-radius: 50%;" />
+                    </div>
+                    <div id="info">
+                        (NOME)<br />
+                        (HOR&Aacute;RIO/LOCALIZA&Ccedil;&Atilde;O) <br />
+                        (PATROCINADO?)
+                    </div>
+                </div>
+                <div id="container-post">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacus purus, finibus a arcu sit amet, maximus vulputate dui. Maecenas iaculis quam metus, ac congue quam fermentum non. Sed vitae ante et lorem tempor laoreet. Nullam dignissim egestas egestas. Cras rutrum elementum tempus. Aliquam blandit mattis velit nec mollis. Fusce posuere tortor sed nisl sollicitudin pellentesque at sed purus. Suspendisse potenti. Morbi lacinia rutrum nisl a dignissim. Sed consectetur dictum libero, vel pulvinar lorem venenatis non. Proin euismod, leo id cursus dictum, ipsum arcu malesuada nisi, vitae cursus ligula enim nec magna. Pellentesque bibendum semper dictum. Etiam porttitor, odio faucibus porta sodales, quam elit venenatis urna, sed volutpat lectus felis ac mi.</p>
+                    
+                    <video controls="" src="videoTeste/paisagens.mp4" width="555"></video>
+                </div>
+                
+                <div id="reacao"> 
+                    <input name="up" type="image" id="botao" src="imagens/up.png" id="imagem" width="15px" height="15px;" alt="icone up" > <!-- Imagem como botão-->
+                    Jusara e outras 10 pessoas deram <b> UP </b>
+		</div>
+                
+                <input id="comentar" type="text"  value="Comente aqui...">
+                <div id="botao-comentar">
+                    <input type="submit" value="Comentar"/>
+                </div>
+                <div id="comentario"> 
+                    <img  src="imagens/usuario.jpg" width="60px" height="60x;" style="border-radius: 40%;" />							
+		</div>
+                
+                <div id="comentario_info">
+                    Jussara 
+		</div>
+                
+		<div id="comentario_tempo">
+                    5min
+		</div>	
+                <div id="caixa_comentario">
+                    <p> Video da hora!!! </p>
+                </div>	
+		<div id="comentario"> 
+                    <img  src="imagens/usuario.jpg" width="60px" height="60x;" style="border-radius: 45%;" />							
+		</div>
+                <div id="comentario_do_comentario_info">
+                    Robson 
+		</div>
+		<div id="comentario_do_comentario_tempo">
+                    3min
+		</div>	
+		<div id="caixa_comentario_do_comentario">
+                    <p> Nice!!! </p>
+                </div>
+                <div id="compartilhar">
+                    <input type="submit" value="Compartihar"/>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
