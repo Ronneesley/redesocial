@@ -712,3 +712,57 @@
 }
 %-----------------------------------------------------------
 
+\casoDeUso
+%Identificador
+{UC15}
+%Nome
+{Criar Tipos de Atividades}
+%Ator Principal
+{Usuário}
+%Interessados
+{
+\begin{itemize}
+	\item Usuário: Escolhe o tipo de atividade.
+	\item Usuário: Seleciona sim ou não para restrição da atividade.
+\end{itemize}
+
+}
+%Pré-Condições
+{Atividade estar cadastrada.}
+%Pós-condições
+{Usuário escolher atividade.}
+%Fluxo Básico
+{
+\begin{itemize}
+		\item Usuário irá preencher os campos e selecionar entre sim ou não em restrição (Figura \ref{figura:tipos_atividades.png});
+		\item Usuário clica no botão "Salvar", para criar a atividade.
+\end{itemize}
+}
+%Fluxo Alternativo
+{
+\begin{itemize}
+	\item Ocorreu uma falha na conexão com a Internet:
+	\begin{itemize}
+		\item O sistema apresenta uma mensagem para o usuário verificar os problemas com a conexão da Internet.
+	\end{itemize}
+	
+	\item Problemas com resposta do servidor ao criar o tipo de atividade:
+	\begin{itemize}
+	\item O sistema exibe uma mensagem informando que houve um problema com resposta do servidor.
+	\end{itemize}
+	
+	\item Usuário não preencher o nome da atividade:
+	\begin{itemsize}
+		\item O sistema apresenta uma mensagem em vermelho no campo especificado que deve ser preenchido.
+	\end{itemsize}
+
+\end{itemize}
+}
+%Frequência de Ocorrencia
+{Toda vez que o usuário criar um tipo de atividade.}
+%Problemas em Aberto
+{
+ 
+}
+%-----------------------------------------------------------
+
