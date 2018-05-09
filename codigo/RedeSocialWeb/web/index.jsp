@@ -88,7 +88,7 @@
             <div id="fundo">
                 <div class="caixa">
                     <div class="centro">
-                        <img src="<%= request.getContextPath() %>/imagens/logo.png" alt="Logo" class="logo" />
+                        <img src="logo.png" alt="Logo" class="logo" />
                     </div>
                     <h1>LOGIN:</h1>
                     
